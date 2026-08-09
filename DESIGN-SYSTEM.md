@@ -219,7 +219,7 @@ Applied with `strokeDasharray` and `strokeDashoffset` set to path length, animat
 - **Wordmark**: "TOUGH" (red) + "JOBS" (white) in Archivo Black, 28px (full), 14px (scrolled)
 - **Links**: Services, Work, About, Insights, Contact — uppercase, 12px, 700 weight, accent underline on hover
 - **CTA**: "Request a Quote" red button
-- **Phone**: (309) 741-4599 visible in header
+- **Phone**: (309) 928-9080 visible in header
 - **Scroll behavior**: Shrinks at `window.scrollY > 50`, smooth 0.3s ease transitions
 
 ---
@@ -376,7 +376,7 @@ Blueprint annotations draw on sequentially using stroke-dasharray reveal:
 
 ## Contact Information
 
-- **Phone**: (309) 741-4599
+- **Phone**: (309) 928-9080
 - **Address**: 416 Main St, Peoria, IL 61602
 - **Email**: hello@toughjobs.com
 

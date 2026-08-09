@@ -70,7 +70,7 @@ function App() {
         </nav>
         <div className="side-foot">
           <div className="side-foot-label">Home Services Agency</div>
-          <div className="side-foot-sub">Quad Cities · (309) 233-9004</div>
+          <div className="side-foot-sub">Quad Cities · (309) 928-9080</div>
         </div>
       </aside>
 
