@@ -61,6 +61,23 @@
 }
 </script>
 <!-- SEO-FAQ-SCHEMA:END -->
+<style id="pc-title-logo-style">/* Section-title fist logo.
+   Spacing: the row carries no gap, so the only horizontal space around the
+   logo is the slot's own padding — identical left and right by construction,
+   rather than "whatever is left over", which is what centring the slot in the
+   free space used to produce. margin-left:auto pins it to the right edge of
+   the container so the right-hand space stays constant no matter how long the
+   headline is. */
+.pc-headrow{display:flex;align-items:center;gap:0;margin-bottom:34px}
+.pc-headrow>.head{flex:0 1 auto;min-width:0;margin-bottom:0}
+/* Both padding values carry a +96px (1in) offset over the badge-clearance
+   figure, so the mark sits an inch further left at every width while the left
+   and right space around it stay identical. */
+.pc-logo-slot{flex:0 0 auto;margin-left:auto;padding:0 max(152px,854px - 50vw);display:flex;align-items:flex-start;align-self:flex-start}
+.pc-title-logo{width:clamp(104px,9vw,144px);height:auto;transform:translateY(-14%);filter:drop-shadow(0 14px 26px rgba(0,0,0,.35))}
+/* Below the container's max width the page runs edge to edge and the badge
+   owns the corner outright, so the mark steps aside rather than collide. */
+@media(max-width:1240px){.pc-logo-slot{display:none}}</style>
 </head>
 <body data-page="pressure-washing">
 <main>
@@ -98,9 +115,11 @@
     <div class="blueprint-marks"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true"><line x1="20" y1="0" x2="20" y2="14" stroke="rgba(140,170,220,.28)" stroke-width="1"/><line x1="20" y1="26" x2="20" y2="40" stroke="rgba(140,170,220,.28)" stroke-width="1"/><line x1="0" y1="20" x2="14" y2="20" stroke="rgba(140,170,220,.28)" stroke-width="1"/><line x1="26" y1="20" x2="40" y2="20" stroke="rgba(140,170,220,.28)" stroke-width="1"/><circle cx="20" cy="20" r="6" stroke="rgba(140,170,220,.28)" stroke-width="1" fill="none"/></svg></div><div class="tj-bp-tr"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true"><line x1="20" y1="0" x2="20" y2="14" stroke="rgba(140,170,220,.28)" stroke-width="1"/><line x1="20" y1="26" x2="20" y2="40" stroke="rgba(140,170,220,.28)" stroke-width="1"/><line x1="0" y1="20" x2="14" y2="20" stroke="rgba(140,170,220,.28)" stroke-width="1"/><line x1="26" y1="20" x2="40" y2="20" stroke="rgba(140,170,220,.28)" stroke-width="1"/><circle cx="20" cy="20" r="6" stroke="rgba(140,170,220,.28)" stroke-width="1" fill="none"/></svg></div><div class="tj-bp-bl"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true"><line x1="20" y1="0" x2="20" y2="14" stroke="rgba(140,170,220,.28)" stroke-width="1"/><line x1="20" y1="26" x2="20" y2="40" stroke="rgba(140,170,220,.28)" stroke-width="1"/><line x1="0" y1="20" x2="14" y2="20" stroke="rgba(140,170,220,.28)" stroke-width="1"/><line x1="26" y1="20" x2="40" y2="20" stroke="rgba(140,170,220,.28)" stroke-width="1"/><circle cx="20" cy="20" r="6" stroke="rgba(140,170,220,.28)" stroke-width="1" fill="none"/></svg></div><div class="tj-bp-br"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true"><line x1="20" y1="0" x2="20" y2="14" stroke="rgba(140,170,220,.28)" stroke-width="1"/><line x1="20" y1="26" x2="20" y2="40" stroke="rgba(140,170,220,.28)" stroke-width="1"/><line x1="0" y1="20" x2="14" y2="20" stroke="rgba(140,170,220,.28)" stroke-width="1"/><line x1="26" y1="20" x2="40" y2="20" stroke="rgba(140,170,220,.28)" stroke-width="1"/><circle cx="20" cy="20" r="6" stroke="rgba(140,170,220,.28)" stroke-width="1" fill="none"/></svg></div>
     
     <div class="container tj-layer">
+      <div class="pc-headrow"><div class="head reveal">
       <span class="eyebrow tj-ink">Every lever we pull</span>
       <h2 class="display tj-mix-h2"><span class="tj-ink">Eleven ways</span> <span class="eyebrow-accent tj-shadow" class="headline-glow">we grow pressure washing & window cleaning.</span></h2>
       <p class="tj-mix-lead">Website, search, ads, reviews, print, and follow-up should work as one plan. We scope the mix around your service area, capacity, and the pressure washing jobs you want more of.</p>
+      </div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
       <div class="tj-lever tj-lever--a">
     <div class="tj-lever-letter tj-letter--a">A</div>
     <div>
@@ -537,5 +556,28 @@
 <!-- impeccable-live-start -->
 <script src="http://localhost:8400/live.js?token=19f259b2-bf41-4547-a2ea-088ae600fb6b"></script>
 <!-- impeccable-live-end -->
+<script id="pc-title-logo-align"></script><script>
+(function(){
+  function align(){
+    // Matches the breakpoint in #pc-title-logo-style where the slot is hidden.
+    var wide = window.matchMedia('(min-width:1241px)').matches;
+    document.querySelectorAll('.pc-headrow').forEach(function(row){
+      var h2 = row.querySelector('h2'), slot = row.querySelector('.pc-logo-slot');
+      if(!h2 || !slot) return;
+      var img = slot.querySelector('img');
+      if(!wide){ slot.style.paddingTop = ''; return; }
+      slot.style.paddingTop = '0px';
+      var r = row.getBoundingClientRect(), t = h2.getBoundingClientRect();
+      var ih = img.getBoundingClientRect().height || img.offsetHeight;
+      var center = (t.top + t.height/2) - r.top;
+      slot.style.paddingTop = Math.max(0, center - ih/2) + 'px';
+    });
+  }
+  window.addEventListener('load', align);
+  window.addEventListener('resize', align);
+  document.addEventListener('DOMContentLoaded', align);
+  setTimeout(align, 400);
+})();
+</script>
 </body>
 </html>
