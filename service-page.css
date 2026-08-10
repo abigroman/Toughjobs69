@@ -38,6 +38,12 @@ header .container{padding:0}
   .sp .hero-img-slot{display:none!important}
 }
 
+/* Tablet: 22px container padding (tuned for phones/desktop) reads as cramped
+   at tablet widths — widen it so CTAs and copy aren't hugging the edge. */
+@media(min-width:641px) and (max-width:1024px){
+  .sp .container{padding:0 40px}
+}
+
 /* ── Hero ────────────────────────────────────────────────────────────── */
 .sp .hero{padding:clamp(80px,10vw,150px) 0 clamp(60px,7vw,96px);position:relative;overflow:visible}
 .sp .hero h1{font-size:clamp(36px,4.6vw,72px);margin:18px 0 26px}
