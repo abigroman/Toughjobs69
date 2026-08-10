@@ -182,11 +182,23 @@
 <link rel="stylesheet" href="css/service-longform.css">
 <link rel="stylesheet" href="css/faq-band.css">
 <link rel="stylesheet" href="css/trade-sections.css">
-<style id="pc-title-logo-style">.pc-headrow{display:flex;align-items:center;gap:clamp(16px,2vw,32px);margin-bottom:34px}
+<style id="pc-title-logo-style">/* Section-title fist logo.
+   Spacing: the row carries no gap, so the only horizontal space around the
+   logo is the slot's own padding — identical left and right by construction,
+   rather than "whatever is left over", which is what centring the slot in the
+   free space used to produce. margin-left:auto pins it to the right edge of
+   the container so the right-hand space stays constant no matter how long the
+   headline is. */
+.pc-headrow{display:flex;align-items:center;gap:0;margin-bottom:34px}
 .pc-headrow>.head{flex:0 1 auto;min-width:0;margin-bottom:0}
-.pc-logo-slot{flex:1 1 auto;display:flex;align-items:flex-start;justify-content:center;align-self:flex-start}
-.pc-title-logo{width:clamp(96px,10vw,152px);height:auto;transform:translateY(-14%);filter:drop-shadow(0 14px 26px rgba(0,0,0,.35))}
-@media(max-width:1200px){.pc-logo-slot{display:none}}</style>
+/* Both padding values carry a +96px (1in) offset over the badge-clearance
+   figure, so the mark sits an inch further left at every width while the left
+   and right space around it stay identical. */
+.pc-logo-slot{flex:0 0 auto;margin-left:auto;padding:0 max(152px,854px - 50vw);display:flex;align-items:flex-start;align-self:flex-start}
+.pc-title-logo{width:clamp(104px,9vw,144px);height:auto;transform:translateY(-14%);filter:drop-shadow(0 14px 26px rgba(0,0,0,.35))}
+/* Below the container's max width the page runs edge to edge and the badge
+   owns the corner outright, so the mark steps aside rather than collide. */
+@media(max-width:1240px){.pc-logo-slot{display:none}}</style>
 </head>
 <body class="sp">
 <main>
@@ -215,7 +227,7 @@
         <span class="eyebrow">Why the process matters</span>
         <h2 class="display">Customers use reviews to reduce uncertainty.</h2>
         <p class="lede">A useful review profile gives a buyer recent evidence about communication, workmanship, follow-through, and how the company handles a problem. The goal is not a perfect-looking score. It is a credible record that matches the service customers actually receive.</p>
-      </div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
+      </div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
       <div class="stat-row">
         <div class="stat reveal d1"><div class="big revx-2">Coverage</div><div class="lbl">Ask eligible customers through the same documented workflow.</div></div>
         <div class="stat reveal d2"><div class="big revx-2">Recency</div><div class="lbl">Keep the profile current without pressuring a customer or offering an incentive.</div></div>
@@ -235,7 +247,7 @@
         <span class="eyebrow">How great reputations are built</span>
         <h2 class="display">It takes two things: trained people and a real system.</h2>
         <p class="lede">A reliable program connects the customer experience in the field with a simple request and response workflow in the office.</p>
-      </div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
+      </div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
       <div class="pillars">
         <div class="pillar reveal d1">
           <span class="tag">Pillar 01 &mdash; Your Crew</span>
@@ -272,7 +284,7 @@
       <div class="pc-headrow"><div class="head reveal">
         <span class="eyebrow">What we do for you</span>
         <h2 class="display">Done-for-you reputation, start to finish.</h2>
-      </div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
+      </div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
       <div class="flow revx-3"><div class="step reveal d1"><div class="node">📋</div><h4>Audit &amp; set up</h4><p>We fix your listings, claim your profiles, and get accurate info everywhere customers look.</p></div><div class="step reveal d2"><div class="node">💬</div><h4>Automate the ask</h4><p>Every finished job triggers a review request by text and email &mdash; no one gets forgotten.</p></div><div class="step reveal d3"><div class="node">🎓</div><h4>Train your crew</h4><p>We coach your techs to earn and request reviews the right way, on every visit.</p></div><div class="step reveal d4"><div class="node">🛡️</div><h4>Monitor &amp; respond</h4><p>We watch every platform, respond fast, and flag problems before they cost you jobs.</p></div></div>
     </div>
   </section>
@@ -285,7 +297,7 @@
         <span class="eyebrow">Plans &amp; pricing</span>
         <h2 class="display">Straight pricing to own your reputation.</h2>
         <p class="lede">Month-to-month. Cancel anytime. Pick the level of help that fits your shop.</p>
-      </div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
+      </div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
       <div class="price-grid">
         <div class="price-card reveal d1">
           <span class="price-tier">01 / Setup</span>
@@ -346,7 +358,7 @@
       <div class="pc-headrow"><div class="head reveal">
         <span class="eyebrow">The operating system</span>
         <h2 class="display">Review management for contractors, without shortcuts.</h2>
-      </div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
+      </div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
       <div class="seo-longform reveal d1 revx-5">
         <p class="revx-6"><strong class="revx-7">Review management for contractors</strong> should make good service easier to recognize and recurring problems easier to see. Toughjobs starts with the real customer journey: how a lead is booked, what the office promises, how the crew communicates a change, when the job is considered complete, and who owns follow-up. That sequence determines where a review request belongs.</p>
         <p class="revx-6">The workflow can include a direct review link, text or email templates, QR materials, platform monitoring, response assignments, and a simple record of requests sent. Messages stay neutral. Every eligible customer follows the same route, and the company never promises an incentive for positive feedback. When a critical review arrives, the response acknowledges the concern without discussing private job details and moves the resolution to a direct conversation.</p>
@@ -533,7 +545,8 @@
 <script id="pc-title-logo-align"></script><script>
 (function(){
   function align(){
-    var wide = window.matchMedia('(min-width:1201px)').matches;
+    // Matches the breakpoint in #pc-title-logo-style where the slot is hidden.
+    var wide = window.matchMedia('(min-width:1241px)').matches;
     document.querySelectorAll('.pc-headrow').forEach(function(row){
       var h2 = row.querySelector('h2'), slot = row.querySelector('.pc-logo-slot');
       if(!h2 || !slot) return;

@@ -145,11 +145,23 @@
 <link rel="stylesheet" href="css/service-longform.css">
 <link rel="stylesheet" href="css/faq-band.css">
 <link rel="stylesheet" href="css/trade-sections.css">
-<style id="pc-title-logo-style">.pc-headrow{display:flex;align-items:center;gap:clamp(16px,2vw,32px);margin-bottom:34px}
+<style id="pc-title-logo-style">/* Section-title fist logo.
+   Spacing: the row carries no gap, so the only horizontal space around the
+   logo is the slot's own padding — identical left and right by construction,
+   rather than "whatever is left over", which is what centring the slot in the
+   free space used to produce. margin-left:auto pins it to the right edge of
+   the container so the right-hand space stays constant no matter how long the
+   headline is. */
+.pc-headrow{display:flex;align-items:center;gap:0;margin-bottom:34px}
 .pc-headrow>.head{flex:0 1 auto;min-width:0;margin-bottom:0}
-.pc-logo-slot{flex:1 1 auto;display:flex;align-items:flex-start;justify-content:center;align-self:flex-start}
-.pc-title-logo{width:clamp(96px,10vw,152px);height:auto;transform:translateY(-14%);filter:drop-shadow(0 14px 26px rgba(0,0,0,.35))}
-@media(max-width:1200px){.pc-logo-slot{display:none}}</style>
+/* Both padding values carry a +96px (1in) offset over the badge-clearance
+   figure, so the mark sits an inch further left at every width while the left
+   and right space around it stay identical. */
+.pc-logo-slot{flex:0 0 auto;margin-left:auto;padding:0 max(152px,854px - 50vw);display:flex;align-items:flex-start;align-self:flex-start}
+.pc-title-logo{width:clamp(104px,9vw,144px);height:auto;transform:translateY(-14%);filter:drop-shadow(0 14px 26px rgba(0,0,0,.35))}
+/* Below the container's max width the page runs edge to edge and the badge
+   owns the corner outright, so the mark steps aside rather than collide. */
+@media(max-width:1240px){.pc-logo-slot{display:none}}</style>
 </head>
 <body class="sp">
 <main>
@@ -176,7 +188,7 @@
         <span class="eyebrow">How it works</span>
         <h2 class="display">Beat the franchises in your backyard.</h2>
         <p class="lede">Hyper-local optimization, tracked every month.</p>
-      </div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
+      </div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
       <div class="flow lsx-2"><div class="step reveal d1"><div class="node">1</div><h4>Profile</h4><p>We dial in your Google Business Profile — the heart of local.</p></div><div class="step reveal d2"><div class="node">2</div><h4>Citations</h4><p>Consistent listings across the directories Google trusts.</p></div><div class="step reveal d3"><div class="node">3</div><h4>Reviews</h4><p>Systematic review generation that lifts ranking and trust.</p></div><div class="step reveal d4"><div class="node">4</div><h4>On-page</h4><p>Service-area pages tuned to rank for every town you serve.</p></div></div>
     </div>
   </section>
@@ -188,7 +200,7 @@
       <div class="pc-headrow"><div class="head reveal">
         <span class="eyebrow">What you'll earn</span>
         <h2 class="display">The calls in your own backyard.</h2>
-      </div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
+      </div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
       <div class="earn"><div class="card reveal d1"><div class="ic">01</div><h4>Accurate local presence</h4><p>Keep the business profile, services, hours, categories, service area, and website destinations aligned.</p></div><div class="card reveal d2"><div class="ic">02</div><h4>Relevant local pages</h4><p>Build useful service and location content around work the company actually performs in the places it serves.</p></div><div class="card reveal d3"><div class="ic">03</div><h4>Verified lead path</h4><p>Track calls and forms from local search, then compare lead quality with the business records available.</p></div></div>
     </div>
   </section>
@@ -201,7 +213,7 @@
         <span class="eyebrow">The cost comparison</span>
         <h2 class="display">DIY vs. agency vs. Toughjobs.</h2>
         <p class="lede">Local is won in the details.</p>
-      </div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
+      </div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
       <div class="cmp-wrap reveal d1">
         <table class="cmp">
           <thead><tr><th></th><th>DIY</th><th>Typical Agency</th><th class="tj"><span class="tjhead">Toughjobs</span></th></tr></thead>
@@ -219,7 +231,7 @@
       <div class="pc-headrow"><div class="head reveal">
         <span class="eyebrow">Evidence, not anecdotes</span>
         <h2 class="display">What belongs in a useful performance record.</h2>
-      </div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
+      </div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
       <div class="tess">
         <div class="t reveal"><h3 class="lsx-3">Baseline</h3><p class="q lsx-4">Record the starting assets, access, tracking, market, budget, and operating constraints before work begins.</p></div>
         <div class="t reveal"><h3 class="lsx-3">Work log</h3><p class="q lsx-4">Document what changed, when it changed, who approved it, and what still depends on the client or another vendor.</p></div>
@@ -468,7 +480,8 @@ size();frame();
 <script id="pc-title-logo-align"></script><script>
 (function(){
   function align(){
-    var wide = window.matchMedia('(min-width:1201px)').matches;
+    // Matches the breakpoint in #pc-title-logo-style where the slot is hidden.
+    var wide = window.matchMedia('(min-width:1241px)').matches;
     document.querySelectorAll('.pc-headrow').forEach(function(row){
       var h2 = row.querySelector('h2'), slot = row.querySelector('.pc-logo-slot');
       if(!h2 || !slot) return;

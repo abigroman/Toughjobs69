@@ -1,21 +1,21 @@
 /* ── Toughjobs Trade Page Base Styles ──────────────────────────────
    Shared by all 27 trade-*.html pages. Edit here to change them all. */
 *,*::before,*::after{box-sizing:border-box}
-  html,body{margin:0;padding:0;background:#001a4a}
+  html,body{margin:0;padding:0;background:#050F1F}
   body{
     font-family:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
     color:var(--ink);
     background: url('../assets/blueprint-background.webp') fixed center/cover no-repeat;
-    background-color: #001a4a;
+    background-color: #050F1F;
     -webkit-font-smoothing:antialiased;
     text-rendering:optimizeLegibility;
   }
   :root{
     --ink:#0A0F1C;
-    --navy:#002768;
-    --navy-2:#001a4a;
+    --navy:#081B33;
+    --navy-2:#050F1F;
     --red:#C8262A;
-    --red-2:#A90100;
+    --red-2:#981B1F;
     --smoke:#5B6471;
     --mute:#C7CBD2;
     --mute-2:#E5E7EB;
@@ -34,7 +34,7 @@
     --container: 1240px;
     --pad-section: 112px;
     --pad-section-tight: 80px;
-    --gray: #282828;
+    --gray: #17212D;
     --dark-red: var(--red-2);
     --text-shadow-tight: 1px 1px 0 rgba(10,15,28,.9);
   }
@@ -145,7 +145,7 @@
      engineering texture behind all scrolling content. */
   .bg-blueprint-dark{
     background-color: rgba(10,15,28,0.88);
-    background-image: none;
+    background-image: linear-gradient(160deg, rgba(23,33,45,.90) 0%, rgba(10,15,28,.92) 100%);
     color: var(--white);
   }
   .bg-blueprint-dark h1, .bg-blueprint-dark h2, .bg-blueprint-dark h3,
@@ -156,8 +156,8 @@
   .bg-blueprint-dark p, .bg-blueprint-dark li { color: rgba(255,255,255,.78); }
 
   .bg-blueprint-navy{
-    background-color: rgba(0,39,104,0.88);
-    background-image: none;
+    background-color: rgba(8,27,51,0.88);
+    background-image: linear-gradient(160deg, rgba(23,50,84,.88) 0%, rgba(5,15,31,.92) 100%);
     color: var(--white);
   }
   .bg-blueprint-navy h1, .bg-blueprint-navy h2, .bg-blueprint-navy h3,
@@ -168,8 +168,8 @@
   .bg-blueprint-navy p, .bg-blueprint-navy li { color: rgba(255,255,255,.78); }
 
   .bg-blueprint-red{
-    background-color: rgba(168,1,0,0.82);
-    background-image: none;
+    background-color: rgba(152,27,31,0.82);
+    background-image: linear-gradient(160deg, rgba(200,38,42,.55) 0%, rgba(152,27,31,.88) 100%);
     color: var(--white);
   }
   .bg-blueprint-red h1, .bg-blueprint-red h2, .bg-blueprint-red h3,
@@ -206,7 +206,7 @@
 
 /* ── CTA section (special red layout with gradient) ── */
   .cta-section {
-    background: linear-gradient(180deg, rgba(168, 1, 0, 0.45) 0%, rgba(200, 38, 42, 0.35) 100%);
+    background: linear-gradient(180deg, rgba(152, 27, 31, 0.45) 0%, rgba(200, 38, 42, 0.35) 100%);
     position: relative;
     padding-block: 100px;
     border-bottom: 16px solid #472345;

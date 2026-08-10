@@ -148,11 +148,23 @@
 <link rel="stylesheet" href="css/service-longform.css">
 <link rel="stylesheet" href="css/faq-band.css">
 <link rel="stylesheet" href="css/trade-sections.css">
-<style id="pc-title-logo-style">.pc-headrow{display:flex;align-items:center;gap:clamp(16px,2vw,32px);margin-bottom:34px}
+<style id="pc-title-logo-style">/* Section-title fist logo.
+   Spacing: the row carries no gap, so the only horizontal space around the
+   logo is the slot's own padding — identical left and right by construction,
+   rather than "whatever is left over", which is what centring the slot in the
+   free space used to produce. margin-left:auto pins it to the right edge of
+   the container so the right-hand space stays constant no matter how long the
+   headline is. */
+.pc-headrow{display:flex;align-items:center;gap:0;margin-bottom:34px}
 .pc-headrow>.head{flex:0 1 auto;min-width:0;margin-bottom:0}
-.pc-logo-slot{flex:1 1 auto;display:flex;align-items:flex-start;justify-content:center;align-self:flex-start}
-.pc-title-logo{width:clamp(96px,10vw,152px);height:auto;transform:translateY(-14%);filter:drop-shadow(0 14px 26px rgba(0,0,0,.35))}
-@media(max-width:1200px){.pc-logo-slot{display:none}}</style>
+/* Both padding values carry a +96px (1in) offset over the badge-clearance
+   figure, so the mark sits an inch further left at every width while the left
+   and right space around it stay identical. */
+.pc-logo-slot{flex:0 0 auto;margin-left:auto;padding:0 max(152px,854px - 50vw);display:flex;align-items:flex-start;align-self:flex-start}
+.pc-title-logo{width:clamp(104px,9vw,144px);height:auto;transform:translateY(-14%);filter:drop-shadow(0 14px 26px rgba(0,0,0,.35))}
+/* Below the container's max width the page runs edge to edge and the badge
+   owns the corner outright, so the mark steps aside rather than collide. */
+@media(max-width:1240px){.pc-logo-slot{display:none}}</style>
 </head>
 <body class="sp">
 <main>
@@ -179,7 +191,7 @@
         <span class="eyebrow">How it works</span>
         <h2 class="display">From identity to in-hand.</h2>
         <p class="lede">We design, print, and fulfill — you just approve.</p>
-      </div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
+      </div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
       <div class="flow brx-2"><div class="step reveal d1"><div class="node">1</div><h4>Identity</h4><p>Logo, palette, fonts, and voice that fit your trade and town.</p></div><div class="step reveal d2"><div class="node">2</div><h4>Apply</h4><p>We extend it to wraps, cards, signs, apparel, and flyers.</p></div><div class="step reveal d3"><div class="node">3</div><h4>Print</h4><p>We handle production and fulfillment — no vendor juggling.</p></div><div class="step reveal d4"><div class="node">4</div><h4>Deploy</h4><p>Your brand hits the road, the job site, and every mailbox.</p></div></div>
     </div>
   </section>
@@ -191,13 +203,13 @@
       <div class="pc-headrow"><div class="head reveal">
         <span class="eyebrow">What you'll earn</span>
         <h2 class="display">Instant credibility on every street.</h2>
-      </div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
+      </div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
       <div class="earn"><div class="card reveal d1"><div class="ic">01</div><h4>Look bigger than you are</h4><p>Consistent branding makes a solo operator read as an established firm.</p></div><div class="card reveal d2"><div class="ic">02</div><h4>Rolling billboards</h4><p>A wrapped truck advertises 40,000+ times a day for pennies per view.</p></div><div class="card reveal d3"><div class="ic">03</div><h4>Trust before the call</h4><p>A pro look wins the bid before you ever quote a price.</p></div></div>
       <div class="work-strip">
         <div class="work-item reveal"><img src="assets/wrap-truck-erik.webp" alt="Erik Electrical truck wrap" loading="lazy" /><span class="work-lbl">Vehicle Wrap</span></div>
         <div class="work-item reveal d1"><img src="assets/wrap-trailer-guacnroll.webp" alt="Guac N Roll trailer wrap" loading="lazy" /><span class="work-lbl">Trailer Wrap</span></div>
         <div class="work-item reveal d2"><img src="uploads/company-jackets-working.webp" alt="Branded crew on the job" loading="lazy" /><span class="work-lbl">Crew Apparel</span></div>
-        <div class="work-item reveal d3"><img src="uploads/Print-Seasonal-Campaigns.webp" alt="Print collateral design" loading="lazy" /><span class="work-lbl">Print & Collateral</span></div>
+        <div class="work-item reveal d3"><img src="print-images/seasonal-campaigns.webp" alt="Print collateral design" loading="lazy" /><span class="work-lbl">Print & Collateral</span></div>
       </div>
     </div>
   </section>
@@ -210,7 +222,7 @@
         <span class="eyebrow">The cost comparison</span>
         <h2 class="display">DIY vs. agency vs. Toughjobs.</h2>
         <p class="lede">Cheap branding looks cheap.</p>
-      </div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
+      </div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
       <div class="cmp-wrap reveal d1">
         <table class="cmp">
           <thead><tr><th></th><th>DIY</th><th>Typical Agency</th><th class="tj"><span class="tjhead">Toughjobs</span></th></tr></thead>
@@ -458,7 +470,8 @@
 <script id="pc-title-logo-align"></script><script>
 (function(){
   function align(){
-    var wide = window.matchMedia('(min-width:1201px)').matches;
+    // Matches the breakpoint in #pc-title-logo-style where the slot is hidden.
+    var wide = window.matchMedia('(min-width:1241px)').matches;
     document.querySelectorAll('.pc-headrow').forEach(function(row){
       var h2 = row.querySelector('h2'), slot = row.querySelector('.pc-logo-slot');
       if(!h2 || !slot) return;

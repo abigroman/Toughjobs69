@@ -229,11 +229,23 @@ section.coaching-hero .container{position:relative;z-index:2}
 <link rel="stylesheet" href="css/service-longform.css">
 <link rel="stylesheet" href="css/faq-band.css">
 <link rel="stylesheet" href="css/trade-sections.css">
-<style id="pc-title-logo-style">.pc-headrow{display:flex;align-items:center;gap:clamp(16px,2vw,32px);margin-bottom:34px}
+<style id="pc-title-logo-style">/* Section-title fist logo.
+   Spacing: the row carries no gap, so the only horizontal space around the
+   logo is the slot's own padding — identical left and right by construction,
+   rather than "whatever is left over", which is what centring the slot in the
+   free space used to produce. margin-left:auto pins it to the right edge of
+   the container so the right-hand space stays constant no matter how long the
+   headline is. */
+.pc-headrow{display:flex;align-items:center;gap:0;margin-bottom:34px}
 .pc-headrow>.head{flex:0 1 auto;min-width:0;margin-bottom:0}
-.pc-logo-slot{flex:1 1 auto;display:flex;align-items:flex-start;justify-content:center;align-self:flex-start}
-.pc-title-logo{width:clamp(96px,10vw,152px);height:auto;transform:translateY(-14%);filter:drop-shadow(0 14px 26px rgba(0,0,0,.35))}
-@media(max-width:1200px){.pc-logo-slot{display:none}}</style>
+/* Both padding values carry a +96px (1in) offset over the badge-clearance
+   figure, so the mark sits an inch further left at every width while the left
+   and right space around it stay identical. */
+.pc-logo-slot{flex:0 0 auto;margin-left:auto;padding:0 max(152px,854px - 50vw);display:flex;align-items:flex-start;align-self:flex-start}
+.pc-title-logo{width:clamp(104px,9vw,144px);height:auto;transform:translateY(-14%);filter:drop-shadow(0 14px 26px rgba(0,0,0,.35))}
+/* Below the container's max width the page runs edge to edge and the badge
+   owns the corner outright, so the mark steps aside rather than collide. */
+@media(max-width:1240px){.pc-logo-slot{display:none}}</style>
 </head>
 <body class="sp">
 <main>
@@ -262,7 +274,7 @@ section.coaching-hero .container{position:relative;z-index:2}
         <span class="eyebrow">What coaching covers</span>
         <h2 class="display">Every lever that moves a trades business.</h2>
         <p class="lede">No fluff, no whiteboard theory. We work on what actually pays the bills.</p>
-      </div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
+      </div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
       <div class="field-coaching-block reveal d1">
         <div class="field-coaching-grid">
           <div class="field-roi">
@@ -320,7 +332,7 @@ section.coaching-hero .container{position:relative;z-index:2}
       <div class="pc-headrow"><div class="head reveal">
         <span class="eyebrow">Why owners hire a coach</span>
         <h2 class="display">Less chaos. Bigger jobs. A real business.</h2>
-      </div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
+      </div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
       <div class="earn"><div class="card reveal d1"><div class="ic">01</div><h4>Accountability that sticks</h4><p>You'll actually do the things you keep meaning to. Someone in your corner every single week.</p></div><div class="card reveal d2"><div class="ic">02</div><h4>Decisions without the guesswork</h4><p>Hire or hold? Raise prices? Buy the truck? Talk it through with someone who's been there.</p></div><div class="card reveal d3"><div class="ic">03</div><h4>Work fewer hours</h4><p>Build the systems that let the business run when you're not standing on the job.</p></div></div>
     </div>
   </section>
@@ -333,7 +345,7 @@ section.coaching-hero .container{position:relative;z-index:2}
         <span class="eyebrow">Coaching plans</span>
         <h2 class="display">One payment. Increasing levels of hands-on support.</h2>
         <p class="lede">No subscriptions. Choose a focused four-week sprint, a complete annual growth program, or a hands-on private partnership.</p>
-      </div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
+      </div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
       <div class="price-grid">
         <div class="price-card reveal d1">
           <span class="price-tier">01 / Group Coaching</span>
@@ -396,7 +408,7 @@ section.coaching-hero .container{position:relative;z-index:2}
         <span class="eyebrow">Why not go it alone?</span>
         <h2 class="display">Figuring it out solo vs. Toughjobs coaching.</h2>
         <p class="lede">What the slow road actually costs you.</p>
-      </div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
+      </div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
       <div class="cmp-wrap reveal d1">
         <table class="cmp">
           <thead><tr><th></th><th>Going it alone</th><th>Big-name guru program</th><th class="tj"><span class="tjhead">Toughjobs</span></th></tr></thead>
@@ -414,7 +426,7 @@ section.coaching-hero .container{position:relative;z-index:2}
       <div class="pc-headrow"><div class="head reveal">
         <span class="eyebrow">Evidence, not anecdotes</span>
         <h2 class="display">What belongs in a useful performance record.</h2>
-      </div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
+      </div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
       <div class="tess">
         <div class="t reveal"><h3 class="cox-6">Baseline</h3><p class="q cox-7">Record the starting assets, access, tracking, market, budget, and operating constraints before work begins.</p></div>
         <div class="t reveal"><h3 class="cox-6">Work log</h3><p class="q cox-7">Document what changed, when it changed, who approved it, and what still depends on the client or another vendor.</p></div>
@@ -593,7 +605,8 @@ section.coaching-hero .container{position:relative;z-index:2}
 <script id="pc-title-logo-align"></script><script>
 (function(){
   function align(){
-    var wide = window.matchMedia('(min-width:1201px)').matches;
+    // Matches the breakpoint in #pc-title-logo-style where the slot is hidden.
+    var wide = window.matchMedia('(min-width:1241px)').matches;
     document.querySelectorAll('.pc-headrow').forEach(function(row){
       var h2 = row.querySelector('h2'), slot = row.querySelector('.pc-logo-slot');
       if(!h2 || !slot) return;

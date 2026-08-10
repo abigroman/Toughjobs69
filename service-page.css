@@ -59,6 +59,9 @@ header .container{padding:0}
 .sp .bg-dark [style*="color:var(--accent2)"],
 .sp .bg-navy [style*="color:var(--accent2)"],
 .sp .bg-accent2 [style*="color:var(--accent2)"],
+.sp .bg-dark [style*="color:#081B33"],
+.sp .bg-navy [style*="color:#081B33"],
+.sp .bg-accent2 [style*="color:#081B33"],
 .sp .bg-dark [style*="color:#002768"],
 .sp .bg-navy [style*="color:#002768"],
 .sp .bg-accent2 [style*="color:#002768"]{color:var(--accent)!important}
@@ -108,7 +111,7 @@ header .container{padding:0}
 /* ── Comparison table ────────────────────────────────────────────────── */
 .sp .cmp{width:100%;border-collapse:collapse;font-size:15px;background:#fff;box-shadow:0 24px 60px rgba(10,15,28,.12)}
 .sp .cmp th,.sp .cmp td{padding:18px 20px;text-align:left;border-bottom:1px solid #e7e9ee}
-.sp .cmp thead th{font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:12px;color:#fff;background:#002768}
+.sp .cmp thead th{font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:12px;color:#fff;background:#081B33}
 .sp .cmp thead th.tj{background:var(--ink);color:#fff}
 .sp .cmp td.rowlbl{font-weight:700;color:var(--ink)}
 .sp .cmp td.tj{background:rgba(200,38,42,.06);font-weight:700;color:var(--ink)}
@@ -169,7 +172,7 @@ header .container{padding:0}
 
 
 /* ── Universal table header bar: navy band, white caps type ── */
-.sp table thead th{font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:12px;color:#fff;background:#002768;padding:14px 18px;text-align:left}
+.sp table thead th{font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:12px;color:#fff;background:#081B33;padding:14px 18px;text-align:left}
 .sp table thead th.tj{background:var(--ink)}
 
 /* ── Tall blueprint sections: span full width, tile vertically ── */

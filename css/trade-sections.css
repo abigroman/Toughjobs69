@@ -93,13 +93,13 @@
 .tj-gb-outer2{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center}
 .tj-gb-head{margin-bottom:24px}
 .tj-gb-grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
-.tj-gb-card.tj-gb-card--navy{background:#002768;padding:36px 30px;box-shadow:0 20px 40px -20px rgba(0,0,0,.25);border-top:4px solid #C8262A}
+.tj-gb-card.tj-gb-card--navy{background:#081B33;padding:36px 30px;box-shadow:0 20px 40px -20px rgba(0,0,0,.25);border-top:4px solid #C8262A}
 .tj-gb-p{font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 28px}
 .tj-gb-card.tj-gb-card--ink{background:#0A0F1C;padding:36px 30px;box-shadow:0 20px 40px -20px rgba(0,0,0,.25);border-top:4px solid #C8262A}
 .tj-gb-img{position:relative;height:100%;min-height:420px}
 .tj-gb-img-el{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:top center}
-.tj-footer{position:relative;overflow:hidden;background:linear-gradient(135deg,#001a4a 0%,#002768 100%);color:var(--white);border-top:3px solid var(--accent)}
-.tj-footer-scrim{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(0,26,74,.88) 0%,rgba(0,39,104,.84) 100%);z-index:0}
+.tj-footer{position:relative;overflow:hidden;background:linear-gradient(135deg,#050F1F 0%,#081B33 100%);color:var(--white);border-top:3px solid var(--accent)}
+.tj-footer-scrim{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(5,15,31,.88) 0%,rgba(8,27,51,.84) 100%);z-index:0}
 .tj-hero{position:relative;color:var(--white);overflow:hidden}
 .tj-accent{color:var(--accent)}
 .tj-noshrink{flex-shrink:0}
@@ -111,29 +111,29 @@
 .tj-stage.tj-stage--c{flex:1 1 200px;min-width:200px;background:rgba(255,255,255,.03);border-top:4px solid #7DA8FF;padding:26px 22px;display:flex;flex-direction:column}
 .tj-stage-kicker.tj-kicker--c{font-family:'Archivo',sans-serif;font-weight:800;font-size:11px;letter-spacing:.12em;color:#7DA8FF;margin-bottom:14px}
 .tj-stage-foot.tj-foot--c{font-size:12px;color:#7DA8FF;font-weight:700;letter-spacing:.02em;border-top:1px solid rgba(255,255,255,.12);padding-top:12px}
-.tj-longform{position:relative;z-index:2;max-width:900px;margin:64px auto 0;padding-top:44px;border-top:1px solid rgba(0,39,104,.25)}
+.tj-longform{position:relative;z-index:2;max-width:900px;margin:64px auto 0;padding-top:44px;border-top:1px solid rgba(8,27,51,.25)}
 .tj-lf-h2{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(26px,3vw,38px);line-height:1.05;color:#0A0F1C;margin:0 0 20px}
 .tj-lf-body{font-size:16.5px;line-height:1.72;color:#1c2536}
 .tj-lf-foot{font-size:16px;line-height:1.7;color:#1c2536;margin:28px 0 0}
 .tj-btn-white.tj-btn--sm{background:var(--white);color:var(--accent);font-weight:700;padding:14px 28px;text-decoration:none;display:inline-block;border-radius:4px;white-space:nowrap}
 .tj-btn-ghost{background:transparent;color:var(--white);border:2px solid var(--white);font-weight:700;padding:14px 28px;text-decoration:none;display:inline-block;border-radius:4px;white-space:nowrap}
 .tj-btn-black{background:#000000;color:var(--white)}
-.tj-cta-section{position:relative;color:var(--white);padding-block:100px;background:linear-gradient(180deg, rgba(168, 1, 0, 0.45) 0%, rgba(200, 38, 42, 0.35) 100%)}
-.tj-faq-panel{background:#002768;padding:44px 36px;margin:44px 0 0}
+.tj-cta-section{position:relative;color:var(--white);padding-block:100px;background:linear-gradient(180deg, rgba(152, 27, 31, 0.45) 0%, rgba(200, 38, 42, 0.35) 100%)}
+.tj-faq-panel{background:#081B33;padding:44px 36px;margin:44px 0 0}
 .tj-panel-h2{color:#FFFFFF;margin:12px 0 0}
 .tj-book-wrap{display:flex;align-items:center;justify-content:center;min-height:500px;perspective:1800px}
-.tj-gb-eyebrow{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:#002768}
+.tj-gb-eyebrow{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:#081B33}
 .tj-gb-h2{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(32px,3.6vw,50px);line-height:1.02;color:#0A0F1C;margin:12px 0 0}
 .tj-gb-h2 .tj-white{color:#0A0F1C}
 .tj-m0{margin:0}
-.tj-faq-band{background:#002768;padding-block:80px;width:100%;max-width:none;margin-inline:0}
+.tj-faq-band{background:#081B33;padding-block:80px;width:100%;max-width:none;margin-inline:0}
 .tj-faq-band > .td-analysis-inner{max-width:none;width:100%;margin:0;padding-inline:clamp(24px,5vw,80px)}
 .tj-band-h2{color:#FFFFFF;margin-top:12px}
 .tj-lf-h3{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:18px;color:#0A0F1C;margin:30px 0 8px}
 .tj-lf-h2b{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(22px,2.4vw,30px);line-height:1.05;color:#0A0F1C;margin:44px 0 14px}
 .tj-lf-list{font-size:16px;line-height:1.65;color:#1c2536;margin:0;padding-left:22px}
 .tj-card-price.tj-price--a{font-family:'Archivo Black',sans-serif;font-size:14px;color:var(--accent);text-shadow:0 1px 4px rgba(0,0,0,.6);line-height:1.25;margin-bottom:6px}
-.tj-lf-rule{padding:20px 0;border-top:1px solid rgba(0,39,104,.2)}
+.tj-lf-rule{padding:20px 0;border-top:1px solid rgba(8,27,51,.2)}
 .tj-red{color:#C8262A}
 .tj-card-plain{background:var(--ink);color:var(--white)}
 .tj-nowrap{white-space:nowrap}
@@ -150,10 +150,10 @@
 .tj-gb-card .tj-gb-num,.tj-gb-card span{color:#C8262A}
 .tj-gb-card .tj-gb-btn{color:#fff;background:#C8262A}
 
-/* FAQ band headings sit on #002768 — outrank .td-analysis h2 (0,1,1) with a scoped selector */
+/* FAQ band headings sit on #081B33 — outrank .td-analysis h2 (0,1,1) with a scoped selector */
 .td-faq-section .tj-band-h2,.td-faq-section .tj-panel-h2,.td-faq-section > .td-analysis-inner > h2{color:#FFFFFF}
 
-/* FAQ band item contrast — items sit on #002768, must outrank .td-analysis defaults */
+/* FAQ band item contrast — items sit on #081B33, must outrank .td-analysis defaults */
 .td-faq-section .td-faq-item{border-top:1px solid rgba(255,255,255,.22);padding:22px 0}
 .td-faq-section .td-faq-item:last-child{border-bottom:1px solid rgba(255,255,255,.22)}
 .td-faq-section .td-faq-item h3{color:#FFFFFF;margin:0 0 8px;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:18px;line-height:1.15}
