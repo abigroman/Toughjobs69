@@ -73,7 +73,7 @@
 /* Both padding values carry a +96px (1in) offset over the badge-clearance
    figure, so the mark sits an inch further left at every width while the left
    and right space around it stay identical. */
-.pc-logo-slot{flex:0 0 auto;margin-left:auto;padding:0 max(152px,854px - 50vw);display:flex;align-items:flex-start;align-self:flex-start}
+.pc-logo-slot{flex:0 0 auto;margin-left:auto;padding:0 max(152px,854px - 50vw);display:flex;align-items:center;align-self:center}
 .pc-title-logo{width:clamp(104px,9vw,144px);height:auto;transform:translateY(-14%);filter:drop-shadow(0 14px 26px rgba(0,0,0,.35))}
 /* Below the container's max width the page runs edge to edge and the badge
    owns the corner outright, so the mark steps aside rather than collide. */
@@ -557,28 +557,5 @@
 <!-- impeccable-live-start -->
 <script src="http://localhost:8400/live.js?token=19f259b2-bf41-4547-a2ea-088ae600fb6b"></script>
 <!-- impeccable-live-end -->
-<script id="pc-title-logo-align"></script><script>
-(function(){
-  function align(){
-    // Matches the breakpoint in #pc-title-logo-style where the slot is hidden.
-    var wide = window.matchMedia('(min-width:1241px)').matches;
-    document.querySelectorAll('.pc-headrow').forEach(function(row){
-      var h2 = row.querySelector('h2'), slot = row.querySelector('.pc-logo-slot');
-      if(!h2 || !slot) return;
-      var img = slot.querySelector('img');
-      if(!wide){ slot.style.paddingTop = ''; return; }
-      slot.style.paddingTop = '0px';
-      var r = row.getBoundingClientRect(), t = h2.getBoundingClientRect();
-      var ih = img.getBoundingClientRect().height || img.offsetHeight;
-      var center = (t.top + t.height/2) - r.top;
-      slot.style.paddingTop = Math.max(0, center - ih/2) + 'px';
-    });
-  }
-  window.addEventListener('load', align);
-  window.addEventListener('resize', align);
-  document.addEventListener('DOMContentLoaded', align);
-  setTimeout(align, 400);
-})();
-</script>
 </body>
 </html>
