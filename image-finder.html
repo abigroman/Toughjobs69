@@ -199,6 +199,7 @@ const FILES = [
 const isVideo = f => /\.(mp4|webm)$/i.test(f);
 const URL_OVERRIDES = {};
 const resolveSrc = f => URL_OVERRIDES[f] || f;
+const esc = s => String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 const grid = document.getElementById('grid');
 const empty = document.getElementById('empty');
@@ -219,14 +220,14 @@ function render(list) {
     card.className = 'card';
     const src = resolveSrc(path);
     const media = isVideo(path)
-      ? `<video src="${src}" muted></video>`
-      : `<img src="${src}" loading="lazy" alt="${name}" />`;
+      ? `<video src="${esc(src)}" muted></video>`
+      : `<img src="${esc(src)}" loading="lazy" alt="${esc(name)}" />`;
     card.innerHTML = `
       <div class="thumb">${media}</div>
       <div class="meta">
-        <div class="fname">${name}</div>
-        <div class="fpath">${path}</div>
-        <button class="delete-btn" data-path="${path}">Delete</button>
+        <div class="fname">${esc(name)}</div>
+        <div class="fpath">${esc(path)}</div>
+        <button class="delete-btn" data-path="${esc(path)}">Delete</button>
       </div>`;
     card.addEventListener('click', (e) => {
       if (e.target.classList.contains('delete-btn')) return;
@@ -314,8 +315,5 @@ document.getElementById('closeBtn').addEventListener('click', () => {
 
 </script>
 
-<!-- impeccable-live-start -->
-<script src="http://localhost:8400/live.js?token=19f259b2-bf41-4547-a2ea-088ae600fb6b"></script>
-<!-- impeccable-live-end -->
 </body>
 </html>

@@ -81,7 +81,13 @@
       <div class="contact-cols" style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start">
         <div>
           <h2 style="margin-top:0">Get in touch</h2>
-          <form action="mailto:team@toughjobs.org" method="post" enctype="text/plain">
+          <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Get a free access key at https://web3forms.com/ (no account needed —
+                 they email you a key) and paste it here before this form will send. -->
+            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+            <input type="hidden" name="subject" value="New Toughjobs contact form lead" />
+            <input type="hidden" name="from_name" value="Toughjobs contact form" />
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
             <div class="form-row">
               <div class="form-group">
                 <label for="fname">First Name</label>
@@ -140,9 +146,50 @@
               <textarea id="message" name="message" maxlength="2000" placeholder="What's your biggest marketing challenge right now?"></textarea>
             </div>
 
-            <button type="submit" class="btn" style="align-self:flex-start;font-size:15px;padding:18px 40px">Send message</button>
-            <p style="font-size:13px;margin:10px 0 0;color:#4b5563">Submitting opens your email app with these details ready to send.</p>
+            <button type="submit" id="contact-submit" class="btn" style="align-self:flex-start;font-size:15px;padding:18px 40px">Send message</button>
+            <div id="contact-status" role="status" style="font-size:14px;margin:10px 0 0" hidden></div>
+            <p style="font-size:13px;margin:10px 0 0;color:#4b5563">We'll respond within 24 hours. Prefer to skip the form? Call <a href="tel:3099289080" style="color:var(--accent)">(309) 928-9080</a>.</p>
           </form>
+          <script>
+          (function(){
+            var form = document.getElementById('contact-form');
+            var btn = document.getElementById('contact-submit');
+            var status = document.getElementById('contact-status');
+            var btnLabel = btn.textContent;
+            function showStatus(msg, isError){
+              status.hidden = false;
+              status.textContent = msg;
+              status.style.color = isError ? '#C8262A' : '#0f7a3d';
+            }
+            form.addEventListener('submit', function(e){
+              e.preventDefault();
+              if (!form.reportValidity()) return;
+              btn.disabled = true;
+              btn.textContent = 'Sending…';
+              status.hidden = true;
+              fetch(form.action, {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: new FormData(form)
+              }).then(function(res){ return res.json().then(function(data){ return { ok: res.ok, data: data }; }); })
+                .then(function(result){
+                  if (result.ok && result.data && result.data.success){
+                    showStatus('Message sent — we\'ll get back to you within 24 hours.', false);
+                    form.reset();
+                  } else {
+                    throw new Error((result.data && result.data.message) || 'Send failed');
+                  }
+                })
+                .catch(function(){
+                  showStatus('Something went wrong sending that. Please call (309) 928-9080 or email team@toughjobs.org directly.', true);
+                })
+                .finally(function(){
+                  btn.disabled = false;
+                  btn.textContent = btnLabel;
+                });
+            });
+          })();
+          </script>
         </div>
 
         <div>
@@ -271,16 +318,6 @@
 
 <script src="inject-header.js?v=20260802b"></script>
 <script src="accessibility.js?v=20260729"></script>
-<script>
-  document.querySelector('form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const formData = new FormData(this);
-    const data = Object.fromEntries(formData);
-    console.log('Form submitted:', data);
-    alert('Thanks for reaching out! We\'ll be in touch within 24 hours.');
-    this.reset();
-  });
-</script>
 <script src="sticky-cta.js"></script>
 <script src="chat-launcher.js?v=20260729"></script>
 <script src="image-finder-tab.js"></script>

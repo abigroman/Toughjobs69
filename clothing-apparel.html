@@ -61,7 +61,28 @@
     object-fit:contain;
     object-position:center bottom;
     display:block;
+    transform:translateX(-22px);
   }
+  .apparel-shop-jump{
+    position:absolute;
+    top:-148px;
+    left:50%;
+    transform:translateX(-50%);
+    width:min(92%,300px);
+    padding:14px 20px;
+    border:1px solid rgba(255,255,255,.16);
+    border-top:4px solid var(--red);
+    background:rgba(255,255,255,.04);
+    text-align:center;
+  }
+  .apparel-shop-jump .eyebrow{display:block;margin-bottom:6px}
+  .apparel-shop-jump p{margin:0 0 10px;font-size:13px;line-height:1.4;color:rgba(255,255,255,.82)}
+  .apparel-shop-jump-btn{display:inline-flex;align-items:center;gap:8px;font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:12.5px;color:var(--red);text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:3px;transition:color .15s ease,border-color .15s ease}
+  .apparel-shop-jump-btn:hover{color:#fff;border-color:#fff}
+  .apparel-shop-jump-btn .arr{transition:transform .15s ease}
+  .apparel-shop-jump-btn:hover .arr{transform:translateY(3px)}
+  html{scroll-behavior:smooth}
+  #apparelGrid{scroll-margin-top:140px}
   .prod4{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:34px}
   .prod-card{display:flex;flex-direction:column;background:#fff;text-decoration:none;color:var(--ink);border:1px solid rgba(10,15,28,.12);box-shadow:0 0 2px rgba(10,15,28,.35);transition:transform .15s ease,box-shadow .15s ease}
   .prod-card:hover{transform:translateY(-4px);box-shadow:6px 6px 0 var(--ink)}
@@ -135,7 +156,12 @@
         </div>
       </div>
       <div class="hero-img-slot clothing-apparel-hero-media">
-        <img src="uploads/polos-couple-4b7e31d8.webp" alt="Two experienced trades professionals wearing coordinated red and blue branded work polos" width="1448" height="1086" decoding="async" fetchpriority="high" />
+        <div class="apparel-shop-jump">
+          <span class="eyebrow accent">The full lineup</span>
+          <p>Polos, hoodies, hats, hi-vis &mdash; see every piece we produce.</p>
+          <a href="#apparelGrid" class="apparel-shop-jump-btn">Shop the line <span class="arr">&darr;</span></a>
+        </div>
+        <img src="uploads/polos-couple.webp" alt="Two experienced trades professionals wearing coordinated navy and white branded work polos" width="343" height="600" decoding="async" fetchpriority="high" />
       </div>
     </div>
   </section>
