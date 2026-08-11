@@ -93,6 +93,12 @@
   .sources{font-size:12.5px;line-height:1.7;color:rgba(255,255,255,.55);max-width:900px}
   .sources b{color:rgba(255,255,255,.8)}
   .reviews-hero-img{height:100%;width:auto;max-width:100%;object-fit:contain;object-position:center right}
+  /* Below 1440px, clearance from the sticky assessment badge shrinks (and briefly
+     goes negative around 1150-1240px as the container hits its max-width); this
+     shift is only safe at 1440px+, measured against the badge's fixed position. */
+  @media(min-width:1440px){
+    .reviews-hero-img{transform:translate(45px,-40px)}
+  }
 </style>
 <link rel="stylesheet" href="shared-header.css" />
 <style id="white-texture-sweep">
