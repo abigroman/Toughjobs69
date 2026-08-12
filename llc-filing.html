@@ -16,8 +16,8 @@
   *,*::before,*::after{box-sizing:border-box}
   html,body{margin:0;padding:0;background:#0A0F1C}
   body{font-family:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;color:#0A0F1C;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;overflow-x:clip}
-  :root{--ink:#0A0F1C;--navy:#002768;--navy-2:#001a4a;--red:#C8262A;--accent:#C8262A;--smoke:#5B6471;--white:#FFFFFF;--container:1240px}
-  body{--accent2:#002768}
+  :root{--ink:#0A0F1C;--navy:#081B33;--navy-2:#050F1F;--red:#C8262A;--accent:#C8262A;--smoke:#5B6471;--white:#FFFFFF;--container:1240px}
+  body{--accent2:#081B33}
   a{color:var(--red)}a:hover{color:var(--navy)}
   .logo-text span.tight{color:var(--red)}.logo-text span.light{color:var(--white)}
   header a.logo-link{display:flex;align-items:center;gap:1px;text-decoration:none;color:var(--white)}
@@ -77,7 +77,7 @@
 
   /* ── included / not-included two-col lists ───────────────────── */
   .llc-list{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .llc-list .li{display:flex;gap:14px;align-items:flex-start;padding:20px 22px;background:#fff;border:1px solid #e3e5ea}
+  .llc-list .li{display:flex;gap:14px;align-items:flex-start;padding:20px 22px;background:#fff;border:1px solid #e3e5ea;box-shadow:0 0 2px 0 rgba(10,15,28,.35)}
   .bg-dark .llc-list .li,.bg-navy .llc-list .li{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.14)}
   .llc-list .mk{flex:0 0 auto;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Archivo Black",sans-serif;font-size:15px;line-height:1;color:#fff}
   .llc-list .mk.yes{background:#1f8a4c}
@@ -91,7 +91,7 @@
   /* ── state detail two-up ─────────────────────────────────────── */
   .state-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
   .state-grid .sbox{padding:30px 30px 32px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.04)}
-  .bg-light .state-grid .sbox{background:#fff;border-color:#e3e5ea}
+  .bg-light .state-grid .sbox{background:#fff;border-color:#e3e5ea;box-shadow:0 0 2px 0 rgba(10,15,28,.35)}
   .state-grid .sbox .tag{font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:11px;color:var(--accent);margin:0 0 8px}
   .state-grid .sbox h3{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:26px;margin:0 0 14px;line-height:1}
   .bg-light .state-grid .sbox h3{color:var(--ink)}

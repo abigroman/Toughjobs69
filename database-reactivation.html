@@ -17,10 +17,10 @@
   *,*::before,*::after{box-sizing:border-box}
   html,body{margin:0;padding:0;background:#0A0F1C}
   body{font-family:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;color:#0A0F1C;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;overflow-x:clip}
-  :root{--ink:#0A0F1C;--navy:#002768;--navy-2:#001a4a;--red:#C8262A;--accent:#C8262A;--smoke:#5B6471;--white:#FFFFFF;--container:1240px}
+  :root{--ink:#0A0F1C;--navy:#081B33;--navy-2:#050F1F;--red:#C8262A;--accent:#C8262A;--smoke:#5B6471;--white:#FFFFFF;--container:1240px}
   header .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;font-family:"Archivo",sans-serif;font-weight:800;letter-spacing:.06em;font-size:13px;text-transform:uppercase;text-decoration:none;background:var(--red);color:var(--white);border:0;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease;white-space:nowrap}
   header .btn:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
-  body{--accent2:#002768}
+  body{--accent2:#081B33}
   /* Local-area + services list */
   .svc-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 32px;margin-top:8px;list-style:none;padding:0}
   .svc-list li{position:relative;padding-left:30px;font-size:16px;line-height:1.5;font-weight:600}
@@ -44,6 +44,13 @@
   }
   .area-band .seo-longform > div > div{
     border-top-color:rgba(255,255,255,.2) !important;
+  }
+  .area-band .seo-longform a{
+    color:#C8262A;
+    text-decoration:underline;
+  }
+  .area-band .seo-longform a:hover{
+    color:var(--white);
   }
   .script-box{margin-top:26px;border:1px solid rgba(255,255,255,.16);border-left:4px solid var(--accent);padding:22px 24px;background:rgba(255,255,255,.03)}
   .script-box .sl{font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:11px;color:var(--accent);margin-bottom:10px}
@@ -117,9 +124,9 @@
 .drx-7{margin:0 0 18px}
 .drx-8{margin:0}
 .drx-9{font-size:clamp(22px,2.4vw,30px);line-height:1.05;color:#0A0F1C;margin:44px 0 14px}
-.drx-10{font-size:16px;line-height:1.65;color:#1c2536;margin:0 0 20px;padding-left:22px}
+.drx-10{font-size:16px;line-height:1.65;color:rgba(255,255,255,.88);margin:0 0 20px;padding-left:22px}
 .drx-11{margin:0 0 10px}
-.drx-12{font-size:16px;line-height:1.7;color:#1c2536;margin:22px 0 0}
+.drx-12{font-size:16px;line-height:1.7;color:rgba(255,255,255,.88);margin:22px 0 0}
 .drx-13{font-size:clamp(22px,2.4vw,30px);line-height:1.05;color:#0A0F1C;margin:44px 0 8px}
 .drx-14{font-size:16px;line-height:1.7;color:#1c2536}
 .drx-15{padding:20px 0;border-top:1px solid rgba(10,15,28,.12)}
@@ -134,12 +141,12 @@
 .drx-24{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(32px,3.6vw,50px);line-height:1.02;color:#0A0F1C;margin:12px 0 0;}
 .drx-25{color:#C8262A;}
 .drx-26{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch;}
-.drx-27{background:#002768;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;}
+.drx-27{background:#081B33;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(8,27,51,.5);border-top:4px solid #C8262A;}
 .drx-28{font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700;}
 .drx-29{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05;}
 .drx-30{font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 28px;}
 .drx-31{display:inline-block;background:#C8262A;color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none;}
-.drx-32{background:#0A0F1C;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;}
+.drx-32{background:#0A0F1C;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(8,27,51,.5);border-top:4px solid #C8262A;}
 .drx-33{font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.8);margin:0 0 28px;}
 .drx-34{position:relative;height:100%;min-height:420px;}
 .drx-35{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:top center;}

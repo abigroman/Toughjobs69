@@ -17,7 +17,7 @@
   *,*::before,*::after{box-sizing:border-box}
   html,body{margin:0;padding:0;background:#0A0F1C}
   body{font-family:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;color:#0A0F1C;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;overflow-x:clip}
-  :root{--ink:#0A0F1C;--navy:#002768;--navy-2:#001a4a;--red:#C8262A;--accent:#C8262A;--smoke:#5B6471;--white:#FFFFFF;--container:1240px}
+  :root{--ink:#0A0F1C;--navy:#081B33;--navy-2:#050F1F;--red:#C8262A;--accent:#C8262A;--smoke:#5B6471;--white:#FFFFFF;--container:1240px}
   .logo-text span.tight{color:var(--red)}.logo-text span.light{color:var(--white)}
   header
   header.scrolled
@@ -61,7 +61,7 @@
   .automation-filter{flex:0 0 auto;padding:12px 14px;border:1px solid rgba(255,255,255,.28);border-radius:0;background:transparent;color:#fff;font:800 11px "Archivo",sans-serif;letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
   .automation-filter:hover,.automation-filter:focus-visible{border-color:#fff;background:rgba(255,255,255,.08)}
   .automation-filter.is-active{border-color:var(--red);background:var(--red)}
-  .automation-group{margin-top:18px;background:#fff;border-top:4px solid var(--navy)}
+  .automation-group{margin-top:18px;background:#fff;border-top:4px solid var(--navy);box-shadow:0 0 2px 0 rgba(10,15,28,.35)}
   .automation-group[hidden]{display:none}
   .automation-group summary{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:22px 26px;cursor:pointer;list-style:none;background:var(--navy);color:#fff}
   .automation-group summary::-webkit-details-marker{display:none}
@@ -189,12 +189,12 @@
 .aix-25{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(32px,3.6vw,50px);line-height:1.02;color:#0A0F1C;margin:12px 0 0;}
 .aix-26{color:#C8262A;}
 .aix-27{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch;}
-.aix-28{background:#002768;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;}
+.aix-28{background:#081B33;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(8,27,51,.5);border-top:4px solid #C8262A;}
 .aix-29{font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700;}
 .aix-30{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05;}
 .aix-31{font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 28px;}
 .aix-32{display:inline-block;background:#C8262A;color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none;}
-.aix-33{background:#0A0F1C;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;}
+.aix-33{background:#0A0F1C;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(8,27,51,.5);border-top:4px solid #C8262A;}
 .aix-34{font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.8);margin:0 0 28px;}
 .aix-35{position:relative;height:100%;min-height:420px;}
 .aix-36{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:bottom center;}
@@ -413,9 +413,9 @@
     </div>
     <style>
       .sp section .cmp-wrap{ max-width:960px; margin:0 auto; border-radius:14px; overflow:hidden; box-shadow:0 26px 60px rgba(0,0,0,.4); }
-      .sp section table.cmp{ width:100%; border-collapse:collapse; background:#002768; color:#fff; font-family:'Archivo',sans-serif; }
+      .sp section table.cmp{ width:100%; border-collapse:collapse; background:#081B33; color:#fff; font-family:'Archivo',sans-serif; }
       .sp section table.cmp th, .sp section table.cmp td{ padding:16px 20px; text-align:left; border-bottom:1px solid rgba(255,255,255,.12); font-size:15px; }
-      .sp section table.cmp thead th{ background:#001B4A; font-family:'Archivo Black',sans-serif; text-transform:uppercase; letter-spacing:.04em; font-size:13px; color:#fff; }
+      .sp section table.cmp thead th{ background:#050F1F; font-family:'Archivo Black',sans-serif; text-transform:uppercase; letter-spacing:.04em; font-size:13px; color:#fff; }
       .sp section table.cmp thead th.tj{ background:#C8262A; }
       .sp section table.cmp .tjhead{ color:#fff; }
       .sp section table.cmp td.rowlbl{ font-weight:800; color:#fff; background:rgba(255,255,255,.05); }
