@@ -17,7 +17,7 @@
   *,*::before,*::after{box-sizing:border-box}
   html,body{margin:0;padding:0;background:#0A0F1C}
   body{font-family:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;color:#0A0F1C;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;overflow-x:clip}
-  :root{--ink:#0A0F1C;--navy:#081B33;--navy-2:#001a4a;--red:#C8262A;--accent:#C8262A;--smoke:#5B6471;--white:#FFFFFF;--container:1240px}
+  :root{--ink:#0A0F1C;--light:#F1F4F7;--navy:#081B33;--navy-2:#001a4a;--red:#C8262A;--accent:#C8262A;--smoke:#5B6471;--white:#FFFFFF;--container:1240px}
   header a.logo-link{display:flex;align-items:center;gap:1px;text-decoration:none;color:var(--white)}
   header img{height:auto;width:auto;max-height:70px;object-fit:contain;transition:all .3s ease}
   header.scrolled img{height:auto;width:auto;max-height:45px}
@@ -40,6 +40,15 @@
   .st3 .s .b{font-family:"Archivo Black",sans-serif;font-size:34px;color:var(--red);line-height:.9}
   .st3 .s .t{font-size:13px;color:rgba(255,255,255,.82);margin-top:8px;font-weight:600}
   @media(max-width:640px){.st3{grid-template-columns:1fr}}
+
+  .sp .bg-paper{
+    background-color:var(--light);
+    background-image:
+      radial-gradient(120% 90% at 100% 0%,rgba(23,105,224,.10) 0%,rgba(23,105,224,0) 58%),
+      radial-gradient(90% 80% at 0% 100%,rgba(200,38,42,.07) 0%,rgba(200,38,42,0) 62%),
+      linear-gradient(180deg,#F8FAFC 0%,#E8EDF3 100%);
+    color:var(--ink);
+  }
 </style>
 <link rel="stylesheet" href="shared-header.css" />
 <style id="white-texture-sweep">
@@ -143,7 +152,7 @@
   </section>
 
   <!-- SEO-PRINT-DETAIL:START -->
-<section class="bg-light">
+<section class="bg-paper">
   <div class="tex tex-dots-d"></div>
   <div class="container" style="max-width:920px">
     <div class="head reveal"><span class="eyebrow">Plan before production</span><h2 class="display">Truck and Cargo Van Wraps built around a specific job.</h2></div>
