@@ -20,7 +20,7 @@
 //    app → copy the Realtime Database URL below (looks like
 //    "https://PROJECT-ID-default-rtdb.firebaseio.com").
 window.QUIZ_DB = {
-  url: ""   // e.g. "https://toughjobs-quiz-default-rtdb.firebaseio.com"  (no trailing slash)
+  url: "https://toughjobs-quiz-default-rtdb.firebaseio.com"
 };
 // ─────────────────────────────────────────────────────────────────────────
 

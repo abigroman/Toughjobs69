@@ -21,7 +21,7 @@
 //    app → copy the Realtime Database URL below (same one used in
 //    quiz-store.js if you're reusing that project).
 window.LEADS_DB = {
-  url: ""   // e.g. "https://toughjobs-quiz-default-rtdb.firebaseio.com"  (no trailing slash)
+  url: "https://toughjobs-quiz-default-rtdb.firebaseio.com"
 };
 // ─────────────────────────────────────────────────────────────────────────
 
