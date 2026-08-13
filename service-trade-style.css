@@ -5,8 +5,8 @@
 
 /* ── Section themes: flat trade palette ─────────────────────────────── */
 .sp .bg-dark{background:#0A0F1C;background-image:none;color:#FFFFFF}
-.sp .bg-navy{background:linear-gradient(165deg,#002768 0%,#001a4a 100%);background-image:none;color:#FFFFFF}
-.sp .bg-accent2{background:linear-gradient(165deg,#002768 0%,#001a4a 100%);background-image:none;color:#FFFFFF}
+.sp .bg-navy{background:linear-gradient(165deg,#081B33 0%,#050F1F 100%);background-image:none;color:#FFFFFF}
+.sp .bg-accent2{background:linear-gradient(165deg,#081B33 0%,#050F1F 100%);background-image:none;color:#FFFFFF}
 .sp .bg-light{background:#FFFFFF url('assets/partnership-schematics-light.webp') center/cover fixed no-repeat;color:#0A0F1C}
 .sp .bg-light p,.sp .bg-light li{color:rgba(10,15,28,.82);font-weight:700}
 .sp .bg-light .head .lede{color:rgba(10,15,28,.82)}

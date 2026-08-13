@@ -1,5 +1,5 @@
 /* ===== Page shell ===== */
-main{min-height:400px;background:#001a4a url('../assets/blueprint-background.webp') center/cover fixed no-repeat}
+main{min-height:400px;background:#050F1F url('../assets/blueprint-background.webp') center/cover fixed no-repeat}
   @media(max-width:960px){main{background-attachment:scroll}}
   @keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
   .team-logo-ring{position:relative;width:clamp(200px,24vw,360px);aspect-ratio:1;display:flex;align-items:center;justify-content:center}

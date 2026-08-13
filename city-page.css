@@ -1,22 +1,22 @@
 /* ── Toughjobs City / Service-Area Page ─────────────────────────────── */
 
 *,*::before,*::after{ box-sizing:border-box; }
-html,body{ margin:0; padding:0; background:#001a4a; }
+html,body{ margin:0; padding:0; background:#050F1F; }
 body{
   font-family:"Inter","Helvetica Neue",Helvetica,Arial,sans-serif;
   color:var(--white);
   background:url('assets/blueprint-background.webp') fixed center/cover no-repeat;
-  background-color:#001a4a;
+  background-color:#050F1F;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
 }
 
 :root{
   --ink:#0A0F1C;
-  --navy:#002768;
-  --navy-2:#001a4a;
+  --navy:#081B33;
+  --navy-2:#050F1F;
   --red:#C8262A;
-  --red-2:#A90100;
+  --red-2:#981B1F;
   --accent:#C8262A;
   --accent-ink:#FFFFFF;
   --white:#FFFFFF;
@@ -70,7 +70,7 @@ body{
 /* ── Sections ─────────────────────────────────────────────────────── */
 section{ padding-block:48px; position:relative; }
 .panel-dark{ background:rgba(10,15,28,.86); }
-.panel-navy{ background:rgba(0,39,104,.82); }
+.panel-navy{ background:rgba(8,27,51,.82); }
 
 a.inline-link{ color:#fff; }
 

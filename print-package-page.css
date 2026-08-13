@@ -8,10 +8,10 @@ FORM: Production-roadmap structure, third-ranked grounded concept, seed bb9fc6dd
 *,*::before,*::after{box-sizing:border-box}
 :root{
   --ink:#0A0F1C;
-  --navy:#002768;
-  --navy-deep:#001A4A;
+  --navy:#081B33;
+  --navy-deep:#050F1F;
   --red:#C8262A;
-  --red-deep:#A90100;
+  --red-deep:#981B1F;
   --white:#FFFFFF;
   --surface:#F4F5F7;
   --smoke:#5B6471;
@@ -75,7 +75,7 @@ body.package-page{
   inset:0;
   z-index:-2;
   background:
-    linear-gradient(90deg,rgba(10,15,28,.97) 0%,rgba(10,15,28,.9) 49%,rgba(0,39,104,.5) 100%),
+    linear-gradient(90deg,rgba(10,15,28,.97) 0%,rgba(10,15,28,.9) 49%,rgba(8,27,51,.5) 100%),
     url("assets/print-collateral-blueprintDark.webp") center/cover;
 }
 .pkg-hero::after{
@@ -87,7 +87,7 @@ body.package-page{
   width:40vw;
   height:110vh;
   transform:rotate(10deg);
-  background:linear-gradient(90deg,var(--red) 0 10px,rgba(0,39,104,.32) 10px);
+  background:linear-gradient(90deg,var(--red) 0 10px,rgba(8,27,51,.32) 10px);
 }
 .pkg-back{
   display:inline-flex;
