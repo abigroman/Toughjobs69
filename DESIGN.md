@@ -1,13 +1,13 @@
----
+﻿---
 name: ToughJobs
 description: Full-stack trade marketing — brand, wraps, print, web, SEO, and AI in one shop
 colors:
   red: "#C8262A"
-  red-dark: "#A90100"
-  navy: "#002768"
+  red-dark: "#981B1F"
+  navy: "#081B33"
   ink: "#0A0F1C"
   blueprint-dark: "#001a4a"
-  gray-bg: "#282828"
+  gray-bg: "#17212D"
   white: "#FFFFFF"
   smoke: "#5B6471"
   mute: "#C7CBD2"
@@ -104,15 +104,15 @@ Ink and Red carry the system; Navy is a secondary authority color; all warm whit
 
 ### Primary
 - **Signal Red** (`#C8262A`): The action color. Used on primary CTA buttons, headline emphasis spans, active nav states, hover inversions, and accent eyebrows. One voice; its rarity gives it authority.
-- **Dark Red / Logo Red** (`#A90100`): The identity red used in the logo mark. Applied when a deeper, more grounded red is needed — logo contexts only, not general UI.
+- **Dark Red / Logo Red** (`#981B1F`): The identity red used in the logo mark. Applied when a deeper, more grounded red is needed — logo contexts only, not general UI.
 
 ### Secondary
-- **Brand Navy** (`#002768`): Authority color for alternate palette lead. Used as section background when a third surface color is needed between ink and light, and in focus ring shadow.
+- **Brand Navy** (`#081B33`): Authority color for alternate palette lead. Used as section background when a third surface color is needed between ink and light, and in focus ring shadow.
 - **Blueprint Dark** (`#001a4a`): Blueprint page background — darker and cooler than navy, used with the grid-texture overlay on services, about, and contact pages.
 
 ### Neutral
 - **Ink** (`#0A0F1C`): Near-black. Default text on light, primary dark-section background, navigation background.
-- **Gray BG** (`#282828`): Medium dark surface for mid-depth sections.
+- **Gray BG** (`#17212D`): Medium dark surface for mid-depth sections.
 - **Smoke** (`#5B6471`): Body text on light backgrounds. Lower contrast than ink; used for secondary prose.
 - **Mute** (`#C7CBD2`): Muted headline spans. Used in split headlines for the "quiet" clause when three tones are needed.
 - **Hairline** (`#E5E7EB`): Borders and dividers on light surfaces.
@@ -123,7 +123,7 @@ Ink and Red carry the system; Navy is a secondary authority color; all warm whit
 ### Named Rules
 **The One Voice Rule.** Signal Red (`#C8262A`) is the only accent color in the UI. It appears on CTAs, emphasis spans, hover states, and active nav markers. Any second accent color belongs to a specific interior-page accent band only, never system-wide. When Red is everywhere, it means nothing.
 
-**The Dark Text on Dark Rule.** Navy (`#002768`) text is never used on ink or navy backgrounds — it disappears. On dark sections, emphasis text is always Red or White. Navy text is reserved for white and light-surface contexts only.
+**The Dark Text on Dark Rule.** Navy (`#081B33`) text is never used on ink or navy backgrounds — it disappears. On dark sections, emphasis text is always Red or White. Navy text is reserved for white and light-surface contexts only.
 
 ---
 
@@ -251,7 +251,7 @@ Corner callout tags, top-right of homepage sections. Monospace, `rgba(140,170,22
 - **Do** limit Signal Red to CTAs, emphasis spans, active states, and eyebrows. Its power comes from scarcity.
 
 ### Don't:
-- **Don't** use Navy (`#002768`) as text color on ink or navy backgrounds — it disappears. Use White or Red on all dark sections.
+- **Don't** use Navy (`#081B33`) as text color on ink or navy backgrounds — it disappears. Use White or Red on all dark sections.
 - **Don't** add `!important` to any rule without explicit user approval — it masks specificity problems.
 - **Don't** place two same-color sections adjacent: no light-next-to-light, no dark-next-to-dark, ever.
 - **Don't** introduce a second typeface — all type is Archivo (regular cuts) or Archivo Black (display cut). No serifs, no geometric sans alternatives.

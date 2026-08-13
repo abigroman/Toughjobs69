@@ -1,4 +1,4 @@
-// accessibility.js — Toughjobs slide-out accessibility menu
+﻿// accessibility.js — Toughjobs slide-out accessibility menu
 // Self-contained: injects styles + panel DOM, wires the existing .accessibility-btn
 (function () {
   // ── Inject styles ─────────────────────────────────────────────────────────
@@ -53,7 +53,7 @@
     padding: 28px 22px 22px;
     display: flex; flex-direction: column; align-items: center; text-align: center;
     position: relative;
-    background: #A90100;
+    background: #981B1F;
   }
   .a11y-close {
     position: absolute; top: 18px; right: 18px;

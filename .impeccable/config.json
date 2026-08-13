@@ -1,0 +1,68 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "broken-image",
+        "value": "*",
+        "files": [
+          "print-collateral.html"
+        ],
+        "createdAt": "2026-08-11T19:22:23.887Z",
+        "reason": "Carousel imgs populated at runtime by window.__RESOURCE_SETUP() from a real, verified window.__resources map; static detector can't see JS-driven src"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "menlo",
+        "createdAt": "2026-08-11T19:22:23.959Z",
+        "reason": "DESIGN.md explicitly documents ui-monospace/Menlo/Consolas as the Label/Mono typeface for technical callouts"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "quiz.html"
+        ],
+        "createdAt": "2026-08-11T19:22:24.035Z",
+        "reason": "User confirmed: .q-rules li left-border accent is the site's deliberate callout-box convention, not decorative AI-slop"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "database-reactivation.html"
+        ],
+        "createdAt": "2026-08-11T19:22:24.120Z",
+        "reason": "User confirmed: .script-box left-border accent is the site's deliberate callout-box convention"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "llc-filing.html"
+        ],
+        "createdAt": "2026-08-11T19:22:24.196Z",
+        "reason": "User confirmed: .disclaimer left-border accent is the site's deliberate callout-box convention"
+      },
+      {
+        "rule": "codex-grid-background",
+        "value": "*",
+        "files": [
+          "print-collateral.html"
+        ],
+        "createdAt": "2026-08-11T19:22:24.289Z",
+        "reason": "Confirmed intentional blueprint-texture brand element (.tex-grid), matches earlier site-wide audit conclusion"
+      },
+      {
+        "rule": "border-accent-on-rounded",
+        "value": "*",
+        "files": [
+          "print-collateral.html"
+        ],
+        "createdAt": "2026-08-11T19:22:24.361Z",
+        "reason": "Verified .price-card and .gb-card have no border-radius; likely detector mis-scoping in degraded regex mode on minified CSS"
+      }
+    ]
+  }
+}

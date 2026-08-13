@@ -1,4 +1,4 @@
-// Toughjobs CRM — app shell
+﻿// Toughjobs CRM — app shell
 const { useState: useStateApp, useEffect: useEffectApp } = React;
 const DA = window.CRM_DATA;
 
@@ -9,6 +9,7 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
 }/*EDITMODE-END*/;
 
 const NAV = [
+  { id: "leads", label: "Leads", icon: "✦" },
   { id: "clients", label: "Clients", icon: "◆" },
   { id: "tasks", label: "Tasks", icon: "▣" },
   { id: "dashboard", label: "Dashboards", icon: "◎" },
@@ -75,6 +76,9 @@ function App() {
       </aside>
 
       <main className="main" data-screen-label={screen}>
+        {screen === "leads"
+          ? <LeadsScreen />
+          : null}
         {screen === "clients" && current
           ? <ClientDetail client={current} tasks={tasks} onBack={function () { setOpenClient(null); }} onToggleStep={toggleStep} />
           : null}
@@ -94,7 +98,7 @@ function App() {
 
       <TweaksPanel>
         <TweakSection label="Theme" />
-        <TweakColor label="Accent" value={t.accent} options={["#C8262A", "#002768", "#2E8B57", "#B78B2E"]} onChange={function (v) { setTweak("accent", v); }} />
+        <TweakColor label="Accent" value={t.accent} options={["#C8262A", "#081B33", "#2E8B57", "#B78B2E"]} onChange={function (v) { setTweak("accent", v); }} />
         <TweakSection label="Layout" />
         <TweakRadio label="Density" value={t.density} options={["compact", "regular"]} onChange={function (v) { setTweak("density", v); }} />
         <TweakRadio label="Clients view" value={t.clientsView} options={["kanban", "table"]} onChange={function (v) { setTweak("clientsView", v); }} />

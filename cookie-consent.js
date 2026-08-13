@@ -1,4 +1,4 @@
-/* Toughjobs — Cookie Consent Banner
+﻿/* Toughjobs — Cookie Consent Banner
    Sticky bottom bar, shown once per browser until the visitor accepts or declines.
    Choice is stored in localStorage under 'tj_cookie_consent' ('accepted' | 'declined').
 */
@@ -82,7 +82,7 @@
       '#tj-cookie-banner .tj-cookie-decline{background:transparent;color:#FFFFFF;border:2px solid rgba(255,255,255,.4);}' +
       '#tj-cookie-banner .tj-cookie-decline:hover{border-color:#FFFFFF;}' +
       '#tj-cookie-banner .tj-cookie-accept{background:#C8262A;color:#FFFFFF;}' +
-      '#tj-cookie-banner .tj-cookie-accept:hover{background:#A90100;}' +
+      '#tj-cookie-banner .tj-cookie-accept:hover{background:#981B1F;}' +
       '@media (max-width:640px){' +
       '#tj-cookie-banner .tj-cookie-inner{padding:20px;gap:18px;}' +
       '#tj-cookie-banner .tj-cookie-actions{width:100%;justify-content:space-between;}' +

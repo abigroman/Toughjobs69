@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -10,7 +10,7 @@
 :root {
   --accent: #C8262A;
   --ink: #0A0F1C;
-  --navy: #002768;
+  --navy: #081B33;
   --bg: #F4F4F2;
   --card: #FFFFFF;
   --line: #E3E3DF;
@@ -21,7 +21,7 @@
 html, body { margin: 0; padding: 0; height: 100%; }
 body { font-family: "Archivo", sans-serif; background: var(--bg); color: var(--text); }
 a { color: var(--accent); }
-a:hover { color: #A90100; }
+a:hover { color: #981B1F; }
 button { font-family: inherit; }
 
 .app { display: flex; min-height: 100vh; }
@@ -152,6 +152,13 @@ button { font-family: inherit; }
 .dash-row:last-child { border-bottom: 0; }
 button.dash-row:hover .td-name { color: var(--accent); }
 
+/* Leads */
+.lead-sum { display: block; max-width: 380px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lead-expand { border: 0; background: none; padding: 0; color: var(--accent); font-weight: 700; font-size: 12px; white-space: nowrap; cursor: pointer; }
+.lead-expand:hover { text-decoration: underline; }
+.data-table.slim tr.lead-detail td { background: #FAFAF8; padding: 4px 14px 12px; }
+.lead-detail-inner .field-label { width: 300px; }
+
 /* Automations */
 .auto-badge { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--navy); background: rgba(0,39,104,0.08); border: 1px solid rgba(0,39,104,0.2); padding: 3px 8px; border-radius: 999px; }
 .auto-trigger { font-size: 13px; color: var(--muted); margin: 0 0 8px; }
@@ -228,10 +235,14 @@ button.dash-row:hover .td-name { color: var(--accent); }
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 <script src="crm-data.js"></script>
+<script src="leads-store.js"></script>
+<script src="quiz-store.js"></script>
+<script src="intake-questions.js"></script>
 <script type="text/babel" src="tweaks-panel.jsx"></script>
 <script type="text/babel" src="crm-ui.jsx"></script>
 <script type="text/babel" src="crm-screens.jsx"></script>
 <script type="text/babel" src="crm-screens2.jsx"></script>
+<script type="text/babel" src="crm-leads-screen.jsx"></script>
 <script type="text/babel" src="crm-app.jsx"></script>
 </body>
 </html>

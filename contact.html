@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
@@ -15,7 +15,7 @@
   *,*::before,*::after{box-sizing:border-box}
   html,body{margin:0;padding:0;background:#FCFCFD}
   body{font-family:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;color:#0A0F1C;-webkit-font-smoothing:antialiased}
-  :root{--ink:#0A0F1C;--navy:#002768;--red:#C8262A;--white:#FFFFFF;--accent:var(--red);--container:1240px}
+  :root{--ink:#0A0F1C;--navy:#081B33;--red:#C8262A;--white:#FFFFFF;--accent:var(--red);--container:1240px}
   .display{font-family:"Archivo Black",sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:-0.01em;line-height:.95}
   .eyebrow{font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:12px}
   .container{max-width:var(--container);margin:0 auto;padding:0 32px}
@@ -43,6 +43,51 @@
   @media(max-width:860px){
     .contact-cols{grid-template-columns:1fr !important;gap:48px !important}
   }
+  .accent-text{color:var(--accent)}
+  .mt0{margin-top:0}
+  .ct-hero-bg{background:#0A0F1C;position:relative;overflow:hidden}
+  .ct-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:.35}
+  .ct-hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,15,28,.92) 0%,rgba(10,15,28,.55) 100%);z-index:1}
+  .ct-hero-inner{position:relative;z-index:2}
+  .ct-hero-lede{max-width:720px;font-size:18px;color:rgba(255,255,255,.82)}
+  .ct-form-bg{background-image:url('assets/black-schematics.webp');background-size:contain;background-position:center;background-repeat:no-repeat;background-attachment:fixed;background-color:#f5f5f5}
+  .ct-cols{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+  .hp-field{display:none}
+  .ct-submit-btn{align-self:flex-start;font-size:15px;padding:18px 40px}
+  .ct-status{font-size:14px;margin:10px 0 0}
+  .ct-form-note{font-size:13px;margin:10px 0 0;color:#4b5563}
+  .ct-card{padding:32px;color:var(--white);border-radius:8px;filter:drop-shadow(0 0 2px rgba(0,0,0,.15))}
+  .ct-card--ink{background:var(--ink);margin-bottom:24px}
+  .ct-card--red{background:#C8262A}
+  .ct-card-eyebrow{color:var(--accent);margin-bottom:12px}
+  .ct-card-eyebrow--onred{color:rgba(255,255,255,.9);margin-bottom:12px}
+  .ct-card-phone{display:block;font-size:24px;font-weight:700;color:var(--accent);text-decoration:none;margin-bottom:4px}
+  .ct-card-email{display:block;font-size:16px;font-weight:700;color:var(--accent);text-decoration:none;margin-bottom:4px}
+  .ct-card-sub{margin:0;font-size:14px;opacity:.75}
+  .ct-card-cta-text{margin:0 0 16px;font-size:15px}
+  .ct-card-cta-btn{background:var(--white);color:var(--accent);font-weight:800;font-size:13px}
+  .ct-svc-inner{position:relative;z-index:1}
+  .ct-svc-head{text-align:center;max-width:720px;margin:0 auto 48px}
+  .ct-svc-h2{color:var(--white);margin:14px 0 16px;font-size:clamp(30px,4vw,52px)}
+  .ct-svc-lede{color:rgba(255,255,255,.72);font-size:16px;line-height:1.7;margin:0}
+  .ct-gb-section{background:#ECEFF4;background-image:url('assets/partnership-schematics-light.webp');background-size:cover;background-position:center;padding:56px 32px;position:relative;overflow:hidden;box-shadow:inset 0 2px 2px rgba(0,0,0,.45), inset 0 -2px 2px rgba(0,0,0,.45)}
+  .gb-inner{max-width:1240px;margin:0 auto;position:relative;z-index:1}
+  .gb-outer{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center}
+  .gb-head{margin-bottom:24px}
+  .gb-eyebrow{font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:#C8262A}
+  .gb-title{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:clamp(32px,3.6vw,50px);line-height:1.02;color:#0A0F1C;margin:12px 0 0}
+  .gb-accent{color:#C8262A}
+  .gb-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+  .gb-card{padding:36px 30px;box-shadow:0 4px 24px rgba(0,0,0,.30);border-top:4px solid #C8262A}
+  .gb-card--navy{background:#081B33}
+  .gb-card--ink{background:#0A0F1C}
+  .gb-kicker{font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700}
+  .gb-card-title{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05}
+  .gb-card-text{font-family:"Archivo",sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 28px}
+  .gb-card--ink .gb-card-text{color:rgba(255,255,255,.8)}
+  .gb-card-btn{display:inline-block;background:#C8262A;color:#fff;font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none}
+  .gb-img{position:relative;height:100%;min-height:420px}
+  .gb-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:top center}
 </style>
 <link rel="stylesheet" href="shared-header.css" />
 <style id="header-logo-fix">header .logo-img{width:150px;height:100px}</style>
@@ -60,34 +105,34 @@
 </head>
 <body data-page="contact">
 <main>
-  <section class="on-dark" style="background:#0A0F1C;position:relative;overflow:hidden">
-    <video autoplay loop muted playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:.35">
+  <section class="on-dark ct-hero-bg">
+    <video autoplay loop muted playsinline class="ct-hero-video">
       <source src="uploads/welder-video.mp4" type="video/mp4" />
     </video>
-    <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,15,28,.92) 0%,rgba(10,15,28,.55) 100%);z-index:1"></div>
-    <div class="container" style="position:relative;z-index:2">
-      <span class="eyebrow" style="color:var(--accent)">Let's talk</span>
+    <div class="ct-hero-overlay"></div>
+    <div class="container ct-hero-inner">
+      <span class="eyebrow accent-text">Let's talk</span>
       <h1 class="display">
         Ready to fill<br />your calendar?
       </h1>
-      <p style="max-width:720px;font-size:18px;color:rgba(255,255,255,.82)">
+      <p class="ct-hero-lede">
         We work with HVAC, plumbing, electrical, roofing, and contractor businesses across Illinois, Missouri, Iowa, Wisconsin, and Indiana. Fill out the form below and we'll get back to you within 24 hours.
       </p>
     </div>
   </section>
 
-  <section style="background-image:url('assets/black-schematics.webp');background-size:contain;background-position:center;background-repeat:no-repeat;background-attachment:fixed;background-color:#f5f5f5">
+  <section class="ct-form-bg">
     <div class="container">
-      <div class="contact-cols" style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start">
+      <div class="contact-cols ct-cols">
         <div>
-          <h2 style="margin-top:0">Get in touch</h2>
+          <h2 class="mt0">Get in touch</h2>
           <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
             <!-- Get a free access key at https://web3forms.com/ (no account needed —
                  they email you a key) and paste it here before this form will send. -->
             <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
             <input type="hidden" name="subject" value="New Toughjobs contact form lead" />
             <input type="hidden" name="from_name" value="Toughjobs contact form" />
-            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+            <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off" />
             <div class="form-row">
               <div class="form-group">
                 <label for="fname">First Name</label>
@@ -146,9 +191,9 @@
               <textarea id="message" name="message" maxlength="2000" placeholder="What's your biggest marketing challenge right now?"></textarea>
             </div>
 
-            <button type="submit" id="contact-submit" class="btn" style="align-self:flex-start;font-size:15px;padding:18px 40px">Send message</button>
-            <div id="contact-status" role="status" style="font-size:14px;margin:10px 0 0" hidden></div>
-            <p style="font-size:13px;margin:10px 0 0;color:#4b5563">We'll respond within 24 hours. Prefer to skip the form? Call <a href="tel:3099289080" style="color:var(--accent)">(309) 928-9080</a>.</p>
+            <button type="submit" id="contact-submit" class="btn ct-submit-btn">Send message</button>
+            <div id="contact-status" role="status" class="ct-status" hidden></div>
+            <p class="ct-form-note">We'll respond within 24 hours. Prefer to skip the form? Call <a href="tel:3099289080" class="accent-text">(309) 928-9080</a>.</p>
           </form>
           <script>
           (function(){
@@ -193,37 +238,37 @@
         </div>
 
         <div>
-          <h2 style="margin-top:0">Other ways to reach us</h2>
-          
-          <div style="background:var(--ink);padding:32px;color:var(--white);border-radius:8px;margin-bottom:24px;filter:drop-shadow(0 0 2px rgba(0,0,0,.15))">
-            <div class="eyebrow" style="color:var(--accent);margin-bottom:12px">Call us</div>
-            <a href="tel:3099289080" style="display:block;font-size:24px;font-weight:700;color:var(--accent);text-decoration:none;margin-bottom:4px">(309) 928-9080</a>
-            <p style="margin:0;font-size:14px;opacity:.75">Available 7 days a week, 8am–6pm CST</p>
+          <h2 class="mt0">Other ways to reach us</h2>
+
+          <div class="ct-card ct-card--ink">
+            <div class="eyebrow ct-card-eyebrow">Call us</div>
+            <a href="tel:3099289080" class="ct-card-phone">(309) 928-9080</a>
+            <p class="ct-card-sub">Available 7 days a week, 8am–6pm CST</p>
           </div>
 
-          <div style="background:var(--ink);padding:32px;color:var(--white);border-radius:8px;margin-bottom:24px;filter:drop-shadow(0 0 2px rgba(0,0,0,.15))">
-            <div class="eyebrow" style="color:var(--accent);margin-bottom:12px">Email</div>
-            <a href="mailto:team@toughjobs.org" style="display:block;font-size:16px;font-weight:700;color:var(--accent);text-decoration:none;margin-bottom:4px">team@toughjobs.org</a>
-            <p style="margin:0;font-size:14px;opacity:.75">We'll respond within 24 hours</p>
+          <div class="ct-card ct-card--ink">
+            <div class="eyebrow ct-card-eyebrow">Email</div>
+            <a href="mailto:team@toughjobs.org" class="ct-card-email">team@toughjobs.org</a>
+            <p class="ct-card-sub">We'll respond within 24 hours</p>
           </div>
 
-          <div style="background:#C8262A;padding:32px;color:var(--white);border-radius:8px;filter:drop-shadow(0 0 2px rgba(0,0,0,.15))">
-            <div class="eyebrow" style="color:rgba(255,255,255,.9);margin-bottom:12px">Want a free consultation?</div>
-            <p style="margin:0 0 16px;font-size:15px">Book a 30-minute strategy call with our team. No pitch. Just honest feedback on your current marketing and what's working in your market.</p>
-            <a class="btn" href="mailto:team@toughjobs.org?subject=30-minute%20strategy%20call" style="background:var(--white);color:var(--accent);font-weight:800;font-size:13px">Schedule a call →</a>
+          <div class="ct-card ct-card--red">
+            <div class="eyebrow ct-card-eyebrow--onred">Want a free consultation?</div>
+            <p class="ct-card-cta-text">Book a 30-minute strategy call with our team. No pitch. Just honest feedback on your current marketing and what's working in your market.</p>
+            <a class="btn ct-card-cta-btn" href="mailto:team@toughjobs.org?subject=30-minute%20strategy%20call">Schedule a call →</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="on-dark svc-area-band" style="background:#0A0F1C;position:relative;overflow:hidden">
+  <section class="on-dark svc-area-band ct-hero-bg">
     <div class="svc-area-glow"></div>
-    <div class="container" style="position:relative;z-index:1">
-      <div style="text-align:center;max-width:720px;margin:0 auto 48px">
-        <span class="eyebrow" style="color:var(--accent)">Who we build for</span>
-        <h2 class="display" style="color:var(--white);margin:14px 0 16px;font-size:clamp(30px,4vw,52px)">Every trade. Five states.<br>Boots on the ground.</h2>
-        <p style="color:rgba(255,255,255,.72);font-size:16px;line-height:1.7;margin:0">If you run a truck and answer a phone, we build the marketing that keeps it ringing. We serve trade businesses of every stripe across the Midwest.</p>
+    <div class="container ct-svc-inner">
+      <div class="ct-svc-head">
+        <span class="eyebrow accent-text">Who we build for</span>
+        <h2 class="display ct-svc-h2">Every trade. Five states.<br>Boots on the ground.</h2>
+        <p class="ct-svc-lede">If you run a truck and answer a phone, we build the marketing that keeps it ringing. We serve trade businesses of every stripe across the Midwest.</p>
       </div>
 
       <div class="trade-chips">
@@ -284,31 +329,31 @@
 
 <!-- Footer -->
 
-    <section data-screen-label="Our Endeavors" class="gb-section" style="background:#ECEFF4;background-image:url('assets/partnership-schematics-light.webp');background-size:cover;background-position:center;padding:56px 32px;position:relative;overflow:hidden;box-shadow:inset 0 2px 2px rgba(0,0,0,.45), inset 0 -2px 2px rgba(0,0,0,.45);">
-    <div style="max-width:1240px;margin:0 auto;position:relative;z-index:1;">
-      <div class="gb-outer" style="display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center;">
+    <section data-screen-label="Our Endeavors" class="gb-section ct-gb-section">
+    <div class="gb-inner">
+      <div class="gb-outer">
         <div>
-          <div style="margin-bottom:24px;">
-            <span style="font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:#C8262A;">More than marketing</span>
-            <h2 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(32px,3.6vw,50px);line-height:1.02;color:#0A0F1C;margin:12px 0 0;"><span style="color:#C8262A;">Two ways we</span> give back</h2>
+          <div class="gb-head">
+            <span class="gb-eyebrow">More than marketing</span>
+            <h2 class="gb-title"><span class="gb-accent">Two ways we</span> give back</h2>
           </div>
-          <div class="gb-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch;">
-            <div class="gb-card" style="background:#002768;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;">
-              <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700;">01 / PARTNERSHIP</span>
-              <h3 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05;">Go independent, backed by us</h3>
-              <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 28px;">You bring the truck, tools, and skill. We hand you the website, brand, systems, and marketing to turn one truck into a real company.</p>
-              <a href="partnerships.html" style="display:inline-block;background:#C8262A;color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none;">Explore Partnership</a>
+          <div class="gb-grid">
+            <div class="gb-card gb-card--navy">
+              <span class="gb-kicker">01 / PARTNERSHIP</span>
+              <h3 class="gb-card-title">Go independent, backed by us</h3>
+              <p class="gb-card-text">You bring the truck, tools, and skill. We hand you the website, brand, systems, and marketing to turn one truck into a real company.</p>
+              <a href="partnerships.html" class="gb-card-btn">Explore Partnership</a>
             </div>
-            <div class="gb-card" style="background:#0A0F1C;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;">
-              <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700;">02 / HELPING HANDS</span>
-              <h3 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05;">A hand up when budget is tight</h3>
-              <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.8);margin:0 0 28px;">One day a week we help people with more grit than budget get a business off the ground — honest guidance, real direction, no pressure.</p>
-              <a href="helping-hands.html" style="display:inline-block;background:#C8262A;color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none;">Explore Helping Hands</a>
+            <div class="gb-card gb-card--ink">
+              <span class="gb-kicker">02 / HELPING HANDS</span>
+              <h3 class="gb-card-title">A hand up when budget is tight</h3>
+              <p class="gb-card-text">One day a week we help people with more grit than budget get a business off the ground — honest guidance, real direction, no pressure.</p>
+              <a href="helping-hands.html" class="gb-card-btn">Explore Helping Hands</a>
             </div>
           </div>
         </div>
-        <div class="gb-img" style="position:relative;height:100%;min-height:420px;">
-          <img src="assets/trade-hero-excavation.webp" alt="Toughjobs tradesman on the job" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:top center;" />
+        <div class="gb-img">
+          <img src="assets/trade-hero-excavation.webp" alt="Toughjobs tradesman on the job" loading="lazy" decoding="async" />
         </div>
       </div>
     </div>

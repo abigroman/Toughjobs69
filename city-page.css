@@ -1,9 +1,9 @@
-/* ── Toughjobs City / Service-Area Page ─────────────────────────────── */
+﻿/* ── Toughjobs City / Service-Area Page ─────────────────────────────── */
 
 *,*::before,*::after{ box-sizing:border-box; }
 html,body{ margin:0; padding:0; background:#001a4a; }
 body{
-  font-family:"Inter","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
   color:var(--white);
   background:url('assets/blueprint-background.webp') fixed center/cover no-repeat;
   background-color:#001a4a;
@@ -13,10 +13,10 @@ body{
 
 :root{
   --ink:#0A0F1C;
-  --navy:#002768;
+  --navy:#081B33;
   --navy-2:#001a4a;
   --red:#C8262A;
-  --red-2:#A90100;
+  --red-2:#981B1F;
   --accent:#C8262A;
   --accent-ink:#FFFFFF;
   --white:#FFFFFF;
@@ -92,6 +92,11 @@ a.inline-link{ color:#fff; }
   font-size:clamp(44px,6vw,92px);
   margin:14px 0 26px;
   max-width:14ch;
+  text-shadow:0 2px 10px rgba(10,15,28,.6), 0 1px 2px rgba(10,15,28,.8);
+}
+.city-hero .city-title-accent{
+  color:var(--accent);
+  text-shadow:2px 2px 2px rgba(10,15,28,.9), 0 2px 10px rgba(10,15,28,.6);
 }
 .city-hero .lede{
   font-size:clamp(17px,1.5vw,21px); line-height:1.6;

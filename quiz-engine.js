@@ -42,7 +42,7 @@
     opts = opts||{};
     var pct = Math.round((this.idx/ CFG.totalTrivia)*100);
     var bar = opts.hideProgress ? '' :
-      '<div class="q-progress"><div class="q-progress-bar" style="width:'+pct+'%"></div></div>'+
+      '<div class="q-progress"><div class="q-progress-bar" style="transform:scaleX('+(pct/100)+')"></div></div>'+
       '<div class="q-progress-label">Question '+Math.min(this.idx+1,CFG.totalTrivia)+' of '+CFG.totalTrivia+' · Score '+this.score.toLocaleString()+'</div>';
     this.root.innerHTML = '<div class="q-card">'+bar+inner+'</div>';
   };
@@ -98,7 +98,7 @@
     var bar=$('q-timer-bar'), num=$('q-timer-num');
     var tick=function(){
       var pct=(self.timeLeft/CFG.timePerQuestion)*100;
-      if(bar) bar.style.width=pct+'%';
+      if(bar) bar.style.transform='scaleX('+(pct/100)+')';
       if(num) num.textContent=Math.ceil(self.timeLeft);
       if(bar) bar.style.background = self.timeLeft<=5 ? '#C8262A' : '#2f9e44';
       if(self.timeLeft<=0){ clearInterval(self.timer); self.answer(-1); return; }

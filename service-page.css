@@ -1,4 +1,4 @@
-/* service-page.css — shared rich layout + animations for Toughjobs service pages */
+﻿/* service-page.css — shared rich layout + animations for Toughjobs service pages */
 
 /* ── Section scaffolding ─────────────────────────────────────────────── */
 .sp section{padding:clamp(72px,9vw,128px) 0;position:relative;overflow:hidden}
@@ -68,9 +68,9 @@ header .container{padding:0}
 .sp .bg-dark [style*="color:#081B33"],
 .sp .bg-navy [style*="color:#081B33"],
 .sp .bg-accent2 [style*="color:#081B33"],
-.sp .bg-dark [style*="color:#002768"],
-.sp .bg-navy [style*="color:#002768"],
-.sp .bg-accent2 [style*="color:#002768"]{color:var(--accent)!important}
+.sp .bg-dark [style*="color:#081B33"],
+.sp .bg-navy [style*="color:#081B33"],
+.sp .bg-accent2 [style*="color:#081B33"]{color:var(--accent)!important}
 @media(max-width:680px){.sp .kpis{grid-template-columns:1fr 1fr;gap:28px}}
 
 /* ── Buttons ─────────────────────────────────────────────────────────── */

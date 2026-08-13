@@ -1,4 +1,4 @@
-# Toughjobs Design System Documentation
+﻿# Toughjobs Design System Documentation
 
 ## Core Messaging & Brand Principles
 
@@ -75,13 +75,13 @@ Toughjobs requires:
 
 ### Primary Colors
 - **Primary Red**: `#C8262A` — Accent, CTAs, emphasis
-- **Dark Red**: `#A90100` — Logo red, deeper accent
-- **Navy**: `#002768` — Brand navy (alternate palette lead)
+- **Dark Red**: `#981B1F` — Logo red, deeper accent
+- **Navy**: `#081B33` — Brand navy (alternate palette lead)
 - **Ink (black)**: `#0A0F1C` — Default text, dark backgrounds
 - **White**: `#FFFFFF` — Light text, negative space
 
 ### Secondary & Neutrals
-- **Gray background**: `#282828`
+- **Gray background**: `#17212D`
 - **Smoke**: `#5B6471` — Body text on light
 - **Mute**: `#C7CBD2` — Muted headlines
 - **Hairline**: `#E5E7EB` — Borders, dividers
@@ -92,7 +92,7 @@ Toughjobs requires:
 ```css
 :root {
   --ink: #0A0F1C;
-  --navy: #002768;
+  --navy: #081B33;
   --red: #C8262A;
   --accent: var(--red);
   --accent-ink: var(--white);

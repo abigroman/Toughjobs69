@@ -286,6 +286,17 @@
       return goTo(S.step + 1);
     }
     if (btn.dataset.act === "submit") {
+      // Hand the completed intake to the shared lead store (localStorage today,
+      // Firebase too once leads-store.js is configured). Fire-and-forget so the
+      // thank-you screen never waits on the network. The STORE_KEY draft above
+      // is a separate concern — it exists so a half-finished wizard can resume.
+      if (window.LeadsStore) {
+        window.LeadsStore.addLead(Object.assign({}, S.contact, {
+          answers: S.answers,
+          source: "assessment",
+          ts: new Date().toISOString(),
+        }));
+      }
       S.submitted = true; render(); window.scrollTo({ top: 0, behavior: "smooth" }); return;
     }
     if (btn.dataset.editcontact) return goTo(CONTACT_STEP);

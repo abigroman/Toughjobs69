@@ -3,6 +3,10 @@ _ARCHIVE/
 _BACKUP_*/
 _LOCKED/
 scraps/
+Backups/
+
+# Local dev server logs
+_static_server.log
 
 # ZIP exports — too large for GitHub, and the working tree is the source of truth
 *.zip

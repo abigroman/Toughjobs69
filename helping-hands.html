@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -15,11 +15,11 @@
   <style>
     :root {
       --accent: #C8262A;
-      --dark-red: #A90100;
-      --navy: #002768;
+      --dark-red: #981B1F;
+      --navy: #081B33;
       --ink: #0A0F1C;
       --white: #FFFFFF;
-      --gray: #282828;
+      --gray: #17212D;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body { font-family: "Archivo", sans-serif; color: var(--ink); background: var(--white); }
@@ -104,7 +104,7 @@
 
     /* Footer (shared with about.html) */
     @keyframes tickerScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-    footer{position:relative;overflow:hidden;background:linear-gradient(135deg,#001a4a 0%,#002768 100%);color:var(--white);border-top:3px solid var(--accent);padding:0;margin-top:0}
+    footer{position:relative;overflow:hidden;background:linear-gradient(135deg,#001a4a 0%,#081B33 100%);color:var(--white);border-top:3px solid var(--accent);padding:0;margin-top:0}
     .footer-video-bg{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.6;z-index:0}
     footer .footer-content{position:relative;z-index:1;max-width:none;margin:0;display:block;border:none;padding:0}
     .footer-ticker{display:flex;gap:0;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.3);padding:20px 0;margin:0}
@@ -225,7 +225,7 @@
             <h2 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(32px,3.6vw,50px);line-height:1.02;color:#0A0F1C;margin:12px 0 0;"><span style="color:#C8262A;">Two ways we</span> give back</h2>
           </div>
           <div class="gb-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch;">
-            <div class="gb-card" style="background:#002768;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;">
+            <div class="gb-card" style="background:#081B33;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;">
               <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700;">01 / PARTNERSHIP</span>
               <h3 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05;">Go independent, backed by us</h3>
               <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 28px;">You bring the truck, tools, and skill. We hand you the website, brand, systems, and marketing to turn one truck into a real company.</p>
@@ -247,7 +247,7 @@
     <style>@media(max-width:900px){ .gb-outer{ grid-template-columns:1fr !important; } .gb-grid{ grid-template-columns:1fr !important; } .gb-img{ min-height:280px !important; order:-1; } }</style>
   </section>
 
-<footer style="position:relative;overflow:hidden;background:linear-gradient(135deg,#001a4a 0%,#002768 100%);color:var(--white);border-top:3px solid var(--accent)">
+<footer style="position:relative;overflow:hidden;background:linear-gradient(135deg,#001a4a 0%,#081B33 100%);color:var(--white);border-top:3px solid var(--accent)">
     <style>
       @keyframes tickerScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
       .footer-video-bg{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.6;z-index:0}
@@ -286,7 +286,7 @@
             <h3><img src="assets/toughjobs-monogram-logo.webp" alt="Toughjobs" loading="lazy" decoding="async" /></h3>
             <p>Marketing &amp; branding solutions built for the trades. We help service businesses get found, win jobs, and grow their revenue through integrated digital strategies.</p>
           </div>
-          <div class="footer-section"><h4>Company</h4><ul><li><a href="about.html">Our story</a></li><li><a href="services.html">Services</a></li><li><a href="helping-hands.html">Helping Hands</a></li><li><a href="partnerships.html">Partnerships</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+          <div class="footer-section"><h4>Company</h4><ul><li><a href="about.html">Our story</a></li><li><a href="index.html#services">Services</a></li><li><a href="helping-hands.html">Helping Hands</a></li><li><a href="partnerships.html">Partnerships</a></li><li><a href="contact.html">Contact</a></li></ul></div>
           <div class="footer-section"><h4>Resources</h4><ul><li><a href="free-tools.html">Free Tools</a></li><li><a href="index.html#field-notes">Blog</a></li><li><a href="website-examples.html">Case Studies</a></li></ul></div>
           <div class="footer-section"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="sitemap.html">Sitemap</a></li><li><a href="citations.html">Citations</a></li></ul></div>
         </div>
@@ -332,7 +332,7 @@
         <TweakToggle label="Show hero image" value={t.heroImage} onChange={(v) => setTweak('heroImage', v)} />
         <TweakRadio label="Text align" value={t.heroAlign} options={['left', 'center']} onChange={(v) => setTweak('heroAlign', v)} />
         <TweakSection label="Theme" />
-        <TweakColor label="Accent" value={t.accent} options={['#C8262A', '#A90100', '#002768']} onChange={(v) => setTweak('accent', v)} />
+        <TweakColor label="Accent" value={t.accent} options={['#C8262A', '#981B1F', '#081B33']} onChange={(v) => setTweak('accent', v)} />
       </TweaksPanel>
     );
   }

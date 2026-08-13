@@ -1,7 +1,7 @@
-*,*::before,*::after{box-sizing:border-box}
+﻿*,*::before,*::after{box-sizing:border-box}
 html,body{margin:0;padding:0;background:#0A0F1C}
 body{font-family:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;color:#0A0F1C;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;overflow-x:clip}
-:root{--ink:#0A0F1C;--navy:#002768;--navy-2:#001a4a;--red:#C8262A;--accent:#C8262A;--smoke:#5B6471;--white:#FFFFFF;--container:1240px}
+:root{--ink:#0A0F1C;--navy:#081B33;--navy-2:#001a4a;--red:#C8262A;--accent:#C8262A;--smoke:#5B6471;--white:#FFFFFF;--container:1240px}
 header a.logo-link{display:flex;align-items:center;gap:1px;text-decoration:none;color:var(--white)}
 header img{height:auto;width:clamp(190px,20vw,300px);object-fit:contain;transition:all .3s ease}
 header.scrolled img{height:auto;width:clamp(150px,15vw,220px)}
@@ -12,7 +12,7 @@ header .btn:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)
 .nav-dropdown-menu > div{display:flex;flex-direction:column;gap:10px}
 .nav-dropdown-item:hover{color:var(--red)}
 @media(max-width:880px){nav.mega{display:none}}
-body{--accent2:#002768}
+body{--accent2:#081B33}
 a{color:var(--red)}a:hover{color:var(--navy)}
 .backlink{display:inline-flex;align-items:center;gap:8px;font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:12px;color:rgba(255,255,255,.7);text-decoration:none;margin-bottom:18px}
 .backlink:hover{color:#fff}
@@ -149,7 +149,7 @@ a{color:var(--red)}a:hover{color:var(--navy)}
 .up-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:4px}
 .up-name{font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.02em;font-size:15px;color:#0A0F1C}
 .up-price{font-size:13px;font-weight:600;color:#C8262A}
-.up-cta{margin-top:6px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#002768}
+.up-cta{margin-top:6px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#081B33}
 .up-card:hover .up-cta{color:#C8262A}
 
 /* Upsell carousel */

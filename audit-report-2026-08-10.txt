@@ -1,0 +1,211 @@
+TOUGHJOBS SITE-WIDE AUDIT REPORT
+Generated: 2026-08-10
+Tool: /impeccable audit (site-wide)
+
+SCOPE NOTE
+----------
+Site-wide across 209 real pages (excluding _LOCKED/, _ARCHIVE/, Backups/,
+standalone client exports). The bundled detector ran in DEGRADED mode
+(HTML parser modules unavailable, regex fallback) -- its counts are an
+undercount, not a clean bill of health. Accessibility/Performance/
+Responsive scores below combine detector output with targeted structural
+greps across all 209 pages, plus direct hands-on testing of 4 pages this
+session (reviews.html, websites.html, coaching.html, branding.html) --
+not a per-page manual review of all 209.
+
+AUDIT HEALTH SCORE
+------------------
+#  Dimension                  Score   Key Finding
+1  Accessibility              3       100% of 1,234 <img> tags have alt
+                                       text; viewport/lang present on
+                                       every real page (gaps only in
+                                       injected fragments like
+                                       shared-header.html). Contrast/
+                                       ARIA/keyboard-nav not exhaustively
+                                       checked at this scale -- the
+                                       white-on-white bugs found and
+                                       fixed on reviews.html this session
+                                       suggest more likely exist unfound.
+2  Performance                3       75% of images (924/1,234)
+                                       explicitly loading="lazy", 36
+                                       correctly eager/high-priority
+                                       (heroes); 22% unspecified.
+3  Theming                    1       4,348 detector hits for values off
+                                       the documented DESIGN.md token
+                                       ramp (2,112 font-size, 1,333
+                                       color, 513 radius, 390 font),
+                                       across 164/209 files (78%). A
+                                       real, well-documented design
+                                       system exists and is widely not
+                                       followed.
+4  Responsive Design          2       Consistent shared breakpoint
+                                       infrastructure (service-page.css,
+                                       shared-header.css) site-wide. But
+                                       the badge-overlap bug class found
+                                       and fixed this session
+                                       (percentage-based image
+                                       transforms colliding with the
+                                       fixed-position sticky badge,
+                                       worst around 1150-1240px) affects
+                                       a specific, identifiable
+                                       component pattern -- see Priority
+                                       Issues.
+5  Implementation Integrity   2       352 "slop" pattern hits; a
+                                       meaningful fraction are genuine
+                                       violations of this project's own
+                                       documented rules (see below), the
+                                       rest are likely false positives
+                                       given this site's intentionally-
+                                       documented blueprint/industrial
+                                       aesthetic.
+
+TOTAL: 11/20 -- Acceptable, significant work needed
+
+IMPLEMENTATION INTEGRITY VERDICT
+--------------------------------
+Partial pass. The site has a real, specific, well-authored design system
+(DESIGN.md -- "The Blueprint Workshop," a genuinely product-specific
+point of view, not generic template language) and a real product context
+(PRODUCT.md). The problem isn't a missing system -- it's inconsistent
+adherence to the one that exists. Two concrete violations of the
+project's own stated rules:
+
+- dark-glow (86 hits) -- colored box-shadow glows on dark backgrounds
+  directly contradict DESIGN.md's explicit "Flat-By-Default Rule"
+  ("Depth is created through color contrast... not shadow stacking").
+  This is a real, self-inconsistent finding, not a false positive.
+
+- overused-font (54 hits) -- Inter appears in contact.html,
+  davenport-ia.html, and others, directly contradicting DESIGN.md's
+  "Don't introduce a second typeface" rule (system is Archivo/Archivo
+  Black only).
+
+Two other high-count categories are likely false positives specific to
+this project:
+
+- side-tab (101 hits) -- thick colored left-borders on cards. DESIGN.md
+  documents this exact treatment as intentional (border-top: 4px solid
+  var(--red) on cards, etc.) -- the detector doesn't know this project's
+  brand explicitly commits to it.
+
+- codex-grid-background (66 hits) -- grid/hairline decorative overlays.
+  DESIGN.md explicitly describes "Blueprint decoration (drawing stamps,
+  registration crosshairs...)" as core to the identity; this is the
+  .tex-grid/.tex-dots pattern used everywhere this session.
+
+OVERALL IMPRESSION
+-------------------
+The site's biggest gap isn't missing infrastructure -- it's drift
+between a genuinely good, specific design system and its actual
+implementation across 200+ pages likely built incrementally (possibly by
+different tools/sessions over time, per the git history's mix of
+authorship). The single most actionable, concrete finding: a responsive
+bug class we already found, root-caused, and fixed on 3 of 25 exposed
+pages this session -- the other ~21-22 are unverified.
+
+WHAT'S WORKING
+--------------
+1. Alt-text discipline is excellent -- 1,234/1,234 images have alt text.
+   Zero misses across the whole real-page set.
+2. The design system itself is strong -- DESIGN.md's "Blueprint
+   Workshop" identity is specific, product-grounded, and well-articulated
+   (not generic template boilerplate), which is exactly what makes the
+   drift measurable and worth fixing.
+3. Lazy-loading discipline is good -- 75% explicit, heroes correctly
+   prioritized eager.
+
+PRIORITY ISSUES
+----------------
+
+[P1] Badge-Clearance Bug Likely Affects 21+ Unverified Pages
+What: 25 pages combine .hero-img-slot (a hero photo) with the
+sticky-cta.js "Start Assessment" badge. This session found and fixed the
+exact same bug on 3 of them (branding.html, coaching.html, reviews.html)
+-- percentage-based image transforms that looked fine at 1440px but
+overlapped the badge's fixed-position bounding box in the 1150-1240px
+range (where the .container's 1240px max-width interacts with
+clamp()-scaled hero padding). The other ~21-22 pages (seo.html,
+websites.html's own hero, print-*.html x10, social-media.html,
+software.html, etc.) are unverified -- some may already be safe if they
+never had a manual nudge applied, but this needs checking, not assuming.
+Why it matters: A real, measured overlap -- not a hypothetical -- that's
+invisible unless you resize the browser to exactly the wrong width.
+Fix: Repeat this session's measurement method on the remaining pages.
+Suggested command: /impeccable adapt (scoped to the remaining
+hero-img-slot pages)
+
+[P1] Design-Token Drift Across 78% of Pages
+What: 4,348 detector hits for font-size/color/radius/font values that
+don't match DESIGN.md's documented ramp, across 164/209 files.
+Why it matters: The system exists and is good; this scale of drift means
+most pages were styled ad hoc rather than from shared components, making
+future consistency work (like this session's contrast fixes) harder to
+generalize.
+Fix: Not a blanket find-replace -- many "off-ramp" values are likely
+legitimate one-off exceptions. Needs triage per page/section.
+Suggested command: /impeccable typeset or /impeccable colorize, page by
+page, starting with the highest-count files (partnerships.html 101,
+index.html 98, print-collateral.html 97).
+
+[P2] dark-glow and overused-font Are Real Rule Violations
+What: 86 colored-glow-shadow instances and 54 Inter-font instances, both
+contradicting explicit DESIGN.md rules.
+Fix: Remove glow shadows on dark sections; audit contact.html/
+davenport-ia.html for the stray Inter import.
+Suggested command: /impeccable polish
+
+[P2] Contrast Bugs Found This Session May Not Be Isolated
+What: reviews.html had two independent white-on-white text bugs this
+session (a "tone-flip" pattern -- light-section CSS copy-pasted from a
+dark-section template without updating colors).
+Why it matters: If it happened once from a copy-paste pattern, it
+plausibly happened elsewhere using the same authoring shortcut.
+Fix: Spot-check a sample of bg-light sections across other service pages
+for the same white/near-white-on-light pattern.
+Suggested command: /impeccable audit (scoped, contrast-focused) or
+/impeccable critique on a sample.
+
+PATTERNS & SYSTEMIC ISSUES
+--------------------------
+- Tone-flip bugs: sections whose background was changed (dark->light or
+  light->dark) without updating the text/border/shadow colors authored
+  for the original background. Found 3 separate instances this session
+  (reviews.html x2, websites.html's chip grid + hero photo shadow) --
+  likely a recurring authoring pattern, not isolated incidents.
+
+- Percentage-based positioning near fixed-position UI: the
+  badge-clearance bug is a specific case of a general anti-pattern --
+  transform: translate(%) scales with its own box, while sticky/fixed UI
+  elements don't, so relative positioning drifts unpredictably across
+  the viewport range. Worth a general rule: prefer fixed-px offsets
+  (measured against worst-case width) whenever positioning near a
+  fixed-position element.
+
+POSITIVE FINDINGS
+-----------------
+- Zero missing alt text across 1,234 images -- genuinely rare to see
+  this clean at this scale.
+- A real, specific, non-generic design system exists and is documented
+  -- most of what "audit" tools flag is absence of a system; here the
+  system exists and just needs enforcement.
+- Shared breakpoint/component infrastructure (service-page.css,
+  shared-header.css) is consistently linked site-wide, not duplicated
+  per-page.
+
+RECOMMENDED ACTIONS
+-------------------
+1. [P1] /impeccable adapt: Check the remaining ~21 pages combining
+   .hero-img-slot + sticky badge for the same badge-overlap bug fixed on
+   3 pages this session.
+2. [P2] /impeccable audit (scoped): Spot-check other bg-light sections
+   for the tone-flip white-on-white contrast pattern found twice on
+   reviews.html.
+3. [P2] /impeccable polish: Remove dark-glow shadow violations and the
+   stray Inter font references -- both contradict DESIGN.md's own rules.
+4. [P3] /impeccable typeset / /impeccable colorize: Triage design-token
+   drift starting with the highest-count files.
+5. /impeccable polish: Final pass once the above land.
+
+You can ask to run these one at a time, all at once, or in any order
+preferred. Re-run /impeccable audit after fixes to see the score
+improve.
