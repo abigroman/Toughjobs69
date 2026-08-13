@@ -128,6 +128,13 @@ a.inline-link{ color:#fff; }
 .section-head h2 .b{ color:var(--accent); }
 .section-head p{ font-size:17px; line-height:1.65; color:rgba(255,255,255,.8); margin:0; }
 
+/* Fist-logo header row — mirrors the .pc-headrow pattern used on the Services pages */
+.pc-headrow{ display:flex; align-items:flex-start; gap:24px; margin-bottom:48px; }
+.pc-headrow>.section-head{ flex:1 1 auto; min-width:0; margin-bottom:0; }
+.pc-logo-slot{ flex:0 0 auto; margin-left:auto; padding:0 max(152px,854px - 50vw); display:flex; align-items:flex-start; }
+.pc-title-logo{ width:clamp(88px,7vw,120px); height:auto; filter:drop-shadow(0 14px 26px rgba(0,0,0,.35)); }
+@media(max-width:1240px){ .pc-logo-slot{ display:none; } }
+
 .market-grid{ display:grid; grid-template-columns:1.3fr 1fr; gap:64px; align-items:start; }
 .market-grid .body p{ font-size:16.5px; line-height:1.7; color:rgba(255,255,255,.82); margin:0 0 20px; }
 .market-grid .body p strong{ color:#fff; }
