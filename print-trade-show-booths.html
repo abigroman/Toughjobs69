@@ -83,6 +83,23 @@
 }
 </script>
 <!-- SEO-FAQ-SCHEMA:END -->
+<style id="pc-title-logo-style">/* Section-title fist logo.
+   Spacing: the row carries no gap, so the only horizontal space around the
+   logo is the slot's own padding — identical left and right by construction,
+   rather than "whatever is left over", which is what centring the slot in the
+   free space used to produce. margin-left:auto pins it to the right edge of
+   the container so the right-hand space stays constant no matter how long the
+   headline is. */
+.pc-headrow{display:flex;align-items:center;gap:0;margin-bottom:34px}
+.pc-headrow>.head{flex:0 1 auto;min-width:0;margin-bottom:0}
+/* Both padding values carry a +96px (1in) offset over the badge-clearance
+   figure, so the mark sits an inch further left at every width while the left
+   and right space around it stay identical. */
+.pc-logo-slot{flex:0 0 auto;margin-left:auto;padding:0 max(152px,854px - 50vw);display:flex;align-items:flex-start;align-self:flex-start}
+.pc-title-logo{width:clamp(104px,9vw,144px);height:auto;transform:translateY(-14%);filter:drop-shadow(0 14px 26px rgba(0,0,0,.35))}
+/* Below the container's max width the page runs edge to edge and the badge
+   owns the corner outright, so the mark steps aside rather than collide. */
+@media(max-width:1240px){.pc-logo-slot{display:none}}</style>
 </head>
 <body class="sp">
 <main>
@@ -103,7 +120,7 @@
   <section class="bg-light">
     <div class="tex tex-dots-d"></div>
     <div class="container">
-      <div class="head reveal"><span class="eyebrow">What it is</span><h2 class="display">Trade-Show Booths that get you noticed.</h2></div>
+      <div class="pc-headrow"><div class="head reveal"><span class="eyebrow">What it is</span><h2 class="display">Trade-Show Booths that get you noticed.</h2></div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
       <div class="seo-longform reveal d1" style="max-width:900px;font-size:16.5px;line-height:1.72;color:#1c2536"><p style="margin:0">Home shows and community events are where a lot of trades win their next season of work — if their booth stands out. We design striking, on-brand booth setups (backdrops, banners, table covers, handouts) that pull people in, make you look established, and get remembered long after the event.</p></div>
     </div>
   </section>
@@ -111,7 +128,7 @@
   <section class="bg-navy">
     <div class="tex tex-dots"></div>
     <div class="container">
-      <div class="head reveal"><span class="eyebrow">Why it works</span><h2 class="display">Why trades owners invest in trade-show booths.</h2></div>
+      <div class="pc-headrow"><div class="head reveal"><span class="eyebrow">Why it works</span><h2 class="display">Why trades owners invest in trade-show booths.</h2></div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
       <div class="earn"><div class="card reveal d1"><div class="ic">01</div><h4>Pulls people in</h4><p>A bold, cohesive booth stops foot traffic and starts conversations at busy events.</p></div><div class="card reveal d2"><div class="ic">02</div><h4>Looks established</h4><p>A professional setup makes you look like the biggest, safest choice on the floor.</p></div><div class="card reveal d3"><div class="ic">03</div><h4>Gets remembered</h4><p>Cohesive branding + a great handout means they remember you when they get home.</p></div></div>
       <div class="st3" style="margin-top:34px"><div class="s"><div class="b" style="font-size:23px">Brief</div><div class="t">One audience, message, and response path</div></div><div class="s"><div class="b" style="font-size:23px">Proof</div><div class="t">Copy, dimensions, and production details approved</div></div><div class="s"><div class="b" style="font-size:23px">Handoff</div><div class="t">Files and specifications prepared for production</div></div></div>
     </div>
@@ -120,7 +137,7 @@
   <section class="bg-light">
     <div class="tex tex-dots-d"></div>
     <div class="container">
-      <div class="head reveal"><span class="eyebrow">Options</span><h2 class="display">Formats &amp; finishes we offer.</h2></div>
+      <div class="pc-headrow"><div class="head reveal"><span class="eyebrow">Options</span><h2 class="display">Formats &amp; finishes we offer.</h2></div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
       <ul class="opts reveal d1"><li>Retractable backdrops and banner walls</li><li>Branded table covers and runners</li><li>Handouts, brochures, and giveaways</li><li>Signage and directional graphics</li><li>Full booth design as one system</li></ul>
     </div>
   </section>
@@ -129,7 +146,7 @@
 <section class="bg-light">
   <div class="tex tex-dots-d"></div>
   <div class="container" style="max-width:920px">
-    <div class="head reveal"><span class="eyebrow">Plan before production</span><h2 class="display">Trade-Show Booth Graphics built around a specific job.</h2></div>
+    <div class="pc-headrow"><div class="head reveal"><span class="eyebrow">Plan before production</span><h2 class="display">Trade-Show Booth Graphics built around a specific job.</h2></div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
     <div style="font-size:16.5px;line-height:1.72;color:#1c2536">
       <p><strong>trade show displays for contractors</strong> should not begin with a generic layout. A printed piece earns its place when the situation is clear. For a home show, hiring event, supplier day, or community expo, start with the person who will see it, what that person already knows, and the next step that is reasonable in that setting. That keeps the page from becoming a list of every service the company has ever offered.</p>
       <p>Before design, Toughjobs documents booth footprint, viewing distance, message hierarchy, lead capture, transport, setup, and reuse. The first proof is checked as a working communication tool: Can the intended reader understand it in the available time? Is the main action obvious? Does every claim match what the business can actually deliver?</p>
@@ -168,5 +185,28 @@
 <script src="accessibility.js?v=20260729"></script>
 <script src="image-finder-tab.js"></script>
 <script src="image-slot.js"></script>
+<script id="pc-title-logo-align"></script><script>
+(function(){
+  function align(){
+    // Matches the breakpoint in #pc-title-logo-style where the slot is hidden.
+    var wide = window.matchMedia('(min-width:1241px)').matches;
+    document.querySelectorAll('.pc-headrow').forEach(function(row){
+      var h2 = row.querySelector('h2'), slot = row.querySelector('.pc-logo-slot');
+      if(!h2 || !slot) return;
+      var img = slot.querySelector('img');
+      if(!wide){ slot.style.paddingTop = ''; return; }
+      slot.style.paddingTop = '0px';
+      var r = row.getBoundingClientRect(), t = h2.getBoundingClientRect();
+      var ih = img.getBoundingClientRect().height || img.offsetHeight;
+      var center = (t.top + t.height/2) - r.top;
+      slot.style.paddingTop = Math.max(0, center - ih/2) + 'px';
+    });
+  }
+  window.addEventListener('load', align);
+  window.addEventListener('resize', align);
+  document.addEventListener('DOMContentLoaded', align);
+  setTimeout(align, 400);
+})();
+</script>
 </body>
 </html>
