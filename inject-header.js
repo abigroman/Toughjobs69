@@ -20,7 +20,7 @@
 
   const stylesheet = document.createElement('link');
   stylesheet.rel = 'stylesheet';
-  stylesheet.href = 'service-hero-uniform.css?v=20260730b';
+  stylesheet.href = 'service-hero-uniform.css?v=20260813b';
   stylesheet.dataset.sharedHeroLayout = 'true';
   document.head.appendChild(stylesheet);
 })();

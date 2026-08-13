@@ -10,16 +10,16 @@ body.is-service-page main > section.hero > .container {
 }
 
 body.is-service-page main > section.hero .hero-img-slot {
-  display: flex !important;
-  align-items: center !important;
-  overflow: visible !important;
-  z-index: 1 !important;
+  display: flex;
+  align-items: center;
+  overflow: visible;
+  z-index: 1;
 }
 
 body.is-service-page main > section.hero .hero-img-slot > img,
 body.is-service-page main > section.hero .hero-img-slot .pc-slide img {
-  display: block !important;
-  object-fit: contain !important;
+  display: block;
+  object-fit: contain;
 }
 
 /* Desktop: service images are 10% larger than the previous shared size. */
@@ -31,43 +31,45 @@ body.is-service-page main > section.hero .hero-img-slot .pc-slide img {
   body.is-service-page main > section.hero .hero-text {
     position: relative;
     z-index: 2;
-    max-width: 56% !important;
+    max-width: 56%;
     padding-right: clamp(16px, 2vw, 30px);
   }
 
   body.is-service-page main > section.hero .hero-img-slot {
-    position: absolute !important;
-    inset: 50% clamp(32px, 4.5vw, 72px) auto auto !important;
-    width: 42% !important;
-    height: clamp(470px, 50vw, 615px) !important;
-    transform: translateY(-50%) !important;
-    justify-content: center !important;
-    padding: 0 !important;
+    position: absolute;
+    inset: 50% clamp(32px, 4.5vw, 72px) auto auto;
+    width: 42%;
+    height: clamp(470px, 50vw, 615px);
+    transform: translateY(-50%);
+    justify-content: center;
+    padding: 0;
   }
 
   body.is-service-page main > section.hero .hero-img-slot > img {
-    width: 100% !important;
-    max-width: 540px !important;
-    height: 100% !important;
-    max-height: 615px !important;
-    object-position: center center !important;
-    margin: 0 auto !important;
+    width: 100%;
+    max-width: 540px;
+    height: 100%;
+    max-height: 615px;
+    object-position: center center;
+    margin: 0 auto;
   }
 
-  /* Print & Collateral keeps its intentionally reduced carousel treatment. */
+  /* Print & Collateral keeps its intentionally reduced carousel treatment,
+     raised an additional 14% from the shared -50% baseline per request.
+     Wins on specificity alone (extra :has() clause) — no !important needed. */
   body.is-service-page main > section.hero .hero-img-slot:has(.pc-carousel) {
-    width: 44% !important;
-    height: clamp(505px, 55vw, 680px) !important;
-    transform: translateY(calc(-50% - 24px)) !important;
+    width: 44%;
+    height: clamp(505px, 55vw, 680px);
+    transform: translateY(calc(-64% - 24px));
   }
 
   body.is-service-page main > section.hero .pc-carousel {
-    width: 85% !important;
-    height: 85% !important;
-    max-width: 517px !important;
-    max-height: 671px !important;
-    min-height: 0 !important;
-    margin: 0 0 0 auto !important;
+    width: 85%;
+    height: 85%;
+    max-width: 517px;
+    max-height: 671px;
+    min-height: 0;
+    margin: 0 0 0 auto;
   }
 }
 
@@ -75,66 +77,66 @@ body.is-service-page main > section.hero .hero-img-slot .pc-slide img {
 @media (min-width: 681px) and (max-width: 1024px) {
   body.is-service-page main > section.hero > .container {
     min-height: clamp(520px, 72vw, 690px);
-    padding-right: clamp(275px, 40vw, 430px) !important;
+    padding-right: clamp(275px, 40vw, 430px);
   }
 
   body.is-service-page main > section.hero .hero-text {
     position: relative;
     z-index: 2;
-    max-width: 100% !important;
+    max-width: 100%;
   }
 
   body.is-service-page main > section.hero .hero-img-slot {
-    position: absolute !important;
-    inset: 50% clamp(20px, 3vw, 40px) auto auto !important;
-    width: clamp(253px, 37.5vw, 396px) !important;
-    height: clamp(363px, 55vw, 550px) !important;
-    transform: translateY(-52%) !important;
-    justify-content: center !important;
-    padding: 0 !important;
+    position: absolute;
+    inset: 50% clamp(20px, 3vw, 40px) auto auto;
+    width: clamp(253px, 37.5vw, 396px);
+    height: clamp(363px, 55vw, 550px);
+    transform: translateY(-52%);
+    justify-content: center;
+    padding: 0;
   }
 
   body.is-service-page main > section.hero .hero-img-slot > img {
-    width: 100% !important;
-    height: 100% !important;
-    object-position: center center !important;
-    margin: 0 auto !important;
+    width: 100%;
+    height: 100%;
+    object-position: center center;
+    margin: 0 auto;
   }
 
   body.is-service-page main > section.hero .hero-img-slot:has(.pc-carousel) {
-    transform: translateY(calc(-52% - 48px)) !important;
+    transform: translateY(calc(-66% - 48px));
   }
 
   body.is-service-page main > section.hero .pc-carousel {
-    width: 85% !important;
-    height: 85% !important;
-    min-height: 0 !important;
-    margin: 0 0 0 auto !important;
+    width: 85%;
+    height: 85%;
+    min-height: 0;
+    margin: 0 0 0 auto;
   }
 }
 
 /* Mobile: hero images are always hidden per project rule. */
 @media (max-width: 680px) {
   body.is-service-page main > section.hero > .container {
-    display: flex !important;
-    flex-direction: column !important;
-    min-height: 0 !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
   }
 
   body.is-service-page main > section.hero .hero-img-slot {
-    display: none !important;
+    display: none;
   }
 
   body.is-service-page main > section.hero .hero-text {
-    order: 1 !important;
-    max-width: 100% !important;
-    padding-right: 0 !important;
+    order: 1;
+    max-width: 100%;
+    padding-right: 0;
   }
 }
 
 @media (max-width: 420px) {
   body.is-service-page main > section.hero .hero-img-slot {
-    display: none !important;
+    display: none;
   }
 }
 
