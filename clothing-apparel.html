@@ -44,6 +44,13 @@
   .hero-longform p{margin:0 0 13px}
   .hero-longform p:last-child{margin-bottom:0}
   @media(min-width:1100px){.hero-longform{column-count:2;column-gap:38px}}
+  /* Widen the hero text column so the longform copy runs fewer/shorter lines.
+     Matches (and beats) the specificity of service-hero-uniform.css's
+     body.is-service-page main > section.hero .hero-text rule — no !important needed. */
+  @media(min-width:1025px){
+    body.is-service-page main > section.hero.clothing_apparel-hero .hero-text{max-width:60%}
+    body.is-service-page main > section.hero.clothing_apparel-hero .hero-img-slot{width:37%}
+  }
   .clothing-apparel-hero-media{
     left:55%;
     right:clamp(48px,6vw,96px);
