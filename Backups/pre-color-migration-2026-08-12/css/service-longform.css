@@ -1,0 +1,46 @@
+/* Canonical service-page long-form layout.
+   The editorial region is split into three alternating topic bands so no two
+   same-background sections ever touch:
+     1. .td-analysis            — white engineering texture  (overview + why it matters)
+     2. .td-analysis.td-lf-dark — navy blueprint band        (what's involved + cost)
+     3. .td-analysis            — white engineering texture  (what to look for + soft CTA)
+   Then the navy FAQ band, then the light give-back section. */
+.td-analysis.td-lf-dark{position:relative;isolation:isolate;background:#0B1326 url('../assets/blueprint-bg-darker.webp') center/cover fixed;color:#fff}
+.td-analysis.td-lf-dark::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:url('../uploads/webp/wilderness-2.webp') center bottom/cover no-repeat;opacity:.18}
+.td-analysis.td-lf-dark::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.42;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:64px 64px}
+.td-analysis.td-lf-dark > .td-analysis-inner{position:relative;z-index:2}
+.td-lf-dark h2,.td-lf-dark h3,.td-lf-dark h4{color:#FFFFFF}
+.td-lf-dark p,.td-lf-dark li{color:rgba(255,255,255,.86)}
+.td-lf-dark strong{color:#FFFFFF}
+.td-lf-dark a{color:#C8262A;text-decoration:none}
+.td-lf-dark a:hover{color:#FFFFFF}
+.td-lf-dark .td-note-list li{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-left:3px solid #C8262A}
+/* Cost table inverted for the navy band */
+.td-lf-dark .td-cost-table{border-color:rgba(255,255,255,.18)}
+.td-lf-dark .td-cost-table th{background:#0A0F1C;color:#fff;border-color:rgba(255,255,255,.18)}
+.td-lf-dark .td-cost-table td{color:rgba(255,255,255,.88);border-color:rgba(255,255,255,.14)}
+.td-lf-dark .td-cost-table tr:nth-child(even) td{background:rgba(255,255,255,.05)}
+.td-lf-dark .td-cost-table tr:nth-child(odd) td{background:rgba(255,255,255,.02)}
+/* Band eyebrow, matching the trade pages' section rhythm */
+.td-analysis .tj-eyebrow-red{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:#C8262A;display:block;margin-bottom:12px}
+.td-analysis > .td-analysis-inner > h2:first-of-type{margin-top:0}
+/* Soft CTA on the closing white band */
+.td-analysis:not(.td-lf-dark) .td-soft-cta{border-top:1px solid rgba(10,15,28,.16);margin-top:36px;padding-top:26px}
+
+/* CTA band, red — used sparingly: this is the only full-bleed red on a page */
+.sp .bg-red,section.bg-red{background-color:#C8262A;background-image:linear-gradient(160deg,rgba(200,38,42,.94),rgba(169,1,0,.96));color:#fff}
+.bg-red h2,.bg-red h3,.bg-red .display{color:#fff}
+.bg-red p,.bg-red li{color:rgba(255,255,255,.92)}
+.bg-red a{color:#fff}
+.bg-red a:hover{color:#0A0F1C}
+.bg-red .btn,.bg-red .tj-btn-white{background:#fff;color:#C8262A}
+.sp .bg-plum,section.bg-plum{background-color:#3B1233;background-image:linear-gradient(160deg,#3B1233 0%,#250B1F 100%);color:#fff}
+.bg-accent2.ctaband .container{position:relative;z-index:2}
+.plum-dots-canvas{position:absolute;inset:0;z-index:1;pointer-events:none}
+.bg-plum h2,.bg-plum h3,.bg-plum .display{color:#fff}
+.bg-plum p,.bg-plum li{color:rgba(255,255,255,.88)}
+.bg-plum a{color:#fff}
+.bg-plum a:hover{color:#C8262A}
+.bg-plum .btn,.bg-plum .tj-btn-white{background:#C8262A;color:#fff}
+.bg-plum .btn:hover{box-shadow:5px 5px 0 rgba(0,0,0,.4)}
+

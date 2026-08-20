@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>3-Database System Architecture — Toughjobs</title>
+<meta name="robots" content="noindex, follow" />
+<meta name="author" content="Toughjobs" />
+<meta name="publisher" content="ToughJobs Digital Marketing" />
+<link rel="canonical" href="https://toughjobs.org/ai-automations.html" />
+
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --accent:#C8262A; --dark-red:#A90100; --navy:#002768;
+    --ink:#0A0F1C; --white:#FFFFFF; --gray:#282828;
+    --paper:#F4F2EF; --line:#dcd8d2; --muted:#6b6b6b;
+    --kb1:#1e7a3d; --kb2:#C8262A; --kb3:#002768;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{background:var(--gray);scroll-behavior:smooth;}
+  body{font-family:"Archivo",sans-serif;color:var(--ink);line-height:1.6;}
+  a{color:var(--accent);} a:hover{color:var(--dark-red);}
+
+  .masthead{background:var(--ink);color:var(--white);padding:44px 40px 38px;}
+  .kicker{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--accent);font-weight:600;}
+  .masthead h1{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:38px;line-height:1.02;letter-spacing:-.01em;margin:12px 0 12px;max-width:20ch;}
+  .masthead h1 .r{color:var(--accent);}
+  .masthead p{color:#c9ccd4;font-size:15px;max-width:78ch;}
+
+  .toc{background:var(--white);border-bottom:1px solid var(--line);padding:16px 40px;display:flex;gap:8px;flex-wrap:wrap;position:sticky;top:0;z-index:20;}
+  .toc a{font-family:"JetBrains Mono",monospace;font-size:11px;text-decoration:none;color:var(--ink);border:1px solid var(--line);padding:5px 10px;text-transform:uppercase;letter-spacing:.03em;}
+  .toc a:hover{background:var(--ink);color:#fff;border-color:var(--ink);}
+
+  .wrap{max-width:1120px;margin:0 auto;padding:40px;}
+  section{margin-bottom:56px;scroll-margin-top:70px;}
+  .sec-head{display:flex;align-items:baseline;gap:14px;border-bottom:3px solid var(--ink);padding-bottom:10px;margin-bottom:22px;}
+  .sec-num{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--accent);font-weight:700;}
+  .sec-head h2{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:25px;letter-spacing:-.01em;}
+
+  h3{font-family:"Archivo",sans-serif;font-weight:800;font-size:17px;text-transform:uppercase;letter-spacing:.02em;margin:26px 0 10px;color:var(--navy);}
+  p{font-size:15px;margin-bottom:10px;max-width:82ch;}
+  ul,ol{margin:0 0 14px 20px;font-size:15px;}
+  li{margin-bottom:6px;}
+  strong{font-weight:800;}
+  code{font-family:"JetBrains Mono",monospace;font-size:12.5px;background:var(--paper);padding:1px 5px;border:1px solid var(--line);border-radius:2px;}
+
+  /* Overview 3-db map */
+  .dbmap{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:8px 0 4px;}
+  .dbcard{border-top:5px solid;background:#fff;border:1px solid var(--line);padding:20px 22px;position:relative;}
+  .dbcard.k1{border-top-color:var(--kb1);}
+  .dbcard.k2{border-top-color:var(--kb2);}
+  .dbcard.k3{border-top-color:var(--kb3);}
+  .dbcard .tag{font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;}
+  .dbcard.k1 .tag{color:var(--kb1);}
+  .dbcard.k2 .tag{color:var(--kb2);}
+  .dbcard.k3 .tag{color:var(--kb3);}
+  .dbcard h4{font-family:"Archivo Black",sans-serif;font-size:18px;text-transform:uppercase;margin:6px 0 8px;line-height:1.1;}
+  .dbcard p{font-size:13.5px;color:#444;margin:0;}
+  .flowline{text-align:center;font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--muted);margin:16px 0;}
+
+  table{width:100%;border-collapse:collapse;margin:6px 0 18px;font-size:13.5px;}
+  th,td{text-align:left;padding:8px 11px;border:1px solid var(--line);vertical-align:top;}
+  th{background:var(--ink);color:#fff;font-family:"JetBrains Mono",monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;}
+  tr:nth-child(even) td{background:var(--paper);}
+  td code{background:#fff;}
+  .tbl-title{font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#fff;padding:7px 12px;display:inline-block;margin-top:8px;}
+  .t1{background:var(--kb1);} .t2{background:var(--kb2);} .t3{background:var(--kb3);}
+  .fk{color:var(--accent);font-weight:700;}
+  .pk{color:var(--kb1);font-weight:700;}
+
+  .card{background:#fff;border:1px solid var(--line);border-left:4px solid var(--navy);padding:18px 22px;margin-bottom:14px;}
+  .card.accent{border-left-color:var(--accent);}
+  .card.warn{border-left-color:#E8A33D;background:#fffaf0;}
+  .card.good{border-left-color:var(--kb1);background:#f2faf4;}
+  .card h4{font-family:"JetBrains Mono",monospace;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--navy);font-weight:700;margin-bottom:8px;}
+  .card.warn h4{color:#a9700a;} .card.good h4{color:var(--kb1);} .card.accent h4{color:var(--accent);}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+
+  .record{background:var(--ink);color:#e4e6ea;border:1px solid #222;border-left:4px solid var(--navy);padding:18px 22px;margin-bottom:14px;font-family:"JetBrains Mono",monospace;font-size:12px;line-height:1.75;}
+  .record.k1{border-left-color:var(--kb1);} .record.k2{border-left-color:var(--kb2);} .record.k3{border-left-color:var(--kb3);}
+  .record .rid{color:#9aa0ab;font-size:11px;letter-spacing:.05em;}
+  .record .rk{color:#7f9cff;}
+  .record .rv{color:#e4e6ea;}
+  .record .rt{color:#ff7a7d;font-weight:700;}
+
+  .flowsteps{counter-reset:step;list-style:none;margin-left:0;}
+  .flowsteps li{position:relative;padding:12px 12px 12px 54px;border:1px solid var(--line);background:#fff;margin-bottom:10px;font-size:14px;}
+  .flowsteps li::before{counter-increment:step;content:counter(step);position:absolute;left:12px;top:12px;width:28px;height:28px;background:var(--accent);color:#fff;font-family:"Archivo Black",sans-serif;font-size:14px;display:flex;align-items:center;justify-content:center;border-radius:2px;}
+
+  .mvp-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .mvp-col{border:1px solid var(--line);background:#fff;}
+  .mvp-col .h{padding:12px 18px;font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:16px;color:#fff;}
+  .mvp-col.mvp .h{background:var(--kb1);}
+  .mvp-col.adv .h{background:var(--navy);}
+  .mvp-col .b{padding:16px 20px;}
+  .mvp-col ul{margin-left:18px;}
+
+  .tools{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px;}
+  .tool{font-family:"JetBrains Mono",monospace;font-size:11px;border:1px solid var(--line);padding:5px 10px;background:#fff;}
+
+  footer{background:var(--ink);color:#9aa0ab;padding:26px 40px;font-family:"JetBrains Mono",monospace;font-size:11px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+  footer b{color:#fff;}
+
+  @media(max-width:820px){
+    .dbmap,.grid2,.mvp-grid{grid-template-columns:1fr;}
+    .masthead,.wrap,.toc,footer{padding-left:18px;padding-right:18px;}
+    table{font-size:12px;}
+    th,td{padding:6px 7px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="kicker">Toughjobs · Chatbot Program · System Architecture</div>
+  <h1>The Three-Database <span class="r">Intelligence System</span></h1>
+  <p>One connected system that does three jobs at once: publishes SEO content Google indexes, feeds the chatbot accurate answers, and learns from every conversation — so the bot gets smarter and real customer questions become high-value content. Built to start simple in a no-code tool and scale to a full app.</p>
+</div>
+
+<div class="toc">
+  <a href="#s1">Overview</a>
+  <a href="#s2">DB1 · Public KB</a>
+  <a href="#s3">DB2 · Private AI KB</a>
+  <a href="#s4">DB3 · Conversation Intel</a>
+  <a href="#s5">Relationships</a>
+  <a href="#s6">Example Records</a>
+  <a href="#s7">Automations</a>
+  <a href="#s8">Workflows</a>
+  <a href="#s9">Dashboards</a>
+  <a href="#s10">Security</a>
+  <a href="#s11">Admin Review</a>
+  <a href="#s12">MVP vs Advanced</a>
+</div>
+
+<div class="wrap">
+
+  <!-- OVERVIEW -->
+  <section id="s1">
+    <div class="sec-head"><span class="sec-num">00</span><h2>How The Three Databases Work Together</h2></div>
+    <p>Think of it as one loop. Conversations reveal what customers ask (DB3). The best answers get approved and stored for the bot (DB2). The public-safe versions get published for Google (DB1). New conversations use those better answers — and the loop tightens every week.</p>
+    <div class="dbmap">
+      <div class="dbcard k1">
+        <div class="tag">Database 1 · Public</div>
+        <h4>Public Knowledge Base</h4>
+        <p>SEO content Google indexes and customers read. FAQ pages, schema-ready Q&amp;A, URL structure, internal links. <strong>Publicly visible.</strong></p>
+      </div>
+      <div class="dbcard k2">
+        <div class="tag">Database 2 · Private</div>
+        <h4>Private AI Knowledge Base</h4>
+        <p>What the chatbot actually uses. Approved answers, sales scripts, escalation &amp; do-not-say rules, pricing objections. <strong>Internal only.</strong></p>
+      </div>
+      <div class="dbcard k3">
+        <div class="tag">Database 3 · Analytics</div>
+        <h4>Conversation Intelligence</h4>
+        <p>Every conversation logged, scored, and mined. Questions, objections, buying signals, missed answers, content ideas. <strong>Internal only.</strong></p>
+      </div>
+    </div>
+    <div class="flowline">DB3 surfaces gaps &amp; winners → DB2 stores approved answers → DB1 publishes public-safe content → better answers feed new conversations → back to DB3</div>
+  </section>
+
+  <!-- DB1 -->
+  <section id="s2">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Database 1 — Public Knowledge Base (SEO)</h2></div>
+    <p>Purpose: content Google can index and customers can read. Structured so each entry can render as an on-page FAQ <em>and</em> emit FAQ/QAPage schema markup.</p>
+
+    <span class="tbl-title t1">Table: public_faqs</span>
+    <table>
+      <tr><th>Field</th><th>Type</th><th>Notes</th></tr>
+      <tr><td><span class="pk">faq_id</span></td><td>Auto ID / UUID</td><td>Primary key</td></tr>
+      <tr><td>question</td><td>Short text</td><td>Customer-facing question</td></tr>
+      <tr><td>answer_html</td><td>Long text (rich)</td><td>Public answer, schema-ready</td></tr>
+      <tr><td>page_type</td><td>Single select</td><td>General FAQ / Service FAQ / Trade FAQ / Local SEO FAQ</td></tr>
+      <tr><td><span class="fk">service_id</span></td><td>Link → services</td><td>Which service this belongs to</td></tr>
+      <tr><td><span class="fk">trade_id</span></td><td>Link → trades</td><td>Which trade (nullable)</td></tr>
+      <tr><td>search_intent</td><td>Single select</td><td>Informational / Commercial / Transactional / Navigational</td></tr>
+      <tr><td>target_keyword</td><td>Short text</td><td>Primary keyword to rank for</td></tr>
+      <tr><td>page_url</td><td>URL</td><td>Where it lives (see URL structure)</td></tr>
+      <tr><td>schema_type</td><td>Single select</td><td>FAQPage / QAPage</td></tr>
+      <tr><td>internal_links</td><td>Link → public_faqs (multi)</td><td>Related entries to link to</td></tr>
+      <tr><td>approval_status</td><td>Single select</td><td>Draft / In Review / Approved / Published / Archived</td></tr>
+      <tr><td>last_updated</td><td>Date</td><td>Auto-stamped on edit</td></tr>
+      <tr><td><span class="fk">source_answer_id</span></td><td>Link → DB2 ai_answers</td><td>Which internal answer it derived from</td></tr>
+    </table>
+
+    <h3>Suggested URL Structure</h3>
+    <table>
+      <tr><th>Content</th><th>URL Pattern</th></tr>
+      <tr><td>General FAQ hub</td><td><code>/faq/</code></td></tr>
+      <tr><td>Service FAQ</td><td><code>/services/{service}/faq/</code> → <code>/services/websites/faq/</code></td></tr>
+      <tr><td>Trade marketing FAQ</td><td><code>/trades/{trade}/faq/</code> → <code>/trades/roofing/faq/</code></td></tr>
+      <tr><td>Local SEO FAQ</td><td><code>/{city}/faq/</code> → <code>/quad-cities/faq/</code></td></tr>
+      <tr><td>Single Q&amp;A (deep link)</td><td><code>/faq/{question-slug}/</code></td></tr>
+    </table>
+
+    <h3>Internal Linking Strategy</h3>
+    <ul>
+      <li><strong>Hub &amp; spoke:</strong> each FAQ hub page links down to its individual Q&amp;A entries; each entry links back up to its hub.</li>
+      <li><strong>Cross-link by relevance:</strong> a roofing "missed calls" FAQ links to the AI-automations service FAQ.</li>
+      <li><strong>Trade ↔ service:</strong> every trade FAQ links to the relevant service pages it references, and vice versa.</li>
+      <li><strong>Local anchoring:</strong> location FAQs link to trade + service pages to reinforce local relevance.</li>
+    </ul>
+  </section>
+
+  <!-- DB2 -->
+  <section id="s3">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Database 2 — Private AI Knowledge Base</h2></div>
+    <p>Purpose: the vetted brain the chatbot answers from. Never public. Includes the "how to sell," "what to never say," and "when to hand off" logic.</p>
+
+    <span class="tbl-title t2">Table: ai_answers</span>
+    <table>
+      <tr><th>Field</th><th>Type</th><th>Notes</th></tr>
+      <tr><td><span class="pk">answer_id</span></td><td>UUID</td><td>Primary key</td></tr>
+      <tr><td>question</td><td>Short text</td><td>Canonical question</td></tr>
+      <tr><td>question_variations</td><td>Long text / multi</td><td>Alternate phrasings for matching</td></tr>
+      <tr><td>short_answer</td><td>Long text</td><td>Chat-length reply</td></tr>
+      <tr><td>full_answer</td><td>Long text</td><td>Detailed version</td></tr>
+      <tr><td>answer_type</td><td>Single select</td><td>Service explanation / Sales script / Objection response / Troubleshooting / Procedure</td></tr>
+      <tr><td><span class="fk">service_id</span></td><td>Link → services</td><td></td></tr>
+      <tr><td><span class="fk">trade_id</span></td><td>Link → trades</td><td>Nullable</td></tr>
+      <tr><td>lead_qual_logic</td><td>Long text</td><td>Follow-up question + scoring cue</td></tr>
+      <tr><td>escalation_rule</td><td>Single select</td><td>Never / If asked / Always for this topic</td></tr>
+      <tr><td>competitive_position</td><td>Long text</td><td>How to compare vs. competitors honestly</td></tr>
+      <tr><td>do_not_say</td><td>Long text</td><td>Forbidden claims/phrases for this topic</td></tr>
+      <tr><td>source_of_truth</td><td>URL / text</td><td>Where the fact was verified (page, owner)</td></tr>
+      <tr><td>approval_status</td><td>Single select</td><td>Draft / In Review / Approved / Retired</td></tr>
+      <tr><td>last_updated</td><td>Date</td><td></td></tr>
+    </table>
+
+    <div class="grid2">
+      <span class="tbl-title t2">Table: do_not_say_rules</span>
+      <span class="tbl-title t2">Table: escalation_rules</span>
+    </div>
+    <div class="grid2">
+      <table>
+        <tr><th>Field</th><th>Type</th></tr>
+        <tr><td><span class="pk">rule_id</span></td><td>UUID</td></tr>
+        <tr><td>rule_text</td><td>Short text</td></tr>
+        <tr><td>reason</td><td>Long text</td></tr>
+        <tr><td>scope</td><td>Global / Service / Trade</td></tr>
+        <tr><td>example_violation</td><td>Long text</td></tr>
+      </table>
+      <table>
+        <tr><th>Field</th><th>Type</th></tr>
+        <tr><td><span class="pk">trigger_id</span></td><td>UUID</td></tr>
+        <tr><td>trigger_phrase</td><td>Short text</td></tr>
+        <tr><td>trigger_type</td><td>Keyword / Intent / Behavior</td></tr>
+        <tr><td>action</td><td>Alert sales / Offer callback</td></tr>
+        <tr><td>priority</td><td>High / Medium</td></tr>
+      </table>
+    </div>
+    <div class="card warn">
+      <h4>Do-Not-Say Examples (global)</h4>
+      <ul style="margin-bottom:0;">
+        <li>Never promise "#1 on Google" or guaranteed rankings.</li>
+        <li>Never quote a firm project price without a consultation.</li>
+        <li>Never disparage a named competitor — compare on facts only.</li>
+        <li>Never ask for payment details or SSN.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- DB3 -->
+  <section id="s4">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Database 3 — Conversation Intelligence</h2></div>
+    <p>Purpose: track and analyze every conversation, then turn it into scores, follow-ups, and content ideas.</p>
+
+    <span class="tbl-title t3">Table: conversations</span>
+    <table>
+      <tr><th>Field</th><th>Type</th><th>Notes</th></tr>
+      <tr><td><span class="pk">conversation_id</span></td><td>UUID</td><td>Primary key</td></tr>
+      <tr><td>started_at</td><td>DateTime</td><td></td></tr>
+      <tr><td>source</td><td>Single select</td><td>Google / Ad / Direct / Social</td></tr>
+      <tr><td>entry_page</td><td>URL</td><td>Where chat began</td></tr>
+      <tr><td><span class="fk">trade_id</span></td><td>Link → trades</td><td>Industry discussed</td></tr>
+      <tr><td><span class="fk">service_id</span></td><td>Link → services</td><td>Service requested</td></tr>
+      <tr><td>geo_region</td><td>Short text</td><td>City/region (coarse)</td></tr>
+      <tr><td>device</td><td>Single select</td><td>Mobile / Desktop</td></tr>
+      <tr><td>lead_score</td><td>Number 0–100</td><td>From scoring workflow</td></tr>
+      <tr><td>lead_quality</td><td>Single select</td><td>High / Medium / Low (rollup of score)</td></tr>
+      <tr><td>conversion_outcome</td><td>Single select</td><td>Booked / Lead captured / No contact / Bounced</td></tr>
+      <tr><td>follow_up_needed</td><td>Checkbox</td><td></td></tr>
+      <tr><td>escalated</td><td>Checkbox</td><td></td></tr>
+      <tr><td>contact_info</td><td>Long text (encrypted)</td><td>Only if volunteered</td></tr>
+    </table>
+
+    <span class="tbl-title t3">Table: conversation_messages</span>
+    <table>
+      <tr><th>Field</th><th>Type</th><th>Notes</th></tr>
+      <tr><td><span class="pk">message_id</span></td><td>UUID</td><td></td></tr>
+      <tr><td><span class="fk">conversation_id</span></td><td>Link → conversations</td><td></td></tr>
+      <tr><td>role</td><td>Single select</td><td>Visitor / Bot / Human</td></tr>
+      <tr><td>text</td><td>Long text</td><td></td></tr>
+      <tr><td>question_type</td><td>Single select</td><td>Question / Objection / Buying signal / Other</td></tr>
+      <tr><td><span class="fk">matched_answer_id</span></td><td>Link → DB2 ai_answers</td><td>Which answer fired (nullable)</td></tr>
+      <tr><td>missed_answer_flag</td><td>Checkbox</td><td>Bot had no confident answer</td></tr>
+    </table>
+
+    <span class="tbl-title t3">Table: insights</span>
+    <table>
+      <tr><th>Field</th><th>Type</th><th>Notes</th></tr>
+      <tr><td><span class="pk">insight_id</span></td><td>UUID</td><td></td></tr>
+      <tr><td>insight_type</td><td>Single select</td><td>New FAQ topic / Content idea / Sales improvement / Service idea</td></tr>
+      <tr><td>description</td><td>Long text</td><td></td></tr>
+      <tr><td>evidence_count</td><td>Number</td><td>How many conversations support it</td></tr>
+      <tr><td><span class="fk">related_conversations</span></td><td>Link → conversations (multi)</td><td></td></tr>
+      <tr><td>status</td><td>Single select</td><td>New / Reviewing / Actioned / Dismissed</td></tr>
+      <tr><td><span class="fk">resulting_answer_id</span></td><td>Link → DB2 ai_answers</td><td>If it became an approved answer</td></tr>
+    </table>
+  </section>
+
+  <!-- RELATIONSHIPS -->
+  <section id="s5">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Relationships Between Databases</h2></div>
+    <p>Two small shared reference tables — <code>services</code> and <code>trades</code> — connect all three databases so everything can be sliced by service and by trade.</p>
+    <table>
+      <tr><th>Relationship</th><th>Type</th><th>What it enables</th></tr>
+      <tr><td><code>services</code> ↔ all three DBs</td><td>One-to-many</td><td>Filter every FAQ, answer &amp; conversation by service</td></tr>
+      <tr><td><code>trades</code> ↔ all three DBs</td><td>One-to-many</td><td>Trade-level reporting &amp; content targeting</td></tr>
+      <tr><td>DB3 <code>insights.resulting_answer_id</code> → DB2 <code>ai_answers</code></td><td>Many-to-one</td><td>A conversation gap becomes an approved bot answer</td></tr>
+      <tr><td>DB2 <code>ai_answers.answer_id</code> → DB1 <code>public_faqs.source_answer_id</code></td><td>One-to-many</td><td>An internal answer spawns public SEO content</td></tr>
+      <tr><td>DB3 <code>conversation_messages.matched_answer_id</code> → DB2 <code>ai_answers</code></td><td>Many-to-one</td><td>Track which answers get used &amp; perform</td></tr>
+      <tr><td>DB1 <code>public_faqs.internal_links</code> → self</td><td>Many-to-many</td><td>Internal linking graph for SEO</td></tr>
+    </table>
+    <div class="card accent">
+      <h4>The Golden Thread</h4>
+      <p style="margin:0;">A real question in <strong>DB3</strong> → flagged as an insight → approved answer in <strong>DB2</strong> → public-safe FAQ in <strong>DB1</strong>. Every link in that chain is a stored relationship, so you can always trace a published FAQ back to the customer conversations that inspired it.</p>
+    </div>
+  </section>
+
+  <!-- EXAMPLE RECORDS -->
+  <section id="s6">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Example Records</h2></div>
+
+    <div class="record k3">
+      <div class="rid">DB3 · conversations · #CONV-2291</div><br/>
+      <span class="rk">started_at:</span> <span class="rv">2026-07-02 14:12</span> &nbsp; <span class="rk">source:</span> <span class="rv">Google</span><br/>
+      <span class="rk">trade:</span> <span class="rv">Roofing</span> &nbsp; <span class="rk">service:</span> <span class="rv">AI Automations</span> &nbsp; <span class="rk">geo:</span> <span class="rv">Davenport, IA</span><br/>
+      <span class="rk">lead_score:</span> <span class="rt">78</span> &nbsp; <span class="rk">quality:</span> <span class="rt">High</span> &nbsp; <span class="rk">outcome:</span> <span class="rv">Booked</span><br/>
+      <span class="rk">escalated:</span> <span class="rv">true</span> &nbsp; <span class="rk">follow_up_needed:</span> <span class="rv">false</span>
+    </div>
+
+    <div class="record k3">
+      <div class="rid">DB3 · conversation_messages · #MSG-88104</div><br/>
+      <span class="rk">conversation_id:</span> <span class="rv">#CONV-2291</span> &nbsp; <span class="rk">role:</span> <span class="rv">Visitor</span><br/>
+      <span class="rk">text:</span> <span class="rv">"I miss calls all day when I'm on roofs — does your AI thing actually work?"</span><br/>
+      <span class="rk">question_type:</span> <span class="rv">Buying signal</span> &nbsp; <span class="rk">matched_answer_id:</span> <span class="rv">#ANS-0417</span> &nbsp; <span class="rk">missed_answer_flag:</span> <span class="rv">false</span>
+    </div>
+
+    <div class="record k2">
+      <div class="rid">DB2 · ai_answers · #ANS-0417</div><br/>
+      <span class="rk">question:</span> <span class="rv">"Does AI call answering actually work for roofers?"</span><br/>
+      <span class="rk">answer_type:</span> <span class="rv">Service explanation</span> &nbsp; <span class="rk">trade:</span> <span class="rv">Roofing</span><br/>
+      <span class="rk">short_answer:</span> <span class="rv">"Yes — it answers on the 2nd ring, books the appointment, and texts you a summary while you're on the roof..."</span><br/>
+      <span class="rk">escalation_rule:</span> <span class="rv">If asked / high-intent</span> &nbsp; <span class="rk">do_not_say:</span> <span class="rv">"Don't promise it never misses a call"</span><br/>
+      <span class="rk">approval_status:</span> <span class="rt">Approved</span> &nbsp; <span class="rk">source_of_truth:</span> <span class="rv">AI Automations service page</span>
+    </div>
+
+    <div class="record k3">
+      <div class="rid">DB3 · insights · #INS-0032</div><br/>
+      <span class="rk">insight_type:</span> <span class="rv">Content idea</span> &nbsp; <span class="rk">evidence_count:</span> <span class="rt">17</span><br/>
+      <span class="rk">description:</span> <span class="rv">"Roofing + HVAC visitors repeatedly ask about missed calls. Publish 'The Real Cost of a Missed Call' post + FAQ."</span><br/>
+      <span class="rk">status:</span> <span class="rv">Actioned</span> &nbsp; <span class="rk">resulting_answer_id:</span> <span class="rv">#ANS-0417</span>
+    </div>
+
+    <div class="record k1">
+      <div class="rid">DB1 · public_faqs · #FAQ-0212</div><br/>
+      <span class="rk">question:</span> <span class="rv">"How do roofers stop missing calls while on the job?"</span><br/>
+      <span class="rk">page_type:</span> <span class="rv">Trade FAQ</span> &nbsp; <span class="rk">search_intent:</span> <span class="rv">Commercial</span><br/>
+      <span class="rk">target_keyword:</span> <span class="rv">"roofer missed calls"</span> &nbsp; <span class="rk">schema_type:</span> <span class="rv">FAQPage</span><br/>
+      <span class="rk">page_url:</span> <span class="rv">/trades/roofing/faq/</span> &nbsp; <span class="rk">approval_status:</span> <span class="rt">Published</span><br/>
+      <span class="rk">source_answer_id:</span> <span class="rv">#ANS-0417</span> &nbsp; <span class="rk">last_updated:</span> <span class="rv">2026-07-08</span>
+    </div>
+  </section>
+
+  <!-- AUTOMATIONS -->
+  <section id="s7">
+    <div class="sec-head"><span class="sec-num">06</span><h2>Automation Ideas</h2></div>
+    <div class="grid2">
+      <div class="card"><h4>Missed-Answer → Insight</h4><p style="margin:0;">Any message with <code>missed_answer_flag = true</code> auto-creates or increments an <code>insight</code> record. When evidence_count hits a threshold (e.g. 5), notify the admin.</p></div>
+      <div class="card"><h4>High-Intent Alert</h4><p style="margin:0;">Escalation trigger fires an SMS/Slack to sales with the transcript link, in real time.</p></div>
+      <div class="card"><h4>Auto Lead Score</h4><p style="margin:0;">On conversation close, run the scoring rules and set <code>lead_score</code> + <code>lead_quality</code> automatically.</p></div>
+      <div class="card"><h4>Answer Performance</h4><p style="margin:0;">Weekly job counts how often each <code>ai_answer</code> fired and how many led to bookings — surfaces weak answers to rewrite.</p></div>
+      <div class="card"><h4>Publish Sync</h4><p style="margin:0;">When a <code>public_faq</code> flips to <em>Published</em>, regenerate the page's FAQ schema JSON-LD automatically.</p></div>
+      <div class="card"><h4>Stale-Content Nudge</h4><p style="margin:0;">Any answer/FAQ not updated in 6 months auto-flags for review.</p></div>
+    </div>
+  </section>
+
+  <!-- WORKFLOWS -->
+  <section id="s8">
+    <div class="sec-head"><span class="sec-num">07</span><h2>Core Workflows</h2></div>
+
+    <h3>Chatbot Improvement Workflow</h3>
+    <ol class="flowsteps">
+      <li>Bot logs every message; low-confidence answers get <code>missed_answer_flag</code>.</li>
+      <li>Flags roll up into <code>insights</code> weekly, ranked by evidence_count.</li>
+      <li>Team drafts a new/updated <code>ai_answer</code> in approved tone.</li>
+      <li>Admin reviews &amp; approves → answer goes live to the bot.</li>
+      <li>Answer performance tracked; weak ones cycle back to step 3.</li>
+    </ol>
+
+    <h3>SEO Content Generation Workflow</h3>
+    <ol class="flowsteps">
+      <li>An approved <code>ai_answer</code> with public value is selected.</li>
+      <li>Public-safe version drafted as a <code>public_faq</code> (no internal pricing/scripts).</li>
+      <li>Assign target_keyword, search_intent, URL, and internal links.</li>
+      <li>Admin approves → status <em>Published</em>, schema auto-generated.</li>
+      <li>Monitor rankings; refresh entry as intent/keyword data evolves.</li>
+    </ol>
+
+    <h3>Lead Scoring Workflow</h3>
+    <ol class="flowsteps">
+      <li>During chat, signals are tagged (contact given, pricing asked, urgency, etc.).</li>
+      <li>On close, additive scoring runs (capped at 100).</li>
+      <li>Score maps to quality band: High 60–100 / Medium 25–59 / Low 0–24.</li>
+      <li>High &amp; escalated → real-time sales alert; Medium → nurture; Low → insight only.</li>
+      <li>Conversion outcome written back to measure score accuracy over time.</li>
+    </ol>
+  </section>
+
+  <!-- DASHBOARDS -->
+  <section id="s9">
+    <div class="sec-head"><span class="sec-num">08</span><h2>Reporting Dashboard Ideas</h2></div>
+    <div class="grid2">
+      <div class="card good"><h4>Owner Snapshot</h4><ul style="margin-bottom:0;"><li>Conversations, leads, booked jobs this week</li><li>Conversion rate trend</li><li>Top trades &amp; services by demand</li></ul></div>
+      <div class="card"><h4>Content Opportunities</h4><ul style="margin-bottom:0;"><li>Ranked missed-answer topics</li><li>Insights ready to action</li><li>FAQs needing refresh</li></ul></div>
+      <div class="card"><h4>Sales Board</h4><ul style="margin-bottom:0;"><li>High-intent leads &amp; follow-up status</li><li>Escalations awaiting response</li><li>Aging leads (no reply)</li></ul></div>
+      <div class="card"><h4>Geographic Demand</h4><ul style="margin-bottom:0;"><li>Conversations by city/region</li><li>Underserved areas worth targeting</li><li>Seasonal demand shifts by trade</li></ul></div>
+    </div>
+  </section>
+
+  <!-- SECURITY -->
+  <section id="s10">
+    <div class="sec-head"><span class="sec-num">09</span><h2>Security &amp; Privacy Recommendations</h2></div>
+    <div class="card warn">
+      <ul style="margin-bottom:0;">
+        <li><strong>Split visibility:</strong> DB1 public; DB2 &amp; DB3 locked to authenticated internal users only.</li>
+        <li><strong>Encrypt contact info</strong> at rest; restrict who can view the <code>contact_info</code> field.</li>
+        <li><strong>Coarse geo only</strong> — city/region, never GPS or full IP lookups.</li>
+        <li><strong>90-day retention</strong> on identifiable records, then anonymize into aggregate insights.</li>
+        <li><strong>No payment/sensitive data</strong> ever collected in chat (enforced by do-not-say rules).</li>
+        <li><strong>Role-based access:</strong> owner, marketing, sales each see only what they need.</li>
+        <li><strong>Audit log</strong> on who approved/published each answer &amp; FAQ.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ADMIN REVIEW -->
+  <section id="s11">
+    <div class="sec-head"><span class="sec-num">10</span><h2>Admin Review Before Public Content Is Published</h2></div>
+    <ol class="flowsteps">
+      <li><strong>Draft</strong> — content starts at <code>approval_status = Draft</code>. Never visible to bot or public.</li>
+      <li><strong>Internal check</strong> — reviewer confirms accuracy against <code>source_of_truth</code> and tone rules.</li>
+      <li><strong>Compliance check</strong> — run against <code>do_not_say_rules</code>; no guarantees, no firm prices, no competitor bashing.</li>
+      <li><strong>Approve</strong> — owner or marketing lead flips to <em>Approved</em> (bot) or <em>Published</em> (public). Logged with name + date.</li>
+      <li><strong>Post-publish monitor</strong> — track usage/rankings; anything underperforming or stale returns to Draft.</li>
+    </ol>
+    <div class="card accent"><h4>Rule</h4><p style="margin:0;">No answer reaches the chatbot and no page reaches Google without a human approval step. The system drafts; a person decides.</p></div>
+  </section>
+
+  <!-- MVP -->
+  <section id="s12">
+    <div class="sec-head"><span class="sec-num">11</span><h2>Recommended MVP → Advanced Roadmap</h2></div>
+    <p>Start in a no-code tool you can run yourself. Graduate to a custom app only when volume justifies it.</p>
+    <div class="mvp-grid">
+      <div class="mvp-col mvp">
+        <div class="h">MVP — Build First</div>
+        <div class="b">
+          <p style="margin-top:0;"><strong>Tool:</strong> Airtable, Notion, or SmartSuite.</p>
+          <ul>
+            <li>3 databases as 3 bases/workspaces, linked by shared <code>services</code> + <code>trades</code> tables.</li>
+            <li>DB2 <code>ai_answers</code> + basic <code>do_not_say</code> + <code>escalation</code> rules.</li>
+            <li>DB1 <code>public_faqs</code> with approval_status &amp; URL fields — export/copy to your site.</li>
+            <li>DB3 manual conversation logging + a simple lead-score formula field.</li>
+            <li>Weekly view: top questions + missed-answer flags.</li>
+            <li>Manual admin approval (a status column + a named approver).</li>
+          </ul>
+          <p><strong>Goal:</strong> working loop in ~1–2 weeks, zero code.</p>
+        </div>
+      </div>
+      <div class="mvp-col adv">
+        <div class="h">Advanced — Build Later</div>
+        <div class="b">
+          <p style="margin-top:0;"><strong>Tool:</strong> Supabase / custom web app + bot API.</p>
+          <ul>
+            <li>Live bot writes conversations &amp; messages to DB3 automatically.</li>
+            <li>Auto lead scoring, auto insight rollups, real-time escalation alerts.</li>
+            <li>Auto-generated FAQ schema JSON-LD on publish.</li>
+            <li>Answer-performance analytics (fire rate → booking rate).</li>
+            <li>Role-based access, encryption, audit logs, auto-retention purge.</li>
+            <li>Dashboards for owner / sales / content, refreshed live.</li>
+          </ul>
+          <p><strong>Goal:</strong> self-improving system that scales across many client businesses.</p>
+        </div>
+      </div>
+    </div>
+    <h3>Tools This Maps Cleanly Onto</h3>
+    <div class="tools">
+      <span class="tool">Airtable</span><span class="tool">SmartSuite</span><span class="tool">Notion</span><span class="tool">Supabase</span><span class="tool">Custom web app</span>
+    </div>
+  </section>
+
+</div>
+
+
+    <section data-screen-label="Our Endeavors" class="gb-section" style="background:#ECEFF4;background-image:url('assets/white-engineering-background.webp');background-size:cover;background-position:center;padding:56px 32px;position:relative;overflow:hidden;box-shadow:inset 0 2px 2px rgba(0,0,0,.45), inset 0 -2px 2px rgba(0,0,0,.45);">
+    <div style="max-width:1240px;margin:0 auto;position:relative;z-index:1;">
+      <div class="gb-outer" style="display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center;">
+        <div>
+          <div style="margin-bottom:24px;">
+            <span style="font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:#C8262A;">More than marketing</span>
+            <h2 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(32px,3.6vw,50px);line-height:1.02;color:#0A0F1C;margin:12px 0 0;"><span style="color:#C8262A;">Two ways we</span> give back</h2>
+          </div>
+          <div class="gb-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch;">
+            <div class="gb-card" style="background:#002768;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;">
+              <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700;">01 / PARTNERSHIP</span>
+              <h3 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05;">Go independent, backed by us</h3>
+              <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 28px;">You bring the truck, tools, and skill. We hand you the website, brand, systems, and marketing to turn one truck into a real company.</p>
+              <a href="partnerships.html" style="display:inline-block;background:#C8262A;color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none;">Explore Partnership</a>
+            </div>
+            <div class="gb-card" style="background:#0A0F1C;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;">
+              <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700;">02 / HELPING HANDS</span>
+              <h3 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05;">A hand up when budget is tight</h3>
+              <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.8);margin:0 0 28px;">One day a week we help people with more grit than budget get a business off the ground — honest guidance, real direction, no pressure.</p>
+              <a href="helping-hands.html" style="display:inline-block;background:#C8262A;color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none;">Explore Helping Hands</a>
+            </div>
+          </div>
+        </div>
+        <div class="gb-img" style="position:relative;height:100%;min-height:420px;">
+          <img src="assets/trade-hero-excavation.webp" alt="Toughjobs tradesman on the job" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:top center;" />
+        </div>
+      </div>
+    </div>
+    <style>@media(max-width:900px){ .gb-outer{ grid-template-columns:1fr !important; } .gb-grid{ grid-template-columns:1fr !important; } .gb-img{ min-height:280px !important; order:-1; } }</style>
+  </section>
+
+<footer>
+  <span>TOUGHJOBS · THREE-DATABASE INTELLIGENCE SYSTEM · ARCHITECTURE SPEC</span>
+  <span><b>(309) 928-9080</b> · Quad Cities · IL · IA · MO · WI · IN</span>
+</footer>
+
+<script src="accessibility.js?v=20260729"></script>
+<script src="image-finder-tab.js"></script>
+</body>
+</html>

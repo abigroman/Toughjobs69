@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Home-Services AI Automation Playbook — Toughjobs (Private)</title>
+<meta name="robots" content="noindex, follow" />
+<meta name="author" content="Toughjobs" />
+<meta name="publisher" content="ToughJobs Digital Marketing" />
+<link rel="canonical" href="https://toughjobs.org/ai-automations.html" />
+
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<style>
+  doc-page:not(:defined){visibility:hidden}
+  :root{--ink:#0A0F1C;--navy:#002768;--red:#C8262A;--smoke:#5B6471;--line:#d9dee6;--wash:#f3f5f9}
+  *{box-sizing:border-box}
+  doc-page{font-family:"Archivo",sans-serif;color:var(--ink);line-height:1.55;font-size:11pt}
+  h1,h2,h3,h4{font-family:"Archivo Black",sans-serif;letter-spacing:-.01em;text-transform:uppercase;line-height:1.04}
+  h1{font-size:31pt;margin:0 0 6px}
+  h2{font-size:19pt;margin:0;color:var(--navy)}
+  h3{font-size:13pt;margin:0 0 3px}
+  p{margin:0 0 9px}
+  a{color:var(--red)}
+  .kicker{font-family:"JetBrains Mono",monospace;font-size:8.5pt;letter-spacing:.22em;text-transform:uppercase;color:var(--red);font-weight:600}
+  .confidential{font-family:"JetBrains Mono",monospace;font-size:8pt;letter-spacing:.18em;text-transform:uppercase;color:var(--smoke)}
+  .cover{border-bottom:3px solid var(--red);padding-bottom:20px;margin-bottom:22px}
+  .lede{font-size:12.5pt;color:#28313f;line-height:1.5;max-width:60ch}
+  /* section band */
+  .band{break-before:page;margin:0 0 16px;padding:14px 18px;background:var(--navy);color:#fff;display:flex;align-items:baseline;gap:14px}
+  .band .n{font-family:"Archivo Black",sans-serif;font-size:20pt;color:#fff;opacity:.5}
+  .band h2{color:#fff}
+  .band p{margin:0;font-size:9.5pt;color:rgba(255,255,255,.8);margin-left:auto;max-width:34ch;text-align:right}
+  /* automation card */
+  .auto{break-inside:avoid;border:1px solid var(--line);border-left:4px solid var(--red);padding:14px 16px 15px;margin:0 0 14px;background:#fff}
+  .auto-head{display:flex;align-items:baseline;gap:10px;margin-bottom:6px}
+  .auto-head .num{font-family:"Archivo Black",sans-serif;font-size:13pt;color:var(--red);flex:0 0 auto}
+  .auto-head h3{margin:0}
+  .roi{background:var(--wash);border-left:3px solid var(--navy);padding:7px 11px;margin:8px 0;font-size:10pt}
+  .roi b{color:var(--navy)}
+  .lbl{font-family:"JetBrains Mono",monospace;font-size:8pt;letter-spacing:.14em;text-transform:uppercase;color:var(--smoke);font-weight:600;display:block;margin:9px 0 3px}
+  .steps{margin:0;padding-left:18px}
+  .steps li{margin:0 0 3px;font-size:10pt}
+  .prompt{background:#0d1424;color:#e8edf6;font-family:"JetBrains Mono",monospace;font-size:8.7pt;line-height:1.5;padding:11px 13px;margin:5px 0 0;white-space:pre-wrap;border-radius:3px}
+  .prompt .c{color:#8aa0c6}
+  table.tools{width:100%;border-collapse:collapse;font-size:9.5pt;margin:6px 0}
+  table.tools th,table.tools td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}
+  table.tools th{background:var(--navy);color:#fff;font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;font-size:8pt;letter-spacing:.06em}
+  .stat-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:14px 0 4px}
+  .stat{border:1px solid var(--line);border-top:4px solid var(--red);padding:12px 14px;break-inside:avoid}
+  .stat .big{font-family:"Archivo Black",sans-serif;font-size:23pt;color:var(--red);line-height:.9}
+  .stat .t{font-size:9pt;color:#28313f;margin-top:5px;line-height:1.35}
+  .stat .s{font-family:"JetBrains Mono",monospace;font-size:7pt;letter-spacing:.08em;text-transform:uppercase;color:var(--smoke);margin-top:6px}
+  .note{font-size:8.5pt;color:var(--smoke);line-height:1.4}
+  .toc{columns:2;column-gap:30px;font-size:10pt;margin:6px 0}
+  .toc div{break-inside:avoid;margin-bottom:4px}
+  .toc b{color:var(--navy)}
+  ul.plain{margin:0 0 9px;padding-left:18px}
+  ul.plain li{margin:0 0 4px}
+  h2.blk{color:var(--navy);font-size:15pt;margin:18px 0 8px;padding-bottom:5px;border-bottom:2px solid var(--red)}
+  hr{border:0;border-top:1px solid var(--line);margin:16px 0}
+</style>
+</head>
+<body>
+<doc-page size="letter" orientation="portrait" margin="0.7in">
+
+  <!-- running footer -->
+  <div slot="footer" style="display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono',monospace;font-size:7.5pt;letter-spacing:.12em;text-transform:uppercase;color:#8792a3;border-top:1px solid var(--line);padding-top:6px">
+    <span>Toughjobs Digital Marketing</span><span>Confidential — Internal Use</span><span>(309) 928-9080</span>
+  </div>
+
+  <!-- COVER -->
+  <div class="cover">
+    <div class="kicker">Private Report · Prepared by Toughjobs</div>
+    <h1>The Home-Services<br>AI Automation Playbook</h1>
+    <p class="lede">30 AI automations a home-services business can put to work to save hours and make more money — each with the profit case, how to set it up, and a copy-and-paste prompt to build it.</p>
+    <p class="confidential" style="margin-top:12px">Confidential · For the recipient only · &copy; 2026 Toughjobs Digital Marketing · Do not distribute</p>
+  </div>
+
+  <p><b>How to use this report.</b> Don't build all 30 at once — that's the #1 reason owners quit. Pick the single automation fixing your biggest leak (for most shops that's missed calls or slow lead response), stand it up, prove it pays inside 30 days, then add the next. Every automation below lists the tools that already do it, the manual setup steps, and a prompt you can paste into an AI (ChatGPT, Claude, or the prompt box inside tools like GoHighLevel, Housecall Pro, or Vapi) to generate the script or workflow.</p>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="big">62%</div><div class="t">of calls to small businesses go unanswered — most callers never call back</div><div class="s">OnceHub / Z360</div></div>
+    <div class="stat"><div class="big">78%</div><div class="t">of customers buy from whichever company responds first</div><div class="s">NextPhone, 2026</div></div>
+    <div class="stat"><div class="big">70%</div><div class="t">of small businesses using AI report direct profitability increases</div><div class="s">U.S. Chamber of Commerce</div></div>
+  </div>
+  <p class="note">The playbook is organized into 8 leak-points, front to back along your customer journey: <b>Capture → Book → Follow-up → Reviews → Retain → Market → Back-office → Dispatch.</b></p>
+
+  <hr>
+  <h2 class="blk">The 30 automations at a glance</h2>
+  <div class="toc">
+    <div><b>Capture the lead</b> — 1 AI receptionist · 2 Missed-call text-back · 3 Speed-to-lead callback · 4 Website chat · 5 After-hours agent</div>
+    <div><b>Book the job</b> — 6 Self-scheduling · 7 Emergency triage · 8 Reminders & no-show recovery · 9 Instant quote/estimate</div>
+    <div><b>Follow up</b> — 10 Unsold-estimate follow-up · 11 Lead nurture drip · 12 Cold-lead re-engagement</div>
+    <div><b>Get reviews</b> — 13 Post-job review request · 14 AI review responses · 15 Bad-review interceptor</div>
+    <div><b>Retain & grow</b> — 16 Maintenance-plan renewals · 17 Customer win-back · 18 Seasonal service reminders · 19 Membership upsell</div>
+    <div><b>Market</b> — 20 SEO content · 21 Social posts · 22 Email newsletter · 23 Ad copy & creative · 24 Before/after image cleanup</div>
+    <div><b>Back-office</b> — 25 Invoicing & payment chasing · 26 Job-note & call summaries · 27 Bookkeeping categorization · 28 Hiring/recruiting screener</div>
+    <div><b>Dispatch & ops</b> — 29 Smart routing & scheduling · 30 Inventory & reorder</div>
+  </div>
+
+  <!-- ============ SECTION 1 ============ -->
+  <div class="band"><span class="n">01</span><h2>Capture the Lead</h2><p>Miss the first contact and the job is already your competitor's.</p></div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">1</span><h3>24/7 AI Voice Receptionist</h3></div>
+    <p>A natural-sounding AI answers every inbound call in your business name, captures the problem, and books the job — even at 2 AM, on weekends, and while your crew is on the tools.</p>
+    <div class="roi"><b>Profit impact:</b> Home-services companies report a 30–50% lift in booked calls within 30 days. If you miss 30 calls/month at a 20% close rate and a $3,500 ticket, that's ~$21,000/month recovered against a ~$200/month tool — a 100×+ return.</div>
+    <span class="lbl">Tools that do it</span>
+    <table class="tools"><tr><th>Tool</th><th>Notes</th></tr><tr><td>Vapi / Retell AI</td><td>Custom voice agent, most flexible</td></tr><tr><td>Housecall Pro CSR AI, Jobber AI Receptionist</td><td>Native if you're already on them</td></tr><tr><td>NextPhone, Goodcall, Dialzara</td><td>Flat-rate, fast setup</td></tr></table>
+    <span class="lbl">How to set it up</span>
+    <ol class="steps"><li>Pull your last 30 days of calls; count how many went unanswered and multiply by average job value (your "opportunity number").</li><li>Pick a tool; keep your existing number and forward unanswered calls to it.</li><li>Feed it your services, pricing ranges, service area zips, and FAQs.</li><li>Connect it to your scheduler (ServiceTitan / Housecall Pro / Jobber / Google Calendar) so it books directly.</li><li>Set an escalation rule: complex or high-ticket calls forward to your cell.</li></ol>
+    <span class="lbl">Prompt to build the agent's script</span>
+    <div class="prompt"><span class="c"># Paste into ChatGPT/Claude, then load the output into your voice tool</span>
+You are the receptionist for [COMPANY], a [TRADE] company serving [CITIES].
+Write a call-handling script that: greets in our name; asks for name,
+address, phone, and the problem; detects emergencies ([e.g. no heat, burst
+pipe, sparking panel]) and offers the soonest slot; quotes only these ranges
+[LIST]; books into [SCHEDULER]; and politely declines jobs outside these zips
+[LIST]. Keep it warm, plain-spoken, and under 3 sentences per turn. Output
+the opening line, 6 branch paths, and a confirmation summary.</div>
+  </div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">2</span><h3>Missed-Call Text-Back</h3></div>
+    <p>The instant a call goes unanswered, an automatic SMS fires: "Sorry we missed you — reply here and we'll get right back." Keeps the lead warm instead of losing it to voicemail.</p>
+    <div class="roi"><b>Profit impact:</b> 85% of missed callers won't call back; automated text-back recovers up to 30% of otherwise-lost leads. Cheapest lead-recovery play there is.</div>
+    <span class="lbl">Tools</span>
+    <table class="tools"><tr><th>Tool</th><th>Notes</th></tr><tr><td>GoHighLevel, Podium, Emitrr, LeadTruffle</td><td>Text-back + lead qualification</td></tr><tr><td>Your FSM's built-in SMS</td><td>Housecall Pro / Jobber</td></tr></table>
+    <span class="lbl">How to set it up</span>
+    <ol class="steps"><li>Provision a dedicated SMS number or enable texting on your business line.</li><li>Set the trigger: call status = missed → send SMS within 60 seconds.</li><li>Write a benefit-driven first message (not a generic "sorry we missed you").</li><li>Add TCPA-compliant opt-in language; route replies to a real inbox.</li></ol>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Write 3 missed-call text-back messages for [COMPANY], a [TRADE] in [CITY].
+Each under 320 characters, mentions we do free estimates + same-week
+appointments + are licensed/insured, ends with a question that gets a reply,
+and includes opt-in/STOP language. Friendly, human, no exclamation spam.</div>
+  </div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">3</span><h3>Speed-to-Lead Instant Callback</h3></div>
+    <p>When a form is filled on your site or an ad (Google/Meta LSA), AI calls or texts the prospect within 60 seconds, qualifies them, and books.</p>
+    <div class="roi"><b>Profit impact:</b> Responding first wins ~78% of deals; after 5 minutes, contact rates fall off a cliff. Turns cold form-fills into booked jobs.</div>
+    <span class="lbl">How to set it up</span>
+    <ol class="steps"><li>Connect your web forms / lead sources (Angi, Thumbtack, LSA) into one inbox via Zapier or GoHighLevel.</li><li>Trigger: new lead → AI dials/texts within 60 seconds.</li><li>Qualify (project, timeline, address) then book or route hot leads to you.</li></ol>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Draft a 60-second outbound call opener + 4 qualifying questions for a [TRADE]
+lead who just submitted a form for [SERVICE]. Goal: confirm the job, get the
+address, and book the soonest slot. Sound like a helpful human, not a robot.</div>
+  </div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">4</span><h3>Website Chat Widget That Books</h3></div>
+    <p>An AI chat on your site answers pricing/scheduling/service-area questions 24/7 and captures the lead — even after hours when 25–35% of demand arrives.</p>
+    <div class="roi"><b>Profit impact:</b> Recovers after-hours web visitors who'd otherwise bounce to a competitor; every captured chat is a lead you already paid for with SEO/ads.</div>
+    <span class="lbl">Tools</span>
+    <table class="tools"><tr><th>Tool</th><th>Notes</th></tr><tr><td>Intercom / Tidio / your FSM chat</td><td>General widgets</td></tr><tr><td>GoHighLevel, Broadly, Dapta</td><td>Trades-focused, books jobs</td></tr></table>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Create a knowledge base + greeting for a website chatbot for [COMPANY]
+([TRADE], [CITIES]). Include answers for: pricing ranges, service area,
+emergency availability, brands serviced, financing, and "how soon can you
+come out?" Always end by capturing name + phone + address and offering to book.</div>
+  </div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">5</span><h3>After-Hours &amp; Overflow Agent</h3></div>
+    <p>Route evenings, weekends, and overflow (when the line's busy) to AI so nothing goes to voicemail during the exact hours emergencies happen.</p>
+    <div class="roi"><b>Profit impact:</b> ~35–45% of home-services calls come outside business hours; closing that gap is pure found revenue with zero added payroll.</div>
+    <span class="lbl">How to set it up</span>
+    <ol class="steps"><li>In your phone system, forward calls to the AI after hours and on no-answer/busy.</li><li>Give the after-hours agent a distinct script: emergencies → on-call cell; everything else → booked or callback queued for morning.</li></ol>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Write an after-hours AI phone script for [TRADE] [COMPANY]. Triage: if it's
+an emergency ([LIST]), collect details and text the on-call tech immediately;
+otherwise book the first morning slot and send a confirmation text. Reassure
+the caller they're taken care of.</div>
+  </div>
+
+  <!-- ============ SECTION 2 ============ -->
+  <div class="band"><span class="n">02</span><h2>Book the Job</h2><p>Turn a captured lead into a confirmed appointment with no phone tag.</p></div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">6</span><h3>Online Self-Scheduling</h3></div>
+    <p>Customers pick their own slot from your real availability — the AI checks the calendar and writes the booking, no back-and-forth.</p>
+    <div class="roi"><b>Profit impact:</b> Fills the schedule while you sleep and cuts office phone time; booking is the #1 reason people call, so automating it removes your biggest bottleneck.</div>
+    <span class="lbl">How to set it up</span>
+    <ol class="steps"><li>Turn on online booking in your FSM (Housecall Pro / ServiceTitan / Jobber) or Calendly.</li><li>Embed the booking link on your site, Google Business Profile, and text/email footers.</li><li>Set buffer + travel time so slots stay realistic.</li></ol>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Write the microcopy for an online booking flow for [TRADE]: service-type
+picker labels, a reassurance line about arrival windows, and a confirmation
+message with what to expect on the visit.</div>
+  </div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">7</span><h3>Emergency Detection &amp; Triage</h3></div>
+    <p>AI recognizes urgent keywords (no heat, burst pipe, sparks, water everywhere) and instantly bypasses normal booking to alert the on-call tech.</p>
+    <div class="roi"><b>Profit impact:</b> Emergency jobs are high-ticket and go to the first responder. Instant routing wins the $800 after-hours call instead of losing it.</div>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Give me an emergency-keyword list and triage rules for a [TRADE] business.
+For each emergency type, specify: urgency level, what to tell the customer,
+and who/what to alert. Keep non-emergencies in the normal booking flow.</div>
+  </div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">8</span><h3>Appointment Reminders &amp; No-Show Recovery</h3></div>
+    <p>Automatic SMS/email confirmations and reminders before the visit, plus an auto-rebook offer if someone cancels or no-shows.</p>
+    <div class="roi"><b>Profit impact:</b> Reminders measurably cut no-shows; each recovered slot is a full job saved and a truck-roll that doesn't get wasted.</div>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Write a reminder sequence for [TRADE] appointments: confirmation at booking,
+reminder 1 day before, reminder morning-of with arrival window, and a
+friendly rebook message if they miss it. SMS length, warm tone.</div>
+  </div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">9</span><h3>Instant Quote / Estimate Assistant</h3></div>
+    <p>AI turns job details (or a photo + voice memo) into a ballpark range or a full estimate draft, so prospects get a number fast instead of waiting days.</p>
+    <div class="roi"><b>Profit impact:</b> AI estimators save 15–20+ hours/month and speed the quote — and the fastest quote often wins the job.</div>
+    <span class="lbl">How to set it up</span>
+    <ol class="steps"><li>Build a price book (services, materials, labor rates) the AI can reference.</li><li>Use QuoteIQ / your FSM's estimate tool, or a custom GPT loaded with your pricing.</li><li>Keep a human approval step before anything binding is sent.</li></ol>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Act as an estimator for [COMPANY] ([TRADE]). Using this price book [PASTE],
+turn the following job description into a line-item estimate with a total
+range and a short scope summary. Flag anything that needs an on-site look.
+Job: [DESCRIPTION].</div>
+  </div>
+
+  <!-- ============ SECTION 3 ============ -->
+  <div class="band"><span class="n">03</span><h2>Follow Up</h2><p>Most jobs are lost in the silence after the first quote. Automate the chase.</p></div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">10</span><h3>Unsold-Estimate Follow-Up</h3></div>
+    <p>AI follows up on estimates that were sent but never accepted — reminders, financing options, and gentle urgency around seasonal pricing.</p>
+    <div class="roi"><b>Profit impact:</b> Converts 10–20% of previously-unsold estimates — revenue you already did the work to quote.</div>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Write a 3-touch follow-up sequence (day 2, day 5, day 12) for an unsold
+[TRADE] estimate of about $[AMOUNT] for [SERVICE]. Offer financing, answer
+the top 2 objections, and create honest seasonal urgency. SMS + email versions.</div>
+  </div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">11</span><h3>New-Lead Nurture Drip</h3></div>
+    <p>Leads that don't book immediately get an automated, helpful sequence that keeps you top-of-mind through their decision.</p>
+    <div class="roi"><b>Profit impact:</b> Consistent follow-up is where contractors lose or win deals after the first call — automation makes it happen every time.</div>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Build a 5-message nurture drip for a [TRADE] lead who inquired but hasn't
+booked. Mix value (a tip, a trust-builder, a review highlight) with soft CTAs.
+Space over 10 days. Keep it human and local to [CITY].</div>
+  </div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">12</span><h3>Cold-Lead Re-Engagement</h3></div>
+    <p>Leads that went quiet 30–90 days ago get an AI re-engagement touch across text/email to revive the ones still in-market.</p>
+    <div class="roi"><b>Profit impact:</b> Recaptures pipeline you'd otherwise write off; costs pennies per contact.</div>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Write a re-engagement message for [TRADE] leads who went cold 60+ days ago.
+One text + one email. Acknowledge the gap, add a reason to act now
+(seasonal need, limited slots), and make replying effortless.</div>
+  </div>
+
+  <!-- ============ SECTION 4 ============ -->
+  <div class="band"><span class="n">04</span><h2>Get Reviews</h2><p>Your rating is the storefront. Automate the ask and the response.</p></div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">13</span><h3>Post-Job Review Request</h3></div>
+    <p>A text asking for a Google review fires automatically within ~30 minutes of job completion — while satisfaction is highest and the tech is still fresh in mind.</p>
+    <div class="roi"><b>Profit impact:</b> SMS-within-30-min requests get a 25–40% response rate vs. 3–8% for later email — often 3–5× more reviews. A 20-job/day shop can generate 100–160 reviews/month, and the top Maps position captures 35–50% of local clicks.</div>
+    <span class="lbl">How to set it up</span>
+    <ol class="steps"><li>Trigger on job status = complete → send SMS after ~30 min.</li><li>Include your direct Google review link (or QR).</li><li>Optionally gate: happy customers → Google; unhappy → private feedback (see #15).</li></ol>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Write 3 post-job review-request texts for [COMPANY] ([TRADE]). Reference the
+tech by name [VAR], thank them, make it one tap to leave a Google review, and
+stay under 300 characters. Warm, specific, no begging.</div>
+  </div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">14</span><h3>AI Review Responses</h3></div>
+    <p>AI drafts on-brand replies to every review; only ~5% of businesses respond though 88% of consumers require it — easy way to stand out.</p>
+    <div class="roi"><b>Profit impact:</b> Businesses that reply to reviews average ~35% more revenue than those that don't; responding builds trust and local ranking.</div>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">You reply to reviews for [COMPANY] ([TRADE]). Draft a warm, specific response
+to this review, in our voice, thanking them and inviting them back (or, if
+negative, taking it offline to [PHONE] and owning the fix). Review: [PASTE].</div>
+  </div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">15</span><h3>Bad-Review Interceptor</h3></div>
+    <p>A quick post-job satisfaction check: happy customers are routed to Google; unhappy ones are routed to a private message to management first.</p>
+    <div class="roi"><b>Profit impact:</b> Catches the detractor before they post publicly — you get a window to fix it and often convert them into a loyal repeat customer.</div>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Design a 1-question SMS satisfaction check for [TRADE] jobs and the branching
+logic: 4–5 stars → Google review link; 1–3 stars → apologize, alert
+management at [EMAIL/PHONE], and promise a callback. Write all message variants.</div>
+  </div>
+
+  <!-- ============ SECTION 5 ============ -->
+  <div class="band"><span class="n">05</span><h2>Retain &amp; Grow</h2><p>The cheapest revenue is the customer you already earned.</p></div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">16</span><h3>Maintenance-Plan Renewal Automation</h3></div>
+    <p>AI tracks agreement customers, schedules seasonal tune-ups, and sends renewal reminders before plans lapse.</p>
+    <div class="roi"><b>Profit impact:</b> Recovers 15–25% of memberships that would quietly lapse — the highest-ROI retention workflow in home services.</div>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Write a maintenance-plan renewal sequence for [TRADE]: reminder 30 days out,
+reminder at expiry, and a win-back 30 days after lapse. Emphasize priority
+service + savings. SMS + email.</div>
+  </div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">17</span><h3>Customer Win-Back Campaign</h3></div>
+    <p>AI mines your CRM for customers not seen in 12–24 months and sends personalized, service-history-aware outreach with an incentive.</p>
+    <div class="roi"><b>Profit impact:</b> Recovers 8–15% of lapsed customers — revenue from people you already paid to acquire.</div>
+    <span class="lbl">How to set it up</span>
+    <ol class="steps"><li>Export "no contact in 12+ months" from your CRM.</li><li>Segment by last service type; match a seasonal reason to reach out.</li><li>Send a 2-message sequence with a loyalty offer; track bookings.</li></ol>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Write a win-back message for a [TRADE] customer whose last service was
+[SERVICE] about [N] months ago. Personalize to that service, suggest the
+seasonally-relevant next step, include a returning-customer offer. Text + email.</div>
+  </div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">18</span><h3>Seasonal Service Reminders</h3></div>
+    <p>Automatic reminders timed to the season and each customer's equipment/service (spring AC tune-up, fall furnace check, gutter season).</p>
+    <div class="roi"><b>Profit impact:</b> Smooths demand, fills slow weeks, and books recurring work without lifting a finger.</div>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Create a 12-month seasonal reminder calendar for [TRADE] in [REGION], with a
+short SMS for each seasonal service and the ideal send window.</div>
+  </div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">19</span><h3>Membership / Upsell on Every Job</h3></div>
+    <p>AI (voice agent or follow-up) pitches the maintenance membership or a relevant add-on on every service interaction.</p>
+    <div class="roi"><b>Profit impact:</b> Recurring-plan attach rates rise to 25–40% (vs. 10–15% without) — the single biggest lever for turning one-off calls into recurring revenue.</div>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Write a natural membership pitch for [TRADE] to use at the end of every job:
+the one-line offer, the top 3 benefits, price framing, and a soft close.
+Give a version for the voice agent and one for a follow-up text.</div>
+  </div>
+
+  <!-- ============ SECTION 6 ============ -->
+  <div class="band"><span class="n">06</span><h2>Market</h2><p>Feed your SEO and brand without hiring an agency retainer.</p></div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">20</span><h3>Local SEO Content Generation</h3></div>
+    <p>AI turns a rough voice memo from an interesting job into a 600-word service/blog page that answers a real customer question and ranks locally.</p>
+    <div class="roi"><b>Profit impact:</b> Compounding organic leads; your knowledge + AI's speed is where content ROI is real (thin AI spam is not).</div>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Turn this voice memo into a 600-word local service page for [COMPANY]
+([TRADE], [CITY]). Answer the customer's real question, include the service +
+city naturally 3–4 times, add an FAQ and a CTA. Keep our plain, no-BS voice.
+Memo: [PASTE].</div>
+  </div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">21</span><h3>Social Media Posts from Job Photos</h3></div>
+    <p>Feed AI a before/after photo and a sentence; it writes the caption, hashtags, and a week of posts.</p>
+    <div class="roi"><b>Profit impact:</b> Keeps you top-of-mind for referrals and repeat work at near-zero cost.</div>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Write 5 social posts for [COMPANY] ([TRADE], [CITY]) from these job photos
+[DESCRIBE]. Each: a hook, the value to a homeowner, and a light CTA. Add
+local hashtags. Confident, friendly, not corporate.</div>
+  </div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">22</span><h3>Email Newsletter Automation</h3></div>
+    <p>AI drafts a monthly newsletter (a tip, a featured job, a seasonal offer) and schedules it to your customer list.</p>
+    <div class="roi"><b>Profit impact:</b> Email returns roughly $36 per $1; the cheapest way to drive repeat work off a list you already own.</div>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Write this month's newsletter for [COMPANY] ([TRADE]): a seasonal homeowner
+tip, a short featured-job story, and one clear offer with a booking link.
+Subject line + preview text + 250-word body.</div>
+  </div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">23</span><h3>Ad Copy &amp; Creative</h3></div>
+    <p>AI generates Google/Meta ad headlines, descriptions, and variations to test, tuned to your services and offers.</p>
+    <div class="roi"><b>Profit impact:</b> More tested variations = lower cost per lead; faster iteration than a manual agency cycle.</div>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Write 5 Google Search ad variations (15 headlines + 4 descriptions each) for
+[COMPANY] ([TRADE], [CITY]) targeting "[KEYWORD]". Emphasize [OFFER], free
+estimates, and local + licensed. Follow Google character limits.</div>
+  </div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">24</span><h3>Before/After Image Cleanup</h3></div>
+    <p>AI tools tidy and standardize job photos (crop, lighting, labels) so before/afters look pro on your site, ads, and estimates.</p>
+    <div class="roi"><b>Profit impact:</b> Clean before/after visuals measurably raise close rates on estimates and ads.</div>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Suggest a simple, repeatable phone-photo standard for my crew (angle,
+lighting, framing) for [TRADE] before/after shots, plus captions that sell
+the transformation.</div>
+  </div>
+
+  <!-- ============ SECTION 7 ============ -->
+  <div class="band"><span class="n">07</span><h2>Back-Office</h2><p>Stop paying skilled people to do paperwork.</p></div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">25</span><h3>Invoicing &amp; Payment Chasing</h3></div>
+    <p>AI generates invoices from job data, sends them, and follows up on overdue accounts automatically.</p>
+    <div class="roi"><b>Profit impact:</b> Cuts average collection time by 5–10 days and saves 3–5 hours/week; better cash flow with no awkward calls.</div>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Write a polite but firm payment-reminder sequence for [TRADE] invoices:
+at due date, +7 days, +14 days. Keep the relationship warm, make paying
+one click, and state next steps clearly. SMS + email.</div>
+  </div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">26</span><h3>Job-Note &amp; Call Summaries</h3></div>
+    <p>AI transcribes and summarizes every call and turns a tech's voice memo into clean job notes written to the CRM — no manual data entry.</p>
+    <div class="roi"><b>Profit impact:</b> Kills typos and missing details, saves office hours, and gives the next tech full context before arrival.</div>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Summarize this job voice memo into structured notes for our CRM: customer,
+address, work performed, parts used, follow-up needed, and upsell noticed.
+Memo: [PASTE].</div>
+  </div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">27</span><h3>Bookkeeping Categorization</h3></div>
+    <p>AI categorizes expenses and receipts and flags anomalies, feeding clean data to your accountant.</p>
+    <div class="roi"><b>Profit impact:</b> Owners using AI report saving 20+ hours/month and $500–$2,000/month in operating costs.</div>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Given this list of transactions [PASTE], categorize each into standard
+[TRADE] business expense categories, flag anything unusual, and total by
+category for the month.</div>
+  </div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">28</span><h3>Hiring / Recruiting Screener</h3></div>
+    <p>AI screens applicants, asks first-round qualifying questions, and schedules interviews for the ones who fit.</p>
+    <div class="roi"><b>Profit impact:</b> Saves hours of screening and speeds hiring during peak season when a missing tech = missed jobs.</div>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Write a first-round screening questionnaire for a [ROLE] at a [TRADE]
+company: must-have licenses/experience, availability, and 3 scenario
+questions. Provide a simple pass/fail scoring guide.</div>
+  </div>
+
+  <!-- ============ SECTION 8 ============ -->
+  <div class="band"><span class="n">08</span><h2>Dispatch &amp; Ops</h2><p>More jobs per truck, per day, with less windshield time.</p></div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">29</span><h3>Smart Routing &amp; Scheduling</h3></div>
+    <p>AI sequences the day's jobs by location, priority, and real-time tech position to cut drive time and fit more calls in.</p>
+    <div class="roi"><b>Profit impact:</b> Fewer wasted miles = more billable jobs/day; GPS-fed routing typically returns 10–20× its cost within a quarter.</div>
+    <span class="lbl">How to set it up</span>
+    <ol class="steps"><li>Use route optimization inside ServiceTitan/Housecall Pro or a routing add-on.</li><li>Add GPS tracking ($30–60/truck/month) so routing uses real locations.</li><li>Let AI re-sequence when a job runs long/short.</li></ol>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">Given today's [N] jobs with these addresses, time windows, and priorities
+[PASTE], propose an optimized route order per tech that minimizes drive time
+and honors emergencies first. Explain the sequence briefly.</div>
+  </div>
+
+  <div class="auto">
+    <div class="auto-head"><span class="num">30</span><h3>Predictive Inventory &amp; Reorder</h3></div>
+    <p>AI tracks truck stock and usage patterns, then flags or auto-generates reorders before a tech runs out mid-job.</p>
+    <div class="roi"><b>Profit impact:</b> Fewer return trips and no-parts delays; every avoided second trip is recovered labor and a happier customer.</div>
+    <span class="lbl">Prompt</span>
+    <div class="prompt">From this parts-usage history [PASTE], predict which items I'll need to
+reorder in the next 2 weeks for a [TRADE] operation with [N] trucks, and set
+sensible par levels for each.</div>
+  </div>
+
+  <!-- CLOSE -->
+  <h2 class="blk" style="break-before:page">Your 30/60/90-day rollout</h2>
+  <p>Don't boil the ocean. The operators who win add one automation, prove it, then layer the next.</p>
+  <table class="tools"><tr><th>Window</th><th>Focus</th><th>Build</th></tr>
+    <tr><td><b>Days 1–30 (Crawl)</b></td><td>Stop the biggest leak</td><td>#1 AI receptionist or #2 missed-call text-back, plus #13 post-job review requests. Measure booked jobs vs. spend.</td></tr>
+    <tr><td><b>Days 31–60 (Walk)</b></td><td>Convert &amp; retain</td><td>Add #3 speed-to-lead, #10 unsold-estimate follow-up, #16 maintenance renewals. Tune scripts from real call recordings.</td></tr>
+    <tr><td><b>Days 61–90 (Run)</b></td><td>Market &amp; scale</td><td>Add #20 SEO content, #14 review responses, #17 win-back. Connect everything into one CRM dashboard and report ROI per workflow.</td></tr>
+  </table>
+  <p style="margin-top:10px">By day 90, most home-services companies are booking 30–50% more jobs per month and converting 2–3× more one-off calls into recurring revenue — with the voice agent and membership pitch alone usually paying for the entire stack in week one.</p>
+
+  <hr>
+  <h3 style="color:var(--navy)">Two guardrails before you flip anything on</h3>
+  <ul class="plain">
+    <li><b>Consent &amp; compliance:</b> outbound AI calls/texts need prior express written consent (TCPA); every text needs opt-in/STOP language. Reputable tools handle this — confirm it.</li>
+    <li><b>Data &amp; licensing:</b> ask any vendor where your customer data is stored, who can see it, and whether it's shared. And never let an AI commit to work outside your license scope.</li>
+  </ul>
+
+  <p style="margin-top:14px"><b>Want this done for you?</b> Toughjobs sets up and runs these automations for trades businesses across the Midwest. Start with the leak that's costing you the most. Call <a href="tel:3099289080">(309) 928-9080</a>.</p>
+
+  <p class="note" style="margin-top:16px">Sources: ServiceTitan; Housecall Pro; U.S. Chamber of Commerce; NextPhone; OnceHub/Z360; ASP Branding &amp; ACHR News; Glacier Lake Partners; Tested Media; Layer3 Labs; QuoteIQ; BrightLocal. Figures are industry aggregates cited for illustration and vary by market, trade, and execution. This report is guidance, not a guarantee of results.</p>
+
+</doc-page>
+<script src="doc-page.js"></script>
+</body>
+</html>

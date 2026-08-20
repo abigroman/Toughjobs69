@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Trade Challenge Leaderboard | Toughjobs</title>
+<link rel="canonical" href="https://toughjobs.org/free-tools.html" />
+<meta name="description" content="Top scores in the Toughjobs Trade Challenge. See who knows their trade best across the Midwest." />
+<meta name="robots" content="noindex, follow" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared-header.css" />
+<style>
+:root{--ink:#0A0F1C;--navy:#002768;--red:#C8262A;--white:#fff;--smoke:#8b93a7}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:"Archivo",sans-serif;background-color:#070b16;color:#fff;-webkit-font-smoothing:antialiased;min-height:100vh}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background-image:url('assets/partnership-schematics.webp');background-size:cover;background-position:center;background-repeat:no-repeat;pointer-events:none}
+.lb-wrap{max-width:820px;margin:0 auto;padding:48px 20px 90px}
+.lb-head{text-align:center;margin-bottom:34px}
+.lb-eyebrow{display:inline-block;font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:12px;color:var(--red);margin-bottom:12px}
+.lb-title{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:clamp(32px,7vw,56px);line-height:.98;margin:0 0 14px;color:var(--red)}
+.lb-sub{color:#c3cad8;font-size:16px;margin:0}
+.lb-filter{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:26px 0 30px}
+.lb-chip{background:#0f1626;border:1px solid rgba(255,255,255,.12);color:#c3cad8;border-radius:999px;padding:9px 16px;font-weight:700;font-size:13px;cursor:pointer;transition:all .12s ease}
+.lb-chip:hover{border-color:var(--red);color:#fff}
+.lb-chip.active{background:var(--red);border-color:var(--red);color:#fff}
+.lb-list{display:flex;flex-direction:column;gap:10px}
+.lb-row{display:grid;grid-template-columns:44px 46px 1fr auto;align-items:center;gap:14px;background:#0f1626;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px 20px}
+.lb-av{width:46px;height:46px;border-radius:50%;background:#131c30 center/cover no-repeat;display:flex;align-items:center;justify-content:center;font-size:24px;border:1px solid rgba(255,255,255,.12)}
+.lb-row.top1{border-color:#f5c518;background:#0f1626}
+.lb-row.top2{border-color:#c7ccd6}
+.lb-row.top3{border-color:#cd7f32}
+.lb-rank{font-family:"Archivo Black",sans-serif;font-size:24px;color:var(--smoke);text-align:center}
+.lb-row.top1 .lb-rank{color:#f5c518}.lb-row.top2 .lb-rank{color:#c7ccd6}.lb-row.top3 .lb-rank{color:#cd7f32}
+.lb-name{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:17px;line-height:1.1}
+.lb-meta{font-size:13px;color:var(--smoke);margin-top:3px}
+.lb-score{font-family:"Archivo Black",sans-serif;font-size:22px;color:var(--red);text-align:right}
+.lb-score small{display:block;font-family:"Archivo",sans-serif;font-weight:700;font-size:11px;color:var(--smoke);text-transform:uppercase;letter-spacing:.05em}
+.lb-empty{text-align:center;background:#0f1626;border:1px dashed rgba(255,255,255,.15);border-radius:16px;padding:50px 24px;color:#c3cad8}
+.lb-cta{text-align:center;margin-top:36px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.q-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--red);color:#fff;border:0;border-radius:12px;font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:16px;padding:16px 30px;cursor:pointer;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
+.q-btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(200,38,42,.4)}
+.lb-note{font-size:12px;color:#5b6478;max-width:520px;margin:22px auto 0;text-align:center;line-height:1.5}
+a{color:var(--red)}a:hover{color:#ff5a3c}
+</style>
+</head>
+<body>
+<div class="lb-wrap">
+  <div class="lb-head">
+    <span class="lb-eyebrow">🏆 Wall of Fame</span>
+    <h1 class="lb-title">Trade Challenge<br>Leaderboard</h1>
+    <p class="lb-sub">The sharpest tradespeople in the Midwest. Think you can top them?</p>
+  </div>
+  <div class="lb-filter" id="lb-filter"></div>
+  <div class="lb-list" id="lb-list"></div>
+  <div class="lb-cta">
+    <a class="q-btn" href="quiz-hub.html">Take the Challenge →</a>
+  </div>
+  <p class="lb-note">Once a free Firebase database is connected in <b>quiz-store.js</b>, scores post live and everyone sees the same board across all devices. Until then, scores are saved on this device (demo entries shown so the board never looks empty).</p>
+</div>
+<script src="trade-data.js"></script>
+<script src="quiz-store.js"></script>
+<script src="inject-header.js?v=20260802b"></script>
+<script>
+(function(){
+  var LB_KEY='tj-quiz-leaderboard';
+  function esc(s){return String(s||'').replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  var all=[];
+  var DEMO=[
+      {name:'Mike R.',city:'Peoria, IL',trade:'electricians',tradeName:'Electricians',avatar:'⚡',score:2840,correct:19},
+      {name:'Dana K.',city:'Davenport, IA',trade:'hvac',tradeName:'HVAC & Refrigeration',avatar:'🔧',score:2610,correct:18},
+      {name:'Luis T.',city:'Dubuque, IA',trade:'plumbing',tradeName:'Plumbing',avatar:'💧',score:2455,correct:17},
+      {name:'Sarah B.',city:'Moline, IL',trade:'roofing',tradeName:'Roofing Contractors',avatar:'🏠',score:2300,correct:16},
+      {name:'Tom W.',city:'Bettendorf, IA',trade:'landscaping',tradeName:'Landscaping & Lawn Care',avatar:'🌳',score:2115,correct:16}
+  ];
+  var trades=[];
+  var active='all';
+  var filter=document.getElementById('lb-filter');
+  function chip(id,label){ var b=document.createElement('button'); b.className='lb-chip'+(id===active?' active':''); b.textContent=label; b.onclick=function(){active=id;render();}; return b; }
+  function nameFor(slug){ var d=(window.TRADE_DATA||{})[slug]; return d?d.name:slug; }
+  function avatarHtml(e){ var a=e.avatar||'🔨'; if(typeof a==='string' && a.indexOf('data:')===0){ return '<div class="lb-av" style="background-image:url('+a+')"></div>'; } return '<div class="lb-av">'+esc(a)+'</div>'; }
+  function render(){
+    filter.innerHTML='';
+    filter.appendChild(chip('all','All Trades'));
+    trades.forEach(function(t){ filter.appendChild(chip(t,nameFor(t))); });
+    var rows=all.filter(function(e){return active==='all'||e.trade===active;}).sort(function(a,b){return b.score-a.score;}).slice(0,50);
+    var list=document.getElementById('lb-list');
+    if(!rows.length){ list.innerHTML='<div class="lb-empty">No scores yet for this trade. Be the first!</div>'; return; }
+    list.innerHTML=rows.map(function(e,i){
+      var cls=i===0?'top1':i===1?'top2':i===2?'top3':'';
+      var medal=i===0?'🥇':i===1?'🥈':i===2?'🥉':('#'+(i+1));
+      return '<div class="lb-row '+cls+'">'+
+        '<div class="lb-rank">'+medal+'</div>'+
+        avatarHtml(e)+
+        '<div><div class="lb-name">'+esc(e.name)+'</div><div class="lb-meta">'+esc(e.tradeName||nameFor(e.trade))+(e.city?' · '+esc(e.city):'')+'</div></div>'+
+        '<div class="lb-score">'+Number(e.score).toLocaleString()+'<small>'+e.correct+'/20 right</small></div>'+
+      '</div>';
+    }).join('');
+  }
+  (async function(){
+    var stored = window.QuizStore ? await window.QuizStore.getScores() : [];
+    all = (stored && stored.length) ? stored : DEMO;
+    trades=[]; all.forEach(function(e){ if(trades.indexOf(e.trade)<0) trades.push(e.trade); });
+    render();
+  })();
+})();
+</script>
+</body>
+</html>

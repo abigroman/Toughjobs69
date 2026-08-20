@@ -1,0 +1,892 @@
+[
+ {
+  "file": "accessibility-logo.png",
+  "ext": "PNG",
+  "category": "Brand / Logos"
+ },
+ {
+  "file": "architectural-drawing-transparent.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "auto-detailing-book-mockup.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "blueprint-background.webp",
+  "ext": "WEBP",
+  "category": "Backgrounds & Textures"
+ },
+ {
+  "file": "blueprint-bg-darker.png",
+  "ext": "PNG",
+  "category": "Backgrounds & Textures"
+ },
+ {
+  "file": "blueprint-bg-darker.webp",
+  "ext": "WEBP",
+  "category": "Backgrounds & Textures"
+ },
+ {
+  "file": "blueprint-master.webp",
+  "ext": "WEBP",
+  "category": "Backgrounds & Textures"
+ },
+ {
+  "file": "business-card-design.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "chainsaw-guy-e10592a5.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "clothing-apparel.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "commercial-plumber.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "customer-technician-conversation.webp",
+  "ext": "WEBP",
+  "category": "General"
+ },
+ {
+  "file": "customer-technician.webp",
+  "ext": "WEBP",
+  "category": "General"
+ },
+ {
+  "file": "door-hangers.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "electrician-hero.webp",
+  "ext": "WEBP",
+  "category": "General"
+ },
+ {
+  "file": "engineering-schematics.jpg",
+  "ext": "JPG",
+  "category": "Backgrounds & Textures"
+ },
+ {
+  "file": "erik-electrical-toughjobs.png",
+  "ext": "PNG",
+  "category": "Vehicle Wraps"
+ },
+ {
+  "file": "forest-background-green.webp",
+  "ext": "WEBP",
+  "category": "Backgrounds & Textures"
+ },
+ {
+  "file": "girl-saw.webp",
+  "ext": "WEBP",
+  "category": "General"
+ },
+ {
+  "file": "google-profile-optimization.webp",
+  "ext": "WEBP",
+  "category": "General"
+ },
+ {
+  "file": "google-search-plummers.webp",
+  "ext": "WEBP",
+  "category": "Insights / Blog"
+ },
+ {
+  "file": "insight-before-after.webp",
+  "ext": "WEBP",
+  "category": "Insights / Blog"
+ },
+ {
+  "file": "insight-field-guide.png",
+  "ext": "PNG",
+  "category": "Insights / Blog"
+ },
+ {
+  "file": "insight-load-time-chart.webp",
+  "ext": "WEBP",
+  "category": "Insights / Blog"
+ },
+ {
+  "file": "insight-playbook.png",
+  "ext": "PNG",
+  "category": "Insights / Blog"
+ },
+ {
+  "file": "insight-teardown.png",
+  "ext": "PNG",
+  "category": "Insights / Blog"
+ },
+ {
+  "file": "lawn-signs-examples.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "local-prominence.webp",
+  "ext": "WEBP",
+  "category": "General"
+ },
+ {
+  "file": "messy-tech.webp",
+  "ext": "WEBP",
+  "category": "Insights / Blog"
+ },
+ {
+  "file": "partnership-schematics.png",
+  "ext": "PNG",
+  "category": "Backgrounds & Textures"
+ },
+ {
+  "file": "phone-mockup.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "pools.webp",
+  "ext": "WEBP",
+  "category": "General"
+ },
+ {
+  "file": "powerline-electrician-bg.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "primer-cover-appliance-repair.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-auto-detailing.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-auto-repair.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-carpet-cleaning.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-concrete-paving.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-electricians.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-excavation.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-fence-installation.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-fencing.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-framing-drywall.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-general-contractors.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-handyman.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-hvac.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-janitorial.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-junk-removal.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-landscaping.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-locksmiths.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-masonry.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-painters.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-pest-control.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-plumbing.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-pools.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-pressure-washing.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-restoration.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-roofing.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-solar.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-towing.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer-cover-tree-service.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "primer3d-carpet-cleaning.png",
+  "ext": "PNG",
+  "category": "Primer Book Covers"
+ },
+ {
+  "file": "qr-code-toughjobs-contact.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "roofer-woman.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "seo-hero.webp",
+  "ext": "WEBP",
+  "category": "General"
+ },
+ {
+  "file": "sitelite-code.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "social-media-hero.webp",
+  "ext": "WEBP",
+  "category": "General"
+ },
+ {
+  "file": "solar-panel-installation.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "speed-gauge.webp",
+  "ext": "WEBP",
+  "category": "Insights / Blog"
+ },
+ {
+  "file": "stickers-decals.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "taco-truck-menu-1.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "taco-truck-menu-2.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "toughjobs-logo-2026.png",
+  "ext": "PNG",
+  "category": "Brand / Logos"
+ },
+ {
+  "file": "toughjobs-logo-alt.png",
+  "ext": "PNG",
+  "category": "Brand / Logos"
+ },
+ {
+  "file": "toughjobs-monogram-logo.png",
+  "ext": "PNG",
+  "category": "Brand / Logos"
+ },
+ {
+  "file": "toughjobs-office-meeting.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "toughjobs-office.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "toughjobs-truck-tech.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-appliance-repair.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-auto-detailing.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-auto-repair.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-carpet-cleaning.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-concrete-paving.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-electricians.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-excavation.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-fence-installation.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-fencing.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-framing-drywall.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-general-contractors.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-handyman.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-hvac.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-janitorial.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-junk-removal.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-landscaping.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-locksmiths.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-masonry.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-painters.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-pest-control.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-plumbing.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-pools.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-pressure-washing.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-restoration.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-roofing.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-solar.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-towing.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-book-mockup-tree-service.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "trade-hero-appliance-repair.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-appliance-repair.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-auto-detailing.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-auto-repair.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-auto-repair.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-carpet-cleaning.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-carpet-cleaning.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-concrete-paving.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-concrete-paving.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-electricians.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-electricians.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-excavation.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-excavation.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-fencing.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-fencing.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-framing-drywall.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-framing-drywall.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-general-contractors.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-general-contractors.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-handyman.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-handyman.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-hvac.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-hvac.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-janitorial.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-janitorial.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-junk-removal.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-junk-removal.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-landscaping.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-locksmiths.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-locksmiths.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-masonry.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-masonry.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-painters.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-painters.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-pest-control.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-pest-control.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-plumbing.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-plumbing.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-pools.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-pools.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-pressure-washing.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-pressure-washing.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-restoration.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-restoration.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-roofing.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-roofing.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-solar.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-solar.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-towing.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-towing.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-tree-service.png",
+  "ext": "PNG",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "trade-hero-tree-service.webp",
+  "ext": "WEBP",
+  "category": "Trade Hero Figures"
+ },
+ {
+  "file": "website-speed-improtance.webp",
+  "ext": "WEBP",
+  "category": "General"
+ },
+ {
+  "file": "websites-built-to-last.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "white-engineering-background.png",
+  "ext": "PNG",
+  "category": "Backgrounds & Textures"
+ },
+ {
+  "file": "white-engineering-background.webp",
+  "ext": "WEBP",
+  "category": "Backgrounds & Textures"
+ },
+ {
+  "file": "woman-drill-philosophy.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "woman-drill.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "woman-drill.webp",
+  "ext": "WEBP",
+  "category": "General"
+ },
+ {
+  "file": "woman-jackhammer-transparent.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "woman-mower.webp",
+  "ext": "WEBP",
+  "category": "General"
+ },
+ {
+  "file": "woman-power-drill.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "woman-trowel-fullbody.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "woman-trowel-transparent.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "woman-welder-2.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "woman-welder-hero.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "woman-welder.png",
+  "ext": "PNG",
+  "category": "General"
+ },
+ {
+  "file": "wrap-sedan-herbert.png",
+  "ext": "PNG",
+  "category": "Vehicle Wraps"
+ },
+ {
+  "file": "wrap-sedan-herbert.webp",
+  "ext": "WEBP",
+  "category": "Vehicle Wraps"
+ },
+ {
+  "file": "wrap-trailer-guacnroll.png",
+  "ext": "PNG",
+  "category": "Vehicle Wraps"
+ },
+ {
+  "file": "wrap-trailer-guacnroll.webp",
+  "ext": "WEBP",
+  "category": "Vehicle Wraps"
+ },
+ {
+  "file": "wrap-truck-erik.png",
+  "ext": "PNG",
+  "category": "Vehicle Wraps"
+ }
+]

@@ -1,0 +1,77 @@
+/* ── Page-Specific Backgrounds ──────────────────────────────────────── */
+
+/* Services Page */
+body[data-page="services"] {
+  background: url('assets/blueprint-background.webp') fixed center/cover no-repeat;
+  background-color: #001a4a;
+}
+
+/* About Page */
+body[data-page="about"] {
+  background: url('assets/blueprint-background.webp') fixed center/cover no-repeat;
+  background-color: #001a4a;
+}
+
+/* Contact Page */
+body[data-page="contact"] {
+  background: url('assets/white-engineering-background.webp') fixed center/cover no-repeat;
+  background-color: #FCFCFD;
+}
+
+/* Partnerships Page */
+body[data-page="partnerships"] {
+  background: url('assets/blueprint-background.webp') fixed center/cover no-repeat;
+  background-color: #001a4a;
+}
+
+/* Default */
+body {
+  background-color: #FCFCFD;
+}
+
+/* Hero sections with blueprint background */
+.bg-blueprint-dark {
+  background: linear-gradient(135deg, rgba(10,15,28,0.92) 0%, rgba(0,26,74,0.88) 100%);
+  position: relative;
+}
+
+.bg-blueprint-dark::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/blueprint-background.webp');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bg-blueprint-red {
+  background: #C8262A;
+  position: relative;
+}
+
+.bg-blueprint-light, .bg-white, .light-section, .on-light, .blurbs-section {
+  background-color: #f8f9fb;
+  background-image: url('assets/partnership-schematics-light.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.bg-blueprint-navy {
+  background: #002768;
+  position: relative;
+}
+
+/* Ensure content stays above backgrounds */
+.bg-blueprint-dark > * {
+  position: relative;
+  z-index: 1;
+}
+
+.bg-blueprint-navy > * {
+  position: relative;
+  z-index: 1;
+}

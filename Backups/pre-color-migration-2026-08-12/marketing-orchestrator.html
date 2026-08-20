@@ -1,0 +1,906 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Marketing Command Center — your custom marketing plan, built visually. Goal mapper, budget simulator, campaign builder, and business audit all in one tool." />
+<title>MARKETING COMMAND CENTER — Toughjobs | Your Plan, Made Visual</title>
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Toughjobs" />
+<meta name="publisher" content="ToughJobs Digital Marketing" />
+<link rel="canonical" href="https://toughjobs.org/marketing-orchestrator.html" />
+
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="service-page.css?v=20260729" />
+<link rel="stylesheet" href="shared-header.css" />
+<style id="header-logo-fix">header .logo-img { width: 150px; height: 100px; }</style>
+<style>
+  :root {
+    --ink: #0A0F1C;
+    --navy: #002768;
+    --red: #C8262A;
+    --red-dk: #A90100;
+    --green: #1F8A5B;
+    --smoke: #5B6471;
+    --line: #E4E7EC;
+    --white: #FFFFFF;
+    --container: 1240px;
+  }
+
+  /* ===== HERO ===== */
+  .mc-hero {
+    background: #0A0F1C;
+    color: #fff;
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mc-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(ellipse at 70% 30%, #000, transparent 75%);
+    pointer-events: none;
+  }
+
+  .mc-hero .wrap {
+    position: relative;
+    z-index: 1;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .mc-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    font-size: 12px;
+    color: var(--red);
+    margin-bottom: 12px;
+  }
+
+  .mc-eyebrow::before {
+    content: "04";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--red);
+    color: #fff;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 11px;
+    font-weight: 900;
+  }
+
+  .mc-hero h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: clamp(34px, 5vw, 64px);
+    line-height: .96;
+    margin: 0 0 18px;
+    max-width: 18ch;
+    text-transform: uppercase;
+    letter-spacing: -.01em;
+  }
+
+  .mc-hero h1 .r {
+    color: var(--red);
+  }
+
+  .mc-hero p.lede {
+    font-size: clamp(16px, 1.6vw, 19px);
+    line-height: 1.6;
+    color: rgba(255,255,255,.8);
+    max-width: 60ch;
+    margin: 0 0 26px;
+  }
+
+  /* ===== STEP NAV ===== */
+  .stepnav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .stepnav button {
+    appearance: none;
+    border: 1px solid rgba(255,255,255,.18);
+    background: rgba(255,255,255,.04);
+    color: rgba(255,255,255,.75);
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-size: 12px;
+    padding: 11px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: .15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .stepnav button .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.14);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 900;
+  }
+
+  .stepnav button:hover {
+    border-color: var(--red);
+    color: #fff;
+  }
+
+  .stepnav button.active {
+    background: var(--red);
+    border-color: var(--red);
+    color: #fff;
+  }
+
+  .stepnav button.active .dot {
+    background: #fff;
+    color: var(--red);
+  }
+
+  .stepnav button.done .dot {
+    background: var(--green);
+    color: #fff;
+  }
+
+  /* ===== STAGE ===== */
+  .stage {
+    background: #F4F5F7;
+    min-height: 70vh;
+    padding: 52px 0 80px;
+  }
+
+  .panel {
+    display: none;
+    animation: fade .3s ease;
+  }
+
+  .panel.on {
+    display: block;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .phead {
+    margin-bottom: 26px;
+  }
+
+  .phead .k {
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    font-size: 12px;
+    color: var(--red);
+  }
+
+  .phead h2 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: clamp(26px, 3.2vw, 40px);
+    line-height: 1;
+    color: var(--ink);
+    margin: 10px 0 10px;
+    text-transform: uppercase;
+    letter-spacing: -.01em;
+  }
+
+  .phead p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--smoke);
+    max-width: 70ch;
+    margin: 0;
+  }
+
+  .card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(10, 15, 28, .06);
+  }
+
+  .pad {
+    padding: clamp(24px, 3vw, 40px);
+  }
+
+  /* ===== FORM ELEMENTS ===== */
+  .qgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+
+  @media (max-width: 820px) {
+    .qgrid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .q label.qlab {
+    display: block;
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-size: 12.5px;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+
+  .q input[type="text"],
+  .q input[type="tel"],
+  .q select {
+    width: 100%;
+    font-family: "Archivo", sans-serif;
+    font-size: 15px;
+    padding: 13px 14px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--ink);
+  }
+
+  .q input:focus,
+  .q select:focus {
+    outline: none;
+    border-color: var(--red);
+    box-shadow: 0 0 0 3px rgba(200, 38, 42, .12);
+  }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+  }
+
+  .chip {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 13.5px;
+    padding: 10px 15px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--ink);
+    cursor: pointer;
+    transition: .14s;
+    user-select: none;
+    appearance: none;
+  }
+
+  .chip:hover {
+    border-color: var(--red);
+  }
+
+  .chip.sel {
+    background: var(--red);
+    border-color: var(--red);
+    color: #fff;
+  }
+
+  .budgets {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  @media (max-width: 820px) {
+    .budgets {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .budgets .chip {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 14px 10px;
+  }
+
+  .budgets .chip b {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+  }
+
+  .budgets .chip span {
+    font-size: 11px;
+    opacity: .7;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    font-weight: 700;
+  }
+
+  /* ===== BUTTONS ===== */
+  .btnrow {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+    align-items: center;
+  }
+
+  .mc-btn {
+    appearance: none;
+    border: 0;
+    cursor: pointer;
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    font-size: 14px;
+    padding: 15px 26px;
+    border-radius: 8px;
+    background: var(--red);
+    color: #fff;
+    transition: transform .15s, box-shadow .15s, background .15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    text-decoration: none;
+  }
+
+  .mc-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 rgba(10, 15, 28, .85);
+    background: var(--ink);
+    color: #fff;
+  }
+
+  .mc-btn.ghost {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--line);
+  }
+
+  .mc-btn.ghost:hover {
+    background: var(--ink);
+    color: #fff;
+    box-shadow: none;
+    transform: none;
+  }
+
+  .mc-btn:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  /* ===== SCORECARD ===== */
+  .scorecard {
+    background: linear-gradient(135deg, #0A0F1C 0%, #1a2847 100%);
+    color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+
+  .score-number {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .score-label {
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-size: 14px;
+    opacity: .8;
+    margin-bottom: 16px;
+  }
+
+  .score-text {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 55ch;
+  }
+
+  .improvements {
+    background: rgba(200, 38, 42, .15);
+    border-left: 3px solid var(--red);
+    padding: 16px;
+    border-radius: 6px;
+    margin-top: 16px;
+  }
+
+  .improvements h4 {
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-size: 12px;
+    margin: 0 0 10px;
+    color: var(--red);
+  }
+
+  .improvements ol {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .improvements li {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+
+  .improvements li:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ===== EXPORT ===== */
+  .export-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--ink);
+    color: #fff;
+    padding: 60px 0 40px;
+    margin-top: 80px;
+  }
+
+  footer .wrap {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+  }
+
+  @media (max-width: 960px) {
+    footer .wrap {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  footer h3 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    margin: 0 0 16px;
+    color: var(--red);
+  }
+
+  footer a {
+    display: block;
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, .75);
+    transition: color .15s;
+  }
+
+  footer a:hover {
+    color: var(--red);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    margin-top: 40px;
+    padding-top: 24px;
+    text-align: center;
+    font-size: 13px;
+    color: rgba(255, 255, 255, .6);
+  }
+</style>
+</head>
+<body>
+<script src="inject-header.js?v=20260802b" defer></script>
+<script src="leads-store.js"></script>
+<script src="email-gate.js"></script>
+
+<!-- HERO -->
+<section class="mc-hero">
+  <div class="wrap">
+    <div class="mc-eyebrow">Free Marketing Tool</div>
+    <h1>Your <span class="r">Marketing</span> Plan, Made Visual</h1>
+    <p class="lede">Goal mapper. Budget simulator. Campaign builder. Business audit. All in one interactive tool — no login, no credit card.</p>
+    <div class="stepnav">
+      <button class="step-btn active" data-step="0"><span class="dot">1</span> Your Business</button>
+      <button class="step-btn" data-step="1"><span class="dot">2</span> Your Goal</button>
+      <button class="step-btn" data-step="2"><span class="dot">3</span> Your Budget</button>
+      <button class="step-btn" data-step="3"><span class="dot">4</span> Your Plan</button>
+      <button class="step-btn" data-step="4"><span class="dot">5</span> Your Score</button>
+    </div>
+  </div>
+</section>
+
+<!-- STAGE -->
+<section class="stage">
+  <div class="wrap">
+    <!-- PANEL 0: BUSINESS INFO -->
+    <div class="panel on" data-panel="0">
+      <div class="card">
+        <div class="pad">
+          <div class="phead">
+            <div class="k">Step 1 of 5</div>
+            <h2>Tell us about your business</h2>
+            <p>We'll use this to recommend the right marketing mix for you.</p>
+          </div>
+          <div class="qgrid">
+            <div class="q">
+              <label class="qlab" for="trade">Trade or service</label>
+              <select id="trade">
+                <option value="">Select one...</option>
+                <option value="electrician">Electrician</option>
+                <option value="hvac">HVAC</option>
+                <option value="plumbing">Plumbing</option>
+                <option value="roofing">Roofing</option>
+                <option value="landscaping">Landscaping</option>
+                <option value="painting">Painting</option>
+                <option value="general-contractor">General Contractor</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="q">
+              <label class="qlab" for="area">Service area (ZIP or city)</label>
+              <input type="text" id="area" placeholder="e.g. 61350 or Quad Cities" />
+            </div>
+            <div class="q">
+              <label class="qlab" for="revenue">Monthly revenue (approx)</label>
+              <select id="revenue">
+                <option value="">Select one...</option>
+                <option value="under-5k">Under $5k</option>
+                <option value="5k-25k">$5k–$25k</option>
+                <option value="25k-100k">$25k–$100k</option>
+                <option value="100k-plus">$100k+</option>
+              </select>
+            </div>
+            <div class="q">
+              <label class="qlab" for="customers">Current customers (approx)</label>
+              <input type="text" id="customers" placeholder="e.g. 10, 50, 200" />
+            </div>
+          </div>
+          <div class="btnrow">
+            <button class="mc-btn" onclick="goToPanel(1)">Next: Your Goal →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANEL 1: GOAL SELECTION -->
+    <div class="panel" data-panel="1">
+      <div class="card">
+        <div class="pad">
+          <div class="phead">
+            <div class="k">Step 2 of 5</div>
+            <h2>What's your main goal?</h2>
+            <p>Different goals need different tactics. We'll recommend a mix tailored to yours.</p>
+          </div>
+          <div class="chips" id="goals">
+            <button class="chip" data-goal="awareness">Build Awareness</button>
+            <button class="chip" data-goal="capture">Capture More Leads</button>
+            <button class="chip" data-goal="conversion">Boost Conversions</button>
+            <button class="chip" data-goal="retention">Grow Repeat Business</button>
+            <button class="chip" data-goal="reputation">Improve Reputation</button>
+            <button class="chip" data-goal="all">Do It All</button>
+          </div>
+          <div class="btnrow">
+            <button class="mc-btn ghost" onclick="goToPanel(0)">← Back</button>
+            <button class="mc-btn" id="goalBtn" disabled>Next: Your Budget →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANEL 2: BUDGET -->
+    <div class="panel" data-panel="2">
+      <div class="card">
+        <div class="pad">
+          <div class="phead">
+            <div class="k">Step 3 of 5</div>
+            <h2>Monthly marketing budget</h2>
+            <p>This helps us forecast realistic results (leads, calls, jobs).</p>
+          </div>
+          <div class="budgets" id="budgets">
+            <button class="chip" data-budget="500"><b>$500</b><span>Starter</span></button>
+            <button class="chip" data-budget="1500"><b>$1,500</b><span>Growth</span></button>
+            <button class="chip" data-budget="3000"><b>$3,000</b><span>Scale</span></button>
+            <button class="chip" data-budget="5000"><b>$5,000+</b><span>Aggressive</span></button>
+          </div>
+          <div class="btnrow">
+            <button class="mc-btn ghost" onclick="goToPanel(1)">← Back</button>
+            <button class="mc-btn" id="budgetBtn" disabled>Next: Your Plan →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANEL 3: PLAN / RECOMMENDATIONS -->
+    <div class="panel" data-panel="3">
+      <div class="card">
+        <div class="pad">
+          <div class="phead">
+            <div class="k">Step 4 of 5</div>
+            <h2>Your recommended mix</h2>
+            <p>Based on your business, goal, and budget—here's what we'd build for you.</p>
+          </div>
+          <div id="recommendations" style="margin-top: 24px;"></div>
+          <div class="btnrow">
+            <button class="mc-btn ghost" onclick="goToPanel(2)">← Back</button>
+            <button class="mc-btn" onclick="goToPanel(4)">Next: Your Score →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANEL 4: SCORECARD -->
+    <div class="panel" data-panel="4">
+      <div class="card">
+        <div class="pad">
+          <div class="phead">
+            <div class="k">Step 5 of 5</div>
+            <h2>Your marketing readiness score</h2>
+            <p>How ready you are to execute your recommended plan.</p>
+          </div>
+          <div class="scorecard">
+            <div class="score-number" id="scoreNum">72</div>
+            <div class="score-label">Marketing Readiness</div>
+            <div class="score-text" id="scoreText">You're ready to start capturing more leads. Your business has strong fundamentals and clear goals—now it's time to execute.</div>
+            <div class="improvements">
+              <h4>Top 3 improvements to support faster growth:</h4>
+              <ol id="scoreList">
+                <li>Claim and optimize your Google Business Profile</li>
+                <li>Set up conversion tracking on your website</li>
+                <li>Create a simple lead follow-up system</li>
+              </ol>
+            </div>
+          </div>
+          <div class="export-row">
+            <button class="mc-btn" onclick="exportPDF()">📋 Export as PDF</button>
+            <button class="mc-btn ghost" onclick="sharePlan()">🔗 Share This Plan</button>
+            <a href="contact.html" class="mc-btn">📞 Talk to a Strategist</a>
+          </div>
+          <div class="btnrow">
+            <button class="mc-btn ghost" onclick="goToPanel(3)">← Back</button>
+            <button class="mc-btn ghost" onclick="resetTool()">Start Over</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section data-screen-label="Our Endeavors" class="gb-section" style="background:#ECEFF4;background-image:url('assets/white-engineering-background.webp');background-size:cover;background-position:center;padding:56px 32px;position:relative;overflow:hidden;box-shadow:inset 0 2px 2px rgba(0,0,0,.45), inset 0 -2px 2px rgba(0,0,0,.45);">
+    <div style="max-width:1240px;margin:0 auto;position:relative;z-index:1;">
+      <div class="gb-outer" style="display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center;">
+        <div>
+          <div style="margin-bottom:24px;">
+            <span style="font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:#C8262A;">More than marketing</span>
+            <h2 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(32px,3.6vw,50px);line-height:1.02;color:#0A0F1C;margin:12px 0 0;"><span style="color:#C8262A;">Two ways we</span> give back</h2>
+          </div>
+          <div class="gb-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch;">
+            <div class="gb-card" style="background:#002768;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;">
+              <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700;">01 / PARTNERSHIP</span>
+              <h3 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05;">Go independent, backed by us</h3>
+              <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 28px;">You bring the truck, tools, and skill. We hand you the website, brand, systems, and marketing to turn one truck into a real company.</p>
+              <a href="partnerships.html" style="display:inline-block;background:#C8262A;color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none;">Explore Partnership</a>
+            </div>
+            <div class="gb-card" style="background:#0A0F1C;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;">
+              <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700;">02 / HELPING HANDS</span>
+              <h3 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05;">A hand up when budget is tight</h3>
+              <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.8);margin:0 0 28px;">One day a week we help people with more grit than budget get a business off the ground — honest guidance, real direction, no pressure.</p>
+              <a href="helping-hands.html" style="display:inline-block;background:#C8262A;color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none;">Explore Helping Hands</a>
+            </div>
+          </div>
+        </div>
+        <div class="gb-img" style="position:relative;height:100%;min-height:420px;">
+          <img src="assets/trade-hero-excavation.webp" alt="Toughjobs tradesman on the job" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:top center;" />
+        </div>
+      </div>
+    </div>
+    <style>@media(max-width:900px){ .gb-outer{ grid-template-columns:1fr !important; } .gb-grid{ grid-template-columns:1fr !important; } .gb-img{ min-height:280px !important; order:-1; } }</style>
+  </section>
+
+<footer style="position:relative;overflow:hidden;background:linear-gradient(135deg,#001a4a 0%,#002768 100%);color:var(--white);border-top:3px solid var(--accent)">
+  <style>
+    @keyframes tickerScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    .footer-video-bg{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.6;z-index:0}
+    .footer-content{position:relative;z-index:1}
+    .footer-ticker{display:flex;gap:0;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.3);padding:20px 0;margin:0 calc(-50vw + 50%);padding-left:calc(50vw - 50%);padding-right:calc(50vw - 50%)}
+    .ticker-track{display:flex;gap:60px;white-space:nowrap;animation:tickerScroll 60s linear infinite}
+    .ticker-item{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:14px;letter-spacing:.02em;color:var(--accent);font-weight:900;flex-shrink:0}
+    .ticker-item::after{content:"●";margin-left:60px;color:rgba(255,255,255,.3);font-size:6px}
+    .footer-main{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;padding:60px 0;margin-bottom:0}
+    .footer-section h3{font-family:"Archivo Black",sans-serif;font-size:18px;text-transform:uppercase;letter-spacing:-.01em;margin:0 0 24px;font-weight:900;display:flex;align-items:center;gap:12px}
+    .footer-section h3 img{width:100%;max-width:600px;height:auto;object-fit:contain;display:block}
+    .footer-section h4{font-family:"Archivo",sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:var(--accent);margin:0 0 16px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.15)}
+    .footer-section ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
+    .footer-section a{color:rgba(255,255,255,.75);text-decoration:none;font-size:14px;font-weight:500;transition:all .2s ease;display:inline-block}
+    .footer-section a:hover{color:var(--accent)}
+    .footer-brand p{font-size:14px;line-height:1.6;color:rgba(255,255,255,.7);margin:0}
+    .footer-bottom{display:flex;justify-content:center;align-items:center;padding:24px 0;border-top:1px solid rgba(255,255,255,.1);gap:32px;flex-wrap:wrap;text-align:center}
+    .footer-bottom-copy{font-size:12px;color:rgba(255,255,255,.55)}
+    .footer-contact{display:flex;align-items:center;justify-content:center;gap:20px}
+    .footer-phone{text-align:center}
+    .footer-phone-label{font-family:"Archivo",sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:rgba(255,255,255,.6);margin-bottom:4px}
+    .footer-phone-number{font-family:"Archivo Black",sans-serif;font-size:22px;font-weight:900;color:var(--accent);text-decoration:none;letter-spacing:-.01em;transition:all .2s ease}
+    .footer-phone-number:hover{transform:scale(1.05)}
+    @media(max-width:1024px){.footer-main{grid-template-columns:1fr 1fr;gap:40px}}
+    @media(max-width:768px){.footer-main{grid-template-columns:1fr;gap:40px}.footer-bottom{flex-direction:column;align-items:center}}
+  </style>
+  <video class="footer-video-bg" muted loop playsinline preload="none" data-play-when-near><source src="assets/construction-workers.mp4" type="video/mp4" /></video>
+  <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(0,26,74,.88) 0%,rgba(0,39,104,.84) 100%);z-index:0"></div>
+  <div class="footer-content">
+    <div class="footer-ticker"><div class="ticker-track">
+      <span class="ticker-item">HVAC</span><span class="ticker-item">PLUMBING</span><span class="ticker-item">ELECTRICAL</span><span class="ticker-item">MASONRY</span><span class="ticker-item">ROOFING</span><span class="ticker-item">JANITORIAL</span><span class="ticker-item">CARPET CLEANING</span><span class="ticker-item">PAINTING</span><span class="ticker-item">CONCRETE</span><span class="ticker-item">LANDSCAPING</span><span class="ticker-item">WELDING</span><span class="ticker-item">EXCAVATION</span><span class="ticker-item">HVAC</span><span class="ticker-item">PLUMBING</span><span class="ticker-item">ELECTRICAL</span><span class="ticker-item">MASONRY</span><span class="ticker-item">ROOFING</span><span class="ticker-item">JANITORIAL</span>
+    </div></div>
+    <div class="wrap">
+      <div class="footer-main">
+        <div class="footer-section footer-brand">
+          <h3><img src="assets/toughjobs-monogram-logo.webp" alt="Toughjobs" loading="lazy" decoding="async" /></h3>
+          <p>Marketing &amp; branding solutions built for the trades. We help service businesses get found, win jobs, and grow their revenue through integrated digital strategies.</p>
+        </div>
+        <div class="footer-section"><h4>Company</h4><ul><li><a href="about.html">Our story</a></li><li><a href="index.html#services">Services</a></li><li><a href="partnerships.html">Partnerships</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-section"><h4>Resources</h4><ul><li><a href="free-tools.html">Free Tools</a></li><li><a href="index.html#field-notes">Blog</a></li><li><a href="website-examples.html">Case Studies</a></li></ul></div>
+        <div class="footer-section"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="sitemap.html">Sitemap</a></li><li><a href="citations.html">Citations</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-copy">© 2026 Toughjobs Digital Marketing · 140 Oakmoor Dr, East Peoria, IL 61611</div>
+        <div class="footer-contact"><div class="footer-phone"><div class="footer-phone-label">Call us</div><a href="tel:3099289080" class="footer-phone-number">(309) 928-9080</a></div></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="deferred-media.js" defer></script>
+<script src="accessibility.js?v=20260729" defer></script>
+<script src="cookie-consent.js"></script>
+<script src="chat-launcher.js?v=20260729"></script>
+
+<script src="accessibility.js?v=20260729" defer></script>
+<script src="cookie-consent.js"></script>
+<script src="chat-launcher.js?v=20260729"></script>
+<script>
+  let state = {
+    trade: '',
+    area: '',
+    revenue: '',
+    customers: '',
+    goal: '',
+    budget: ''
+  };
+
+  const stepBtns = document.querySelectorAll('.step-btn');
+  const panels = document.querySelectorAll('.panel');
+  const goalChips = document.querySelectorAll('[data-goal]');
+  const budgetChips = document.querySelectorAll('[data-budget]');
+
+  // Goal selection
+  goalChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      goalChips.forEach(c => c.classList.remove('sel'));
+      chip.classList.add('sel');
+      state.goal = chip.dataset.goal;
+      document.getElementById('goalBtn').disabled = false;
+    });
+  });
+
+  // Budget selection
+  budgetChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      budgetChips.forEach(c => c.classList.remove('sel'));
+      chip.classList.add('sel');
+      state.budget = chip.dataset.budget;
+      document.getElementById('budgetBtn').disabled = false;
+      renderRecommendations();
+    });
+  });
+
+  function goToPanel(n) {
+    panels.forEach((p, i) => {
+      p.classList.toggle('on', i === n);
+    });
+    stepBtns.forEach((b, i) => {
+      b.classList.remove('active', 'done');
+      if (i < n) b.classList.add('done');
+      if (i === n) b.classList.add('active');
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function renderRecommendations() {
+    const recs = {
+      'awareness|500': ['Local SEO (GBP optimization)', 'Social media presence'],
+      'awareness|1500': ['Local SEO + content', 'Social ads targeting locals'],
+      'awareness|3000': ['Local SEO + blog content', 'Social + paid search ads'],
+      'capture|500': ['Lead form optimization', 'Google Local Services Ads'],
+      'capture|1500': ['Retargeting ads + LSA', 'Email lead follow-up'],
+      'capture|3000': ['Full funnel retargeting', 'Qualified lead ads'],
+      'conversion|500': ['Website speed audit', 'CTA optimization'],
+      'conversion|1500': ['A/B testing + analytics', 'Lead scoring'],
+      'conversion|3000': ['Advanced analytics + CRM', 'Sales process optimization'],
+      'retention|500': ['Review management', 'Email nurture sequence'],
+      'retention|1500': ['Loyalty program + email', 'Customer referral tracking'],
+      'retention|3000': ['Full retention funnel', 'Advanced CRM + automation'],
+      'reputation|500': ['Review monitoring', 'Reputation management basics'],
+      'reputation|1500': ['Active review generation', 'Reputation monitoring'],
+      'reputation|3000': ['Full reputation system', 'Proactive review strategy'],
+      'all|3000': ['Integrated growth plan', 'All channels coordinated'],
+      'all|5000': ['Full-stack marketing system', 'Data-driven optimization']
+    };
+
+    const key = `${state.goal}|${state.budget}`;
+    const items = recs[key] || recs['awareness|1500'];
+
+    let html = '<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">';
+    items.forEach(item => {
+      html += `<div class="card" style="padding: 20px; background: linear-gradient(135deg, rgba(200,38,42,.08), rgba(31,138,91,.04));">
+        <div style="font-weight: 800; font-size: 14px; color: var(--red); text-transform: uppercase; margin-bottom: 6px;">✓</div>
+        <div style="font-weight: 700; font-size: 15px; color: var(--ink);">${item}</div>
+      </div>`;
+    });
+    html += '</div>';
+    document.getElementById('recommendations').innerHTML = html;
+  }
+
+  function exportPDF() {
+    alert('Export to PDF will download your custom plan (coming soon). For now, take a screenshot or contact us to send you a branded PDF.');
+  }
+
+  function sharePlan() {
+    const url = window.location.href + '?plan=' + btoa(JSON.stringify(state));
+    navigator.clipboard.writeText(url);
+    alert('Plan link copied! Share it with your team.');
+  }
+
+  function resetTool() {
+    state = { trade: '', area: '', revenue: '', customers: '', goal: '', budget: '' };
+    goalChips.forEach(c => c.classList.remove('sel'));
+    budgetChips.forEach(c => c.classList.remove('sel'));
+    document.getElementById('goalBtn').disabled = true;
+    document.getElementById('budgetBtn').disabled = true;
+    goToPanel(0);
+  }
+</script>
+<script src="image-finder-tab.js"></script>
+<script src="back-cta.js"></script>
+</body>
+</html>

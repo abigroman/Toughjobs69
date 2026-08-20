@@ -1,4 +1,4 @@
-﻿/* ── Page-Specific Backgrounds ──────────────────────────────────────── */
+/* ── Page-Specific Backgrounds ──────────────────────────────────────── */
 
 /* Services Page */
 body[data-page="services"] {
@@ -14,7 +14,7 @@ body[data-page="about"] {
 
 /* Contact Page */
 body[data-page="contact"] {
-  background: url('assets/white-engineering-background.webp') fixed center/cover no-repeat;
+  background: url('assets/white-engineering-background.png') fixed center/cover no-repeat;
   background-color: #FCFCFD;
 }
 
@@ -61,7 +61,7 @@ body {
 }
 
 .bg-blueprint-navy {
-  background: #081B33;
+  background: #002768;
   position: relative;
 }
 

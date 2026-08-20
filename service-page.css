@@ -1,4 +1,4 @@
-﻿/* service-page.css — shared rich layout + animations for Toughjobs service pages */
+/* service-page.css — shared rich layout + animations for Toughjobs service pages */
 
 /* ── Section scaffolding ─────────────────────────────────────────────── */
 .sp section{padding:clamp(72px,9vw,128px) 0;position:relative;overflow:hidden}
@@ -13,6 +13,14 @@ header .container{padding:0}
 .sp .tex{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.5}
 .sp .tex-dots{background-image:radial-gradient(rgba(255,255,255,.10) 1.4px,transparent 1.4px);background-size:22px 22px}
 .sp .tex-dots-d{background-image:radial-gradient(rgba(10,15,28,.10) 1.4px,transparent 1.4px);background-size:22px 22px}
+
+/* ── Head row with optional fist-logo accent (canonical, from print-collateral.html) ── */
+.sp .pc-headrow{display:flex;align-items:center;gap:clamp(16px,2vw,32px);margin-bottom:34px}
+.sp .pc-headrow>.head{flex:0 1 auto;min-width:0;margin-bottom:0}
+.sp .pc-logo-slot{flex:1 1 auto;display:flex;align-items:flex-start;justify-content:center;align-self:flex-start}
+.sp .pc-title-logo{width:clamp(96px,10vw,152px);height:auto;transform:translateY(-14%);filter:drop-shadow(0 14px 26px rgba(0,0,0,.35))}
+@media(max-width:1200px){.sp .pc-logo-slot{display:none}}
+@media(max-width:880px){.sp .pc-headrow{flex-direction:column;align-items:flex-start;gap:22px}.sp .pc-logo-slot{display:none}}
 .sp .tex-grid{background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:64px 64px}
 .sp .edge-accent{position:absolute;top:0;left:0;width:100%;height:6px;background:repeating-linear-gradient(45deg,var(--accent) 0 8px,var(--accent2) 8px 16px);z-index:3}
 
@@ -38,12 +46,6 @@ header .container{padding:0}
   .sp .hero-img-slot{display:none!important}
 }
 
-/* Tablet: 22px container padding (tuned for phones/desktop) reads as cramped
-   at tablet widths — widen it so CTAs and copy aren't hugging the edge. */
-@media(min-width:641px) and (max-width:1024px){
-  .sp .container{padding:0 40px}
-}
-
 /* ── Hero ────────────────────────────────────────────────────────────── */
 .sp .hero{padding:clamp(80px,10vw,150px) 0 clamp(60px,7vw,96px);position:relative;overflow:visible}
 .sp .hero h1{font-size:clamp(36px,4.6vw,72px);margin:18px 0 26px}
@@ -65,12 +67,9 @@ header .container{padding:0}
 .sp .bg-dark [style*="color:var(--accent2)"],
 .sp .bg-navy [style*="color:var(--accent2)"],
 .sp .bg-accent2 [style*="color:var(--accent2)"],
-.sp .bg-dark [style*="color:#081B33"],
-.sp .bg-navy [style*="color:#081B33"],
-.sp .bg-accent2 [style*="color:#081B33"],
-.sp .bg-dark [style*="color:#081B33"],
-.sp .bg-navy [style*="color:#081B33"],
-.sp .bg-accent2 [style*="color:#081B33"]{color:var(--accent)!important}
+.sp .bg-dark [style*="color:#002768"],
+.sp .bg-navy [style*="color:#002768"],
+.sp .bg-accent2 [style*="color:#002768"]{color:var(--accent)!important}
 @media(max-width:680px){.sp .kpis{grid-template-columns:1fr 1fr;gap:28px}}
 
 /* ── Buttons ─────────────────────────────────────────────────────────── */
@@ -117,7 +116,7 @@ header .container{padding:0}
 /* ── Comparison table ────────────────────────────────────────────────── */
 .sp .cmp{width:100%;border-collapse:collapse;font-size:15px;background:#fff;box-shadow:0 24px 60px rgba(10,15,28,.12)}
 .sp .cmp th,.sp .cmp td{padding:18px 20px;text-align:left;border-bottom:1px solid #e7e9ee}
-.sp .cmp thead th{font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:12px;color:#fff;background:#081B33}
+.sp .cmp thead th{font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:12px;color:#fff;background:#002768}
 .sp .cmp thead th.tj{background:var(--ink);color:#fff}
 .sp .cmp td.rowlbl{font-weight:700;color:var(--ink)}
 .sp .cmp td.tj{background:rgba(200,38,42,.06);font-weight:700;color:var(--ink)}
@@ -152,8 +151,8 @@ header .container{padding:0}
 .sp .tess{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .sp .tess .t{background:#0E1626;border:1px solid rgba(255,255,255,.08);border-left:5px solid var(--accent);padding:34px 32px;box-shadow:0 14px 36px rgba(10,15,28,.18)}
 .sp .tess .t:nth-child(even){border-left-color:var(--accent2)}
-.sp .tess .t h3{color:#fff}
-.sp .tess .t .q{font-size:18px;line-height:1.55;color:#fff;font-weight:500;margin:0 0 20px}
+.sp .tess .t h3{color:#fff;font-family:"Archivo Black",sans-serif;text-transform:uppercase;margin:0 0 10px}
+.sp .tess .t .q{font-size:18px;line-height:1.55;color:#fff;font-weight:500;font-style:normal;margin:0 0 20px}
 .sp .tess .t .who{display:flex;align-items:center;gap:14px}
 .sp .tess .t .av{width:50px;height:50px;border-radius:50%;background:rgba(200,38,42,.10);color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;line-height:1}
 .sp .tess .t:nth-child(even) .av{background:rgba(31,111,235,.10)}
@@ -178,7 +177,7 @@ header .container{padding:0}
 
 
 /* ── Universal table header bar: navy band, white caps type ── */
-.sp table thead th{font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:12px;color:#fff;background:#081B33;padding:14px 18px;text-align:left}
+.sp table thead th{font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:12px;color:#fff;background:#002768;padding:14px 18px;text-align:left}
 .sp table thead th.tj{background:var(--ink)}
 
 /* ── Tall blueprint sections: span full width, tile vertically ── */
@@ -187,3 +186,8 @@ header .container{padding:0}
 /* ── Floating-tool host containment (real tools mount via flying-tools.js) ── */
 .sp .bg-white,.sp .bg-light,.sp .light-section,.sp .on-light,.sp .blurbs-section,.td-analysis{position:relative;overflow:hidden}
 .td-analysis-inner{padding:0 22px}
+
+/* Shared utilities (replace per-page one-off classes) */
+.sp .kpi .num.num-word{font-size:clamp(20px,2.7vw,38px)}
+.sp .flow.steps-4{--steps:4}
+.sp .btn-row{margin-top:24px}

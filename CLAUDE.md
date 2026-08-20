@@ -25,22 +25,15 @@ Do NOT edit anything inside `_LOCKED/` — it is the backup of last resort.
 
 ## Brand Identity
 
-**Logo (nav/footer)**: `assets/toughjobs-monogram-logo.png` — the wordmark used in the nav and footer. Do not create, use, or reference any other logo file for that role (no `toughjobs-logo-static.png`, no `toughjobs-monogram.png`).
+**Logo**: `assets/toughjobs-monogram-logo.png` — This is the ONLY logo file. Do not create, use, or reference any other logo files (no `toughjobs-logo-static.png`, no `toughjobs-monogram.png`). This logo is used in the nav and footer and must remain consistent across all pages.
 
-**Logo (section-header accent)**: `Images/Logos/toughjobs-fist-logo-small.webp` — the fist mark used as a decorative accent next to section headlines (`.pc-headrow` / `.pc-logo-slot`) on service-detail and print-collateral pages. This is a distinct, legitimate role from the nav/footer wordmark above — both are in active sitewide use, each in its own place. Do not swap one for the other.
-
-**Colors (2026 palette)**:
+**Colors**:
 - Primary Red: `#C8262A`
-- Dark Red: `#981B1F` (supersedes `#A90100`)
-- Digital Blue (accent2): `#1769E0`
-- Dark Navy: `#081B33` (supersedes `#002768`)
-- Navy 2 (deep navy, gradients/shadows): `#050F1F`
+- Dark Red: `#A90100`
+- Navy: `#002768`
 - Ink (black): `#0A0F1C`
-- Dark Surface: `#17212D` (supersedes `#282828`)
-- Surface 2: `#1E2A38`
-- Light Background: `#F1F4F7`
 - White: `#FFFFFF`
-- Sky accent: `#45B8F4`
+- Gray background: `#282828`
 
 **Typography**:
 - Display/Headlines: "Archivo Black", sans-serif (all-caps, tight tracking), title-text: red or white
@@ -52,11 +45,11 @@ Do NOT edit anything inside `_LOCKED/` — it is the backup of last resort.
 **Never let two same-background sections touch.** Adjacent sections must contrast each other — alternate light (white) ⇄ dark (ink/navy). A white section must never sit directly above or below another white section; the same goes for two dark sections. If two same-color sections would end up adjacent, merge them into one or change one's background. Going down a page the backgrounds should visibly alternate.
 
 **Text color contrast — critical for readability:**
-- Navy backgrounds (`#081B33`) → use white (`#FFFFFF`) or red (`#C8262A`) text ONLY. Never use navy or near-navy text on navy backgrounds.
+- Navy backgrounds (`#002768`) → use white (`#FFFFFF`) or red (`#C8262A`) text ONLY. Never use navy or near-navy text on navy backgrounds.
 - Ink backgrounds (`#0A0F1C`) → use white or red text ONLY.
 - White backgrounds → use navy, ink, or red text.
 - Always test: text must have strong, visible contrast with its background. Blue-on-blue or any color-on-similar-color is unreadable and must be fixed immediately.
-- **Never use the navy accent (`.accent2c` / `#081B33`) for text on ink or navy backgrounds** — it disappears. On dark heroes and dark sections, accent/highlight words must be RED (`#C8262A`) or WHITE. Reserve navy-colored text for white/light backgrounds only.
+- **Never use the navy accent (`.accent2c` / `#002768`) for text on ink or navy backgrounds** — it disappears. On dark heroes and dark sections, accent/highlight words must be RED (`#C8262A`) or WHITE. Reserve navy-colored text for white/light backgrounds only.
 
 **White containers on white/light backgrounds must have a drop shadow.** Any white (or near-white) card, box, or container sitting on a white or light-textured background needs `box-shadow:0 0 2px 0 rgba(10,15,28,.35)` (a subtle 2px-blur shadow) so its edges separate from the background. Never place a white container on a white background with no shadow — it visually disappears.
 
@@ -89,7 +82,7 @@ This is the single source of truth. Every page must match this exactly.
    - Free Tools → `intake-landing.html`
    - Contact → `contact.html`
 3. **Right side** (in order):
-   - Phone: `(309) 928-9080` as plain text link to `tel:3099289080`
+   - Phone: `(309) 233-9004` as plain text link to `tel:3092339004`
    - CTA button: "Request a Quote" → `contact.html` (red accent, white text)
 
 ### Behavior
@@ -142,7 +135,7 @@ Use this exact HTML block in every plain HTML page. Change only the `active` cla
       <a href="contact.html" class="nav-link">Contact</a>
     </nav>
     <div class="nav-right">
-      <a href="tel:3099289080" class="nav-phone">(309) 928-9080</a>
+      <a href="tel:3092339004" class="nav-phone">(309) 233-9004</a>
       <a href="contact.html" class="btn">Request a Quote</a>
     </div>
   </div>

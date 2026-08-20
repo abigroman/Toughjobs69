@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Trade Challenge — Pick Your Trade | Toughjobs</title>
+<link rel="canonical" href="https://toughjobs.org/free-tools.html" />
+<meta name="description" content="Pick your trade and take the Toughjobs Trade Challenge — 20 timed questions built for your profession. Beat the leaderboard and win bragging rights." />
+<meta name="robots" content="noindex, follow" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared-header.css" />
+<style>
+:root{--ink:#0A0F1C;--navy:#002768;--red:#C8262A;--white:#fff;--smoke:#8b93a7}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:"Archivo",sans-serif;background:#f5f5f5;color:#0A0F1C;-webkit-font-smoothing:antialiased;min-height:100vh}
+.hub-hero{text-align:center;padding:56px 20px 30px;max-width:760px;margin:0 auto}
+.hub-eyebrow{display:inline-block;font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:12px;color:var(--red);margin-bottom:14px}
+.hub-title{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:clamp(34px,7.5vw,62px);line-height:.96;margin:0 0 16px;color:#0A0F1C}
+.hub-title span{color:var(--red)}
+.hub-lede{color:#444;font-size:17px;line-height:1.6;margin:0 auto 22px;max-width:600px}
+.hub-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.q-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--red);color:#fff;border:0;border-radius:12px;font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:15px;padding:15px 26px;cursor:pointer;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
+.q-btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(200,38,42,.4)}
+.q-btn-ghost{background:transparent;border:1px solid #ddd;color:#0A0F1C}
+.cta-badges{position:fixed;top:160px;z-index:50;display:flex;gap:16px;width:100%;padding:0 32px;pointer-events:none}
+.cta-badges>*{pointer-events:auto}
+.cta-left{position:absolute;left:32px}
+.cta-right{position:absolute;right:32px}
+.cta-badge{display:inline-flex;align-items:center;justify-content:center;width:60px;height:60px;border-radius:50%;background:var(--red);color:#fff;text-decoration:none;font-family:"Archivo Black",sans-serif;font-size:24px;font-weight:800;transition:all .2s ease;box-shadow:0 4px 12px rgba(200,38,42,.35)}
+.cta-badge:hover{transform:scale(1.08);box-shadow:0 6px 20px rgba(200,38,42,.45)}
+.cta-badge.cta-back::before{content:'←'}
+.cta-badge.cta-assess::before{content:'✓'}
+.hub-search{max-width:520px;margin:34px auto 8px;padding:0 20px}
+.hub-search input{width:100%;background:#fff;border:1px solid #ddd;border-radius:12px;padding:15px 18px;color:#0A0F1C;font-family:"Archivo",sans-serif;font-size:16px}
+.hub-search input:focus{outline:none;border-color:var(--red)}
+.hub-search input::placeholder{color:#999}
+.hub-grid{max-width:1080px;margin:20px auto 90px;padding:0 20px;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.hub-card{display:flex;flex-direction:column;justify-content:space-between;gap:14px;background:#fff;border:1px solid #ddd;border-radius:16px;padding:20px;text-decoration:none;color:#0A0F1C;transition:all .14s ease;min-height:150px;box-shadow:0 0 2px 0 rgba(10,15,28,.35)}
+.hub-card:hover{transform:translateY(-3px);border-color:var(--red);box-shadow:0 16px 36px rgba(0,0,0,.4)}
+.hub-cat{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#666}
+.hub-name{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:19px;line-height:1.05;margin-top:6px}
+.hub-go{font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--red);display:flex;align-items:center;gap:6px}
+.hub-empty{grid-column:1/-1;text-align:center;color:#999;padding:40px}
+a{color:var(--red)}a:hover{color:#ff5a3c}
+</style>
+</head>
+<body>
+<div class="hub-hero">
+  <span class="hub-eyebrow">⚡ Toughjobs Trade Challenge</span>
+  <h1 class="hub-title">Do you really<br>know your <span>trade?</span></h1>
+  <p class="hub-lede">Pick your profession and take on 20 timed questions built just for it. Answer fast, stack up points, and battle for the top of the leaderboard.</p>
+  <div class="hub-actions">
+    <a class="q-btn" href="quiz-leaderboard.html">🏆 View leaderboard</a>
+  </div>
+</div>
+<div class="hub-search"><input id="hub-q" type="search" placeholder="Search your trade… (e.g. HVAC, roofing, plumbing)" /></div>
+<div class="hub-grid" id="hub-grid"></div>
+<script src="trade-data.js"></script>
+<script src="inject-header.js?v=20260802b"></script>
+<script src="back-cta.js"></script>
+<script src="sticky-cta.js"></script>
+<script>
+(function(){
+  var data=window.TRADE_DATA||{};
+  var slugs=Object.keys(data);
+  var grid=document.getElementById('hub-grid');
+  function esc(s){return String(s||'').replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function render(filter){
+    filter=(filter||'').toLowerCase().trim();
+    var rows=slugs.filter(function(s){ var d=data[s]; return !filter || (d.name+' '+s+' '+(d.category||'')).toLowerCase().indexOf(filter)>=0; });
+    if(!rows.length){ grid.innerHTML='<div class="hub-empty">No trade matches that. Try another word — or <a href="contact.html">ask us</a>.</div>'; return; }
+    grid.innerHTML=rows.map(function(s){ var d=data[s];
+      return '<a class="hub-card" href="quiz.html?trade='+encodeURIComponent(s)+'">'+
+        '<div><div class="hub-cat">'+esc(d.category||'Trade')+'</div><div class="hub-name">'+esc(d.name)+'</div></div>'+
+        '<div class="hub-go">Take the quiz →</div>'+
+      '</a>';
+    }).join('');
+  }
+  render('');
+  document.getElementById('hub-q').addEventListener('input',function(e){ render(e.target.value); });
+})();
+</script>
+</body>
+</html>

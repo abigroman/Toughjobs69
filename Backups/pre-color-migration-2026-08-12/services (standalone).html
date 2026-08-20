@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Services — Toughjobs</title>
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Toughjobs" />
+<template id="__bundler_thumbnail" data-bg-color="#0A0F1C">
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="800" fill="#0A0F1C"/>
+<rect x="100" y="150" width="1000" height="500" fill="#002768" opacity="0.7"/>
+<text x="600" y="300" font-family="Arial Black,sans-serif" font-size="80" fill="#FFFFFF" text-anchor="middle" font-weight="bold">SERVICES</text>
+<text x="600" y="380" font-family="Arial,sans-serif" font-size="40" fill="#C8262A" text-anchor="middle" font-weight="bold">Marketing for Trades</text>
+<line x1="200" y1="420" x2="1000" y2="420" stroke="#C8262A" stroke-width="4"/>
+</svg>
+</template>
+<meta name="ext-resource-dependency" content="assets/blueprint-background.webp" data-resource-id="blueprintBg" />
+<meta name="ext-resource-dependency" content="assets/engineering-schematics.jpg" data-resource-id="engineeringSchems" />
+<meta name="ext-resource-dependency" content="assets/white-engineering-background.webp" data-resource-id="whiteEnginBg" />
+<meta name="ext-resource-dependency" content="assets/architectural-drawing-transparent.webp" data-resource-id="archDrawing" />
+<meta name="ext-resource-dependency" content="assets/woman-trowel-fullbody.webp" data-resource-id="womanTrowel" />
+<meta name="ext-resource-dependency" content="assets/sitelite-code.webp" data-resource-id="siteliteCode" />
+<meta name="ext-resource-dependency" content="assets/woman-jackhammer-transparent.webp" data-resource-id="womanJackhammer" />
+<meta name="ext-resource-dependency" content="assets/wrap-truck-erik.webp" data-resource-id="wrapTruck" />
+<meta name="ext-resource-dependency" content="webp/print-stickers-decals-hero.webp" data-resource-id="stickersHero" />
+<meta name="ext-resource-dependency" content="assets/audio-visualizer.mp4" data-resource-id="audioViz" />
+<meta name="ext-resource-dependency" content="uploads/toughjobs-logo-light-transparent.webp" data-resource-id="logoLight" />
+<meta name="ext-resource-dependency" content="uploads/polos.webp" data-resource-id="polos" />
+<meta name="ext-resource-dependency" content="trade-images/excavation.webp" data-resource-id="excavation" />
+<style>
+:root{--accent:#C8262A;--dark-red:#A90100;--navy:#002768;--ink:#0A0F1C;--white:#FFFFFF;--gray:#282828}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{font-family:"Archivo",sans-serif;color:var(--ink);background:var(--white)}
+.container{max-width:1240px;margin:0 auto;padding:0 32px}
+header{background:var(--ink);color:var(--white);position:sticky;top:0;z-index:40;transition:all 0.3s ease;width:100%}
+.nav-container{display:flex;align-items:center;justify-content:space-between;height:120px;transition:height 0.3s ease;width:100%;padding:0 32px}
+.logo-link{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--white);flex-shrink:0}
+.logo-link img{height:100px;width:150px;transition:all 0.3s ease;display:block;object-fit:contain}
+.logo-text{font-family:"Archivo Black",sans-serif;font-size:28px;letter-spacing:0.02em;line-height:1;text-transform:uppercase;transition:font-size 0.3s ease}
+.logo-text .tight{color:var(--accent)}
+.logo-text .light{color:var(--white)}
+.nav-links{display:flex;gap:24px;flex-wrap:nowrap;align-items:center;margin-left:auto;margin-right:auto}
+.nav-link{font-family:"Archivo",sans-serif;font-weight:700;font-size:11.5px;letter-spacing:0.04em;white-space:nowrap;text-transform:uppercase;color:var(--white);text-decoration:none;padding:8px 0;border-bottom:2px solid transparent;transition:border-color 0.15s ease,color 0.15s ease}
+.nav-link:hover,.nav-link.active{color:var(--accent);border-bottom-color:var(--accent)}
+@keyframes phone-pulse{0%,100%{opacity:1}50%{opacity:0.5}}
+.nav-phone{animation:phone-pulse 4s ease-in-out infinite}
+.nav-dropdown{position:relative;display:flex;align-items:center}
+.nav-dropdown-menu{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--ink);border-top:3px solid var(--accent);width:920px;z-index:999;padding:32px;grid-template-columns:repeat(5,1fr);gap:24px;margin-top:0}
+.nav-dropdown:hover .nav-dropdown-menu{display:grid}
+.nav-dropdown-item{font-family:"Archivo",sans-serif;font-weight:700;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--white);text-decoration:none;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.08);transition:background 0.15s ease,color 0.15s ease}
+.nav-dropdown-item:hover{background:var(--accent);color:var(--white)}
+.nav-right{display:flex;gap:12px;align-items:center;flex-shrink:0}
+.nav-phone{color:var(--white);text-decoration:none;font-family:"Archivo",sans-serif;font-weight:800;font-size:14px;letter-spacing:0.03em;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;font-family:"Archivo",sans-serif;font-weight:800;letter-spacing:.06em;font-size:13px;text-transform:uppercase;text-decoration:none;background:var(--accent);color:var(--white);border:0;cursor:pointer;transition:transform .15s ease,filter .2s ease}
+.btn:hover{filter:brightness(.92)}
+.btn:active{transform:translateY(1px)}
+.btn-dark{background:var(--ink);color:var(--white)}
+.svc-strip{display:flex;flex-wrap:nowrap;width:100%;margin-top:48px;gap:9px;justify-content:space-between;position:relative;z-index:960}
+.svc-strip a{flex:0 1 auto;white-space:nowrap;text-align:center;padding:14px 15px;background:var(--accent);color:var(--white);font-family:"Archivo",sans-serif;font-weight:800;font-size:12.5px;letter-spacing:.02em;text-transform:uppercase;text-decoration:none;line-height:1.2;border-radius:7px;box-shadow:0 6px 14px -4px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.18);transition:background .18s ease,transform .18s ease}
+.svc-strip a:hover{background:#000;color:var(--white);transform:translateY(-2px)}
+@media(max-width:1150px){.svc-strip{flex-wrap:wrap;justify-content:flex-start;gap:12px}.svc-strip a{flex:0 0 auto;font-size:13px;padding:14px 20px}}
+main section{padding-block:100px;position:relative}
+.section-equal{min-height:clamp(680px,80vh,900px);display:flex;flex-direction:column;justify-content:center}
+.eyebrow{display:block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:16px;color:var(--accent)}
+.display{font-family:"Archivo Black",sans-serif;font-weight:900;text-transform:uppercase;line-height:0.95;letter-spacing:-0.01em}
+main section p{font-size:16px;line-height:1.6}
+.bg-blueprint-dark{background:var(--ink) url('') center/cover;background-attachment:fixed;color:var(--white)}
+.bg-blueprint-red{background:var(--accent);color:var(--white)}
+.bg-blueprint-light{background:var(--white);color:var(--ink)}
+.bg-blueprint-navy{background:var(--navy) url('') center/cover;background-attachment:fixed;color:var(--white)}.gb-section{background-image:url('')}
+.split .a{color:var(--white)}
+.split .b{color:var(--accent);text-shadow:0 0 2px rgba(0,0,0,.6),0 4px 2px rgba(0,0,0,.4),-2px 2px 2px rgba(0,39,104,.5)}
+.bg-blueprint-light .split .a{color:var(--ink)}
+.split .m{color:var(--white)}
+.bg-blueprint-light .split .m{color:var(--ink)}
+@media(max-width:1024px){.grid-2{grid-template-columns:1fr !important;gap:40px !important}.hero-grid{grid-template-columns:1fr !important}.hero-grid .hero-img{display:none}}
+a{color:var(--accent)}
+a:hover{color:#A90100}
+footer{background:var(--ink);color:var(--white);padding:24px 32px;text-align:center;font-size:13px}
+.gb-outer{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center}
+.gb-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+.gb-card{background:#002768;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A}
+.gb-card h3{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05}
+.gb-card p{font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 28px}
+.gb-card a{display:inline-block;background:#C8262A;color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none}
+.gb-img{position:relative;height:100%;min-height:420px}
+.gb-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:top center}
+@media(max-width:900px){.gb-outer{grid-template-columns:1fr}.gb-grid{grid-template-columns:1fr}.gb-img{min-height:280px;order:-1}}
+.svc-print-link{position:relative}
+.svc-print-preview{position:absolute;right:calc(100% + 16px);top:50%;transform:translateY(-50%) scale(.96);width:280px;max-width:40vw;border:3px solid var(--accent);box-shadow:0 24px 60px -20px rgba(0,0,0,.6);opacity:0;visibility:hidden;transition:opacity .18s ease,transform .18s ease;pointer-events:none;z-index:30;display:block}
+.svc-print-link:hover .svc-print-preview{opacity:1;visibility:visible;transform:translateY(-50%) scale(1)}
+@media(max-width:820px){.svc-print-preview{display:none}}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+<header id="nav-header">
+<div class="nav-container">
+<a href="#" class="logo-link"><img src="" alt="Toughjobs" width="150" height="100" id="logoImg" /></a>
+<nav class="nav-links">
+<a href="#" class="nav-link active">Services</a>
+<a href="#" class="nav-link">About</a>
+</nav>
+<div class="nav-right"><a href="tel:3099289080" class="nav-phone">(309) 928-9080</a></div>
+</div>
+</header>
+<main>
+<section data-screen-label="Hero" class="section-equal bg-blueprint-dark bp-section" style="overflow:hidden;padding-top:20px;padding-bottom:40px">
+<div style="position:absolute;inset:0;background-image:url('');background-size:cover;background-position:center;background-repeat:no-repeat;opacity:.5;z-index:0;pointer-events:none" id="archBg"></div>
+<div class="container" style="position:relative;z-index:2">
+<div class="hero-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;min-height:75vh">
+<div class="hero-img" style="display:flex;justify-content:center;align-items:flex-end;position:relative;height:100%">
+<img src="" alt="Toughjobs construction worker with trowel" id="womanTrowelImg" style="width:auto;height:calc(85vh * 1.15);max-height:1035px;min-height:748px;max-width:none;display:block;filter:drop-shadow(20px 20px 50px rgba(0,0,0,.75));margin-bottom:-80px;object-fit:contain;object-position:bottom center" />
+</div>
+<div style="padding-bottom:60px">
+<span class="eyebrow">What we build</span>
+<h1 class="display split" style="font-size:clamp(48px,6vw,96px);margin:20px 0 32px;line-height:1.0">
+<span class="a">Ten cylinders.</span><br />
+<span class="b">One mission.</span>
+</h1>
+<p style="max-width:600px;font-size:17px;line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 36px">
+Toughjobs is a digital marketing agency built for the trades. We help HVAC, plumbing, electrical, roofing, and contractor businesses across Illinois, Missouri, Iowa, Wisconsin, and Indiana get found online, win more jobs, and grow profit.
+</p>
+<a class="btn" href="#" style="margin-top:8px">Explore all services</a>
+</div>
+</div>
+<div class="svc-strip">
+<a href="#">AI Automations</a>
+<a href="#">Branding</a>
+<a href="#">Coaching</a>
+<a href="#">Local SEO</a>
+<a href="#">Paid Ads</a>
+<a href="#">Re-Marketing</a>
+<a href="#">SEO</a>
+<a href="#">Social Media</a>
+<a href="#">Software</a>
+<a href="#">Websites</a>
+</div>
+</div>
+</section>
+
+<section id="websites" data-screen-label="Websites" class="section-equal bg-blueprint-light bp-section">
+<div class="container" style="position:relative;z-index:2">
+<div class="grid-2" style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start">
+<div>
+<span class="eyebrow">Websites that convert</span>
+<h2 class="display split" style="font-size:clamp(40px,5vw,72px);margin:16px 0 24px">
+<span class="a">Websites.</span><br />
+<span class="b">Built to last.</span>
+</h2>
+<p style="color:var(--ink);margin-bottom:24px">Whether WordPress, Webflow, or custom code — we choose the platform that makes sense for YOUR business. No proprietary platforms. No rental fees. You own the code, the data, and the domain.</p>
+<p style="color:var(--ink);margin-bottom:24px">Every site is mobile-first, loads in under 2 seconds on rural LTE, and has your phone number in 6+ places. Because a pretty site that doesn't convert is just an expensive business card.</p>
+<a class="btn" href="#">Get a free teardown</a>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="background:var(--accent);padding:24px 28px;color:var(--white)">
+<div class="eyebrow" style="opacity:.9">Typical build</div>
+<div class="display" style="font-size:48px;margin:8px 0 4px">4 weeks</div>
+<div style="font-size:14px;opacity:.85">Complete Website Development</div>
+</div>
+<div style="background:var(--ink);padding:20px 24px;color:var(--white);display:flex;gap:16px;align-items:center"><div style="font-size:28px;font-family:monospace;color:var(--accent);font-weight:700">01</div><div style="flex:1"><div style="font-family:Archivo;font-weight:700;font-size:14px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:4px">Website</div><div style="font-size:13px;opacity:.75">Full admin access — you own the code</div></div></div>
+<div style="background:var(--ink);padding:20px 24px;color:var(--white);display:flex;gap:16px;align-items:center"><div style="font-size:28px;font-family:monospace;color:var(--accent);font-weight:700">02</div><div style="flex:1"><div style="font-family:Archivo;font-weight:700;font-size:14px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:4px">Mobile-first</div><div style="font-size:13px;opacity:.75">Loads in &lt;2s on rural LTE</div></div></div>
+<div style="margin-top:24px;display:flex;justify-content:center"><img src="" id="siteliteImg" alt="Sitelite Code" style="max-width:100%;height:auto;max-height:100px" /></div>
+</div>
+</div>
+</section>
+
+<section id="social" data-screen-label="Social" class="section-equal bg-blueprint-light bp-section">
+<div class="container" style="position:relative;z-index:2">
+<div class="grid-2" style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start">
+<div>
+<span class="eyebrow">Social that builds community</span>
+<h2 class="display split" style="font-size:clamp(40px,5vw,72px);margin:16px 0 24px">
+<span class="a">Posts aren't</span><br /><span class="b">strategy.</span><br /><span class="m">Community is.</span>
+</h2>
+<p style="color:var(--ink);margin-bottom:24px">Most agencies post and ghost. We build engagement — responding to comments, building relationships, and creating content that gets shared.</p>
+<a class="btn" href="#">Start a social audit</a>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<img src="" id="womanJackhammer" alt="Woman with jackhammer" style="width:100%;height:auto;display:block;filter:drop-shadow(12px 12px 32px rgba(0,0,0,.5))" />
+<div style="background:var(--accent);padding:24px 28px;color:var(--white)"><div class="eyebrow" style="opacity:.9">Posting frequency</div><div class="display" style="font-size:48px;margin:8px 0 4px">4–6x/wk</div><div style="font-size:14px;opacity:.85">Per platform, optimized for your audience</div></div>
+</div>
+</div>
+</section>
+
+<section id="branding" data-screen-label="Branding" class="section-equal bg-blueprint-navy bp-section">
+<div class="container" style="position:relative;z-index:2">
+<div class="grid-2" style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start">
+<div>
+<span class="eyebrow">Branding + print collateral</span>
+<h2 class="display split" style="font-size:clamp(40px,5vw,72px);margin:16px 0 24px">
+<span class="a">Consistent </span><span class="b">branding</span><br /><span class="m">across everything you touch.</span>
+</h2>
+<p style="color:rgba(255,255,255,.82);margin-bottom:24px">Logo design, color palette, fonts, voice & tone guidelines — and the printed materials that bring your brand to life.</p>
+<a class="btn" href="#">Get a branding quote</a>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<a class="svc-print-link" href="#" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:16px 20px;display:flex;gap:14px;align-items:flex-start;text-decoration:none"><img class="svc-print-preview" src="" id="wrapTruckImg" alt="Truck wrap preview" loading="lazy" decoding="async" /><div style="font-size:24px;font-family:'Archivo Black';color:var(--accent);min-width:32px;text-align:center">01</div><div><div style="font-family:Archivo;font-weight:700;font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:var(--white);margin-bottom:4px">Truck & Cargo Van Wraps</div><div style="font-size:13px;line-height:1.5;color:rgba(255,255,255,.75)">40K+ daily impressions. Your truck is a rolling billboard.</div></div></a>
+<a href="#" class="svc-print-link" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:16px 20px;display:flex;gap:14px;align-items:flex-start;text-decoration:none"><img class="svc-print-preview" src="" id="polosImg" alt="Custom apparel preview" loading="lazy" decoding="async" /><div style="font-size:24px;font-family:'Archivo Black';color:var(--accent);min-width:32px;text-align:center">05</div><div><div style="font-family:Archivo;font-weight:700;font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:var(--white);margin-bottom:4px">Clothing & Apparel</div><div style="font-size:13px;line-height:1.5;color:rgba(255,255,255,.75)">Polo shirts, hoodies, hats. Your crew becomes walking ads.</div></div></a>
+<a href="#" class="svc-print-link" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:16px 20px;display:flex;gap:14px;align-items:flex-start;text-decoration:none"><img class="svc-print-preview" src="" id="stickersImg" alt="Stickers & decals preview" loading="lazy" decoding="async" /><div style="font-size:24px;font-family:'Archivo Black';color:var(--accent);min-width:32px;text-align:center">06</div><div><div style="font-family:Archivo;font-weight:700;font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:var(--white);margin-bottom:4px">Stickers & Decals</div><div style="font-size:13px;line-height:1.5;color:rgba(255,255,255,.75)">Window stickers, toolbox decals, bumper stickers. Cheap & sticky.</div></div></a>
+<div style="background:var(--accent);padding:20px 24px;margin-top:12px;color:var(--white)"><div class="eyebrow" style="color:var(--white);opacity:.8">Quick turnaround</div><div class="display" style="font-size:36px;margin:6px 0 2px;color:var(--white)">5–30 days</div><div style="font-size:13px;opacity:.85">Design to print, most items</div></div>
+</div>
+</div>
+</section>
+
+<section id="contact" data-screen-label="CTA-1" class="cta-section bp-section" style="background:var(--accent);position:relative;overflow:hidden;padding-block:100px;color:var(--white)">
+<video style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.25;z-index:0;pointer-events:none" id="audioVizVid" autoplay muted loop playsinline aria-hidden="true"></video>
+<div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,15,28,0.7) 0%,rgba(168,1,0,0.5) 100%);z-index:0.5"></div>
+<div class="container" style="display:grid;grid-template-columns:3fr 1fr;gap:40px;align-items:center;position:relative;z-index:1">
+<div style="margin:0;padding:0">
+<h2 style="color:var(--white);margin:0 0 24px;font-size:48px;line-height:1.1;letter-spacing:-0.01em">Ready to get started?</h2>
+<p style="color:rgba(255,255,255,0.9);font-size:16px;margin:0 0 40px">Let's talk about how Toughjobs can help your trades business grow and win more jobs.</p>
+<a href="#" class="btn" style="background:var(--white);color:var(--accent);font-weight:700;padding:16px 48px">
+Start Your Partnership
+</a>
+</div>
+<div style="display:flex;align-items:center;justify-content:center;position:relative">
+<div style="position:relative;width:clamp(140px,15vw,240px);aspect-ratio:1;display:flex;align-items:center;justify-content:center">
+<svg style="animation:spin 14s linear infinite;transform-origin:center;position:absolute;inset:0;width:100%;height:100%;z-index:2" viewBox="0 0 200 200">
+<style>@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}</style>
+<defs>
+<path id="circlePath" d="M 100, 100 m -85, 0 a 85,85 0 1,1 170,0 a 85,85 0 1,1 -170,0" fill="none" />
+</defs>
+<text style="font-size:15px;font-weight:700;fill:rgba(255,255,255,0.95);font-family:'Archivo Black',sans-serif;text-transform:uppercase">
+<textPath href="#circlePath" startOffset="0%" textLength="534" lengthAdjust="spacingAndGlyphs">
+TEAM TOUGHJOBS • TEAM TOUGHJOBS •
+</textPath>
+</text>
+</svg>
+<img src="" alt="Toughjobs" id="logoLightImg" style="width:58%;height:auto;position:relative;z-index:3" />
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<section data-screen-label="Our Endeavors" class="gb-section" style="background:#ECEFF4;background-image:url('');background-size:cover;background-position:center;padding:56px 32px;position:relative;overflow:hidden;box-shadow:inset 0 2px 2px rgba(0,0,0,.45),inset 0 -2px 2px rgba(0,0,0,.45)">
+<div style="max-width:1240px;margin:0 auto;position:relative;z-index:1">
+<div class="gb-outer">
+<div>
+<div style="margin-bottom:24px">
+<span style="font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:#C8262A">More than marketing</span>
+<h2 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(32px,3.6vw,50px);line-height:1.02;color:#0A0F1C;margin:12px 0 0"><span style="color:#C8262A">Two ways we</span> give back</h2>
+</div>
+<div class="gb-grid">
+<div class="gb-card">
+<span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700">01 / PARTNERSHIP</span>
+<h3>Go independent, backed by us</h3>
+<p>You bring the truck, tools, and skill. We hand you the website, brand, systems, and marketing to turn one truck into a real company.</p>
+<a href="#">Explore Partnership</a>
+</div>
+<div class="gb-card" style="background:#0A0F1C">
+<span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700">02 / HELPING HANDS</span>
+<h3>A hand up when budget is tight</h3>
+<p>One day a week we help people with more grit than budget get a business off the ground — honest guidance, real direction, no pressure.</p>
+<a href="#">Explore Helping Hands</a>
+</div>
+</div>
+</div>
+<div class="gb-img">
+<img src="" alt="Toughjobs tradesman on the job" id="excavationImg" loading="lazy" decoding="async" />
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<p>&copy; 2026 Toughjobs &middot; Marketing for the Trades &middot; <a href="tel:3099289080" style="color:inherit;text-decoration:underline">(309) 928-9080</a></p>
+</footer>
+
+<script>
+window.__RESOURCE_SETUP=function(){var r=window.__resources||{};document.getElementById('archBg').style.backgroundImage='url('+r.archDrawing+')';document.getElementById('womanTrowelImg').src=r.womanTrowel||'';document.getElementById('siteliteImg').src=r.siteliteCode||'';document.getElementById('womanJackhammer').src=r.womanJackhammer||'';document.getElementById('wrapTruckImg').src=r.wrapTruck||'';document.getElementById('polosImg').src=r.polos||'';document.getElementById('stickersImg').src=r.stickersHero||'';document.getElementById('audioVizVid').innerHTML='<source src="'+r.audioViz+'" type="video/mp4" />';document.getElementById('logoLightImg').src=r.logoLight||'';document.getElementById('excavationImg').src=r.excavation||'';var bgDark=document.querySelector('.bg-blueprint-dark');if(bgDark)bgDark.style.backgroundImage='url('+r.blueprintBg+')';var bgNavy=document.querySelector('.bg-blueprint-navy');if(bgNavy)bgNavy.style.backgroundImage='url('+r.engineeringSchems+')';var gbSection=document.querySelector('.gb-section');if(gbSection)gbSection.style.backgroundImage='url('+r.whiteEnginBg+')'};window.__RESOURCE_SETUP();
+</script>
+</body>
+</html>

@@ -191,12 +191,8 @@
     // Store email and unlock
     localStorage.setItem(STORAGE_KEY, email);
     
-    // Hand the captured email to the shared lead store so it lands in the CRM
-    // Leads screen (localStorage today, Firebase too once leads-store.js is
-    // configured). Fire-and-forget — unlocking must not wait on the network.
-    if (window.LeadsStore) {
-      window.LeadsStore.addLead({ email: email, source: 'email-gate', ts: new Date().toISOString() });
-    }
+    // Optional: send to your email capture service here
+    // fetch('/api/capture-email', { method: 'POST', body: JSON.stringify({ email }) });
 
     modal.classList.add('unlocked');
     document.body.style.overflow = '';

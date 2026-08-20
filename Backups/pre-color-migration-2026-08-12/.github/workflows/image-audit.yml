@@ -1,0 +1,206 @@
+name: Image audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/image-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Check out active website files
+        uses: actions/checkout@v4
+        with:
+          filter: blob:none
+          fetch-depth: 1
+          sparse-checkout: |
+            /*
+            !/*/
+          sparse-checkout-cone-mode: false
+
+      - name: Audit image references and build patch
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import csv
+          import posixpath
+          import re
+          import subprocess
+          from collections import defaultdict
+          from pathlib import Path
+          from urllib.parse import unquote
+
+          ROOT = Path('.').resolve()
+          SOURCE_EXTS = {'.html', '.htm', '.css', '.js', '.jsx', '.ts', '.tsx'}
+          IMAGE_EXTS = {'.webp', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.avif', '.ico'}
+
+          raw = subprocess.check_output(['git', 'ls-files', '-z'])
+          tracked = [p for p in raw.decode('utf-8', 'surrogateescape').split('\0') if p]
+          tracked_set = set(tracked)
+          by_lower = defaultdict(list)
+          by_name = defaultdict(list)
+
+          for p in tracked:
+              by_lower[p.lower()].append(p)
+              if Path(p).suffix.lower() in IMAGE_EXTS:
+                  by_name[Path(p).name.lower()].append(p)
+
+          sources = [p for p in tracked if '/' not in p and Path(p).suffix.lower() in SOURCE_EXTS]
+
+          quoted_patterns = [
+              re.compile(r'(?i)"([^"\r\n]{1,500}\.(?:webp|png|jpe?g|gif|svg|avif|ico)(?:[?#][^"\r\n]{0,200})?)"'),
+              re.compile(r"(?i)'([^'\r\n]{1,500}\.(?:webp|png|jpe?g|gif|svg|avif|ico)(?:[?#][^'\r\n]{0,200})?)'"),
+              re.compile(r'(?i)`([^`\r\n]{1,500}\.(?:webp|png|jpe?g|gif|svg|avif|ico)(?:[?#][^`\r\n]{0,200})?)`'),
+          ]
+          css_pattern = re.compile(r'(?i)url\(\s*["\']?([^\)"\'\r\n]{1,500}\.(?:webp|png|jpe?g|gif|svg|avif|ico)(?:[?#][^\)"\'\r\n]{0,200})?)["\']?\s*\)')
+
+          def extract_refs(text):
+              refs = set()
+              for line in text.splitlines():
+                  for pattern in quoted_patterns:
+                      refs.update(match.group(1).strip() for match in pattern.finditer(line))
+                  refs.update(match.group(1).strip() for match in css_pattern.finditer(line))
+              expanded = set()
+              for ref in refs:
+                  if ',' in ref and ' ' in ref:
+                      for part in ref.split(','):
+                          token = part.strip().split()[0] if part.strip() else ''
+                          if token:
+                              expanded.add(token)
+                  else:
+                      expanded.add(ref)
+              return expanded
+
+          def split_suffix(ref):
+              for marker in ('?', '#'):
+                  index = ref.find(marker)
+                  if index >= 0:
+                      return ref[:index], ref[index:]
+              return ref, ''
+
+          def resolve(ref, source):
+              decoded = unquote(ref).replace('\\', '/')
+              if decoded.startswith(('data:', '#', 'mailto:', 'tel:', 'javascript:', '//')):
+                  return None
+              if decoded.startswith(('http://', 'https://')):
+                  prefix = 'https://abigroman.github.io/ToughJobs/'
+                  if not decoded.lower().startswith(prefix.lower()):
+                      return None
+                  return decoded[len(prefix):], False
+              if decoded.startswith('/ToughJobs/'):
+                  return decoded[len('/ToughJobs/'):], False
+              if decoded.startswith('/'):
+                  return decoded.lstrip('/'), True
+              candidate = posixpath.normpath(posixpath.join(posixpath.dirname(source), decoded))
+              if candidate == '..' or candidate.startswith('../'):
+                  return None
+              return candidate, False
+
+          def replacement_for(source, target, suffix):
+              start = posixpath.dirname(source) or '.'
+              return posixpath.relpath(target, start) + suffix
+
+          rows = []
+          changed = {}
+
+          for source in sources:
+              path = ROOT / source
+              text = path.read_text(encoding='utf-8', errors='replace')
+              replacements = {}
+
+              for original in extract_refs(text):
+                  base, suffix = split_suffix(original)
+                  resolved = resolve(base, source)
+                  if resolved is None:
+                      continue
+
+                  candidate, root_risk = resolved
+                  status = None
+                  target = None
+
+                  if candidate in tracked_set:
+                      if root_risk:
+                          status = 'ROOT_RELATIVE'
+                          target = candidate
+                      else:
+                          continue
+                  else:
+                      lower_matches = list(dict.fromkeys(by_lower.get(candidate.lower(), [])))
+                      if len(lower_matches) == 1:
+                          status = 'CASE_MISMATCH'
+                          target = lower_matches[0]
+                      elif len(lower_matches) > 1:
+                          status = 'AMBIGUOUS_CASE'
+                      else:
+                          name_matches = list(dict.fromkeys(by_name.get(Path(candidate).name.lower(), [])))
+                          if len(name_matches) == 1:
+                              status = 'WRONG_FOLDER'
+                              target = name_matches[0]
+                          elif len(name_matches) > 1:
+                              status = 'AMBIGUOUS_FILENAME'
+                          else:
+                              status = 'MISSING'
+
+                  replacement = ''
+                  if target and status in {'ROOT_RELATIVE', 'CASE_MISMATCH', 'WRONG_FOLDER'}:
+                      replacement = replacement_for(source, target, suffix)
+                      replacements[original] = replacement
+
+                  rows.append([source, status, original, candidate, target or '', replacement])
+
+              if replacements:
+                  new_text = text
+                  for old, new in sorted(replacements.items(), key=lambda item: len(item[0]), reverse=True):
+                      new_text = new_text.replace(old, new)
+                  if new_text != text:
+                      path.write_text(new_text, encoding='utf-8', newline='')
+                      changed[source] = len(replacements)
+
+          with open('image-audit.csv', 'w', newline='', encoding='utf-8') as handle:
+              writer = csv.writer(handle)
+              writer.writerow(['SourceFile', 'Status', 'Reference', 'ResolvedPath', 'TargetPath', 'Replacement'])
+              writer.writerows(sorted(rows))
+
+          summary = defaultdict(int)
+          for row in rows:
+              summary[row[1]] += 1
+
+          with open('image-audit-summary.txt', 'w', encoding='utf-8') as handle:
+              handle.write(f'Scanned source files: {len(sources)}\n')
+              handle.write(f'Files with safe automatic edits: {len(changed)}\n\n')
+              for key in sorted(summary):
+                  handle.write(f'{key}: {summary[key]}\n')
+              handle.write('\nChanged files:\n')
+              for path, count in sorted(changed.items()):
+                  handle.write(f'{path}: {count}\n')
+
+          print(Path('image-audit-summary.txt').read_text(encoding='utf-8'))
+          PY
+
+          git diff --binary > image-fixes.patch
+
+      - name: Add audit summary
+        if: always()
+        shell: bash
+        run: |
+          if [ -f image-audit-summary.txt ]; then
+            cat image-audit-summary.txt >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload report and patch
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: toughjobs-image-audit
+          path: |
+            image-audit.csv
+            image-audit-summary.txt
+            image-fixes.patch
+          if-no-files-found: error

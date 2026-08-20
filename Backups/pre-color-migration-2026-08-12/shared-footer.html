@@ -1,0 +1,60 @@
+<footer class="site-footer">
+  <style>
+    @keyframes tickerScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    .site-footer{position:relative;overflow:hidden;background:linear-gradient(135deg,#001a4a 0%,#002768 100%);color:var(--white);border-top:3px solid var(--accent)}
+    .footer-scrim{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(0,26,74,.88) 0%,rgba(0,39,104,.84) 100%);z-index:0}
+    .footer-video-bg{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.6;z-index:0}
+    .footer-content{position:relative;z-index:1}
+    .footer-ticker{display:flex;gap:0;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.3);padding:20px 0;width:100%}
+    .ticker-track{display:flex;gap:60px;white-space:nowrap;animation:tickerScroll 60s linear infinite}
+    .ticker-item{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:14px;letter-spacing:.02em;color:var(--accent);font-weight:900;flex-shrink:0}
+    .ticker-item::after{content:"●";margin-left:60px;color:rgba(255,255,255,.3);font-size:6px}
+    .footer-main{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;padding:60px 0;margin-bottom:0}
+    .footer-section h3{font-family:"Archivo Black",sans-serif;font-size:18px;text-transform:uppercase;letter-spacing:-.01em;margin:0 0 24px;font-weight:900;display:flex;align-items:center;gap:12px}
+    .footer-section h3 img{width:100%;height:auto;object-fit:contain;display:block}
+    .footer-section h4{font-family:"Archivo",sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:var(--accent);margin:0 0 16px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.15)}
+    .footer-section ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
+    .footer-section a{color:rgba(255,255,255,.75);text-decoration:none;font-size:14px;font-weight:500;transition:all .2s ease;display:inline-block}
+    .footer-section a:hover{color:var(--accent)}
+    .footer-brand p{font-size:14px;line-height:1.6;color:rgba(255,255,255,.7);margin:0}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-top:1px solid rgba(255,255,255,.1);gap:32px;flex-wrap:wrap}
+    .footer-bottom-copy{font-size:12px;color:rgba(255,255,255,.55)}
+    .footer-contact{display:flex;align-items:center;gap:20px;padding-right:220px}
+    .footer-phone{text-align:right}
+    .footer-phone-label{font-family:"Archivo",sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:rgba(255,255,255,.6);margin-bottom:4px}
+    .footer-phone-number{font-family:"Archivo Black",sans-serif;font-size:22px;font-weight:900;color:var(--accent);text-decoration:none;letter-spacing:-.01em;transition:all .2s ease}
+    .footer-phone-number:hover{transform:scale(1.05)}
+    @media(max-width:1024px){
+      .footer-ticker{display:none}
+      .footer-main{grid-template-columns:1fr 1fr;gap:40px}
+      .footer-contact{flex:0 0 100%;width:100%;justify-content:center;padding-right:0}
+      .footer-phone{text-align:center}
+    }
+    @media(max-width:768px){
+      .footer-main{grid-template-columns:1fr;gap:40px}
+      .footer-bottom{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+  <video class="footer-video-bg" muted loop playsinline preload="none" data-play-when-near><source src="assets/construction-workers.mp4" type="video/mp4" /></video>
+  <div class="footer-scrim"></div>
+  <div class="footer-content">
+    <div class="footer-ticker"><div class="ticker-track">
+      <span class="ticker-item">HVAC</span><span class="ticker-item">PLUMBING</span><span class="ticker-item">ELECTRICAL</span><span class="ticker-item">MASONRY</span><span class="ticker-item">ROOFING</span><span class="ticker-item">JANITORIAL</span><span class="ticker-item">CARPET CLEANING</span><span class="ticker-item">PAINTING</span><span class="ticker-item">CONCRETE</span><span class="ticker-item">LANDSCAPING</span><span class="ticker-item">WELDING</span><span class="ticker-item">EXCAVATION</span><span class="ticker-item">HVAC</span><span class="ticker-item">PLUMBING</span><span class="ticker-item">ELECTRICAL</span><span class="ticker-item">MASONRY</span><span class="ticker-item">ROOFING</span><span class="ticker-item">JANITORIAL</span>
+    </div></div>
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-section footer-brand">
+          <h3><img src="assets/toughjobs-monogram-logo.png" alt="Toughjobs" loading="lazy" decoding="async" /></h3>
+          <p>Marketing &amp; branding solutions built for the trades. We help service businesses get found, win jobs, and grow their revenue through integrated digital strategies.</p>
+        </div>
+        <div class="footer-section"><h4>Company</h4><ul><li><a href="about.html">Our Story</a></li><li><a href="index.html#services">Services</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-section"><h4>Resources</h4><ul><li><a href="free-tools.html">Free Tools</a></li><li><a href="index.html#field-notes">Blog</a></li><li><a href="website-examples.html">Case Studies</a></li></ul></div>
+        <div class="footer-section"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="sitemap.html">Sitemap</a></li><li><a href="citations.html">Citations</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-copy">© 2026 Toughjobs Digital Marketing · 140 Oakmoor Dr, East Peoria, IL 61611</div>
+        <div class="footer-contact"><div class="footer-phone"><div class="footer-phone-label">Call us</div><a href="tel:3099289080" class="footer-phone-number">(309) 928-9080</a></div></div>
+      </div>
+    </div>
+  </div>
+</footer>

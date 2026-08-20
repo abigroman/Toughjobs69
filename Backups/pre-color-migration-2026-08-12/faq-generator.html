@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ &amp; Schema Generator — Toughjobs Free Tools</title>
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Toughjobs" />
+<meta name="publisher" content="ToughJobs Digital Marketing" />
+<link rel="canonical" href="https://toughjobs.org/faq-generator.html" />
+
+  <meta name="description" content="Free SEO FAQ generator for home service businesses. Enter your trade and target keyword to instantly build a Google-readable Q&amp;A section plus valid FAQPage." />
+  <link rel="stylesheet" href="fonts.css" />
+  <link rel="stylesheet" href="shared-header.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --ink: #0A0F1C;
+      --white: #FFFFFF;
+      --accent: #C8262A;
+      --dark-red: #A90100;
+      --navy: #002768;
+      --gray-bg: #282828;
+      --line: #E3E7EE;
+      --smoke: #5B6471;
+      --paper: #F4F6FA;
+    }
+    body {
+      font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); }
+    a:hover { color: var(--dark-red); }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+
+    /* ── Intro ─────────────────────────────────────────── */
+    .tool-hero {
+      background: var(--ink);
+      color: var(--white);
+      padding: 64px 0 72px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 3px solid var(--accent);
+    }
+    .tool-hero::before {
+      content: "";
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+      background-size: 42px 42px;
+      pointer-events: none;
+    }
+    .tool-hero .wrap { position: relative; z-index: 1; }
+    .th-kicker {
+      display: inline-block;
+      font-family: "Archivo", sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: 12px;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+    .th-title {
+      font-family: "Archivo Black", sans-serif;
+      text-transform: uppercase;
+      font-size: clamp(32px, 5vw, 56px);
+      line-height: 1.0;
+      letter-spacing: -.015em;
+      margin-bottom: 18px;
+    }
+    .th-title .r { color: var(--accent); }
+    .th-lede {
+      max-width: 62ch;
+      font-size: 17px;
+      color: rgba(255,255,255,.82);
+    }
+
+    /* ── Layout ────────────────────────────────────────── */
+    .tool-body { padding: 48px 0 90px; }
+    .tool-grid {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    /* ── Form card ─────────────────────────────────────── */
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      box-shadow: 0 18px 44px -30px rgba(10,15,28,.4);
+    }
+    .form-card { padding: 30px 28px; position: sticky; top: 120px; }
+    .form-card h2 {
+      font-family: "Archivo Black", sans-serif;
+      text-transform: uppercase;
+      font-size: 18px;
+      letter-spacing: -.01em;
+      margin-bottom: 4px;
+    }
+    .form-card .sub { font-size: 13px; color: var(--smoke); margin-bottom: 22px; }
+    .field { margin-bottom: 18px; }
+    .field label {
+      display: block;
+      font-family: "Archivo", sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-size: 11px;
+      color: var(--ink);
+      margin-bottom: 7px;
+    }
+    .field label .opt { color: var(--smoke); font-weight: 600; letter-spacing: 0; text-transform: none; }
+    .field input, .field select {
+      width: 100%;
+      padding: 12px 13px;
+      font-family: "Archivo", sans-serif;
+      font-size: 14.5px;
+      color: var(--ink);
+      background: var(--white);
+      border: 1.5px solid var(--line);
+      border-radius: 7px;
+      transition: border-color .15s ease, box-shadow .15s ease;
+    }
+    .field input:focus, .field select:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(200,38,42,.14);
+    }
+    .field .hint { font-size: 11.5px; color: var(--smoke); margin-top: 6px; }
+
+    .credit-row {
+      display: flex;
+      gap: 11px;
+      align-items: flex-start;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 13px 14px;
+      margin: 6px 0 22px;
+    }
+    .credit-row input { width: 18px; height: 18px; margin-top: 2px; flex-shrink: 0; accent-color: var(--accent); }
+    .credit-row label { font-size: 12.5px; font-weight: 600; text-transform: none; letter-spacing: 0; color: var(--ink); line-height: 1.45; }
+    .credit-row label span { display: block; color: var(--smoke); font-size: 11.5px; margin-top: 3px; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      width: 100%;
+      padding: 15px 20px;
+      font-family: "Archivo Black", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      font-size: 14px;
+      color: var(--white);
+      background: var(--accent);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform .12s ease, background .15s ease;
+    }
+    .btn:hover { background: var(--dark-red); }
+    .btn:active { transform: translateY(1px); }
+    .btn.ghost {
+      background: transparent;
+      color: var(--ink);
+      border: 1.5px solid var(--line);
+      margin-top: 10px;
+    }
+    .btn.ghost:hover { border-color: var(--accent); color: var(--accent); background: transparent; }
+
+    /* ── Output panel ──────────────────────────────────── */
+    .output-card { padding: 0; overflow: hidden; min-height: 480px; }
+    .tabs {
+      display: flex;
+      border-bottom: 1px solid var(--line);
+      background: var(--paper);
+      flex-wrap: wrap;
+    }
+    .tab {
+      font-family: "Archivo", sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      font-size: 12px;
+      color: var(--smoke);
+      background: none;
+      border: none;
+      padding: 16px 20px;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      transition: color .15s ease, border-color .15s ease;
+    }
+    .tab:hover { color: var(--ink); }
+    .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+    .panel { display: none; padding: 30px 30px 34px; }
+    .panel.active { display: block; }
+
+    .panel-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .panel-toolbar h3 {
+      font-family: "Archivo Black", sans-serif;
+      text-transform: uppercase;
+      font-size: 15px;
+      letter-spacing: -.01em;
+    }
+    .mini-actions { display: flex; gap: 9px; flex-wrap: wrap; }
+    .mini-btn {
+      font-family: "Archivo", sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      font-size: 11px;
+      color: var(--ink);
+      background: var(--white);
+      border: 1.5px solid var(--line);
+      border-radius: 6px;
+      padding: 9px 13px;
+      cursor: pointer;
+      transition: all .14s ease;
+    }
+    .mini-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .mini-btn.solid { background: var(--ink); color: var(--white); border-color: var(--ink); }
+    .mini-btn.solid:hover { background: var(--accent); border-color: var(--accent); color: var(--white); }
+
+    .empty {
+      text-align: center;
+      padding: 90px 30px;
+      color: var(--smoke);
+    }
+    .empty .em-mark {
+      font-family: "Archivo Black", sans-serif;
+      font-size: 60px;
+      color: var(--line);
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+    .empty p { max-width: 42ch; margin: 0 auto; font-size: 15px; }
+
+    /* ── FAQ preview ───────────────────────────────────── */
+    .seo-faq-section h2.faq-head {
+      font-family: "Archivo Black", sans-serif;
+      text-transform: uppercase;
+      font-size: 24px;
+      letter-spacing: -.01em;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+    .faq-item {
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      margin-bottom: 12px;
+      overflow: hidden;
+      background: var(--white);
+      transition: box-shadow .18s ease;
+    }
+    .faq-item:hover { box-shadow: 0 10px 26px -20px rgba(10,15,28,.5); }
+    .faq-q {
+      width: 100%;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 17px 20px;
+      font-family: "Archivo", sans-serif;
+      font-weight: 800;
+      font-size: 15.5px;
+      color: var(--ink);
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .faq-q .chev {
+      flex-shrink: 0;
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--white);
+      display: grid;
+      place-items: center;
+      font-size: 15px;
+      transition: transform .22s ease;
+    }
+    .faq-item.open .faq-q .chev { transform: rotate(45deg); }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .28s ease;
+    }
+    .faq-a p {
+      padding: 0 20px 18px;
+      font-size: 14.5px;
+      color: #333B49;
+      margin: 0;
+    }
+    .faq-item.open .faq-a { max-height: 400px; }
+
+    /* ── Code blocks ───────────────────────────────────── */
+    pre.code {
+      background: #0d1526;
+      color: #d7e0f0;
+      border-radius: 9px;
+      padding: 20px 22px;
+      overflow-x: auto;
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 12.5px;
+      line-height: 1.65;
+      max-height: 560px;
+      overflow-y: auto;
+      white-space: pre;
+    }
+    pre.code .tag { color: #6fb3ff; }
+    pre.code .attr { color: #f4a15d; }
+    pre.code .str { color: #8ad19a; }
+    pre.code .key { color: #f4a15d; }
+
+    /* ── Usage notes ───────────────────────────────────── */
+    .notes h4 {
+      font-family: "Archivo Black", sans-serif;
+      text-transform: uppercase;
+      font-size: 14px;
+      margin: 24px 0 10px;
+      letter-spacing: -.01em;
+    }
+    .notes h4:first-child { margin-top: 0; }
+    .notes p, .notes li { font-size: 14.5px; color: #333B49; }
+    .notes ol, .notes ul { margin: 8px 0 4px 20px; }
+    .notes li { margin-bottom: 7px; }
+    .notes .checkbox-line { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 8px; }
+    .notes .checkbox-line::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .callout {
+      background: #FFF3F3;
+      border-left: 4px solid var(--accent);
+      padding: 14px 16px;
+      border-radius: 0 8px 8px 0;
+      font-size: 13.5px;
+      color: #5a1c1e;
+      margin: 16px 0;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--ink);
+      color: var(--white);
+      font-family: "Archivo", sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 13px 22px;
+      border-radius: 8px;
+      box-shadow: 0 14px 40px -14px rgba(0,0,0,.6);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s ease, transform .2s ease;
+      z-index: 200;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    @media (max-width: 900px) {
+      .tool-grid { grid-template-columns: 1fr; }
+      .form-card { position: static; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Universal Header injected here -->
+
+  <script src="back-cta.js"></script>
+
+  <section class="tool-hero">
+    <div class="wrap">
+      <span class="th-kicker">Free Tool · SEO &amp; AI Search</span>
+      <h1 class="th-title">FAQ &amp; <span class="r">schema</span> generator</h1>
+      <p class="th-lede">Enter your trade and target keyword to instantly build a clean, Google-readable Q&amp;A section — plus valid FAQPage schema markup that helps you show up in featured snippets, AI Overviews, and voice search.</p>
+    </div>
+  </section>
+
+  <main class="tool-body">
+    <div class="wrap">
+      <div class="tool-grid">
+
+        <!-- ── FORM ────────────────────────────────── -->
+        <aside class="card form-card">
+          <h2>Build your FAQ</h2>
+          <p class="sub">Two fields required. The rest sharpen the results.</p>
+
+          <div class="field">
+            <label for="f-trade">Profession / Trade</label>
+            <input id="f-trade" type="text" placeholder="e.g. plumber, roofer, HVAC contractor" autocomplete="off" />
+          </div>
+
+          <div class="field">
+            <label for="f-keyword">Target Keyword</label>
+            <input id="f-keyword" type="text" placeholder="e.g. emergency plumber in Peoria IL" autocomplete="off" />
+            <div class="hint">The exact phrase you want to rank for.</div>
+          </div>
+
+          <div class="field">
+            <label for="f-city">City / Service Area <span class="opt">(optional)</span></label>
+            <input id="f-city" type="text" placeholder="e.g. Peoria, IL" autocomplete="off" />
+          </div>
+
+          <div class="field">
+            <label for="f-biz">Business Name <span class="opt">(optional)</span></label>
+            <input id="f-biz" type="text" placeholder="e.g. Rivertown Plumbing" autocomplete="off" />
+          </div>
+
+          <div class="field">
+            <label for="f-tone">Tone</label>
+            <select id="f-tone">
+              <option value="professional">Professional</option>
+              <option value="friendly">Friendly</option>
+              <option value="trust">Trust-building</option>
+              <option value="sales">Sales-focused</option>
+              <option value="educational">Educational</option>
+            </select>
+          </div>
+
+          <div class="credit-row">
+            <input id="f-credit" type="checkbox" />
+            <label for="f-credit">Add a subtle Toughjobs credit to downloaded support files
+              <span>Off by default. Only touches downloads — never your live FAQ or schema.</span>
+            </label>
+          </div>
+
+          <button class="btn" id="btn-generate">Generate 20 Q&amp;As</button>
+          <button class="btn ghost" id="btn-regen" disabled style="opacity:.5">Regenerate questions</button>
+        </aside>
+
+        <!-- ── OUTPUT ──────────────────────────────── -->
+        <section class="card output-card">
+          <div class="tabs">
+            <button class="tab active" data-tab="preview">Preview</button>
+            <button class="tab" data-tab="html">Front-End HTML</button>
+            <button class="tab" data-tab="schema">JSON-LD Schema</button>
+            <button class="tab" data-tab="notes">Usage Notes</button>
+          </div>
+
+          <div class="panel active" data-panel="preview">
+            <div class="empty" id="empty-state">
+              <div class="em-mark">Q&amp;A</div>
+              <p>Fill in your trade and keyword on the left, then hit <strong>Generate</strong>. Your 20-question FAQ preview appears right here.</p>
+            </div>
+            <div id="preview-content" style="display:none">
+              <div class="panel-toolbar">
+                <h3>Live preview</h3>
+                <div class="mini-actions">
+                  <button class="mini-btn" id="dl-html">Download .html</button>
+                </div>
+              </div>
+              <div class="seo-faq-section" id="faq-render"></div>
+            </div>
+          </div>
+
+          <div class="panel" data-panel="html">
+            <div class="panel-toolbar">
+              <h3>Front-end HTML</h3>
+              <div class="mini-actions">
+                <button class="mini-btn solid" id="copy-html">Copy HTML</button>
+                <button class="mini-btn" id="dl-html2">Download .html</button>
+              </div>
+            </div>
+            <pre class="code" id="out-html">Generate your FAQ to see the HTML here.</pre>
+          </div>
+
+          <div class="panel" data-panel="schema">
+            <div class="panel-toolbar">
+              <h3>FAQPage JSON-LD schema</h3>
+              <div class="mini-actions">
+                <button class="mini-btn solid" id="copy-schema">Copy Schema</button>
+                <button class="mini-btn" id="dl-schema">Download .json</button>
+              </div>
+            </div>
+            <div class="callout" style="margin-top:0">Only add this schema to a page where the same questions and answers are <strong>visible</strong> to visitors. Schema for hidden content violates Google's guidelines.</div>
+            <pre class="code" id="out-schema">Generate your FAQ to see the schema here.</pre>
+          </div>
+
+          <div class="panel notes" data-panel="notes">
+            <div class="panel-toolbar"><h3>How to use this on your website</h3></div>
+            <h4>Where to place the FAQ</h4>
+            <p>Drop the front-end HTML near the bottom of the page it belongs to — a service page, a city/location page, or a landing page that already targets this keyword. FAQs work best when they answer questions that page is actually about.</p>
+
+            <h4>Two-step install</h4>
+            <ol>
+              <li>Paste the <strong>Front-End HTML</strong> into your page body where you want the questions to appear.</li>
+              <li>Paste the <strong>JSON-LD Schema</strong> into the page <code>&lt;head&gt;</code> or right before the closing <code>&lt;/body&gt;</code> tag.</li>
+            </ol>
+
+            <h4>Connecting AI later</h4>
+            <p>This tool generates questions from proven local-SEO templates, so it works instantly with no account. To swap in live AI writing later, a developer can replace the <code>generateWithAI()</code> placeholder in the page script with a call to your AI provider — the input fields and output formatting stay exactly the same.</p>
+
+            <h4>Quality checklist before publishing</h4>
+            <div class="checkbox-line">Read every answer out loud — it should sound like a real person, not a robot.</div>
+            <div class="checkbox-line">Confirm the visible questions match the schema questions exactly.</div>
+            <div class="checkbox-line">Remove any claim, price, or guarantee you can't back up.</div>
+            <div class="checkbox-line">Add real details — your hours, service area, and phone number.</div>
+            <div class="checkbox-line">Validate the schema in Google's Rich Results Test before going live.</div>
+            <div class="checkbox-line">Make sure the keyword reads naturally and isn't stuffed.</div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <div class="toast" id="toast">Copied to clipboard</div>
+
+  <script src="faq-generator.js"></script>
+  <script src="inject-header.js?v=20260802b"></script>
+  <script src="inject-footer.js"></script>
+  <script src="sticky-cta.js"></script>
+  <script src="accessibility.js?v=20260729"></script>
+  <script src="image-finder-tab.js"></script>
+</body>
+</html>

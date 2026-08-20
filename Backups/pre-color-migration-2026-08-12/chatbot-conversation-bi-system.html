@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Conversation Recording &amp; Business Intelligence System — Toughjobs</title>
+<meta name="robots" content="noindex, follow" />
+<meta name="author" content="Toughjobs" />
+<meta name="publisher" content="ToughJobs Digital Marketing" />
+<link rel="canonical" href="https://toughjobs.org/ai-automations.html" />
+
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --accent:#C8262A; --dark-red:#A90100; --navy:#002768;
+    --ink:#0A0F1C; --white:#FFFFFF; --gray:#282828;
+    --paper:#F4F2EF; --line:#dcd8d2; --muted:#6b6b6b;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{background:var(--gray);}
+  body{font-family:"Archivo",sans-serif;color:var(--ink);line-height:1.6;}
+  a{color:var(--accent);} a:hover{color:var(--dark-red);}
+
+  .masthead{background:var(--ink);color:var(--white);padding:40px;}
+  .kicker{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--accent);font-weight:600;}
+  .masthead h1{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:34px;line-height:1.05;letter-spacing:-.01em;margin:12px 0 10px;}
+  .masthead h1 .r{color:var(--accent);}
+  .masthead p{color:#c9ccd4;font-size:14px;max-width:75ch;}
+
+  .toc{background:var(--white);border-bottom:1px solid var(--line);padding:18px 40px;display:flex;gap:8px;flex-wrap:wrap;position:sticky;top:0;z-index:10;}
+  .toc a{font-family:"JetBrains Mono",monospace;font-size:11px;text-decoration:none;color:var(--ink);border:1px solid var(--line);padding:5px 10px;text-transform:uppercase;letter-spacing:.03em;}
+  .toc a:hover{background:var(--ink);color:#fff;border-color:var(--ink);}
+
+  .wrap{max-width:1080px;margin:0 auto;padding:40px;}
+  section{margin-bottom:52px;}
+  .sec-head{display:flex;align-items:baseline;gap:14px;border-bottom:3px solid var(--ink);padding-bottom:10px;margin-bottom:20px;}
+  .sec-num{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--accent);font-weight:700;}
+  .sec-head h2{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:24px;letter-spacing:-.01em;}
+
+  h3{font-family:"Archivo",sans-serif;font-weight:800;font-size:16px;text-transform:uppercase;letter-spacing:.02em;margin:22px 0 10px;color:var(--navy);}
+  p{font-size:15px;margin-bottom:10px;max-width:80ch;}
+  ul,ol{margin:0 0 14px 20px;font-size:15px;}
+  li{margin-bottom:6px;}
+  strong{font-weight:800;}
+
+  .card{background:#fff;border:1px solid var(--line);border-left:4px solid var(--navy);padding:18px 22px;margin-bottom:14px;}
+  .card.accent{border-left-color:var(--accent);}
+  .card.warn{border-left-color:#E8A33D;background:#fffaf0;}
+  .card.good{border-left-color:#1e7a3d;background:#f2faf4;}
+  .card h4{font-family:"JetBrains Mono",monospace;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--navy);font-weight:700;margin-bottom:6px;}
+  .card.warn h4{color:#a9700a;}
+  .card.good h4{color:#1e7a3d;}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+
+  table{width:100%;border-collapse:collapse;margin-bottom:16px;font-size:14px;}
+  th,td{text-align:left;padding:9px 12px;border:1px solid var(--line);vertical-align:top;}
+  th{background:var(--ink);color:#fff;font-family:"JetBrains Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.04em;}
+  tr:nth-child(even) td{background:var(--paper);}
+
+  .score{display:inline-block;font-family:"JetBrains Mono",monospace;font-weight:700;font-size:12px;padding:2px 8px;border-radius:2px;}
+  .score.high{background:var(--accent);color:#fff;}
+  .score.med{background:#E8A33D;color:#3a2600;}
+  .score.low{background:#c9ccd4;color:#2a2f3a;}
+
+  .record{background:var(--ink);color:#e4e6ea;border:1px solid #222;padding:20px 24px;margin-bottom:16px;font-family:"JetBrains Mono",monospace;font-size:12.5px;line-height:1.8;}
+  .record .rt{color:var(--accent);font-weight:700;}
+  .record .rk{color:#7f9cff;}
+  .record .rid{color:#9aa0ab;font-size:11px;}
+
+  .report{background:#fff;border:1px solid var(--line);padding:26px 30px;}
+  .report h4{font-family:"JetBrains Mono",monospace;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--navy);border-bottom:1px solid var(--line);padding-bottom:6px;margin:20px 0 8px;}
+  .report h4:first-child{margin-top:0;}
+
+  .privacy{background:var(--navy);color:#fff;padding:22px 26px;}
+  .privacy h4{color:#cfe0ff;}
+
+  footer{background:var(--ink);color:#9aa0ab;padding:24px 40px;font-family:"JetBrains Mono",monospace;font-size:11px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+  footer b{color:#fff;}
+
+  @media(max-width:760px){
+    .grid2,.grid3{grid-template-columns:1fr;}
+    .masthead,.wrap,.toc,footer{padding-left:18px;padding-right:18px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="kicker">Toughjobs · Chatbot Program</div>
+  <h1>Conversation Recording &amp; <span class="r">Business Intelligence</span> System</h1>
+  <p>How every chatbot conversation becomes data — what we save, what we never save, how leads get scored, when a human steps in, and how conversations turn into better FAQs, content, and services over time.</p>
+</div>
+
+<div class="toc">
+  <a href="#s1">1. Data Saved</a>
+  <a href="#s2">2. Never Saved</a>
+  <a href="#s3">3. Lead Scoring</a>
+  <a href="#s4">4. High-Intent Triggers</a>
+  <a href="#s5">5. Weekly Report</a>
+  <a href="#s6">6. Monthly Report</a>
+  <a href="#s7">7. FAQ Updates</a>
+  <a href="#s8">8. Content Ideas</a>
+  <a href="#s9">9. Service Ideas</a>
+  <a href="#s10">10. Privacy Notice</a>
+  <a href="#s11">11. Human Follow-Up</a>
+  <a href="#s12">Example Records</a>
+</div>
+
+<div class="wrap">
+
+  <section id="s1">
+    <div class="sec-head"><span class="sec-num">01</span><h2>What Information Should Be Saved</h2></div>
+    <p>Every conversation is logged as a structured record — enough to score the lead, spot patterns, and follow up like a human would remember. Nothing more.</p>
+    <div class="grid2">
+      <div class="card">
+        <h4>Visitor &amp; Session Data</h4>
+        <ul>
+          <li>Timestamp, page URL where chat started</li>
+          <li>Trade / service category discussed</li>
+          <li>Referral source (Google, ad, direct, social)</li>
+          <li>Device type (mobile / desktop)</li>
+          <li>City/region (if volunteered or from ad targeting — not IP-tracked)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Conversation Content</h4>
+        <ul>
+          <li>Full question-and-answer transcript</li>
+          <li>Topics/tags matched (e.g. "pricing," "roofing," "reviews")</li>
+          <li>Questions the bot could NOT answer confidently</li>
+          <li>Whether the visitor was offered a human handoff, and if they accepted</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Contact Info (only if given)</h4>
+        <ul>
+          <li>Name, phone, email, business name/trade — only if the visitor typed it in</li>
+          <li>Best time to call, project details volunteered</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Outcome Data</h4>
+        <ul>
+          <li>Lead score assigned (see Section 3)</li>
+          <li>CTA clicked (if any)</li>
+          <li>Escalated to human? Y/N + reason</li>
+          <li>Follow-up status (contacted, booked, no response)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="s2">
+    <div class="sec-head"><span class="sec-num">02</span><h2>What Should NOT Be Saved</h2></div>
+    <div class="card warn">
+      <h4>Excluded by Design</h4>
+      <ul>
+        <li><strong>No payment or financial info</strong> — the bot never asks for or accepts card numbers, bank details, or SSNs.</li>
+        <li><strong>No precise location tracking</strong> — no GPS coordinates or IP-based address lookups beyond general city/region.</li>
+        <li><strong>No sensitive personal data</strong> — health info, family details, immigration status, or anything unrelated to the service inquiry.</li>
+        <li><strong>No passwords or login credentials</strong>, even if a visitor accidentally pastes them.</li>
+        <li><strong>No permanent raw chat logs tied to identity</strong> beyond the retention window (see Privacy Notice) — old anonymous conversation data is aggregated into insight reports, then the identifiable record is purged.</li>
+        <li><strong>No third-party data sales</strong> — nothing collected here is ever sold or shared outside Toughjobs and the client business it was collected for.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="s3">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Lead Scoring Rules</h2></div>
+    <p>Every conversation gets a score so sales knows who to call first. Score is additive, capped at 100.</p>
+    <table>
+      <tr><th>Signal</th><th>Points</th><th>Why</th></tr>
+      <tr><td>Provided phone or email</td><td>+30</td><td>Direct contact possible</td></tr>
+      <tr><td>Asked about pricing/cost</td><td>+20</td><td>Budget-stage buyer</td></tr>
+      <tr><td>Asked "how do I get started" / booking language</td><td>+25</td><td>Ready to act</td></tr>
+      <tr><td>Mentioned a specific project or urgent need (e.g. "roof leaking now")</td><td>+20</td><td>Urgency = high conversion</td></tr>
+      <tr><td>Asked about guarantees / "will this work for me"</td><td>+10</td><td>Late-stage trust-check</td></tr>
+      <tr><td>Returning visitor (2nd+ chat session)</td><td>+15</td><td>Sustained interest</td></tr>
+      <tr><td>Only asked general/awareness questions ("what is SEO")</td><td>+5</td><td>Early-stage, nurture</td></tr>
+      <tr><td>Bounced after 1 message, no info given</td><td>+0</td><td>Low signal</td></tr>
+    </table>
+    <div class="grid3">
+      <div class="card good"><h4>High: 60–100</h4><p style="margin:0;">Route to sales same-day. Call within 2 hours during business hours.</p></div>
+      <div class="card warn"><h4>Medium: 25–59</h4><p style="margin:0;">Add to nurture list. Follow up via email/text within 24–48 hrs.</p></div>
+      <div class="card"><h4>Low: 0–24</h4><p style="margin:0;">No manual follow-up. Feeds content/FAQ insight only.</p></div>
+    </div>
+  </section>
+
+  <section id="s4">
+    <div class="sec-head"><span class="sec-num">04</span><h2>High-Intent Trigger Rules</h2></div>
+    <p>Certain phrases or behaviors trigger an <strong>immediate</strong> human alert, regardless of total score — these are moments where a live person closes the deal.</p>
+    <div class="card accent">
+      <h4>Instant Escalation Triggers</h4>
+      <ul>
+        <li>Visitor types phone number unprompted ("call me at...")</li>
+        <li>Emergency language: "leaking," "no heat," "urgent," "today," "ASAP"</li>
+        <li>Asks to speak to a real person / "can I talk to someone"</li>
+        <li>Explicitly asks for a quote/estimate on a specific project</li>
+        <li>Mentions a competitor by name and asks for comparison ("why you over X")</li>
+        <li>Expresses frustration or a complaint about a past experience</li>
+      </ul>
+      <p style="margin-top:10px;">On trigger: bot sends a real-time SMS/Slack alert to the assigned sales contact with the transcript link, and tells the visitor "Someone from our team will reach out shortly" (never leaves them hanging).</p>
+    </div>
+  </section>
+
+  <section id="s5">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Weekly Insight Report Template</h2></div>
+    <div class="report">
+      <h4>Header</h4>
+      <p>Week of [date range] · Total conversations · Total leads captured · High-intent alerts sent</p>
+      <h4>Top Questions Asked</h4>
+      <p>Ranked list of most common questions this week, with count.</p>
+      <h4>Questions the Bot Couldn't Answer Well</h4>
+      <p>Flagged gaps — candidates for new FAQ entries.</p>
+      <h4>Lead Score Breakdown</h4>
+      <p>Count of High / Medium / Low leads, and how many were followed up.</p>
+      <h4>Notable Conversations</h4>
+      <p>2–3 short highlights (a great save, a lost lead, a funny/telling moment).</p>
+      <h4>Action Items</h4>
+      <p>Suggested FAQ additions, follow-ups still pending, any pattern worth a call.</p>
+    </div>
+  </section>
+
+  <section id="s6">
+    <div class="sec-head"><span class="sec-num">06</span><h2>Monthly Business Improvement Report Template</h2></div>
+    <div class="report">
+      <h4>Header</h4>
+      <p>Month · Total conversations · Conversion rate (chat → lead → booked job) · Month-over-month trend</p>
+      <h4>Trade &amp; Service Demand Shifts</h4>
+      <p>Which trades/services generated the most chat interest this month vs. last — early signal for seasonal shifts or new service opportunities.</p>
+      <h4>Recurring Objections</h4>
+      <p>The top 3 pushbacks/hesitations heard across conversations (e.g. price, timeline doubts, "I already have a website").</p>
+      <h4>Content &amp; FAQ Gaps</h4>
+      <p>Rollup of the month's unanswered questions, grouped into themes, ready to become new FAQ entries or blog posts.</p>
+      <h4>Service Improvement Signals</h4>
+      <p>Any feature/service the market is asking for that Toughjobs doesn't yet offer.</p>
+      <h4>Recommendations</h4>
+      <p>3–5 concrete next steps: new FAQ batch, new landing page, new ad angle, new service pilot.</p>
+    </div>
+  </section>
+
+  <section id="s7">
+    <div class="sec-head"><span class="sec-num">07</span><h2>Suggested FAQ Update Process</h2></div>
+    <ol>
+      <li><strong>Flag</strong> — any question the bot answers with low confidence, or that a human had to step in for, gets auto-tagged "FAQ gap."</li>
+      <li><strong>Batch weekly</strong> — gaps are collected into a short list every Friday.</li>
+      <li><strong>Draft</strong> — write a short + full answer in the approved format, matching tone (honest, caring, practical, never pushy).</li>
+      <li><strong>Review</strong> — a human (owner or marketing lead) approves before it goes live — no unreviewed answers reach the bot.</li>
+      <li><strong>Publish &amp; monitor</strong> — new entry ships, and its usage is tracked for the next 2 weeks to confirm it's resolving the gap.</li>
+    </ol>
+  </section>
+
+  <section id="s8">
+    <div class="sec-head"><span class="sec-num">08</span><h2>Blog / Content Ideas Generated From Chats</h2></div>
+    <p>Real visitor questions are the best content research available. Process: cluster repeated questions by theme → pitch as blog posts or landing pages.</p>
+    <table>
+      <tr><th>Chat Pattern Observed</th><th>Content Idea</th></tr>
+      <tr><td>Frequent "how much does X cost" across trades</td><td>"What Does [Service] Actually Cost in [Region]?" pricing-transparency post</td></tr>
+      <tr><td>Repeated "can you guarantee rankings"</td><td>Blog: "Why No Honest Marketer Guarantees #1 on Google — And What We Guarantee Instead"</td></tr>
+      <tr><td>Multiple roofers asking about missed calls</td><td>"The Real Cost of a Missed Call for Roofing Contractors" + AI answering pitch</td></tr>
+      <tr><td>New-business owners asking about starting with no budget</td><td>Content hub / landing page for Sunday Startup program</td></tr>
+      <tr><td>Recurring "Wix vs. custom site" comparisons</td><td>Comparison post: DIY builders vs. a built-for-trades website</td></tr>
+    </table>
+  </section>
+
+  <section id="s9">
+    <div class="sec-head"><span class="sec-num">09</span><h2>Service Improvement Ideas Generated From Chats</h2></div>
+    <p>When enough conversations point to the same unmet need, it's a signal to build, not just answer.</p>
+    <table>
+      <tr><th>Signal</th><th>Possible Service Response</th></tr>
+      <tr><td>Many trades asking about missed calls during job hours</td><td>Package AI call-answering as a standalone add-on service</td></tr>
+      <tr><td>Frequent questions about review generation</td><td>Automated review-request tool bundled into every website package</td></tr>
+      <tr><td>Recurring requests for "small budget" options</td><td>Formalize a low-cost starter tier alongside Sunday Startup</td></tr>
+      <tr><td>Multiple trades in one category asking similar seasonal questions</td><td>Build a trade-specific seasonal marketing calendar/playbook to sell as a service</td></tr>
+      <tr><td>Visitors asking if Toughjobs handles ongoing social posting</td><td>Consider a "done-for-you" social content subscription</td></tr>
+    </table>
+  </section>
+
+  <section id="s10">
+    <div class="sec-head"><span class="sec-num">10</span><h2>Privacy-Safe Chatbot Notice</h2></div>
+    <div class="privacy">
+      <h4>Suggested On-Page Disclosure</h4>
+      <p style="color:#e4e9f7;">"This chat is answered by an assistant to help you get quick answers about Toughjobs' services. We save the conversation and any contact info you choose to share so our team can follow up — we never sell your information, and we don't collect payment details or precise location through this chat. You can ask to speak with a real person anytime."</p>
+      <h4>Retention</h4>
+      <p style="color:#e4e9f7;">Identifiable conversation records are kept for 90 days to support follow-up, then anonymized into aggregate insight data (topics, scores, trends) with contact info removed.</p>
+    </div>
+  </section>
+
+  <section id="s11">
+    <div class="sec-head"><span class="sec-num">11</span><h2>Human Follow-Up Rules</h2></div>
+    <div class="grid2">
+      <div class="card good">
+        <h4>High-Intent / Escalated</h4>
+        <ul>
+          <li>Alert sent in real time (SMS/Slack)</li>
+          <li>Human follow-up within 2 business hours</li>
+          <li>Phone call preferred over email for these</li>
+        </ul>
+      </div>
+      <div class="card warn">
+        <h4>Medium Score</h4>
+        <ul>
+          <li>Added to nurture sequence (email/text)</li>
+          <li>Personal follow-up within 24–48 hours</li>
+          <li>No more than 2 follow-up touches without a reply</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Low Score</h4>
+        <ul>
+          <li>No manual outreach — respects the visitor's low intent</li>
+          <li>May receive a single automated nurture email if opted in</li>
+        </ul>
+      </div>
+      <div class="card accent">
+        <h4>Always</h4>
+        <ul>
+          <li>Never re-contact someone who explicitly said "just looking"</li>
+          <li>Every human follow-up references what was actually discussed — no generic scripts</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="s12">
+    <div class="sec-head"><span class="sec-num">12</span><h2>Example Saved Conversation Records</h2></div>
+
+    <div class="record">
+      <div class="rid">RECORD #CB-10422 — 2026-07-02 14:12 CT</div><br/>
+      <span class="rk">Source:</span> Google Search → Roofing service page<br/>
+      <span class="rk">Trade:</span> Roofing &nbsp; <span class="rk">Device:</span> Mobile<br/>
+      <span class="rk">Topics:</span> missed calls, AI call answering<br/>
+      <span class="rk">Contact given:</span> Yes — name, phone<br/>
+      <span class="rk">Snippet:</span> "I miss calls all day I'm on roofs, does your AI thing actually work" → bot explained AI call answering + scheduling<br/>
+      <span class="rk">Lead Score:</span> <span class="rt">78 (High)</span> — phone given (+30), urgent pain point (+20), booking-adjacent question (+25)<br/>
+      <span class="rk">Escalated:</span> Yes — visitor gave phone unprompted<br/>
+      <span class="rk">Follow-up status:</span> Called same day, booked consult
+    </div>
+
+    <div class="record">
+      <div class="rid">RECORD #CB-10438 — 2026-07-03 09:47 CT</div><br/>
+      <span class="rk">Source:</span> Direct → Homepage<br/>
+      <span class="rk">Trade:</span> HVAC &nbsp; <span class="rk">Device:</span> Desktop<br/>
+      <span class="rk">Topics:</span> pricing, website cost<br/>
+      <span class="rk">Contact given:</span> No<br/>
+      <span class="rk">Snippet:</span> "how much for a website" → bot gave range + asked if he wanted a free quote, visitor said "just looking for now"<br/>
+      <span class="rk">Lead Score:</span> <span class="rt">20 (Low)</span> — pricing question (+20), no contact info, explicitly not ready<br/>
+      <span class="rk">Escalated:</span> No<br/>
+      <span class="rk">Follow-up status:</span> None — respects "just looking"
+    </div>
+
+    <div class="record">
+      <div class="rid">RECORD #CB-10455 — 2026-07-04 19:03 CT</div><br/>
+      <span class="rk">Source:</span> Facebook Ad → Sunday Startup landing page<br/>
+      <span class="rk">Trade:</span> General Contracting (new business) &nbsp; <span class="rk">Device:</span> Mobile<br/>
+      <span class="rk">Topics:</span> small budget, starting out, Sunday Startup<br/>
+      <span class="rk">Contact given:</span> Yes — name, email<br/>
+      <span class="rk">Snippet:</span> "just started my LLC, don't have much to spend yet, what's the Sunday thing" → bot explained free Sunday Startup sessions, asked to reserve a spot<br/>
+      <span class="rk">Lead Score:</span> <span class="rt">45 (Medium)</span> — email given (+30), general/awareness stage question (+5), returning-ish engagement (+10 for multi-question depth)<br/>
+      <span class="rk">Escalated:</span> No — nurture track<br/>
+      <span class="rk">Follow-up status:</span> Added to Sunday Startup reminder list
+    </div>
+
+    <div class="record">
+      <div class="rid">RECORD #CB-10471 — 2026-07-05 11:26 CT</div><br/>
+      <span class="rk">Source:</span> Google Search → Concrete &amp; Asphalt page<br/>
+      <span class="rk">Trade:</span> Concrete &amp; Asphalt Pavers &nbsp; <span class="rk">Device:</span> Mobile<br/>
+      <span class="rk">Topics:</span> guarantees, competitor comparison<br/>
+      <span class="rk">Contact given:</span> No<br/>
+      <span class="rk">Snippet:</span> "why should I use you over [competitor name]" → bot answered honestly without disparaging, offered a free audit<br/>
+      <span class="rk">Lead Score:</span> <span class="rt">35 (Medium)</span> — comparison question (+10), guarantee-adjacent trust question (+10), returning visitor same week (+15)<br/>
+      <span class="rk">Escalated:</span> Yes — competitor comparison trigger<br/>
+      <span class="rk">Follow-up status:</span> Emailed audit offer, no reply yet
+    </div>
+
+    <div class="record">
+      <div class="rid">RECORD #CB-10488 — 2026-07-06 16:55 CT</div><br/>
+      <span class="rk">Source:</span> Direct → Masonry service page<br/>
+      <span class="rk">Trade:</span> Masonry &amp; Bricklaying &nbsp; <span class="rk">Device:</span> Desktop<br/>
+      <span class="rk">Topics:</span> SEO basics, general awareness<br/>
+      <span class="rk">Contact given:</span> No<br/>
+      <span class="rk">Snippet:</span> "what is local seo even mean" → bot gave plain-language explanation<br/>
+      <span class="rk">Lead Score:</span> <span class="rt">5 (Low)</span> — pure awareness-stage question<br/>
+      <span class="rk">Escalated:</span> No<br/>
+      <span class="rk">Follow-up status:</span> None — feeds content/FAQ insight only
+    </div>
+  </section>
+
+  <section id="s13">
+    <div class="sec-head"><span class="sec-num">13</span><h2>Example Weekly Insight Report</h2></div>
+    <div class="report">
+      <h4>Header</h4>
+      <p>Week of June 29 – July 5, 2026 · 142 conversations · 38 leads captured · 6 high-intent alerts sent</p>
+      <h4>Top Questions Asked</h4>
+      <p>1. "How much does [service] cost?" (31×) · 2. "Do you guarantee results?" (19×) · 3. "How do I stop missing calls?" (17×, mostly roofing/HVAC) · 4. "What's the Sunday Startup program?" (14×) · 5. "Why you over [DIY builder / competitor]?" (12×)</p>
+      <h4>Questions the Bot Couldn't Answer Well</h4>
+      <p>Three visitors asked about financing/payment plans for larger website+ad packages — no confident answer exists yet. Flagged as an FAQ gap.</p>
+      <h4>Lead Score Breakdown</h4>
+      <p>High: 11 (9 followed up within 2 hrs, 2 pending) · Medium: 27 (19 followed up within 48 hrs) · Low: 104 (no manual follow-up, feeding content insight)</p>
+      <h4>Notable Conversations</h4>
+      <p>A roofing contractor who nearly left after a pricing question stayed after the bot mentioned the missed-call AI feature — booked a call same day (#CB-10422). Three separate concrete/paving visitors asked near-identical "seasonal slowdown" questions, worth a dedicated FAQ or blog post.</p>
+      <h4>Action Items</h4>
+      <ul>
+        <li>Draft new FAQ: "Do you offer financing or payment plans?"</li>
+        <li>Pitch blog post: "How to Stay Busy in the Off-Season" (concrete/paving angle)</li>
+        <li>Follow up on 2 pending high-intent leads before Monday</li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+
+
+    <section data-screen-label="Our Endeavors" class="gb-section" style="background:#ECEFF4;background-image:url('assets/white-engineering-background.webp');background-size:cover;background-position:center;padding:56px 32px;position:relative;overflow:hidden;box-shadow:inset 0 2px 2px rgba(0,0,0,.45), inset 0 -2px 2px rgba(0,0,0,.45);">
+    <div style="max-width:1240px;margin:0 auto;position:relative;z-index:1;">
+      <div class="gb-outer" style="display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center;">
+        <div>
+          <div style="margin-bottom:24px;">
+            <span style="font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:#C8262A;">More than marketing</span>
+            <h2 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(32px,3.6vw,50px);line-height:1.02;color:#0A0F1C;margin:12px 0 0;"><span style="color:#C8262A;">Two ways we</span> give back</h2>
+          </div>
+          <div class="gb-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch;">
+            <div class="gb-card" style="background:#002768;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;">
+              <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700;">01 / PARTNERSHIP</span>
+              <h3 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05;">Go independent, backed by us</h3>
+              <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 28px;">You bring the truck, tools, and skill. We hand you the website, brand, systems, and marketing to turn one truck into a real company.</p>
+              <a href="partnerships.html" style="display:inline-block;background:#C8262A;color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none;">Explore Partnership</a>
+            </div>
+            <div class="gb-card" style="background:#0A0F1C;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;">
+              <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700;">02 / HELPING HANDS</span>
+              <h3 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05;">A hand up when budget is tight</h3>
+              <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.8);margin:0 0 28px;">One day a week we help people with more grit than budget get a business off the ground — honest guidance, real direction, no pressure.</p>
+              <a href="helping-hands.html" style="display:inline-block;background:#C8262A;color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none;">Explore Helping Hands</a>
+            </div>
+          </div>
+        </div>
+        <div class="gb-img" style="position:relative;height:100%;min-height:420px;">
+          <img src="assets/trade-hero-excavation.webp" alt="Toughjobs tradesman on the job" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:top center;" />
+        </div>
+      </div>
+    </div>
+    <style>@media(max-width:900px){ .gb-outer{ grid-template-columns:1fr !important; } .gb-grid{ grid-template-columns:1fr !important; } .gb-img{ min-height:280px !important; order:-1; } }</style>
+  </section>
+
+<footer>
+  <span>TOUGHJOBS · CHATBOT CONVERSATION RECORDING &amp; BUSINESS INTELLIGENCE SYSTEM</span>
+  <span><b>(309) 928-9080</b> · Quad Cities · IL · IA · MO · WI · IN</span>
+</footer>
+
+<script src="accessibility.js?v=20260729"></script>
+<script src="image-finder-tab.js"></script>
+</body>
+</html>

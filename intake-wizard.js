@@ -126,14 +126,11 @@
     const buttons = S.hadProgress
       ? '<button class="btn" data-act="resume">Resume where I left off →</button><button class="btn btn-ghost" data-act="fresh">Start over</button>'
       : '<button class="btn" data-act="start">Start the intake →</button>';
-    return '<section class="bg-blueprint-dark" style="position:relative;color:var(--white);min-height:calc(100vh - 120px);display:flex;flex-direction:column;justify-content:center;padding-block:80px">' +
+    return '<section class="bg-blueprint-dark" style="position:relative;color:var(--white);min-height:calc(100vh - 120px);display:flex;align-items:center;padding-block:80px">' +
       marks("rgba(140,170,220,.28)") + stamp("TJ-INTAKE", "DISCOVERY", "rgba(140,170,220,.45)") +
-      '<div class="step-in" style="position:relative;z-index:2;padding:0 32px">' +
+      '<div class="container step-in" style="position:relative;z-index:2;max-width:980px">' +
       '<span class="eyebrow" style="color:var(--accent)">Business discovery · 16 questions · ~4 minutes</span>' +
       '<h1 class="display split" style="font-size:clamp(48px, 7vw, 104px);margin:20px 0 28px"><span class="a">Before we pitch you anything,</span> <span class="b">tell us how your business really works.</span></h1>' +
-      '<img src="assets/toughjobs-team-meeting.webp" alt="The Toughjobs team reviewing a client project" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;max-height:560px;object-fit:cover;margin-bottom:48px" />' +
-      '</div>' +
-      '<div class="container step-in" style="position:relative;z-index:2;max-width:980px">' +
       '<p style="max-width:660px;font-size:18px;line-height:1.6;color:rgba(255,255,255,.78);margin:0 0 36px">No fluff, no obligation. Answer straight and we\'ll come back with a clear read on where the fastest wins are — and whether we\'re even the right fit. Most answers are pick-a-box, and you can leave and come back anytime.</p>' +
       '<div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">' + buttons + '</div>' +
       '<div style="display:flex;gap:32px;margin-top:56px;flex-wrap:wrap">' + cats + '</div>' +
@@ -258,7 +255,7 @@
       '<p style="font-size:18px;line-height:1.6;color:rgba(255,255,255,.92);margin:0 auto 40px;max-width:600px">Your answers are in. Book a 30-minute strategy call and we\'ll walk you through where the fastest wins are — no pitch deck, no pressure.</p>' +
       '<div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">' +
       '<a class="btn btn-dark" href="contact.html">Book my strategy call →</a>' +
-      '<a class="btn" href="tel:+13099289080" style="background:rgba(0,0,0,.25);border:2px solid rgba(255,255,255,.5)">⚡ (309) 928-9080</a>' +
+      '<a class="btn" href="tel:+13093061140" style="background:rgba(0,0,0,.25);border:2px solid rgba(255,255,255,.5)">⚡ (309) 306-1140</a>' +
       '</div>' +
       '<p style="font-size:13px;color:rgba(255,255,255,.7);margin-top:28px">We\'ll review everything before the call. Your responses stay saved on this device.</p>' +
       '</div></section>';
@@ -289,17 +286,6 @@
       return goTo(S.step + 1);
     }
     if (btn.dataset.act === "submit") {
-      // Hand the completed intake to the shared lead store (localStorage today,
-      // Firebase too once leads-store.js is configured). Fire-and-forget so the
-      // thank-you screen never waits on the network. The STORE_KEY draft above
-      // is a separate concern — it exists so a half-finished wizard can resume.
-      if (window.LeadsStore) {
-        window.LeadsStore.addLead(Object.assign({}, S.contact, {
-          answers: S.answers,
-          source: "assessment",
-          ts: new Date().toISOString(),
-        }));
-      }
       S.submitted = true; render(); window.scrollTo({ top: 0, behavior: "smooth" }); return;
     }
     if (btn.dataset.editcontact) return goTo(CONTACT_STEP);

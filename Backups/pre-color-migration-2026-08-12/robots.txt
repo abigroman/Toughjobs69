@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /shared-header.html
+Disallow: /shared-footer.html

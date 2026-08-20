@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sitemap — Toughjobs | Marketing for the Trades</title>
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Toughjobs" />
+<meta name="publisher" content="ToughJobs Digital Marketing" />
+<link rel="canonical" href="https://toughjobs.org/sitemap.html" />
+
+<meta name="description" content="Full sitemap of every page on the Toughjobs site, with titles, descriptions, and last-updated dates." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared-header.css" />
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" fill="#0A0F1C"/>
+    <text x="50" y="58" font-family="Archivo Black, sans-serif" font-size="30" fill="#C8262A" text-anchor="middle">S</text>
+  </svg>
+</template>
+<style>
+  :root { --accent:#C8262A; --dark-red:#A90100; --navy:#002768; --ink:#0A0F1C; --white:#FFFFFF; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:"Archivo", sans-serif; background:var(--white); color:var(--ink); line-height:1.5; }
+  main { padding:64px 0 100px; }
+  .container { max-width:1280px; margin:0 auto; padding:0 24px; }
+  .page-head { margin-bottom:48px; }
+  .page-head h1 { font-family:"Archivo Black", sans-serif; font-size:clamp(36px,5vw,56px); text-transform:uppercase; letter-spacing:-0.02em; color:var(--ink); }
+  .page-head p { font-size:16px; color:rgba(10,15,28,.65); margin-top:12px; max-width:640px; }
+  .meta-line { font-size:13px; color:rgba(10,15,28,.5); margin-top:16px; font-family:monospace; }
+  .search-box { margin:32px 0; }
+  .search-box input { width:100%; max-width:420px; padding:14px 16px; font-size:15px; font-family:"Archivo",sans-serif; border:2px solid var(--ink); background:var(--white); color:var(--ink); }
+  .search-box input:focus { outline:none; border-color:var(--accent); }
+  .category { margin-bottom:56px; }
+  .category h2 { font-family:"Archivo Black", sans-serif; font-size:22px; text-transform:uppercase; letter-spacing:-0.01em; color:var(--navy); border-bottom:3px solid var(--accent); padding-bottom:14px; margin-bottom:4px; }
+  .category .count { font-size:12px; color:rgba(10,15,28,.5); font-weight:700; text-transform:uppercase; letter-spacing:.05em; }
+  table { width:100%; border-collapse:collapse; margin-top:16px; }
+  thead th { text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:rgba(10,15,28,.5); font-weight:800; padding:10px 12px; border-bottom:2px solid var(--ink); }
+  tbody tr { border-bottom:1px solid rgba(10,15,28,.1); }
+  tbody tr:hover { background:#f7f7f7; }
+  tbody td { padding:14px 12px; vertical-align:top; font-size:14px; }
+  td.col-page a { font-weight:700; color:var(--navy); text-decoration:none; }
+  td.col-page a:hover { color:var(--accent); text-decoration:underline; }
+  td.col-page .fname { display:block; font-size:11px; font-family:monospace; color:rgba(10,15,28,.45); margin-top:2px; }
+  td.col-desc { color:rgba(10,15,28,.75); max-width:420px; }
+  td.col-date { font-family:monospace; font-size:13px; white-space:nowrap; color:rgba(10,15,28,.6); }
+  .badge-new { display:inline-block; font-size:10px; font-weight:800; text-transform:uppercase; background:var(--accent); color:var(--white); padding:2px 6px; margin-left:6px; letter-spacing:.03em; }
+  .empty-state { padding:40px; text-align:center; color:rgba(10,15,28,.5); }
+  .img-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:16px; margin-top:16px; }
+  .img-card { border:1px solid rgba(10,15,28,.12); overflow:hidden; background:#fafafa; }
+  .img-card .thumb { width:100%; height:110px; object-fit:cover; display:block; background:#eee; }
+  .img-card .label { padding:8px 10px; font-size:11px; font-family:monospace; color:rgba(10,15,28,.7); word-break:break-all; }
+  .img-card .ext { display:inline-block; font-size:10px; font-weight:800; background:var(--navy); color:var(--white); padding:1px 6px; margin-bottom:4px; }
+  footer { background:var(--ink); color:var(--white); padding:40px 0; margin-top:40px; }
+  footer .container { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
+  footer p { font-size:13px; opacity:.7; }
+  footer a { color:var(--white); opacity:.85; }
+</style>
+</head>
+<body>
+
+<main>
+  <div class="container">
+    <div class="page-head">
+      <h1>Sitemap</h1>
+      <p>Every page on the Toughjobs site — title, meta description, and when it was created or last updated. Generated automatically from the live site files.</p>
+      <div class="meta-line" id="genMeta">Loading…</div>
+    </div>
+    <div class="search-box">
+      <input type="text" id="filterInput" aria-label="Filter pages" placeholder="Filter by page name, title, or description…" />
+    </div>
+    <div id="results"></div>
+
+    <div class="page-head" style="margin-top:64px">
+      <h2 style="font-family:'Archivo Black',sans-serif;font-size:32px;text-transform:uppercase;letter-spacing:-0.02em">Images</h2>
+      <p>Every image asset in <code>assets/</code>, grouped by what it's used for.</p>
+      <div class="meta-line" id="imgMeta">Loading…</div>
+    </div>
+    <div class="search-box">
+      <input type="text" id="imgFilterInput" aria-label="Filter images" placeholder="Filter images by filename or category…" />
+    </div>
+    <div id="imgResults"></div>
+  </div>
+</main>
+
+    <section data-screen-label="Our Endeavors" class="gb-section" style="background:#ECEFF4;background-image:url('assets/white-engineering-background.webp');background-size:cover;background-position:center;padding:56px 32px;position:relative;overflow:hidden;box-shadow:inset 0 2px 2px rgba(0,0,0,.45), inset 0 -2px 2px rgba(0,0,0,.45);">
+    <div style="max-width:1240px;margin:0 auto;position:relative;z-index:1;">
+      <div class="gb-outer" style="display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center;">
+        <div>
+          <div style="margin-bottom:24px;">
+            <span style="font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:#C8262A;">More than marketing</span>
+            <h2 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(32px,3.6vw,50px);line-height:1.02;color:#0A0F1C;margin:12px 0 0;"><span style="color:#C8262A;">Two ways we</span> give back</h2>
+          </div>
+          <div class="gb-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch;">
+            <div class="gb-card" style="background:#002768;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;">
+              <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700;">01 / PARTNERSHIP</span>
+              <h3 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05;">Go independent, backed by us</h3>
+              <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 28px;">You bring the truck, tools, and skill. We hand you the website, brand, systems, and marketing to turn one truck into a real company.</p>
+              <a href="partnerships.html" style="display:inline-block;background:#C8262A;color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none;">Explore Partnership</a>
+            </div>
+            <div class="gb-card" style="background:#0A0F1C;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;">
+              <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700;">02 / HELPING HANDS</span>
+              <h3 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05;">A hand up when budget is tight</h3>
+              <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.8);margin:0 0 28px;">One day a week we help people with more grit than budget get a business off the ground — honest guidance, real direction, no pressure.</p>
+              <a href="helping-hands.html" style="display:inline-block;background:#C8262A;color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none;">Explore Helping Hands</a>
+            </div>
+          </div>
+        </div>
+        <div class="gb-img" style="position:relative;height:100%;min-height:420px;">
+          <img src="assets/trade-hero-excavation.webp" alt="Toughjobs tradesman on the job" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:top center;" />
+        </div>
+      </div>
+    </div>
+    <style>@media(max-width:900px){ .gb-outer{ grid-template-columns:1fr !important; } .gb-grid{ grid-template-columns:1fr !important; } .gb-img{ min-height:280px !important; order:-1; } }</style>
+  </section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Toughjobs Digital. All rights reserved.</p>
+    <p><a href="sitemap-manifest.json">View raw manifest JSON</a></p>
+  </div>
+</footer>
+<script>
+function categorize(file) {
+  if (file === 'index.html') return 'Main Pages';
+  if (/^trade-/.test(file)) return 'Trade Pages';
+  if (/^primer-/.test(file)) return 'Free Resources (Trade Primers)';
+  if (/^service-/.test(file) && file !== 'services.html') return 'Service Detail Pages';
+  if (/-ia\.html$|-il\.html$/.test(file)) return 'Service Area / City Pages';
+  if (/^(privacy|terms|legal)\.html$/.test(file)) return 'Legal';
+  if (['services.html','websites.html','seo.html','local-seo.html','social-media.html','paid-ads.html','branding.html','ai-automations.html','coaching.html','database-reactivation.html','software.html','ppc-analysis.html','competitor-snapshot.html','wraps.html'].includes(file)) return 'Services';
+  if (['about.html','contact.html','partnerships.html','free-tools.html','jobs.html','intake.html','service-areas.html','service-areas-standalone.html','design-system.html','sitemap.html'].includes(file)) return 'Main Pages';
+  return 'Other';
+}
+
+const categoryOrder = ['Main Pages','Services','Trade Pages','Free Resources (Trade Primers)','Service Detail Pages','Service Area / City Pages','Legal','Other'];
+
+fetch('sitemap-manifest.json').then(r => r.json()).then(manifest => {
+  const entries = Object.keys(manifest).map(file => ({ file, ...manifest[file] }));
+  const byCat = {};
+  entries.forEach(e => {
+    const cat = categorize(e.file);
+    (byCat[cat] = byCat[cat] || []).push(e);
+  });
+  categoryOrder.forEach(cat => { if (byCat[cat]) byCat[cat].sort((a,b) => a.file.localeCompare(b.file)); });
+
+  const mostRecent = entries.reduce((max,e) => e.updated > max ? e.updated : max, '0000-00-00');
+  document.getElementById('genMeta').textContent = entries.length + ' pages indexed · most recent update: ' + mostRecent + ' · refreshed weekly';
+
+  function render(filterText) {
+    const container = document.getElementById('results');
+    container.innerHTML = '';
+    const q = (filterText || '').toLowerCase();
+    let totalShown = 0;
+    categoryOrder.forEach(cat => {
+      const list = (byCat[cat] || []).filter(e =>
+        !q || e.file.toLowerCase().includes(q) || e.title.toLowerCase().includes(q) || (e.desc||'').toLowerCase().includes(q)
+      );
+      if (!list.length) return;
+      totalShown += list.length;
+      const section = document.createElement('div');
+      section.className = 'category';
+      section.innerHTML = '<h2>' + cat + ' <span class="count">(' + list.length + ')</span></h2>';
+      const table = document.createElement('table');
+      table.innerHTML = '<thead><tr><th>Page</th><th>Description</th><th>Created</th><th>Updated</th></tr></thead>';
+      const tbody = document.createElement('tbody');
+      list.forEach(e => {
+        const tr = document.createElement('tr');
+        const isNew = e.created === e.updated && e.created === mostRecent;
+        tr.innerHTML =
+          '<td class="col-page"><a href="' + e.file + '">' + (e.title || e.file) + '</a><span class="fname">' + e.file + '</span></td>' +
+          '<td class="col-desc">' + (e.desc || '<span style="opacity:.4">— no meta description —</span>') + '</td>' +
+          '<td class="col-date">' + e.created + '</td>' +
+          '<td class="col-date">' + e.updated + (e.updated === mostRecent ? '<span class="badge-new">Latest</span>' : '') + '</td>';
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+      section.appendChild(table);
+      container.appendChild(section);
+    });
+    if (!totalShown) {
+      container.innerHTML = '<div class="empty-state">No pages match your filter.</div>';
+    }
+  }
+
+  render('');
+  document.getElementById('filterInput').addEventListener('input', e => render(e.target.value));
+}).catch(err => {
+  document.getElementById('results').innerHTML = '<div class="empty-state">Could not load sitemap-manifest.json — ' + err.message + '</div>';
+});
+
+fetch('images-manifest.json').then(r => r.json()).then(images => {
+  document.getElementById('imgMeta').textContent = images.length + ' images indexed';
+  const byCat = {};
+  images.forEach(img => { (byCat[img.category] = byCat[img.category] || []).push(img); });
+  const catNames = Object.keys(byCat).sort();
+
+  function render(filterText) {
+    const container = document.getElementById('imgResults');
+    container.innerHTML = '';
+    const q = (filterText || '').toLowerCase();
+    let totalShown = 0;
+    catNames.forEach(cat => {
+      const list = byCat[cat].filter(img => !q || img.file.toLowerCase().includes(q) || cat.toLowerCase().includes(q));
+      if (!list.length) return;
+      totalShown += list.length;
+      const section = document.createElement('div');
+      section.className = 'category';
+      section.innerHTML = '<h2>' + cat + ' <span class="count">(' + list.length + ')</span></h2>';
+      const grid = document.createElement('div');
+      grid.className = 'img-grid';
+      list.forEach(img => {
+        const card = document.createElement('div');
+        card.className = 'img-card';
+        card.innerHTML = '<img class="thumb" src="assets/' + img.file + '" alt="Preview of ' + img.file" loading="lazy" onerror="this.style.display=\'none\'" />' +
+          '<div class="label"><span class="ext">' + img.ext + '</span><br>' + img.file + '</div>';
+        grid.appendChild(card);
+      });
+      section.appendChild(grid);
+      container.appendChild(section);
+    });
+    if (!totalShown) container.innerHTML = '<div class="empty-state">No images match your filter.</div>';
+  }
+  render('');
+  document.getElementById('imgFilterInput').addEventListener('input', e => render(e.target.value));
+}).catch(err => {
+  document.getElementById('imgResults').innerHTML = '<div class="empty-state">Could not load images-manifest.json — ' + err.message + '</div>';
+});
+</script>
+<script src="back-cta.js"></script>
+<script src="sticky-cta.js"></script>
+<script src="cookie-consent.js"></script>
+<script src="chat-launcher.js?v=20260729"></script>
+<script src="inject-header.js?v=20260802b"></script>
+<script src="accessibility.js?v=20260729"></script>
+<script src="image-finder-tab.js"></script>
+</body>
+</html>

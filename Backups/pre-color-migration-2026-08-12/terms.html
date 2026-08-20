@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toughjobs — Marketing for the Trades</title>
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Toughjobs" />
+<meta name="publisher" content="ToughJobs Digital Marketing" />
+<link rel="canonical" href="https://toughjobs.org/terms.html" />
+
+<meta name="description" content="Toughjobs — Marketing for the Trades — Toughjobs Digital Marketing, marketing built for the trades. Serving Illinois, Iowa, Missouri, Wisconsin and Indiana." />
+  <link rel="stylesheet" href="fonts.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --ink: #0A0F1C;
+      --white: #FFFFFF;
+      --accent: #C8262A;
+      --navy: #002768;
+      --gray-bg: #282828;
+      --nav-height: 100px;
+    }
+    body {
+      font-family: "Archivo", sans-serif;
+      background: var(--white);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    .container { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+
+    /* ── HEADER ─────────────────────────────────────────────────── */
+    header {
+      background: var(--ink);
+      color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      height: var(--nav-height);
+      transition: height 0.3s ease;
+      border-bottom: 2px solid rgba(200, 38, 42, .3);
+      width: 100%;
+    }
+    header.scrolled {
+      height: 50px;
+      --nav-height: 50px;
+    }
+    header > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      padding: 0 32px;
+      max-width: 100%;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      text-decoration: none;
+      color: var(--white);
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+    .nav-logo img {
+      height: 100px;
+      width: 150px;
+      object-fit: contain;
+      transition: all 0.3s ease;
+    }
+    header.scrolled .nav-logo img {
+      height: 50px;
+      width: 75px;
+    }
+    .nav-logo-text {
+      font-family: "Archivo Black", sans-serif;
+      font-size: 28px;
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+      text-transform: uppercase;
+      font-weight: 900;
+      transition: font-size 0.3s ease;
+    }
+    header.scrolled .nav-logo-text {
+      font-size: 16px;
+    }
+    .nav-logo-text .tough { color: var(--accent); }
+    .nav-logo-text .jobs { color: var(--white); }
+
+    nav {
+      display: flex;
+      gap: 28px;
+      flex-wrap: nowrap;
+      align-items: center;
+      flex: 1;
+      justify-content: center;
+    }
+    nav a {
+      font-family: "Archivo", sans-serif;
+      font-weight: 700;
+      font-size: 11.5px;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      text-transform: uppercase;
+      color: var(--white);
+      text-decoration: none;
+      padding: 8px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.15s ease, color 0.15s ease;
+    }
+    nav a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    nav a.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    .nav-right {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      margin-left: auto;
+    }
+    .nav-phone {
+      color: var(--white);
+      text-decoration: none;
+      font-family: "Archivo", sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+    .btn {
+      background: var(--accent);
+      color: var(--white);
+      padding: 14px 22px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      font-family: "Archivo", sans-serif;
+      text-transform: uppercase;
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    main { min-height: 400px; padding: 0 0 80px; }
+    h1 { font-family: "Archivo Black", sans-serif; font-size: clamp(44px, 6vw, 72px); text-transform: uppercase; margin: 12px 0; line-height: 0.95; letter-spacing: -0.01em; }
+    p { margin: 16px 0; }
+    a { color: var(--accent); }
+    a:hover { color: var(--navy); }
+
+    /* ── LEGAL PAGE ─────────────────────────────────────────────── */
+    .legal-hero {
+      background: var(--ink);
+      color: var(--white);
+      padding: 72px 0 64px;
+      border-bottom: 4px solid var(--accent);
+    }
+    .legal-hero .eyebrow {
+      font-family: "Archivo", sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 12px;
+      color: var(--accent);
+    }
+    .legal-hero h1 { color: var(--white); }
+    .legal-hero .accent { color: var(--accent); }
+    .legal-hero .updated {
+      font-family: ui-monospace, Menlo, monospace;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,.6);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .legal-hero .lede {
+      max-width: 760px;
+      font-size: 17px;
+      line-height: 1.7;
+      color: rgba(255,255,255,.82);
+      margin: 0;
+    }
+
+    .legal-wrap {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 48px;
+      padding-top: 64px;
+      align-items: start;
+    }
+    .legal-toc {
+      position: sticky;
+      top: 120px;
+      align-self: start;
+    }
+    .legal-toc h4 {
+      font-family: "Archivo", sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 13px;
+      line-height: 1.2;
+      color: var(--accent);
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid rgba(10,15,28,.14);
+    }
+    .legal-toc ol {
+      list-style: none;
+      counter-reset: toc;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .legal-toc li { counter-increment: toc; }
+    .legal-toc a {
+      display: grid;
+      grid-template-columns: 26px 1fr;
+      gap: 8px;
+      align-items: baseline;
+      font-family: "Archivo", sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--ink);
+      text-decoration: none;
+      padding: 4px 0;
+      opacity: 0.92;
+      transition: color .15s ease, opacity .15s ease;
+    }
+    .legal-toc a::before {
+      content: counter(toc, decimal-leading-zero);
+      font-family: ui-monospace, Menlo, monospace;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--accent);
+    }
+    .legal-toc a:hover { color: var(--accent); opacity: 1; }
+    .legal-toc a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .legal-body { max-width: 780px; }
+    .legal-section { padding: 0 0 40px; scroll-margin-top: 120px; }
+    .legal-section h2 {
+      font-family: "Archivo Black", sans-serif;
+      text-transform: uppercase;
+      font-size: 24px;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      margin: 0 0 16px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid rgba(10,15,28,.1);
+    }
+    .legal-section h2 .num {
+      font-family: ui-monospace, Menlo, monospace;
+      font-size: 14px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .legal-section h3 {
+      font-family: "Archivo", sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      font-size: 14px;
+      color: var(--navy);
+      margin: 24px 0 6px;
+    }
+    .legal-section p { font-size: 15.5px; line-height: 1.7; color: #26303f; }
+    .legal-section ul {
+      margin: 12px 0;
+      padding-left: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .legal-section li {
+      font-size: 15.5px;
+      line-height: 1.6;
+      color: #26303f;
+      padding-left: 22px;
+      position: relative;
+    }
+    .legal-section li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+    }
+    .callout {
+      background: #F4F5F7;
+      border-left: 4px solid var(--accent);
+      padding: 18px 22px;
+      margin: 18px 0;
+    }
+    .callout p { margin: 0; color: var(--ink); }
+
+    @media (max-width: 860px) {
+      .legal-wrap { grid-template-columns: 1fr; gap: 32px; }
+      .legal-toc { position: static; top: auto; }
+    }
+
+    /* ── FOOTER ─────────────────────────────────────────────────── */
+    footer {
+      background: var(--ink);
+      color: var(--white);
+      padding: 40px 0;
+      text-align: center;
+      font-size: 13px;
+      margin-top: 80px;
+    }
+  </style>
+<style id="white-texture-sweep">
+/* Engineering blueprint texture on all white surfaces */
+.bg-white, .bg-light, .light-section, .on-light, .blurbs-section {
+  background-color:#FFFFFF !important;
+  background-image:url('assets/partnership-schematics-light.webp') !important;
+  background-size:cover !important;
+  background-position:center !important;
+  background-attachment:fixed !important;
+}
+</style>
+<style id="white-texture-body">
+body { background-image:url('assets/partnership-schematics-light.webp') !important; background-size:cover !important; background-position:center !important; background-attachment:fixed !important; background-color:#FFFFFF !important; }
+</style>
+<link rel="stylesheet" href="shared-header.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="legal-hero">
+      <div class="container">
+        <span class="eyebrow">Legal</span>
+        <h1>Terms &amp; <span class="accent">Conditions</span></h1>
+        <div class="updated">Last updated: July 8, 2026</div>
+        <p class="lede">These Terms &amp; Conditions govern your access to and use of the Toughjobs website and the marketing, branding, advertising, and related services we provide. Please read them carefully. By using our website or engaging our services, you agree to be bound by these Terms.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="legal-wrap">
+        <aside class="legal-toc">
+          <h4>On this page</h4>
+          <ol>
+            <li><a href="#acceptance">Acceptance of Terms</a></li>
+            <li><a href="#definitions">Definitions</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#client">Client Responsibilities</a></li>
+            <li><a href="#fees">Fees &amp; Payment</a></li>
+            <li><a href="#term">Term &amp; Termination</a></li>
+            <li><a href="#ip">Intellectual Property</a></li>
+            <li><a href="#thirdparty">Third-Party Platforms</a></li>
+            <li><a href="#results">No Guarantee of Results</a></li>
+            <li><a href="#confidentiality">Confidentiality</a></li>
+            <li><a href="#warranties">Disclaimer of Warranties</a></li>
+            <li><a href="#liability">Limitation of Liability</a></li>
+            <li><a href="#indemnification">Indemnification</a></li>
+            <li><a href="#communications">Electronic Communications</a></li>
+            <li><a href="#law">Governing Law &amp; Disputes</a></li>
+            <li><a href="#changes">Changes to These Terms</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ol>
+        </aside>
+
+        <div class="legal-body">
+          <div class="legal-section" id="acceptance">
+            <h2><span class="num">01</span>Acceptance of Terms</h2>
+            <p>These Terms &amp; Conditions (“Terms”) form a legally binding agreement between you (“you,” “Client,” or “user”) and Toughjobs Digital Marketing (“Toughjobs,” “we,” “us,” or “our”). By accessing this website, requesting a quote, or engaging us for services, you acknowledge that you have read, understood, and agree to be bound by these Terms and by our <a href="privacy.html">Privacy Policy</a>.</p>
+            <p>If you do not agree with these Terms, you must not use our website or services. Where a separate written services agreement, proposal, or statement of work (“SOW”) is signed between you and Toughjobs, that document controls to the extent it conflicts with these Terms.</p>
+          </div>
+
+          <div class="legal-section" id="definitions">
+            <h2><span class="num">02</span>Definitions</h2>
+            <ul>
+              <li><strong>“Services”</strong> means the marketing, website development, search engine optimization, paid advertising, branding, fleet wrap design, content, and related deliverables we provide.</li>
+              <li><strong>“Deliverables”</strong> means the work product created for you under an SOW, such as websites, ad campaigns, designs, and reports.</li>
+              <li><strong>“Client Materials”</strong> means logos, photos, videos, copy, trademarks, account access, and other content or credentials you provide.</li>
+              <li><strong>“Third-Party Platforms”</strong> means services operated by others — such as Google, Meta, Microsoft, hosting providers, and payment processors — that we use to deliver Services.</li>
+            </ul>
+          </div>
+
+          <div class="legal-section" id="services">
+            <h2><span class="num">03</span>Our Services</h2>
+            <p>Toughjobs provides digital marketing and creative services to trades and home-service businesses. The specific scope, deliverables, timelines, and fees for any engagement are described in the applicable proposal or SOW. We may use subcontractors or third-party tools to perform the Services, and we remain responsible for the Services delivered to you.</p>
+            <p>We may make reasonable changes to the way Services are performed provided the changes do not materially reduce the scope or quality agreed in your SOW. Any material change in scope will be documented and, where it affects fees, approved by you before work proceeds.</p>
+          </div>
+
+          <div class="legal-section" id="client">
+            <h2><span class="num">04</span>Client Responsibilities</h2>
+            <p>To deliver results, we rely on your timely cooperation. You agree to:</p>
+            <ul>
+              <li>Provide accurate, complete, and lawful Client Materials and business information.</li>
+              <li>Grant and maintain the access we need to your website, hosting, domain, analytics, advertising, and business profile accounts.</li>
+              <li>Review deliverables and provide approvals or feedback promptly so campaigns and projects stay on schedule.</li>
+              <li>Ensure you own or have the rights to all Client Materials you supply, and that they do not infringe any third party’s rights or violate any law.</li>
+              <li>Comply with the terms, policies, and advertising rules of any Third-Party Platform used in your campaigns.</li>
+            </ul>
+            <p>Delays or failures in meeting these responsibilities may affect timelines and results, and are not the responsibility of Toughjobs.</p>
+          </div>
+
+          <div class="legal-section" id="fees">
+            <h2><span class="num">05</span>Fees &amp; Payment</h2>
+            <p>Fees for Services are set out in your proposal or SOW. Unless stated otherwise:</p>
+            <ul>
+              <li>Recurring service fees are billed in advance on a monthly basis and are due on the invoice date.</li>
+              <li>Advertising “ad spend” paid to Third-Party Platforms is separate from our management fees and is your responsibility, whether billed directly to you or passed through us.</li>
+              <li>Invoices not paid when due may accrue interest at the lesser of 1.5% per month or the maximum permitted by law, and we may pause Services until the account is current.</li>
+              <li>Fees are non-refundable except where required by law or expressly stated in your SOW. Set-up fees and completed work are non-refundable.</li>
+              <li>You are responsible for any applicable taxes, other than taxes on our net income.</li>
+            </ul>
+          </div>
+
+          <div class="legal-section" id="term">
+            <h2><span class="num">06</span>Term &amp; Termination</h2>
+            <p>Engagements continue for the term stated in your SOW and, where applicable, renew on a month-to-month basis until cancelled. Either party may terminate an engagement for convenience with the notice period stated in the SOW (or, if none is stated, thirty (30) days’ written notice).</p>
+            <p>Either party may terminate immediately if the other party materially breaches these Terms and fails to cure the breach within fifteen (15) days of written notice. On termination, you agree to pay for all Services performed and costs incurred through the effective date of termination.</p>
+          </div>
+
+          <div class="legal-section" id="ip">
+            <h2><span class="num">07</span>Intellectual Property</h2>
+            <h3>Deliverables</h3>
+            <p>Upon full payment of all amounts due, we assign to you the ownership rights in the final Deliverables created specifically for you, excluding any third-party or pre-existing materials.</p>
+            <h3>Our Materials &amp; Tools</h3>
+            <p>We retain all rights in our pre-existing methods, know-how, templates, software, code libraries, and internal tools used to create Deliverables. Where these are embedded in a Deliverable, we grant you a non-exclusive, perpetual license to use them as part of that Deliverable.</p>
+            <h3>Client Materials</h3>
+            <p>You retain all rights in your Client Materials and grant us a license to use them solely to perform the Services.</p>
+            <h3>Portfolio Use</h3>
+            <p>Unless you tell us otherwise in writing, we may reference your name, logo, and non-confidential Deliverables in our portfolio, case studies, and marketing.</p>
+          </div>
+
+          <div class="legal-section" id="thirdparty">
+            <h2><span class="num">08</span>Third-Party Platforms</h2>
+            <p>Our Services often rely on Third-Party Platforms that we do not own or control. Your use of those platforms is subject to their own terms and policies, and they may change features, pricing, policies, or account status at any time. Toughjobs is not responsible for the acts, omissions, outages, policy changes, account suspensions, or price changes of any Third-Party Platform.</p>
+          </div>
+
+          <div class="legal-section" id="results">
+            <h2><span class="num">09</span>No Guarantee of Results</h2>
+            <div class="callout">
+              <p><strong>Important:</strong> Marketing outcomes depend on many factors outside our control — market conditions, competition, seasonality, your pricing and service quality, and the policies and algorithms of search engines and advertising platforms.</p>
+            </div>
+            <p>While we apply proven strategies and industry best practices and work hard to grow your business, we do not and cannot guarantee specific rankings, traffic levels, lead volume, conversion rates, revenue, or return on investment. Any projections, examples, or past results are illustrative and are not a promise of future performance. No employee or representative of Toughjobs is authorized to make performance guarantees except in a signed writing.</p>
+          </div>
+
+          <div class="legal-section" id="confidentiality">
+            <h2><span class="num">10</span>Confidentiality</h2>
+            <p>Each party may access confidential information of the other. Both parties agree to keep such information confidential, to use it only to perform under these Terms, and to protect it with reasonable care. This obligation does not apply to information that is public through no fault of the receiving party, was already known, is independently developed, or is required to be disclosed by law.</p>
+          </div>
+
+          <div class="legal-section" id="warranties">
+            <h2><span class="num">11</span>Disclaimer of Warranties</h2>
+            <p>The website and Services are provided on an “as is” and “as available” basis. To the fullest extent permitted by law, Toughjobs disclaims all warranties of any kind, whether express or implied, including implied warranties of merchantability, fitness for a particular purpose, title, and non-infringement. We do not warrant that the website or Services will be uninterrupted, error-free, or secure.</p>
+          </div>
+
+          <div class="legal-section" id="liability">
+            <h2><span class="num">12</span>Limitation of Liability</h2>
+            <p>To the fullest extent permitted by law, Toughjobs and its owners, employees, and contractors will not be liable for any indirect, incidental, special, consequential, exemplary, or punitive damages, or for lost profits, revenue, data, or goodwill, arising out of or related to the website or Services, even if advised of the possibility of such damages.</p>
+            <p>Our total aggregate liability arising out of or related to these Terms or the Services will not exceed the total amount of fees you paid to Toughjobs for the Services giving rise to the claim during the three (3) months immediately preceding the event that gave rise to the liability.</p>
+          </div>
+
+          <div class="legal-section" id="indemnification">
+            <h2><span class="num">13</span>Indemnification</h2>
+            <p>You agree to indemnify, defend, and hold harmless Toughjobs and its owners, employees, and contractors from and against any claims, damages, liabilities, costs, and expenses (including reasonable attorneys’ fees) arising out of or related to your Client Materials, your use of the Services, your products or services, or your breach of these Terms or of any applicable law or Third-Party Platform policy.</p>
+          </div>
+
+          <div class="legal-section" id="communications">
+            <h2><span class="num">14</span>Electronic Communications</h2>
+            <p>By providing your contact information or engaging our Services, you consent to receive communications from us electronically, including by email, phone, and text message, regarding your account, projects, and — where you have opted in — marketing. Message and data rates may apply. You may opt out of marketing communications at any time by following the unsubscribe instructions or replying STOP to text messages. Certain transactional or account communications are necessary to provide the Services and cannot be opted out of while you remain a client.</p>
+          </div>
+
+          <div class="legal-section" id="law">
+            <h2><span class="num">15</span>Governing Law &amp; Disputes</h2>
+            <p>These Terms are governed by the laws of the State of Illinois, without regard to its conflict-of-laws rules. The parties will first attempt to resolve any dispute informally and in good faith. If a dispute cannot be resolved within thirty (30) days, it will be resolved by binding arbitration administered under the rules of a recognized arbitration body, conducted in or near Peoria County, Illinois, except that either party may bring a claim in small-claims court or seek injunctive relief to protect its intellectual property or confidential information.</p>
+            <p>To the extent permitted by law, disputes will be resolved on an individual basis and not as part of a class or representative action.</p>
+          </div>
+
+          <div class="legal-section" id="changes">
+            <h2><span class="num">16</span>Changes to These Terms</h2>
+            <p>We may update these Terms from time to time. When we do, we will revise the “Last updated” date above. Material changes will be posted on this page. Your continued use of the website or Services after changes take effect constitutes your acceptance of the revised Terms.</p>
+          </div>
+
+          <div class="legal-section" id="contact">
+            <h2><span class="num">17</span>Contact Us</h2>
+            <p>Questions about these Terms? Get in touch:</p>
+            <ul>
+              <li><strong>Toughjobs Digital Marketing</strong></li>
+              <li>140 Oakmoor Dr, East Peoria, IL 61611</li>
+              <li>Phone: <a href="tel:3099289080">(309) 928-9080</a></li>
+              <li>Web: <a href="contact.html">Contact form</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  
+    <section data-screen-label="Our Endeavors" class="gb-section" style="background:#ECEFF4;background-image:url('assets/partnership-schematics-light.webp');background-size:cover;background-position:center;padding:56px 32px;position:relative;overflow:hidden;box-shadow:inset 0 2px 2px rgba(0,0,0,.45), inset 0 -2px 2px rgba(0,0,0,.45);">
+    <div style="max-width:1240px;margin:0 auto;position:relative;z-index:1;">
+      <div class="gb-outer" style="display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center;">
+        <div>
+          <div style="margin-bottom:24px;">
+            <span style="font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:#C8262A;">More than marketing</span>
+            <h2 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(32px,3.6vw,50px);line-height:1.02;color:#0A0F1C;margin:12px 0 0;"><span style="color:#C8262A;">Two ways we</span> give back</h2>
+          </div>
+          <div class="gb-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch;">
+            <div class="gb-card" style="background:#002768;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;">
+              <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700;">01 / PARTNERSHIP</span>
+              <h3 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05;">Go independent, backed by us</h3>
+              <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 28px;">You bring the truck, tools, and skill. We hand you the website, brand, systems, and marketing to turn one truck into a real company.</p>
+              <a href="partnerships.html" style="display:inline-block;background:#C8262A;color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none;">Explore Partnership</a>
+            </div>
+            <div class="gb-card" style="background:#0A0F1C;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;">
+              <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700;">02 / HELPING HANDS</span>
+              <h3 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05;">A hand up when budget is tight</h3>
+              <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.8);margin:0 0 28px;">One day a week we help people with more grit than budget get a business off the ground — honest guidance, real direction, no pressure.</p>
+              <a href="helping-hands.html" style="display:inline-block;background:#C8262A;color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none;">Explore Helping Hands</a>
+            </div>
+          </div>
+        </div>
+        <div class="gb-img" style="position:relative;height:100%;min-height:420px;">
+          <img src="assets/trade-hero-excavation.webp" alt="Toughjobs tradesman on the job" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:top center;" />
+        </div>
+      </div>
+    </div>
+    <style>@media(max-width:900px){ .gb-outer{ grid-template-columns:1fr !important; } .gb-grid{ grid-template-columns:1fr !important; } .gb-img{ min-height:280px !important; order:-1; } }</style>
+  </section>
+
+<footer>
+    <div class="container">
+      <p>&copy; 2026 Toughjobs · Marketing for the Trades · (309) 928-9080</p>
+    </div>
+  </footer>
+
+  
+<script src="sticky-cta.js"></script>
+<script src="inject-header.js?v=20260802b"></script>
+<script src="cookie-consent.js"></script>
+<script src="chat-launcher.js?v=20260729"></script>
+<script src="accessibility.js?v=20260729"></script>
+<script src="image-finder-tab.js"></script>
+</body>
+</html>

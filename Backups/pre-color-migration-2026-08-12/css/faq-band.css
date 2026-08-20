@@ -1,0 +1,20 @@
+/* Canonical FAQ band — matches the Concrete & Asphalt trade page exactly.
+   Single source of truth for every FAQ section on the site. Loaded LAST so it
+   outranks each page's local .td-analysis / .td-faq-item defaults. */
+.td-faq-section{position:relative;overflow:hidden;background:#081B33;background-image:linear-gradient(160deg, rgba(23,50,84,.55) 0%, rgba(5,15,31,.35) 100%);padding:80px 22px;width:100%;max-width:none;margin-inline:0;color:#fff}
+.td-faq-section > .td-analysis-inner{max-width:none;width:100%;margin:0;padding-inline:clamp(24px,5vw,80px);position:relative;z-index:1}
+.td-faq-section .tj-eyebrow-red{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:#C8262A}
+.td-faq-section .tj-band-h2,.td-faq-section > .td-analysis-inner > h2{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(22px,3vw,36px);line-height:1.08;color:#FFFFFF;margin:12px 0 0}
+.td-faq-section .td-faq-list{display:grid;gap:14px;margin-top:36px;counter-reset:faq}
+.td-faq-section .td-faq-item{counter-increment:faq;position:relative;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-left:3px solid #C8262A;border-top:1px solid rgba(255,255,255,.12);padding:26px 30px 26px 74px;transition:background .25s,transform .25s}
+.td-faq-section .td-faq-item:last-child{border-bottom:1px solid rgba(255,255,255,.12)}
+.td-faq-section .td-faq-item:hover{background:rgba(255,255,255,.09);transform:translateX(4px)}
+.td-faq-section .td-faq-item::before{content:counter(faq,decimal-leading-zero);position:absolute;left:26px;top:26px;font-family:ui-monospace,Menlo,monospace;font-size:13px;font-weight:700;letter-spacing:.1em;color:#C8262A}
+.td-faq-section .td-faq-item h3{font-family:'Archivo Black',sans-serif;text-transform:uppercase;color:#FFFFFF;font-size:19px;line-height:1.2;margin:0 0 10px;letter-spacing:-.01em}
+.td-faq-section .td-faq-item p{color:rgba(255,255,255,.82);font-size:16px;line-height:1.65;margin:0}
+.td-faq-section .td-soft-cta{margin-top:36px;border-top:1px solid rgba(255,255,255,.22);border-bottom:none;padding-bottom:0}
+.td-faq-section .td-soft-cta p{color:rgba(255,255,255,.9)}
+.td-faq-section .td-soft-cta strong{color:#FFFFFF}
+.td-faq-section a{color:#C8262A}
+.td-faq-section a:hover{color:#FFFFFF}
+@media(max-width:720px){.td-faq-section{padding:56px 0}.td-faq-section .td-faq-item{padding:24px 22px}.td-faq-section .td-faq-item::before{position:static;display:block;margin-bottom:10px}}

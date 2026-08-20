@@ -42,7 +42,7 @@
     opts = opts||{};
     var pct = Math.round((this.idx/ CFG.totalTrivia)*100);
     var bar = opts.hideProgress ? '' :
-      '<div class="q-progress"><div class="q-progress-bar" style="transform:scaleX('+(pct/100)+')"></div></div>'+
+      '<div class="q-progress"><div class="q-progress-bar" style="width:'+pct+'%"></div></div>'+
       '<div class="q-progress-label">Question '+Math.min(this.idx+1,CFG.totalTrivia)+' of '+CFG.totalTrivia+' · Score '+this.score.toLocaleString()+'</div>';
     this.root.innerHTML = '<div class="q-card">'+bar+inner+'</div>';
   };
@@ -98,7 +98,7 @@
     var bar=$('q-timer-bar'), num=$('q-timer-num');
     var tick=function(){
       var pct=(self.timeLeft/CFG.timePerQuestion)*100;
-      if(bar) bar.style.transform='scaleX('+(pct/100)+')';
+      if(bar) bar.style.width=pct+'%';
       if(num) num.textContent=Math.ceil(self.timeLeft);
       if(bar) bar.style.background = self.timeLeft<=5 ? '#C8262A' : '#2f9e44';
       if(self.timeLeft<=0){ clearInterval(self.timer); self.answer(-1); return; }
@@ -144,9 +144,9 @@
         '<label class="q-upload">Or upload your logo / photo<input type="file" id="q-logo" accept="image/*" hidden /></label>'+
       '</div>'+
       '<div class="q-form">'+
-        '<input class="q-input" id="q-name" placeholder="First name + last initial (e.g. Mike R.)" autocomplete="name" maxlength="40" />'+
-        '<input class="q-input" id="q-email" type="email" placeholder="Email address" autocomplete="email" maxlength="254" />'+
-        '<input class="q-input" id="q-city" placeholder="City / town (e.g. Peoria, IL)" maxlength="60" />'+
+        '<input class="q-input" id="q-name" placeholder="First name + last initial (e.g. Mike R.)" autocomplete="name" />'+
+        '<input class="q-input" id="q-email" type="email" placeholder="Email address" autocomplete="email" />'+
+        '<input class="q-input" id="q-city" placeholder="City / town (e.g. Peoria, IL)" />'+
         '<div class="q-err" id="q-err" hidden></div>'+
         '<button class="q-btn q-btn-lg" id="q-save">Save my spot →</button>'+
       '</div>', {hideProgress:true}
@@ -162,28 +162,17 @@
       };
     });
     $('q-logo').onchange=function(){
-      var f=this.files&&this.files[0]; this.value='';
-      if(!f) return;
-      var errEl=$('q-err');
-      var showErr=function(msg){ if(errEl){ errEl.hidden=false; errEl.textContent=msg; } };
-      if(!/^image\//.test(f.type)){ showErr('Please choose an image file.'); return; }
-      if(f.size > 12*1024*1024){ showErr('That image is too big — please choose one under 12MB.'); return; }
+      var f=this.files&&this.files[0]; if(!f) return;
       var img=new Image(), rd=new FileReader();
-      rd.onerror=function(){ showErr('Could not read that file — please try a different image.'); };
-      rd.onload=function(){
-        img.onerror=function(){ showErr('That file doesn\'t look like a valid image — please try another.'); };
-        img.onload=function(){
-          var s=128, c=document.createElement('canvas'); c.width=s; c.height=s;
-          var ctx=c.getContext('2d'); var r=Math.min(img.width,img.height);
-          ctx.drawImage(img,(img.width-r)/2,(img.height-r)/2,r,r,0,0,s,s);
-          var url=c.toDataURL('image/webp',0.8);
-          self.lead.avatar=url; self.lead.avatarType='image';
-          preview.textContent=''; preview.style.backgroundImage='url('+url+')';
-          self.root.querySelectorAll('.q-emoji').forEach(function(x){x.classList.remove('sel');});
-          if(errEl) errEl.hidden=true;
-        };
-        img.src=rd.result;
-      };
+      rd.onload=function(){ img.onload=function(){
+        var s=128, c=document.createElement('canvas'); c.width=s; c.height=s;
+        var ctx=c.getContext('2d'); var r=Math.min(img.width,img.height);
+        ctx.drawImage(img,(img.width-r)/2,(img.height-r)/2,r,r,0,0,s,s);
+        var url=c.toDataURL('image/webp',0.8);
+        self.lead.avatar=url; self.lead.avatarType='image';
+        preview.textContent=''; preview.style.backgroundImage='url('+url+')';
+        self.root.querySelectorAll('.q-emoji').forEach(function(x){x.classList.remove('sel');});
+      }; img.src=rd.result; };
       rd.readAsDataURL(f);
     };
     $('q-save').onclick=function(){
@@ -199,7 +188,7 @@
     var p=window.PROBES[pi]; var self=this;
     var body;
     if(p.type==='text'){
-      body='<input class="q-input" id="q-probe" placeholder="'+esc(p.placeholder||'')+'" maxlength="80" />';
+      body='<input class="q-input" id="q-probe" placeholder="'+esc(p.placeholder||'')+'" />';
     } else {
       body='<div class="q-choices q-choices-tall">'+p.choices.map(function(c,i){return '<button class="q-choice" data-i="'+i+'">'+esc(c)+'</button>';}).join('')+'</div>';
     }
@@ -228,8 +217,8 @@
     this.shell('<span class="q-eyebrow">Last one before your score</span><h2 class="q-question">'+esc(F.headline)+'</h2>'+
       '<p class="q-lede">'+esc(F.body)+'</p>'+
       '<div class="q-form" id="q-callform" hidden>'+
-        '<input class="q-input" id="q-phone" placeholder="'+esc(F.phoneLabel)+'" inputmode="tel" maxlength="30" />'+
-        '<input class="q-input" id="q-time" placeholder="'+esc(F.timeLabel)+' (e.g. weekday mornings)" maxlength="60" />'+
+        '<input class="q-input" id="q-phone" placeholder="'+esc(F.phoneLabel)+'" inputmode="tel" />'+
+        '<input class="q-input" id="q-time" placeholder="'+esc(F.timeLabel)+' (e.g. weekday mornings)" />'+
         '<button class="q-btn q-btn-lg" id="q-call-yes">Book my call →</button>'+
       '</div>'+
       '<div class="q-form">'+

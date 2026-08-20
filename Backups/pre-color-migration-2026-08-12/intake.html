@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Toughjobs — Business Intake | See How We Can Help</title>
+<meta name="robots" content="noindex, follow" />
+<meta name="author" content="Toughjobs" />
+<meta name="publisher" content="ToughJobs Digital Marketing" />
+<link rel="canonical" href="https://toughjobs.org/contact.html" />
+
+<meta name="description" content="Toughjobs — Business Intake | See How We Can Help — Toughjobs Digital Marketing, marketing built for the trades. Serving Illinois, Iowa, Missouri, Wisconsin and Indiana. Call (309) 928-9080." />
+
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#001a4a}
+  body{
+    font-family:"Inter","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background: url('assets/blueprint-background.webp') fixed center/cover no-repeat;
+    background-color:#001a4a;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  :root{
+    --ink:#0A0F1C;
+    --navy:#002768;
+    --navy-2:#001a4a;
+    --red:#C8262A;
+    --red-2:#A90100;
+    --smoke:#5B6471;
+    --mute:#C7CBD2;
+    --hairline:#E5E7EB;
+    --surface-alt:#F4F5F7;
+    --surface:#FCFCFD;
+    --white:#FFFFFF;
+
+    --bg-dark: var(--ink);
+    --accent: var(--red);
+    --accent-ink: var(--white);
+    --headline-a: var(--white);
+    --headline-b: var(--accent);
+    --headline-mute: var(--mute);
+
+    --container: 1240px;
+    --gap-step: 28px;
+  }
+
+  .display{
+    font-family:"Archivo Black","Archivo",ui-sans-serif,system-ui,sans-serif;
+    font-weight:900;text-transform:uppercase;letter-spacing:-0.01em;
+    line-height:.98;text-wrap:balance;
+  }
+  .eyebrow{
+    font-family:"Archivo",ui-sans-serif,system-ui,sans-serif;
+    font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:12px;
+  }
+  .container{ max-width:var(--container); margin:0 auto; padding:0 32px; }
+  .eyebrow-accent{ color:var(--accent); }
+
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;padding:16px 26px;
+    font-family:"Archivo",sans-serif;font-weight:800;letter-spacing:.06em;
+    font-size:13px;text-transform:uppercase;text-decoration:none;
+    background:var(--accent);color:var(--accent-ink);border:0;cursor:pointer;
+    transition:transform .15s ease, filter .2s ease, background .2s ease;
+  }
+  .btn:hover{ filter:brightness(.92); }
+  .btn:active{ transform:translateY(1px); }
+  .btn-dark{ background:var(--ink); color:var(--white); }
+  .btn-ghost{ background:transparent; color:var(--white); border:2px solid rgba(255,255,255,.4); padding:14px 24px; }
+  .btn-ghost:hover{ background:rgba(255,255,255,.1); }
+  .btn:disabled{ opacity:.4; cursor:not-allowed; filter:none; }
+
+  a{ color:var(--accent); }
+  a:hover{ color:var(--red-2); }
+
+  .split .a{ color:var(--headline-a); }
+  .split .b{ color:var(--headline-b); }
+  .split .m{ color:var(--headline-mute); }
+
+  ::selection{ background:var(--accent); color:var(--accent-ink); }
+
+  .bg-blueprint-dark,.bg-blueprint-navy,.bg-blueprint-red,.bg-blueprint-light{
+    background-image:url('assets/blueprint-master.webp');
+    background-size:cover;background-attachment:fixed;background-position:center;
+  }
+  .placeholder{ background:#20262F; }
+
+  @keyframes stepIn{ from{ opacity:0; transform:translateY(14px); } to{ opacity:1; transform:translateY(0); } }
+  .step-in{ animation:stepIn .42s cubic-bezier(.2,.8,.2,1) both; }
+  @media (prefers-reduced-motion: reduce){ .step-in{ animation:none; } }
+
+  input,select,textarea{ font-family:inherit; }
+
+  @keyframes spin{ from{ transform:rotate(0deg); } to{ transform:rotate(360deg); } }
+  @keyframes spinY{ from{ transform:rotateY(0deg); } to{ transform:rotateY(360deg); } }
+  .logo-spin{ animation:none; }
+  header img{ animation:none; transform-origin:50% 50%; }
+
+  /* ── Wizard ── */
+  .wiz-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+  @media (max-width:680px){ .wiz-grid, .wiz-dual{ grid-template-columns:1fr !important; } }
+
+  .wiz-opt{
+    position:relative; text-align:left; cursor:pointer;
+    background:rgba(255,255,255,.04);
+    border:2px solid rgba(255,255,255,.16);
+    color:var(--white); padding:18px 20px; display:flex; flex-direction:column; gap:4px;
+    transition:border-color .18s ease, background .18s ease, transform .12s ease;
+    font-family:"Archivo",sans-serif;
+  }
+  .wiz-opt:hover{ border-color:var(--accent); background:rgba(255,255,255,.07); }
+  .wiz-opt:active{ transform:translateY(1px); }
+  .wiz-opt[data-on="1"]{ background:var(--accent); border-color:var(--accent); }
+  .wiz-opt-lbl{ font-weight:700; font-size:16px; letter-spacing:.01em; line-height:1.25; }
+  .wiz-opt-sub{ font-size:13px; line-height:1.4; color:rgba(255,255,255,.6); }
+  .wiz-opt[data-on="1"] .wiz-opt-sub{ color:rgba(255,255,255,.85); }
+  .wiz-opt .tick{
+    position:absolute; top:14px; right:14px; width:20px; height:20px;
+    border:2px solid rgba(255,255,255,.3); border-radius:50%;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .wiz-opt.box .tick{ border-radius:4px; }
+  .wiz-opt[data-on="1"] .tick{ border-color:var(--white); background:var(--white); }
+  .wiz-opt .tick svg{ width:12px; height:12px; opacity:0; }
+  .wiz-opt[data-on="1"] .tick svg{ opacity:1; }
+
+  .wiz-field-lbl{
+    font-family:"Archivo",sans-serif; font-weight:800; font-size:12px;
+    letter-spacing:.08em; text-transform:uppercase; color:var(--accent);
+    margin-bottom:10px; display:block;
+  }
+  .wiz-select, .wiz-input, .wiz-textarea{
+    width:100%; padding:16px 18px; font-size:16px;
+    background:rgba(255,255,255,.05); color:var(--white);
+    border:2px solid rgba(255,255,255,.16); outline:none;
+    transition:border-color .18s ease, background .18s ease;
+  }
+  .wiz-select:focus, .wiz-input:focus, .wiz-textarea:focus{
+    border-color:var(--accent); background:rgba(255,255,255,.08);
+  }
+  .wiz-select{ cursor:pointer; appearance:none;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='%23C8262A' d='M0 0h12L6 8z'/></svg>");
+    background-repeat:no-repeat; background-position:right 18px center; padding-right:44px; }
+  .wiz-select option{ background:#0A0F1C; color:#fff; }
+  .wiz-input::placeholder, .wiz-textarea::placeholder{ color:rgba(255,255,255,.35); }
+  .wiz-textarea{ resize:vertical; min-height:150px; line-height:1.5; }
+
+  .wiz-bar-track{ height:5px; background:rgba(255,255,255,.12); overflow:hidden; }
+  .wiz-bar-fill{ height:100%; background:var(--accent); transition:width .45s cubic-bezier(.2,.8,.2,1); }
+
+  .wiz-sumrow{ display:flex; gap:20px; padding:18px 0; border-top:1px solid rgba(255,255,255,.12); align-items:flex-start; }
+  .wiz-sumrow:last-child{ border-bottom:1px solid rgba(255,255,255,.12); }
+  .wiz-sum-q{ flex:1; }
+  .wiz-edit{ background:none; border:0; color:var(--accent); font-family:"Archivo",sans-serif;
+    font-weight:800; font-size:11px; letter-spacing:.08em; text-transform:uppercase; cursor:pointer;
+    padding:4px 0; flex-shrink:0; }
+  .wiz-edit:hover{ text-decoration:underline; }
+
+  /* ── Owner console ── */
+  .oc-overlay{ position:fixed; inset:0; z-index:200; background:rgba(6,9,18,.82); backdrop-filter:blur(6px); display:flex; justify-content:flex-end; }
+  .oc-panel{ width:min(640px,100%); height:100%; background:#0A0F1C; border-left:3px solid var(--accent); display:flex; flex-direction:column; box-shadow:-30px 0 80px rgba(0,0,0,.5); }
+  .oc-head{ padding:22px 26px; border-bottom:1px solid rgba(255,255,255,.1); display:flex; align-items:center; justify-content:space-between; flex-shrink:0; }
+  .oc-body{ padding:26px; overflow-y:auto; flex:1; }
+  .oc-x{ background:none; border:0; color:rgba(255,255,255,.5); font-size:24px; cursor:pointer; line-height:1; padding:4px 8px; }
+  .oc-x:hover{ color:#fff; }
+  .oc-card{ border:1px solid rgba(255,255,255,.12); padding:18px 20px; margin-bottom:14px; background:rgba(255,255,255,.02); }
+  .oc-lbl{ font-family:"Archivo",sans-serif; font-weight:800; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); }
+  .oc-fit{ display:inline-block; padding:4px 12px; font-family:"Archivo",sans-serif; font-weight:800; font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
+  .oc-num{ font-family:"Archivo Black",sans-serif; font-size:20px; color:var(--accent); line-height:1; }
+  .oc-spin{ width:34px; height:34px; border:3px solid rgba(255,255,255,.15); border-top-color:var(--accent); border-radius:50%; animation:spin 0.8s linear infinite; }
+</style>
+<link rel="stylesheet" href="shared-header.css" />
+<style id="white-texture-sweep">
+/* Engineering blueprint texture on all white surfaces */
+.bg-white, .bg-light, .light-section, .on-light, .blurbs-section {
+  background-color:#FFFFFF !important;
+  background-image:url('assets/white-engineering-background.webp') !important;
+  background-size:cover !important;
+  background-position:center !important;
+  background-attachment:fixed !important;
+}
+</style>
+</head>
+<body>
+<main id="root"></main>
+
+
+    <section data-screen-label="Our Endeavors" class="gb-section" style="background:#ECEFF4;background-image:url('assets/white-engineering-background.webp');background-size:cover;background-position:center;padding:56px 32px;position:relative;overflow:hidden;box-shadow:inset 0 2px 2px rgba(0,0,0,.45), inset 0 -2px 2px rgba(0,0,0,.45);">
+    <div style="max-width:1240px;margin:0 auto;position:relative;z-index:1;">
+      <div class="gb-outer" style="display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center;">
+        <div>
+          <div style="margin-bottom:24px;">
+            <span style="font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:#C8262A;">More than marketing</span>
+            <h2 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(32px,3.6vw,50px);line-height:1.02;color:#0A0F1C;margin:12px 0 0;"><span style="color:#C8262A;">Two ways we</span> give back</h2>
+          </div>
+          <div class="gb-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch;">
+            <div class="gb-card" style="background:#002768;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;">
+              <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700;">01 / PARTNERSHIP</span>
+              <h3 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05;">Go independent, backed by us</h3>
+              <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 28px;">You bring the truck, tools, and skill. We hand you the website, brand, systems, and marketing to turn one truck into a real company.</p>
+              <a href="partnerships.html" style="display:inline-block;background:#C8262A;color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none;">Explore Partnership</a>
+            </div>
+            <div class="gb-card" style="background:#0A0F1C;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;">
+              <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700;">02 / HELPING HANDS</span>
+              <h3 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05;">A hand up when budget is tight</h3>
+              <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.8);margin:0 0 28px;">One day a week we help people with more grit than budget get a business off the ground — honest guidance, real direction, no pressure.</p>
+              <a href="helping-hands.html" style="display:inline-block;background:#C8262A;color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none;">Explore Helping Hands</a>
+            </div>
+          </div>
+        </div>
+        <div class="gb-img" style="position:relative;height:100%;min-height:420px;">
+          <img src="assets/trade-hero-excavation.webp" alt="Toughjobs tradesman on the job" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:top center;" />
+        </div>
+      </div>
+    </div>
+    <style>@media(max-width:900px){ .gb-outer{ grid-template-columns:1fr !important; } .gb-grid{ grid-template-columns:1fr !important; } .gb-img{ min-height:280px !important; order:-1; } }</style>
+  </section>
+
+<footer style="position:relative;overflow:hidden;background:linear-gradient(135deg,#001a4a 0%,#002768 100%);color:var(--white);border-top:3px solid var(--accent)">
+  <style>
+    @keyframes tickerScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    .footer-video-bg{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.6;z-index:0}
+    .footer-content{position:relative;z-index:1}
+    .footer-ticker{display:flex;gap:0;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.3);padding:20px 0;margin:0 calc(-50vw + 50%);padding-left:calc(50vw - 50%);padding-right:calc(50vw - 50%)}
+    .ticker-track{display:flex;gap:60px;white-space:nowrap;animation:tickerScroll 60s linear infinite}
+    .ticker-item{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:14px;letter-spacing:.02em;color:var(--accent);font-weight:900;flex-shrink:0}
+    .ticker-item::after{content:"●";margin-left:60px;color:rgba(255,255,255,.3);font-size:6px}
+    .footer-main{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;padding:60px 0;margin-bottom:0}
+    .footer-section h3{font-family:"Archivo Black",sans-serif;font-size:18px;text-transform:uppercase;letter-spacing:-.01em;margin:0 0 24px;font-weight:900;display:flex;align-items:center;gap:12px}
+    .footer-section h3 img{width:100%;max-width:600px;height:auto;object-fit:contain;display:block}
+    .footer-section h4{font-family:"Archivo",sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:var(--accent);margin:0 0 16px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.15)}
+    .footer-section ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
+    .footer-section a{color:rgba(255,255,255,.75);text-decoration:none;font-size:14px;font-weight:500;transition:all .2s ease;display:inline-block}
+    .footer-section a:hover{color:var(--accent)}
+    .footer-brand p{font-size:14px;line-height:1.6;color:rgba(255,255,255,.7);margin:0}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-top:1px solid rgba(255,255,255,.1);gap:32px;flex-wrap:wrap}
+    .footer-bottom-copy{font-size:12px;color:rgba(255,255,255,.55)}
+    .footer-contact{display:flex;align-items:center;gap:20px;padding-right:220px}
+    .footer-phone{text-align:right}
+    .footer-phone-label{font-family:"Archivo",sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:rgba(255,255,255,.6);margin-bottom:4px}
+    .footer-phone-number{font-family:"Archivo Black",sans-serif;font-size:22px;font-weight:900;color:var(--accent);text-decoration:none;letter-spacing:-.01em;transition:all .2s ease}
+    .footer-phone-number:hover{transform:scale(1.05)}
+    @media(max-width:1024px){.footer-main{grid-template-columns:1fr 1fr;gap:40px}}
+    @media(max-width:768px){.footer-main{grid-template-columns:1fr;gap:40px}.footer-bottom{flex-direction:column;align-items:flex-start}}
+  </style>
+  <video class="footer-video-bg" muted loop playsinline preload="none" data-play-when-near><source src="assets/construction-workers.mp4" type="video/mp4" /></video>
+  <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(0,26,74,.88) 0%,rgba(0,39,104,.84) 100%);z-index:0"></div>
+  <div class="footer-content">
+    <div class="footer-ticker"><div class="ticker-track">
+      <span class="ticker-item">HVAC</span><span class="ticker-item">PLUMBING</span><span class="ticker-item">ELECTRICAL</span><span class="ticker-item">MASONRY</span><span class="ticker-item">ROOFING</span><span class="ticker-item">JANITORIAL</span><span class="ticker-item">CARPET CLEANING</span><span class="ticker-item">PAINTING</span><span class="ticker-item">CONCRETE</span><span class="ticker-item">LANDSCAPING</span><span class="ticker-item">WELDING</span><span class="ticker-item">EXCAVATION</span><span class="ticker-item">HVAC</span><span class="ticker-item">PLUMBING</span><span class="ticker-item">ELECTRICAL</span><span class="ticker-item">MASONRY</span><span class="ticker-item">ROOFING</span><span class="ticker-item">JANITORIAL</span>
+    </div></div>
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-section footer-brand">
+          <h3><img src="assets/toughjobs-monogram-logo.webp" alt="Toughjobs" loading="lazy" decoding="async" /></h3>
+          <p>Marketing &amp; branding solutions built for the trades. We help service businesses get found, win jobs, and grow their revenue through integrated digital strategies.</p>
+        </div>
+        <div class="footer-section"><h4>Company</h4><ul><li><a href="about.html">Our story</a></li><li><a href="index.html#services">Services</a></li><li><a href="partnerships.html">Partnerships</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-section"><h4>Resources</h4><ul><li><a href="free-tools.html">Free Tools</a></li><li><a href="index.html#field-notes">Blog</a></li><li><a href="website-examples.html">Case Studies</a></li></ul></div>
+        <div class="footer-section"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="sitemap.html">Sitemap</a></li><li><a href="citations.html">Citations</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-copy">© 2026 Toughjobs Digital Marketing · 140 Oakmoor Dr, East Peoria, IL 61611</div>
+        <div class="footer-contact"><div class="footer-phone"><div class="footer-phone-label">Call us</div><a href="tel:3099289080" class="footer-phone-number">(309) 928-9080</a></div></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="intake-questions.js"></script>
+<script src="leads-store.js"></script>
+<script src="intake-wizard.js"></script>
+<script src="inject-header.js?v=20260802b"></script>
+<script src="sticky-cta.js" defer></script>
+<script src="deferred-media.js" defer></script>
+<script src="accessibility.js?v=20260729" defer></script>
+<script src="cookie-consent.js"></script>
+<script src="chat-launcher.js?v=20260729"></script>
+<script src="image-finder-tab.js"></script>
+<script src="back-cta.js"></script>
+</body>
+</html>

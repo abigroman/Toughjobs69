@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Careers at Toughjobs — Build Marketing for the Trades</title>
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Toughjobs" />
+<meta name="publisher" content="ToughJobs Digital Marketing" />
+
+<meta name="description" content="Join Toughjobs. We build marketing, websites, and brands for home-service and trade businesses across Central Illinois and the Quad Cities. See open roles." />
+<link rel="canonical" href="https://toughjobs.org/employment.html" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared-header.css" />
+<style>
+  :root{
+    --ink:#0A0F1C; --navy:#002768; --accent:#C8262A; --dark-red:#A90100;
+    --white:#FFFFFF; --container:1240px;
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{ font-family:"Archivo", ui-sans-serif, system-ui, sans-serif; color:var(--ink); background:var(--white); -webkit-font-smoothing:antialiased; }
+  .container{ max-width:var(--container); margin:0 auto; padding:0 32px; }
+  .display{ font-family:"Archivo Black","Archivo",sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:-0.01em; line-height:.98; text-wrap:balance; margin:0; }
+  .eyebrow{ font-family:"Archivo",sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:.1em; font-size:12px; color:var(--accent); }
+  a{ color:var(--accent); }
+  .btn{ display:inline-flex; align-items:center; justify-content:center; padding:16px 40px; background:var(--accent); color:var(--white); text-decoration:none; font-family:"Archivo Black",sans-serif; font-weight:900; font-size:14px; text-transform:uppercase; letter-spacing:.06em; border-radius:3px; transition:background .2s ease, transform .2s ease; }
+  .btn:hover{ background:var(--dark-red); transform:translateY(-2px); }
+  .btn-ghost{ background:transparent; border:2px solid var(--white); color:var(--white); }
+  .btn-ghost:hover{ background:var(--white); color:var(--ink); }
+
+  /* Image placeholder */
+  .img-ph{ position:relative; width:100%; background:repeating-linear-gradient(-45deg,#1a2338 0px,#1a2338 12px,#141c2e 12px,#141c2e 24px); border:2px dashed rgba(255,255,255,.28); border-radius:6px; display:flex; align-items:center; justify-content:center; padding:32px; min-height:260px; }
+  .img-ph.light{ background:repeating-linear-gradient(-45deg,#eee9dd 0px,#eee9dd 12px,#e5dfcf 12px,#e5dfcf 24px); border-color:rgba(10,15,28,.25); }
+  .img-ph .tag{ max-width:520px; text-align:center; }
+  .img-ph .tag .lab{ display:inline-block; font-family:"Archivo",sans-serif; font-weight:800; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:#fff; background:var(--accent); padding:5px 12px; border-radius:2px; margin-bottom:14px; }
+  .img-ph .tag p{ margin:0; font-size:14.5px; line-height:1.55; color:rgba(255,255,255,.82); font-weight:600; }
+  .img-ph.light .tag p{ color:rgba(10,15,28,.72); }
+
+  /* Hero */
+  .emp-hero{ background:var(--ink); color:var(--white); padding:140px 0 100px; position:relative; overflow:hidden; }
+  .emp-hero h1{ font-size:clamp(44px,7vw,104px); color:var(--white); margin:16px 0 0; }
+  .emp-hero h1 .red{ color:var(--accent); }
+  .emp-hero .sub{ font-size:20px; line-height:1.6; color:rgba(255,255,255,.82); max-width:640px; margin:28px 0 40px; }
+  .hero-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:56px; align-items:center; }
+
+  section{ padding:104px 0; }
+  .sec-white{ background:var(--white); color:var(--ink); }
+  .sec-ink{ background:var(--ink); color:var(--white); }
+  .sec-navy{ background:var(--navy); color:var(--white); }
+  .sec-ink h2, .sec-navy h2{ color:var(--white); }
+  .sec-white h2{ color:var(--ink); }
+  h2.display{ font-size:clamp(34px,5vw,60px); }
+
+  .lead{ font-size:19px; line-height:1.7; max-width:720px; }
+  .sec-white .lead{ color:#333; }
+  .sec-ink .lead, .sec-navy .lead{ color:rgba(255,255,255,.85); }
+
+  /* Values grid */
+  .val-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:56px; }
+  .val-card{ background:#10192B; border:1px solid rgba(255,255,255,.14); padding:32px 28px; border-radius:4px; }
+  .val-card .num{ font-family:"Archivo Black",sans-serif; font-size:32px; color:var(--accent); margin:0 0 12px; }
+  .val-card h3{ font-family:"Archivo Black",sans-serif; font-size:19px; color:var(--white); margin:0 0 10px; }
+  .val-card p{ margin:0; font-size:15px; line-height:1.6; color:rgba(255,255,255,.72); }
+
+  /* Perks */
+  .perk-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:20px 40px; margin-top:48px; }
+  .perk{ display:flex; gap:16px; align-items:flex-start; }
+  .perk .mark{ flex:none; width:34px; height:34px; border-radius:50%; background:var(--accent); color:#fff; display:flex; align-items:center; justify-content:center; font-family:"Archivo Black",sans-serif; font-size:16px; }
+  .perk h3{ font-family:"Archivo",sans-serif; font-weight:800; font-size:17px; margin:2px 0 6px; }
+  .sec-white .perk p{ color:#444; }
+  .perk p{ margin:0; font-size:15px; line-height:1.6; color:rgba(255,255,255,.75); }
+
+  /* Roles */
+  .role{ display:grid; grid-template-columns:1fr auto; gap:24px; align-items:center; padding:28px 32px; border:1px solid rgba(255,255,255,.16); border-radius:6px; margin-bottom:16px; background:#10192B; }
+  .role h3{ font-family:"Archivo Black",sans-serif; font-size:22px; color:var(--white); margin:0 0 8px; }
+  .role .meta{ display:flex; gap:16px; flex-wrap:wrap; font-size:13px; font-weight:700; color:rgba(255,255,255,.6); text-transform:uppercase; letter-spacing:.04em; }
+  .role p{ margin:12px 0 0; font-size:15px; line-height:1.6; color:rgba(255,255,255,.72); max-width:640px; }
+
+  /* Process */
+  .step-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:24px; margin-top:56px; }
+  .step .n{ font-family:"Archivo Black",sans-serif; font-size:48px; color:rgba(255,255,255,.18); line-height:1; margin-bottom:12px; }
+  .sec-white .step .n{ color:rgba(10,15,28,.12); }
+  .step h3{ font-family:"Archivo Black",sans-serif; font-size:18px; margin:0 0 8px; }
+  .step p{ margin:0; font-size:14.5px; line-height:1.6; }
+  .sec-white .step p{ color:#555; }
+
+  /* CTA */
+  .emp-cta{ background:var(--accent); background-image:url('assets/white-engineering-background.webp'); background-size:cover; background-position:center; color:#fff; padding:96px 32px; text-align:center; }
+  .emp-cta h2{ font-family:"Archivo Black",sans-serif; font-size:clamp(32px,5vw,56px); text-transform:uppercase; color:#fff; margin:0 0 20px; text-shadow: 0 4px 12px rgba(0,0,0,.5), 0 2px 6px rgba(0,0,0,.3); }
+  .emp-cta p{ font-size:18px; color:rgba(255,255,255,.92); max-width:560px; margin:0 auto 40px; line-height:1.6; }
+
+  footer.emp-footer{ background:var(--ink); color:rgba(255,255,255,.6); padding:40px 0; text-align:center; font-size:13px; }
+
+  @media (max-width:900px){
+    .hero-grid{ grid-template-columns:1fr; gap:40px; }
+    .val-grid,.step-grid{ grid-template-columns:1fr 1fr; }
+    .perk-grid{ grid-template-columns:1fr; }
+    .role{ grid-template-columns:1fr; }
+  }
+  @media (max-width:560px){
+    .val-grid,.step-grid{ grid-template-columns:1fr; }
+    section{ padding:72px 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="emp-hero" data-screen-label="Careers Hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Careers at Toughjobs</span>
+        <h1 class="display">Do work that <span class="red">actually ships.</span></h1>
+        <p class="sub">We build marketing, websites, and brands for the people who keep the lights on, the water running, and the roofs overhead. If you want your work in the real world — on trucks, in search results, in a tradesperson's growing business — you'll fit right in.</p>
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+          <a href="#roles" class="btn">See open roles</a>
+          <a href="#life" class="btn btn-ghost">Life at Toughjobs</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE ARE -->
+<section class="sec-white" data-screen-label="Who We Are" style="background-image: url('assets/white-engineering-background.webp'); background-size: cover; background-position: center;">
+  <div class="container">
+    <span class="eyebrow">Who we are</span>
+    <h2 class="display" style="margin:16px 0 24px;">A marketing shop built<br />for the trades.</h2>
+    <p class="lead">Toughjobs is a Central Illinois &amp; Quad Cities marketing company that works exclusively with home-service and trade businesses — electricians, plumbers, roofers, HVAC techs, and the crews behind them. We're not a generalist agency chasing every industry. We know this world, we respect the people in it, and we build the websites, ad campaigns, vehicle wraps, and brands that help them grow.</p>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="sec-ink" id="life" data-screen-label="Our Values">
+  <div class="container">
+    <span class="eyebrow">What we value</span>
+    <h2 class="display" style="margin:16px 0 0;">How we work</h2>
+    <div class="val-grid">
+      <div class="val-card">
+        <div class="num">01</div>
+        <h3>Own the outcome</h3>
+        <p>We don't hand off "deliverables" and walk away. We care whether the phone actually rings for our clients. Results are the job.</p>
+      </div>
+      <div class="val-card">
+        <div class="num">02</div>
+        <h3>Straight talk</h3>
+        <p>No jargon, no fluff, no vanity metrics. We say what we mean — to each other and to the tradespeople we serve.</p>
+      </div>
+      <div class="val-card">
+        <div class="num">03</div>
+        <h3>Craft &amp; speed</h3>
+        <p>We ship real work fast, and we sweat the details. Good enough to be proud of, out the door when it matters.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERKS -->
+<section class="sec-white" data-screen-label="Benefits" style="background-image: url('assets/white-engineering-background.webp'); background-size: cover; background-position: center;">
+  <div class="container">
+    <span class="eyebrow">Why you'll like it here</span>
+    <h2 class="display" style="margin:16px 0 0;">The good stuff.</h2>
+    <div class="perk-grid">
+      <div class="perk"><div class="mark">✓</div><div><h3>Real ownership</h3><p>Small team, big responsibility. Your work is visible, and your ideas actually get built.</p></div></div>
+      <div class="perk"><div class="mark">✓</div><div><h3>Growth &amp; mentorship</h3><p>Learn every lever of modern marketing — SEO, paid, web, brand — not just one narrow slice.</p></div></div>
+      <div class="perk"><div class="mark">✓</div><div><h3>Flexible, human schedule</h3><p>We care about output, not clock-watching. Life happens, and we work like adults.</p></div></div>
+      <div class="perk"><div class="mark">✓</div><div><h3>Purpose you can see</h3><p>Help local, family-owned businesses win. Your work changes real people's livelihoods.</p></div></div>
+      <div class="perk"><div class="mark">✓</div><div><h3>Give-back culture</h3><p>We set aside time every week to help under-resourced entrepreneurs get off the ground.</p></div></div>
+      <div class="perk"><div class="mark">✓</div><div><h3>Room to grow</h3><p>As we grow, you grow. Early team members shape where this company goes next.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- OPEN ROLES -->
+<section class="sec-ink" id="roles" data-screen-label="Open Roles">
+  <div class="container">
+    <span class="eyebrow">Open roles</span>
+    <h2 class="display" style="margin:16px 0 40px;">Where you might fit.</h2>
+    <div class="role">
+      <div>
+        <h3>Web Developer</h3>
+        <div class="meta"><span>Full-time</span><span>Quad Cities / Remote</span><span>WordPress · PHP</span></div>
+        <p>Build fast, lead-generating websites for trade businesses. WordPress, custom themes, and a mobile-first, SEO-ready mindset.</p>
+      </div>
+      <a href="#apply" class="btn">Apply</a>
+    </div>
+    <div class="role">
+      <div>
+        <h3>Paid Media Specialist</h3>
+        <div class="meta"><span>Full-time</span><span>Hybrid</span><span>Google · Meta Ads</span></div>
+        <p>Own Google &amp; Facebook ad campaigns that turn spend into booked jobs. Analytical, creative, and obsessed with ROI.</p>
+      </div>
+      <a href="#apply" class="btn">Apply</a>
+    </div>
+    <div class="role">
+      <div>
+        <h3>Graphic / Brand Designer</h3>
+        <div class="meta"><span>Full-time</span><span>Quad Cities</span><span>Brand · Vehicle Wraps</span></div>
+        <p>Design logos, vehicle wraps, and print collateral that make small trade shops look like the biggest name in town.</p>
+      </div>
+      <a href="#apply" class="btn">Apply</a>
+    </div>
+    <div class="role">
+      <div>
+        <h3>Don't see your role?</h3>
+        <div class="meta"><span>Always hiring good people</span></div>
+        <p>If you're great at something that helps trade businesses grow, tell us. We build teams around talent, not just titles.</p>
+      </div>
+      <a href="#apply" class="btn">Reach out</a>
+    </div>
+  </div>
+</section>
+
+<!-- AI MARKETING ROLES SECTION -->
+<section class="sec-navy" data-screen-label="AI Marketing Roles">
+  <div class="container">
+    <span class="eyebrow">Now hiring</span>
+    <h2 class="display" style="margin:16px 0 40px;">AI Marketing Roles<br />(Work from Home Available)</h2>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 24px;">
+      
+      <div style="background: #10192B; border: 1px solid rgba(255,255,255,.14); padding: 32px; border-radius: 4px;">
+        <h3 style="font-family:'Archivo Black',sans-serif; font-size: 20px; color: var(--white); margin: 0 0 8px;">AI Marketing Automation Director</h3>
+        <p style="font-size: 13px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; margin: 0 0 16px;">$140K – $200K · Senior</p>
+        <p style="font-size: 15px; line-height: 1.6; color: rgba(255,255,255,.75); margin: 0 0 16px;">Leads enterprise-wide AI automation strategies across campaigns, customer journeys, and personalization at scale.</p>
+        <p style="font-size: 13px; color: rgba(255,255,255,.6); margin: 0;"><strong>Tech:</strong> Salesforce Einstein, Adobe Sensei, HubSpot, Zapier AI</p>
+        <a href="#apply" class="btn" style="margin-top: 20px; font-size: 12px; padding: 12px 24px;">Apply Now</a>
+      </div>
+
+      <div style="background: #10192B; border: 1px solid rgba(255,255,255,.14); padding: 32px; border-radius: 4px;">
+        <h3 style="font-family:'Archivo Black',sans-serif; font-size: 20px; color: var(--white); margin: 0 0 8px;">AI Growth Marketing Lead</h3>
+        <p style="font-size: 13px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; margin: 0 0 16px;">$130K – $190K · Senior</p>
+        <p style="font-size: 15px; line-height: 1.6; color: rgba(255,255,255,.75); margin: 0 0 16px;">Uses predictive insights and automation to drive customer acquisition, conversion, and revenue growth.</p>
+        <p style="font-size: 13px; color: rgba(255,255,255,.6); margin: 0;"><strong>Tech:</strong> HubSpot, Amplitude, Google Analytics 4, Mutiny</p>
+        <a href="#apply" class="btn" style="margin-top: 20px; font-size: 12px; padding: 12px 24px;">Apply Now</a>
+      </div>
+
+      <div style="background: #10192B; border: 1px solid rgba(255,255,255,.14); padding: 32px; border-radius: 4px;">
+        <h3 style="font-family:'Archivo Black',sans-serif; font-size: 20px; color: var(--white); margin: 0 0 8px;">Autonomous Campaign Manager</h3>
+        <p style="font-size: 13px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; margin: 0 0 16px;">$115K – $170K · Mid-Level</p>
+        <p style="font-size: 15px; line-height: 1.6; color: rgba(255,255,255,.75); margin: 0 0 16px;">Builds AI-powered campaign systems that self-optimize targeting, creative, and spend in real time.</p>
+        <p style="font-size: 13px; color: rgba(255,255,255,.6); margin: 0;"><strong>Tech:</strong> Marketo, Adobe Campaign, HubSpot, Madgicx</p>
+        <a href="#apply" class="btn" style="margin-top: 20px; font-size: 12px; padding: 12px 24px;">Apply Now</a>
+      </div>
+
+      <div style="background: #10192B; border: 1px solid rgba(255,255,255,.14); padding: 32px; border-radius: 4px;">
+        <h3 style="font-family:'Archivo Black',sans-serif; font-size: 20px; color: var(--white); margin: 0 0 8px;">Data-Driven Creative Director</h3>
+        <p style="font-size: 13px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; margin: 0 0 16px;">$140K – $200K · Senior</p>
+        <p style="font-size: 15px; line-height: 1.6; color: rgba(255,255,255,.75); margin: 0 0 16px;">Guides creative strategy using AI-powered testing models, performance analytics, and audience insights.</p>
+        <p style="font-size: 13px; color: rgba(255,255,255,.6); margin: 0;"><strong>Tech:</strong> Adobe Creative Cloud, Midjourney, Figma, GA4</p>
+        <a href="#apply" class="btn" style="margin-top: 20px; font-size: 12px; padding: 12px 24px;">Apply Now</a>
+      </div>
+
+      <div style="background: #10192B; border: 1px solid rgba(255,255,255,.14); padding: 32px; border-radius: 4px;">
+        <h3 style="font-family:'Archivo Black',sans-serif; font-size: 20px; color: var(--white); margin: 0 0 8px;">AI Advertising Copy Director</h3>
+        <p style="font-size: 13px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; margin: 0 0 16px;">$95K – $145K · Mid-Level</p>
+        <p style="font-size: 15px; line-height: 1.6; color: rgba(255,255,255,.75); margin: 0 0 16px;">Oversees AI-crafted ad copy and performance messaging across channels and audience segments.</p>
+        <p style="font-size: 13px; color: rgba(255,255,255,.6); margin: 0;"><strong>Tech:</strong> Copy.ai, Jasper, Surfer SEO, Grammarly Business</p>
+        <a href="#apply" class="btn" style="margin-top: 20px; font-size: 12px; padding: 12px 24px;">Apply Now</a>
+      </div>
+
+      <div style="background: #10192B; border: 1px solid rgba(255,255,255,.14); padding: 32px; border-radius: 4px;">
+        <h3 style="font-family:'Archivo Black',sans-serif; font-size: 20px; color: var(--white); margin: 0 0 8px;">AI Social Media Optimization Manager</h3>
+        <p style="font-size: 13px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; margin: 0 0 16px;">$85K – $140K · Mid-Level</p>
+        <p style="font-size: 15px; line-height: 1.6; color: rgba(255,255,255,.75); margin: 0 0 16px;">Applies AI tools to automate posting, analyze engagement trends, and predict high-performing content.</p>
+        <p style="font-size: 13px; color: rgba(255,255,255,.6); margin: 0;"><strong>Tech:</strong> Sprout Social, Lately AI, Buffer, Hootsuite</p>
+        <a href="#apply" class="btn" style="margin-top: 20px; font-size: 12px; padding: 12px 24px;">Apply Now</a>
+      </div>
+
+      <div style="background: #10192B; border: 1px solid rgba(255,255,255,.14); padding: 32px; border-radius: 4px;">
+        <h3 style="font-family:'Archivo Black',sans-serif; font-size: 20px; color: var(--white); margin: 0 0 8px;">AI Prompt Engineer (Marketing)</h3>
+        <p style="font-size: 13px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; margin: 0 0 16px;">$90K – $140K · Mid-Level</p>
+        <p style="font-size: 15px; line-height: 1.6; color: rgba(255,255,255,.75); margin: 0 0 16px;">Crafts, tests, and refines prompts for generative AI tools to produce on-brand marketing content.</p>
+        <p style="font-size: 13px; color: rgba(255,255,255,.6); margin: 0;"><strong>Tech:</strong> Claude, ChatGPT, Gemini, Midjourney, Jasper</p>
+        <a href="#apply" class="btn" style="margin-top: 20px; font-size: 12px; padding: 12px 24px;">Apply Now</a>
+      </div>
+
+      <div style="background: #10192B; border: 1px solid rgba(255,255,255,.14); padding: 32px; border-radius: 4px;">
+        <h3 style="font-family:'Archivo Black',sans-serif; font-size: 20px; color: var(--white); margin: 0 0 8px;">AI Brand Experience Architect</h3>
+        <p style="font-size: 13px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; margin: 0 0 16px;">$130K – $185K · Senior</p>
+        <p style="font-size: 15px; line-height: 1.6; color: rgba(255,255,255,.75); margin: 0 0 16px;">Creates intelligent, AI-assisted brand touchpoints across digital experiences and customer journeys.</p>
+        <p style="font-size: 13px; color: rgba(255,255,255,.6); margin: 0;"><strong>Tech:</strong> Figma, Adobe Firefly, Midjourney, Salesforce</p>
+        <a href="#apply" class="btn" style="margin-top: 20px; font-size: 12px; padding: 12px 24px;">Apply Now</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HIRING PROCESS -->
+<section class="sec-white" data-screen-label="Hiring Process" style="background-image: url('assets/white-engineering-background.webp'); background-size: cover; background-position: center;">
+  <div class="container">
+    <span class="eyebrow">What to expect</span>
+    <h2 class="display" style="margin:16px 0 0;">Our hiring process.</h2>
+    <div class="step-grid">
+      <div class="step"><div class="n">1</div><h3>Say hello</h3><p style="font-weight: 700;">Send your resume, portfolio, or just a note about what you're great at.</p></div>
+      <div class="step"><div class="n">2</div><h3>Quick chat</h3><p style="font-weight: 700;">A relaxed conversation to see if there's a real fit — both ways.</p></div>
+      <div class="step"><div class="n">3</div><h3>Show your work</h3><p style="font-weight: 700;">A small, practical exercise or portfolio walkthrough. No trick questions.</p></div>
+      <div class="step"><div class="n">4</div><h3>Welcome aboard</h3><p style="font-weight: 700;">Offer, onboarding, and your first real project — fast.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="emp-cta" id="apply" data-screen-label="Apply CTA">
+  <h2>Let's build something great.</h2>
+  <p>Send your resume and a quick note about what you do best. We read every application — and we move fast.</p>
+  <a href="mailto:team@toughjobs.org?subject=Careers%20at%20Toughjobs" class="btn" style="background:#fff; color:var(--accent);">Email team@toughjobs.org</a>
+</section>
+
+
+    <section data-screen-label="Our Endeavors" class="gb-section" style="background:#ECEFF4;background-image:url('assets/white-engineering-background.webp');background-size:cover;background-position:center;padding:56px 32px;position:relative;overflow:hidden;box-shadow:inset 0 2px 2px rgba(0,0,0,.45), inset 0 -2px 2px rgba(0,0,0,.45);">
+    <div style="max-width:1240px;margin:0 auto;position:relative;z-index:1;">
+      <div class="gb-outer" style="display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center;">
+        <div>
+          <div style="margin-bottom:24px;">
+            <span style="font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:#C8262A;">More than marketing</span>
+            <h2 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(32px,3.6vw,50px);line-height:1.02;color:#0A0F1C;margin:12px 0 0;"><span style="color:#C8262A;">Two ways we</span> give back</h2>
+          </div>
+          <div class="gb-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch;">
+            <div class="gb-card" style="background:#002768;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;">
+              <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700;">01 / PARTNERSHIP</span>
+              <h3 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05;">Go independent, backed by us</h3>
+              <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 28px;">You bring the truck, tools, and skill. We hand you the website, brand, systems, and marketing to turn one truck into a real company.</p>
+              <a href="partnerships.html" style="display:inline-block;background:#C8262A;color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none;">Explore Partnership</a>
+            </div>
+            <div class="gb-card" style="background:#0A0F1C;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;">
+              <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700;">02 / HELPING HANDS</span>
+              <h3 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05;">A hand up when budget is tight</h3>
+              <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.8);margin:0 0 28px;">One day a week we help people with more grit than budget get a business off the ground — honest guidance, real direction, no pressure.</p>
+              <a href="helping-hands.html" style="display:inline-block;background:#C8262A;color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none;">Explore Helping Hands</a>
+            </div>
+          </div>
+        </div>
+        <div class="gb-img" style="position:relative;height:100%;min-height:420px;">
+          <img src="assets/trade-hero-excavation.webp" alt="Toughjobs tradesman on the job" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:top center;" />
+        </div>
+      </div>
+    </div>
+    <style>@media(max-width:900px){ .gb-outer{ grid-template-columns:1fr !important; } .gb-grid{ grid-template-columns:1fr !important; } .gb-img{ min-height:280px !important; order:-1; } }</style>
+  </section>
+
+<footer class="emp-footer">
+  <div class="container">© 2026 Toughjobs Digital Marketing · Careers · (309) 928-9080</div>
+</footer>
+
+<script src="inject-header.js?v=20260802b"></script>
+<script src="accessibility.js?v=20260729"></script>
+<script src="cookie-consent.js"></script>
+<script src="image-finder-tab.js"></script>
+</body>
+</html>

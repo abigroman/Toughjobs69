@@ -1,4 +1,4 @@
-﻿/*
+/*
 THESIS: Each package reads like a production work order, not a generic pricing page.
 OWN-WORLD: Ink, blueprint navy, plan-sheet white, worksite red, square controls, clipped section edges.
 STORY: Confirm the package, inspect every deliverable, understand the workflow and cost boundary, request it.
@@ -8,10 +8,10 @@ FORM: Production-roadmap structure, third-ranked grounded concept, seed bb9fc6dd
 *,*::before,*::after{box-sizing:border-box}
 :root{
   --ink:#0A0F1C;
-  --navy:#081B33;
+  --navy:#002768;
   --navy-deep:#001A4A;
   --red:#C8262A;
-  --red-deep:#981B1F;
+  --red-deep:#A90100;
   --white:#FFFFFF;
   --surface:#F4F5F7;
   --smoke:#5B6471;
@@ -21,7 +21,7 @@ FORM: Production-roadmap structure, third-ranked grounded concept, seed bb9fc6dd
 html{scroll-behavior:smooth}
 body.package-page{
   margin:0;
-  overflow-x:hidden;overflow-x:clip;
+  overflow-x:hidden;
   background:var(--ink);
   color:var(--ink);
   font-family:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;

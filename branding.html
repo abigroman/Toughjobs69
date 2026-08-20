@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
@@ -16,8 +16,8 @@
 <style>
   *,*::before,*::after{box-sizing:border-box}
   html,body{margin:0;padding:0;background:#0A0F1C}
-  body{font-family:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;color:#0A0F1C;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;overflow-x:clip}
-  :root{--ink:#0A0F1C;--navy:#081B33;--navy-2:#001a4a;--red:#C8262A;--accent:#C8262A;--smoke:#5B6471;--white:#FFFFFF;--container:1240px}
+  body{font-family:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;color:#0A0F1C;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+  :root{--ink:#0A0F1C;--navy:#002768;--navy-2:#001a4a;--red:#C8262A;--accent:#C8262A;--smoke:#5B6471;--white:#FFFFFF;--container:1240px}
   .logo-text span.tight{color:var(--red)}.logo-text span.light{color:var(--white)}
   header
   header.scrolled
@@ -37,7 +37,9 @@
   .nav-dropdown-menu > div{display:flex;flex-direction:column;gap:10px}
   .nav-dropdown-item:hover{color:var(--red)}
   .nav-quote{background:var(--red);animation:navQuoteIn .65s cubic-bezier(.22,.9,.3,1) .35s backwards}
-  body{--accent2:#081B33}
+  body{--accent2:#002768}
+  @media(min-width:881px){
+  }
   .sp .cmp thead th{
     background:var(--navy-2);
     color:var(--white);
@@ -50,7 +52,7 @@
   .sp .cmp-note{font-size:15px;color:#1c2536;margin-top:20px;font-style:italic}
   .work-strip{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:clamp(40px,5vw,64px)}
   .work-item{position:relative;overflow:hidden;aspect-ratio:16/9;background:#0A0F1C;cursor:zoom-in}
-  .work-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+  .work-item img{width:100%;height:100%;object-fit:contain;display:block;transition:transform .35s ease}
   .work-item:hover img{transform:scale(1.03)}
   .work-lbl{position:absolute;bottom:0;left:0;right:0;padding:10px 14px;background:rgba(10,15,28,.72);font-family:'Archivo',sans-serif;font-weight:800;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#FFFFFF}
   #work-lb{display:none;position:fixed;inset:0;background:rgba(10,15,28,.94);z-index:9000;cursor:zoom-out;align-items:center;justify-content:center}
@@ -105,12 +107,9 @@
 <!-- SEO-FAQ-SCHEMA:END -->
 <style id="extracted-inline-styles">
 .branding-hero{isolation:isolate}
+.branding-hero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:url('uploads/webp/wilderness-5.webp') center bottom/cover no-repeat;opacity:.18}
 .branding-hero .tex-grid{z-index:1;opacity:.42}
 .branding-hero .container{position:relative;z-index:2}
-.branding-hero .hero-img-slot img{transform:translateY(-14px)}
-@media(min-width:1440px){
-  .branding-hero .hero-img-slot img{transform:translateY(-75px)}
-}
 
 .brx-1{font-size:clamp(20px,2.7vw,38px)}
 .brx-2{--steps:4}
@@ -133,10 +132,10 @@
 .brx-19{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center;}
 .brx-20{margin-bottom:24px;}
 .brx-21{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:#C8262A;}
-.brx-22{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(32px,3.6vw,50px);line-height:1.02;color:#081B33;margin:12px 0 0;}
+.brx-22{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(32px,3.6vw,50px);line-height:1.02;color:#002768;margin:12px 0 0;}
 .brx-23{color:#C8262A;}
 .brx-24{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch;}
-.brx-25{background:#081B33;padding:36px 30px;box-shadow:0 4px 24px rgba(0,0,0,.30);border-top:4px solid #C8262A;}
+.brx-25{background:#002768;padding:36px 30px;box-shadow:0 4px 24px rgba(0,0,0,.30);border-top:4px solid #C8262A;}
 .brx-26{font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700;}
 .brx-27{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05;}
 .brx-28{font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 28px;}
@@ -147,25 +146,13 @@
 .brx-33{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:top center;}
 </style>
 <link rel="stylesheet" href="css/service-longform.css">
-<link rel="stylesheet" href="css/trade-sections.css">
 <link rel="stylesheet" href="css/faq-band.css">
-<style id="pc-title-logo-style">/* Section-title fist logo.
-   Spacing: the row carries no gap, so the only horizontal space around the
-   logo is the slot's own padding — identical left and right by construction,
-   rather than "whatever is left over", which is what centring the slot in the
-   free space used to produce. margin-left:auto pins it to the right edge of
-   the container so the right-hand space stays constant no matter how long the
-   headline is. */
-.pc-headrow{display:flex;align-items:center;gap:0;margin-bottom:34px}
+<link rel="stylesheet" href="css/trade-sections.css">
+<style id="pc-title-logo-style">.pc-headrow{display:flex;align-items:center;gap:clamp(16px,2vw,32px);margin-bottom:34px}
 .pc-headrow>.head{flex:0 1 auto;min-width:0;margin-bottom:0}
-/* Both padding values carry a +96px (1in) offset over the badge-clearance
-   figure, so the mark sits an inch further left at every width while the left
-   and right space around it stay identical. */
-.pc-logo-slot{flex:0 0 auto;margin-left:auto;padding:0 max(152px,854px - 50vw);display:flex;align-items:flex-start;align-self:flex-start}
-.pc-title-logo{width:clamp(104px,9vw,144px);height:auto;transform:translateY(-14%);filter:drop-shadow(0 14px 26px rgba(0,0,0,.35))}
-/* Below the container's max width the page runs edge to edge and the badge
-   owns the corner outright, so the mark steps aside rather than collide. */
-@media(max-width:1240px){.pc-logo-slot{display:none}}</style>
+.pc-logo-slot{flex:1 1 auto;display:flex;align-items:flex-start;justify-content:center;align-self:flex-start}
+.pc-title-logo{width:clamp(96px,10vw,152px);height:auto;transform:translateY(-14%);filter:drop-shadow(0 14px 26px rgba(0,0,0,.35))}
+@media(max-width:1200px){.pc-logo-slot{display:none}}</style>
 </head>
 <body class="sp">
 <main>
@@ -179,7 +166,8 @@
       <p class="lede reveal d2">Contractor branding should stay recognizable on a truck at road speed, a shirt at the door, a phone screen, an estimate, and a yard sign. Toughjobs builds the logo, color, type, messaging, and production files as one working system instead of a mark that only looks finished in a presentation.</p>
       <div class="reveal d3"><a class="btn" href="contact.html">Book a free strategy call &rarr;</a></div>
       <div class="kpis"><div class="kpi reveal"><div class="num brx-1">ONE LOOK</div><div class="lbl">The same recognizable system across every touchpoint</div></div><div class="kpi reveal"><div class="num brx-1">FIELD</div><div class="lbl">Layouts tested for trucks, uniforms, signs, and small screens</div></div><div class="kpi reveal"><div class="num brx-1">FILES</div><div class="lbl">Production-ready formats organized for future vendors</div></div></div></div>
-      <div class="hero-img-slot"><img src="assets/macho-branding.webp" alt="Toughjobs branding"></div>
+      </div>
+      <div class="hero-img-slot"><img src="assets/macho-branding.webp" alt="Toughjobs branding mascot" style="transform:translateY(-15%)"></div>
     </div>
   </section>
 
@@ -191,7 +179,7 @@
         <span class="eyebrow">How it works</span>
         <h2 class="display">From identity to in-hand.</h2>
         <p class="lede">We design, print, and fulfill — you just approve.</p>
-      </div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
+      </div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
       <div class="flow brx-2"><div class="step reveal d1"><div class="node">1</div><h4>Identity</h4><p>Logo, palette, fonts, and voice that fit your trade and town.</p></div><div class="step reveal d2"><div class="node">2</div><h4>Apply</h4><p>We extend it to wraps, cards, signs, apparel, and flyers.</p></div><div class="step reveal d3"><div class="node">3</div><h4>Print</h4><p>We handle production and fulfillment — no vendor juggling.</p></div><div class="step reveal d4"><div class="node">4</div><h4>Deploy</h4><p>Your brand hits the road, the job site, and every mailbox.</p></div></div>
     </div>
   </section>
@@ -203,13 +191,13 @@
       <div class="pc-headrow"><div class="head reveal">
         <span class="eyebrow">What you'll earn</span>
         <h2 class="display">Instant credibility on every street.</h2>
-      </div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
+      </div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
       <div class="earn"><div class="card reveal d1"><div class="ic">01</div><h4>Look bigger than you are</h4><p>Consistent branding makes a solo operator read as an established firm.</p></div><div class="card reveal d2"><div class="ic">02</div><h4>Rolling billboards</h4><p>A wrapped truck advertises 40,000+ times a day for pennies per view.</p></div><div class="card reveal d3"><div class="ic">03</div><h4>Trust before the call</h4><p>A pro look wins the bid before you ever quote a price.</p></div></div>
       <div class="work-strip">
         <div class="work-item reveal"><img src="assets/wrap-truck-erik.webp" alt="Erik Electrical truck wrap" loading="lazy" /><span class="work-lbl">Vehicle Wrap</span></div>
         <div class="work-item reveal d1"><img src="assets/wrap-trailer-guacnroll.webp" alt="Guac N Roll trailer wrap" loading="lazy" /><span class="work-lbl">Trailer Wrap</span></div>
         <div class="work-item reveal d2"><img src="uploads/company-jackets-working.webp" alt="Branded crew on the job" loading="lazy" /><span class="work-lbl">Crew Apparel</span></div>
-        <div class="work-item reveal d3"><img src="print-images/seasonal-campaigns.webp" alt="Print collateral design" loading="lazy" /><span class="work-lbl">Print & Collateral</span></div>
+        <div class="work-item reveal d3"><img src="uploads/Print-Seasonal-Campaigns.webp" alt="Print collateral design" loading="lazy" /><span class="work-lbl">Print & Collateral</span></div>
       </div>
     </div>
   </section>
@@ -222,11 +210,11 @@
         <span class="eyebrow">The cost comparison</span>
         <h2 class="display">DIY vs. agency vs. Toughjobs.</h2>
         <p class="lede">Cheap branding looks cheap.</p>
-      </div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
+      </div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
       <div class="cmp-wrap reveal d1">
         <table class="cmp">
           <thead><tr><th></th><th>DIY</th><th>Typical Agency</th><th class="tj"><span class="tjhead">Toughjobs</span></th></tr></thead>
-          <tbody><tr><td class="rowlbl">Logo source</td><td class="x">$5 Fiverr</td><td>$3,000–8,000</td><td class="tj">Trade-fit, flat fee</td></tr><tr><td class="rowlbl">Consistency across everything</td><td class="x">None</td><td>Varies</td><td class="tj"><span class="yes">Full system</span></td></tr><tr><td class="rowlbl">Print + fulfillment</td><td class="x">You manage it</td><td>Extra cost</td><td class="tj"><span class="yes">Handled for you</span></td></tr><tr><td class="rowlbl">Vehicle wraps</td><td class="x">Separate vendor</td><td>Outsourced</td><td class="tj"><span class="yes">In-house design</span></td></tr><tr><td class="rowlbl">Cost per impression</td><td class="x">High</td><td>High</td><td class="tj"><span class="yes">$0.002 (wraps)</span></td></tr></tbody>
+          <tbody><tr><td class="rowlbl">Logo source</td><td class="x">$5 Fiverr</td><td>$3,000–8,000</td><td class="tj">Trade-fit, flat fee</td></tr><tr><td class="rowlbl">Consistency across items</td><td class="x">None</td><td>Varies</td><td class="tj"><span class="yes">Full system</span></td></tr><tr><td class="rowlbl">Print + fulfillment</td><td class="x">You manage it</td><td>Extra cost</td><td class="tj"><span class="yes">Handled for you</span></td></tr><tr><td class="rowlbl">Vehicle wraps</td><td class="x">Separate vendor</td><td>Outsourced</td><td class="tj"><span class="yes">In-house design</span></td></tr><tr><td class="rowlbl">Cost per impression</td><td class="x">High</td><td>High</td><td class="tj"><span class="yes">$0.002 (wraps)</span></td></tr></tbody>
         </table>
       </div>
       <p class="cmp-note">A mismatched logo on a magnet says 'small.' A wrapped truck and matching crew says 'call them.'</p>
@@ -244,8 +232,8 @@
       <li class="brx-10">Messaging direction for headlines, service descriptions, and calls to action.</li>
       <li class="brx-10">Organized source and export files for web, print, apparel, signs, and vehicles.</li>
     </ul>
-    <p class="brx-11">Bring the current logo, truck photos, and examples of where the brand fails. Then <a href="contact.html">book a free strategy call</a> built around the actual applications.</p>
-    <h2 class="display brx-12">Branding FAQ</h2>
+    <p class="brx-11">Bring the current logo, truck photos, and examples of where the brand fails. Then <a href="contact.html">request a brand review</a> built around the actual applications.</p>
+    <h2 class="display brx-12">Contractor branding built for the field. FAQ</h2>
     <div class="brx-13">
       <div class="brx-14">
         <h3 class="brx-15">Do I need a new logo or a cleanup?</h3>
@@ -443,7 +431,7 @@
 <script src="trade-data.js"></script>
 <script src="service-page.js?v=20260729"></script>
 <script src="flying-tools.js"></script>
-<script src="inject-header.js?v=20260813b"></script>
+<script src="inject-header.js?v=20260802b"></script>
 <script src="sticky-cta.js"></script>
 <script src="all-services-section.js"></script>
 <script src="accessibility.js?v=20260729"></script>
@@ -470,8 +458,7 @@
 <script id="pc-title-logo-align"></script><script>
 (function(){
   function align(){
-    // Matches the breakpoint in #pc-title-logo-style where the slot is hidden.
-    var wide = window.matchMedia('(min-width:1241px)').matches;
+    var wide = window.matchMedia('(min-width:1201px)').matches;
     document.querySelectorAll('.pc-headrow').forEach(function(row){
       var h2 = row.querySelector('h2'), slot = row.querySelector('.pc-logo-slot');
       if(!h2 || !slot) return;
@@ -490,5 +477,6 @@
   setTimeout(align, 400);
 })();
 </script>
+
 </body>
 </html>

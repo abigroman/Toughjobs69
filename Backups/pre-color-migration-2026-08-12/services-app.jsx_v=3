@@ -1,0 +1,430 @@
+// services-app.jsx — Services page layout
+
+const { useEffect } = React;
+
+function ServicesApp() {
+  return (
+    <React.Fragment>
+      <Nav />
+      <main>
+        <ServicesHero />
+        <WebsitesDeepDive />
+        <SEODeepDive />
+        <SocialMediaDeepDive />
+        <PaidDeepDive />
+        <BrandingDeepDive />
+        <AIAutomationsDeepDive />
+        <CtaBand />
+      </main>
+      <Footer />
+    </React.Fragment>);
+
+}
+
+// ── Services Hero ──────────────────────────────────────────────────────────
+function ServicesHero() {
+  return (
+    <section data-screen-label="Hero" className="section-equal bg-blueprint-dark" style={{
+      position: "relative", color: "var(--white)", overflow: "hidden"
+    }}>
+      <BlueprintMarks color="rgba(140,170,220,.28)" />
+      <DrawingStamp no="SVC-01" title="SERVICES" scale="1:1" color="rgba(140,170,220,.45)" style={{ top: 28, right: 88 }} />
+      
+      {/* Architectural drawing background */}
+      <div style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        backgroundImage: "url(assets/architectural-drawing-transparent.png)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        opacity: 0.5,
+        zIndex: 1,
+        pointerEvents: "none"
+      }} />
+      
+      <div className="container" style={{ position: "relative", zIndex: 2 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "end", minHeight: "75vh" }}>
+          <div style={{ display: "flex", justifyContent: "center", alignItems: "flex-end", position: "relative", height: "100%" }}>
+            <img src="assets/woman-trowel-fullbody.png" alt="Toughjobs construction worker with trowel" style={{
+              width: "auto",
+              height: "calc(85vh * 1.15)",
+              maxHeight: 1035,
+              minHeight: 748,
+              maxWidth: "none",
+              display: "block",
+              filter: "drop-shadow(20px 20px 50px rgba(0,0,0,.75))",
+              marginBottom: -80,
+              objectFit: "contain",
+              objectPosition: "bottom center"
+            }} />
+          </div>
+          
+          <div style={{ paddingBottom: 60 }}>
+            <span className="eyebrow" style={{ color: "var(--accent)" }}>What we build</span>
+            <h1 className="display split" style={{ fontSize: "clamp(48px, 6vw, 96px)", margin: "20px 0 32px", lineHeight: 1.0 }}>
+              <span className="a" style={{ color: "var(--white)" }}>Eight cylinders.</span><br />
+              <span className="b" style={{ color: "var(--accent)" }}>One mission.</span>
+            </h1>
+            <p style={{ maxWidth: 540, fontSize: 17, lineHeight: 1.6, color: "rgba(255,255,255,.82)", margin: "0 0 36px" }}>
+              Most agencies sell you one thing and call it a day. We run all six cylinders —
+              websites, SEO, social, paid ads, branding, and AI automations — because that's what
+              it takes to dominate your local market and keep your calendar full.
+            </p>
+            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+              <a className="btn" href="#websites">Websites</a>
+              <a className="btn btn-dark" href="#seo">SEO</a>
+              <a className="btn btn-dark" href="#paid">Paid Ads</a>
+              <a className="btn btn-dark" href="#social">Social</a>
+              <a className="btn btn-dark" href="#branding">Branding</a>
+              <a className="btn btn-dark" href="#ai">AI Automations</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>);
+
+}
+
+// ── Websites Deep Dive ─────────────────────────────────────────────────────
+function WebsitesDeepDive() {
+  const deliverables = [
+  { label: "WordPress CMS", desc: "Full admin access — you own the code" },
+  { label: "Mobile-first", desc: "Loads in <2s on rural LTE" },
+  { label: "Lead capture", desc: "Phone, form, chat — 3 ways to convert" },
+  { label: "Local schema", desc: "Structured data for every service area" }];
+
+
+  return (
+    <section id="websites" data-screen-label="Websites" className="section-equal bg-blueprint-light" style={{ position: "relative" }}>
+      <BlueprintMarks color="rgba(0,39,104,.32)" />
+      <DrawingStamp no="SVC-02" title="WEBSITES" scale="1:2" color="rgba(0,39,104,.55)" style={{ top: 28, right: 88 }} />
+      
+      <div className="container" style={{ position: "relative", zIndex: 2 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "start" }}>
+          <div>
+            <span className="eyebrow" style={{ color: "var(--accent)" }}>Websites that convert</span>
+            <h2 className="display split" style={{ fontSize: "clamp(40px, 5vw, 72px)", margin: "16px 0 24px" }}>
+              <span className="a" style={{ color: "var(--white)" }}>Platforms.</span><br />
+              <span className="b" style={{ color: "var(--accent)" }}>Built to last.</span><br />
+              <span className="m" style={{ color: "var(--white)" }}>Yours forever.</span>
+            </h2>
+            <p style={{ fontSize: 17, lineHeight: 1.6, color: "var(--smoke)", marginBottom: 24 }}>
+              Whether WordPress, Webflow, or custom code — we choose the platform that makes sense for YOUR
+              business, not what's easiest for us. No proprietary platforms. No rental fees. You own the code,
+              the data, and the domain. Period.
+            </p>
+            <p style={{ fontSize: 17, lineHeight: 1.6, color: "var(--smoke)", marginBottom: 24 }}>
+              Every site is mobile-first, loads in under 2 seconds on rural LTE, and has your phone
+              number in 6+ places. Because a pretty site that doesn't convert is just an expensive
+              business card.
+            </p>
+            <p style={{ fontSize: 17, lineHeight: 1.6, color: "var(--smoke)", marginBottom: 32 }}>
+              <strong>You own it all:</strong> Analytics access, customer data, and full transparency.
+              We work with your existing tools and give you real numbers — not vanity metrics. Quick feedback loops
+              keep us aligned. That's how we stay relevant.
+            </p>
+            <a className="btn" href="../index.html#contact">Get a free teardown</a>
+          </div>
+          
+          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+            <div style={{ background: "var(--accent)", padding: "24px 28px", color: "var(--white)" }}>
+              <div className="eyebrow" style={{ opacity: 0.9 }}>Typical build</div>
+              <div className="display" style={{ fontSize: 48, margin: "8px 0 4px" }}>4 weeks</div>
+              <div style={{ fontSize: 14, opacity: 0.85 }}>From kickoff to keys-in-hand</div>
+            </div>
+            
+            {deliverables.map((d, i) =>
+            <div key={i} style={{ background: "var(--ink)", padding: "20px 24px", color: "var(--white)", display: "flex", gap: 16, alignItems: "center" }}>
+                <div style={{ fontSize: 28, fontFamily: "monospace", color: "var(--accent)", fontWeight: 700 }}>0{i + 1}</div>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontFamily: '"Archivo"', fontWeight: 700, fontSize: 14, letterSpacing: "0.04em", textTransform: "uppercase", marginBottom: 4 }}>{d.label}</div>
+                  <div style={{ fontSize: 13, opacity: 0.75 }}>{d.desc}</div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>);
+
+}
+
+// ── SEO Deep Dive ──────────────────────────────────────────────────────────
+function SEODeepDive() {
+  return (
+    <section id="seo" data-screen-label="SEO" className="section-equal bg-blueprint-dark" style={{ position: "relative", color: "var(--white)" }}>
+      <BlueprintMarks color="rgba(140,170,220,.28)" />
+      <DrawingStamp no="SVC-03" title="LOCAL SEO" scale="1:1" color="rgba(140,170,220,.45)" style={{ top: 28, right: 88 }} />
+      
+      <div className="container" style={{ position: "relative", zIndex: 2 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: 80, alignItems: "center" }}>
+          <div>
+            <span className="eyebrow" style={{ color: "var(--accent)" }}>Local SEO that ranks</span>
+            <h2 className="display split" style={{ fontSize: "clamp(40px, 5vw, 72px)", margin: "16px 0 24px" }}>
+              <span className="a" style={{ color: "var(--white)" }}>Rank for the </span>
+              <span className="b" style={{ color: "var(--accent)" }}>searches</span><br />
+              <span className="m" style={{ color: "var(--white)" }}>that book jobs.</span>
+            </h2>
+            <p style={{ fontSize: 17, lineHeight: 1.6, color: "rgba(255,255,255,.82)", marginBottom: 24 }}>
+              "HVAC repair near me" gets 40X more searches than your company name. We optimize for
+              the high-intent, high-volume local searches that fill your calendar — not vanity keywords.
+            </p>
+            <p style={{ fontSize: 17, lineHeight: 1.6, color: "rgba(255,255,255,.82)", marginBottom: 24 }}>
+              Google Business Profile optimization, local citations, service-area pages, review
+              generation, and monthly keyword tracking. We move the needle every 30 days or we tell
+              you why we didn't.
+            </p>
+            <p style={{ fontSize: 17, lineHeight: 1.6, color: "rgba(255,255,255,.82)", marginBottom: 32 }}>
+              <strong>Real data, real results:</strong> We give you access to everything — analytics,
+              search performance, customer insights. Monthly reporting shows exactly what's working.
+              Your goals drive our strategy. We adjust fast.
+            </p>
+            <a className="btn" href="../index.html#contact">Book a strategy call</a>
+          </div>
+          
+          <div style={{ background: "var(--accent)", padding: "32px", position: "relative" }}>
+            <div className="display" style={{ fontSize: 96, color: "var(--ink)", lineHeight: 0.9, marginBottom: 16 }}>60%</div>
+            <p style={{ fontSize: 16, lineHeight: 1.5, color: "rgba(255,255,255,.9)", margin: 0 }}>
+              of your local SEO work happens in Google Business Profile. Not your website. We optimize
+              both, but GBP is where the war is won.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>);
+
+}
+
+// ── Social Media Deep Dive ────────────────────────────────────────────────
+function SocialMediaDeepDive() {
+  return (
+    <section id="social" data-screen-label="Social" className="section-equal bg-blueprint-light" style={{ position: "relative" }}>
+      <BlueprintMarks color="rgba(0,39,104,.32)" />
+      <DrawingStamp no="SVC-04B" title="SOCIAL MEDIA" scale="1:1" color="rgba(0,39,104,.55)" style={{ top: 28, right: 88 }} />
+      
+      <div className="container" style={{ position: "relative", zIndex: 2 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "start" }}>
+          <div>
+            <span className="eyebrow" style={{ color: "var(--accent)" }}>Social that builds community</span>
+            <h2 className="display split" style={{ fontSize: "clamp(40px, 5vw, 72px)", margin: "16px 0 24px" }}>
+              <span className="a" style={{ color: "var(--white)" }}>Posts aren't</span><br />
+              <span className="b" style={{ color: "var(--accent)" }}>strategy.</span><br />
+              <span className="m" style={{ color: "var(--white)" }}>Community is.</span>
+            </h2>
+            <p style={{ fontSize: 17, lineHeight: 1.6, marginBottom: 24, color: "rgb(158, 165, 175)" }}>
+              Most agencies post and ghost. We build engagement — responding to comments, building relationships,
+              and creating content that gets shared. Consistent, authentic posts keep you top-of-mind when
+              someone's AC dies at midnight.
+            </p>
+            <p style={{ fontSize: 17, lineHeight: 1.6, color: "var(--smoke)", marginBottom: 24 }}>
+              We develop a content strategy that reflects YOUR voice and values. We create the content
+              (or source authentic photos/videos from your team). We post on a schedule that works for
+              your audience. And we track what actually drives leads.
+            </p>
+            <p style={{ fontSize: 17, lineHeight: 1.6, color: "var(--smoke)", marginBottom: 32 }}>
+              <strong>You stay in control:</strong> Quick approvals keep posts live when they're relevant.
+              We give you the data — which posts drive calls, which comments deserve responses. You decide
+              the tone. We handle the execution.
+            </p>
+            <a className="btn" href="../index.html#contact">Start a social audit</a>
+          </div>
+          
+          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+            <img src="assets/woman-jackhammer-transparent.png" alt="Woman with jackhammer" style={{ width: "100%", height: "auto", display: "block", filter: "drop-shadow(12px 12px 32px rgba(0,0,0,.5))" }} />
+            
+            <div style={{ background: "var(--accent)", padding: "24px 28px", color: "var(--white)" }}>
+              <div className="eyebrow" style={{ opacity: 0.9 }}>Posting frequency</div>
+              <div className="display" style={{ fontSize: 48, margin: "8px 0 4px" }}>4–6x/wk</div>
+              <div style={{ fontSize: 14, opacity: 0.85 }}>Per platform, optimized for your audience</div>
+            </div>
+            
+            <div style={{ background: "var(--ink)", padding: "20px 24px", color: "var(--white)" }}>
+              <div style={{ fontFamily: '"Archivo"', fontWeight: 700, fontSize: 14, letterSpacing: "0.04em", textTransform: "uppercase", marginBottom: 8, color: "var(--accent)" }}>Real engagement</div>
+              <div style={{ fontSize: 14, lineHeight: 1.5, opacity: 0.85 }}>Comments, shares, and saved posts drive trust. We don't buy followers.</div>
+            </div>
+            
+            <div style={{ background: "var(--ink)", padding: "20px 24px", color: "var(--white)" }}>
+              <div style={{ fontFamily: '"Archivo"', fontWeight: 700, fontSize: 14, letterSpacing: "0.04em", textTransform: "uppercase", marginBottom: 8, color: "var(--accent)" }}>Monthly reporting</div>
+              <div style={{ fontSize: 14, lineHeight: 1.5, opacity: 0.85 }}>Engagement rate, reach, clicks, and leads traced back to posts.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>);
+
+}
+
+// ── Paid Ads Deep Dive ─────────────────────────────────────────────────────
+function PaidDeepDive() {
+  const platforms = [
+  { name: "Google Ads", focus: "High-intent search (\"emergency plumber\")" },
+  { name: "Bing Ads", focus: "20% cheaper CPCs, older homeowners" },
+  { name: "Meta (FB/IG)", focus: "Retargeting + awareness in target zip codes" }];
+
+
+  return (
+    <section id="paid" data-screen-label="Paid" className="section-equal bg-blueprint-light" style={{ position: "relative" }}>
+      <BlueprintMarks color="rgba(0,39,104,.32)" />
+      <DrawingStamp no="SVC-04" title="PAID MEDIA" scale="1:1" color="rgba(0,39,104,.55)" style={{ top: 28, right: 88 }} />
+      
+      <div className="container" style={{ position: "relative", zIndex: 2 }}>
+        <span className="eyebrow" style={{ color: "var(--accent)" }}>Paid media that performs</span>
+        <h2 className="display split" style={{ fontSize: "clamp(40px, 5vw, 72px)", margin: "16px 0 32px", maxWidth: 900 }}>
+          <span className="a" style={{ color: "var(--white)" }}>Ads that </span>
+          <span className="b" style={{ color: "var(--accent)" }}>respect your CPL.</span>
+        </h2>
+        
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24, marginBottom: 48 }}>
+          {platforms.map((p, i) =>
+          <div key={i} style={{ background: "var(--ink)", padding: "28px 24px", color: "var(--white)", minHeight: 180, display: "flex", flexDirection: "column" }}>
+              <div className="eyebrow" style={{ color: "var(--accent)", marginBottom: 12 }}>Platform {i + 1}</div>
+              <div className="display" style={{ fontSize: 24, marginBottom: 12 }}>{p.name}</div>
+              <div style={{ fontSize: 14, lineHeight: 1.5, opacity: 0.82, flex: 1 }}>{p.focus}</div>
+            </div>
+          )}
+        </div>
+        
+        <div style={{ background: "var(--accent)", padding: "40px", maxWidth: 800 }}>
+          <p style={{ fontSize: 18, lineHeight: 1.6, color: "var(--white)", margin: 0, fontWeight: 500 }}>
+            We optimize keyword sets weekly, not monthly. We pause underperformers daily. We A/B test
+            ad copy every 2 weeks. And we cap your spend at whatever you're comfortable losing while
+            we dial it in.
+          </p>
+          <p style={{ fontSize: 16, lineHeight: 1.6, color: "rgba(255,255,255,.9)", margin: "16px 0 0", fontStyle: "italic" }}>
+            Quick approvals and honest feedback keep campaigns live and relevant. We need your business
+            goals and honest feedback on what's working — that's how we adjust strategy for better ROI.
+          </p>
+        </div>
+      </div>
+    </section>);
+
+}
+
+// ── AI Automations Deep Dive ──────────────────────────────────────────────
+function AIAutomationsDeepDive() {
+  return (
+    <section id="ai" data-screen-label="AI Automations" className="section-equal bg-blueprint-dark" style={{ position: "relative", color: "var(--white)" }}>
+      <BlueprintMarks color="rgba(140,170,220,.28)" />
+      <DrawingStamp no="SVC-06" title="AI AUTOMATIONS" scale="1:1" color="rgba(140,170,220,.45)" style={{ top: 28, right: 88 }} />
+      
+      <div className="container" style={{ position: "relative", zIndex: 2 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 64, alignItems: "center", marginBottom: 48 }}>
+          <div>
+            <span className="eyebrow" style={{ color: "var(--accent)" }}>Always-on systems</span>
+            <h2 className="display split" style={{ fontSize: "clamp(40px, 5vw, 72px)", margin: "16px 0 24px" }}>
+              <span className="a" style={{ color: "var(--white)" }}>Let robots </span>
+              <span className="b" style={{ color: "var(--accent)" }}>work</span><br />
+              <span className="m" style={{ color: "var(--white)" }}>while you sleep.</span>
+            </h2>
+            <p style={{ fontSize: 17, lineHeight: 1.6, color: "rgba(255,255,255,.82)", marginBottom: 24 }}>
+              Marketing automation, chatbots, review management, lead scoring, and intelligent workflows
+              that capture opportunities 24/7. These systems qualify leads, book appointments, send reminders,
+              and nurture prospects — without you lifting a finger.
+            </p>
+            <p style={{ fontSize: 17, lineHeight: 1.6, color: "rgba(255,255,255,.82)", marginBottom: 24 }}>
+              We build integrations between your website, CRM, calendar, and SMS/email platforms so no lead
+              falls through the cracks. One customer interaction syncs everywhere. Reports generate automatically.
+              Follow-ups happen on schedule.
+            </p>
+            <p style={{ fontSize: 17, lineHeight: 1.6, color: "rgba(255,255,255,.82)", marginBottom: 32 }}>
+              <strong>The ROI is simple:</strong> A chatbot that books 2–3 appointments/week at a $50 CPL 
+              pays for itself in days. Automated review requests generate 15–20% more reviews. Nurture sequences 
+              turn cold leads into hot ones while you're doing actual work.
+            </p>
+            <a className="btn" href="../index.html#contact">Audit your workflows</a>
+          </div>
+          
+          <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <img src="assets/woman-trowel-transparent.png" alt="Woman with trowel" style={{
+              width: "100%",
+              maxWidth: 480,
+              height: "auto",
+              display: "block",
+              filter: "drop-shadow(12px 12px 32px rgba(0,0,0,.6))"
+            }} />
+          </div>
+        </div>
+        
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
+          <div style={{ background: "var(--accent)", padding: "24px 28px", color: "var(--white)" }}>
+            <div className="eyebrow" style={{ opacity: 0.9 }}>Implementation time</div>
+            <div className="display" style={{ fontSize: 42, margin: "8px 0 4px" }}>2–4 weeks</div>
+            <div style={{ fontSize: 14, opacity: 0.85 }}>From strategy to full system live</div>
+          </div>
+          
+          <div style={{ background: "rgba(255,255,255,.08)", padding: "24px", border: "1px solid rgba(255,255,255,.15)" }}>
+            <div className="display" style={{ fontSize: 28, marginBottom: 12 }}>24/7</div>
+            <div style={{ fontSize: 14, lineHeight: 1.5, opacity: 0.85 }}>Systems work nights, weekends, holidays. Leads never go unanswered.</div>
+          </div>
+          
+          <div style={{ background: "rgba(255,255,255,.08)", padding: "24px", border: "1px solid rgba(255,255,255,.15)" }}>
+            <div className="display" style={{ fontSize: 28, marginBottom: 12 }}>No coding</div>
+            <div style={{ fontSize: 14, lineHeight: 1.5, opacity: 0.85 }}>We set it up. You own it. No custom development required.</div>
+          </div>
+        </div>
+      </div>
+    </section>);
+
+}
+
+// ── Branding Deep Dive ─────────────────────────────────────────────────────
+function BrandingDeepDive() {
+  return (
+    <section id="branding" data-screen-label="Branding" className="section-equal bg-blueprint-navy" style={{ position: "relative", color: "var(--white)" }}>
+      <BlueprintMarks color="rgba(140,170,220,.28)" />
+      <DrawingStamp no="SVC-05" title="BRANDING + WRAPS" scale="1:1" color="rgba(140,170,220,.45)" style={{ top: 28, right: 88 }} />
+      
+      <div className="container" style={{ position: "relative", zIndex: 2 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "start" }}>
+          <div>
+            <span className="eyebrow" style={{ color: "var(--accent)" }}>Branding + fleet wraps</span>
+            <h2 className="display split" style={{ fontSize: "clamp(40px, 5vw, 72px)", margin: "16px 0 24px" }}>
+              <span className="a" style={{ color: "var(--white)" }}>Make a </span>
+              <span className="b" style={{ color: "var(--accent)" }}>one-truck</span><br />
+              <span className="m" style={{ color: "var(--white)" }}>operation look like a fleet.</span>
+            </h2>
+            <p style={{ fontSize: 17, lineHeight: 1.6, color: "rgba(255,255,255,.82)", marginBottom: 24 }}>
+              Names, logos, color palettes, voice & tone guides, and full truck/trailer/car wrap
+              design + installation. A wrapped truck logs 40,000+ impressions a day. That's $0.002
+              per impression vs. $0.04 for PPC.
+            </p>
+            <p style={{ fontSize: 17, lineHeight: 1.6, color: "rgba(255,255,255,.82)", marginBottom: 24 }}>
+              We design wraps that homeowners remember long enough to actually call. Big type, clean
+              layout, and a phone number they can read from 50 feet.
+            </p>
+            <p style={{ fontSize: 17, lineHeight: 1.6, color: "rgba(255,255,255,.82)", marginBottom: 32 }}>
+              <strong>Show us your work:</strong> Share authentic photos and videos of your team, trucks, and jobs.
+              That's how we create marketing that actually reflects who you are. Clear goals + your business expertise
+              = strategy that differentiates you from everyone else.
+            </p>
+            <a className="btn" href="../index.html#contact">Get a wrap quote</a>
+          </div>
+          
+          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+            <div style={{ background: "var(--accent)", padding: "24px", color: "var(--white)" }}>
+              <div className="eyebrow" style={{ opacity: 0.9 }}>Typical turnaround</div>
+              <div className="display" style={{ fontSize: 42, margin: "8px 0 4px" }}>48 hours</div>
+              <div style={{ fontSize: 14, opacity: 0.85 }}>From design approval to installed wrap</div>
+            </div>
+            
+            <div style={{ background: "rgba(255,255,255,.08)", padding: "24px", border: "1px solid rgba(255,255,255,.15)" }}>
+              <div className="display" style={{ fontSize: 28, marginBottom: 12 }}>3–7 year</div>
+              <div style={{ fontSize: 14, lineHeight: 1.5, opacity: 0.85 }}>Vinyl warranty on every install. We stand behind the work.</div>
+            </div>
+            
+            <div style={{ background: "rgba(255,255,255,.08)", padding: "24px", border: "1px solid rgba(255,255,255,.15)" }}>
+              <div className="display" style={{ fontSize: 28, marginBottom: 12 }}>40K+</div>
+              <div style={{ fontSize: 14, lineHeight: 1.5, opacity: 0.85 }}>Daily impressions per wrapped truck in a metro market</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>);
+
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<ServicesApp />);

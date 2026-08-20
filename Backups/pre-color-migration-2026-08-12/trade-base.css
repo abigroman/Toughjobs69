@@ -1,0 +1,623 @@
+/* ── Toughjobs Trade Page Base Styles ──────────────────────────────
+   Shared by all 27 trade-*.html pages. Edit here to change them all. */
+*,*::before,*::after{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#001a4a}
+  body{
+    font-family:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background: url('assets/blueprint-background.webp') fixed center/cover no-repeat;
+    background-color: #001a4a;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  :root{
+    --ink:#0A0F1C;
+    --navy:#002768;
+    --navy-2:#001a4a;
+    --red:#C8262A;
+    --red-2:#A90100;
+    --smoke:#5B6471;
+    --mute:#C7CBD2;
+    --mute-2:#E5E7EB;
+    --hairline:#E5E7EB;
+    --surface-alt:#F4F5F7;
+    --surface:#FCFCFD;
+    --white:#FFFFFF;
+
+    --bg-dark: var(--ink);
+    --accent: var(--red);
+    --accent-ink: var(--white);
+    --headline-a: var(--ink);
+    --headline-b: var(--accent);
+    --headline-mute: var(--mute);
+
+    --container: 1240px;
+    --pad-section: 112px;
+    --pad-section-tight: 80px;
+    --gray: #282828;
+    --dark-red: var(--red-2);
+    --text-shadow-tight: 1px 1px 0 rgba(10,15,28,.9);
+  }
+
+  .display{
+    font-family:"Archivo Black","Archivo",ui-sans-serif,system-ui,sans-serif;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:-0.01em;
+    line-height:.95;
+    text-wrap:balance;
+  }
+  .eyebrow{
+    font-family:"Archivo",ui-sans-serif,system-ui,sans-serif;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    font-size:12px;
+    text-shadow:none;
+  }
+  .container{
+    max-width:var(--container);
+    margin:0 auto;
+    padding:0 32px;
+  }
+  section{ padding-block: 120px; }
+
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:18px 34px;
+    font-family:"Archivo",sans-serif;font-weight:800;letter-spacing:.06em;
+    font-size:15px;text-transform:uppercase;text-decoration:none;text-shadow:none;
+    background:var(--accent);color:var(--accent-ink);
+    border:0;cursor:pointer;
+    transition:transform .15s ease, filter .2s ease, background .2s ease;
+  }
+  .btn:hover{ filter:brightness(.92); }
+  .btn:active{ transform:translateY(1px); }
+  .btn-dark{ background:var(--ink); color:var(--white); }
+  .btn-ghost{
+    background:transparent; color:var(--ink);
+    border:2px solid var(--ink);
+    padding:16px 32px;
+  }
+  .btn-ghost:hover{ background:var(--ink); color:var(--white); }
+
+  .split .a{ color:var(--headline-a); }
+  .split .b{ color:var(--headline-b); }
+  .split .m{ color:var(--headline-mute); }
+
+  /* ── Hero section classes ── */
+  .hero-section {
+    position:relative; color:var(--white); overflow:hidden;
+    min-height: clamp(620px, calc(100svh - 172px), 900px);
+    display:flex; align-items:stretch;
+  }
+  /* Layered hero background — gradients only; the body's fixed blueprint
+     image shows through underneath, no need to re-declare it here. */
+  .hero-section.bg-blueprint-dark{
+    background-color: rgba(8,12,22,0.82);
+    background-image:
+      radial-gradient(115% 92% at 85% 30%, rgba(200,38,42,.30) 0%, rgba(200,38,42,0) 55%),
+      linear-gradient(90deg, rgba(8,12,22,.97) 0%, rgba(8,12,22,.9) 38%, rgba(8,12,22,.64) 72%, rgba(8,12,22,.82) 100%);
+    background-size: cover, cover;
+    background-position: center, center;
+    background-repeat: no-repeat;
+  }
+  /* Giant ghosted trade wordmark — fills the upper-left negative space */
+  .hero-section::before{
+    content: attr(data-watermark);
+    position:absolute; left:-.04em; top:-.10em;
+    font-family:'Archivo Black',sans-serif; font-weight:900; text-transform:uppercase;
+    font-size:clamp(130px, 19vw, 300px); line-height:.8; letter-spacing:-.03em;
+    color:transparent; -webkit-text-stroke:2px rgba(255,255,255,.055);
+    z-index:0; pointer-events:none; white-space:nowrap; user-select:none;
+  }
+  /* Red angular accent panel behind the figure — grounds it, fills the right void */
+  .hero-section::after{
+    content:""; position:absolute; top:0; bottom:0; right:0; width:48%;
+    background:
+      linear-gradient(255deg, rgba(200,38,42,.32) 0%, rgba(200,38,42,0) 64%),
+      repeating-linear-gradient(58deg, rgba(200,38,42,.5) 0 3px, transparent 3px 27px);
+    -webkit-mask-image:linear-gradient(90deg, transparent 0%, #000 42%);
+            mask-image:linear-gradient(90deg, transparent 0%, #000 42%);
+    transform:skewX(-9deg) translateX(16%); transform-origin:top right;
+    z-index:0; pointer-events:none;
+  }
+  .blueprint-marks { position:absolute; z-index:1; pointer-events:none; top:28px; left:28px; }
+  .blueprint-marks-top-right { top:28px; right:28px; left:auto; }
+  .blueprint-marks-bottom-left { bottom:28px; left:28px; top:auto; }
+  .blueprint-marks-bottom-right { bottom:28px; right:28px; top:auto; left:auto; }
+  .trade-hero-img { position:absolute; right:clamp(24px,7vw,170px); bottom:0; top:auto; height:clamp(560px, 92%, 1000px); width:auto; max-width:60%; object-fit:contain; object-position:bottom right; z-index:1; pointer-events:none; }
+  .hero-container { position:relative; z-index:2; display:flex; align-items:flex-start; width:100%; min-height:inherit; padding-top:40px; }
+  .hero-text { max-width:860px; text-align:left; margin:0; }
+  .eyebrow-accent { color:var(--accent); }
+  .h1-hero { font-size:clamp(48px, 5.5vw, 80px); margin:20px 0 28px; max-width:1100px; line-height:0.95; color:var(--white); word-break:normal; overflow-wrap:normal; text-wrap:wrap; }
+  .h2-hero { font-family:'Archivo Black', sans-serif; font-size:clamp(28px, 4vw, 48px); color:var(--accent); text-shadow:var(--text-shadow-tight); text-transform:uppercase; letter-spacing:-0.01em; margin:0 0 40px; max-width:900px; line-height:1.0; }
+  .button-group { display:flex; gap:14px; flex-wrap:wrap; }
+  .btn-accent { background:var(--accent); }
+  .btn-black { background:#000000; color:var(--white); }
+  .btn-icon { flex-shrink:0; }
+
+
+
+/* ── Section background & text themes ── */
+  /* All section bg classes are semi-transparent so the body's fixed
+     blueprint-background.webp shows through every section as one unified
+     engineering texture behind all scrolling content. */
+  .bg-blueprint-dark{
+    background-color: rgba(10,15,28,0.88);
+    background-image: none;
+    color: var(--white);
+  }
+  .bg-blueprint-dark h1, .bg-blueprint-dark h2, .bg-blueprint-dark h3,
+  .bg-blueprint-dark h4, .bg-blueprint-dark h5, .bg-blueprint-dark h6 {
+    color: var(--white);
+  }
+  .bg-blueprint-dark .eyebrow { color: var(--white); opacity: 0.85; }
+  .bg-blueprint-dark p, .bg-blueprint-dark li { color: rgba(255,255,255,.78); }
+
+  .bg-blueprint-navy{
+    background-color: rgba(0,39,104,0.88);
+    background-image: none;
+    color: var(--white);
+  }
+  .bg-blueprint-navy h1, .bg-blueprint-navy h2, .bg-blueprint-navy h3,
+  .bg-blueprint-navy h4, .bg-blueprint-navy h5, .bg-blueprint-navy h6 {
+    color: var(--white);
+  }
+  .bg-blueprint-navy .eyebrow { color: var(--white); opacity: 0.85; }
+  .bg-blueprint-navy p, .bg-blueprint-navy li { color: rgba(255,255,255,.78); }
+
+  .bg-blueprint-red{
+    background-color: rgba(168,1,0,0.82);
+    background-image: none;
+    color: var(--white);
+  }
+  .bg-blueprint-red h1, .bg-blueprint-red h2, .bg-blueprint-red h3,
+  .bg-blueprint-red h4, .bg-blueprint-red h5, .bg-blueprint-red h6 {
+    color: var(--white);
+  }
+  .bg-blueprint-red .eyebrow { color: var(--white); opacity: 0.85; }
+  .bg-blueprint-red p, .bg-blueprint-red li { color: rgba(255,255,255,.9); }
+
+  .bg-blueprint-light{
+    background-color: #f8f9fb;
+    background-image: url('assets/partnership-schematics-light.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--ink);
+  }
+  .bg-blueprint-light h1, .bg-blueprint-light h2, .bg-blueprint-light h3,
+  .bg-blueprint-light h4, .bg-blueprint-light h5, .bg-blueprint-light h6 {
+    color: var(--ink);
+    text-shadow: none;
+  }
+  .bg-blueprint-light .eyebrow { color: var(--accent); opacity: 1; text-shadow: none; }
+  .bg-blueprint-light p, .bg-blueprint-light li { color: rgba(10,15,28,.82); font-weight: 700; }
+
+  .light-on-light{ color: var(--ink) !important; text-shadow: none !important; }
+
+  .bg-blueprint-light .mix-lever-title{ text-shadow: none; }
+  .bg-blueprint-light .mix-lever-header.lever-a .mix-lever-title{ color: var(--accent); }
+  .bg-blueprint-light .mix-lever-header.lever-b .mix-lever-title{ color: #F0A030; }
+  .bg-blueprint-light .mix-lever-header.lever-c .mix-lever-title{ color: #7DA8FF; }
+  .bg-blueprint-light .mix-lever-subtitle{ color: var(--ink); text-shadow: none; }
+  .bg-blueprint-light .mix-lever-letter{ text-shadow:var(--text-shadow-tight); }
+
+/* ── CTA section (special red layout with gradient) ── */
+  .cta-section {
+    background: linear-gradient(180deg, rgba(168, 1, 0, 0.45) 0%, rgba(200, 38, 42, 0.35) 100%);
+    position: relative;
+    padding-block: 100px;
+    border-bottom: 16px solid #472345;
+  }
+
+
+
+  ::selection{ background:var(--accent); color:var(--accent-ink); }
+
+/* ── Service-links pill row (below hero) ── */
+  .service-pill-row{ background:var(--ink); padding:18px 0; border-top:1px solid rgba(255,255,255,.12); position:relative; z-index:10; }
+  .service-pill-row .container{
+    display:grid !important;
+    grid-template-columns:.85fr .55fr .9fr 1.1fr .9fr .85fr 1.25fr .9fr 1.55fr .85fr;
+    gap:6px !important;
+    width:100%;
+    max-width:var(--container);
+    padding:0 20px;
+    overflow:visible;
+    justify-content:stretch !important;
+  }
+  .service-pill{
+    display:flex; align-items:center; justify-content:center; min-width:0;
+    padding:10px 7px; background:var(--red); border:1px solid var(--red);
+    border-radius:4px; color:var(--white); font-size:clamp(10px,.8vw,12px); font-weight:600;
+    font-family:'Archivo', sans-serif; text-decoration:none; transition:all 200ms ease;
+    text-transform:uppercase; letter-spacing:0.01em; line-height:1.1;
+    text-align:center; white-space:nowrap;
+  }
+  .service-pill:hover{ background:var(--ink); border-color:var(--ink); color:var(--white); }
+
+  @media (max-width:1024px){
+    .service-pill-row{ display:none; }
+  }
+
+  /* ── Accent headline glow (the red "punch word" in H1/H2s) ── */
+  .headline-glow{ text-shadow:var(--text-shadow-tight); }
+
+  /* ── CTA headline (crisp shadow, no blur) ── */
+  .cta-headline{ font-size:clamp(48px, 7vw, 96px); margin:0 0 32px; color:var(--white); text-shadow:var(--text-shadow-tight); }
+
+  /* ── Title color utilities (replace inline color on headline spans) ── */
+  .c-white{ color:var(--white); }
+  .c-ink{ color:var(--ink); }
+  .c-accent{ color:var(--accent); }
+
+  /* ── Typography & Spacing System ── */
+  .font-archivo-black { font-family:'Archivo Black',sans-serif; }
+  .font-mono { font-family:monospace; }
+  .text-xs { font-size:10px; }
+  .text-sm { font-size:11px; }
+  .text-base { font-size:13px; line-height:1.4; }
+  .text-md { font-size:14px; line-height:1.45; }
+  .text-lg { font-size:18px; }
+  .text-uppercase { text-transform:uppercase; }
+  .tracking-tight { letter-spacing:-0.01em; }
+  .tracking-wide { letter-spacing:.08em; }
+  .tracking-wider { letter-spacing:.06em; }
+  .font-medium { font-weight:500; }
+  .font-semibold { font-weight:600; }
+  .font-bold { font-weight:700; }
+
+  /* ── Layout Utilities ── */
+  .flex-col { display:flex; flex-direction:column; }
+  .flex-row { display:flex; flex-direction:row; }
+  .pos-abs { position:absolute; }
+  .pos-rel { position:relative; }
+  .z-1 { z-index:1; }
+  .z-2 { z-index:2; }
+  .pointer-none { pointer-events:none; }
+
+  /* ── Service Bullet (card list items) ── */
+  .service-bullet { font-size:13px; line-height:1.4; color:rgba(255,255,255,.92); padding-left:16px; position:relative; text-shadow:none; }
+  .service-bullet::before { position:absolute; left:0; top:4px; width:8px; height:2px; content:''; }
+
+  /* ── Card Footer (pricing / meta) ── */
+  .card-footer { margin-top:auto; padding-top:14px; border-top:1px dashed rgba(255,255,255,.18); }
+  .card-meta { font-size:10px; font-family:monospace; letter-spacing:.06em; color:rgba(255,255,255,.45); margin-bottom:4px; }
+  .card-price { font-family:'Archivo Black',sans-serif; font-size:14px; color:var(--accent); text-shadow:0 1px 4px rgba(0,0,0,.6); line-height:1.25; margin-bottom:6px; }
+  .card-remark { font-size:11px; opacity:.7; font-weight:600; }
+
+  /* ── CTA Section ── */
+  .cta-container { display:grid; grid-template-columns:1.4fr 1fr; gap:45px; align-items:center; position:relative; z-index:2; }
+  .cta-partner-container { position:relative; z-index:2; max-width:600px; }
+  .cta-partner-title { font-size:clamp(34px,4.55vw,73px); margin:0 0 20px; color:var(--white); line-height:.95; }
+  .cta-partner-copy { font-size:17px; line-height:1.55; color:rgba(255,255,255,.9); margin:0 0 28px; }
+  .cta-partner-btn { background:var(--white); color:var(--accent); display:inline-block; }
+  .cta-copy { display:flex; flex-direction:column; gap:16px; align-items:flex-start; }
+  .cta-copy p { color:rgba(255,255,255,.9); font-size:17px; line-height:1.5; margin:0; }
+  .cta-buttons { display:flex; gap:12px; margin-top:8px; }
+  .btn-phone { display:inline-flex; align-items:center; gap:10px; padding:14px 24px; background:#4B5563; color:var(--white); border:0; cursor:pointer; font-family:'Archivo',sans-serif; font-weight:700; font-size:13px; text-transform:uppercase; letter-spacing:.05em; text-decoration:none; }
+  .btn-phone:hover { background:#5B6573; }
+
+/* ── Marketing Mix section (Style Distiller consolidation) ──
+   Lever color is fixed per category across all 27 pages:
+   A = red (var(--accent)), B = orange (#F0A030), C = blue (#7DA8FF) */
+  .mix-section{ position:relative; padding-block:120px; color:var(--white); margin-top:-60px; }
+
+  .mix-lever-header{ display:flex; align-items:baseline; gap:20px; margin-bottom:24px; padding-bottom:12px; border-bottom:2px solid; }
+  .mix-lever-header.lever-a{ border-color:var(--accent); }
+  .mix-lever-header.lever-b{ border-color:#F0A030; }
+  .mix-lever-header.lever-c{ border-color:#7DA8FF; }
+
+  .mix-lever-letter{ font-family:'Archivo Black',sans-serif; font-size:56px; line-height:0.9; }
+  .mix-lever-letter.lever-a{ color:var(--accent); }
+  .mix-lever-letter.lever-b{ color:#F0A030; }
+  .mix-lever-letter.lever-c{ color:#7DA8FF; }
+
+  .mix-lever-title{ font-family:'Archivo Black',sans-serif; font-size:28px; line-height:1; text-transform:uppercase; letter-spacing:-0.01em; color:var(--white); margin-bottom:6px; }
+  .mix-lever-subtitle{ font-size:14px; color:rgba(255,255,255,.7); font-weight:600; font-style:italic; }
+
+  .mix-grid-2, .mix-grid-3, .mix-grid-4, .mix-grid-5{ display:flex; gap:16px; margin-bottom:56px; align-items:stretch; }
+  .mix-grid-2 > div, .mix-grid-3 > div, .mix-grid-4 > div, .mix-grid-5 > div{ flex:1 1 0; min-width:0; }
+
+  /* Force the badge/title/desc rows to a shared height per card-row, so the
+     bullet lists (and everything below) start at the same Y across every
+     column — plain flex, no grid/subgrid needed. */
+  .mix-grid-2 > div > div:nth-child(1), .mix-grid-3 > div > div:nth-child(1),
+  .mix-grid-4 > div > div:nth-child(1), .mix-grid-5 > div > div:nth-child(1){ min-height:18px; }
+  .mix-grid-2 > div > div:nth-child(2), .mix-grid-3 > div > div:nth-child(2),
+  .mix-grid-4 > div > div:nth-child(2), .mix-grid-5 > div > div:nth-child(2){ min-height:66px; }
+  .mix-grid-2 > div > div:nth-child(3), .mix-grid-3 > div > div:nth-child(3),
+  .mix-grid-4 > div > div:nth-child(3), .mix-grid-5 > div > div:nth-child(3){ min-height:61px; }
+  .mix-grid-2 > div > ul, .mix-grid-3 > div > ul,
+  .mix-grid-4 > div > ul, .mix-grid-5 > div > ul{ flex:1; }
+
+  .mix-card{ background:var(--ink); padding:24px 22px; color:var(--white); display:flex; flex-direction:column; gap:12px; min-height:360px; border-top:4px solid; }
+  .mix-card.lever-a{ border-color:var(--accent); }
+  .mix-card.lever-b{ border-color:#F0A030; }
+  .mix-card.lever-c{ border-color:#7DA8FF; }
+
+  .mix-card-head{ display:flex; align-items:baseline; justify-content:space-between; }
+  .mix-card-code{ font-family:'Archivo Black',sans-serif; font-size:12px; letter-spacing:.08em; }
+  .mix-card-code.lever-a{ color:var(--accent); }
+  .mix-card-code.lever-b{ color:#F0A030; }
+  .mix-card-code.lever-c{ color:#7DA8FF; }
+  .mix-card-kicker{ font-size:10px; opacity:.5; font-family:monospace; letter-spacing:.05em; }
+  .mix-card-title{ font-family:'Archivo Black',sans-serif; font-size:19px; line-height:1.15; text-transform:uppercase; letter-spacing:-0.01em; color:var(--white); }
+  .mix-card-desc{ font-size:14px; line-height:1.45; color:rgba(255,255,255,.78); font-weight:500; }
+  .mix-card-list{ margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:6px; }
+  .mix-card-list-item{ font-size:13px; line-height:1.4; color:rgba(255,255,255,.92); padding-left:16px; position:relative; }
+  .mix-bullet{ position:absolute; left:0; top:4px; width:8px; height:2px; }
+  .mix-bullet.lever-a{ background:var(--accent); }
+  .mix-bullet.lever-b{ background:#F0A030; }
+  .mix-bullet.lever-c{ background:#7DA8FF; }
+  .mix-card-price-box{ margin-top:auto; padding-top:14px; border-top:1px dashed rgba(255,255,255,.18); }
+  .mix-card-rate-label{ font-size:10px; font-family:monospace; letter-spacing:.06em; color:rgba(255,255,255,.45); margin-bottom:4px; }
+  .mix-card-price{ font-family:'Archivo Black',sans-serif; font-size:14px; line-height:1.25; margin-bottom:6px; }
+  .mix-card-price.lever-a{ color:var(--accent); }
+  .mix-card-price.lever-b{ color:#F0A030; }
+  .mix-card-price.lever-c{ color:#7DA8FF; }
+  .mix-card-roi{ font-size:11px; opacity:.7; font-weight:600; }
+
+  @media (max-width:760px){
+    .mix-grid-2, .mix-grid-3, .mix-grid-4, .mix-grid-5{
+      flex-direction:column;
+    }
+    .mix-grid-2 > div, .mix-grid-3 > div, .mix-grid-4 > div, .mix-grid-5 > div{
+      flex-basis:auto;
+      width:100%;
+    }
+    .mix-grid-2 > div > div:nth-child(1), .mix-grid-3 > div > div:nth-child(1),
+    .mix-grid-4 > div > div:nth-child(1), .mix-grid-5 > div > div:nth-child(1),
+    .mix-grid-2 > div > div:nth-child(2), .mix-grid-3 > div > div:nth-child(2),
+    .mix-grid-4 > div > div:nth-child(2), .mix-grid-5 > div > div:nth-child(2),
+    .mix-grid-2 > div > div:nth-child(3), .mix-grid-3 > div > div:nth-child(3),
+    .mix-grid-4 > div > div:nth-child(3), .mix-grid-5 > div > div:nth-child(3){
+      min-height:0;
+    }
+  }
+
+/* ── Text shadow (applied sitewide on trade pages) ──
+   Scoped to real, explicit selectors — the old version used
+   [class*="title"|"heading"|"label"|"card"|"hero"|"cta"] wildcards
+   with !important, which silently caught any future class containing
+   those substrings (including the mix-* classes above, redundantly).
+   The mix-* classes now carry their own explicit text-shadow, so the
+   wildcards are removed; this rule covers only real page elements. */
+h1, h2, h3, h4, h5, h6,
+  li, span, button, label, td, th,
+  .display, .stat-num, .stat-label {
+    text-shadow:var(--text-shadow-tight);
+  }
+  p, a { text-shadow: none; }
+  a:not(.btn):not(.nav-link):not(.service-pill):not(.back-btn) {
+    text-decoration: none;
+  }
+
+/* ── services.html-only layout utilities (not used by trade-*.html) ── */
+  .resource-title { text-shadow: none; }
+
+  .section-equal{ min-height:clamp(680px,80vh,900px); display:flex; flex-direction:column; justify-content:center; }
+
+/* ── Footer ticker accessibility ───────────────────────────────────────
+   Higher-specificity selectors (.footer-ticker .ticker-track) override
+   the inline <style> .ticker-track rules defined per-page. */
+  .footer-ticker:hover .ticker-track { animation-play-state: paused; }
+  @media (prefers-reduced-motion: reduce) {
+    .footer-ticker .ticker-track { animation: none; }
+  }
+
+  .grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+  @media (max-width:1024px){
+    .grid-2{ grid-template-columns:1fr; gap:40px; }
+    .hero-grid{ grid-template-columns:1fr; gap:40px; }
+  }
+
+  @media (max-width:760px){
+    .hero-container{ padding-inline:20px; }
+    .h1-hero{ font-size:clamp(42px, 12vw, 56px); }
+    main > section[data-screen-label="Resource"] > .container{
+      grid-template-columns:1fr !important;
+      gap:36px !important;
+    }
+  }
+
+  body.page-services .stat-card-accent{ background:var(--accent); padding:24px 28px; color:var(--white); }
+  .stat-card-accent .eyebrow{ color:var(--white); opacity:.9; margin-bottom:8px; }
+  .stat-card-dark{ background:var(--ink); padding:20px 24px; color:var(--white); display:flex; gap:16px; align-items:center; }
+  .stat-num{ font-size:28px; font-family:monospace; color:var(--accent); font-weight:700; min-width:40px; }
+  .stat-label{ font-family:"Archivo",sans-serif; font-weight:700; font-size:14px; letter-spacing:.04em; text-transform:uppercase; margin-bottom:4px; }
+  .stat-desc{ font-size:13px; opacity:.75; }
+
+  .pill-row{ display:flex; gap:12px; flex-wrap:wrap; }
+  .pill-row .btn, .pill-row .btn-dark{ background:var(--accent); color:var(--white); }
+  .pill-row .btn:hover, .pill-row .btn-dark:hover{ background:var(--ink); filter:none; }
+
+/* ── services.html page scope (differs from trade-*.html base look) ── */
+  body.page-services{ font-family:"Archivo",sans-serif; color:var(--ink); background:var(--white); }
+  body.page-services *, body.page-services *::before, body.page-services *::after{ margin:0; padding:0; }
+  body.page-services .btn{ padding:18px 34px; }
+  body.page-services .btn-ghost{ padding:16px 32px; }
+  body.page-services .container{ max-width:var(--container); margin-inline:auto; padding:0 32px; }
+  body.page-services main section{ padding-block:100px; position:relative; }
+  body.page-services main section p{ font-size:16px; line-height:1.6; }
+  body.page-services .eyebrow{ display:block; margin-bottom:16px; color:var(--accent); }
+  body.page-services .display{ text-wrap:balance; }
+  /* footer: restore paddings the blanket reset zeroes out */
+  body.page-services footer .footer-ticker{ padding:20px 0; padding-left:calc(50vw - 50%); padding-right:calc(50vw - 50%); }
+  body.page-services footer .footer-main{ padding:60px 0; }
+  body.page-services footer .footer-section h4{ padding-bottom:8px; }
+  body.page-services footer .footer-bottom{ padding:24px 0; }
+
+  @media (max-width:760px){
+    .mix-grid-2, .mix-grid-3, .mix-grid-4, .mix-grid-5{
+      flex-direction:column;
+    }
+    .mix-grid-2 > div, .mix-grid-3 > div, .mix-grid-4 > div, .mix-grid-5 > div{
+      flex-basis:auto;
+      width:100%;
+    }
+    .mix-grid-2 > div > div:nth-child(1), .mix-grid-3 > div > div:nth-child(1),
+    .mix-grid-4 > div > div:nth-child(1), .mix-grid-5 > div > div:nth-child(1),
+    .mix-grid-2 > div > div:nth-child(2), .mix-grid-3 > div > div:nth-child(2),
+    .mix-grid-4 > div > div:nth-child(2), .mix-grid-5 > div > div:nth-child(2),
+    .mix-grid-2 > div > div:nth-child(3), .mix-grid-3 > div > div:nth-child(3),
+    .mix-grid-4 > div > div:nth-child(3), .mix-grid-5 > div > div:nth-child(3){
+      min-height:0;
+    }
+  }
+
+/* ── Motion system ───────────────────────────────────────────────────
+   Focal: hero three-beat entrance (scan → figure → buttons).
+   Continuity: mix-card stagger on scroll entry.
+   Feedback: button tactile lift.
+   Accent: blueprint crosshairs acquire target on section entry.
+   All non-essential motion gated on prefers-reduced-motion. */
+
+@keyframes tj-scan-in {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0%   0 0); }
+}
+@keyframes tj-figure-in {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes tj-rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* — Hero entrance: three-beat sequence — */
+  .h1-hero {
+    animation: tj-scan-in 0.65s cubic-bezier(0.16,1,0.3,1) 0.1s both;
+  }
+  .h2-hero {
+    animation: tj-scan-in 0.5s cubic-bezier(0.16,1,0.3,1) 0.55s both;
+  }
+  .button-group {
+    animation: tj-rise 0.4s cubic-bezier(0.16,1,0.3,1) 0.75s both;
+  }
+  .trade-hero-img {
+    animation: tj-figure-in 0.7s cubic-bezier(0.16,1,0.3,1) 0.2s both;
+  }
+
+  /* — Blueprint crosshairs: acquire target on section entry — */
+  .blueprint-marks svg {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.3s ease, transform 0.45s cubic-bezier(0.16,1,0.3,1);
+  }
+  section.sect-visible .blueprint-marks svg {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* — Button: tactile depth on hover — */
+  .btn {
+    transition: transform .15s cubic-bezier(0.16,1,0.3,1),
+                filter .2s ease,
+                background .2s ease,
+                box-shadow .15s ease;
+  }
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.28);
+    filter: brightness(0.92);
+  }
+  .btn:active {
+    transform: translateY(1px);
+    box-shadow: none;
+    filter: brightness(0.88);
+  }
+
+  /* — Mix cards: stagger on scroll entry (targets inline-styled card divs) — */
+  .js-can-animate .mix-grid-2 > div,
+  .js-can-animate .mix-grid-3 > div,
+  .js-can-animate .mix-grid-4 > div,
+  .js-can-animate .mix-grid-5 > div {
+    opacity: 0;
+    transform: translateX(-12px);
+    transition: opacity 0.35s cubic-bezier(0.16,1,0.3,1),
+                transform 0.35s cubic-bezier(0.16,1,0.3,1);
+  }
+  .js-can-animate .mix-grid-2 > div.is-visible,
+  .js-can-animate .mix-grid-3 > div.is-visible,
+  .js-can-animate .mix-grid-4 > div.is-visible,
+  .js-can-animate .mix-grid-5 > div.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ── Mobile & tablet adaptation ─────────────────────────────────────
+   Rethinks layout for touch contexts; not pixel scaling. */
+
+/* Tablet: 5-wide mix grids wrap to 2-up before 760px stacking kicks in */
+@media (max-width: 960px) {
+  .mix-grid-5 { flex-wrap: wrap; }
+  .mix-grid-5 > div { flex: 1 1 calc(50% - 8px); min-width: 0; }
+}
+
+@media (max-width: 760px) {
+  /* Section rhythm: 120px is desktop-scale, 64px works on mobile */
+  section { padding-block: 64px; }
+
+  /* Container: 32px side padding is desktop-scale; reduce for more card width */
+  .container { padding-inline: 16px !important; }
+
+  /* Hero: service-hero-uniform.css owns the trade figure on mobile (stacks it above copy) */
+  .hero-section { min-height: 0; padding-block: 72px 56px; }
+
+  /* Mix: inline style has margin-top:-60px so !important needed to override */
+  .mix-section { margin-top: 0 !important; padding-block: 72px !important; }
+
+  /* Mix grids: switch to CSS Grid 2-column so no flex-wrap rounding ambiguity */
+  .mix-grid-2, .mix-grid-3, .mix-grid-4, .mix-grid-5 {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+
+  /* Mobile phone: stack mix cards into a single column for readability */
+  @media (max-width: 560px) {
+    .mix-grid-2, .mix-grid-3, .mix-grid-4, .mix-grid-5 {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  /* Mix cards: let grid size them; drop fixed min-height from inline style */
+  .mix-grid-2 > div,
+  .mix-grid-3 > div,
+  .mix-grid-4 > div,
+  .mix-grid-5 > div {
+    flex: unset !important;
+    width: auto !important;
+    min-height: 0 !important;
+  }
+
+  /* Drop the shared min-heights that force desktop-style alignment */
+  .mix-grid-2 > div > div:nth-child(1), .mix-grid-3 > div > div:nth-child(1),
+  .mix-grid-4 > div > div:nth-child(1), .mix-grid-5 > div > div:nth-child(1),
+  .mix-grid-2 > div > div:nth-child(2), .mix-grid-3 > div > div:nth-child(2),
+  .mix-grid-4 > div > div:nth-child(2), .mix-grid-5 > div > div:nth-child(2),
+  .mix-grid-2 > div > div:nth-child(3), .mix-grid-3 > div > div:nth-child(3),
+  .mix-grid-4 > div > div:nth-child(3), .mix-grid-5 > div > div:nth-child(3) {
+    min-height: 0 !important;
+  }
+
+  /* CTA: hide logo ring after grid collapses to single column */
+  .team-logo-ring { display: none; }
+
+  /* CTA headline: 48px still fits at mobile but clamp lower */
+  .cta-headline { font-size: clamp(34px, 10vw, 52px); }
+  .cta-section { padding-block: 72px; }
+
+  /* Buttons: stack vertically, fill row for easy thumb tap */
+  .button-group { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .button-group .btn { width: 100%; justify-content: center; }
+
+  /* Reduce hero H2 subtitle on small screens */
+  .h2-hero { font-size: clamp(22px, 6vw, 34px); margin-bottom: 28px; }
+}

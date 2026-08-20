@@ -1,0 +1,944 @@
+{
+ "about.html": {
+  "title": "About — Toughjobs",
+  "desc": "Meet Toughjobs founder Tony Baeza and learn why the company focuses on practical marketing systems for independent trade businesses across the Midwest.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "ai-automations.html": {
+  "title": "AI Automation Services for Contractors | Toughjobs",
+  "desc": "AI automation services for contractors with clear triggers, lead routing, missed-call follow-up, human handoffs, testing, and documented ownership.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "appliance-repair-2.html": {
+  "title": "Appliance Repair Website Example | Toughjobs",
+  "desc": "Review a appliance repair website example with annotated decisions for service structure, mobile calls, local search, customer proof, and request repair.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "auto-repair.html": {
+  "title": "Auto Repair Website Example | Toughjobs",
+  "desc": "Review a auto repair website example with annotated decisions for service structure, mobile calls, local search, customer proof, and call the shop.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "branding.html": {
+  "title": "Contractor Branding and Logo Design | Toughjobs",
+  "desc": "Contractor branding for trucks, uniforms, websites, estimates, signs, and print. Build one usable visual system for every customer touchpoint.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "carpet-cleaning.html": {
+  "title": "Carpet Cleaning Website Example | Toughjobs",
+  "desc": "Review a carpet cleaning website example with annotated decisions for service structure, mobile calls, local search, customer proof, and request a cleaning.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "citations.html": {
+  "title": "Citations — Toughjobs | Business Information & Credits",
+  "desc": "Official business citation information for Toughjobs Digital Marketing — name, address, phone, and content credits.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "coaching.html": {
+  "title": "Toughjobs — Coaching | 1-on-1 Business Coaching for Trades Owners",
+  "desc": "Business coaching for contractors and trades owners. Group and 1-on-1 coaching on pricing, hiring, systems, marketing and cash flow — one-time packages from.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "concrete-paving.html": {
+  "title": "Concrete and Paving Website Example | Toughjobs",
+  "desc": "Review a concrete and paving website example with annotated decisions for service structure, mobile calls, local search, customer proof, and request a site.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "contact.html": {
+  "title": "Contact — Toughjobs | Marketing for the Trades",
+  "desc": "Contact — Toughjobs Digital Marketing, marketing built for the trades. Serving Illinois, Iowa, Missouri, Wisconsin and Indiana. Call (309) 928-9080.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "database-reactivation.html": {
+  "title": "Customer Reactivation for Contractors | Toughjobs",
+  "desc": "Customer reactivation for contractors using permission-aware email and SMS, clear offers, list cleanup, follow-up, and tracked rebooking.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "davenport-ia.html": {
+  "title": "Digital Marketing in Davenport, IA | Toughjobs",
+  "desc": "Websites, local SEO and paid ads for trade & home-service businesses in Davenport and the Quad Cities. Two-state metro strategy that books jobs. Call (309).",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "dubuque-ia.html": {
+  "title": "Digital Marketing in Dubuque, IA | Toughjobs",
+  "desc": "Websites, local SEO and paid ads for trade & home-service businesses in Dubuque and the Tri-States. Reach Iowa, Illinois & Wisconsin customers. Call (309).",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "electrician.html": {
+  "title": "Electrician Website Example | Toughjobs",
+  "desc": "Review a electrician website example with annotated decisions for service structure, mobile calls, local search, customer proof, and request electrical.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "employment.html": {
+  "title": "Careers at Toughjobs — Build Marketing for the Trades",
+  "desc": "Join Toughjobs. We build marketing, websites, and brands for home-service and trade businesses across Central Illinois and the Quad Cities. See open roles.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "excavation-website.html": {
+  "title": "Excavation Website Example | Toughjobs",
+  "desc": "Review a excavation website example with annotated decisions for service structure, mobile calls, local search, customer proof, and request a project review.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "fence-builders.html": {
+  "title": "Fence Contractor Website Example | Toughjobs",
+  "desc": "Review a fence contractor website example with annotated decisions for service structure, mobile calls, local search, customer proof, and request a fence.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "free-tools.html": {
+  "title": "FREE TOOLS — Toughjobs | Know Where You Stand",
+  "desc": "FREE TOOLS — Toughjobs Digital Marketing, marketing built for the trades. Serving Illinois, Iowa, Missouri, Wisconsin and Indiana. Call (309) 928-9080.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "garage-door-repair.html": {
+  "title": "Garage Door Website Example | Toughjobs",
+  "desc": "Review a garage door website example with annotated decisions for service structure, mobile calls, local search, customer proof, and schedule garage door.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "general-contractor.html": {
+  "title": "General Contractor Website Example | Toughjobs",
+  "desc": "Review a general contractor website example with annotated decisions for service structure, mobile calls, local search, customer proof, and request a.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "gutter-installation-cleaning.html": {
+  "title": "Gutter Installation and Cleaning Website Example | Toughjobs",
+  "desc": "Review a gutter installation and cleaning website example with annotated decisions for service structure, mobile calls, local search, customer proof, and.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "handyman.html": {
+  "title": "Handyman Website Example | Toughjobs",
+  "desc": "Review a handyman website example with annotated decisions for service structure, mobile calls, local search, customer proof, and request handyman service.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "house-framing.html": {
+  "title": "House Framing Website Example | Toughjobs",
+  "desc": "Review a house framing website example with annotated decisions for service structure, mobile calls, local search, customer proof, and request a framing bid.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "hvac-repair.html": {
+  "title": "HVAC Website Example | Toughjobs",
+  "desc": "Review a hvac website example with annotated decisions for service structure, mobile calls, local search, customer proof, and schedule HVAC service.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "index.html": {
+  "title": "Marketing for the Trades | Toughjobs",
+  "desc": "Marketing for trade and home-service businesses across the Midwest. Connect websites, local SEO, paid ads, branding, print, and follow-up.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "insight-conversion-killers.html": {
+  "title": "Five Things Killing Your Home Page Conversion | Toughjobs",
+  "desc": "Stop bounce traffic on your trade business website. Five conversion killers on your home page — and exactly how to fix each one.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "insight-map-pack.html": {
+  "title": "How to Own the Map Pack in Your Town — Toughjobs Field Notes",
+  "desc": "Rank higher locally and own the Google map pack in your town. Category setup, service listings, and niche backlinks that get home-service businesses found.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "insight-repeat-customers.html": {
+  "title": "Turning One-Time Jobs Into Repeat Customers | Toughjobs",
+  "desc": "How home-service businesses turn one-time jobs into repeat clients — treating customers right, professionalism on the job, and handling difficult customers.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "janitorial-building-management.html": {
+  "title": "Janitorial Website Example | Toughjobs",
+  "desc": "Review a janitorial website example with annotated decisions for service structure, mobile calls, local search, customer proof, and request a facility.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "junk-removal.html": {
+  "title": "Junk Removal Website Example | Toughjobs",
+  "desc": "Review a junk removal website example with annotated decisions for service structure, mobile calls, local search, customer proof, and request junk removal.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "landscaping-lawn-care.html": {
+  "title": "Landscaping and Lawn Care Website Example | Toughjobs",
+  "desc": "Review a landscaping and lawn care website example with annotated decisions for service structure, mobile calls, local search, customer proof, and request a.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "local-seo.html": {
+  "title": "Local SEO for Contractors | Toughjobs",
+  "desc": "Local SEO for contractors across the Midwest: Google Business Profile work, service-area pages, review systems, citations, and tracked calls.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "locksmith-website.html": {
+  "title": "Locksmith Website Example | Toughjobs",
+  "desc": "Review a locksmith website example with annotated decisions for service structure, mobile calls, local search, customer proof, and call for locksmith service.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "marketing-orchestrator.html": {
+  "title": "MARKETING COMMAND CENTER — Toughjobs | Your Plan, Made Visual",
+  "desc": "Marketing Command Center — your custom marketing plan, built visually. Goal mapper, budget simulator, campaign builder, and business audit all in one tool.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "masonry-stone-work.html": {
+  "title": "Masonry Website Example | Toughjobs",
+  "desc": "Review a masonry website example with annotated decisions for service structure, mobile calls, local search, customer proof, and request a masonry estimate.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "mobil-detailer.html": {
+  "title": "Mobile Auto Detailing Website Example | Toughjobs",
+  "desc": "Review a mobile auto detailing website example with annotated decisions for service structure, mobile calls, local search, customer proof, and book a.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "paid-ads.html": {
+  "title": "Google Ads for Contractors | Toughjobs",
+  "desc": "Google Ads for contractors with clear targeting, landing pages, call tracking, search-term review, and spend controls for Midwest trade businesses.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "painters-website.html": {
+  "title": "Painting Contractor Website Example | Toughjobs",
+  "desc": "Review a painting contractor website example with annotated decisions for service structure, mobile calls, local search, customer proof, and request a.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "partnerships.html": {
+  "title": "Partnerships — Business Setup for Trades | Toughjobs",
+  "desc": "Partnerships — Business Setup for Trades — Toughjobs Digital Marketing, marketing built for the trades. Serving Illinois, Iowa, Missouri, Wisconsin and.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "patios-decks.html": {
+  "title": "Deck and Patio Website Example | Toughjobs",
+  "desc": "Review a deck and patio website example with annotated decisions for service structure, mobile calls, local search, customer proof, and request a project.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "peoria-il.html": {
+  "title": "Trades Marketing in Peoria, IL | Toughjobs",
+  "desc": "Toughjobs is a digital marketing agency based in East Peoria, IL, built for HVAC, plumbing, electrical, roofing & contractor businesses across Greater.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "pest-control.html": {
+  "title": "Pest Control Website Example | Toughjobs",
+  "desc": "Review a pest control website example with annotated decisions for service structure, mobile calls, local search, customer proof, and request pest control.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "plumbing-pipe-cutter.html": {
+  "title": "Plumbing Website Example | Toughjobs",
+  "desc": "Review a plumbing website example with annotated decisions for service structure, mobile calls, local search, customer proof, and request plumbing service.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "pool-cleaner-contruction.html": {
+  "title": "Pool Service and Construction Website Example | Toughjobs",
+  "desc": "Review a pool service and construction website example with annotated decisions for service structure, mobile calls, local search, customer proof, and.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "power-washing.html": {
+  "title": "Pressure Washing Website Example | Toughjobs",
+  "desc": "Review a pressure washing website example with annotated decisions for service structure, mobile calls, local search, customer proof, and request a cleaning.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-appliance-repair.html": {
+  "title": "Appliance Repair Marketing Guide | Toughjobs",
+  "desc": "Appliance Repair marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-auto-detailing.html": {
+  "title": "Auto Detailing Marketing Guide | Toughjobs",
+  "desc": "Auto Detailing marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-auto-repair.html": {
+  "title": "Auto Repair Marketing Guide | Toughjobs",
+  "desc": "Auto Repair marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating checklists.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-carpet-cleaning.html": {
+  "title": "Carpet Cleaning Marketing Guide | Toughjobs",
+  "desc": "Carpet Cleaning marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-concrete-paving.html": {
+  "title": "Concrete and Paving Marketing Guide | Toughjobs",
+  "desc": "Concrete and Paving marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-electricians.html": {
+  "title": "Electrician Marketing Guide | Toughjobs",
+  "desc": "Electrician marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating checklists.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-excavation.html": {
+  "title": "Excavation Marketing Guide | Toughjobs",
+  "desc": "Excavation marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating checklists.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-fencing.html": {
+  "title": "Fence Contractor Marketing Guide | Toughjobs",
+  "desc": "Fence Contractor marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-framing-drywall.html": {
+  "title": "Framing and Drywall Marketing Guide | Toughjobs",
+  "desc": "Framing and Drywall marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-garage-doors.html": {
+  "title": "Garage Door Marketing Guide | Toughjobs",
+  "desc": "Garage Door marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating checklists.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-general-contractors.html": {
+  "title": "General Contractor Marketing Guide | Toughjobs",
+  "desc": "General Contractor marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-handyman.html": {
+  "title": "Handyman Marketing Guide | Toughjobs",
+  "desc": "Handyman marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating checklists.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-hvac.html": {
+  "title": "HVAC Marketing Guide | Toughjobs",
+  "desc": "HVAC marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating checklists.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-janitorial.html": {
+  "title": "Janitorial Marketing Guide | Toughjobs",
+  "desc": "Janitorial marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating checklists.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-junk-removal.html": {
+  "title": "Junk Removal Marketing Guide | Toughjobs",
+  "desc": "Junk Removal marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating checklists.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-landscaping.html": {
+  "title": "Landscaping Marketing Guide | Toughjobs",
+  "desc": "Landscaping marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating checklists.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-locksmiths.html": {
+  "title": "Locksmith Marketing Guide | Toughjobs",
+  "desc": "Locksmith marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating checklists.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-masonry.html": {
+  "title": "Masonry Marketing Guide | Toughjobs",
+  "desc": "Masonry marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating checklists.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-painters.html": {
+  "title": "Painting Marketing Guide | Toughjobs",
+  "desc": "Painting marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating checklists.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-pest-control.html": {
+  "title": "Pest Control Marketing Guide | Toughjobs",
+  "desc": "Pest Control marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating checklists.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-plumbing.html": {
+  "title": "Plumbing Marketing Guide | Toughjobs",
+  "desc": "Plumbing marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating checklists.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-pools.html": {
+  "title": "Pool Company Marketing Guide | Toughjobs",
+  "desc": "Pool Company marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating checklists.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-pressure-washing.html": {
+  "title": "Pressure Washing Marketing Guide | Toughjobs",
+  "desc": "Pressure Washing marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-restoration.html": {
+  "title": "Restoration Marketing Guide | Toughjobs",
+  "desc": "Restoration marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating checklists.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-roofing.html": {
+  "title": "Roofing Marketing Guide | Toughjobs",
+  "desc": "Roofing marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating checklists.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-solar.html": {
+  "title": "Solar Marketing Guide | Toughjobs",
+  "desc": "Solar marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating checklists.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-towing.html": {
+  "title": "Towing Marketing Guide | Toughjobs",
+  "desc": "Towing marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating checklists.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "primer-tree-service.html": {
+  "title": "Tree Service Marketing Guide | Toughjobs",
+  "desc": "Tree Service marketing guide for owners and crew leaders. Use practical brand, field process, website, review, local search, and weekly operating checklists.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "privacy.html": {
+  "title": "Privacy Policy — Toughjobs | Marketing for the Trades",
+  "desc": "Read how Toughjobs collects, uses, stores, and protects information submitted through its website, forms, analytics, and marketing tools.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "restoration-water-damage-asbestos.html": {
+  "title": "Restoration Website Example | Toughjobs",
+  "desc": "Review a restoration website example with annotated decisions for service structure, mobile calls, local search, customer proof, and request restoration help.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "roofing-company.html": {
+  "title": "Roofing Website Example | Toughjobs",
+  "desc": "Review a roofing website example with annotated decisions for service structure, mobile calls, local search, customer proof, and request a roof inspection.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "seo.html": {
+  "title": "SEO for Contractors and Trade Businesses | Toughjobs",
+  "desc": "SEO for contractors built around service pages, technical cleanup, useful content, internal links, and call tracking across Midwest markets.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "service-areas.html": {
+  "title": "Service Areas | Toughjobs",
+  "desc": "Toughjobs serves trades and home-service businesses across Peoria IL, Davenport IA and Dubuque IA. Local SEO, websites and ads built for your market. Call.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "services.html": {
+  "title": "Digital Marketing Services for Contractors | Toughjobs",
+  "desc": "Digital marketing services for contractors: websites, local SEO, paid ads, branding, follow-up, software setup, and practical automation.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "siding-installation-repair.html": {
+  "title": "Siding Installation and Repair Website Example | Toughjobs",
+  "desc": "Review a siding installation and repair website example with annotated decisions for service structure, mobile calls, local search, customer proof, and.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "sitemap.html": {
+  "title": "Sitemap — Toughjobs | Marketing for the Trades",
+  "desc": "Full sitemap of every page on the Toughjobs site, with titles, descriptions, and last-updated dates.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "social-media.html": {
+  "title": "Toughjobs — Social Media & Reddit | Signals That Lift Your SEO",
+  "desc": "Social media support for contractors focused on useful content, consistent brand presence, customer communication, and measurable referral paths.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "software.html": {
+  "title": "Field Service Software Setup for Contractors | Toughjobs",
+  "desc": "Field service software setup for contractors: workflow mapping, platform selection, scheduling, dispatch, forms, reminders, and team adoption.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "solar-websites.html": {
+  "title": "Solar Installer Website Example | Toughjobs",
+  "desc": "Review a solar installer website example with annotated decisions for service structure, mobile calls, local search, customer proof, and request a solar.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "terms.html": {
+  "title": "Toughjobs — Marketing for the Trades",
+  "desc": "Toughjobs — Marketing for the Trades — Toughjobs Digital Marketing, marketing built for the trades. Serving Illinois, Iowa, Missouri, Wisconsin and Indiana.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "tow-truck-roadside-assisstance.html": {
+  "title": "Towing and Roadside Assistance Website Example | Toughjobs",
+  "desc": "Review a towing and roadside assistance website example with annotated decisions for service structure, mobile calls, local search, customer proof, and call.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-appliance-repair.html": {
+  "title": "Appliance Repair Marketing Services | Toughjobs",
+  "desc": "Appliance repair marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the jobs.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-auto-detailing.html": {
+  "title": "Auto Detailing Marketing Services | Toughjobs",
+  "desc": "Auto detailing marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the jobs.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-auto-repair.html": {
+  "title": "Auto Repair Marketing Services | Toughjobs",
+  "desc": "Auto repair marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the jobs you.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-carpet-cleaning.html": {
+  "title": "Carpet Cleaning Marketing Services | Toughjobs",
+  "desc": "Carpet cleaning marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the jobs.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-concrete-paving.html": {
+  "title": "Concrete and Paving Marketing Services | Toughjobs",
+  "desc": "Concrete contractor marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-electricians.html": {
+  "title": "Electrician Marketing Services | Toughjobs",
+  "desc": "Electrician marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the jobs you.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-excavation.html": {
+  "title": "Excavation Marketing Services | Toughjobs",
+  "desc": "Excavation marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the jobs you.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-fence-installation.html": {
+  "title": "Fence Contractor Marketing Services | Toughjobs",
+  "desc": "Fence contractor marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the jobs.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-fencing.html": {
+  "title": "Garage Door Marketing Services | Toughjobs",
+  "desc": "Garage door marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the jobs you.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-framing-drywall.html": {
+  "title": "Framing and Drywall Marketing Services | Toughjobs",
+  "desc": "Framing and drywall marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-general-contractors.html": {
+  "title": "General Contractor Marketing Services | Toughjobs",
+  "desc": "General contractor marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-handyman.html": {
+  "title": "Handyman Marketing Services | Toughjobs",
+  "desc": "Handyman marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the jobs you want.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-hvac.html": {
+  "title": "HVAC Marketing Services | Toughjobs",
+  "desc": "HVAC marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the jobs you want.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-janitorial.html": {
+  "title": "Janitorial Marketing Services | Toughjobs",
+  "desc": "Janitorial marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the jobs you.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-junk-removal.html": {
+  "title": "Junk Removal Marketing Services | Toughjobs",
+  "desc": "Junk removal marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the jobs you.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-landscaping.html": {
+  "title": "Landscaping Marketing Services | Toughjobs",
+  "desc": "Landscaping marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the jobs you.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-locksmiths.html": {
+  "title": "Locksmith Marketing Services | Toughjobs",
+  "desc": "Locksmith marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the jobs you want.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-masonry.html": {
+  "title": "Masonry Marketing Services | Toughjobs",
+  "desc": "Masonry marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the jobs you want.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-painters.html": {
+  "title": "Painting Marketing Services | Toughjobs",
+  "desc": "Painter marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the jobs you want.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-pest-control.html": {
+  "title": "Pest Control Marketing Services | Toughjobs",
+  "desc": "Pest control marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the jobs you.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-plumbing.html": {
+  "title": "Plumbing Marketing Services | Toughjobs",
+  "desc": "Plumber marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the jobs you want.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-pools.html": {
+  "title": "Pool Company Marketing Services | Toughjobs",
+  "desc": "Pool company marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the jobs you.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-pressure-washing.html": {
+  "title": "Pressure Washing Marketing Services | Toughjobs",
+  "desc": "Pressure washing marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the jobs.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-restoration.html": {
+  "title": "Restoration Marketing Services | Toughjobs",
+  "desc": "Restoration company marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-roofing.html": {
+  "title": "Roofing Marketing Services | Toughjobs",
+  "desc": "Roofing marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the jobs you want.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-solar.html": {
+  "title": "Solar Marketing Services | Toughjobs",
+  "desc": "Solar installer marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the jobs.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-towing.html": {
+  "title": "Towing Marketing Services | Toughjobs",
+  "desc": "Towing marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the jobs you want.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "trade-tree-service.html": {
+  "title": "Tree Service Marketing Services | Toughjobs",
+  "desc": "Tree service marketing for Midwest trade businesses. Connect the website, local search, paid media, proof, follow-up, and lead tracking around the jobs you.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "tree-trimming-service.html": {
+  "title": "Tree Service Website Example | Toughjobs",
+  "desc": "Review a tree service website example with annotated decisions for service structure, mobile calls, local search, customer proof, and request a tree.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "website-examples.html": {
+  "title": "Pick Your Trade — See a Site Built for It | Toughjobs",
+  "desc": "Choose your home-service trade and explore a real website example built for readability, local SEO, and booked calls. 31 trades, 31 homepages engineered to.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "websites.html": {
+  "title": "Contractor Website Design | Toughjobs",
+  "desc": "Contractor website design for Midwest trade businesses. Get a mobile-first site with clear service pages, local SEO, lead forms, and full ownership.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "wraps.html": {
+  "title": "Toughjobs | Toughjobs",
+  "desc": "Toughjobs — Vehicle Wraps | Your Fleet Is a Billboard You Never Pay Rent On — Toughjobs Digital Marketing, marketing built for the trades. Serving Illinois.",
+  "created": "2026-07-07",
+  "updated": "2026-07-29"
+ },
+ "apparel-polos.html": {
+  "title": "Custom Polos for Trade Crews | Toughjobs",
+  "desc": "Custom Polos with contractor-focused ordering support. Compare materials, colors, decoration, care, and quantity needs before approving a production proof.",
+  "created": "2026-07-27",
+  "updated": "2026-07-29"
+ },
+ "apparel-tshirts.html": {
+  "title": "Custom T-Shirts for Trade Crews | Toughjobs",
+  "desc": "Custom T-Shirts with contractor-focused ordering support. Compare materials, colors, decoration, care, and quantity needs before approving a production proof.",
+  "created": "2026-07-27",
+  "updated": "2026-07-29"
+ },
+ "apparel-long-sleeve-tshirts.html": {
+  "title": "Long-Sleeve T-Shirts for Trade Crews | Toughjobs",
+  "desc": "Long-Sleeve T-Shirts with contractor-focused ordering support. Compare materials, colors, decoration, care, and quantity needs before approving a production.",
+  "created": "2026-07-27",
+  "updated": "2026-07-29"
+ },
+ "apparel-hoodies.html": {
+  "title": "Custom Hoodies for Trade Crews | Toughjobs",
+  "desc": "Custom Hoodies with contractor-focused ordering support. Compare materials, colors, decoration, care, and quantity needs before approving a production proof.",
+  "created": "2026-07-27",
+  "updated": "2026-07-29"
+ },
+ "apparel-tank-tops.html": {
+  "title": "Custom Tank Tops for Trade Crews | Toughjobs",
+  "desc": "Custom Tank Tops with contractor-focused ordering support. Compare materials, colors, decoration, care, and quantity needs before approving a production.",
+  "created": "2026-07-27",
+  "updated": "2026-07-29"
+ },
+ "apparel-baseball-hats.html": {
+  "title": "Baseball Hats for Trade Crews | Toughjobs",
+  "desc": "Baseball Hats with contractor-focused ordering support. Compare materials, colors, decoration, care, and quantity needs before approving a production proof.",
+  "created": "2026-07-27",
+  "updated": "2026-07-29"
+ },
+ "apparel-safari-hats.html": {
+  "title": "Safari Hats for Trade Crews | Toughjobs",
+  "desc": "Safari Hats with contractor-focused ordering support. Compare materials, colors, decoration, care, and quantity needs before approving a production proof.",
+  "created": "2026-07-27",
+  "updated": "2026-07-29"
+ },
+ "apparel-patches.html": {
+  "title": "Custom Patches for Trade Crews | Toughjobs",
+  "desc": "Custom Patches with contractor-focused ordering support. Compare materials, colors, decoration, care, and quantity needs before approving a production proof.",
+  "created": "2026-07-27",
+  "updated": "2026-07-29"
+ },
+ "apparel-jackets.html": {
+  "title": "Company Jackets for Trade Crews | Toughjobs",
+  "desc": "Company Jackets with contractor-focused ordering support. Compare materials, colors, decoration, care, and quantity needs before approving a production proof.",
+  "created": "2026-07-27",
+  "updated": "2026-07-29"
+ },
+ "apparel-work-pants.html": {
+  "title": "Work Pants for Trade Crews | Toughjobs",
+  "desc": "Work Pants with contractor-focused ordering support. Compare materials, colors, decoration, care, and quantity needs before approving a production proof.",
+  "created": "2026-07-27",
+  "updated": "2026-07-29"
+ },
+ "apparel-gloves.html": {
+  "title": "Gloves With Company Name for Trade Crews | Toughjobs",
+  "desc": "Gloves With Company Name with contractor-focused ordering support. Compare materials, colors, decoration, care, and quantity needs before approving a.",
+  "created": "2026-07-27",
+  "updated": "2026-07-29"
+ },
+ "apparel-embroidery.html": {
+  "title": "Custom Embroidery for Trade Crews | Toughjobs",
+  "desc": "Custom Embroidery with contractor-focused ordering support. Compare materials, colors, decoration, care, and quantity needs before approving a production.",
+  "created": "2026-07-27",
+  "updated": "2026-07-29"
+ },
+ "apparel-dtf-transfers.html": {
+  "title": "DTF Transfers for Trade Crews | Toughjobs",
+  "desc": "DTF Transfers with contractor-focused ordering support. Compare materials, colors, decoration, care, and quantity needs before approving a production proof.",
+  "created": "2026-07-27",
+  "updated": "2026-07-29"
+ },
+ "business-licensing-illinois-iowa.html": {
+  "title": "Home Service Business Licensing in Illinois & Iowa | Toughjobs",
+  "desc": "Free contractor licensing guide from Toughjobs: what plumbing, roofing, HVAC, landscaping, electrical, and pest-control businesses need beyond an LLC before.",
+  "created": "2026-07-25",
+  "updated": "2026-07-29"
+ },
+ "clothing-apparel.html": {
+  "title": "Custom Branded Apparel & Workwear for Contractors | Toughjobs",
+  "desc": "Custom embroidered polos, tees, hoodies, hats, jackets and hi-vis workwear for trades crews. Screen printing, embroidery, patches and DTF transfers. Call.",
+  "created": "2026-07-28",
+  "updated": "2026-07-29"
+ },
+ "faq-generator.html": {
+  "title": "FAQ & Schema Generator — Toughjobs Free Tools",
+  "desc": "Free SEO FAQ generator for home service businesses. Enter your trade and target keyword to instantly build a Google-readable Q&A section plus valid FAQPage.",
+  "created": "2026-07-25",
+  "updated": "2026-07-29"
+ },
+ "helping-hands.html": {
+  "title": "Helping Hands — Toughjobs",
+  "desc": "Helping Hands — Toughjobs gives back by helping people build their businesses without a big budget. Honest guidance, real direction, no pressure. Call (309).",
+  "created": "2026-07-25",
+  "updated": "2026-07-29"
+ },
+ "insight-proper-licensing.html": {
+  "title": "Proper Licensing for Contractors in Illinois & Iowa | Toughjobs",
+  "desc": "Proper Licensing for Contractors in Illinois & Iowa information from Toughjobs, a Midwest partner for independent trade and home-service businesses.",
+  "created": "2026-07-25",
+  "updated": "2026-07-29"
+ },
+ "llc-filing.html": {
+  "title": "LLC Filing Help in Illinois & Iowa | Toughjobs",
+  "desc": "Toughjobs helps contractors and small businesses file an LLC in Illinois or Iowa. Simple, flat-rate filing assistance — Illinois from $195, Iowa from $65.",
+  "created": "2026-07-25",
+  "updated": "2026-07-29"
+ },
+ "print-banners.html": {
+  "title": "Banners and Signage for Contractors | Toughjobs",
+  "desc": "Banners and Signage planned for trade businesses. Toughjobs handles the message, design, production details, proofing, and handoff around the job the piece.",
+  "created": "2026-07-25",
+  "updated": "2026-07-29"
+ },
+ "print-brochures.html": {
+  "title": "Brochures for Contractors | Toughjobs",
+  "desc": "Brochures planned for trade businesses. Toughjobs handles the message, design, production details, proofing, and handoff around the job the piece needs to do.",
+  "created": "2026-07-25",
+  "updated": "2026-07-29"
+ },
+ "print-business-cards.html": {
+  "title": "Business Cards and Stationery for Contractors | Toughjobs",
+  "desc": "Business Cards and Stationery planned for trade businesses. Toughjobs handles the message, design, production details, proofing, and handoff around the job.",
+  "created": "2026-07-25",
+  "updated": "2026-07-29"
+ },
+ "print-direct-mailers.html": {
+  "title": "Direct Mailers for Contractors | Toughjobs",
+  "desc": "Direct Mailers planned for trade businesses. Toughjobs handles the message, design, production details, proofing, and handoff around the job the piece needs.",
+  "created": "2026-07-25",
+  "updated": "2026-07-29"
+ },
+ "print-door-hangers.html": {
+  "title": "Door Hangers for Contractors | Toughjobs",
+  "desc": "Door Hangers planned for trade businesses. Toughjobs handles the message, design, production details, proofing, and handoff around the job the piece needs.",
+  "created": "2026-07-25",
+  "updated": "2026-07-29"
+ },
+ "print-flyers-rack-cards.html": {
+  "title": "Flyers and Rack Cards for Contractors | Toughjobs",
+  "desc": "Flyers and Rack Cards planned for trade businesses. Toughjobs handles the message, design, production details, proofing, and handoff around the job the.",
+  "created": "2026-07-25",
+  "updated": "2026-07-29"
+ },
+ "print-lawn-signs.html": {
+  "title": "Yard and Lawn Signs for Contractors | Toughjobs",
+  "desc": "Yard and Lawn Signs planned for trade businesses. Toughjobs handles the message, design, production details, proofing, and handoff around the job the piece.",
+  "created": "2026-07-25",
+  "updated": "2026-07-29"
+ },
+ "print-newspaper-ads.html": {
+  "title": "Newspaper and Publication Ads for Contractors | Toughjobs",
+  "desc": "Newspaper and Publication Ads planned for trade businesses. Toughjobs handles the message, design, production details, proofing, and handoff around the job.",
+  "created": "2026-07-25",
+  "updated": "2026-07-29"
+ },
+ "print-stickers-decals.html": {
+  "title": "Stickers and Decals for Contractors | Toughjobs",
+  "desc": "Stickers and Decals planned for trade businesses. Toughjobs handles the message, design, production details, proofing, and handoff around the job the piece.",
+  "created": "2026-07-25",
+  "updated": "2026-07-29"
+ },
+ "print-trade-show-booths.html": {
+  "title": "Trade-Show Booth Graphics for Contractors | Toughjobs",
+  "desc": "Trade-Show Booth Graphics planned for trade businesses. Toughjobs handles the message, design, production details, proofing, and handoff around the job the.",
+  "created": "2026-07-25",
+  "updated": "2026-07-29"
+ },
+ "print-truck-wraps.html": {
+  "title": "Truck and Cargo Van Wraps for Contractors | Toughjobs",
+  "desc": "Truck and Cargo Van Wraps planned for trade businesses. Toughjobs handles the message, design, production details, proofing, and handoff around the job the.",
+  "created": "2026-07-25",
+  "updated": "2026-07-29"
+ },
+ "print-collateral.html": {
+  "title": "Toughjobs — Print Collateral & Direct Mail for the Trades",
+  "desc": "Professional print design and direct mail for trades businesses — brochures, door hangers, mailers, yard signs, business cards. Midwest service area. Call.",
+  "created": "2026-07-25",
+  "updated": "2026-07-29"
+ },
+ "print-package-brand-kit.html": {
+  "title": "Brand Kit Print Collateral Package | Toughjobs",
+  "desc": "See every deliverable included in the Toughjobs Brand Kit: cards and letterhead, brochure, door hanger or mailer, yard sign, coordinated revisions, and.",
+  "created": "2026-07-28",
+  "updated": "2026-07-29"
+ },
+ "print-package-details.html": {
+  "title": "Toughjobs — What's Included in Every Print Package",
+  "desc": "Exactly what you receive with each Toughjobs print package — One & Done single-piece design, the Brand Kit collateral bundle, and Print on Tap done-for-you.",
+  "created": "2026-07-27",
+  "updated": "2026-07-29"
+ },
+ "print-package-on-tap.html": {
+  "title": "Print on Tap Monthly Print Marketing | Toughjobs",
+  "desc": "See what is included with Toughjobs Print on Tap: monthly seasonal pieces, managed direct mail, neighborhood lists, print at cost, priority turnaround, and.",
+  "created": "2026-07-28",
+  "updated": "2026-07-29"
+ },
+ "print-package-one-done.html": {
+  "title": "One & Done Print Design Package | Toughjobs",
+  "desc": "See every deliverable included in the Toughjobs One & Done print design package: one custom piece, copywriting, two revision rounds, and print-ready files.",
+  "created": "2026-07-28",
+  "updated": "2026-07-29"
+ },
+ "print-samples.html": {
+  "title": "Toughjobs — Print Sample Kits | See What You Get",
+  "desc": "Request a Toughjobs print sample kit to compare materials, finishes, construction, and production quality before choosing collateral for your trade business.",
+  "created": "2026-07-25",
+  "updated": "2026-07-29"
+ },
+ "reviews.html": {
+  "title": "Review Management for Contractors | Toughjobs",
+  "desc": "Build a consistent, policy-safe review process for your trade business. Toughjobs helps with customer requests, response workflows, monitoring, and reporting.",
+  "created": "2026-07-25",
+  "updated": "2026-07-29"
+ },
+ "sunday-startup.html": {
+  "title": "Sunday Startup — Toughjobs",
+  "desc": "Sunday Startup — every Sunday, Toughjobs gives back by helping people build their businesses without a big budget. Honest guidance, real direction, no.",
+  "created": "2026-07-25",
+  "updated": "2026-07-29"
+ },
+ "trades.html": {
+  "title": "Toughjobs — A Website Built to Win Your Trade More Jobs",
+  "desc": "Explore Toughjobs marketing pages and practical guides for 28 contractor and home-service trades, from HVAC and plumbing to roofing and landscaping.",
+  "created": "2026-07-27",
+  "updated": "2026-07-29"
+ }
+}

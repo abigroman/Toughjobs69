@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="shared-header.css" />
 <style>
-:root{--ink:#0A0F1C;--navy:#081B33;--red:#C8262A;--white:#fff;--smoke:#8b93a7}
+:root{--ink:#0A0F1C;--navy:#002768;--red:#C8262A;--white:#fff;--smoke:#8b93a7}
 *,*::before,*::after{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{font-family:"Archivo",sans-serif;background:#f5f5f5;color:#0A0F1C;-webkit-font-smoothing:antialiased;min-height:100vh}
@@ -57,7 +57,7 @@ a{color:var(--red)}a:hover{color:#ff5a3c}
 <div class="hub-search"><input id="hub-q" type="search" placeholder="Search your trade… (e.g. HVAC, roofing, plumbing)" /></div>
 <div class="hub-grid" id="hub-grid"></div>
 <script src="trade-data.js"></script>
-<script src="inject-header.js?v=20260813b"></script>
+<script src="inject-header.js?v=20260802b"></script>
 <script src="back-cta.js"></script>
 <script src="sticky-cta.js"></script>
 <script>
@@ -81,5 +81,6 @@ a{color:var(--red)}a:hover{color:#ff5a3c}
   document.getElementById('hub-q').addEventListener('input',function(e){ render(e.target.value); });
 })();
 </script>
+
 </body>
 </html>

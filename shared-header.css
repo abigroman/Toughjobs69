@@ -2,17 +2,11 @@
 
 :root {
   --ink: #0A0F1C;
-  --navy: #081B33;
-  --navy-2: #050F1F;
+  --navy: #002768;
   --red: #C8262A;
-  --dark-red: #981B1F;
   --white: #FFFFFF;
   --accent: #C8262A;
-  --accent2: #1769E0;
   --accent-ink: #FFFFFF;
-  --surface: #17212D;
-  --surface-2: #1E2A38;
-  --sky: #45B8F4;
   --container: 1240px;
   --tj-divider-depth: 14px;
 }

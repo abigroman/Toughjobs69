@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Toughjobs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --accent: #C8262A;
+      --dark-red: #A90100;
+      --navy: #002768;
+      --ink: #0A0F1C;
+      --white: #FFFFFF;
+      --gray: #282828;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { font-family: "Archivo", sans-serif; color: var(--ink); background: var(--white); }
+    
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+    
+    /* Header */
+    header {
+      background: var(--ink);
+      color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      transition: all 0.3s ease;
+      width: 100%;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 120px;
+      transition: height 0.3s ease;
+      width: 100%;
+      padding: 0 32px;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      text-decoration: none;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      font-family: "Archivo Black", sans-serif;
+      font-size: 24px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-text .tough {
+      color: var(--accent);
+    }
+
+    .logo-text .jobs {
+      color: var(--white);
+    }
+    }
+
+    .logo-link img {
+      height: 100px;
+      width: 150px;
+      transition: all 0.3s ease;
+      display: block;
+      object-fit: contain;
+    }
+
+    .logo-text {
+      font-family: "Archivo Black", sans-serif;
+      font-size: 28px;
+      letter-spacing: 0.02em;
+      line-height: 1;
+      text-transform: uppercase;
+      transition: font-size 0.3s ease;
+    }
+
+    .logo-text .tight { color: var(--accent); }
+    .logo-text .light { color: var(--white); }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: nowrap;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .nav-link {
+      font-family: "Archivo", sans-serif;
+      font-weight: 700;
+      font-size: 11.5px;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      text-transform: uppercase;
+      color: var(--white);
+      text-decoration: none;
+      padding: 8px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.15s ease, color 0.15s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    @keyframes phone-pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .nav-phone {
+      animation: phone-pulse 4s ease-in-out infinite;
+    }
+
+    /* Dropdown */
+    .nav-dropdown {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--ink);
+      border-top: 3px solid var(--accent);
+      width: 920px;
+      z-index: 999;
+      padding: 32px;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 24px;
+      margin-top: 0;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-menu {
+      display: grid;
+    }
+
+    .nav-dropdown-item {
+      font-family: "Archivo", sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--white);
+      text-decoration: none;
+      padding: 12px 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .nav-dropdown-item:hover {
+      background: var(--accent);
+      color: var(--white);
+    }
+
+    .nav-right {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .nav-phone {
+      color: var(--white);
+      text-decoration: none;
+      font-family: "Archivo", sans-serif;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 26px;
+      font-family: "Archivo", sans-serif;
+      font-weight: 800;
+      letter-spacing: .06em;
+      font-size: 13px;
+      text-transform: uppercase;
+      text-decoration: none;
+      background: var(--accent);
+      color: var(--white);
+      border: 0;
+      cursor: pointer;
+      transition: transform .15s ease, filter .2s ease;
+    }
+    
+    .btn:hover {
+      filter: brightness(.92);
+    }
+    
+    .btn:active {
+      transform: translateY(1px);
+    }
+    
+    /* Sections */
+    main section {
+      padding-block: 100px;
+      position: relative;
+    }
+
+    /* Type scale (extracted from repeated clamp() values) */
+    :root {
+      --display-hero: clamp(64px, 9vw, 132px);
+      --display-lg: clamp(48px, 6vw, 86px);
+      --display-md: clamp(40px, 5vw, 72px);
+      --display-sm: clamp(40px, 5vw, 64px);
+      --muted-88: rgba(255,255,255,.88);
+    }
+    .display-hero { font-size: var(--display-hero); }
+    .display-lg { font-size: var(--display-lg); }
+    .display-md { font-size: var(--display-md); }
+    .display-sm { font-size: var(--display-sm); }
+
+    /* Shared section-content wrapper (position:relative;z-index:2 — was inline on 4 sections) */
+    .section-inner { position: relative; z-index: 2; }
+    .container-narrow { max-width: 900px; margin: 0 auto; }
+
+    /* Per-section one-off layout, hooked off existing data-screen-label attr instead of new classes */
+    section[data-screen-label="hero"] { overflow: hidden; }
+    section[data-screen-label="philosophy"] { text-align: center; }
+    section[data-screen-label="CTA-1"] { overflow: hidden; }
+    
+    .eyebrow {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 16px;
+      color: var(--accent);
+    }
+    
+    .display {
+      font-family: "Archivo Black", sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 0.86;
+      letter-spacing: -0.01em;
+    }
+    
+    .bg-blueprint-dark {
+      background: var(--ink) url('assets/blueprint-background.webp') center/cover;
+      background-attachment: fixed;
+      color: var(--white);
+    }
+    
+    .bg-blueprint-red {
+      background: var(--accent);
+      color: var(--white);
+    }
+    
+    .bg-blueprint-light {
+      background: var(--white) url('assets/white-engineering-background.webp') center/cover;
+      background-attachment: fixed;
+      color: var(--ink);
+    }
+    
+    .bg-blueprint-navy {
+      background: var(--navy) url('assets/engineering-schematics.jpg') center/cover;
+      background-attachment: fixed;
+      color: var(--white);
+    }
+    
+    main section p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    
+    .capabilities-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    
+    .capability-card {
+      background: var(--ink);
+      padding: 32px 28px;
+      color: var(--white);
+    }
+    
+    .capability-card h3 {
+      font-size: 18px;
+      color: var(--accent);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    
+    .capability-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .capability-card li {
+      font-size: 13px;
+      line-height: 1.5;
+      opacity: 0.88;
+      padding-left: 20px;
+      position: relative;
+    }
+    
+    .capability-card li:before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    
+    .reasons-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    
+    .reason-card {
+      background: rgba(255,255,255,.06);
+      padding: 32px;
+      border: 1px solid rgba(255,255,255,.12);
+    }
+    
+    .reason-card h3 {
+      font-size: 22px;
+      color: var(--accent);
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+    
+    .reason-card p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 0;
+      opacity: 0.85;
+      color: var(--muted-88);
+    }
+    
+    .highlight-box {
+      background: var(--accent);
+      padding: 40px;
+      max-width: 800px;
+      margin: 64px auto 0;
+      text-align: center;
+    }
+    
+    .highlight-box p {
+      font-size: 16px;
+      line-height: 1.65;
+      margin: 0;
+      font-weight: 500;
+      color: var(--white);
+    }
+    
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    #philosophy-section {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.30) 0%, transparent 25%), url('../uploads/home-services-pop-art.webp') center/cover !important;
+      background-attachment: fixed !important;
+      background-color: var(--accent) !important;
+    }
+    /* Consolidated from inline styles on the two philosophy paragraphs */
+    #philosophy-section p { max-width: 700px; }
+    #philosophy-section p:first-of-type {
+      font-size: 16px;
+      line-height: 1.65;
+      color: #ffffff;
+      font-weight: 700;
+      -webkit-text-stroke: 1px #000000;
+      paint-order: stroke fill;
+      margin: 0 auto 32px;
+    }
+    #philosophy-section p:last-of-type {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #ffffff;
+      font-weight: 700;
+      -webkit-text-stroke: 1px #000000;
+      paint-order: stroke fill;
+      margin: 0 auto;
+      font-style: italic;
+    }
+
+
+  </style>
+<style id="white-texture-sweep">
+/* Engineering blueprint texture on all white surfaces */
+.bg-white, .bg-light, .light-section, .on-light, .blurbs-section {
+  background-color:#FFFFFF !important;
+  background-image:url('assets/white-engineering-background.webp') !important;
+  background-size:cover !important;
+  background-position:center !important;
+  background-attachment:fixed !important;
+}
+</style>
+<style id="white-texture-body">
+body { background-image:url('assets/white-engineering-background.webp') !important; background-size:cover !important; background-position:center !important; background-attachment:fixed !important; background-color:#FFFFFF !important; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/toughjobs-monogram-logo.webp" alt="Toughjobs" width="150" height="100" />
+        <span class="logo-text"><span class="tough">TOUGH</span><span class="jobs">JOBS</span></span>
+      </a>
+      <nav class="nav-links">
+        <div class="nav-dropdown">
+          <a href="#" class="nav-link nav-dropdown-toggle">TRADES ▾</a>
+          <div class="nav-dropdown-menu">
+            <div>
+              <div style="font-family:'Archivo',sans-serif; font-weight:800; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid rgba(255,255,255,.15);">Building &amp; Construction</div>
+              <div style="display:flex; flex-direction:column; gap:10px;">
+                <a href="trade-roofing.html" class="nav-dropdown-item">Roofing Contractors</a>
+                <a href="trade-general-contractors.html" class="nav-dropdown-item">General Contractors</a>
+                <a href="trade-concrete-paving.html" class="nav-dropdown-item">Concrete &amp; Asphalt Pavers</a>
+                <a href="trade-masonry.html" class="nav-dropdown-item">Masonry &amp; Bricklaying</a>
+                <a href="trade-framing-drywall.html" class="nav-dropdown-item">Framing &amp; Drywall</a>
+              </div>
+            </div>
+            <div>
+              <div style="font-family:'Archivo',sans-serif; font-weight:800; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid rgba(255,255,255,.15);">Mechanical &amp; Essential</div>
+              <div style="display:flex; flex-direction:column; gap:10px;">
+                <a href="trade-hvac.html" class="nav-dropdown-item">HVAC Technicians</a>
+                <a href="trade-plumbing.html" class="nav-dropdown-item">Plumbers</a>
+                <a href="trade-electricians.html" class="nav-dropdown-item">Electricians</a>
+                <a href="trade-locksmiths.html" class="nav-dropdown-item">Locksmiths</a>
+                <a href="trade-solar.html" class="nav-dropdown-item">Solar Panel Installers</a>
+              </div>
+            </div>
+            <div>
+              <div style="font-family:'Archivo',sans-serif; font-weight:800; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid rgba(255,255,255,.15);">Finishing &amp; Maintenance</div>
+              <div style="display:flex; flex-direction:column; gap:10px;">
+                <a href="trade-painters.html" class="nav-dropdown-item">Painters</a>
+                <a href="trade-carpet-cleaning.html" class="nav-dropdown-item">Carpet &amp; Upholstery Cleaners</a>
+                <a href="trade-pressure-washing.html" class="nav-dropdown-item">Pressure Washing &amp; Window Cleaning</a>
+                <a href="trade-janitorial.html" class="nav-dropdown-item">Janitorial &amp; Commercial Cleaning</a>
+                <a href="trade-restoration.html" class="nav-dropdown-item">Restoration (Water/Fire/Mold)</a>
+                <a href="trade-junk-removal.html" class="nav-dropdown-item">Junk Removal</a>
+              </div>
+            </div>
+            <div>
+              <div style="font-family:'Archivo',sans-serif; font-weight:800; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid rgba(255,255,255,.15);">General Services &amp; Maintenance</div>
+              <div style="display:flex; flex-direction:column; gap:10px;">
+                <a href="trade-handyman.html" class="nav-dropdown-item">Handyman Services</a>
+                <a href="trade-appliance-repair.html" class="nav-dropdown-item">Appliance Repair</a>
+              </div>
+            </div>
+            <div>
+              <div style="font-family:'Archivo',sans-serif; font-weight:800; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid rgba(255,255,255,.15);">Outdoor &amp; Landscaping</div>
+              <div style="display:flex; flex-direction:column; gap:10px;">
+                <a href="trade-landscaping.html" class="nav-dropdown-item">Landscaping &amp; Lawn Care</a>
+                <a href="trade-tree-service.html" class="nav-dropdown-item">Tree Removal &amp; Arborists</a>
+                <a href="trade-pest-control.html" class="nav-dropdown-item">Pest Control</a>
+                <a href="trade-pools.html" class="nav-dropdown-item">Pool Construction &amp; Maintenance</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link active">ABOUT</a>
+        <a href="services.html" class="nav-link">SERVICES</a>
+        <a href="service-areas.html" class="nav-link">AREAS</a>
+        <a href="partnerships.html" class="nav-link">PARTNERSHIPS</a>
+        <a href="free-tools.html" class="nav-link">FREE TOOLS</a>
+        <a href="contact.html" class="nav-link">CONTACT</a>
+      </nav>
+      <div class="nav-right">
+        <a href="tel:3092339004" class="nav-phone">(309) 233-9004</a>
+        <a href="contact.html" class="btn">REQUEST A QUOTE</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section data-screen-label="hero" class="bg-blueprint-dark">
+      <img src="assets/woman-power-drill.webp" alt="Tradeswoman with power drill" style="position: absolute; right: calc(4% + 20px); bottom: 0; height: 92%; width: auto; z-index: 1; pointer-events: none;" />
+      <div class="container section-inner">
+        <span class="eyebrow">Who we are</span>
+        <h1 class="display display-hero" style="margin: 20px 0 32px; max-width: 1100px;">
+          <span style="color: var(--white)">Marketing </span>
+          <span style="color: var(--white)">built</span><br />
+          <span style="color: var(--accent)">for the trades.</span>
+        </h1>
+        <p style="max-width: 720px; color: rgba(255,255,255,.82); margin: 0 0 40px;">
+          We build websites, run ads, and design wraps for HVAC, plumbing, electrical, and roofing contractors in the Quad Cities. We speak job-site, not boardroom. And we measure success in booked jobs, not impressions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy-section" data-screen-label="philosophy">
+      <div class="container section-inner container-narrow">
+        <h2 class="display display-lg" style="margin-bottom: 40px; color: var(--white);">
+          If the phone doesn't ring, we didn't do our job.
+        </h2>
+        <p>
+          Most agencies sell you a website and disappear. We treat every project like it's ours — because if your trucks aren't full, our work failed. Simple as that.
+        </p>
+        <p>
+          <strong>That means:</strong> We want your analytics access, your honest feedback, and your business goals. We'll share detailed reporting on every dollar spent and every lead generated. Quick approvals keep campaigns fresh. Your authentic photos and videos make our work real. That's partnership.
+        </p>
+      </div>
+    </section>
+
+    <!-- Capabilities Section -->
+    <section data-screen-label="capabilities" class="bg-blueprint-light" style="box-shadow: inset 0 16px 32px -8px rgba(0,0,0,0.5), inset 0 -16px 32px -8px rgba(0,0,0,0.5);">
+      <div class="container section-inner">
+        <span class="eyebrow">What we bring to the table</span>
+        <h2 class="display display-sm" style="margin-bottom: 56px; max-width: 800px; color: var(--ink);">
+          Three skill sets. <span style="color: var(--accent)">One team.</span>
+        </h2>
+        
+        <div class="capabilities-grid">
+          <div class="capability-card">
+            <h3>Technical execution</h3>
+            <ul>
+              <li>WordPress development (PHP, custom themes, WooCommerce)</li>
+              <li>Google Ads + Bing Ads management (certified)</li>
+              <li>Local SEO (GBP, citations, schema markup)</li>
+              <li>Analytics setup (GA4, Google Tag Manager, call tracking)</li>
+            </ul>
+          </div>
+          <div class="capability-card">
+            <h3>Creative services</h3>
+            <ul>
+              <li>Brand identity (names, logos, voice & tone)</li>
+              <li>Fleet wrap design + installation (trucks, trailers, cars)</li>
+              <li>Print collateral (door hangers, yard signs, magnets)</li>
+              <li>Photography + video for social & web</li>
+            </ul>
+          </div>
+          <div class="capability-card">
+            <h3>Strategic thinking</h3>
+            <ul>
+              <li>Market analysis (competitor research, keyword opportunity)</li>
+              <li>Service pricing models (cost-plus, value-based, subscription)</li>
+              <li>Customer lifetime value optimization</li>
+              <li>Referral program design</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Trades Section -->
+    <section data-screen-label="why-trades" class="bg-blueprint-dark">
+      <div class="container section-inner">
+        <span class="eyebrow">Why we only work with trades</span>
+        <h2 class="display display-md" style="margin-bottom: 48px; max-width: 900px; color: var(--white);">
+          We could serve anyone. <span style="color: var(--accent)">We choose</span> the trades.
+        </h2>
+        
+        <div class="reasons-grid">
+          <div class="reason-card">
+            <h3>Measurable outcomes</h3>
+            <p>Trades businesses live or die by job count. No vanity metrics. No fluff. Just ROI we can calculate to the penny.</p>
+          </div>
+          <div class="reason-card">
+            <h3>Local dominance</h3>
+            <p>A 40-mile service radius means we can actually own the map. We're not fighting for national keywords — we're winning Peoria.</p>
+          </div>
+          <div class="reason-card">
+            <h3>Repeat revenue potential</h3>
+            <p>HVAC maintenance contracts. Electrical service plans. Plumbing subscriptions. Trades businesses have built-in recurring revenue models we can amplify.</p>
+          </div>
+          <div class="reason-card">
+            <h3>High-margin services</h3>
+            <p>Panel upgrades, mini-split installs, water heater replacements — $3K-$8K jobs with 40%+ margins. Marketing math that actually works.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section bg-blueprint-red" data-screen-label="CTA-1">
+      <video style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.25;z-index:0;pointer-events:none" autoPlay muted loop playsInline aria-hidden="true">
+        <source src="assets/audio-visualizer.mp4" type="video/mp4" />
+      </video>
+      <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,15,28,0.7) 0%,rgba(168,1,0,0.5) 100%);z-index:0.5"></div>
+      
+      <div class="container" style="display:grid;grid-template-columns:3fr 1fr;gap:40px;align-items:center;position:relative;z-index:1">
+        <div style="margin:0;padding:0">
+          <h2 class="display display-lg" style="color:var(--white);margin:0 0 24px">Ready to get started?</h2>
+          <p style="color:var(--ink);font-size:16px;margin:0 0 40px">Let's talk about how Toughjobs can help your trades business grow and win more jobs.</p>
+          <a href="contact.html" class="btn" style="background:var(--white);color:var(--accent);font-weight:700;padding:16px 48px">
+            Start Your Partnership
+          </a>
+        </div>
+        
+        <div style="display:flex;align-items:center;justify-content:center;position:relative">
+          <div style="position:relative;width:clamp(140px,15vw,240px);aspect-ratio:1;display:flex;align-items:center;justify-content:center">
+            <svg style="animation:spin 14s linear infinite;position:absolute;inset:0;width:100%;height:100%;z-index:2" viewBox="0 0 200 200">
+              <defs>
+                <path id="circlePath" d="M 100, 100 m -85, 0 a 85,85 0 1,1 170,0 a 85,85 0 1,1 -170,0" fill="none" />
+              </defs>
+              <text style="font-size:15px;font-weight:700;fill:rgba(255,255,255,0.95);font-family:'Archivo Black',sans-serif;text-transform:uppercase">
+                <textPath href="#circlePath" startOffset="0%" textLength="534" lengthAdjust="spacingAndGlyphs">
+                  TEAM TOUGHJOBS • TEAM TOUGHJOBS •
+                </textPath>
+              </text>
+            </svg>
+            <img src="uploads/toughjobs-logo-light-transparent.webp" alt="Toughjobs" style="width:58%;height:auto;position:relative;z-index:3" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="position:relative;overflow:hidden;background:linear-gradient(135deg,#001a4a 0%,#002768 100%);color:var(--white);border-top:3px solid var(--accent);padding:0;margin-top:0">
+    <style>
+      @keyframes tickerScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+      .footer-video-bg{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.6;z-index:0}
+      footer .footer-content{position:relative;z-index:1;max-width:none;margin:0;display:block;border:none;padding:0}
+      .footer-ticker{display:flex;gap:0;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.3);padding:20px 0;margin:0 calc(-50vw + 50%);padding-left:calc(50vw - 50%);padding-right:calc(50vw - 50%)}
+      .ticker-track{display:flex;gap:60px;white-space:nowrap;animation:tickerScroll 60s linear infinite}
+      .ticker-item{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:14px;letter-spacing:.02em;color:var(--accent);font-weight:900;flex-shrink:0}
+      .ticker-item::after{content:"●";margin-left:60px;color:rgba(255,255,255,.3);font-size:6px}
+      .footer-main{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;padding:60px 0;margin-bottom:0}
+      footer .footer-section h3{font-family:"Archivo Black",sans-serif;font-size:18px;text-transform:uppercase;letter-spacing:-.01em;margin:0 0 24px;font-weight:900;display:flex;align-items:center;gap:12px;color:var(--white)}
+      .footer-section h3 img{width:100%;max-width:600px;height:auto;object-fit:contain;display:block}
+      .footer-section h4{font-family:"Archivo",sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:var(--accent);margin:0 0 16px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.15)}
+      .footer-section ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
+      footer .footer-section a{color:rgba(255,255,255,.75);text-decoration:none;font-size:14px;font-weight:500;transition:all .2s ease;display:inline-block;margin:0}
+      footer .footer-section a:hover{color:var(--accent)}
+      .footer-brand p{font-size:14px;line-height:1.6;color:rgba(255,255,255,.7);margin:0}
+      footer .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-top:1px solid rgba(255,255,255,.1);gap:32px;flex-wrap:wrap;max-width:none;margin:0;text-align:left;font-size:inherit;color:inherit}
+      .footer-bottom-copy{font-size:12px;color:rgba(255,255,255,.55)}
+      .footer-contact{display:flex;align-items:center;gap:20px}
+      .footer-phone{text-align:right}
+      .footer-phone-label{font-family:"Archivo",sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:rgba(255,255,255,.6);margin-bottom:4px}
+      .footer-phone-number{font-family:"Archivo Black",sans-serif;font-size:22px;font-weight:900;color:var(--accent);text-decoration:none;letter-spacing:-.01em;transition:all .2s ease}
+      .footer-phone-number:hover{transform:scale(1.05)}
+      @media(max-width:1024px){.footer-main{grid-template-columns:1fr 1fr;gap:40px}}
+      @media(max-width:768px){.footer-main{grid-template-columns:1fr;gap:40px}footer .footer-bottom{flex-direction:column;align-items:flex-start}}
+    </style>
+
+    <video class="footer-video-bg" autoPlay muted loop playsInline>
+      <source src="assets/construction-workers.mp4" type="video/mp4" />
+    </video>
+
+    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(0,26,74,.88) 0%,rgba(0,39,104,.84) 100%);z-index:0"></div>
+
+    <div class="footer-content">
+      <div class="footer-ticker">
+        <div class="ticker-track">
+          <span class="ticker-item">HVAC</span>
+          <span class="ticker-item">PLUMBING</span>
+          <span class="ticker-item">ELECTRICAL</span>
+          <span class="ticker-item">MASONRY</span>
+          <span class="ticker-item">ROOFING</span>
+          <span class="ticker-item">JANITORIAL</span>
+          <span class="ticker-item">CARPET CLEANING</span>
+          <span class="ticker-item">PAINTING</span>
+          <span class="ticker-item">CONCRETE</span>
+          <span class="ticker-item">LANDSCAPING</span>
+          <span class="ticker-item">WELDING</span>
+          <span class="ticker-item">EXCAVATION</span>
+          <span class="ticker-item">HVAC</span>
+          <span class="ticker-item">PLUMBING</span>
+          <span class="ticker-item">ELECTRICAL</span>
+          <span class="ticker-item">MASONRY</span>
+          <span class="ticker-item">ROOFING</span>
+          <span class="ticker-item">JANITORIAL</span>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-section footer-brand">
+            <h3>
+              <img src="assets/toughjobs-monogram-logo.webp" alt="Toughjobs" />
+              <span><span style="color:var(--accent)">TOUGH</span><span style="color:var(--white)">JOBS</span></span>
+            </h3>
+            <p>Marketing & branding solutions built for the trades. We help service businesses get found, win jobs, and grow their revenue through integrated digital strategies.</p>
+          </div>
+
+          <div class="footer-section">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">Our story</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="partnerships.html">Partnerships</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="free-tools.html">Free Tools</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Case Studies</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Sitemap</a></li>
+              <li><a href="citations.html">Citations</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-bottom-copy">© 2026 Toughjobs Digital Marketing · 140 Oakmoor Dr, East Peoria, IL 61611</div>
+          <div class="footer-contact">
+            <div class="footer-phone">
+              <div class="footer-phone-label">Call us</div>
+              <a href="tel:3092339004" class="footer-phone-number">(309) 233-9004</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="sticky-cta.js"></script>
+  <script src="cookie-consent.js"></script>
+<script src="chat-launcher.js"></script>
+</body>
+</html>

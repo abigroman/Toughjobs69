@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Toughjobs</title>
+<meta name="description" content="Meet Toughjobs founder Tony Baeza and learn why the company focuses on practical marketing systems for independent trade businesses across the Midwest." />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Toughjobs" />
+<meta name="publisher" content="ToughJobs Digital Marketing" />
+<link rel="canonical" href="https://toughjobs.org/about.html" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shared-header.css" />
+  <style>
+    :root {
+      --accent: #C8262A;
+      --dark-red: #A90100;
+      --navy: #002768;
+      --ink: #0A0F1C;
+      --white: #FFFFFF;
+      --gray: #282828;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { font-family: "Archivo", sans-serif; color: var(--ink); background: var(--white); }
+    
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 12px; }
+    
+    /* Sections */
+    main section {
+      padding-block: 100px;
+      position: relative;
+    }
+
+    /* Type scale (extracted from repeated clamp() values) */
+    :root {
+      --display-hero: clamp(64px, 9vw, 132px);
+      --display-lg: clamp(48px, 6vw, 86px);
+      --display-md: clamp(40px, 5vw, 72px);
+      --display-sm: clamp(40px, 5vw, 64px);
+      --muted-88: rgba(255,255,255,.88);
+    }
+    .display-hero { font-size: var(--display-hero); }
+    .display-lg { font-size: var(--display-lg); }
+    .display-md { font-size: var(--display-md); }
+    .display-sm { font-size: var(--display-sm); }
+
+    /* Shared section-content wrapper (position:relative;z-index:2 — was inline on 4 sections) */
+    .section-inner { position: relative; z-index: 2; }
+    .container-narrow { max-width: 900px; margin: 0 auto; }
+
+    /* Per-section one-off layout, hooked off existing data-screen-label attr instead of new classes */
+    section[data-screen-label="hero"] { overflow: hidden; position: relative; }
+    section[data-screen-label="philosophy"] { text-align: center; }
+    section[data-screen-label="CTA-1"] { overflow: hidden; }
+    
+    .eyebrow {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 16px;
+      color: var(--accent);
+    }
+    
+    .display {
+      font-family: "Archivo Black", sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 0.86;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-section h1 {
+      font-size: clamp(56px, 5vw, 76px) !important;
+    }
+
+    .about-hero-figure {
+      position: relative;
+      isolation: isolate;
+      flex: 0 0 min(42vw, 440px);
+      height: 560px;
+      display: grid;
+      place-items: end center;
+    }
+
+    .about-hero-figure::before {
+      content: "";
+      position: absolute;
+      z-index: -2;
+      inset: 38px 4px 18px 24px;
+      background: linear-gradient(200deg, #0B3E8F 0%, #002768 58%, #001A4A 100%);
+      border: 1px solid rgba(255, 255, 255, .34);
+      border-top: 4px solid #C8262A;
+      clip-path: polygon(14% 0, 100% 0, 100% 84%, 83% 100%, 0 100%, 0 14%);
+    }
+
+    .about-hero-figure::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 62px;
+      right: 18px;
+      width: 74px;
+      height: 220px;
+      opacity: .85;
+      background: repeating-linear-gradient(
+        135deg,
+        rgba(200, 38, 42, 1) 0 5px,
+        transparent 5px 13px
+      );
+      clip-path: polygon(34% 0, 100% 0, 66% 100%, 0 100%);
+    }
+
+    .about-hero-registration {
+      position: absolute;
+      z-index: -1;
+      left: 18px;
+      bottom: 54px;
+      width: 152px;
+      aspect-ratio: 1;
+      border: 1px solid rgba(255, 255, 255, .2);
+      border-radius: 50%;
+    }
+
+    .about-hero-registration::before,
+    .about-hero-registration::after {
+      content: "";
+      position: absolute;
+      background: rgba(255, 255, 255, .16);
+    }
+
+    .about-hero-registration::before {
+      left: -24px;
+      right: -24px;
+      top: 50%;
+      height: 1px;
+    }
+
+    .about-hero-registration::after {
+      top: -24px;
+      bottom: -24px;
+      left: 50%;
+      width: 1px;
+    }
+
+    .about-hero-figure img {
+      position: relative;
+      z-index: 2;
+      height: 88%;
+      max-height: 560px;
+      width: auto;
+      max-width: 100%;
+      pointer-events: none;
+      object-fit: contain;
+    }
+    
+    .bg-blueprint-dark {
+      background: var(--ink) url('assets/blueprint-background.webp') center/cover;
+      background-attachment: fixed;
+      color: var(--white);
+    }
+    
+    .bg-blueprint-red {
+      background: var(--accent);
+      color: var(--white);
+    }
+    
+    .bg-blueprint-light {
+      background: var(--white) url('assets/white-engineering-background.webp') center/cover;
+      background-attachment: fixed;
+      color: var(--ink);
+    }
+    
+    .bg-blueprint-navy {
+      background: var(--navy) url('assets/engineering-schematics.jpg') center/cover;
+      background-attachment: fixed;
+      color: var(--white);
+    }
+    
+    main section p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    
+    .capabilities-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    
+    .capability-card {
+      background: var(--ink);
+      padding: 32px 28px;
+      color: var(--white);
+    }
+    
+    .capability-card h3 {
+      font-size: 18px;
+      color: var(--accent);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    
+    .capability-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .capability-card li {
+      font-size: 13px;
+      line-height: 1.5;
+      opacity: 0.88;
+      padding-left: 20px;
+      position: relative;
+    }
+    
+    .capability-card li:before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    
+    .reasons-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    
+    .reason-card {
+      background: rgba(255,255,255,.06);
+      padding: 32px;
+      border: 1px solid rgba(255,255,255,.12);
+    }
+    
+    .reason-card h3 {
+      font-size: 22px;
+      color: var(--accent);
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+    
+    .reason-card p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 0;
+      opacity: 0.85;
+      color: var(--muted-88);
+    }
+    
+    .highlight-box {
+      background: var(--accent);
+      padding: 40px;
+      max-width: 800px;
+      margin: 64px auto 0;
+      text-align: center;
+    }
+    
+    .highlight-box p {
+      font-size: 16px;
+      line-height: 1.65;
+      margin: 0;
+      font-weight: 500;
+      color: var(--white);
+    }
+
+    @media (max-width: 820px) {
+      section[data-screen-label="hero"] > div {
+        flex-direction: column;
+        align-items: flex-start !important;
+        padding: 96px 24px 64px !important;
+      }
+
+      section[data-screen-label="hero"] > div > div {
+        width: 100%;
+        min-width: 0;
+      }
+
+      section[data-screen-label="hero"] h1 {
+        font-size: clamp(42px, 12vw, 48px) !important;
+        line-height: 0.92;
+      }
+
+      section[data-screen-label="hero"] > div > img {
+        width: min(100%, 420px) !important;
+        height: auto !important;
+        max-height: 420px !important;
+        align-self: center;
+      }
+
+      .about-hero-figure {
+        flex: 0 0 auto;
+        width: min(100%, 420px);
+        height: 420px;
+        align-self: center;
+      }
+
+      .about-hero-figure::before {
+        inset: 28px 6px 12px 18px;
+      }
+
+      .about-hero-figure::after {
+        top: 46px;
+        right: 14px;
+        height: 170px;
+        opacity: .35;
+      }
+
+      .about-hero-registration {
+        width: 116px;
+        left: 12px;
+        bottom: 40px;
+      }
+
+      .about-hero-figure img {
+        height: 96%;
+        max-height: 420px;
+      }
+
+      .capabilities-grid,
+      .reasons-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    #philosophy-section {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.30) 0%, transparent 25%), url('assets/home-services-pop-art-2.webp') center/cover !important;
+      background-attachment: fixed !important;
+      background-color: var(--accent) !important;
+    }
+    /* Consolidated from inline styles on the two philosophy paragraphs */
+    #philosophy-section p { max-width: 700px; }
+    #philosophy-section p:first-of-type {
+      font-size: 16px;
+      line-height: 1.65;
+      color: #ffffff;
+      font-weight: 700;
+      -webkit-text-stroke: 1px #000000;
+      paint-order: stroke fill;
+      margin: 0 auto 32px;
+    }
+    #philosophy-section p:last-of-type {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #ffffff;
+      font-weight: 700;
+      -webkit-text-stroke: 1px #000000;
+      paint-order: stroke fill;
+      margin: 0 auto;
+      font-style: italic;
+    }
+
+    @media (max-width: 640px) {
+      #philosophy-section {
+        background: var(--accent) !important;
+        background-image: none !important;
+        background-attachment: scroll !important;
+      }
+    }
+
+  .white-text{color:var(--white)}
+  .accent-text{color:var(--accent)}
+  .pos-relative{position:relative}
+  .mb24{margin-bottom:24px}
+  .ab-hero-section{padding-block:0;min-height:640px;display:flex;align-items:center;justify-content:center}
+  .ab-hero-inner{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;gap:24px;max-width:1100px;width:100%;margin:0 auto;padding:100px 32px}
+  .ab-hero-copy{max-width:520px;margin:0;padding:0}
+  .ab-hero-h1{margin:20px 0 32px;font-size:clamp(56px, 6vw, 92px)}
+  .ab-hero-lede{max-width:520px;color:rgba(255,255,255,.82);margin:0}
+  .ab-story-inner{position:relative;z-index:2}
+  .ab-story-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:64px;align-items:stretch}
+  .ab-story-col{position:relative;display:flex;flex-direction:column;height:100%}
+  .ab-story-h2{margin:20px 0 0;font-size:clamp(40px, 4.4vw, 68px);line-height:0.98}
+  .ab-signature{margin-top:32px;padding-top:28px;border-top:2px solid rgba(200,38,42,.55)}
+  .ab-signature-name{color:var(--white);font-weight:700;margin:0;font-size:17px}
+  .ab-signature-title{color:rgba(255,255,255,.6);margin:4px 0 0;font-size:14px;text-transform:uppercase;letter-spacing:.06em;font-family:'Archivo', sans-serif;font-weight:700}
+  .ab-mission-quote{color:var(--white);font-weight:700;font-size:18px;border-left:3px solid var(--accent);padding-left:20px;margin-top:32px;margin-bottom:24px}
+  .ab-logo-wrap{flex:1;display:flex;align-items:center;justify-content:center;min-height:220px}
+  .ab-logo-img{width:260px;height:auto;display:block}
+  .ab-story-copy{color:rgba(255,255,255,.82)}
+  .ab-philosophy-section{position:relative;isolation:isolate}
+  .ab-philosophy-inner{position:relative;z-index:1}
+  .ab-philosophy-h2{margin-bottom:40px;color:var(--white)}
+  .ab-capabilities-shadow{box-shadow:inset 0 16px 32px -8px rgba(0,0,0,0.5), inset 0 -16px 32px -8px rgba(0,0,0,0.5)}
+  .ab-capabilities-h2{margin-bottom:56px;max-width:800px;color:var(--ink)}
+  .ab-why-h2{margin-bottom:48px;max-width:900px;color:var(--white)}
+  .ab-gb-section{background:#ECEFF4;background-image:url('assets/white-engineering-background.webp');background-size:cover;background-position:center;padding:56px 32px;position:relative;overflow:hidden;box-shadow:inset 0 2px 2px rgba(0,0,0,.45), inset 0 -2px 2px rgba(0,0,0,.45)}
+  .gb-inner{max-width:1240px;margin:0 auto;position:relative;z-index:1}
+  .gb-outer{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center}
+  .gb-head{margin-bottom:24px}
+  .gb-eyebrow{font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:#C8262A}
+  .gb-title{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:clamp(32px,3.6vw,50px);line-height:1.02;color:#0A0F1C;margin:12px 0 0}
+  .gb-accent{color:#C8262A}
+  .gb-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+  .gb-card{padding:36px 30px;box-shadow:0 4px 24px rgba(0,0,0,.30);border-top:4px solid #C8262A}
+  .gb-card--navy{background:#002768}
+  .gb-card--ink{background:#0A0F1C}
+  .gb-kicker{font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700}
+  .gb-card-title{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05}
+  .gb-card-text{font-family:"Archivo",sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 28px}
+  .gb-card--ink .gb-card-text{color:rgba(255,255,255,.8)}
+  .gb-card-btn{display:inline-block;background:#C8262A;color:#fff;font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none}
+  .gb-img{position:relative;height:100%;min-height:420px}
+  .gb-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:bottom center}
+  </style>
+<style id="white-texture-sweep">
+/* Engineering blueprint texture on all white surfaces */
+.bg-white, .bg-light, .light-section, .on-light, .blurbs-section {
+  background-color:#FFFFFF !important;
+  background-image:url('assets/white-engineering-background.webp') !important;
+  background-size:cover !important;
+  background-position:center !important;
+  background-attachment:fixed !important;
+}
+</style>
+<style id="white-texture-body">
+body { background-image:url('assets/white-engineering-background.webp') !important; background-size:cover !important; background-position:center !important; background-attachment:fixed !important; background-color:#FFFFFF !important; }
+</style>
+</head>
+<body>
+<style>.accessibility-btn{opacity:0}.accessibility-btn img{width:100%;height:100%;object-fit:contain}</style>
+<button class="accessibility-btn" aria-label="Accessibility" title="Accessibility">
+  <img src="assets/accessibility-logo.webp" alt="Accessibility" />
+</button>
+
+  <main>
+    <!-- Hero Section -->
+    <section data-screen-label="hero" class="bg-blueprint-dark hero-section ab-hero-section">
+      <div class="ab-hero-inner">
+        <div class="section-inner ab-hero-copy">
+          <span class="eyebrow">Who we are</span>
+          <h1 class="display ab-hero-h1">
+            <span class="white-text">Marketing<br />built</span><br />
+            <span class="accent-text">for the<br />trades.</span>
+          </h1>
+          <p class="ab-hero-lede">
+            We build websites, run ads, and design wraps for HVAC, plumbing, electrical, roofing contractors, and anybody else in the home services trades. We service the Quad Cities, Dubuque, Peoria and anywhere under 3 hours away. We speak job-site, not boardroom. And we measure success in booked jobs, not impressions.
+          </p>
+        </div>
+        <div class="about-hero-figure">
+          <span class="about-hero-registration" aria-hidden="true"></span>
+          <img src="assets/woman-drill-philosophy.webp" alt="Tradeswoman with power drill" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section data-screen-label="our-story" class="bg-blueprint-dark pos-relative">
+      <div class="container section-inner ab-story-inner">
+        <div class="ab-story-grid">
+          <div class="ab-story-col">
+            <span class="eyebrow">Our story</span>
+            <h2 class="display ab-story-h2">
+              <span class="white-text">The kid who<br />wouldn't stop<br />asking</span> <span class="accent-text">questions.</span>
+            </h2>
+            <div class="ab-signature">
+              <p class="ab-signature-name">Drew Spinoso</p>
+              <p class="ab-signature-title">Founder, Toughjobs</p>
+            </div>
+            <p class="ab-mission-quote">Help the businesses that keep our communities running become the businesses everyone remembers. Because when local contractors succeed, families thrive, employees build better lives, and communities grow stronger. That's a mission worth showing up for every single day.</p>
+            <div class="ab-logo-wrap">
+              <img src="assets/toughjobs-monogram-logo.webp" alt="Toughjobs" class="ab-logo-img" />
+            </div>
+          </div>
+          <div class="ab-story-copy">
+            <p>Growing up, I was always fascinated by people who worked with their hands. Whether it was a carpenter framing a new home, a landscaper transforming a backyard, or an HVAC technician bringing air conditioning back on the hottest day of summer, I couldn't help but watch. I wasn't the kid glued to a screen — I was the kid asking questions.</p>
+            <p class="mb24">I remember standing beside my dad while a service technician worked on our home. I'd ask question after question until my dad would finally smile and tell me, "Quit bothering the poor guy and let him work." Looking back, I wasn't bothering them — I genuinely admired what they did. Blue-collar professionals didn't just have jobs, they solved problems. They built our homes, fixed what was broken, kept families comfortable, and took pride in doing honest work. That left a lasting impression on me.</p>
+            <p class="mb24">Like many people, my career took me in a different direction. I moved to California and built a career in corporate America — chasing promotions, raises, and the next opportunity. I gained invaluable experience in marketing, branding, sales, and business strategy, but after years of climbing the corporate ladder, something never felt quite right. Success wasn't just about a bigger paycheck anymore.</p>
+            <p class="mb24">My wife and I made the decision to return to the Midwest to raise our growing family. For a season, I stepped away from building a business full-time to focus on being the husband and father I wanted to be. Those years gave me something no job title ever could — perspective. As my daughter grew more independent, I knew it was time to build something again. But this time, I wanted my work to mean more than helping another corporation increase quarterly profits. <strong class="white-text">I wanted to help the people I'd admired since I was a kid.</strong></p>
+            <p class="mb24">As I re-entered the marketing world, I met designers, developers, AI engineers, SEO specialists, and business strategists who felt exactly the same way. We all believed home service companies deserve better. Too many exceptional contractors are held back by outdated websites, weak branding, poor local SEO, and agencies that simply don't understand how the trades operate. That's why we built Toughjobs.</p>
+            <p class="mb24">Today, our team specializes exclusively in helping home service businesses grow — through high-performing websites, local SEO, branding, paid advertising, AI automation, and business systems designed specifically for the trades. We aren't interested in buzzwords or vanity metrics. We care about ringing phones, qualified leads, booked jobs, stronger reputations, and helping honest businesses become the first company people think of when they need a pro.</p>
+            <p>I grew up in a few different towns — Dubuque, Iowa; Portage, Wisconsin; the Quad Cities — mostly because my father was a locomotive engineer and we moved to where the work was. I now proudly call Peoria, Illinois home. Those communities taught me values that still guide Toughjobs today: work hard, keep your word, treat people fairly, and stand behind everything you build. That's why you'll never find us spending your marketing budget on an expensive office just to impress clients — we'd rather invest in talented people, better technology, and strategies that deliver measurable results.</p>
+          </div>
+          </div>
+        </div>
+      </div>
+      <style>@media(max-width:820px){ [data-screen-label="our-story"] .section-inner > div{ grid-template-columns:1fr !important; gap:36px !important; } }</style>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy-section" data-screen-label="philosophy" class="ab-philosophy-section">
+      <div class="container section-inner container-narrow ab-philosophy-inner">
+        <h2 class="display display-lg ab-philosophy-h2">
+          If the phone doesn't ring, we didn't do our job.
+        </h2>
+        <p>
+          Most agencies sell you a website and disappear. We treat every project like it's ours — because if your trucks aren't full, our work failed. Simple as that.
+        </p>
+        <p>
+          <strong>That means:</strong> We want your analytics access, your honest feedback, and your business goals. We'll share detailed reporting on every dollar spent and every lead generated. Quick approvals keep campaigns fresh. Your authentic photos and videos make our work real. That's partnership.
+        </p>
+      </div>
+    </section>
+
+    <!-- Capabilities Section -->
+    <section data-screen-label="capabilities" class="bg-blueprint-light ab-capabilities-shadow">
+      <div class="container section-inner">
+        <span class="eyebrow">What we bring to the table</span>
+        <h2 class="display display-sm ab-capabilities-h2">
+          Three skill sets. <span class="accent-text">One team.</span>
+        </h2>
+        
+        <div class="capabilities-grid">
+          <div class="capability-card">
+            <h3>Technical execution</h3>
+            <ul>
+              <li>WordPress development (PHP, custom themes, WooCommerce)</li>
+              <li>Google Ads + Bing Ads management (certified)</li>
+              <li>Local SEO (GBP, citations, schema markup)</li>
+              <li>Analytics setup (GA4, Google Tag Manager, call tracking)</li>
+            </ul>
+          </div>
+          <div class="capability-card">
+            <h3>Creative services</h3>
+            <ul>
+              <li>Brand identity (names, logos, voice & tone)</li>
+              <li>Fleet wrap design + installation (trucks, trailers, cars)</li>
+              <li>Print collateral (door hangers, yard signs, magnets)</li>
+              <li>Photography + video for social & web</li>
+            </ul>
+          </div>
+          <div class="capability-card">
+            <h3>Strategic thinking</h3>
+            <ul>
+              <li>Market analysis (competitor research, keyword opportunity)</li>
+              <li>Service pricing models (cost-plus, value-based, subscription)</li>
+              <li>Customer lifetime value optimization</li>
+              <li>Referral program design</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Trades Section -->
+    <section data-screen-label="why-trades" class="bg-blueprint-dark">
+      <div class="container section-inner">
+        <span class="eyebrow">Why we only work with trades</span>
+        <h2 class="display display-md ab-why-h2">
+          We could serve anyone. <span class="accent-text">We choose</span> the trades.
+        </h2>
+        
+        <div class="reasons-grid">
+          <div class="reason-card">
+            <h3>Measurable Outcomes</h3>
+            <p>Trades businesses live or die by job count. No vanity metrics. No fluff. Just ROI we can calculate to the penny.</p>
+          </div>
+          <div class="reason-card">
+            <h3>Local Dominance</h3>
+            <p>A 40-mile service radius means we can actually own the map. We're not fighting for national keywords — we're winning Peoria.</p>
+          </div>
+          <div class="reason-card">
+            <h3>Repeat Revenue Potential</h3>
+            <p>HVAC maintenance contracts. Electrical service plans. Plumbing subscriptions. Trades businesses have built-in recurring revenue models we can amplify.</p>
+          </div>
+          <div class="reason-card">
+            <h3>High-Margin Services</h3>
+            <p>Panel upgrades, mini-split installs, water heater replacements — Larger service and installation jobs need clear scope, qualified leads, and tracking that follows the inquiry through the estimate.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Q&A Section -->
+    <style>
+.qna-section{position:relative;isolation:isolate;overflow:hidden;background:#3B1235;background-image:linear-gradient(165deg,#4A1642 0%,#3B1235 46%,#250C22 100%);padding:96px 32px;color:#fff;border-top:0;border-bottom:0}
+.qna-section::before,.qna-section::after{content:"";position:absolute;left:0;right:0;height:14px;z-index:2;pointer-events:none;background:repeating-linear-gradient(115deg,#C8262A 0 14px,transparent 14px 30px),linear-gradient(90deg,rgba(240,154,218,.55),rgba(240,154,218,.08));box-shadow:0 0 22px rgba(240,154,218,.35)}
+.qna-section::before{top:0;clip-path:polygon(0 0,100% 0,100% 42%,0 100%)}
+.qna-section::after{bottom:0;clip-path:polygon(0 58%,100% 0,100% 100%,0 100%)}
+.qna-grid-lines{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.5;background-image:linear-gradient(rgba(233,150,214,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(233,150,214,.13) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(38% 38% at var(--qx,50%) var(--qy,0%),#000 0%,rgba(0,0,0,.25) 60%,transparent 100%);-webkit-mask-image:radial-gradient(38% 38% at var(--qx,50%) var(--qy,0%),#000 0%,rgba(0,0,0,.25) 60%,transparent 100%);transition:opacity .4s}
+.qna-section:hover .qna-grid-lines{opacity:.9}
+.qna-glow{position:absolute;z-index:0;pointer-events:none;left:var(--qx,80%);top:var(--qy,10%);width:620px;height:620px;margin:-310px 0 0 -310px;border-radius:50%;background:radial-gradient(circle,rgba(200,38,42,.34) 0%,rgba(200,38,42,0) 64%);filter:blur(20px);transition:left .5s cubic-bezier(.16,1,.3,1),top .5s cubic-bezier(.16,1,.3,1),opacity .4s;opacity:.85}
+.qna-section:hover .qna-glow{opacity:1;transition:left .1s linear,top .1s linear,opacity .4s}
+.qna-inner{position:relative;z-index:1;max-width:1080px}
+.qna-eyebrow{display:inline-block;font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:#F09ADA;padding:6px 14px;border:1px solid rgba(240,154,218,.42);border-radius:2px}
+.qna-h2{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(30px,3.7vw,52px);line-height:1;letter-spacing:-.015em;color:#fff;margin:20px 0 48px;max-width:16ch;text-wrap:balance}
+.qna-h2 em{font-style:normal;color:#F09ADA}
+.qna-list{display:grid;gap:12px}
+.qna-item{position:relative;border:1px solid rgba(240,154,218,.2);border-left:3px solid #C8262A;background:rgba(255,255,255,.045);backdrop-filter:blur(2px);transition:background .25s,border-color .25s,transform .25s}
+.qna-item:hover{background:rgba(255,255,255,.085);border-color:rgba(240,154,218,.44);transform:translateX(4px)}
+.qna-item[open]{background:rgba(255,255,255,.09);border-color:rgba(240,154,218,.5)}
+.qna-item summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:20px;padding:24px 26px}
+.qna-item summary::-webkit-details-marker{display:none}
+.qna-num{font-family:ui-monospace,Menlo,monospace;font-size:12px;font-weight:700;letter-spacing:.12em;color:#F09ADA}
+.qna-q{font-family:'Archivo',sans-serif;font-weight:800;font-size:19px;line-height:1.25;color:#fff}
+.qna-mark{position:relative;width:16px;height:16px;flex:0 0 16px}
+.qna-mark::before,.qna-mark::after{content:"";position:absolute;background:#F09ADA;transition:transform .3s cubic-bezier(.16,1,.3,1)}
+.qna-mark::before{top:7px;left:0;width:16px;height:2px}
+.qna-mark::after{left:7px;top:0;width:2px;height:16px}
+.qna-item[open] .qna-mark::after{transform:scaleY(0)}
+.qna-item[open] .qna-mark::before{background:#C8262A}
+.qna-item p{margin:0;padding:0 26px 26px 72px;font-size:16px;line-height:1.7;color:rgba(255,255,255,.82);max-width:76ch}
+.qna-cta{display:inline-flex;align-items:center;gap:12px;margin-top:44px;font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:14px;color:#fff;background:#C8262A;padding:16px 28px;text-decoration:none;transition:background .2s,gap .2s}
+.qna-cta:hover{background:#A90100;gap:18px;color:#fff}
+.qna-cta span{transition:transform .2s}
+@media(max-width:720px){.qna-section{padding:64px 22px}.qna-item summary{gap:14px;padding:20px}.qna-q{font-size:17px}.qna-item p{padding:0 20px 22px 20px}}
+</style>
+    <section data-screen-label="qna" class="qna-section">
+      <div class="qna-grid-lines" aria-hidden="true"></div>
+      <div class="qna-glow" aria-hidden="true"></div>
+      <div class="container section-inner qna-inner">
+        <span class="qna-eyebrow">Direct answers</span>
+        <h2 class="qna-h2">Questions <em>we get asked</em> before every handshake</h2>
+        <div class="qna-list">
+          <details class="qna-item" open>
+            <summary><span class="qna-num">01</span><span class="qna-q">Do you only work with trades?</span><span class="qna-mark" aria-hidden="true"></span></summary>
+            <p>Yes. Electricians, HVAC, plumbers, roofers, concrete crews, contractors. We turned down the boutiques and the SaaS startups because a shop that understands one industry cold beats a shop that understands forty of them halfway.</p>
+          </details>
+          <details class="qna-item">
+            <summary><span class="qna-num">02</span><span class="qna-q">How fast do results show up?</span><span class="qna-mark" aria-hidden="true"></span></summary>
+            <p>Paid search can fill a calendar inside two weeks. Local SEO compounds over three to six months and keeps paying long after the invoice clears. We run both so the schedule never has a dead window while the organic side builds.</p>
+          </details>
+          <details class="qna-item">
+            <summary><span class="qna-num">03</span><span class="qna-q">What does it actually cost?</span><span class="qna-mark" aria-hidden="true"></span></summary>
+            <p>Depends on market size and how many trucks you are trying to keep busy. We quote a flat monthly number after a free assessment — no percentage-of-spend games, no surprise line items, no twelve-month handcuffs.</p>
+          </details>
+          <details class="qna-item">
+            <summary><span class="qna-num">04</span><span class="qna-q">Who owns the website and the data?</span><span class="qna-mark" aria-hidden="true"></span></summary>
+            <p>You do. Domain, hosting, analytics, ad accounts, call records — all in your name from day one. If we ever part ways you walk out with every asset intact. That is not a courtesy, it is the only honest way to do this.</p>
+          </details>
+          <details class="qna-item">
+            <summary><span class="qna-num">05</span><span class="qna-q">What do you need from me?</span><span class="qna-mark" aria-hidden="true"></span></summary>
+            <p>About an hour a month and someone who answers the phone. We handle strategy, build, and reporting. You handle the work your customers are calling about — that division of labor is the whole point.</p>
+          </details>
+        </div>
+        <a href="contact.html" class="qna-cta">Start the conversation<span aria-hidden="true">→</span></a>
+      </div>
+      <script>(function(){var s=document.querySelector('.qna-section');if(!s)return;var raf=null,px=0,py=0;s.addEventListener('pointermove',function(e){var r=s.getBoundingClientRect();px=(e.clientX-r.left)/r.width*100;py=(e.clientY-r.top)/r.height*100;if(raf)return;raf=requestAnimationFrame(function(){s.style.setProperty('--qx',px.toFixed(2)+'%');s.style.setProperty('--qy',py.toFixed(2)+'%');raf=null;});});s.addEventListener('pointerleave',function(){s.style.removeProperty('--qx');s.style.removeProperty('--qy');});})();</script>
+    </section>
+
+</main>
+
+  
+    <section data-screen-label="Our Endeavors" class="gb-section ab-gb-section">
+    <div class="gb-inner">
+      <div class="gb-outer">
+        <div>
+          <div class="gb-head">
+            <span class="gb-eyebrow">More than marketing</span>
+            <h2 class="gb-title"><span class="gb-accent">Two ways we</span> give back</h2>
+          </div>
+          <div class="gb-grid">
+            <div class="gb-card gb-card--navy">
+              <span class="gb-kicker">01 / PARTNERSHIP</span>
+              <h3 class="gb-card-title">Go independent, backed by us</h3>
+              <p class="gb-card-text">You bring the truck, tools, and skill. We hand you the website, brand, systems, and marketing to turn one truck into a real company.</p>
+              <a href="partnerships.html" class="gb-card-btn">Explore Partnership</a>
+            </div>
+            <div class="gb-card gb-card--ink">
+              <span class="gb-kicker">02 / HELPING HANDS</span>
+              <h3 class="gb-card-title">A hand up when budget is tight</h3>
+              <p class="gb-card-text">One day a week we help people with more grit than budget get a business off the ground — honest guidance, real direction, no pressure.</p>
+              <a href="helping-hands.html" class="gb-card-btn">Explore Helping Hands</a>
+            </div>
+          </div>
+        </div>
+        <div class="gb-img">
+          <img src="assets/trade-hero-excavation.webp" alt="Toughjobs tradesman on the job" loading="lazy" decoding="async" />
+        </div>
+      </div>
+    </div>
+    <style>@media(max-width:900px){ .gb-outer{ grid-template-columns:1fr !important; } .gb-grid{ grid-template-columns:1fr !important; } .gb-img{ min-height:280px !important; order:-1; } }</style>
+  </section>
+  <script src="inject-footer.js"></script>
+  <script src="sticky-cta.js"></script>
+  <script src="cookie-consent.js"></script>
+  <script src="chat-launcher.js?v=20260729"></script>
+  <script src="inject-header.js?v=20260802b"></script>
+  <script src="accessibility.js?v=20260729"></script>
+<script src="image-finder-tab.js"></script>
+<script src="quiz-peek.js"></script>
+</body>
+</html>

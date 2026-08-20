@@ -1,0 +1,22 @@
+/* "Our Endeavors" give-back band — shared markup + styling for every page.
+   Replaces the per-page inline styles that used to duplicate these rules. */
+.tj-gb{background:#ECEFF4;background-image:url('../assets/white-engineering-background.webp');background-size:cover;background-position:center;padding:56px 32px;position:relative;overflow:hidden;box-shadow:inset 0 2px 2px rgba(0,0,0,.45),inset 0 -2px 2px rgba(0,0,0,.45)}
+.tj-gb-inner{max-width:1240px;margin:0 auto;position:relative;z-index:1}
+.tj-gb-outer2{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center}
+.tj-gb-head{margin-bottom:24px}
+.tj-gb-eyebrow{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:#C8262A}
+.tj-gb-h2{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(32px,3.6vw,50px);line-height:1.02;color:#0A0F1C;margin:12px 0 0}
+.tj-gb-h2 .tj-white{color:#0A0F1C}
+.tj-gb-h2 .tj-accent{color:#C8262A}
+.tj-gb-grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+.tj-gb-card{padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A}
+.tj-gb-card--navy{background:#002768}
+.tj-gb-card--ink{background:#0A0F1C}
+.tj-gb-card .tj-gb-num{font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700}
+.tj-gb-card .tj-gb-title{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#FFFFFF;margin:16px 0 12px;line-height:1.05}
+.tj-gb-card .tj-gb-p{font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 28px}
+.tj-gb-card .tj-gb-btn{display:inline-block;background:#C8262A;color:#FFFFFF;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none}
+.tj-gb-card .tj-gb-btn:hover{background:#A90100;color:#FFFFFF}
+.tj-gb-img{position:relative;height:100%;min-height:420px}
+.tj-gb-img-el{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:top center}
+@media(max-width:900px){.tj-gb-outer2{grid-template-columns:1fr}.tj-gb-grid2{grid-template-columns:1fr}.tj-gb-img{min-height:280px;order:-1}}

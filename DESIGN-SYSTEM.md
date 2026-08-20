@@ -1,4 +1,4 @@
-﻿# Toughjobs Design System Documentation
+# Toughjobs Design System Documentation
 
 ## Core Messaging & Brand Principles
 
@@ -75,13 +75,13 @@ Toughjobs requires:
 
 ### Primary Colors
 - **Primary Red**: `#C8262A` — Accent, CTAs, emphasis
-- **Dark Red**: `#981B1F` — Logo red, deeper accent
-- **Navy**: `#081B33` — Brand navy (alternate palette lead)
+- **Dark Red**: `#A90100` — Logo red, deeper accent
+- **Navy**: `#002768` — Brand navy (alternate palette lead)
 - **Ink (black)**: `#0A0F1C` — Default text, dark backgrounds
 - **White**: `#FFFFFF` — Light text, negative space
 
 ### Secondary & Neutrals
-- **Gray background**: `#17212D`
+- **Gray background**: `#282828`
 - **Smoke**: `#5B6471` — Body text on light
 - **Mute**: `#C7CBD2` — Muted headlines
 - **Hairline**: `#E5E7EB` — Borders, dividers
@@ -92,7 +92,7 @@ Toughjobs requires:
 ```css
 :root {
   --ink: #0A0F1C;
-  --navy: #081B33;
+  --navy: #002768;
   --red: #C8262A;
   --accent: var(--red);
   --accent-ink: var(--white);
@@ -219,7 +219,7 @@ Applied with `strokeDasharray` and `strokeDashoffset` set to path length, animat
 - **Wordmark**: "TOUGH" (red) + "JOBS" (white) in Archivo Black, 28px (full), 14px (scrolled)
 - **Links**: Services, Work, About, Insights, Contact — uppercase, 12px, 700 weight, accent underline on hover
 - **CTA**: "Request a Quote" red button
-- **Phone**: (309) 928-9080 visible in header
+- **Phone**: (309) 741-4599 visible in header
 - **Scroll behavior**: Shrinks at `window.scrollY > 50`, smooth 0.3s ease transitions
 
 ---
@@ -376,7 +376,7 @@ Blueprint annotations draw on sequentially using stroke-dasharray reveal:
 
 ## Contact Information
 
-- **Phone**: (309) 928-9080
+- **Phone**: (309) 741-4599
 - **Address**: 416 Main St, Peoria, IL 61602
 - **Email**: hello@toughjobs.com
 

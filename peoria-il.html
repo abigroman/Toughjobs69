@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
@@ -13,7 +13,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="shared-header.css" />
-<link rel="stylesheet" href="city-page.css?v=20260812b" />
+<link rel="stylesheet" href="city-page.css" />
 
 <script type="application/ld+json">
 {
@@ -78,9 +78,32 @@
   .proof-list li strong{ display:block; font-family:"Archivo",sans-serif; text-transform:uppercase; letter-spacing:.04em; font-size:12px; color:var(--accent); margin-bottom:5px; }
   @media(max-width:880px){ .trade-points{ grid-template-columns:1fr; } .proof-grid{ grid-template-columns:1fr; gap:32px; } }
   section.city-hero.city-hero{
+    position:relative;isolation:isolate;overflow:hidden;
     background:
-      linear-gradient(180deg, rgba(10,15,28,.55), rgba(10,15,28,.82)),
-      url('assets/peoria-skyline-hero.webp') center 65%/cover no-repeat;
+      linear-gradient(105deg, rgba(10,15,28,.94) 0%, rgba(10,15,28,.72) 42%, rgba(0,39,104,.42) 72%, rgba(200,38,42,.30) 100%),
+      url('assets/peoria-skyline-hero.webp') center 62%/cover no-repeat;
+  }
+  /* red halftone energy sweep over the photo */
+  section.city-hero.city-hero::before{
+    content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+    background-image:radial-gradient(rgba(200,38,42,.55) 1.1px, transparent 1.2px);
+    background-size:7px 7px;
+    -webkit-mask-image:linear-gradient(115deg, transparent 38%, #000 78%, #000 100%);
+    mask-image:linear-gradient(115deg, transparent 38%, #000 78%, #000 100%);
+    mix-blend-mode:screen;opacity:.75;
+  }
+  /* diagonal red slash + bottom keyline for kinetic edge */
+  section.city-hero.city-hero::after{
+    content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+    background:
+      linear-gradient(102deg, transparent 0 61%, rgba(200,38,42,.9) 61% 61.5%, transparent 61.5%),
+      linear-gradient(102deg, transparent 0 66%, rgba(255,255,255,.22) 66% 66.25%, transparent 66.25%),
+      linear-gradient(0deg, #C8262A 0 4px, transparent 4px);
+  }
+  section.city-hero.city-hero > .container{position:relative;z-index:1}
+  .city-hero .city-title-accent{
+    color:var(--accent);
+    text-shadow:2px 2px 2px rgba(10,15,28,.9);
   }
 </style>
 <style id="white-texture-sweep">
@@ -93,6 +116,13 @@
   background-attachment:fixed !important;
 }
 </style>
+  <link rel="stylesheet" href="css/trade-sections.css" />
+  <link rel="stylesheet" href="css/give-back.css" />
+<style id="pc-title-logo-style">.pc-headrow{display:flex;align-items:center;gap:clamp(16px,2vw,32px);margin-bottom:34px}
+.pc-headrow>.section-head{flex:0 1 auto;min-width:0;margin-bottom:0}
+.pc-logo-slot{flex:1 1 auto;display:flex;align-items:center;justify-content:center;align-self:stretch}
+.pc-title-logo{width:clamp(96px,10vw,152px);height:auto;filter:drop-shadow(0 14px 26px rgba(0,0,0,.35))}
+@media(max-width:1200px){.pc-logo-slot{display:none}}</style>
 </head>
 <body>
 <style>.accessibility-btn{opacity:0}</style>
@@ -100,7 +130,6 @@
   <img src="assets/accessibility-logo.webp" alt="Accessibility" style="width:100%;height:100%;object-fit:contain;" />
 </button>
 
-<main>
 <!-- ── HERO ─────────────────────────────────────────────────────── -->
 <section class="city-hero">
   <div class="container">
@@ -121,14 +150,11 @@
 </section>
 
 <!-- ── THE MARKET ───────────────────────────────────────────────── -->
-<section class="panel-dark">
+<section class="panel-light">
   <div class="container">
-    <div class="pc-headrow">
     <div class="section-head">
       <span class="eyebrow">The Peoria market</span>
       <h2>A manufacturing town that <span class="b">rewards a real reputation.</span></h2>
-    </div>
-    <div class="pc-logo-slot"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div>
     </div>
     <div class="market-grid">
       <div class="body">
@@ -161,14 +187,11 @@
 <!-- ── NEIGHBORHOODS ────────────────────────────────────────────── -->
 <section class="panel-navy">
   <div class="container">
-    <div class="pc-headrow">
-    <div class="section-head">
+    <div class="pc-headrow"><div class="section-head">
       <span class="eyebrow">Where your customers are</span>
       <h2>We help you get found across <span class="b">Greater Peoria.</span></h2>
       <p>Service-area pages, Google Business Profile geo-targeting, and ad radius tuning built around the communities you actually drive to — not a generic 50-mile blob.</p>
-    </div>
-    <div class="pc-logo-slot"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div>
-    </div>
+    </div><div class="pc-logo-slot"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
     <div class="hood-grid">
       <div class="hood"><div class="name">Downtown &amp; Warehouse District</div><div class="note">Redevelopment, lofts &amp; commercial buildouts</div></div>
       <div class="hood"><div class="name">North Peoria &amp; Dunlap</div><div class="note">Newer builds, higher-ticket remodels</div></div>
@@ -183,16 +206,13 @@
 </section>
 
 <!-- ── TRADE-SPECIFIC ───────────────────────────────────────────── -->
-<section class="panel-dark" data-screen-label="Peoria Trades">
+<section class="panel-light" data-screen-label="Peoria Trades">
   <div class="container">
-    <div class="pc-headrow">
-    <div class="section-head">
+    <div class="pc-headrow"><div class="section-head">
       <span class="eyebrow">Built for the trades</span>
       <h2>Why Peoria contractors <span class="b">can't afford to be invisible.</span></h2>
       <p>This is a skeptical, do-your-homework market. Here's where trade businesses in Greater Peoria quietly lose jobs — and how we win them back.</p>
-    </div>
-    <div class="pc-logo-slot"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div>
-    </div>
+    </div><div class="pc-logo-slot"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
     <div class="trade-points">
       <div class="trade-point"><h3>Peoria buyers vet everything</h3><p>People here don't hire the flashiest ad — they hire the contractor with real reviews, a real address and a site that loads. We build all three so you pass the vet.</p></div>
       <div class="trade-point"><h3>Emergency intent is instant</h3><p>No heat, burst pipe, storm damage — the customer calls whoever looks legit and answers first. A slow site or dead profile hands that job straight to a competitor.</p></div>
@@ -207,12 +227,9 @@
 <!-- ── SERVICES ─────────────────────────────────────────────────── -->
 <section class="panel-navy" data-screen-label="Peoria Services">
   <div class="container">
-    <div class="pc-headrow">
     <div class="section-head">
       <span class="eyebrow">What we run for Peoria trades</span>
       <h2>Every cylinder that <span class="b">books local jobs.</span></h2>
-    </div>
-    <div class="pc-logo-slot"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div>
     </div>
     <div class="svc-grid">
       <a class="svc" href="websites.html"><div class="num">01</div><h3>Websites</h3><p>Fast, mobile-first sites with your Peoria number in six places and lead capture that converts cold clicks into calls.</p></a>
@@ -228,14 +245,11 @@
 </section>
 
 <!-- ── LOCAL PROOF ──────────────────────────────────────────────── -->
-<section class="panel-dark" data-screen-label="Peoria Proof">
+<section class="panel-light" data-screen-label="Peoria Proof">
   <div class="container">
-    <div class="pc-headrow">
     <div class="section-head">
       <span class="eyebrow">We know this market</span>
       <h2>A Peoria agency for <span class="b">Peoria trades.</span></h2>
-    </div>
-    <div class="pc-logo-slot"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div>
     </div>
     <div class="proof-grid">
       <div class="body">
@@ -254,45 +268,40 @@
 </section>
 
 <!-- ── FAQ ──────────────────────────────────────────────────────── -->
-<section class="panel-navy" data-screen-label="Peoria FAQ">
-  <div class="container">
-    <div class="pc-headrow">
-    <div class="section-head">
-      <span class="eyebrow">Peoria questions, answered</span>
-      <h2>Straight answers for <span class="b">local owners.</span></h2>
-    </div>
-    <div class="pc-logo-slot"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div>
-    </div>
-    <div class="faq-list">
-      <div class="faq">
+<section class="td-analysis td-faq-section tj-faq-band" data-screen-label="Peoria FAQ">
+  <div class="td-analysis-inner">
+    <span class="tj-eyebrow-red">Peoria questions, answered</span>
+    <h2 class="tj-band-h2">Straight answers for <span class="b">local owners.</span></h2>
+    <div class="td-faq-list">
+      <div class="td-faq-item">
         <h3>Are you actually based in Peoria?</h3>
         <p>Yes. Our office is at 140 Oakmoor Dr in East Peoria. We meet clients face-to-face, we know the local job sites, and we're reachable on Peoria time — not three time zones away behind a ticket system.</p>
       </div>
-      <div class="faq">
+      <div class="td-faq-item">
         <h3>How long until I rank for "[my trade] Peoria"?</h3>
         <p>Google Business Profile and on-page fixes move first — usually inside 30 days. Competitive map-pack and organic rankings for terms like "HVAC repair Peoria" typically take 60–90 days of consistent work. We report every month so you see exactly what's moving.</p>
       </div>
-      <div class="faq">
+      <div class="td-faq-item">
         <h3>Do you cover the suburbs, or just the city?</h3>
         <p>The whole Tri-County. We build dedicated service-area coverage for Pekin, Morton, Washington, Dunlap, East Peoria, and the surrounding communities so you show up where your trucks already go.</p>
       </div>
-      <div class="faq">
+      <div class="td-faq-item">
         <h3>I already have a website. Do I need a new one?</h3>
         <p>Not always. We start with a free teardown of your current site and Google presence. If your site converts and loads fast, we sharpen the SEO and ads around it. If it's costing you jobs, we'll show you the numbers before recommending a rebuild.</p>
       </div>
-      <div class="faq">
+      <div class="td-faq-item">
         <h3>How much does trades marketing cost in Peoria?</h3>
         <p>It depends on scope — a website build is a one-time investment, while SEO and ad management are monthly. We scope every engagement to your goals and market, and give you real numbers in the free teardown before you commit to anything.</p>
       </div>
-      <div class="faq">
+      <div class="td-faq-item">
         <h3>Do you run Google Ads for Peoria contractors?</h3>
         <p>Yes. We build and manage Google and Meta campaigns geo-fenced to the Tri-County, targeting high-intent searches like "emergency plumber Peoria," so your budget goes to people ready to book — not clicks from Chicago.</p>
       </div>
-      <div class="faq">
+      <div class="td-faq-item">
         <h3>Can you help me get more Google reviews?</h3>
         <p>Absolutely. In a market this reputation-driven, reviews are your best salesperson. We set up simple follow-up that turns finished jobs into a steady stream of Google reviews, which also lifts your map-pack rankings.</p>
       </div>
-      <div class="faq">
+      <div class="td-faq-item">
         <h3>Can a smaller shop outrank the big Peoria names?</h3>
         <p>Yes. We target the searches the big players ignore, cover the suburbs they neglect, and build the local proof that makes a smaller business the safe, obvious hire. You don't need the biggest budget to win the phone call.</p>
       </div>
@@ -301,8 +310,9 @@
 </section>
 
 <!-- ── CTA ──────────────────────────────────────────────────────── -->
-<section class="cta-band">
-  <div class="container">
+<section class="cta-band" id="magnetic-cta" style="position:relative;overflow:hidden">
+  <canvas id="magnetic-dots-canvas" style="position:absolute;top:0;left:0;width:100%;height:100%;"></canvas>
+  <div class="container" style="position:relative;z-index:1">
     <span class="eyebrow" style="color:rgba(255,255,255,.85)">Got a tough job in Peoria?</span>
     <h2>Let's put your business <span class="ink">on the map.</span></h2>
     <p>Free, no-pressure teardown of your website, Google presence, and what your Peoria competitors are doing. We'll tell you exactly where you're losing jobs.</p>
@@ -312,40 +322,77 @@
     </div>
   </div>
 </section>
+<script>
+(function(){
+  const canvas = document.getElementById('magnetic-dots-canvas');
+  const ctx = canvas.getContext('2d');
+  const section = document.getElementById('magnetic-cta');
+  let mouseX = 0, mouseY = 0;
+  const dots = [];
+  const magneticRadius = 120;
+  const dotRadius = 1.25;
+  function resizeCanvas(){ canvas.width = section.offsetWidth; canvas.height = section.offsetHeight; }
+  function createGridDots(){
+    dots.length = 0;
+    const spacing = 20;
+    const rows = Math.ceil(canvas.height / spacing) + 1;
+    const cols = Math.ceil(canvas.width / spacing) + 1;
+    for(let r = 0; r < rows; r++){ for(let c = 0; c < cols; c++){ const x = c * spacing, y = r * spacing; dots.push({x,y,originX:x,originY:y}); } }
+  }
+  section.addEventListener('mousemove', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    mouseX = e.clientX - rect.left; mouseY = e.clientY - rect.top;
+  });
+  resizeCanvas(); createGridDots();
+  window.addEventListener('resize', () => { resizeCanvas(); createGridDots(); });
+  function animate(){
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    dots.forEach(dot => {
+      const dx = mouseX - dot.x, dy = mouseY - dot.y;
+      const dist = Math.sqrt(dx*dx + dy*dy);
+      if(dist < magneticRadius){
+        const force = (magneticRadius - dist) / magneticRadius * 0.8;
+        dot.x += dx * force * 0.1; dot.y += dy * force * 0.1;
+      }
+      dot.x += (dot.originX - dot.x) * 0.05; dot.y += (dot.originY - dot.y) * 0.05;
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+      ctx.beginPath(); ctx.arc(dot.x, dot.y, dotRadius, 0, Math.PI * 2); ctx.fill();
+    });
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+</script> ───────────────────────────────────────────────────── -->
 
-<!-- ── FOOTER ───────────────────────────────────────────────────── -->
-
-    <section data-screen-label="Our Endeavors" class="gb-section" style="background:#ECEFF4;background-image:url('assets/white-engineering-background.webp');background-size:cover;background-position:center;padding:56px 32px;position:relative;overflow:hidden;box-shadow:inset 0 2px 2px rgba(0,0,0,.45), inset 0 -2px 2px rgba(0,0,0,.45);">
-    <div style="max-width:1240px;margin:0 auto;position:relative;z-index:1;">
-      <div class="gb-outer" style="display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center;">
+    <section data-screen-label="Our Endeavors" class="gb-section tj-gb">
+    <div class="tj-gb-inner">
+      <div class="gb-outer tj-gb-outer2">
         <div>
-          <div style="margin-bottom:24px;">
-            <span style="font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:#C8262A;">More than marketing</span>
-            <h2 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(32px,3.6vw,50px);line-height:1.02;color:#0A0F1C;margin:12px 0 0;"><span style="color:#C8262A;">Two ways we</span> give back</h2>
+          <div class="tj-gb-head">
+            <span class="tj-gb-eyebrow">More than marketing</span>
+            <h2 class="tj-gb-h2"><span class="tj-white">Two ways we</span> <span class="tj-accent">give back</span></h2>
           </div>
-          <div class="gb-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch;">
-            <div class="gb-card" style="background:#081B33;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;">
-              <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700;">01 / PARTNERSHIP</span>
-              <h3 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05;">Go independent, backed by us</h3>
-              <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 28px;">You bring the truck, tools, and skill. We hand you the website, brand, systems, and marketing to turn one truck into a real company.</p>
-              <a href="partnerships.html" style="display:inline-block;background:#C8262A;color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none;">Explore Partnership</a>
+          <div class="gb-grid tj-gb-grid2">
+            <div class="gb-card tj-gb-card tj-gb-card--navy">
+              <span class="tj-gb-num">01 / PARTNERSHIP</span>
+              <h3 class="tj-gb-title">Go independent, backed by us</h3>
+              <p class="tj-gb-p">You bring the truck, tools, and skill. We hand you the website, brand, systems, and marketing to turn one truck into a real company.</p>
+              <a class="tj-gb-btn" href="partnerships.html">Explore Partnership</a>
             </div>
-            <div class="gb-card" style="background:#0A0F1C;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;">
-              <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700;">02 / HELPING HANDS</span>
-              <h3 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05;">A hand up when budget is tight</h3>
-              <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.8);margin:0 0 28px;">One day a week we help people with more grit than budget get a business off the ground — honest guidance, real direction, no pressure.</p>
-              <a href="helping-hands.html" style="display:inline-block;background:#C8262A;color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none;">Explore Helping Hands</a>
+            <div class="gb-card tj-gb-card tj-gb-card--ink">
+              <span class="tj-gb-num">02 / HELPING HANDS</span>
+              <h3 class="tj-gb-title">A hand up when budget is tight</h3>
+              <p class="tj-gb-p">One day a week we help people with more grit than budget get a business off the ground &mdash; honest guidance, real direction, no pressure.</p>
+              <a class="tj-gb-btn" href="helping-hands.html">Explore Helping Hands</a>
             </div>
           </div>
         </div>
-        <div class="gb-img" style="position:relative;height:100%;min-height:420px;">
-          <img src="assets/trade-hero-excavation.webp" alt="Toughjobs tradesman on the job" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:top center;" />
+        <div class="gb-img tj-gb-img">
+          <img class="tj-gb-img-el" src="assets/trade-hero-excavation.webp" alt="Toughjobs tradesman on the job" loading="lazy" decoding="async" />
         </div>
       </div>
     </div>
-    <style>@media(max-width:900px){ .gb-outer{ grid-template-columns:1fr !important; } .gb-grid{ grid-template-columns:1fr !important; } .gb-img{ min-height:280px !important; order:-1; } }</style>
   </section>
-</main>
 
 <footer class="city-footer">
   <div class="container">
@@ -353,7 +400,7 @@
       <a href="index.html"><img src="assets/toughjobs-monogram-logo.webp" alt="Toughjobs" /></a>
       <div class="links">
         <a href="service-areas.html">All Service Areas</a>
-        <a href="index.html#services">Services</a>
+        <a href="services.html">Services</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
         <a href="tel:3099289080">(309) 928-9080</a>
@@ -363,13 +410,13 @@
   </div>
 </footer>
 
-<script src="inject-header.js?v=20260813b"></script>
+<script src="inject-header.js?v=20260802b"></script>
 <script src="accessibility.js?v=20260729"></script>
 <script src="sticky-cta.js"></script>
 <script src="back-cta.js"></script>
 <script src="cookie-consent.js"></script>
 <script src="chat-launcher.js?v=20260729"></script>
 <script src="image-finder-tab.js"></script>
-<script src="pc-logo-align.js"></script>
+
 </body>
 </html>

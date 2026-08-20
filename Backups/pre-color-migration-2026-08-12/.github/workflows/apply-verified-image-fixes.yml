@@ -1,0 +1,124 @@
+name: Apply verified image fixes
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-verified-image-fixes.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Check out active website files
+        uses: actions/checkout@v4
+        with:
+          filter: blob:none
+          fetch-depth: 0
+          sparse-checkout: |
+            /*
+            !/*/
+          sparse-checkout-cone-mode: false
+
+      - name: Apply verified replacements
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import subprocess
+
+          tracked = set(subprocess.check_output(['git', 'ls-files']).decode('utf-8').splitlines())
+
+          required_targets = {
+              'uploads/webp/safari-hats-black.webp',
+              'uploads/webp/safari-hats-khaki.webp',
+              'uploads/webp/safari-hats-light-gray.webp',
+              'uploads/webp/safari-hats-red.webp',
+              'uploads/webp/safari-hats-sky-blue.webp',
+              'uploads/webp/safari-hats-stone.webp',
+              'webp/print-stickers-decals-hero.webp',
+              'webp/09-toughjobs-trade-show-booth-square.webp',
+              'webp/chainsaw-guy-optimized.webp',
+              'assets/white-engineering-background.webp',
+          }
+
+          missing_targets = sorted(required_targets - tracked)
+          if missing_targets:
+              raise SystemExit('Missing verified targets:\n' + '\n'.join(missing_targets))
+
+          replacements = {
+              'apparel-products.js': [
+                  ('uploads/WebP/', 'uploads/webp/'),
+              ],
+              'Toughjobs Services -standalone source-.html': [
+                  ('assets/print-stickers-decals-hero.webp', 'webp/print-stickers-decals-hero.webp'),
+              ],
+              'services (standalone).html': [
+                  ('assets/print-stickers-decals-hero.webp', 'webp/print-stickers-decals-hero.webp'),
+              ],
+              'print-collateral (standalone).html': [
+                  ('uploads/toughjobs-print-carousel-square-all-12/09-toughjobs-trade-show-booth-square.webp', 'webp/09-toughjobs-trade-show-booth-square.webp'),
+              ],
+              'websites.html': [
+                  ('assets/chainsaw-guy-optimized.webp', 'webp/chainsaw-guy-optimized.webp'),
+              ],
+              'page-styles.css': [
+                  ('assets/white-engineering-background.png', 'assets/white-engineering-background.webp'),
+              ],
+          }
+
+          changed = []
+          for filename, pairs in replacements.items():
+              path = Path(filename)
+              text = path.read_text(encoding='utf-8', errors='strict')
+              original = text
+              for old, new in pairs:
+                  if old not in text:
+                      raise SystemExit(f'Expected text not found in {filename}: {old}')
+                  text = text.replace(old, new)
+              if text != original:
+                  path.write_text(text, encoding='utf-8', newline='')
+                  changed.append(filename)
+
+          print('Changed files:')
+          for filename in changed:
+              print(f'  {filename}')
+          PY
+
+      - name: Commit fixes to review branch
+        shell: bash
+        run: |
+          git config user.name "ToughJobs Image Fix"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout -B fix/verified-image-paths
+          git add -- \
+            "apparel-products.js" \
+            "Toughjobs Services -standalone source-.html" \
+            "services (standalone).html" \
+            "print-collateral (standalone).html" \
+            "websites.html" \
+            "page-styles.css"
+          git commit -m "Fix verified image paths"
+          git push --force-with-lease origin fix/verified-image-paths
+
+      - name: Open review pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          existing=$(gh pr list --head fix/verified-image-paths --base main --state open --json number --jq '.[0].number')
+          if [ -z "$existing" ]; then
+            gh pr create \
+              --head fix/verified-image-paths \
+              --base main \
+              --title "Fix verified website image paths" \
+              --body "Server-side audit verified these changes: six Safari Hat WebP capitalization fixes, confirmed wrong-folder references, and the engineering background extension correction. No ambiguous image matches are included."
+          else
+            echo "Pull request already exists: #$existing"
+          fi

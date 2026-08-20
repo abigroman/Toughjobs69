@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Chatbot Strategy — Toughjobs</title>
+<meta name="robots" content="noindex, follow" />
+<meta name="author" content="Toughjobs" />
+<meta name="publisher" content="ToughJobs Digital Marketing" />
+<link rel="canonical" href="https://toughjobs.org/ai-automations.html" />
+
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --accent:#C8262A; --dark-red:#A90100; --navy:#002768;
+    --ink:#0A0F1C; --white:#FFFFFF; --gray:#282828;
+    --paper:#F4F2EF; --line:#dcd8d2; --muted:#6b6b6b;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{background:var(--gray);}
+  body{font-family:"Archivo",sans-serif;color:var(--ink);line-height:1.55;}
+  a{color:var(--accent);}
+  a:hover{color:var(--dark-red);}
+
+  .sheet{
+    max-width:900px;margin:32px auto;background:var(--white);
+    box-shadow:0 20px 60px rgba(0,0,0,.4);
+  }
+
+  /* Masthead */
+  .masthead{background:var(--ink);color:var(--white);padding:48px 56px 40px;}
+  .kicker{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);font-weight:600;}
+  .masthead h1{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:44px;line-height:.98;letter-spacing:-.01em;margin:14px 0 10px;}
+  .masthead h1 .r{color:var(--accent);}
+  .masthead p{color:#c9ccd4;max-width:60ch;font-size:15px;}
+  .meta-row{display:flex;flex-wrap:wrap;gap:28px;margin-top:26px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);}
+  .meta-row div{font-family:"JetBrains Mono",monospace;font-size:12px;color:#9aa0ab;}
+  .meta-row div b{display:block;color:var(--white);font-size:13px;margin-top:3px;letter-spacing:.02em;}
+
+  .body{padding:52px 56px 64px;}
+
+  /* Section */
+  section{margin-bottom:52px;}
+  .sec-head{display:flex;align-items:baseline;gap:14px;border-bottom:3px solid var(--ink);padding-bottom:10px;margin-bottom:22px;}
+  .sec-num{font-family:"JetBrains Mono",monospace;font-size:13px;font-weight:600;color:var(--accent);}
+  .sec-head h2{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:23px;letter-spacing:-.01em;}
+  .lede{font-size:15px;color:var(--muted);margin-bottom:20px;max-width:70ch;}
+
+  h3{font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:14px;margin:24px 0 12px;color:var(--navy);}
+
+  ul.clean{list-style:none;}
+  ul.clean li{position:relative;padding-left:22px;margin-bottom:9px;font-size:15px;}
+  ul.clean li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;background:var(--accent);}
+  ul.clean li b{font-weight:700;}
+
+  /* Goal cards */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .card{border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 18px;background:var(--paper);}
+  .card .n{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--accent);font-weight:600;letter-spacing:.1em;}
+  .card h4{font-weight:800;font-size:15px;margin:5px 0 6px;text-transform:uppercase;letter-spacing:.02em;}
+  .card p{font-size:13.5px;color:var(--muted);}
+
+  /* Tables */
+  table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:6px;}
+  th{background:var(--ink);color:var(--white);text-align:left;padding:10px 12px;font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-family:"Archivo",sans-serif;font-weight:700;}
+  td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+  tr:nth-child(even) td{background:#faf9f7;}
+  td .mono,.mono{font-family:"JetBrains Mono",monospace;font-size:12px;}
+  .pill{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:600;padding:2px 8px;border-radius:2px;text-transform:uppercase;letter-spacing:.05em;}
+  .p-hot{background:var(--accent);color:#fff;}
+  .p-warm{background:#E8A33D;color:#3a2600;}
+  .p-cold{background:#c9ccd4;color:#2a2f3a;}
+
+  /* Trades block */
+  .trade-cats{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .trade-cat h4{font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;font-size:12px;letter-spacing:.06em;color:var(--navy);border-bottom:2px solid var(--line);padding-bottom:6px;margin-bottom:8px;}
+  .trade-cat .tags{display:flex;flex-wrap:wrap;gap:6px;}
+  .tag{font-family:"JetBrains Mono",monospace;font-size:11px;background:var(--paper);border:1px solid var(--line);padding:3px 8px;}
+
+  .callout{background:var(--navy);color:#fff;padding:20px 22px;margin-top:18px;border-left:4px solid var(--accent);}
+  .callout .k{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8fb0ff;}
+  .callout p{margin-top:6px;font-size:14px;color:#dfe5f2;}
+
+  .note{font-size:12.5px;color:var(--muted);font-style:italic;margin-top:10px;}
+
+  footer{background:var(--ink);color:#9aa0ab;padding:26px 56px;font-family:"JetBrains Mono",monospace;font-size:11px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+  footer b{color:#fff;}
+
+  .approve{background:var(--paper);border:2px dashed var(--accent);padding:20px 22px;margin-top:8px;}
+  .approve h3{margin-top:0;color:var(--accent);}
+
+  @media print{
+    html,body{background:#fff;}
+    .sheet{box-shadow:none;margin:0;max-width:none;}
+    section{break-inside:avoid;}
+  }
+  @media(max-width:680px){
+    .grid2,.grid3,.trade-cats{grid-template-columns:1fr;}
+    .masthead,.body{padding-left:24px;padding-right:24px;}
+    .masthead h1{font-size:32px;}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="masthead">
+    <div class="kicker">Internal Strategy Document · Draft for Approval</div>
+    <h1>Toughjobs <span class="r">Chatbot</span><br/>Knowledge Base Strategy</h1>
+    <p>The blueprint for how our site chatbot talks to trade owners, qualifies them, scores leads, and hands the hot ones to a human. Approve this structure before we build the Q&A library.</p>
+    <div class="meta-row">
+      <div>Prepared for<b>Toughjobs Digital Marketing</b></div>
+      <div>Version<b>0.1 — Strategy Only</b></div>
+      <div>Date<b>July 8, 2026</b></div>
+      <div>Status<b>Awaiting Approval</b></div>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <!-- 1. GOALS -->
+    <section>
+      <div class="sec-head"><span class="sec-num">01</span><h2>Main Chatbot Goals</h2></div>
+      <p class="lede">The bot is a lead machine, not a help desk. Everything it does points at one outcome: get a qualified trade owner booked with Toughjobs.</p>
+      <div class="grid2">
+        <div class="card"><div class="n">GOAL 01</div><h4>Qualify Fast</h4><p>Figure out the trade, the market, and whether this is an owner with a budget — in the first few messages.</p></div>
+        <div class="card"><div class="n">GOAL 02</div><h4>Capture the Lead</h4><p>Get name, business, trade, phone/email into the database. No conversation ends without a contact attempt.</p></div>
+        <div class="card"><div class="n">GOAL 03</div><h4>Score &amp; Route</h4><p>Rate every visitor hot / warm / cold and escalate hot ones to a human before they cool off.</p></div>
+        <div class="card"><div class="n">GOAL 04</div><h4>Educate &amp; Build Trust</h4><p>Answer real questions about pricing, timelines, and results in plain, no-BS language that matches our brand.</p></div>
+        <div class="card"><div class="n">GOAL 05</div><h4>Book the Call</h4><p>Push warm/hot visitors to "Request a Quote" or the assessment. Booking a call is the win.</p></div>
+        <div class="card"><div class="n">GOAL 06</div><h4>Feed the Business</h4><p>Log every conversation so we learn which trades, objections, and questions come up most — weekly.</p></div>
+      </div>
+    </section>
+
+    <!-- 2. SERVICES -->
+    <section>
+      <div class="sec-head"><span class="sec-num">02</span><h2>Services Toughjobs Offers</h2></div>
+      <p class="lede">Four levers. The bot needs to explain each in one breath and connect it to the trade owner's problem.</p>
+      <table>
+        <tr><th style="width:22%">Service</th><th style="width:33%">What It Is</th><th>Who It's For / Trigger Question</th></tr>
+        <tr><td><b>Websites</b></td><td>Fast, mobile-first sites built to convert calls and form fills.</td><td>"My site's old / slow" · "I don't have a website" · "Nobody calls from my site."</td></tr>
+        <tr><td><b>SEO &amp; Local Search</b></td><td>Rank for "[trade] near me," Google Business Profile, Maps, reviews.</td><td>"I'm not showing up on Google" · "Competitors outrank me."</td></tr>
+        <tr><td><b>Paid Ads</b></td><td>Google Ads, Local Services Ads (pay-per-call), Meta/TikTok social ads.</td><td>"I need leads now" · "I want to turn it on/off" · emergency trades.</td></tr>
+        <tr><td><b>Branding &amp; Vehicle Wraps</b></td><td>Logo, identity, and fleet/vehicle wraps — the rolling billboard.</td><td>"My brand looks weak" · "I just got a new truck" · "Fleet wraps."</td></tr>
+      </table>
+      <p class="note">Add-ons the bot may reference: review generation, content/photo shoots, monthly reporting. Typical spend $800–$5,500/mo depending on trade.</p>
+    </section>
+
+    <!-- 3. TRADES -->
+    <section>
+      <div class="sec-head"><span class="sec-num">03</span><h2>Trades Toughjobs Serves</h2></div>
+      <p class="lede">27 trades across 6 categories. The bot must recognize the visitor's trade early — it drives pricing, timeline, and which service to lead with.</p>
+      <div class="trade-cats">
+        <div class="trade-cat"><h4>Building &amp; Construction</h4><div class="tags"><span class="tag">Roofing</span><span class="tag">General Contractors</span><span class="tag">Concrete &amp; Paving</span><span class="tag">Masonry</span><span class="tag">Framing &amp; Drywall</span><span class="tag">Decks &amp; Patios</span><span class="tag">Garage Doors</span></div></div>
+        <div class="trade-cat"><h4>Mechanical &amp; Essential</h4><div class="tags"><span class="tag">HVAC</span><span class="tag">Plumbing</span><span class="tag">Electricians</span><span class="tag">Locksmiths</span><span class="tag">Appliance Repair</span><span class="tag">Solar</span></div></div>
+        <div class="trade-cat"><h4>Finishing &amp; Maintenance</h4><div class="tags"><span class="tag">Painters</span><span class="tag">Carpet Cleaning</span><span class="tag">Pressure Washing</span><span class="tag">Janitorial</span><span class="tag">Restoration</span><span class="tag">Junk Removal</span></div></div>
+        <div class="trade-cat"><h4>Outdoor &amp; Landscaping</h4><div class="tags"><span class="tag">Landscaping</span><span class="tag">Tree Service</span><span class="tag">Pest Control</span><span class="tag">Pools</span></div></div>
+        <div class="trade-cat"><h4>Automotive &amp; Heavy Machinery</h4><div class="tags"><span class="tag">Auto Detailing</span><span class="tag">Auto Repair</span><span class="tag">Towing</span><span class="tag">Excavation</span></div></div>
+        <div class="trade-cat"><h4>General Services</h4><div class="tags"><span class="tag">Handyman</span></div></div>
+      </div>
+      <div class="callout"><div class="k">Service Area</div><p>Quad Cities home base — serving Illinois, Iowa, Missouri, Wisconsin &amp; Indiana. The bot should confirm the visitor is inside (or near) the footprint and flag out-of-area leads.</p></div>
+    </section>
+
+    <!-- 4. VISITOR TYPES -->
+    <section>
+      <div class="sec-head"><span class="sec-num">04</span><h2>Visitor Types</h2></div>
+      <p class="lede">Not everyone chatting is a buyer. The bot tags each visitor so we don't waste a human on a job-seeker or a vendor.</p>
+      <table>
+        <tr><th style="width:26%">Type</th><th>How to Spot Them</th><th style="width:20%">Bot Action</th></tr>
+        <tr><td><b>Trade Owner / Decision-Maker</b></td><td>Owns or runs a trade business, asks about leads, pricing, results.</td><td>Qualify &amp; score — priority.</td></tr>
+        <tr><td><b>Office Manager / Staff</b></td><td>Works for the business, gathering info for the owner.</td><td>Qualify, capture owner's contact.</td></tr>
+        <tr><td><b>Researcher / Tire-Kicker</b></td><td>Comparing agencies, early, vague on budget or timeline.</td><td>Educate, nurture, capture email.</td></tr>
+        <tr><td><b>Existing Client</b></td><td>Already a customer — support, billing, reporting question.</td><td>Route to account/support.</td></tr>
+        <tr><td><b>Job Seeker</b></td><td>Looking for work or asking to be hired.</td><td>Point to careers/decline, don't score.</td></tr>
+        <tr><td><b>Vendor / Spam</b></td><td>Selling something, bots, irrelevant.</td><td>Deflect, no capture.</td></tr>
+      </table>
+    </section>
+
+    <!-- 5. BUYER INTENT -->
+    <section>
+      <div class="sec-head"><span class="sec-num">05</span><h2>Buyer Intent Stages</h2></div>
+      <p class="lede">Where the visitor sits in the funnel decides the bot's tone and its ask.</p>
+      <div class="grid3">
+        <div class="card"><div class="n">STAGE 1</div><h4>Unaware</h4><p>Knows they need "more leads" but not that marketing is the fix. → Educate.</p></div>
+        <div class="card"><div class="n">STAGE 2</div><h4>Problem-Aware</h4><p>Knows the problem (bad site, no calls). Exploring options. → Diagnose.</p></div>
+        <div class="card"><div class="n">STAGE 3</div><h4>Solution-Aware</h4><p>Knows agencies exist, comparing. → Differentiate Toughjobs.</p></div>
+        <div class="card"><div class="n">STAGE 4</div><h4>Vendor-Aware</h4><p>Considering Toughjobs specifically. Asking price/process. → Reassure &amp; quote.</p></div>
+        <div class="card"><div class="n">STAGE 5</div><h4>Ready to Buy</h4><p>Wants to talk now. → Book the call / escalate.</p></div>
+        <div class="card" style="border-left-color:var(--navy);"><div class="n" style="color:var(--navy)">SIGNAL</div><h4>Urgency Flags</h4><p>"Slow season," "competitor beating me," "new truck" = push harder.</p></div>
+      </div>
+    </section>
+
+    <!-- 6. LEAD SCORING -->
+    <section>
+      <div class="sec-head"><span class="sec-num">06</span><h2>Lead Scoring Rules</h2></div>
+      <p class="lede">Points-based. The bot adds/subtracts points as it learns about the visitor, then buckets them Hot / Warm / Cold.</p>
+      <table>
+        <tr><th>Signal</th><th style="width:16%">Points</th><th>Notes</th></tr>
+        <tr><td>Is a trade owner / decision-maker</td><td class="mono">+30</td><td>Core qualifier.</td></tr>
+        <tr><td>Trade is one we serve</td><td class="mono">+15</td><td>Any of the 27.</td></tr>
+        <tr><td>Inside service area (IL/IA/MO/WI/IN)</td><td class="mono">+15</td><td>Out-of-area = 0.</td></tr>
+        <tr><td>States a budget / asks pricing seriously</td><td class="mono">+20</td><td>Budget ≥ $1,000/mo = +10 more.</td></tr>
+        <tr><td>Wants leads "now" / urgent timeline</td><td class="mono">+15</td><td>Ready-to-buy signal.</td></tr>
+        <tr><td>Names a specific service or pain</td><td class="mono">+10</td><td>"My site's slow," "not ranking."</td></tr>
+        <tr><td>Gives phone or email</td><td class="mono">+20</td><td>Contactable.</td></tr>
+        <tr><td>Requests quote / assessment / call</td><td class="mono">+25</td><td>Strong conversion action.</td></tr>
+        <tr><td>Tire-kicker / no timeline</td><td class="mono">−10</td><td>Nurture, don't escalate.</td></tr>
+        <tr><td>Job seeker / vendor / out of area</td><td class="mono">−30</td><td>Disqualify.</td></tr>
+      </table>
+      <h3>Buckets</h3>
+      <ul class="clean">
+        <li><span class="pill p-hot">Hot</span> &nbsp;<b>70+ points</b> — escalate to a human immediately, capture contact, attempt live handoff or same-day callback.</li>
+        <li><span class="pill p-warm">Warm</span> &nbsp;<b>40–69 points</b> — capture contact, book a call, add to follow-up sequence.</li>
+        <li><span class="pill p-cold">Cold</span> &nbsp;<b>Under 40</b> — educate, capture email if possible, drop into nurture.</li>
+      </ul>
+    </section>
+
+    <!-- 7. RECORDING FIELDS -->
+    <section>
+      <div class="sec-head"><span class="sec-num">07</span><h2>Conversation Recording Fields</h2></div>
+      <p class="lede">Captured per conversation for scoring, follow-up, and the weekly report.</p>
+      <div class="grid2">
+        <div>
+          <h3>Identity &amp; Context</h3>
+          <ul class="clean">
+            <li>Conversation ID + timestamp</li>
+            <li>Name / business name</li>
+            <li>Trade (from the 27)</li>
+            <li>City / state · in-area yes/no</li>
+            <li>Visitor type (§4)</li>
+            <li>Entry page / referrer</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Intent &amp; Outcome</h3>
+          <ul class="clean">
+            <li>Buyer intent stage (§5)</li>
+            <li>Services of interest</li>
+            <li>Stated budget / timeline</li>
+            <li>Primary pain / objection</li>
+            <li>Lead score + bucket</li>
+            <li>Contact captured (phone/email)</li>
+            <li>Outcome (quote req / booked / escalated / nurture / dropped)</li>
+            <li>Full transcript</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. ESCALATION -->
+    <section>
+      <div class="sec-head"><span class="sec-num">08</span><h2>Chatbot Escalation Rules</h2></div>
+      <p class="lede">When the bot steps aside and gets a human involved.</p>
+      <ul class="clean">
+        <li><b>Hot lead (70+):</b> offer live handoff now; if none available, capture contact and promise same-day callback + alert the team.</li>
+        <li><b>Explicit ask:</b> visitor says "talk to a person / call me / get me a human" → escalate regardless of score.</li>
+        <li><b>Quote / assessment requested:</b> capture details, confirm, and route to sales.</li>
+        <li><b>Existing client with an issue:</b> route to account/support, don't try to sell.</li>
+        <li><b>Complaint or frustration detected:</b> apologize, escalate to a human fast.</li>
+        <li><b>Bot can't answer / repeated confusion:</b> after 2 failed attempts, offer a human instead of guessing.</li>
+        <li><b>High-value trade + budget signal:</b> restoration, solar, pools, GCs with $2K+ intent → prioritize handoff.</li>
+      </ul>
+      <div class="callout"><div class="k">Handoff Rule</div><p>Never let a hot lead leave without a contact method captured. If a human isn't live, the bot books the next step — it never dead-ends.</p></div>
+    </section>
+
+    <!-- 9. PRIVACY -->
+    <section>
+      <div class="sec-head"><span class="sec-num">09</span><h2>Privacy Notice</h2></div>
+      <p class="lede">Shown at the start of the chat and available on request.</p>
+      <ul class="clean">
+        <li>State up front: "This chat is recorded to help us serve you and follow up."</li>
+        <li>Collect only what's needed to qualify and contact — name, business, trade, location, contact info.</li>
+        <li>Explain use: to answer questions, prepare a quote, and follow up about Toughjobs services. No selling data to third parties.</li>
+        <li>Consent for contact: capturing a phone/email = permission for Toughjobs to reach out about their inquiry.</li>
+        <li>Link to the full privacy policy; offer opt-out / data-deletion on request.</li>
+        <li>Don't request sensitive data (SSNs, payment card numbers) in chat.</li>
+      </ul>
+      <p class="note">Legal to review final wording before launch. Bot should never promise confidentiality it can't keep.</p>
+    </section>
+
+    <!-- 10. WEEKLY REPORT -->
+    <section>
+      <div class="sec-head"><span class="sec-num">10</span><h2>Weekly Insight Report Structure</h2></div>
+      <p class="lede">One page, every Monday. What the bot learned and what it produced.</p>
+      <div class="grid2">
+        <div class="card"><div class="n">BLOCK A</div><h4>Volume</h4><p>Total conversations, unique visitors, completion rate, avg length.</p></div>
+        <div class="card"><div class="n">BLOCK B</div><h4>Lead Quality</h4><p>Hot / Warm / Cold split, contacts captured, quotes requested.</p></div>
+        <div class="card"><div class="n">BLOCK C</div><h4>Trade Breakdown</h4><p>Top trades this week, which are heating up, out-of-area count.</p></div>
+        <div class="card"><div class="n">BLOCK D</div><h4>Service Interest</h4><p>Websites vs SEO vs Paid vs Branding demand.</p></div>
+        <div class="card"><div class="n">BLOCK E</div><h4>Top Questions &amp; Objections</h4><p>Most-asked questions; where the bot failed to answer.</p></div>
+        <div class="card"><div class="n">BLOCK F</div><h4>Actions &amp; Wins</h4><p>Escalations, booked calls, follow-ups owed, KB gaps to fill.</p></div>
+      </div>
+    </section>
+
+    <!-- 11. DB FIELDS -->
+    <section>
+      <div class="sec-head"><span class="sec-num">11</span><h2>Recommended Database Fields</h2></div>
+      <p class="lede">Schema for the leads/conversations table backing the bot.</p>
+      <table>
+        <tr><th style="width:34%">Field</th><th style="width:20%">Type</th><th>Description</th></tr>
+        <tr><td class="mono">conversation_id</td><td>UUID</td><td>Primary key.</td></tr>
+        <tr><td class="mono">created_at</td><td>timestamp</td><td>Start of chat.</td></tr>
+        <tr><td class="mono">contact_name</td><td>text</td><td>Visitor name.</td></tr>
+        <tr><td class="mono">business_name</td><td>text</td><td>Company.</td></tr>
+        <tr><td class="mono">trade</td><td>enum (27)</td><td>Matched trade slug.</td></tr>
+        <tr><td class="mono">city / state</td><td>text</td><td>Location.</td></tr>
+        <tr><td class="mono">in_service_area</td><td>bool</td><td>Inside IL/IA/MO/WI/IN.</td></tr>
+        <tr><td class="mono">visitor_type</td><td>enum</td><td>Owner, staff, researcher, client, job-seeker, vendor.</td></tr>
+        <tr><td class="mono">intent_stage</td><td>enum (1–5)</td><td>Buyer intent stage.</td></tr>
+        <tr><td class="mono">services_interested</td><td>array</td><td>Websites / SEO / Paid / Branding.</td></tr>
+        <tr><td class="mono">budget_stated</td><td>text/int</td><td>Monthly budget if given.</td></tr>
+        <tr><td class="mono">timeline</td><td>text</td><td>Urgency.</td></tr>
+        <tr><td class="mono">primary_pain</td><td>text</td><td>Main problem/objection.</td></tr>
+        <tr><td class="mono">lead_score</td><td>int</td><td>Computed score.</td></tr>
+        <tr><td class="mono">lead_bucket</td><td>enum</td><td>Hot / Warm / Cold.</td></tr>
+        <tr><td class="mono">phone / email</td><td>text</td><td>Captured contact.</td></tr>
+        <tr><td class="mono">consent_contact</td><td>bool</td><td>Permission to follow up.</td></tr>
+        <tr><td class="mono">outcome</td><td>enum</td><td>Quote / booked / escalated / nurture / dropped.</td></tr>
+        <tr><td class="mono">escalated</td><td>bool</td><td>Sent to human.</td></tr>
+        <tr><td class="mono">entry_page / referrer</td><td>text</td><td>Source.</td></tr>
+        <tr><td class="mono">transcript</td><td>json/text</td><td>Full message log.</td></tr>
+        <tr><td class="mono">followup_owed</td><td>bool / date</td><td>Next action.</td></tr>
+      </table>
+    </section>
+
+    <!-- APPROVAL -->
+    <section style="margin-bottom:0;">
+      <div class="approve">
+        <h3>Next Step — Your Approval</h3>
+        <p style="font-size:14.5px;">This is the strategy and structure only. Once you sign off on the goals, scoring, fields, and reporting above, I'll build the full Q&amp;A knowledge base on top of it. Tell me what to adjust — scoring thresholds, visitor types, extra fields, tone — or say "approved" and I'll start the Q&amp;A.</p>
+      </div>
+    </section>
+
+  </div>
+
+  
+    <section data-screen-label="Our Endeavors" class="gb-section" style="background:#ECEFF4;background-image:url('assets/white-engineering-background.webp');background-size:cover;background-position:center;padding:56px 32px;position:relative;overflow:hidden;box-shadow:inset 0 2px 2px rgba(0,0,0,.45), inset 0 -2px 2px rgba(0,0,0,.45);">
+    <div style="max-width:1240px;margin:0 auto;position:relative;z-index:1;">
+      <div class="gb-outer" style="display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center;">
+        <div>
+          <div style="margin-bottom:24px;">
+            <span style="font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:#C8262A;">More than marketing</span>
+            <h2 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(32px,3.6vw,50px);line-height:1.02;color:#0A0F1C;margin:12px 0 0;"><span style="color:#C8262A;">Two ways we</span> give back</h2>
+          </div>
+          <div class="gb-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch;">
+            <div class="gb-card" style="background:#002768;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;">
+              <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700;">01 / PARTNERSHIP</span>
+              <h3 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05;">Go independent, backed by us</h3>
+              <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 28px;">You bring the truck, tools, and skill. We hand you the website, brand, systems, and marketing to turn one truck into a real company.</p>
+              <a href="partnerships.html" style="display:inline-block;background:#C8262A;color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none;">Explore Partnership</a>
+            </div>
+            <div class="gb-card" style="background:#0A0F1C;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(0,39,104,.5);border-top:4px solid #C8262A;">
+              <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700;">02 / HELPING HANDS</span>
+              <h3 style="font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05;">A hand up when budget is tight</h3>
+              <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.8);margin:0 0 28px;">One day a week we help people with more grit than budget get a business off the ground — honest guidance, real direction, no pressure.</p>
+              <a href="helping-hands.html" style="display:inline-block;background:#C8262A;color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none;">Explore Helping Hands</a>
+            </div>
+          </div>
+        </div>
+        <div class="gb-img" style="position:relative;height:100%;min-height:420px;">
+          <img src="assets/trade-hero-excavation.webp" alt="Toughjobs tradesman on the job" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:top center;" />
+        </div>
+      </div>
+    </div>
+    <style>@media(max-width:900px){ .gb-outer{ grid-template-columns:1fr !important; } .gb-grid{ grid-template-columns:1fr !important; } .gb-img{ min-height:280px !important; order:-1; } }</style>
+  </section>
+
+<footer>
+    <span>TOUGHJOBS DIGITAL MARKETING · CHATBOT STRATEGY v0.1</span>
+    <span><b>(309) 928-9080</b> · Quad Cities · IL · IA · MO · WI · IN</span>
+  </footer>
+
+</div>
+<script src="accessibility.js?v=20260729"></script>
+<script src="image-finder-tab.js"></script>
+</body>
+</html>

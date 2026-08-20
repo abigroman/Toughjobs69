@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Toughjobs — A Website Built to Win Your Trade More Jobs</title>
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Toughjobs" />
+<meta name="description" content="Explore Toughjobs marketing pages and practical guides for 28 contractor and home-service trades, from HVAC and plumbing to roofing and landscaping." />
+<link rel="canonical" href="https://toughjobs.org/trades.html" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared-header.css" />
+<style>
+:root{--red:#C8262A;--dark-red:#A90100;--navy:#002768;--ink:#0A0F1C;--white:#FFFFFF;--smoke:#5a6172;--container:1240px}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--ink)}
+body{font-family:"Archivo",sans-serif;color:var(--ink);font-size:16px;line-height:1.6}
+a{color:var(--red)}a:hover{color:var(--dark-red)}
+.container{max-width:var(--container);margin:0 auto;padding:0 22px}
+.display{font-family:"Archivo Black",sans-serif;text-transform:uppercase;letter-spacing:-.01em;line-height:.95;margin:0}
+.eyebrow{font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:13px;color:var(--red);display:block;margin-bottom:16px}
+.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:14px;padding:17px 30px;transition:background .15s,transform .15s}
+.btn:hover{background:var(--dark-red);color:#fff;transform:translateY(-2px)}
+.btn.ghost{background:transparent;border:2px solid rgba(255,255,255,.4);color:#fff}
+.btn.ghost:hover{border-color:#fff;background:rgba(255,255,255,.08);color:#fff}
+section{padding:clamp(72px,9vw,120px) 0}
+/* hero — dark */
+.tr-hero{background:var(--ink);color:#fff;padding-top:clamp(90px,11vw,150px);position:relative;overflow:hidden}
+.tr-hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 30%,rgba(200,38,42,.10),transparent 55%);pointer-events:none}
+.tr-hero .container{position:relative;z-index:2}
+.tr-hero h1{font-size:clamp(44px,6vw,88px);color:#fff;max-width:1000px}
+.tr-hero h1 .r{color:var(--red)}
+.tr-hero .lede{max-width:660px;font-size:clamp(17px,1.5vw,20px);color:rgba(255,255,255,.82);margin:28px 0 0}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+.hero-stats{display:flex;flex-wrap:wrap;gap:40px;margin-top:56px;padding-top:34px;border-top:1px solid rgba(255,255,255,.14)}
+.hero-stat .n{font-family:"Archivo Black",sans-serif;font-size:clamp(30px,3.4vw,46px);color:var(--red);line-height:1}
+.hero-stat .l{font-size:13.5px;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-top:8px;max-width:200px}
+/* stakes — light */
+.tr-stakes{background:url('trade-images/landscaping.webp') right 40px bottom 40px/auto 48% no-repeat,url('assets/white-engineering-background.webp') center/cover no-repeat #F4F5F7;background-attachment:scroll,fixed;position:relative}
+.tr-stakes .container{position:relative;z-index:1}
+.tr-stakes .display{font-size:clamp(32px,4vw,56px);color:var(--ink);max-width:820px}
+.tr-stakes .display .r{color:var(--red)}
+.tr-stakes .sub{max-width:680px;color:#3a4254;margin:16px 0 44px;font-size:17px}
+.leak-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:820px){.leak-grid{grid-template-columns:1fr}}
+.leak{background:#fff;box-shadow:0 0 2px 0 rgba(10,15,28,.35);padding:30px;border-bottom:4px solid var(--red)}
+.leak .amt{font-family:"Archivo Black",sans-serif;font-size:34px;color:var(--navy);line-height:1}
+.leak .job{font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:13px;color:var(--red);margin:8px 0 14px}
+.leak p{color:#3a4254;font-size:15px;margin:0}
+.half-battle{max-width:760px;margin:56px 0 0;border-top:2px solid rgba(10,15,28,.12);padding-top:40px}
+.half-battle h3{font-family:"Archivo Black",sans-serif;text-transform:uppercase;letter-spacing:-.01em;font-size:clamp(24px,3vw,36px);color:var(--ink);line-height:1.05;margin:0 0 22px}
+.half-battle h3 .r{color:var(--red)}
+.half-battle p{color:#2b3345;font-size:17px;line-height:1.7;margin:0 0 18px}
+.half-battle p strong{color:var(--ink);font-weight:800}
+.half-battle .lead{font-size:19px;line-height:1.65}
+.half-battle .kicker{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:15px;letter-spacing:.02em;color:var(--red);margin:30px 0 10px}
+/* pain picker — dark */
+.tr-pain{background:var(--ink);color:#fff}
+.tr-pain .display{font-size:clamp(32px,4vw,56px);color:#fff}
+.tr-pain .sec-sub{max-width:720px;color:rgba(255,255,255,.75);margin:14px 0 44px}
+.pain{background:#fff;box-shadow:0 12px 30px rgba(0,0,0,.28);margin-bottom:16px;overflow:hidden}
+.pain-head{display:flex;align-items:center;gap:20px;width:100%;background:none;border:0;padding:26px 28px;cursor:pointer;text-align:left;font-family:"Archivo",sans-serif}
+.pain-head .pn{font-family:"Archivo Black",sans-serif;font-size:26px;color:var(--red);min-width:44px}
+.pain-head h3{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:clamp(17px,2.2vw,25px);margin:0;color:var(--ink);flex:1}
+.pain-head .pc{font-size:26px;color:var(--red);font-weight:900;transition:transform .3s}
+.pain.open .pain-head .pc{transform:rotate(45deg)}
+.pain-body{display:grid;grid-template-rows:0fr;overflow:hidden;transition:grid-template-rows .45s ease}
+.pain.open .pain-body{grid-template-rows:1fr}
+.pain-inner{overflow:hidden;padding:0 28px;display:grid;grid-template-columns:1.1fr .9fr;gap:36px}
+.pain.open .pain-inner{padding-bottom:30px}
+@media(max-width:820px){.pain-inner{grid-template-columns:1fr}}
+.pain-inner h4{font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:13px;color:var(--navy);margin:0 0 10px}
+.pain-inner .hurt{font-size:17px;font-weight:700;color:var(--ink);margin:0 0 18px;border-left:3px solid var(--red);padding-left:16px}
+.pain-inner p{color:#3a4254;margin:0 0 14px;font-size:15px}
+.fix{background:var(--navy);color:#fff;padding:22px 24px}
+.fix .fx-name{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:19px;color:#fff;margin:0 0 8px}
+.fix p{color:rgba(255,255,255,.85);margin:0 0 14px;font-size:14.5px}
+.fix .fx-does{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#ffd0d1;margin:0}
+.trade-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.trade-links a{background:rgba(200,38,42,.08);border:1px solid rgba(200,38,42,.35);color:var(--red);text-decoration:none;font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:12px;padding:9px 14px;transition:background .15s,color .15s}
+.trade-links a:hover{background:var(--red);color:#fff}
+.pain-note{font-size:12.5px;color:var(--smoke);font-style:italic;margin:14px 0 0}
+/* examples — light */
+.tr-ex{background:#F4F5F7}
+.tr-ex .display{font-size:clamp(32px,4.2vw,58px);color:var(--ink);max-width:900px}
+.tr-ex .display .r{color:var(--red)}
+.tr-ex .sub{max-width:720px;color:#3a4254;margin:16px 0 0;font-size:17px}
+.ex-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+@media(max-width:980px){.ex-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.ex-grid{grid-template-columns:1fr}}
+.ex-card{display:block;text-decoration:none;background:#fff;box-shadow:0 10px 30px rgba(10,15,28,.12);overflow:hidden;transition:transform .18s,box-shadow .18s}
+.ex-card:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(10,15,28,.2)}
+.ex-chrome{background:#e4e7ec;display:flex;align-items:center;gap:6px;padding:9px 12px}
+.ex-chrome i{width:9px;height:9px;border-radius:50%;background:#c3c8d0;display:block}
+.ex-chrome .u{margin-left:10px;font-size:11px;color:#8a909c;font-family:monospace;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.ex-shot{position:relative;aspect-ratio:16/11;overflow:hidden;background:#0A0F1C}
+.ex-shot img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.ex-meta{display:flex;align-items:center;justify-content:space-between;padding:16px 20px}
+.ex-meta .t{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:15px;color:var(--ink)}
+.ex-meta .go{font-weight:800;text-transform:uppercase;font-size:12px;letter-spacing:.05em;color:var(--red)}
+.ex-remind{margin-top:52px;background:var(--navy);color:#fff;padding:34px 38px;display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+.ex-remind .badge{font-family:"Archivo Black",sans-serif;font-size:13px;letter-spacing:.1em;background:var(--red);color:#fff;padding:8px 14px;text-transform:uppercase;white-space:nowrap}
+.ex-remind p{margin:0;font-size:16.5px;color:rgba(255,255,255,.9);flex:1;min-width:280px}
+.ex-remind p b{color:#fff}
+/* full list */
+.demo-cats{margin-top:44px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:32px 40px}
+.demo-cat h4{font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:12px;color:var(--red);margin:0 0 14px;padding-bottom:11px;border-bottom:1px solid rgba(10,15,28,.14)}
+.demo-cat ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px}
+.demo-cat a{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-weight:700;font-size:15px;padding:7px 10px;margin:0 -10px;transition:background .15s,color .15s}
+.demo-cat a:before{content:"";width:6px;height:6px;background:var(--red);flex:none;transition:transform .15s}
+.demo-cat a:hover{background:rgba(200,38,42,.1);color:var(--dark-red)}
+.demo-cat a:hover:before{transform:scale(1.6)}
+/* how it works — dark */
+.tr-how{background:var(--ink);color:#fff}
+.tr-how .display{font-size:clamp(32px,4vw,56px);color:#fff;max-width:760px}
+.tr-how .display .r{color:var(--red)}
+.tr-how .sub{color:rgba(255,255,255,.78);max-width:640px;margin:16px 0 52px;font-size:17px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s}
+@media(max-width:820px){.steps{grid-template-columns:1fr}}
+.step{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-top:4px solid var(--red);padding:30px}
+.step .sn{font-family:"Archivo Black",sans-serif;font-size:44px;color:var(--red);line-height:1}
+.step h3{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:20px;margin:14px 0 10px;color:#fff}
+.step p{color:rgba(255,255,255,.78);font-size:15px;margin:0}
+/* no-risk — light */
+.tr-risk{background:#F4F5F7}
+.tr-risk .display{font-size:clamp(32px,4vw,56px);color:var(--ink)}
+.risk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+@media(max-width:900px){.risk-grid{grid-template-columns:1fr}}
+.risk{background:#fff;box-shadow:0 0 2px 0 rgba(10,15,28,.35);border-top:4px solid var(--red);padding:26px}
+.risk h3{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:19px;margin:0 0 10px;color:var(--ink)}
+.risk p{color:#3a4254;font-size:15px;margin:0}
+/* CTA — navy */
+.tr-cta{background:linear-gradient(160deg,var(--navy) 0%,#124a9e 100%);color:#fff;text-align:center}
+.tr-cta .display{font-size:clamp(36px,4.6vw,64px);color:#fff}
+.tr-cta p{max-width:640px;margin:22px auto 34px;color:rgba(255,255,255,.88);font-size:17px}
+.site-footer{background:var(--ink);color:#fff;padding:48px 0;text-align:center}
+.site-footer p{margin:0;font-size:13px;color:rgba(255,255,255,.6);letter-spacing:.04em}
+.site-footer a{color:inherit;text-decoration:underline}
+</style>
+</head>
+<body>
+<main>
+<section class="tr-hero" data-screen-label="Trades Hero">
+  <div class="container">
+    <span class="eyebrow">Built for your trade</span>
+    <h1 class="display">Your website is either winning you jobs — or <span class="r">handing them to the other guy.</span></h1>
+    <p class="lede">You don't need a lecture about hosting or SEO. You need the phone to ring, the schedule to fill itself, and the guy with worse work than yours to stop taking your customers. Tell us what's slipping past you — we'll show you real examples and build one made for <em>your</em> company.</p>
+    <div class="hero-cta">
+      <a class="btn" href="contact.html">Show me what mine could look like &rarr;</a>
+      <a class="btn ghost" href="#examples">See real examples</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="n">1 tap</div><div class="l">to call you from any phone</div></div>
+      <div class="hero-stat"><div class="n">$0</div><div class="l">upfront — a simple monthly plan</div></div>
+      <div class="hero-stat"><div class="n">You never</div><div class="l">touch a computer. We handle it all.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="tr-stakes" data-screen-label="Money Leak">
+  <div class="container">
+    <span class="eyebrow">Do the math</span>
+    <h2 class="display">Every job your site misses is <span class="r">real money</span> out of your pocket.</h2>
+    <p class="sub">High-paying homeowners research online before they ever call. When your site looks broken, dated, or missing, they quietly dial the company that looks alive. Here's what one lost job is worth:</p>
+    <div class="leak-grid">
+      <div class="leak"><div class="amt">$300–$800</div><div class="job">One service call</div><p>Miss two a week because customers couldn't reach you fast enough, and that's tens of thousands a year gone.</p></div>
+      <div class="leak"><div class="amt">$8k–$15k</div><div class="job">One roof or big project</div><p>Lose a single high-ticket bid a month to a competitor who simply looked more trustworthy online — that's six figures a year.</p></div>
+      <div class="leak"><div class="amt">Hours/week</div><div class="job">Your own time</div><p>Every booking done by phone tag is time you're not earning. That time has a price too.</p></div>
+    </div>
+    <div class="half-battle">
+      <h3>A website is <span class="r">half the battle</span> to a million-dollar company. The other half is you.</h3>
+      <p class="lead">Let's be straight about something. No website ever swung a hammer, cleared a drain, or wired a panel. The reason your company will cross a million dollars a year is <strong>you</strong> — your skill in the trade, your crew, and the way you treat a customer's home like it's your own. That's the half nobody can hand you. But here's what a decade of watching trade companies grow proves over and over: the owners who break a million almost never do it on skill alone. They pair a great trade with a presence that makes them look like the obvious, safe, professional choice before a customer ever picks up the phone.</p>
+      <p>Think about how a homeowner actually hires today. They don't ask a neighbor and call one guy. They pull out a phone, search your trade plus their town, and open five tabs in ten seconds. In those ten seconds they are not judging your welds or your torque specs — they can't see those yet. They're judging whether you look real. A sharp, fast, modern website tells them, in a glance, "this is a serious company that will show up, do it right, and still be here next year." A broken or missing site tells them the opposite, and they close the tab. You lost a job you were more qualified to do than anyone on that list, and you never even knew it existed.</p>
+      <p class="kicker">The website is the storefront. Social and content are the proof.</p>
+      <p>A professional site gets you in the running. <strong>Great social media and real articles are what close the trust gap.</strong> When a customer finds your site, then sees a Facebook feed full of finished jobs, happy crews, and before-and-afters from this month — not three years ago — the risk in their head disappears. When they read a short article where you explain why a furnace short-cycles or how to spot a failing roof, you stop being "some contractor" and become <strong>the expert.</strong> People pay experts more, argue about price less, and refer them without being asked. That content works while you sleep: it ranks on Google, it feeds your ads, and it answers the same questions you're tired of answering on the phone.</p>
+      <p>Put it together and the math changes. A skilled owner with no presence competes on price and word of mouth, and grows slowly. That same owner with a professional website, an active social presence, and a handful of genuinely helpful articles competes on <strong>trust</strong> — and trust lets you charge what you're worth, book higher-ticket work, and turn one great job into ten referrals. That's the flywheel every million-dollar trade company is riding.</p>
+      <p>You already own the hard half — the skill. We build the other half, and we build it around your company specifically, so the first impression finally matches how good you actually are.</p>
+    </div>
+  </div>
+</section>
+
+<section class="tr-pain" data-screen-label="Pain Picker">
+  <div class="container">
+    <span class="eyebrow">Pick your pain</span>
+    <h2 class="display">Which one keeps you up at night?</h2>
+    <p class="sec-sub">Every trade bleeds money in a different spot. Click yours open — and see exactly what your new site does about it.</p>
+    <div class="pain" data-screen-label="Emergency Pain">
+      <button class="pain-head" type="button"><span class="pn">01</span><h3>"Customers call whoever answers first — and it isn't me."</h3><span class="pc">+</span></button>
+      <div class="pain-body"><div class="pain-inner">
+        <div>
+          <h4>The real pain</h4>
+          <p class="hurt">A burst pipe or a dead furnace doesn't shop around. Stressed homeowners call the first company that looks alive and picks up. If that's not you, the job's gone in 60 seconds.</p>
+          <p>Your competitor isn't better than you. His phone number is just one thumb-tap closer.</p>
+          <h4>See it working</h4>
+          <div class="trade-links">
+            <a href="trade-plumbing.html">Plumbing</a><a href="trade-hvac.html">HVAC</a><a href="trade-electricians.html">Electricians</a><a href="trade-towing.html">Towing</a><a href="trade-locksmiths.html">Locksmiths</a><a href="trade-restoration.html">Restoration</a><a href="trade-appliance-repair.html">Appliance Repair</a>
+          </div>
+          <p class="pain-note">These are examples — your site gets built from scratch around your company, your trucks, your service area.</p>
+        </div>
+        <div class="fix">
+          <p class="fx-name">The Fast-Dial Button</p>
+          <p>A massive call button at the top of every phone screen. A panicking customer reaches you in one tap — before they ever scroll to your competitor. After-hours calls get an instant text-back so the job is still yours in the morning.</p>
+          <p class="fx-does">Your new site catches the call you're losing today.</p>
+        </div>
+      </div></div>
+    </div>
+    <div class="pain" data-screen-label="High Ticket Pain">
+      <button class="pain-head" type="button"><span class="pn">02</span><h3>"Homeowners won't trust me with a $10,000+ job."</h3><span class="pc">+</span></button>
+      <div class="pain-body"><div class="pain-inner">
+        <div>
+          <h4>The real pain</h4>
+          <p class="hurt">Nobody hands a stranger five figures. Before a homeowner signs a roofing or concrete contract, they research you like a detective — and a thin, dated site reads as risky, uninsured, or out of business.</p>
+          <p>The company winning those bids isn't doing better work. It just looks like it does.</p>
+          <h4>See it working</h4>
+          <div class="trade-links">
+            <a href="trade-roofing.html">Roofing</a><a href="trade-concrete-paving.html">Concrete &amp; Paving</a><a href="trade-solar.html">Solar</a><a href="trade-excavation.html">Excavation</a><a href="trade-masonry.html">Masonry</a><a href="trade-pools.html">Pools</a><a href="trade-general-contractors.html">General Contractors</a>
+          </div>
+          <p class="pain-note">These are examples — yours gets tailored with your photos, your proof, your name on every badge.</p>
+        </div>
+        <div class="fix">
+          <p class="fx-name">The Trust Vault</p>
+          <p>Big, high-resolution before-and-after galleries, proof of insurance front and center, local badges and real reviews — everything a nervous homeowner needs to feel safe signing the big check with you instead of the other guy.</p>
+          <p class="fx-does">Your new site closes the deal before you shake a hand.</p>
+        </div>
+      </div></div>
+    </div>
+    <div class="pain" data-screen-label="Admin Pain">
+      <button class="pain-head" type="button"><span class="pn">03</span><h3>"I spend my nights scheduling instead of living."</h3><span class="pc">+</span></button>
+      <div class="pain-body"><div class="pain-inner">
+        <div>
+          <h4>The real pain</h4>
+          <p class="hurt">Every booking is five texts, two missed calls and a no-show. You're doing admin at 9pm after ten hours on the job — and every hour of phone tag is an hour you're not earning.</p>
+          <p>High-volume work only pays when the calendar fills itself.</p>
+          <h4>See it working</h4>
+          <div class="trade-links">
+            <a href="trade-auto-detailing.html">Auto Detailing</a><a href="trade-carpet-cleaning.html">Carpet Cleaning</a><a href="trade-pest-control.html">Pest Control</a><a href="trade-pressure-washing.html">Pressure Washing</a><a href="trade-landscaping.html">Landscaping</a><a href="trade-junk-removal.html">Junk Removal</a><a href="trade-painters.html">Painters</a><a href="trade-handyman.html">Handyman</a><a href="trade-auto-repair.html">Auto Repair</a>
+          </div>
+          <p class="pain-note">These are examples — we build yours around how your shop actually books work.</p>
+        </div>
+        <div class="fix">
+          <p class="fx-name">The Robot Scheduler</p>
+          <p>Customers see your live calendar, pick a slot, and put down a deposit — while you're on a job. No phone tag, no chasing no-shows, no 9pm admin shift. You just show up to work that's already booked and paid to hold.</p>
+          <p class="fx-does">Your new site gives you your nights back.</p>
+        </div>
+      </div></div>
+    </div>
+    <div class="pain" data-screen-label="Commercial Pain">
+      <button class="pain-head" type="button"><span class="pn">04</span><h3>"I keep losing commercial bids to bigger-looking companies."</h3><span class="pc">+</span></button>
+      <div class="pain-body"><div class="pain-inner">
+        <div>
+          <h4>The real pain</h4>
+          <p class="hurt">Property managers and facility directors don't hire a phone number scribbled on a napkin. When your bid is up against a company with a polished quote portal, your price doesn't even get read.</p>
+          <p>Commercial contracts are won before the walkthrough — online.</p>
+          <h4>See it working</h4>
+          <div class="trade-links">
+            <a href="trade-janitorial.html">Janitorial</a><a href="trade-framing-drywall.html">Framing &amp; Drywall</a><a href="trade-tree-service.html">Tree Service</a><a href="trade-fencing.html">Fencing</a><a href="trade-general-contractors.html">General Contractors</a>
+          </div>
+          <p class="pain-note">These are examples — yours gets built to make a three-man crew read like a corporation.</p>
+        </div>
+        <div class="fix">
+          <p class="fx-name">The Bid Winner</p>
+          <p>A professional "Request Commercial Quote" portal that makes you look like a large, capable operation — capability statements, service agreements, references — so your bid lands in the "serious contenders" pile every time.</p>
+          <p class="fx-does">Your new site gets you into the room with the big contracts.</p>
+        </div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section class="tr-ex" id="examples" data-screen-label="Examples Showcase">
+  <div class="container">
+    <span class="eyebrow">See real examples</span>
+    <h2 class="display">Here's what we build. <span class="r">Yours won't look like anyone else's.</span></h2>
+    <p class="sub">Real trade sites, built to make the phone ring. Click any one to walk through it.</p>
+    <div class="ex-grid">
+      <a class="ex-card" href="trade-plumbing.html"><div class="ex-chrome"><i></i><i></i><i></i><span class="u">your-plumbing-co.com</span></div><div class="ex-shot"><img src="assets/mockups/plumbing-pipe-cutter.webp" alt="Plumbing website example" loading="lazy" decoding="async" /></div><div class="ex-meta"><span class="t">Plumbing</span><span class="go">View demo &rarr;</span></div></a>
+      <a class="ex-card" href="trade-roofing.html"><div class="ex-chrome"><i></i><i></i><i></i><span class="u">your-roofing-co.com</span></div><div class="ex-shot"><img src="assets/mockups/roofing-company.webp" alt="Roofing website example" loading="lazy" decoding="async" /></div><div class="ex-meta"><span class="t">Roofing</span><span class="go">View demo &rarr;</span></div></a>
+      <a class="ex-card" href="trade-hvac.html"><div class="ex-chrome"><i></i><i></i><i></i><span class="u">your-hvac-co.com</span></div><div class="ex-shot"><img src="assets/mockups/hvac-repair.webp" alt="HVAC website example" loading="lazy" decoding="async" /></div><div class="ex-meta"><span class="t">HVAC</span><span class="go">View demo &rarr;</span></div></a>
+      <a class="ex-card" href="trade-electricians.html"><div class="ex-chrome"><i></i><i></i><i></i><span class="u">your-electric-co.com</span></div><div class="ex-shot"><img src="assets/mockups/electrician.webp" alt="Electrician website example" loading="lazy" decoding="async" /></div><div class="ex-meta"><span class="t">Electricians</span><span class="go">View demo &rarr;</span></div></a>
+      <a class="ex-card" href="trade-landscaping.html"><div class="ex-chrome"><i></i><i></i><i></i><span class="u">your-lawn-co.com</span></div><div class="ex-shot"><img src="assets/mockups/landscaping-lawn-care.webp" alt="Landscaping website example" loading="lazy" decoding="async" /></div><div class="ex-meta"><span class="t">Landscaping</span><span class="go">View demo &rarr;</span></div></a>
+      <a class="ex-card" href="trade-auto-detailing.html"><div class="ex-chrome"><i></i><i></i><i></i><span class="u">your-detail-co.com</span></div><div class="ex-shot"><img src="assets/mockups/mobil-detailer.webp" alt="Auto detailing website example" loading="lazy" decoding="async" /></div><div class="ex-meta"><span class="t">Auto Detailing</span><span class="go">View demo &rarr;</span></div></a>
+    </div>
+    <div class="ex-remind">
+      <span class="badge">Remember</span>
+      <p>Every one of these is an <b>example</b> — not a template we resell. Your site gets your logo, your trucks, your crew, your photos, your service area and your way of booking. <b>Two plumbers in the same town won't get the same site from us.</b></p>
+    </div>
+    <div class="demo-cats">
+      <div class="demo-cat"><h4>Building &amp; Construction</h4><ul>
+        <li><a href="trade-concrete-paving.html">Concrete &amp; Asphalt Pavers</a></li>
+        <li><a href="trade-framing-drywall.html">Framing &amp; Drywall</a></li>
+        <li><a href="trade-general-contractors.html">General Contractors</a></li>
+        <li><a href="trade-masonry.html">Masonry &amp; Bricklaying</a></li>
+        <li><a href="trade-roofing.html">Roofing Contractors</a></li>
+      </ul></div>
+      <div class="demo-cat"><h4>Mechanical &amp; Essential</h4><ul>
+        <li><a href="trade-auto-detailing.html">Auto Detailing</a></li>
+        <li><a href="trade-auto-repair.html">Auto Repair</a></li>
+        <li><a href="trade-electricians.html">Electricians</a></li>
+        <li><a href="trade-hvac.html">HVAC Technicians</a></li>
+        <li><a href="trade-locksmiths.html">Locksmiths</a></li>
+        <li><a href="trade-plumbing.html">Plumbers</a></li>
+        <li><a href="trade-solar.html">Solar Panel Installers</a></li>
+      </ul></div>
+      <div class="demo-cat"><h4>Finishing &amp; Maintenance</h4><ul>
+        <li><a href="trade-carpet-cleaning.html">Carpet &amp; Upholstery Cleaners</a></li>
+        <li><a href="trade-janitorial.html">Janitorial &amp; Commercial Cleaning</a></li>
+        <li><a href="trade-junk-removal.html">Junk Removal</a></li>
+        <li><a href="trade-painters.html">Painters</a></li>
+        <li><a href="trade-pressure-washing.html">Pressure Washing &amp; Window Cleaning</a></li>
+        <li><a href="trade-restoration.html">Restoration (Water/Fire/Mold)</a></li>
+      </ul></div>
+      <div class="demo-cat"><h4>General Services</h4><ul>
+        <li><a href="trade-handyman.html">Handyman Services</a></li>
+        <li><a href="trade-appliance-repair.html">Appliance Repair</a></li>
+        <li><a href="trade-gutter-cleaning.html">Gutter Cleaning</a></li>
+        <li><a href="trade-towing.html">Towing &amp; Roadside</a></li>
+      </ul></div>
+      <div class="demo-cat"><h4>Outdoor &amp; Landscaping</h4><ul>
+        <li><a href="trade-landscaping.html">Landscaping &amp; Lawn Care</a></li>
+        <li><a href="trade-pest-control.html">Pest Control</a></li>
+        <li><a href="trade-pools.html">Pool Construction &amp; Maintenance</a></li>
+        <li><a href="trade-tree-service.html">Tree Removal &amp; Arborists</a></li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="tr-how" data-screen-label="How It Works">
+  <div class="container">
+    <span class="eyebrow">Dead simple</span>
+    <h2 class="display">You run the jobs. <span class="r">We run the website.</span></h2>
+    <p class="sub">No tech headaches, no big check, no learning curve. Three steps and you're live.</p>
+    <div class="steps">
+      <div class="step"><div class="sn">1</div><h3>Tell us your trade</h3><p>A quick call. You tell us what you do, where you work, and what jobs you want more of. That's the whole "meeting."</p></div>
+      <div class="step"><div class="sn">2</div><h3>We build it for you</h3><p>We design a site around your company — your photos, your service area, the call button and booking your trade needs. You review it, we tweak it.</p></div>
+      <div class="step"><div class="sn">3</div><h3>It goes to work</h3><p>We flip it on. Calls come in, reviews stack up, jobs get booked. Need a change? Text us. You never touch a computer.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="tr-risk" data-screen-label="No Risk">
+  <div class="container">
+    <span class="eyebrow">No tech. No big check. No risk.</span>
+    <h2 class="display">Everything's handled for you.</h2>
+    <div class="risk-grid">
+      <div class="risk"><h3>No $5,000 hit</h3><p>A simple monthly plan instead of a cash-flow-crushing upfront fee. It starts earning before it ever costs you real money.</p></div>
+      <div class="risk"><h3>We handle everything</h3><p>Updates, changes, new photos, new phone numbers — you text us, we handle it. Your job is the job site, not the website.</p></div>
+      <div class="risk"><h3>Reviews on autopilot</h3><p>The moment a job wraps, your customer gets a text with a review link. Five-star reviews stack up while you drive to the next one.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="tr-cta" data-screen-label="Trades CTA">
+  <div class="container">
+    <h2 class="display">Tell us your trade. We'll show you the money leak.</h2>
+    <p>Fifteen minutes on the phone. We'll tell you exactly where jobs are slipping past you — and show you what we'd build to catch them. No pitch deck, no jargon, no obligation.</p>
+    <a class="btn" href="contact.html">Talk to us &rarr;</a>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container"><p>&copy; 2026 Toughjobs &middot; Marketing for the Trades &middot; <a href="tel:3099289080">(309) 928-9080</a></p></div>
+</footer>
+<script>
+document.querySelectorAll('.pain-head').forEach(function(b){
+  b.addEventListener('click',function(){
+    var p=b.closest('.pain');var was=p.classList.contains('open');
+    document.querySelectorAll('.pain.open').forEach(function(x){x.classList.remove('open');});
+    if(!was)p.classList.add('open');
+  });
+});
+</script>
+<script src="inject-header.js?v=20260802b"></script>
+<script src="sticky-cta.js"></script>
+<script src="cookie-consent.js"></script>
+<script src="chat-launcher.js?v=20260729"></script>
+<script src="accessibility.js?v=20260729"></script>
+<script src="image-finder-tab.js"></script>
+</body>
+</html>

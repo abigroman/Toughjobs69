@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SEO for Contractors and Trade Businesses | Toughjobs</title>
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Toughjobs" />
+<meta name="publisher" content="ToughJobs Digital Marketing" />
+<link rel="canonical" href="https://toughjobs.org/seo.html" />
+<meta name="description" content="SEO for contractors built around service pages, technical cleanup, useful content, internal links, and call tracking across Midwest markets." />
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="service-page.css?v=20260804b" />
+<meta name="keywords" content="SEO for contractors, trades SEO, seo for the trades, trades marketing, contractor marketing, SEO for contractors Quad Cities, SEO for contractors Peoria, Midwest trades marketing" />
+<style>
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#0A0F1C}
+  body{font-family:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;color:#0A0F1C;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;overflow-x:clip}
+  /* The brand palette tokens live in #seo-brand-2026 at the end of <head>.
+     They cannot be declared here: shared-header.css also declares :root and
+     loads after this block, so an equal-specificity :root here would lose on
+     source order and silently keep the old #002768 navy. */
+  .logo-text span.tight{color:var(--red)}.logo-text span.light{color:var(--white)}
+  header
+  header.scrolled
+  header a.logo-link{display:flex;align-items:center;gap:1px;text-decoration:none;color:var(--white);animation:logoSlideIn .65s cubic-bezier(.22,.9,.3,1) .35s backwards}
+  header img{height:auto;width:auto;max-height:70px;object-fit:contain;transition:all .3s ease}
+  header.scrolled img{height:auto;width:auto;max-height:45px}
+  header.scrolled
+  nav
+  nav.nav-links a
+  nav.nav-links a.nav-link:hover{color:var(--red);border-bottom-color:var(--red)}
+  .nav-phone:hover{color:var(--red)}
+  header .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;font-family:"Archivo",sans-serif;font-weight:800;letter-spacing:.06em;font-size:13px;text-transform:uppercase;text-decoration:none;background:var(--red);color:var(--white);border:0;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease;white-space:nowrap}
+  header .btn:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
+  .nav-dropdown-toggle{display:inline-flex;align-items:center;gap:6px}
+  header.scrolled
+  .nav-dropdown.open
+  .nav-dropdown-menu > div{display:flex;flex-direction:column;gap:10px}
+  .nav-dropdown-item:hover{color:var(--red)}
+  .nav-quote{background:var(--red);animation:navQuoteIn .65s cubic-bezier(.22,.9,.3,1) .35s backwards}
+  to{opacity:1;transform:translateX(0)}}
+  to{opacity:1;transform:translateX(0)}}
+  @media(max-width:880px){nav}
+  /* Secondary accent = Digital Blue. It reaches the flow nodes, card rules and
+     ROI panel through service-page.css. Text use is confined to light surfaces
+     (see #seo-brand-2026) so nothing blue ever sits on a dark band. */
+  body{--accent2:#1769E0}
+  .seo-longform a{color:#C8262A;text-decoration:underline;text-underline-offset:3px}
+  .seo-longform a:hover{color:#FFFFFF}
+</style>
+<link rel="stylesheet" href="shared-header.css" />
+<style id="white-texture-sweep">
+/* Engineering blueprint texture on all white surfaces */
+.bg-white, .bg-light, .light-section, .on-light, .blurbs-section {
+  background-color:#FFFFFF !important;
+  background-image:url('assets/white-engineering-background.webp') !important;
+  background-size:cover !important;
+  background-position:center !important;
+  background-attachment:fixed !important;
+}
+/* Green halftone dot field (recreated from reference) */
+.ctaband.halftone-green{
+  background:
+    radial-gradient(circle at center, rgba(102,236,142,.85) 42%, transparent 46%) 0 0 / 13px 13px,
+    radial-gradient(circle at center, rgba(102,236,142,.42) 34%, transparent 40%) 6.5px 6.5px / 13px 13px,
+    linear-gradient(120deg, #249b60 0%, #178150 40%, #0e6238 72%, #0a4b2b 100%);
+  background-color:#0e6238;
+}
+.ctaband.halftone-green .container{position:relative;z-index:2;}
+</style>
+<!-- SEO-FAQ-SCHEMA:START -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntityOfPage": "https://toughjobs.org/seo.html",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does contractor SEO take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no honest universal deadline. Timing changes with the site, market, competition, existing reputation, crawl issues, and the amount of useful content already available. Toughjobs establishes a baseline, documents the first work, and reports movement without promising a ranking date that cannot be controlled."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is local SEO different from website SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They overlap, but they are not identical. Website SEO covers technical health, service pages, internal links, and organic results. Local SEO also includes Google Business Profile accuracy, categories, reviews, citations, proximity, and local relevance. A trade business usually needs both parts to support the same service strategy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I run ads while SEO is being built?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ads can capture demand while organic work develops, but only when the landing page, tracking, service area, and lead handling are ready. The decision should follow capacity and budget. Toughjobs keeps the channels distinct in reporting so paid calls are not presented as organic SEO results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does SEO reporting include?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Useful reporting connects completed work with indexation, visibility, landing pages, calls, and forms. When sales data is available, booked work can be reviewed too. Rankings remain a diagnostic signal, not the only score. The report should also identify blocked work, next actions, and access needed from the business."
+      }
+    }
+  ]
+}
+</script>
+<!-- SEO-FAQ-SCHEMA:END -->
+<style id="extracted-inline-styles">
+.seo-hero{isolation:isolate}
+.seo-hero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:url('uploads/webp/wilderness-1.webp') center bottom/cover no-repeat;opacity:.18}
+.seo-hero .tex-grid{z-index:1;opacity:.42}
+.seo-hero .container{position:relative;z-index:2}
+.seox-1{font-size:clamp(20px,2.7vw,38px)}
+.seox-2{--steps:4}
+.seox-3{font-family:'Archivo Black',sans-serif;text-transform:uppercase;margin:0 0 10px}
+.seox-4{font-style:normal}
+.seox-6{font-size:clamp(26px,3vw,38px);line-height:1.05;color:#FFFFFF;margin:44px 0 20px}
+.seox-7{font-size:16.5px;line-height:1.72;color:rgba(255,255,255,.82)}
+.seox-8{margin:0 0 18px}
+.seox-9{margin:0}
+.seox-10{font-size:clamp(22px,2.4vw,30px);line-height:1.05;color:#FFFFFF;margin:44px 0 14px}
+.seox-11{font-size:16px;line-height:1.65;color:rgba(255,255,255,.82);margin:0 0 20px;padding-left:22px}
+.seox-12{margin:0 0 10px}
+.seox-13{font-size:16px;line-height:1.7;color:rgba(255,255,255,.82);margin:22px 0 0}
+.seox-19{display: contents}
+.seox-20{display:none}
+.seox-21{background:#F1F4F7;background-image:url('assets/white-engineering-background.webp');background-size:cover;background-position:center;padding:56px 32px;position:relative;overflow:hidden;box-shadow:inset 0 2px 2px rgba(0,0,0,.45), inset 0 -2px 2px rgba(0,0,0,.45);}
+.seox-22{max-width:1240px;margin:0 auto;position:relative;z-index:1;}
+.seox-23{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center;}
+.seox-24{margin-bottom:24px;}
+.seox-25{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:#C8262A;}
+.seox-26{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(32px,3.6vw,50px);line-height:1.02;color:#0A0F1C;margin:12px 0 0;}
+.seox-27{color:#C8262A;}
+.seox-28{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch;}
+.seox-29{background:#081B33;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(8,27,51,.55);border-top:4px solid #C8262A;}
+.seox-30{font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700;}
+.seox-31{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05;}
+.seox-32{font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 28px;}
+.seox-33{display:inline-block;background:#C8262A;color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none;}
+.seox-34{background:#0A0F1C;padding:36px 30px;box-shadow:0 20px 50px -30px rgba(8,27,51,.55);border-top:4px solid #C8262A;}
+.seox-35{font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.8);margin:0 0 28px;}
+.seox-36{position:relative;height:100%;min-height:420px;}
+.seox-37{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:top center;}
+</style>
+<style id="proof-band-style">
+/* ── OPERATIONAL PROOF band ──────────────────────────────────────────────
+   Its own standalone section on Dark Surface (#17212D) — the palette's third
+   surface, neither dark navy nor white. Sits between the light COMPARE section
+   above and the red CTA below, so the page keeps alternating light/dark. Text
+   is white or red only, per the dark-background contrast rule.
+   All selectors out-specify service-page.css by depth, with no overrides. */
+.sp .bg-graphite{
+  background-color:var(--surface);
+  background-image:
+    radial-gradient(80% 66% at 8% 0%,rgba(69,184,244,.12) 0%,rgba(69,184,244,0) 58%),
+    radial-gradient(70% 60% at 100% 100%,rgba(200,38,42,.14) 0%,rgba(200,38,42,0) 60%),
+    linear-gradient(168deg,#20303F 0%,#17212D 55%,#121A24 100%);
+  color:var(--white);
+}
+.sp .proof-band{border-top:3px solid var(--red)}
+.sp .proof-band .head .eyebrow{color:var(--red)}
+.sp .proof-band .head h2{color:var(--white)}
+
+/* Proof tiles — three equal columns, raised off the band, red rule on the left */
+.sp .proof-band .tess{grid-template-columns:repeat(3,1fr);gap:22px}
+.sp .proof-band .tess .t{
+  background:linear-gradient(168deg,#1E2A38 0%,#141D28 100%);
+  border:1px solid rgba(255,255,255,.09);
+  border-left:5px solid var(--red);
+  padding:32px 28px;
+  box-shadow:0 18px 40px -24px rgba(0,0,0,.85);
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
+}
+/* service-page.css alternates this to the secondary accent; a blue rule on a
+   dark surface reads as a mistake next to the red one — hold every tile at red. */
+.sp .proof-band .tess .t:nth-child(even){border-left-color:var(--red)}
+.sp .proof-band .tess .t:hover{
+  transform:translateY(-4px);
+  border-color:rgba(69,184,244,.38);
+  border-left-color:var(--red);
+  box-shadow:0 26px 52px -26px rgba(0,0,0,.95);
+}
+.sp .proof-band .t-idx{
+  display:block;font-family:ui-monospace,Menlo,Consolas,monospace;
+  font-size:12px;letter-spacing:.2em;font-weight:700;color:var(--red);margin:0 0 14px;
+}
+.sp .proof-band .tess .t h3{font-size:19px;letter-spacing:.02em;margin:0 0 12px}
+.sp .proof-band .tess .t .q{font-size:16px;line-height:1.62;font-weight:400;color:rgba(255,255,255,.84);margin:0}
+@media(max-width:960px){.sp .proof-band .tess{grid-template-columns:1fr}}
+
+/* ── LONG-FORM ARTICLE band — light ──────────────────────────────────────
+   Its own section on Light Background. Two jobs: it puts the page's longest
+   stretch of reading copy on a light surface, and it separates the dark proof
+   tiles above from the navy FAQ below so no two dark bands ever touch. */
+.sp .bg-paper{
+  background-color:var(--light);
+  background-image:
+    radial-gradient(120% 90% at 100% 0%,rgba(23,105,224,.10) 0%,rgba(23,105,224,0) 58%),
+    radial-gradient(90% 80% at 0% 100%,rgba(200,38,42,.07) 0%,rgba(200,38,42,0) 62%),
+    linear-gradient(180deg,#F8FAFC 0%,#E8EDF3 100%);
+  color:var(--ink);
+}
+.sp .lf-band .proof-longform{max-width:900px;margin:0 auto}
+.sp .lf-band .proof-longform > h2:first-child{margin-top:0}
+/* Typography flips from the dark band's white to ink on light. */
+.sp .lf-band .seox-6,
+.sp .lf-band .seox-10{color:var(--ink)}
+.sp .lf-band .seox-7,
+.sp .lf-band .seox-11,
+.sp .lf-band .seox-13{color:#2A3340}
+.sp .lf-band .seox-7 strong{color:var(--ink)}
+.sp .lf-band .seox-11 li::marker{color:var(--red)}
+.sp .lf-band .seo-longform a{color:var(--blue)}
+.sp .lf-band .seo-longform a:hover{color:var(--red)}
+/* Red rule under each article heading — the light band's brand marker. */
+.sp .lf-band .seox-6::after,
+.sp .lf-band .seox-10::after{
+  content:"";display:block;width:64px;height:4px;background:var(--red);margin:18px 0 0;
+}
+
+/* Red hairline where the light article band meets the navy FAQ. */
+.td-faq-section.seo-faq-band{border-top:3px solid #C8262A}
+</style>
+<link rel="stylesheet" href="css/service-longform.css">
+<link rel="stylesheet" href="css/trade-sections.css">
+<!-- faq-band.css must load AFTER trade-sections.css: both define
+     `.td-faq-section .td-faq-item` at equal specificity, so source order
+     decides. Loaded earlier, trade-sections' `padding:22px 0` wins and the
+     numbered counter overlaps the question heading. -->
+<link rel="stylesheet" href="css/faq-band.css">
+<style id="seo-brand-2026">
+/* ══ SEO page — 2026 brand palette ═══════════════════════════════════════
+   Page-scoped implementation of the Toughjobs colour guide. Loaded after every
+   shared stylesheet so equal-specificity rules resolve here on source order —
+   no `!important` anywhere, and nothing outside seo.html is affected.
+
+   Surface ladder, top of page to bottom, so no two neighbours share a value:
+     hero        Dark Navy   #081B33
+     workflow    White       (blueprint texture)
+     earn        Dark Navy   #081B33
+     compare     White
+     proof       Dark Surf.  #17212D
+     FAQ         Dark Navy   #081B33   ← red hairline marks the surface change
+     CTA         Red         #C8262A → #981B1F
+     longform    White / Dark Navy / White
+     FAQ         Dark Navy
+     give back   Light       #F1F4F7
+     licensing   Ink         #0A0F1C
+
+   Colour roles: red carries every call to action and accent word on dark;
+   Digital Blue is confined to light surfaces (step nodes, links, data marks)
+   where it clears contrast comfortably; Sky #45B8F4 appears only as a hairline
+   or glow, never as text. ═══════════════════════════════════════════════ */
+
+/* ── Tokens ────────────────────────────────────────────────────────────── */
+/* Declared here rather than in the first <style> because shared-header.css
+   also declares :root and loads later; redefining the shared tokens re-skins
+   every rule in service-page.css that reads them, for this page only. */
+:root{
+  --ink:#0A0F1C;
+  --navy:#081B33;
+  --navy-2:#050F1F;
+  --surface:#17212D;
+  --surface-2:#1E2A38;
+  --red:#C8262A;
+  --red-dark:#981B1F;
+  --accent:#C8262A;
+  --blue:#1769E0;
+  --sky:#45B8F4;
+  --light:#F1F4F7;
+  --smoke:#5B6471;
+  --white:#FFFFFF;
+  --container:1240px;
+}
+
+/* ── Dark surfaces ─────────────────────────────────────────────────────── */
+/* #081B33 flat is nearly black and reads as dead weight over a full band. Every
+   dark surface here is built as a *lit* navy instead: a bluer base, a cool
+   Sky-tinted key light in one corner and a warm red bounce in the opposite one.
+   Same palette, but the bands have depth and direction instead of sitting flat. */
+.sp .bg-dark{
+  background-color:#0C2444;
+  background-image:
+    radial-gradient(78% 68% at 86% 16%,rgba(69,184,244,.18) 0%,rgba(69,184,244,0) 62%),
+    linear-gradient(146deg,rgba(13,44,82,.84) 0%,rgba(10,32,60,.50) 42%,rgba(178,32,37,.52) 100%),
+    url('assets/blueprint-bg-darker.webp');
+}
+.sp .bg-navy{
+  background-color:#0B2242;
+  background-image:
+    radial-gradient(72% 62% at 92% 90%,rgba(200,38,42,.26) 0%,rgba(200,38,42,0) 62%),
+    radial-gradient(68% 58% at 4% 4%,rgba(69,184,244,.16) 0%,rgba(69,184,244,0) 60%),
+    linear-gradient(160deg,rgba(15,46,86,.82) 0%,rgba(8,27,51,.92) 100%),
+    url('assets/blueprint-background.webp');
+}
+.sp .td-analysis.td-lf-dark{
+  background-color:#0B2242;
+  background-image:
+    radial-gradient(70% 60% at 96% 4%,rgba(69,184,244,.15) 0%,rgba(69,184,244,0) 60%),
+    radial-gradient(70% 60% at 0% 100%,rgba(200,38,42,.20) 0%,rgba(200,38,42,0) 60%),
+    linear-gradient(158deg,rgba(15,46,86,.80) 0%,rgba(8,27,51,.92) 100%),
+    url('assets/blueprint-bg-darker.webp');
+  background-size:cover;
+  background-position:center;
+}
+.sp .td-lf-dark .td-cost-table th{background:var(--ink)}
+.sp .td-lf-dark .td-note-list li{border-left-color:var(--sky)}
+
+/* Accent words sit on dark navy in the hero and headings. The secondary accent
+   token is now Digital Blue, which is a light-surface colour — force red here
+   so no accent phrase ever loses itself against the background. */
+.sp .bg-dark .accent2c,
+.sp .bg-navy .accent2c,
+.sp .bg-graphite .accent2c{color:var(--red)}
+.sp .bg-dark .kpi .num{color:var(--white)}
+.sp .bg-dark .kpi .lbl{color:rgba(255,255,255,.72);opacity:1}
+
+/* Earn cards read as Dark Surface panels lifted off the navy band. */
+.sp .bg-navy .earn .card{
+  background:linear-gradient(168deg,rgba(30,42,56,.92) 0%,rgba(16,24,35,.92) 100%);
+  border:1px solid rgba(255,255,255,.10);
+  transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;
+}
+.sp .bg-navy .earn .card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(69,184,244,.38);
+  box-shadow:0 24px 48px -28px rgba(0,0,0,.9);
+}
+/* Alternating red / Sky rules and index numbers. Sky measures 8:1 on this navy —
+   far clear of the accent-disappearing problem the navy-on-navy rule guards
+   against — and the cool/warm alternation is what keeps the band from reading
+   as one flat slab of red-on-black. */
+.sp .bg-navy .earn .card:nth-child(even):before{background:var(--sky)}
+.sp .bg-navy .earn .card:nth-child(even) .ic{color:var(--sky)}
+
+/* ── Light surfaces — where Digital Blue lives ─────────────────────────── */
+/* Alternating red/blue step nodes, ringed so the diagram line passes behind
+   them cleanly. This is the guide's feature-card icon-badge pattern. */
+.sp .bg-light .flow .node{box-shadow:0 0 0 6px #FFFFFF,0 10px 22px rgba(8,27,51,.22)}
+.sp .bg-light .flow .step:nth-child(even) .node{background:var(--blue)}
+.sp .bg-light .flow .step h4{color:var(--ink)}
+
+/* Comparison table: navy header rail, red on the Toughjobs column so the
+   winning column is legible as the highlight rather than another dark block. */
+.sp .cmp{box-shadow:0 24px 60px rgba(8,27,51,.14)}
+.sp .cmp thead th{background:var(--navy)}
+.sp .cmp thead th.tj{background:var(--red)}
+.sp .cmp td.tj{background:rgba(200,38,42,.07)}
+.sp .cmp td.tj .yes{color:var(--red-dark)}
+.sp .cmp .x{color:#98A2B3}
+.sp .cmp-note{color:#5B6471}
+
+/* Body links on the light long-form bands were near-invisible grey. Digital
+   Blue is the guide's link colour and clears 5.3:1 on white. */
+.sp .td-analysis:not(.td-faq-section):not(.td-lf-dark) a{
+  color:var(--blue);
+  text-decoration:underline;
+  text-underline-offset:3px;
+  text-decoration-thickness:1px;
+}
+.sp .td-analysis:not(.td-faq-section):not(.td-lf-dark) a:hover{color:var(--red)}
+.sp .td-analysis:not(.td-faq-section):not(.td-lf-dark) .td-answer{
+  border-left:4px solid var(--red);
+  padding-left:22px;
+}
+.sp .td-cost-table th{background:var(--navy)}
+
+/* ── FAQ bands ─────────────────────────────────────────────────────────── */
+.sp .td-faq-section{
+  background-color:#0B2242;
+  background-image:
+    radial-gradient(64% 56% at 96% 0%,rgba(69,184,244,.15) 0%,rgba(69,184,244,0) 60%),
+    radial-gradient(64% 56% at 0% 100%,rgba(200,38,42,.16) 0%,rgba(200,38,42,0) 60%),
+    linear-gradient(162deg,rgba(15,46,86,.78) 0%,rgba(8,27,51,.94) 100%);
+}
+.sp .td-faq-section .td-faq-item{transition:background-color .25s,transform .25s,border-color .25s}
+.sp .td-faq-section .td-faq-item:hover{background:rgba(69,184,244,.12);border-color:rgba(69,184,244,.34);border-left-color:var(--red)}
+
+/* ── Red CTA band ──────────────────────────────────────────────────────── */
+/* The band has to stay red. It sits between the navy FAQ above and a white
+   article below, so red is the only tone that keeps both boundaries reading
+   as a change of surface — a navy or light CTA would put two same-tone
+   sections back-to-back.
+
+   What made it shout was the treatment, not the hue: a flat, fully saturated
+   plate 511px tall carrying a 68px all-caps headline centred in the middle of
+   it. The colour stays; the volume comes down four ways —
+     · the plate is lit and directional instead of one flat fill,
+     · the headline drops from 68px to 32px and moves left,
+     · copy and button share one row, halving the band's height so the eye
+       takes in far less red,
+     · the button is an outline that only fills on hover, so the band has one
+       quiet focal point instead of a white slab competing with the headline.
+   #A90100 is retired; the ramp runs primary red into the guide's Dark Red. */
+.sp .bg-red,section.bg-red{
+  background-color:#B72226;
+  background-image:
+    radial-gradient(66% 70% at 88% 8%,rgba(255,255,255,.10) 0%,rgba(255,255,255,0) 60%),
+    radial-gradient(70% 70% at 0% 100%,rgba(8,27,51,.30) 0%,rgba(8,27,51,0) 62%),
+    linear-gradient(150deg,#C8262A 0%,#A72125 62%,#8E191D 100%);
+}
+
+/* Quiet bar layout ----------------------------------------------------- */
+/* Every selector carries .seo-cta-quiet, which out-specifies the centred
+   billboard rules in service-page.css without touching them. */
+.sp .ctaband.seo-cta-quiet{
+  padding:clamp(48px,5vw,68px) 0;
+  text-align:left;
+  border-top:1px solid rgba(255,255,255,.18);
+}
+.sp .ctaband.seo-cta-quiet .cta-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:clamp(28px,4vw,56px);
+}
+.sp .ctaband.seo-cta-quiet .cta-copy{max-width:660px}
+/* Short rule instead of an eyebrow — marks the start of the section now that
+   the headline is no longer large enough to do that on its own. */
+.sp .ctaband.seo-cta-quiet .cta-copy::before{
+  content:"";
+  display:block;
+  width:48px;
+  height:3px;
+  background:rgba(255,255,255,.85);
+  margin:0 0 20px;
+}
+.sp .ctaband.seo-cta-quiet h2{
+  font-size:clamp(22px,2.4vw,32px);
+  line-height:1.12;
+  letter-spacing:.005em;
+  margin:0 0 12px;
+}
+.sp .ctaband.seo-cta-quiet p{
+  font-size:16px;
+  line-height:1.62;
+  max-width:none;
+  margin:0;
+  color:rgba(255,255,255,.86);
+}
+.sp .ctaband.seo-cta-quiet .cta-act{flex:0 0 auto}
+/* Outline button: white on this red measures 5.9:1 as a border and reverses
+   to Dark Red on white at 7.4:1 on hover. */
+.sp .bg-red.ctaband.seo-cta-quiet .btn{
+  background:transparent;
+  color:var(--white);
+  border:2px solid rgba(255,255,255,.72);
+  padding:16px 28px;
+  white-space:nowrap;
+}
+.sp .bg-red.ctaband.seo-cta-quiet .btn:hover{
+  background:var(--white);
+  color:var(--red-dark);
+  border-color:var(--white);
+  box-shadow:none;
+  transform:translateY(-2px);
+}
+@media(max-width:860px){
+  .sp .ctaband.seo-cta-quiet .cta-row{flex-direction:column;align-items:flex-start}
+}
+
+/* ── Buttons ───────────────────────────────────────────────────────────── */
+.sp .btn{transition:transform .15s,box-shadow .15s,background-color .15s}
+.sp .btn:hover{background:var(--red-dark)}
+.sp .bg-red.ctaband .btn:hover{background:#FFFFFF;color:var(--red-dark)}
+.seox-33{transition:background-color .15s ease}
+.seox-33:hover{background:#981B1F}
+
+/* ── "Every cylinder" service grid (injected by all-services-section.js) ──
+   That script appends its own <style> to <head> at runtime, so it always lands
+   after this block. Prefixing with body.sp raises these to 1-2-0 against its
+   1-1-0 selectors, which wins on specificity regardless of order — and keeps
+   the recolour on this page only, since the script serves ~100 others. */
+body.sp #all-services-section .as-card{--as-tone:#081B33}
+body.sp #all-services-section .as-card.as-tone-ink{--as-tone:var(--ink)}
+body.sp #all-services-section .as-card.as-tone-blue .as-k{color:var(--blue)}
+body.sp #all-services-section .as-card:hover .as-go{background:var(--red-dark)}
+body.sp #all-services-section .as-card.as-current{background:var(--navy)}
+
+/* ── Give-back band on Light Background ────────────────────────────────── */
+/* Light #F1F4F7 is a shade off white, so the two dark cards need their own
+   separation from the plate; the shadow does that without a border. */
+.seox-29,.seox-34{box-shadow:0 22px 46px -28px rgba(8,27,51,.6)}
+</style>
+<style id="pc-title-logo-style">/* Section-title fist logo.
+   Spacing: the row carries no gap, so the only horizontal space around the
+   logo is the slot's own padding — identical left and right by construction,
+   rather than "whatever is left over", which is what centring the slot in the
+   free space used to produce. margin-left:auto pins it to the right edge of
+   the container so the right-hand space stays constant no matter how long the
+   headline is. */
+.pc-headrow{display:flex;align-items:center;gap:0;margin-bottom:34px}
+.pc-headrow>.head{flex:0 1 auto;min-width:0;margin-bottom:0}
+/* Both padding values carry a +96px (1in) offset over the badge-clearance
+   figure, so the mark sits an inch further left at every width while the left
+   and right space around it stay identical. */
+.pc-logo-slot{flex:0 0 auto;margin-left:auto;padding:0 max(152px,854px - 50vw);display:flex;align-items:flex-start;align-self:flex-start}
+.pc-title-logo{width:clamp(104px,9vw,144px);height:auto;transform:translateY(-14%);filter:drop-shadow(0 14px 26px rgba(0,0,0,.35))}
+/* Below the container's max width the page runs edge to edge and the badge
+   owns the corner outright, so the mark steps aside rather than collide. */
+@media(max-width:1240px){.pc-logo-slot{display:none}}</style>
+</head>
+<body class="sp">
+<main>
+  <!-- HERO -->
+  <section class="bg-dark hero seo-hero">
+    <div class="tex tex-grid"></div>
+    <div class="container">
+      <div class="hero-text">
+      <span class="eyebrow accent reveal">SEO that ranks</span>
+      <h1 class="display reveal d1">SEO for contractors<br><span class="accent2c">built to earn calls.</span></h1>
+      <p class="lede reveal d2">SEO for contractors connects the services people search for with pages that clearly explain the work, location, proof, and next step. Toughjobs audits the site, fixes crawl and page issues, builds useful service content, and tracks qualified calls and forms instead of treating rankings as the final result.</p>
+      <div class="reveal d3"><a class="btn" href="contact.html">Book a free strategy call &rarr;</a></div>
+      <div class="kpis"><div class="kpi reveal"><div class="num seox-1">INTENT</div><div class="lbl">Pages matched to real services and customer questions</div></div><div class="kpi reveal"><div class="num seox-1">PROOF</div><div class="lbl">Photos, reviews, credentials, and process placed with context</div></div><div class="kpi reveal"><div class="num seox-1">TRACK</div><div class="lbl">Calls and forms measured from the landing page forward</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+      </div>
+      <div class="hero-img-slot"><img src="assets/seo-hero.webp" alt="SEO pest control specialist"></div>
+    </div>
+  </section>
+
+  <!-- WORKFLOW -->
+  <section class="bg-light">
+    <div class="tex tex-dots-d"></div>
+    <div class="container">
+      <div class="pc-headrow"><div class="head reveal">
+        <span class="eyebrow">How it works</span>
+        <h2 class="display">We rank your site where real buyers search — four moves.</h2>
+        <p class="lede">Technical. Content-driven. Measured every 30 days.</p>
+      </div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
+      <div class="flow seox-2"><div class="step reveal d1"><div class="node">1</div><h4>Audit</h4><p>We find the searches your customers use and where you rank now.</p></div><div class="step reveal d2"><div class="node">2</div><h4>Optimize</h4><p>On-page structure, site speed, meta, and internal links tuned for Google.</p></div><div class="step reveal d3"><div class="node">3</div><h4>Content</h4><p>Pages that answer real buyer questions and capture high-intent traffic.</p></div><div class="step reveal d4"><div class="node">4</div><h4>Report</h4><p>Monthly ranking + call tracking. We move the needle or tell you why.</p></div></div>
+    </div>
+  </section>
+
+  <!-- EARN -->
+  <section class="bg-navy">
+    <div class="tex tex-dots"></div>
+    <div class="container">
+      <div class="pc-headrow"><div class="head reveal">
+        <span class="eyebrow">What you'll earn</span>
+        <h2 class="display">Calls from people ready to book — today.</h2>
+      </div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
+      <div class="earn"><div class="card reveal d1"><div class="ic">01</div><h4>Page-one organic rankings</h4><p>Buyers rarely scroll past the first page. We build the content and authority to put you there.</p></div><div class="card reveal d2"><div class="ic">02</div><h4>Free traffic that compounds</h4><p>Unlike ads, rankings keep paying after you stop. The asset is yours.</p></div><div class="card reveal d3"><div class="ic">03</div><h4>Lower blended cost per lead</h4><p>Organic calls cost a fraction of paid once you rank — your ad budget drops.</p></div></div>
+    </div>
+  </section>
+
+  <!-- COMPARE -->
+  <section class="bg-light">
+    <div class="tex tex-dots-d"></div>
+    <div class="container">
+      <div class="pc-headrow"><div class="head reveal">
+        <span class="eyebrow">The cost comparison</span>
+        <h2 class="display">DIY vs. agency vs. Toughjobs.</h2>
+        <p class="lede">What you actually get for the money.</p>
+      </div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
+      <div class="cmp-wrap reveal d1">
+        <table class="cmp">
+          <thead><tr><th></th><th>DIY</th><th>Typical Agency</th><th class="tj"><span class="tjhead">Toughjobs</span></th></tr></thead>
+          <tbody><tr><td class="rowlbl">Monthly cost</td><td class="x">Your time</td><td>$1,500–4,000/mo</td><td class="tj">$3,200/mo</td></tr><tr><td class="rowlbl">GBP optimization</td><td class="x">Guesswork</td><td>Usually</td><td class="tj"><span class="yes">Core focus</span></td></tr><tr><td class="rowlbl">Transparent reporting</td><td class="x">None</td><td>Vanity metrics</td><td class="tj"><span class="yes">Rankings + calls</span></td></tr><tr><td class="rowlbl">Local specialty</td><td class="x">No</td><td>Generic</td><td class="tj"><span class="yes">Trades-only</span></td></tr><tr><td class="rowlbl">Long-term asset</td><td class="x">Fragile</td><td>Yes</td><td class="tj"><span class="yes">Yes, you own it</span></td></tr></tbody>
+        </table>
+      </div>
+      <p class="cmp-note">Big agencies bill you for dashboards. We bill you for rankings and tracked phone calls.</p>
+    </div>
+  </section>
+
+  <!-- OPERATIONAL PROOF — standalone graphite band (see #proof-band-style) -->
+  <section class="bg-graphite proof-band">
+    <div class="tex tex-dots"></div>
+    <div class="container">
+      <div class="pc-headrow"><div class="head reveal">
+        <span class="eyebrow">Evidence, not anecdotes</span>
+        <h2 class="display">What belongs in a useful performance record.</h2>
+      </div><div class="pc-logo-slot reveal"><img src="Images/Logos/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" width="350" height="337" /></div></div>
+      <div class="tess">
+        <div class="t reveal">
+          <span class="t-idx">01</span>
+          <h3 class="seox-3">Baseline</h3>
+          <p class="q seox-4">Record the starting assets, access, tracking, market, budget, and operating constraints before work begins.</p>
+        </div>
+        <div class="t reveal d1">
+          <span class="t-idx">02</span>
+          <h3 class="seox-3">Work log</h3>
+          <p class="q seox-4">Document what changed, when it changed, who approved it, and what still depends on the client or another vendor.</p>
+        </div>
+        <div class="t reveal d2">
+          <span class="t-idx">03</span>
+          <h3 class="seox-3">Verified outcome</h3>
+          <p class="q seox-4">Connect calls and forms to lead quality or booked work when the business can supply that information. Never substitute a stock quote for proof.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LONG-FORM ARTICLE — light band. Splits what used to be one dark section
+       into dark tiles + light article, so the dark proof band and the navy FAQ
+       below it no longer touch, and the page's biggest block of reading copy
+       sits on a light surface. -->
+  <section class="bg-paper lf-band">
+    <div class="tex tex-dots-d"></div>
+    <div class="container">
+      <div class="proof-longform seo-longform">
+        <h2 class="display seox-6 reveal">Contractor SEO starts with search intent</h2>
+        <div class="seox-7 reveal d1">
+          <p class="seox-8"><strong>SEO for contractors</strong> is broader than a list of keywords. The site has to give search engines a clear picture of the company, the services it truly offers, the markets it serves, and the evidence behind those claims. Visitors then need a page that helps them decide whether to call.</p>
+          <p class="seox-9">The first pass covers crawlability, titles, headings, internal links, service-page gaps, and conversion paths. We separate broad organic work from <a href="local-seo.html">Google Business Profile and map visibility</a>, then connect both to content and tracking. Paid search can support urgent demand, but it does not replace the website foundation.</p>
+        </div>
+        <h2 class="display seox-10 reveal">What does an SEO engagement fix first?</h2>
+        <ul class="seox-11 reveal d1">
+          <li class="seox-12">A baseline of current pages, rankings, calls, forms, and indexation where access is available.</li>
+          <li class="seox-12">A keyword and intent map with one clear job for each indexable page.</li>
+          <li class="seox-12">Technical, on-page, content, and internal-link work ordered by impact.</li>
+          <li class="seox-12">Reporting that separates visibility from inquiries and booked work.</li>
+        </ul>
+        <p class="seox-13 reveal d2">See how the plan changes for specific verticals in the <a href="trades.html">trades marketing hub</a>, or <a href="contact.html">ask for an SEO review</a> of your current site.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ — canonical site FAQ band (navy, css/faq-band.css) -->
+  <section class="td-analysis td-faq-section tj-faq-band seo-faq-band" data-screen-label="FAQ">
+    <div class="td-analysis-inner">
+      <span class="tj-eyebrow-red">Straight answers</span>
+      <h2 class="tj-band-h2">SEO for contractors built to earn calls. FAQ</h2>
+      <div class="td-faq-list">
+        <div class="td-faq-item">
+          <h3>How long does contractor SEO take?</h3>
+          <p>There is no honest universal deadline. Timing changes with the site, market, competition, existing reputation, crawl issues, and the amount of useful content already available. Toughjobs establishes a baseline, documents the first work, and reports movement without promising a ranking date that cannot be controlled.</p>
+        </div>
+        <div class="td-faq-item">
+          <h3>Is local SEO different from website SEO?</h3>
+          <p>They overlap, but they are not identical. Website SEO covers technical health, service pages, internal links, and organic results. Local SEO also includes Google Business Profile accuracy, categories, reviews, citations, proximity, and local relevance. A trade business usually needs both parts to support the same service strategy.</p>
+        </div>
+        <div class="td-faq-item">
+          <h3>Should I run ads while SEO is being built?</h3>
+          <p>Ads can capture demand while organic work develops, but only when the landing page, tracking, service area, and lead handling are ready. The decision should follow capacity and budget. Toughjobs keeps the channels distinct in reporting so paid calls are not presented as organic SEO results.</p>
+        </div>
+        <div class="td-faq-item">
+          <h3>What does SEO reporting include?</h3>
+          <p>Useful reporting connects completed work with indexation, visibility, landing pages, calls, and forms. When sales data is available, booked work can be reviewed too. Rankings remain a diagnostic signal, not the only score. The report should also identify blocked work, next actions, and access needed from the business.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA — bar layout rather than a centred billboard. Copy sits left, the
+       action sits right, so the red band is roughly half its old height. See
+       the CTA notes in #seo-brand-2026 for why this section stays red. -->
+  <section class="bg-red ctaband seo-cta-quiet">
+    <div class="container">
+      <div class="cta-row">
+        <div class="cta-copy reveal">
+          <h2 class="display">Pro sites build trust and sales.</h2>
+          <p>Book a free strategy call and we'll show you exactly where you rank today and the fastest path to the top of organic search.</p>
+        </div>
+        <div class="cta-act reveal d1"><a class="btn" href="contact.html">Book a free strategy call &rarr;</a></div>
+      </div>
+    </div>
+  </section>
+<!-- SEO-TRADE-CONTENT:START -->
+<style>
+  .td-analysis:not(.td-faq-section):not(.td-lf-dark){position:relative;overflow:hidden;background:#FFFFFF;background-image:url('assets/white-engineering-background.webp');padding:80px 22px;color:#0A0F1C}
+  .td-analysis-inner{max-width:920px;margin:0 auto;position:relative;z-index:1}
+  .td-analysis h1,.td-analysis:not(.td-faq-section):not(.td-lf-dark) h2{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(22px,3vw,36px);line-height:1.08;margin:0 0 18px;color:#0A0F1C}
+  .td-analysis h1:not(:first-child),.td-analysis:not(.td-faq-section):not(.td-lf-dark) h2:not(:first-child){margin-top:52px}
+  .td-analysis:not(.td-faq-section):not(.td-lf-dark) h3{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:18px;line-height:1.15;margin:28px 0 8px;color:#0A0F1C}
+  .td-analysis:not(.td-faq-section):not(.td-lf-dark) p,.td-analysis:not(.td-faq-section):not(.td-lf-dark) li{font-size:16px;line-height:1.68;color:#0A0F1C;margin:0 0 16px}
+  .td-answer{font-size:18px!important;line-height:1.62!important;margin:0 0 26px!important;font-weight:500}
+  .td-note-list{display:grid;grid-template-columns:1fr 1fr;gap:10px 28px;margin:0 0 20px;padding-left:22px}
+  .td-note-list li{padding-left:4px;font-size:15px;line-height:1.5}
+  .td-soft-cta{margin:28px 0;padding:20px 0;border-top:1px solid rgba(10,15,28,.15);border-bottom:1px solid rgba(10,15,28,.15)}
+  .td-soft-cta p{margin:0}
+  .td-analysis:not(.td-faq-section):not(.td-lf-dark) a{color:#4a5568;font-weight:inherit;text-decoration:none;text-shadow:none}
+  .td-analysis:not(.td-faq-section):not(.td-lf-dark) a:hover{color:#0A0F1C;text-decoration:none}
+  .td-analysis:not(.td-faq-section):not(.td-lf-dark) li,.td-analysis:not(.td-faq-section):not(.td-lf-dark) span,.td-analysis:not(.td-faq-section):not(.td-lf-dark) td,.td-analysis:not(.td-faq-section):not(.td-lf-dark) th{text-shadow:none}
+  .td-analysis:not(.td-faq-section):not(.td-lf-dark) .td-faq-list{margin-top:12px}
+  .td-analysis:not(.td-faq-section):not(.td-lf-dark) .td-faq-item{padding:22px 0;border-top:1px solid rgba(10,15,28,.16)}
+  .td-analysis:not(.td-faq-section):not(.td-lf-dark) .td-faq-item:last-child{border-bottom:1px solid rgba(10,15,28,.16)}
+  .td-analysis:not(.td-faq-section):not(.td-lf-dark) .td-faq-item h3{margin:0 0 8px}
+  .td-analysis:not(.td-faq-section):not(.td-lf-dark) .td-faq-item p{margin:0}
+  .td-cost-table{width:100%;border-collapse:collapse;margin:20px 0 24px;font-size:15px}
+  .td-cost-table th{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:11px;letter-spacing:.08em;background:#0A0F1C;color:#fff;padding:12px 16px;text-align:left}
+  .td-cost-table td{padding:12px 16px;border-bottom:1px solid rgba(10,15,28,.12)}
+  .td-cost-table tr:nth-child(even) td{background:#fff}
+  @media(max-width:720px){.td-note-list{grid-template-columns:1fr}}
+</style>
+<section class="td-analysis" data-screen-label="Overview">
+  <div class="td-analysis-inner">
+    <span class="tj-eyebrow-red">The rundown</span>
+<h2>SEO FOR CONTRACTORS AND TRADE BUSINESSES</h2>
+    <p class="td-answer">Contractor SEO isn't about ranking for a national keyword. It's about owning the ten to forty searches homeowners and property managers actually type when they need your trade in your service area &mdash; and being the first name they see, call, and hire.</p>
+
+    <h2>WHY CONTRACTOR SEO IS ITS OWN DISCIPLINE</h2>
+    <p>SEO for a SaaS company is a long game of thought leadership and backlinks. SEO for a contractor is a knife fight over ten square miles. The intent is different &mdash; nobody is casually researching "emergency drain cleaning" on a Sunday morning. They have a problem, they have a phone, and they have thirty seconds of patience. Your job in that thirty seconds is to be the first result, look like a real business, and get the call.</p>
+    <p>Seasonality makes it harder. HVAC leads spike in July and January. Roofers get slammed after every storm. Plumbers ride steady with emergency peaks. A contractor SEO strategy that doesn't understand your booking calendar is going to spend the wrong money at the wrong time. Real campaigns are built around your capacity, your margin services, and the searches that put both to work.</p>
+  </div>
+</section>
+
+<section class="td-analysis td-lf-dark" data-screen-label="What & Cost">
+  <div class="td-analysis-inner">
+    <span class="tj-eyebrow-red">What it takes</span>
+<h2>WHAT A REAL SEO CAMPAIGN COVERS</h2>
+    <h3>Technical SEO &mdash; the foundation</h3>
+    <p>Before we write a word, we make sure Google can crawl the site, render it fast, and understand it. That means fixing broken pages, cleaning up redirects, tightening Core Web Vitals, and implementing proper LocalBusiness and Service schema. If the plumbing is wrong, no amount of content will drain the sink.</p>
+    <h3>On-page SEO &mdash; the pages that rank</h3>
+    <p>Every service you offer gets its own page, written for the exact phrase a customer types. Every city or neighborhood you serve gets its own page, with real local context &mdash; not swapped-out city names on the same template. Titles, headers, internal links, and image alt text are all built to match how Google reads a trade site.</p>
+    <h3>Content &mdash; the reason to rank</h3>
+    <p>Blog content for contractors isn't fluff. It's "How much does a new AC unit cost in Peoria?" and "What to do when your basement floods." These are the questions your customers Google before they call, and answering them well pulls them into your funnel weeks before they ever type your name. We build a 12-month editorial calendar tied to seasonal demand.</p>
+    <h3>Links and authority &mdash; the trust layer</h3>
+    <p>Google trusts sites other reputable sites vouch for. For contractors, that means local news mentions, supplier and manufacturer partner pages, chamber and BBB listings, trade association profiles, and earned coverage from community sponsorships. We build these deliberately &mdash; no spammy directories, no PBNs, nothing that could get you penalized.</p>
+
+    <h2>WHAT DOES CONTRACTOR SEO COST?</h2>
+    <table class="td-cost-table">
+      <thead><tr><th>Tier</th><th>Typical Investment</th><th>What You Get</th></tr></thead>
+      <tbody>
+        <tr><td>Local Starter</td><td>$800 &ndash; $1,500/mo</td><td>GBP optimization, 5&ndash;8 core service/city pages, basic technical fixes, monthly reporting. Best for single-service, single-city shops.</td></tr>
+        <tr><td>Standard Campaign</td><td>$1,800 &ndash; $3,500/mo</td><td>Full service/city page matrix, 2 blog posts/mo, ongoing link acquisition, review strategy, call tracking analysis.</td></tr>
+        <tr><td>Aggressive Growth</td><td>$3,500 &ndash; $6,500/mo</td><td>Multi-city domination, 4+ pieces of content/mo, heavier link building, conversion rate optimization, quarterly strategy resets.</td></tr>
+        <tr><td>Multi-Location / Franchise</td><td>$6,500 &ndash; $15,000+/mo</td><td>Per-location optimization, brand + local strategy split, dedicated strategist, custom dashboards.</td></tr>
+        <tr><td>One-Time SEO Audit</td><td>$1,500 &ndash; $3,500</td><td>Full technical, content, and competitive audit with a prioritized 90-day action plan.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="td-analysis" data-screen-label="Choosing a partner">
+  <div class="td-analysis-inner">
+    <span class="tj-eyebrow-red">Pick right</span>
+<h2>WHAT TO LOOK FOR IN AN SEO PROVIDER</h2>
+    <p>The SEO industry is full of monthly-report factories that produce beautiful PDFs and zero leads. Real SEO is measured in ringing phones, filled forms, and booked jobs &mdash; not in vanity ranking screenshots for keywords no one searches. If a provider won't talk about leads and revenue, they're the wrong provider.</p>
+    <ul class="td-note-list">
+      <li>Reports on leads and booked revenue, not just rankings and traffic</li>
+      <li>Shows you actual case studies from trade contractors with before/after numbers</li>
+      <li>Owns technical, on-page, content, and link work under one roof &mdash; no finger-pointing</li>
+      <li>Sets 6-month and 12-month milestone expectations, not "results in 30 days" promises</li>
+      <li>Uses white-hat link building only &mdash; will explain every link before it goes live</li>
+      <li>Gives you month-to-month or short-term contracts after an initial ramp period</li>
+    </ul>
+
+    <div class="td-soft-cta">
+      <p>Toughjobs builds SEO programs for trade contractors across the Midwest. <a href="contact.html">Talk to us about your market</a> &mdash; no pitch, just a straight read on what would actually move the needle for your business.</p>
+    </div>
+  </div>
+</section>
+
+<section class="td-analysis td-faq-section tj-faq-band" data-screen-label="FAQ">
+  <div class="td-analysis-inner">
+    <span class="tj-eyebrow-red">Straight answers</span>
+    <h2 class="tj-band-h2">FREQUENTLY ASKED QUESTIONS — CONTRACTOR SEO</h2>
+    <div class="td-faq-list">
+      <div class="td-faq-item"><h3>How long until SEO actually produces leads?</h3><p>For local trade searches, expect early movement in 60&ndash;90 days, meaningful lead volume by month 4&ndash;6, and full campaign maturity around month 9&ndash;12. Anyone promising page one in 30 days is selling paid ads, black-hat tactics, or a fantasy.</p></div>
+      <div class="td-faq-item"><h3>Is SEO better than Google Ads?</h3><p>They're different tools. Ads produce leads today at a per-lead cost. SEO produces leads for years at a declining cost per lead. Most contractors we work with run both &mdash; ads for immediate cash flow, SEO for long-term margin. Cutting SEO because ads work is like paying rent forever instead of buying the shop.</p></div>
+      <div class="td-faq-item"><h3>What if my competitors have been doing SEO for years?</h3><p>You can still win. Most established local competitors got to page one and stopped working. We audit their gaps &mdash; thin service pages, weak local content, aging backlink profiles &mdash; and build a plan to outflank them on the specific searches that drive the most valuable jobs.</p></div>
+      <div class="td-faq-item"><h3>Do I need to write blog posts every week?</h3><p>No. Trade SEO wins on service and city pages plus a steady drip of high-intent content &mdash; 2 to 4 pieces a month targeting real customer questions. Publishing daily fluff is a waste of your budget.</p></div>
+      <div class="td-faq-item"><h3>Do I own the SEO work if I leave?</h3><p>With us, yes. You own your site, your content, your Google Business Profile, and your analytics accounts. Some agencies build content on their own domains or use rented assets &mdash; always ask this before you sign, because it decides who owns your leads five years from now.</p></div>
+    </div>
+  </div>
+  </div>
+</section>
+<!-- SEO-TRADE-CONTENT:END -->
+
+
+
+    <section data-screen-label="Our Endeavors" class="gb-section seox-21">
+    <div class="seox-22">
+      <div class="gb-outer seox-23">
+        <div>
+          <div class="seox-24">
+            <span class="seox-25">More than marketing</span>
+            <h2 class="seox-26"><span class="seox-27">Two ways we</span> give back</h2>
+          </div>
+          <div class="gb-grid seox-28">
+            <div class="gb-card seox-29">
+              <span class="seox-30">01 / PARTNERSHIP</span>
+              <h3 class="seox-31">Go independent, backed by us</h3>
+              <p class="seox-32">You bring the truck, tools, and skill. We hand you the website, brand, systems, and marketing to turn one truck into a real company.</p>
+              <a href="partnerships.html" class="seox-33">Explore Partnership</a>
+            </div>
+            <div class="gb-card seox-34">
+              <span class="seox-30">02 / HELPING HANDS</span>
+              <h3 class="seox-31">A hand up when budget is tight</h3>
+              <p class="seox-35">One day a week we help people with more grit than budget get a business off the ground — honest guidance, real direction, no pressure.</p>
+              <a href="helping-hands.html" class="seox-33">Explore Helping Hands</a>
+            </div>
+          </div>
+        </div>
+        <div class="gb-img seox-36">
+          <img src="assets/trade-hero-excavation.webp" alt="Toughjobs tradesman on the job" loading="lazy" decoding="async" class="seox-37" />
+        </div>
+      </div>
+    </div>
+    <style>@media(max-width:900px){ .gb-outer{ grid-template-columns:1fr !important; } .gb-grid{ grid-template-columns:1fr !important; } .gb-img{ min-height:280px !important; order:-1; } }</style>
+  </section>
+<section class="tj-lic" data-screen-label="Licensing">
+  <div class="tj-lic-inner">
+    <div class="tj-lic-copy">
+      <span class="tj-lic-eyebrow">Before You Market</span>
+      <h3 class="tj-lic-h3">Licensed &amp; Filed Right</h3>
+      <p class="tj-lic-p">An LLC isn&rsquo;t a license. We help you sort both &mdash; proper trade licensing in Illinois &amp; Iowa, plus flat-rate LLC filing.</p>
+    </div>
+    <div class="tj-lic-actions">
+      <a href="business-licensing-illinois-iowa.html" class="btn tj-btn-white tj-btn--sm">Licensing Guide</a>
+      <a href="llc-filing.html" class="btn tj-btn-ghost">File an LLC</a>
+    </div>
+  </div>
+</section></main>
+
+<script src="inject-footer.js"></script>
+
+<script type="application/json" id="service-data">
+{"roi":{"liftPct":0.04,"closeRate":0.3,"ourCost":1200,"driverSuffix":""}}
+</script></script>
+<script src="trade-data.js"></script>
+<script src="service-page.js?v=20260729"></script>
+<script src="flying-tools.js"></script>
+<script src="inject-header.js?v=20260802b"></script>
+<script src="sticky-cta.js"></script>
+<script src="all-services-section.js"></script>
+<script src="accessibility.js?v=20260729"></script>
+<script src="image-finder-tab.js"></script>
+<!-- impeccable-live-start -->
+<script src="http://localhost:8400/live.js?token=19f259b2-bf41-4547-a2ea-088ae600fb6b"></script>
+<!-- impeccable-live-end -->
+<script id="pc-title-logo-align"></script><script>
+(function(){
+  function align(){
+    // Matches the breakpoint in #pc-title-logo-style where the slot is hidden.
+    var wide = window.matchMedia('(min-width:1241px)').matches;
+    document.querySelectorAll('.pc-headrow').forEach(function(row){
+      var h2 = row.querySelector('h2'), slot = row.querySelector('.pc-logo-slot');
+      if(!h2 || !slot) return;
+      var img = slot.querySelector('img');
+      if(!wide){ slot.style.paddingTop = ''; return; }
+      slot.style.paddingTop = '0px';
+      var r = row.getBoundingClientRect(), t = h2.getBoundingClientRect();
+      var ih = img.getBoundingClientRect().height || img.offsetHeight;
+      var center = (t.top + t.height/2) - r.top;
+      slot.style.paddingTop = Math.max(0, center - ih/2) + 'px';
+    });
+  }
+  window.addEventListener('load', align);
+  window.addEventListener('resize', align);
+  document.addEventListener('DOMContentLoaded', align);
+  setTimeout(align, 400);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Trade Challenge Quiz | Toughjobs</title>
+<link rel="canonical" href="https://toughjobs.org/free-tools.html" />
+<meta name="description" content="Test your trade knowledge in the Toughjobs Trade Challenge — 20 timed questions built for your profession. Land on the leaderboard." />
+<meta name="robots" content="noindex, follow" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared-header.css" />
+<style>
+:root{--ink:#0A0F1C;--navy:#002768;--red:#C8262A;--red-dark:#981B1F;--white:#fff;--smoke:#5B6471;--dark-surface:#17212D;--surface-2:#1E2A38}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:"Archivo",sans-serif;background:var(--ink);color:#fff;-webkit-font-smoothing:antialiased;min-height:100vh}
+.q-wrap{max-width:720px;margin:0 auto;padding:40px 20px 80px;display:flex;flex-direction:column;align-items:center;min-height:calc(100vh - 160px);justify-content:center}
+.q-card{width:100%;background:var(--dark-surface);border:1px solid rgba(255,255,255,.09);border-radius:0;padding:36px}
+.q-center{text-align:center}
+.q-eyebrow{display:inline-block;font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:12px;color:var(--red);margin-bottom:14px}
+.q-title{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:clamp(40px,5vw,72px);line-height:1;margin:0 0 18px}
+.q-question{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:clamp(20px,3.4vw,28px);line-height:1.15;margin:6px 0 22px}
+.q-lede{font-size:17px;line-height:1.6;color:#c3cad8;margin:0 0 22px}
+.q-rules{list-style:none;padding:0;margin:0 0 26px;display:flex;flex-direction:column;gap:10px;text-align:left}
+.q-rules li{background:var(--surface-2);border:1px solid rgba(255,255,255,.07);border-radius:0;padding:12px 16px;font-weight:600;font-size:15px}
+.q-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--red);color:#fff;border:0;border-radius:0;font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:13px;padding:16px 26px;cursor:pointer;text-decoration:none;transition:filter .15s ease;width:100%}
+.q-btn:hover{filter:brightness(.92)}
+.q-btn-lg{font-size:17px;padding:18px 28px}
+.q-btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.2);color:#fff}
+.q-btn-ghost:hover{background:rgba(255,255,255,.05)}
+.q-next{margin-top:22px}
+.q-link{display:inline-block;margin-top:16px;color:var(--smoke);font-weight:700;font-size:13px;text-decoration:none;text-transform:uppercase;letter-spacing:.06em}
+.q-link:hover{color:#fff}
+.q-progress{height:8px;background:var(--surface-2);border-radius:0;overflow:hidden;margin-bottom:8px}
+.q-progress-bar{height:100%;width:100%;background:var(--red);transform-origin:left;transition:transform .3s ease}
+.q-progress-label{font-size:12px;font-weight:700;color:var(--smoke);text-transform:uppercase;letter-spacing:.06em;margin-bottom:20px}
+.q-timer{position:relative;height:10px;background:var(--surface-2);border-radius:0;overflow:hidden;margin-bottom:22px}
+.q-timer-bar{height:100%;width:100%;background:#2f9e44;transform-origin:left;transition:transform .1s linear,background .3s ease}
+.q-timer-num{position:absolute;right:8px;top:-24px;font-weight:800;font-size:13px;color:var(--smoke)}
+#q-timer-num{position:absolute;right:2px;top:-22px;font-weight:800;font-size:13px;color:var(--smoke)}
+.q-choices{display:flex;flex-direction:column;gap:12px}
+.q-choice{text-align:left;background:var(--surface-2);border:1px solid rgba(255,255,255,.1);color:#fff;border-radius:0;padding:16px 18px;font-family:"Archivo",sans-serif;font-weight:600;font-size:17px;cursor:pointer;transition:all .12s ease}
+.q-choice:hover:not(:disabled){border-color:var(--red);background:var(--dark-surface)}
+.q-choice:disabled{cursor:default;opacity:.85}
+.q-choice.q-correct{border-color:#2f9e44;background:rgba(47,158,68,.18)}
+.q-choice.q-wrong{border-color:var(--red);background:rgba(200,38,42,.16)}
+.q-fact{margin-top:18px;background:var(--surface-2);border-left:3px solid var(--red);border-radius:0;padding:14px 16px;font-size:14px;line-height:1.55;color:#c3cad8}
+.q-ok{color:#5bd67e}.q-no{color:#ff6b6b}.q-to{color:#ffa94d}
+.q-form{display:flex;flex-direction:column;gap:12px;margin-top:8px}
+.q-input{background:var(--surface-2);border:1px solid rgba(255,255,255,.14);border-radius:0;padding:15px 16px;color:#fff;font-family:"Archivo",sans-serif;font-size:16px}
+.q-input:focus{outline:none;border-color:var(--red)}
+.q-input::placeholder{color:#6b7387}
+.q-err{color:#ff6b6b;font-size:14px;font-weight:600}
+.q-choices-tall .q-choice{padding:18px}
+.q-scorebig{font-family:"Archivo Black",sans-serif;font-size:clamp(56px,12vw,88px);line-height:1;color:var(--red);margin:6px 0}
+.q-avatar-block{background:var(--surface-2);border:1px solid rgba(255,255,255,.08);border-radius:0;padding:16px;margin-bottom:14px;text-align:center}
+.q-avatar-label{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--smoke);margin-bottom:12px}
+.q-avatar-preview{width:64px;height:64px;border-radius:50%;margin:0 auto 12px;background:var(--dark-surface) center/cover no-repeat;border:2px solid var(--red);display:flex;align-items:center;justify-content:center;font-size:32px}
+.q-emoji-grid{display:grid;grid-template-columns:repeat(9,1fr);gap:6px;margin-bottom:12px}
+.q-emoji{background:var(--dark-surface);border:1px solid transparent;border-radius:0;font-size:20px;padding:6px 0;cursor:pointer;line-height:1}
+.q-emoji:hover{border-color:rgba(255,255,255,.25)}
+.q-emoji.sel{border-color:var(--red);background:rgba(200,38,42,.18)}
+.q-upload{display:inline-block;font-size:13px;font-weight:700;color:var(--red);cursor:pointer;text-transform:uppercase;letter-spacing:.04em}
+.q-upload:hover{color:var(--red-dark)}
+@media(max-width:480px){.q-emoji-grid{grid-template-columns:repeat(6,1fr)}}
+@media(max-width:520px){
+  .q-wrap { padding: 20px 10px 40px; }
+  .q-card { padding: 22px 18px; }
+  .q-question { font-size: 20px; }
+}
+.q-scoresub{font-size:16px;color:#c3cad8;margin-bottom:20px}
+a{color:var(--red)}a:hover{color:var(--red-dark)}
+</style>
+</head>
+<body>
+<div class="q-wrap"><div id="quiz-root"></div></div>
+<script src="trade-data.js"></script>
+<script src="quiz-banks.js"></script>
+<script src="quiz-data.js"></script>
+<script src="quiz-store.js"></script>
+<script src="quiz-engine.js"></script>
+<script src="inject-header.js?v=20260802b"></script>
+<script>
+try {
+  new TJQuiz('quiz-root').start();
+} catch (e) {
+  console.error('Quiz failed to load:', e);
+  document.getElementById('quiz-root').innerHTML =
+    '<div class="q-card q-center">' +
+      '<span class="q-eyebrow">Trade Challenge</span>' +
+      '<h2 class="q-question">The quiz couldn\'t load</h2>' +
+      '<p class="q-lede">Something went wrong on our end — try refreshing the page. If it keeps happening, call us at <a href="tel:3099289080" style="color:var(--red)">(309) 928-9080</a> and we\'ll sort it out.</p>' +
+      '<a class="q-btn q-btn-lg" href="quiz-hub.html">Back to trades →</a>' +
+    '</div>';
+}
+</script>
+</body>
+</html>

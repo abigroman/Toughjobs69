@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Service Areas | Toughjobs</title>
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Toughjobs" />
+<meta name="publisher" content="ToughJobs Digital Marketing" />
+
+<meta name="description" content="Toughjobs serves trades and home-service businesses across Peoria IL, Davenport IA and Dubuque IA. Local SEO, websites and ads built for your market. Call." />
+<link rel="canonical" href="https://toughjobs.org/service-areas.html" />
+
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared-header.css" />
+<link rel="stylesheet" href="city-page.css" />
+
+<style>
+  .area-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  .area-card{
+    position:relative; text-decoration:none; color:#fff;
+    display:flex; flex-direction:column;
+    background:rgba(10,15,28,.92);
+    border:1px solid rgba(255,255,255,.12);
+    overflow:hidden; isolation:isolate;
+    transition:border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+  }
+  .area-card::before{
+    content:""; position:absolute; inset:0; z-index:0;
+    background:linear-gradient(160deg, rgba(0,39,104,.55) 0%, rgba(10,15,28,0) 55%);
+    opacity:0; transition:opacity .25s ease;
+  }
+  .area-card:hover{
+    border-color:var(--accent); transform:translateY(-6px);
+    box-shadow:0 26px 60px -30px rgba(0,0,0,.9);
+  }
+  .area-card:hover::before{ opacity:1; }
+
+  /* Top band */
+  .area-card .top{
+    position:relative; z-index:1;
+    padding:26px 28px 22px;
+    border-bottom:1px solid rgba(255,255,255,.1);
+  }
+  .area-card .top .idx{
+    font-family:ui-monospace,Menlo,monospace; font-size:12px; letter-spacing:.2em;
+    color:var(--accent); font-weight:700; display:block; margin-bottom:14px;
+  }
+  .area-card .top .state{
+    font-family:"Archivo",sans-serif; font-weight:800; font-size:11px;
+    letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.6);
+  }
+  .area-card .top .city{
+    font-family:"Archivo Black",sans-serif; text-transform:uppercase;
+    font-size:clamp(28px,3vw,40px); line-height:.92; letter-spacing:-.02em; margin-top:6px; color:#fff; overflow-wrap:break-word;
+  }
+  .area-card .top .city::after{
+    content:""; display:block; width:44px; height:4px; background:var(--accent);
+    margin-top:16px; transform-origin:left; transition:transform .25s ease;
+  }
+  .area-card:hover .top .city::after{ transform:scaleX(2); }
+
+  /* Body */
+  .area-card .body{ position:relative; z-index:1; padding:24px 28px 26px; flex:1; display:flex; flex-direction:column; }
+  .area-card .body p{ font-size:14.5px; line-height:1.62; color:rgba(255,255,255,.75); margin:0 0 22px; flex:1; }
+  .area-card .tag{
+    display:inline-flex; align-self:flex-start; align-items:center; gap:6px;
+    font-family:"Archivo",sans-serif; font-weight:800; font-size:10.5px;
+    letter-spacing:.1em; text-transform:uppercase; color:var(--accent);
+    background:rgba(200,38,42,.1); border:1px solid rgba(200,38,42,.4);
+    padding:6px 12px; margin-bottom:20px; border-radius:2px;
+  }
+  .area-card .go{
+    display:flex; align-items:center; justify-content:space-between;
+    font-family:"Archivo",sans-serif; font-weight:800; font-size:12.5px;
+    letter-spacing:.06em; text-transform:uppercase; color:#fff;
+    padding-top:18px; border-top:1px solid rgba(255,255,255,.1);
+  }
+  .area-card .go .arrow{
+    font-size:16px; color:var(--accent); transition:transform .25s ease;
+  }
+  .area-card:hover .go{ color:var(--accent); }
+  .area-card:hover .go .arrow{ transform:translateX(6px); }
+  @media(max-width:880px){ .area-grid{ grid-template-columns:1fr; } }
+  .sa-hero{padding-block:140px 80px;background:linear-gradient(90deg, rgba(10,15,28,.78) 0%, rgba(10,15,28,.5) 33%, rgba(10,15,28,0) 66%), url('assets/woman-mower.webp') right 80px/cover no-repeat;background-attachment:fixed}
+  .accent-text{color:var(--accent)}
+  .sa-market-bg{padding-bottom:24px;background-image:url('assets/white-engineering-background.webp');background-size:cover;background-position:center;background-attachment:fixed}
+  .sa-note{margin-top:40px;font-size:15px;color:rgba(255,255,255,.6);max-width:70ch}
+  .sa-link-accent{color:var(--accent);text-decoration:none;font-weight:600}
+  .cta-navy-bg{background:var(--navy)}
+  .cta-band .eyebrow{color:rgba(255,255,255,.85)}
+  .sa-gb-section{background:#ECEFF4;background-image:url('assets/white-engineering-background.webp');background-size:cover;background-position:center;padding:56px 32px;position:relative;overflow:hidden;box-shadow:inset 0 2px 2px rgba(0,0,0,.45), inset 0 -2px 2px rgba(0,0,0,.45)}
+  .gb-inner{max-width:1240px;margin:0 auto;position:relative;z-index:1}
+  .gb-outer{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center}
+  .gb-head{margin-bottom:24px}
+  .gb-eyebrow{font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:#C8262A}
+  .gb-title{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:clamp(32px,3.6vw,50px);line-height:1.02;color:#0A0F1C;margin:12px 0 0}
+  .gb-accent{color:#C8262A}
+  .gb-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+  .gb-card{padding:36px 30px;box-shadow:0 4px 24px rgba(0,0,0,.30);border-top:4px solid #C8262A}
+  .gb-card--navy{background:#002768}
+  .gb-card--ink{background:#0A0F1C}
+  .gb-kicker{font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700}
+  .gb-card-title{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:22px;color:#fff;margin:16px 0 12px;line-height:1.05}
+  .gb-card-text{font-family:"Archivo",sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 28px}
+  .gb-card--ink .gb-card-text{color:rgba(255,255,255,.8)}
+  .gb-card-btn{display:inline-block;background:#C8262A;color:#fff;font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none}
+  .gb-img{position:relative;height:100%;min-height:420px}
+  .gb-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:top center}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Toughjobs Digital Marketing",
+  "telephone": "+1-309-928-9080",
+  "url": "https://toughjobs.org/service-areas.html",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "140 Oakmoor Dr",
+    "addressLocality": "East Peoria",
+    "addressRegion": "IL",
+    "postalCode": "61611",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Peoria, Illinois" },
+    { "@type": "City", "name": "Davenport, Iowa" },
+    { "@type": "City", "name": "Dubuque, Iowa" }
+  ]
+}
+</script>
+<style id="white-texture-sweep">
+/* Engineering blueprint texture on all white surfaces */
+.bg-white, .bg-light, .light-section, .on-light, .blurbs-section {
+  background-color:#FFFFFF !important;
+  background-image:url('assets/white-engineering-background.webp') !important;
+  background-size:cover !important;
+  background-position:center !important;
+  background-attachment:fixed !important;
+}
+</style>
+</head>
+<body>
+<style>.accessibility-btn{opacity:0}.accessibility-btn img{width:100%;height:100%;object-fit:contain}</style>
+<button class="accessibility-btn" aria-label="Accessibility" title="Accessibility">
+  <img src="assets/accessibility-logo.webp" alt="Accessibility" />
+</button>
+
+<!-- ── HERO ─────────────────────────────────────────────────────── -->
+<main>
+<section class="city-hero sa-hero">
+  <div class="container">
+    <div class="crumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Service Areas</div>
+    <span class="eyebrow">Illinois · Iowa · The Quad Cities &amp; Tri-State</span>
+    <h1 class="display">Marketing built for <span class="accent-text">your market.</span></h1>
+    <p class="lede">We don't run cookie-cutter campaigns. Toughjobs is headquartered in East Peoria and knows these markets first-hand — from Central Illinois to the Mississippi river towns. Pick your city to see how we help local trades get found and win jobs.</p>
+  </div>
+</section>
+
+<!-- ── AREA CARDS ───────────────────────────────────────────────── -->
+<section class="panel-dark sa-market-bg" id="market">
+  <div class="container">
+    <div class="area-grid">
+      <a class="area-card" href="peoria-il.html">
+        <div class="top">
+          <span class="idx">01 / IL</span>
+          <div class="state">Illinois · Home Base</div>
+          <div class="city">Peoria</div>
+        </div>
+        <div class="body">
+          <span class="tag">Tri-County</span>
+          <p>Our backyard. Central Illinois' largest metro — older housing, steady repair demand, and a skeptical market that rewards a real local reputation.</p>
+          <span class="go">View Peoria <span class="arrow">&rarr;</span></span>
+        </div>
+      </a>
+
+      <a class="area-card" href="davenport-ia.html">
+        <div class="top">
+          <span class="idx">02 / IA</span>
+          <div class="state">Iowa · Quad Cities</div>
+          <div class="city">Davenport</div>
+        </div>
+        <div class="body">
+          <span class="tag">2 States, 4 Cities</span>
+          <p>The largest of the Quad Cities. A two-state metro where open riverfront drives restoration, waterproofing and emergency-service demand.</p>
+          <span class="go">View Davenport <span class="arrow">&rarr;</span></span>
+        </div>
+      </a>
+
+      <a class="area-card" href="dubuque-ia.html">
+        <div class="top">
+          <span class="idx">03 / IA</span>
+          <div class="state">Iowa · Tri-State</div>
+          <div class="city">Dubuque</div>
+        </div>
+        <div class="body">
+          <span class="tag">IA · IL · WI</span>
+          <p>One of Iowa's oldest cities. Historic brick &amp; stone homes and hard winters keep masonry, roofing and HVAC trades busy across three states.</p>
+          <span class="go">View Dubuque <span class="arrow">&rarr;</span></span>
+        </div>
+      </a>
+    </div>
+
+    <p class="sa-note">
+      Not on the list? We work with trades businesses throughout Illinois, Iowa, Missouri, Wisconsin and Indiana. <a href="contact.html" class="sa-link-accent">Tell us where you operate</a> and we'll build a plan for your market.
+    </p>
+  </div>
+</section>
+
+<!-- ── CTA ──────────────────────────────────────────────────────── -->
+<section class="cta-band cta-navy-bg">
+  <div class="container">
+    <span class="eyebrow">Wherever you work</span>
+    <h2>Let's get your phone <span class="ink accent-text">ringing.</span></h2>
+    <p>Free, no-pressure teardown of your website, Google presence, and local competition — built around the market you actually serve.</p>
+    <div class="hero-actions">
+      <a class="btn" href="contact.html">Request a free teardown</a>
+      <a class="btn btn-ghost" href="tel:3099289080">Call (309) 928-9080</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER (universal, matches about.html) ─────────────────────── -->
+  
+    <section data-screen-label="Our Endeavors" class="gb-section sa-gb-section">
+    <div class="gb-inner">
+      <div class="gb-outer">
+        <div>
+          <div class="gb-head">
+            <span class="gb-eyebrow">More than marketing</span>
+            <h2 class="gb-title"><span class="gb-accent">Two ways we</span> give back</h2>
+          </div>
+          <div class="gb-grid">
+            <div class="gb-card gb-card--navy">
+              <span class="gb-kicker">01 / PARTNERSHIP</span>
+              <h3 class="gb-card-title">Go independent, backed by us</h3>
+              <p class="gb-card-text">You bring the truck, tools, and skill. We hand you the website, brand, systems, and marketing to turn one truck into a real company.</p>
+              <a href="partnerships.html" class="gb-card-btn">Explore Partnership</a>
+            </div>
+            <div class="gb-card gb-card--ink">
+              <span class="gb-kicker">02 / HELPING HANDS</span>
+              <h3 class="gb-card-title">A hand up when budget is tight</h3>
+              <p class="gb-card-text">One day a week we help people with more grit than budget get a business off the ground — honest guidance, real direction, no pressure.</p>
+              <a href="helping-hands.html" class="gb-card-btn">Explore Helping Hands</a>
+            </div>
+          </div>
+        </div>
+        <div class="gb-img">
+          <img src="assets/trade-hero-excavation.webp" alt="Toughjobs tradesman on the job" loading="lazy" decoding="async" />
+        </div>
+      </div>
+    </div>
+    <style>@media(max-width:900px){ .gb-outer{ grid-template-columns:1fr !important; } .gb-grid{ grid-template-columns:1fr !important; } .gb-img{ min-height:280px !important; order:-1; } }</style>
+  </section>
+
+</main>
+
+<footer class="site-footer-media">
+  <style>
+    .site-footer-media{position:relative;overflow:hidden;background:linear-gradient(135deg,#001a4a 0%,#002768 100%);color:var(--white);border-top:3px solid var(--accent)}
+    .footer-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(0,26,74,.88) 0%,rgba(0,39,104,.84) 100%);z-index:0}
+    @keyframes tickerScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    .footer-video-bg{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.6;z-index:0}
+    .footer-content{position:relative;z-index:1}
+    .footer-ticker{display:flex;gap:0;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.3);padding:20px 0;margin:0 calc(-50vw + 50%);padding-left:calc(50vw - 50%);padding-right:calc(50vw - 50%)}
+    .ticker-track{display:flex;gap:60px;white-space:nowrap;animation:tickerScroll 60s linear infinite}
+    .ticker-item{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:14px;letter-spacing:.02em;color:var(--accent);font-weight:900;flex-shrink:0}
+    @media(prefers-reduced-motion:reduce){.ticker-track{animation:none}}
+    .ticker-item::after{content:"●";margin-left:60px;color:rgba(255,255,255,.3);font-size:6px}
+    .footer-main{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;padding:60px 0;margin-bottom:0}
+    .footer-section h3{font-family:"Archivo Black",sans-serif;font-size:18px;text-transform:uppercase;letter-spacing:-.01em;margin:0 0 24px;font-weight:900;display:flex;align-items:center;gap:12px}
+    .footer-section h3 img{height:100px;width:auto;object-fit:contain}
+    .footer-section h4{font-family:"Archivo",sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:var(--accent);margin:0 0 16px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.15)}
+    .footer-section ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
+    .footer-section a{color:rgba(255,255,255,.75);text-decoration:none;font-size:14px;font-weight:500;transition:all .2s ease;display:inline-block}
+    .footer-section a:hover{color:var(--accent)}
+    .footer-brand p{font-size:14px;line-height:1.6;color:rgba(255,255,255,.7);margin:0}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-top:1px solid rgba(255,255,255,.1);gap:32px;flex-wrap:wrap}
+    .footer-bottom-copy{font-size:12px;color:rgba(255,255,255,.55)}
+    .footer-contact{display:flex;align-items:center;gap:20px}
+    .footer-phone{text-align:right}
+    .footer-phone-label{font-family:"Archivo",sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:rgba(255,255,255,.6);margin-bottom:4px}
+    .footer-phone-number{font-family:"Archivo Black",sans-serif;font-size:22px;font-weight:900;color:var(--accent);text-decoration:none;letter-spacing:-.01em;transition:all .2s ease}
+    .footer-phone-number:hover{transform:scale(1.05)}
+    @media(max-width:1024px){.footer-main{grid-template-columns:1fr 1fr;gap:40px}}
+    @media(max-width:768px){.footer-main{grid-template-columns:1fr;gap:40px}.footer-bottom{flex-direction:column;align-items:flex-start}}
+  </style>
+  <video class="footer-video-bg" muted loop playsinline preload="none" data-play-when-near><source src="assets/construction-workers.mp4" type="video/mp4" /></video>
+  <div class="footer-overlay"></div>
+  <div class="footer-content">
+    <div class="footer-ticker"><div class="ticker-track">
+      <span class="ticker-item">HVAC</span><span class="ticker-item">PLUMBING</span><span class="ticker-item">ELECTRICAL</span><span class="ticker-item">MASONRY</span><span class="ticker-item">ROOFING</span><span class="ticker-item">JANITORIAL</span><span class="ticker-item">CARPET CLEANING</span><span class="ticker-item">PAINTING</span><span class="ticker-item">CONCRETE</span><span class="ticker-item">LANDSCAPING</span><span class="ticker-item">WELDING</span><span class="ticker-item">EXCAVATION</span><span class="ticker-item">HVAC</span><span class="ticker-item">PLUMBING</span><span class="ticker-item">ELECTRICAL</span><span class="ticker-item">MASONRY</span><span class="ticker-item">ROOFING</span><span class="ticker-item">JANITORIAL</span>
+    </div></div>
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-section footer-brand">
+          <h3><img src="assets/toughjobs-monogram-logo.webp" alt="Toughjobs" loading="lazy" decoding="async" /></h3>
+          <p>Marketing &amp; branding solutions built for the trades. We help service businesses get found, win jobs, and grow their revenue through integrated digital strategies.</p>
+        </div>
+        <div class="footer-section"><h4>Company</h4><ul><li><a href="about.html">Our Story</a></li><li><a href="index.html#services">Services</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-section"><h4>Resources</h4><ul><li><a href="free-tools.html">Free Tools</a></li><li><a href="index.html#field-notes">Blog</a></li><li><a href="website-examples.html">Case Studies</a></li></ul></div>
+        <div class="footer-section"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="sitemap.html">Sitemap</a></li><li><a href="citations.html">Citations</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-copy">© 2026 Toughjobs Digital Marketing · 140 Oakmoor Dr, East Peoria, IL 61611</div>
+        <div class="footer-contact"><div class="footer-phone"><div class="footer-phone-label">Call us</div><a href="tel:3099289080" class="footer-phone-number">(309) 928-9080</a></div></div>
+      </div>
+    </div>
+  </div>
+  </footer>
+
+<script src="inject-header.js?v=20260802b"></script>
+<script src="deferred-media.js" defer></script>
+<script src="accessibility.js?v=20260729"></script>
+<script src="sticky-cta.js"></script>
+<script src="image-finder-tab.js"></script>
+<script src="chat-launcher.js?v=20260729"></script>
+<script src="quiz-peek.js"></script>
+</body>
+</html>

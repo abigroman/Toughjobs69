@@ -58,7 +58,7 @@ ToughJobs builds for trade-specific physical applications first (truck vinyl, em
   - Body/UI: `"Archivo"`, sans-serif — weights 400–800.
   - Monospace: system monospace for technical details.
 - **Voice:** Direct, trade-specific, evidence-first. No marketing fluff. Speaks to owners who are skeptical of agencies and value practicality over presentation.
-- **Phone:** (309) 928-9080
+- **Phone:** (309) 233-9004
 
 ## Evidence on Hand
 

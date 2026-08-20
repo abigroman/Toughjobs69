@@ -83,8 +83,8 @@ function TradeHero({ data }) {
           </h2>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
             <a className="btn" href="contact.html" style={{ background: "var(--accent)" }}>Get a fair quote</a>
-            <a className="btn" href="tel:3099289080" style={{ background: "#000000", color: "var(--white)" }}>
-              <Voltage size={16} /> (309) 928-9080
+            <a className="btn" href="tel:3093061140" style={{ background: "#000000", color: "var(--white)" }}>
+              <Voltage size={16} /> (309) 306-1140
             </a>
           </div>
         </div>
