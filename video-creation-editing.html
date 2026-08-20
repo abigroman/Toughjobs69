@@ -41,6 +41,13 @@
   .vp-hero .container{position:relative;z-index:2}
   .vp-hero .display{font-size:clamp(30px,3.6vw,54px);word-break:normal;overflow-wrap:normal;hyphens:none;text-wrap:pretty}
   .vp-hero .hero-img-slot{padding:0}
+  /* service-hero-uniform.css forces max-width:56% !important on the hero text
+     column at >=1025px, which overlaps the image column at wide desktop
+     widths. Scoped to this page's unique data-page hook so no other service
+     page is affected. */
+  @media(min-width:1025px){
+    body.is-service-page[data-page="video-creation"] main > section.hero .hero-text{max-width:53% !important}
+  }
   .vp-hero-screens{display:flex;flex-direction:column;gap:16px;width:100%;max-width:540px}
   .vp-screen-label{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:8px}
   .vp-screen-label b{font-family:ui-monospace,Menlo,monospace;font-weight:700;color:var(--red);letter-spacing:.02em}
