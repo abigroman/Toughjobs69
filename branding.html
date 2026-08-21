@@ -144,6 +144,32 @@
 .brx-31{font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.8);margin:0 0 28px;}
 .brx-32{position:relative;height:100%;min-height:420px;}
 .brx-33{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:top center;}
+
+/* ── "What you'll earn" stats (branding.html only) ─────────────────── */
+.brand-stats{display:grid;grid-template-columns:minmax(240px,320px) 1fr;gap:clamp(28px,4vw,64px);align-items:start;margin-top:8px}
+.bs-hero{position:relative;padding:30px 28px 28px}
+.bs-hero:before,.bs-hero:after{content:"";position:absolute;width:16px;height:16px;border:0 solid var(--red)}
+.bs-hero:before{top:0;left:0;border-top-width:2px;border-left-width:2px}
+.bs-hero:after{bottom:0;right:0;border-bottom-width:2px;border-right-width:2px}
+.bs-hero-num{font-family:"Archivo Black",sans-serif;font-size:clamp(64px,7.4vw,104px);line-height:.9;color:var(--red);margin:0 0 16px}
+.bs-hero-copy{font-size:16px;line-height:1.6;color:rgba(255,255,255,.88);margin:0 0 16px;max-width:32ch}
+.bs-cite{display:block;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.05em;color:rgba(255,255,255,.42);text-transform:uppercase}
+.bs-list{display:flex;flex-direction:column}
+.bs-row{display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:baseline;padding:18px 0;border-top:1px solid rgba(255,255,255,.14)}
+.bs-row:first-child{border-top:0;padding-top:0}
+.bs-num{font-family:"Archivo Black",sans-serif;font-size:clamp(28px,2.9vw,38px);line-height:1;color:#fff;white-space:nowrap}
+.bs-row-copy p{font-size:15px;line-height:1.55;color:rgba(255,255,255,.82);margin:0 0 8px}
+.earn-cta{margin-top:clamp(36px,4.5vw,56px);padding-top:clamp(26px,3vw,32px);border-top:1px solid rgba(255,255,255,.14);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
+.earn-cta p{font-size:16px;line-height:1.5;color:rgba(255,255,255,.85);margin:0;max-width:46ch}
+@media(max-width:880px){
+  .brand-stats{grid-template-columns:1fr;gap:32px}
+  .bs-hero{padding:26px 24px 24px}
+}
+@media(max-width:480px){
+  .bs-row{grid-template-columns:1fr;gap:6px;padding:16px 0}
+  .bs-num{font-size:30px}
+  .earn-cta{flex-direction:column;align-items:flex-start}
+}
 </style>
 <link rel="stylesheet" href="css/service-longform.css">
 <link rel="stylesheet" href="css/faq-band.css">
@@ -189,15 +215,47 @@
     <div class="tex tex-dots"></div>
     <div class="container">
       <div class="pc-headrow"><div class="head reveal">
-        <span class="eyebrow">What you'll earn</span>
-        <h2 class="display">Instant credibility on every street.</h2>
+        <span class="eyebrow">By the numbers</span>
+        <h2 class="display">Branding matters more than you think.</h2>
       </div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
-      <div class="earn"><div class="card reveal d1"><div class="ic">01</div><h4>Look bigger than you are</h4><p>Consistent branding makes a solo operator read as an established firm.</p></div><div class="card reveal d2"><div class="ic">02</div><h4>Rolling billboards</h4><p>A wrapped truck advertises 40,000+ times a day for pennies per view.</p></div><div class="card reveal d3"><div class="ic">03</div><h4>Trust before the call</h4><p>A pro look wins the bid before you ever quote a price.</p></div></div>
+      <div class="brand-stats">
+        <div class="bs-hero reveal d1">
+          <div class="bs-hero-num">96%</div>
+          <p class="bs-hero-copy">of homeowners expect a home-service professional to have a user-friendly, professional website.</p>
+          <span class="bs-cite">Housecall Pro, The New Home Service Standard, 2025</span>
+        </div>
+        <div class="bs-list">
+          <div class="bs-row reveal d1">
+            <span class="bs-num">74%</span>
+            <div class="bs-row-copy"><p>research a personally referred home-service company online before calling it.</p><span class="bs-cite">Scorpion, The State of Home Services Marketing, 2026</span></div>
+          </div>
+          <div class="bs-row reveal d2">
+            <span class="bs-num">87%</span>
+            <div class="bs-row-copy"><p>won't consider a home-service business with a rating below four stars.</p><span class="bs-cite">Scorpion, The State of Home Services Marketing, 2026</span></div>
+          </div>
+          <div class="bs-row reveal d2">
+            <span class="bs-num">69%</span>
+            <div class="bs-row-copy"><p>would think twice about hiring a company that uses stock photography on its website.</p><span class="bs-cite">Scorpion, The State of Home Services Marketing, 2026</span></div>
+          </div>
+          <div class="bs-row reveal d3">
+            <span class="bs-num">70%+</span>
+            <div class="bs-row-copy"><p>would pay more for a home-service professional with a better service reputation.</p><span class="bs-cite">Housecall Pro, The New Home Service Standard, 2025</span></div>
+          </div>
+          <div class="bs-row reveal d3">
+            <span class="bs-num">73%</span>
+            <div class="bs-row-copy"><p>say they'd refer a home-service professional after an excellent service experience.</p><span class="bs-cite">Housecall Pro, The New Home Service Standard, 2025</span></div>
+          </div>
+        </div>
+      </div>
       <div class="work-strip">
         <div class="work-item reveal"><img src="assets/wrap-truck-erik.webp" alt="Erik Electrical truck wrap" loading="lazy" /><span class="work-lbl">Vehicle Wrap</span></div>
         <div class="work-item reveal d1"><img src="assets/wrap-trailer-guacnroll.webp" alt="Guac N Roll trailer wrap" loading="lazy" /><span class="work-lbl">Trailer Wrap</span></div>
         <div class="work-item reveal d2"><img src="uploads/company-jackets-working.webp" alt="Branded crew on the job" loading="lazy" /><span class="work-lbl">Crew Apparel</span></div>
         <div class="work-item reveal d3"><img src="uploads/Print-Seasonal-Campaigns.webp" alt="Print collateral design" loading="lazy" /><span class="work-lbl">Print & Collateral</span></div>
+      </div>
+      <div class="earn-cta reveal">
+        <p>Consistent branding is easier to build than it is to fix later.</p>
+        <a class="btn" href="contact.html">Book a free strategy call &rarr;</a>
       </div>
     </div>
   </section>
