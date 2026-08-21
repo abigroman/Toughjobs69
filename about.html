@@ -12,6 +12,8 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="shared-header.css" />
+  <link rel="stylesheet" href="css/service-longform.css" />
+  <link rel="stylesheet" href="css/faq-band.css" />
   <style>
     :root {
       --accent: #C8262A;
@@ -545,70 +547,19 @@ body { background-image:url('assets/white-engineering-background.webp') !importa
     </section>
 
     <!-- Q&A Section -->
-    <style>
-.qna-section{position:relative;isolation:isolate;overflow:hidden;background:#3B1235;background-image:linear-gradient(165deg,#4A1642 0%,#3B1235 46%,#250C22 100%);padding:96px 32px;color:#fff;border-top:0;border-bottom:0}
-.qna-section::before,.qna-section::after{content:"";position:absolute;left:0;right:0;height:14px;z-index:2;pointer-events:none;background:repeating-linear-gradient(115deg,#C8262A 0 14px,transparent 14px 30px),linear-gradient(90deg,rgba(240,154,218,.55),rgba(240,154,218,.08));box-shadow:0 0 22px rgba(240,154,218,.35)}
-.qna-section::before{top:0;clip-path:polygon(0 0,100% 0,100% 42%,0 100%)}
-.qna-section::after{bottom:0;clip-path:polygon(0 58%,100% 0,100% 100%,0 100%)}
-.qna-grid-lines{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.5;background-image:linear-gradient(rgba(233,150,214,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(233,150,214,.13) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(38% 38% at var(--qx,50%) var(--qy,0%),#000 0%,rgba(0,0,0,.25) 60%,transparent 100%);-webkit-mask-image:radial-gradient(38% 38% at var(--qx,50%) var(--qy,0%),#000 0%,rgba(0,0,0,.25) 60%,transparent 100%);transition:opacity .4s}
-.qna-section:hover .qna-grid-lines{opacity:.9}
-.qna-glow{position:absolute;z-index:0;pointer-events:none;left:var(--qx,80%);top:var(--qy,10%);width:620px;height:620px;margin:-310px 0 0 -310px;border-radius:50%;background:radial-gradient(circle,rgba(200,38,42,.34) 0%,rgba(200,38,42,0) 64%);filter:blur(20px);transition:left .5s cubic-bezier(.16,1,.3,1),top .5s cubic-bezier(.16,1,.3,1),opacity .4s;opacity:.85}
-.qna-section:hover .qna-glow{opacity:1;transition:left .1s linear,top .1s linear,opacity .4s}
-.qna-inner{position:relative;z-index:1;max-width:1080px}
-.qna-eyebrow{display:inline-block;font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:#F09ADA;padding:6px 14px;border:1px solid rgba(240,154,218,.42);border-radius:2px}
-.qna-h2{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(30px,3.7vw,52px);line-height:1;letter-spacing:-.015em;color:#fff;margin:20px 0 48px;max-width:16ch;text-wrap:balance}
-.qna-h2 em{font-style:normal;color:#F09ADA}
-.qna-list{display:grid;gap:12px}
-.qna-item{position:relative;border:1px solid rgba(240,154,218,.2);border-left:3px solid #C8262A;background:rgba(255,255,255,.045);backdrop-filter:blur(2px);transition:background .25s,border-color .25s,transform .25s}
-.qna-item:hover{background:rgba(255,255,255,.085);border-color:rgba(240,154,218,.44);transform:translateX(4px)}
-.qna-item[open]{background:rgba(255,255,255,.09);border-color:rgba(240,154,218,.5)}
-.qna-item summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:20px;padding:24px 26px}
-.qna-item summary::-webkit-details-marker{display:none}
-.qna-num{font-family:ui-monospace,Menlo,monospace;font-size:12px;font-weight:700;letter-spacing:.12em;color:#F09ADA}
-.qna-q{font-family:'Archivo',sans-serif;font-weight:800;font-size:19px;line-height:1.25;color:#fff}
-.qna-mark{position:relative;width:16px;height:16px;flex:0 0 16px}
-.qna-mark::before,.qna-mark::after{content:"";position:absolute;background:#F09ADA;transition:transform .3s cubic-bezier(.16,1,.3,1)}
-.qna-mark::before{top:7px;left:0;width:16px;height:2px}
-.qna-mark::after{left:7px;top:0;width:2px;height:16px}
-.qna-item[open] .qna-mark::after{transform:scaleY(0)}
-.qna-item[open] .qna-mark::before{background:#C8262A}
-.qna-item p{margin:0;padding:0 26px 26px 72px;font-size:16px;line-height:1.7;color:rgba(255,255,255,.82);max-width:76ch}
-.qna-cta{display:inline-flex;align-items:center;gap:12px;margin-top:44px;font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:14px;color:#fff;background:#C8262A;padding:16px 28px;text-decoration:none;transition:background .2s,gap .2s}
-.qna-cta:hover{background:#A90100;gap:18px;color:#fff}
-.qna-cta span{transition:transform .2s}
-@media(max-width:720px){.qna-section{padding:64px 22px}.qna-item summary{gap:14px;padding:20px}.qna-q{font-size:17px}.qna-item p{padding:0 20px 22px 20px}}
-</style>
-    <section data-screen-label="qna" class="qna-section">
-      <div class="qna-grid-lines" aria-hidden="true"></div>
-      <div class="qna-glow" aria-hidden="true"></div>
-      <div class="container section-inner qna-inner">
-        <span class="qna-eyebrow">Direct answers</span>
-        <h2 class="qna-h2">Questions <em>we get asked</em> before every handshake</h2>
-        <div class="qna-list">
-          <details class="qna-item" open>
-            <summary><span class="qna-num">01</span><span class="qna-q">Do you only work with trades?</span><span class="qna-mark" aria-hidden="true"></span></summary>
-            <p>Yes. Electricians, HVAC, plumbers, roofers, concrete crews, contractors. We turned down the boutiques and the SaaS startups because a shop that understands one industry cold beats a shop that understands forty of them halfway.</p>
-          </details>
-          <details class="qna-item">
-            <summary><span class="qna-num">02</span><span class="qna-q">How fast do results show up?</span><span class="qna-mark" aria-hidden="true"></span></summary>
-            <p>Paid search can fill a calendar inside two weeks. Local SEO compounds over three to six months and keeps paying long after the invoice clears. We run both so the schedule never has a dead window while the organic side builds.</p>
-          </details>
-          <details class="qna-item">
-            <summary><span class="qna-num">03</span><span class="qna-q">What does it actually cost?</span><span class="qna-mark" aria-hidden="true"></span></summary>
-            <p>Depends on market size and how many trucks you are trying to keep busy. We quote a flat monthly number after a free assessment — no percentage-of-spend games, no surprise line items, no twelve-month handcuffs.</p>
-          </details>
-          <details class="qna-item">
-            <summary><span class="qna-num">04</span><span class="qna-q">Who owns the website and the data?</span><span class="qna-mark" aria-hidden="true"></span></summary>
-            <p>You do. Domain, hosting, analytics, ad accounts, call records — all in your name from day one. If we ever part ways you walk out with every asset intact. That is not a courtesy, it is the only honest way to do this.</p>
-          </details>
-          <details class="qna-item">
-            <summary><span class="qna-num">05</span><span class="qna-q">What do you need from me?</span><span class="qna-mark" aria-hidden="true"></span></summary>
-            <p>About an hour a month and someone who answers the phone. We handle strategy, build, and reporting. You handle the work your customers are calling about — that division of labor is the whole point.</p>
-          </details>
+    <section class="td-analysis td-faq-section tj-faq-band" data-screen-label="FAQ">
+      <div class="td-analysis-inner">
+        <span class="tj-eyebrow-red">Direct answers</span>
+        <h2 class="tj-band-h2">Questions we get asked before every handshake</h2>
+        <div class="td-faq-list">
+          <div class="td-faq-item"><h3>Do you only work with trades?</h3><p>Yes. Electricians, HVAC, plumbers, roofers, concrete crews, contractors. We turned down the boutiques and the SaaS startups because a shop that understands one industry cold beats a shop that understands forty of them halfway.</p></div>
+          <div class="td-faq-item"><h3>How fast do results show up?</h3><p>Paid search can fill a calendar inside two weeks. Local SEO compounds over three to six months and keeps paying long after the invoice clears. We run both so the schedule never has a dead window while the organic side builds.</p></div>
+          <div class="td-faq-item"><h3>What does it actually cost?</h3><p>Depends on market size and how many trucks you are trying to keep busy. We quote a flat monthly number after a free assessment — no percentage-of-spend games, no surprise line items, no twelve-month handcuffs.</p></div>
+          <div class="td-faq-item"><h3>Who owns the website and the data?</h3><p>You do. Domain, hosting, analytics, ad accounts, call records — all in your name from day one. If we ever part ways you walk out with every asset intact. That is not a courtesy, it is the only honest way to do this.</p></div>
+          <div class="td-faq-item"><h3>What do you need from me?</h3><p>About an hour a month and someone who answers the phone. We handle strategy, build, and reporting. You handle the work your customers are calling about — that division of labor is the whole point.</p></div>
+          <div class="td-soft-cta"><p>Ready to see it for yourself? <a href="contact.html">Start the conversation</a> and we will show you what a real plan looks like for your shop.</p></div>
         </div>
-        <a href="contact.html" class="qna-cta">Start the conversation<span aria-hidden="true">→</span></a>
       </div>
-      <script>(function(){var s=document.querySelector('.qna-section');if(!s)return;var raf=null,px=0,py=0;s.addEventListener('pointermove',function(e){var r=s.getBoundingClientRect();px=(e.clientX-r.left)/r.width*100;py=(e.clientY-r.top)/r.height*100;if(raf)return;raf=requestAnimationFrame(function(){s.style.setProperty('--qx',px.toFixed(2)+'%');s.style.setProperty('--qy',py.toFixed(2)+'%');raf=null;});});s.addEventListener('pointerleave',function(){s.style.removeProperty('--qx');s.style.removeProperty('--qy');});})();</script>
     </section>
 
 </main>
