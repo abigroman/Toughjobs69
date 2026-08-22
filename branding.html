@@ -51,14 +51,10 @@
   }
   .sp .cmp-note{font-size:15px;color:#1c2536;margin-top:20px;font-style:italic}
   .work-strip{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:clamp(40px,5vw,64px)}
-  .work-item{position:relative;overflow:hidden;aspect-ratio:16/9;background:#0A0F1C;cursor:zoom-in}
+  .work-item{position:relative;overflow:hidden;aspect-ratio:16/9;background:#0A0F1C;display:block;text-decoration:none}
   .work-item img{width:100%;height:100%;object-fit:contain;display:block;transition:transform .35s ease}
   .work-item:hover img{transform:scale(1.03)}
   .work-lbl{position:absolute;bottom:0;left:0;right:0;padding:10px 14px;background:rgba(10,15,28,.72);font-family:'Archivo',sans-serif;font-weight:800;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#FFFFFF}
-  #work-lb{display:none;position:fixed;inset:0;background:rgba(10,15,28,.94);z-index:9000;cursor:zoom-out;align-items:center;justify-content:center}
-  #work-lb.open{display:flex}
-  #work-lb img{max-width:92vw;max-height:88vh;object-fit:contain}
-  #work-lb-close{position:absolute;top:20px;right:28px;font-size:32px;color:#fff;cursor:pointer;background:none;border:none;padding:0;font-family:'Archivo',sans-serif;font-weight:800;line-height:1}
   @media(max-width:680px){.work-strip{grid-template-columns:1fr}}
 </style>
 <link rel="stylesheet" href="shared-header.css" />
@@ -248,10 +244,10 @@
         </div>
       </div>
       <div class="work-strip">
-        <div class="work-item reveal"><img src="assets/wrap-truck-erik.webp" alt="Erik Electrical truck wrap" loading="lazy" /><span class="work-lbl">Vehicle Wrap</span></div>
-        <div class="work-item reveal d1"><img src="assets/websites-laptop-review.webp" alt="Toughjobs contractor website reviewed on a laptop" loading="lazy" /><span class="work-lbl">Websites</span></div>
-        <div class="work-item reveal d2"><img src="uploads/company-jackets-working.webp" alt="Branded crew on the job" loading="lazy" /><span class="work-lbl">Crew Apparel</span></div>
-        <div class="work-item reveal d3"><img src="uploads/Print-Seasonal-Campaigns.webp" alt="Print collateral design" loading="lazy" /><span class="work-lbl">Print & Collateral</span></div>
+        <a class="work-item reveal" href="print-truck-wraps.html"><img src="assets/wrap-truck-erik.webp" alt="Erik Electrical truck wrap" loading="lazy" /><span class="work-lbl">Vehicle Wrap</span></a>
+        <a class="work-item reveal d1" href="websites.html"><img src="assets/websites-laptop-review.webp" alt="Toughjobs contractor website reviewed on a laptop" loading="lazy" /><span class="work-lbl">Websites</span></a>
+        <a class="work-item reveal d2" href="clothing-apparel.html"><img src="uploads/company-jackets-working.webp" alt="Branded crew on the job" loading="lazy" /><span class="work-lbl">Crew Apparel</span></a>
+        <a class="work-item reveal d3" href="print-collateral.html"><img src="uploads/Print-Seasonal-Campaigns.webp" alt="Print collateral design" loading="lazy" /><span class="work-lbl">Print & Collateral</span></a>
       </div>
       <div class="earn-cta reveal">
         <p>Consistent branding is easier to build than it is to fix later.</p>
@@ -494,25 +490,6 @@
 <script src="all-services-section.js"></script>
 <script src="accessibility.js?v=20260729"></script>
 <script src="image-finder-tab.js"></script>
-<script>
-(function(){
-  var lb=document.createElement('div');lb.id='work-lb';
-  var close=document.createElement('button');close.id='work-lb-close';close.setAttribute('aria-label','Close');close.textContent='×';
-  var lbImg=document.createElement('img');lbImg.alt='';
-  lb.appendChild(close);lb.appendChild(lbImg);document.body.appendChild(lb);
-  function closeLb(){lb.classList.remove('open');}
-  lb.addEventListener('click',closeLb);
-  close.addEventListener('click',function(e){e.stopPropagation();closeLb();});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
-  document.querySelectorAll('.work-item').forEach(function(el){
-    el.addEventListener('click',function(){
-      var src=el.querySelector('img');
-      lbImg.src=src.src;lbImg.alt=src.alt||'';
-      lb.classList.add('open');
-    });
-  });
-})();
-</script>
 <script id="pc-title-logo-align"></script><script>
 (function(){
   function align(){
