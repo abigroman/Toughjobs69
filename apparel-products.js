@@ -19,7 +19,7 @@ window.TJ_APPAREL = [
    oos:["Navy","Forest Green","Burgundy","Charcoal"],
    wash:WASH_APPAREL},
   {id:"tshirts",page:"apparel-tshirts.html",name:"Custom T-Shirts",price:"$4 – $28 each",img:"uploads/t-shirts.webp",
-   colorImages:{"White":"uploads/webp/tshirt-model-white.png","Light Gray":"uploads/webp/tshirt-model-light-gray.png","Sky Blue":"uploads/webp/tshirt-model-sky-blue.png","Royal Blue":"uploads/webp/tshirt-model-royal-blue.png","Navy":"uploads/webp/tshirt-model-navy.png","Red":"uploads/webp/tshirt-model-red.png","Safety Yellow":"uploads/webp/tshirt-model-safety-yellow.png","Black":"uploads/webp/tshirt-model-black.png"},
+   colorImages:{"White":"uploads/webp/tshirt-model-white.webp","Light Gray":"uploads/webp/tshirt-model-light-gray.webp","Sky Blue":"uploads/webp/tshirt-model-sky-blue.webp","Royal Blue":"uploads/webp/tshirt-model-royal-blue.webp","Navy":"uploads/webp/tshirt-model-navy.webp","Red":"uploads/webp/tshirt-model-red.webp","Safety Yellow":"uploads/webp/tshirt-model-safety-yellow.webp","Black":"uploads/webp/tshirt-model-black.webp"},
    blurb:"The everyday branded crew tee — soft, durable and the most affordable way to put your company name on every job. \u201cAs low as $4\u201d reflects the blank at volume with simple artwork.",
    mfr:"Gildan Heavy Cotton 5000 / G500",fabric:"5.3 oz, 100% cotton — heather and sport colors are cotton/poly blends",blank:"$3.50 – $6.50 blank",
    materials:["100% Cotton","Cotton/Poly Blend","Performance"],
