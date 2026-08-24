@@ -97,13 +97,6 @@
   .img-blueprint dd{ margin:2px 0 0; line-height:1.55; }
   .img-blueprint code{ background:#EAE5D8; padding:1px 6px; border-radius:2px; font-size:12.5px; }
 
-  /* CTA callout */
-  .art-cta{
-    background:var(--navy); color:var(--white); padding:48px 40px; margin:56px 0 0;
-    border-radius:8px; text-align:center;
-  }
-  .art-cta h3{ font-family:"Archivo Black",sans-serif; font-size:26px; color:var(--white); margin:0 0 12px; }
-  .art-cta p{ color:rgba(255,255,255,.8); margin:0 0 26px; }
   .btn{
     display:inline-flex; align-items:center; justify-content:center; padding:14px 28px;
     background:var(--red); color:var(--white); text-decoration:none; font-weight:800;
@@ -116,20 +109,79 @@
   footer.city-footer{ background:var(--ink); color:rgba(255,255,255,.6); padding:40px 0; text-align:center; font-size:13px; }
   footer.city-footer a{ color:rgba(255,255,255,.6); }
 
+  /* Reading progress */
+  .reading-progress{ position:fixed; left:0; right:0; top:120px; height:3px; background:rgba(10,15,28,.12); z-index:39; }
+  .reading-progress-bar{ height:100%; width:0%; background:var(--red); }
+  @media (max-width:640px){ .reading-progress{ top:84px; } }
+
+  /* Hero upgrades */
+  .art-hero{ position:relative; overflow:hidden; }
+  .art-hero::before{ content:""; position:absolute; inset:0; background-image:linear-gradient(rgba(140,170,220,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(140,170,220,.06) 1px,transparent 1px); background-size:44px 44px; pointer-events:none; }
+  .art-code{ position:absolute; top:26px; right:170px; border:1px solid rgba(140,170,220,.35); padding:8px 12px; font:800 10px ui-monospace,Menlo,monospace; letter-spacing:.09em; color:rgba(140,170,220,.7); z-index:3; }
+  @media (max-width:900px){ .art-code{ display:none; } }
+  .hero-cutout{ position:absolute; right:2%; bottom:0; height:112%; max-height:460px; width:auto; object-fit:contain; z-index:1; filter:drop-shadow(0 20px 40px rgba(0,0,0,.4)); }
+  .hero-fade{ position:absolute; inset:0; background:linear-gradient(90deg,#0A0F1C 42%,rgba(10,15,28,.55) 62%,rgba(10,15,28,0) 100%); z-index:2; }
+  .art-hero .article-container{ position:relative; z-index:3; }
+  .art-standfirst{ margin:0 0 26px; max-width:600px; font:400 18px/1.6 "Archivo",sans-serif; color:rgba(255,255,255,.72); }
+
+  /* Body layout with sticky TOC + share */
+  .art-layout{ max-width:1160px; margin:0 auto; padding:0 32px; display:grid; grid-template-columns:216px minmax(0,760px); gap:56px; justify-content:center; }
+  .art-toc{ align-self:start; position:sticky; top:150px; }
+  .toc-label{ font:800 10.5px "Archivo",sans-serif; letter-spacing:.1em; text-transform:uppercase; color:#8b93a0; margin-bottom:14px; }
+  .toc-list{ display:grid; gap:10px; }
+  .toc-link{ display:block; font:600 12.5px/1.35 "Archivo",sans-serif; color:#8b93a0; border-left:3px solid #E5E7EB; padding-left:11px; text-decoration:none; }
+  .toc-link.active{ color:var(--ink); border-left-color:var(--red); }
+  .art-share{ margin-top:26px; border:1px solid #E5E7EB; padding:16px; }
+  .share-label{ font:800 10.5px "Archivo",sans-serif; letter-spacing:.09em; text-transform:uppercase; color:var(--red); margin-bottom:8px; }
+  .share-links{ display:flex; gap:8px; flex-wrap:wrap; }
+  .share-btn{ width:32px; height:32px; border:1px solid #E5E7EB; background:#fff; display:flex; align-items:center; justify-content:center; text-decoration:none; color:var(--ink); font:800 12px "Archivo",sans-serif; cursor:pointer; padding:0; }
+  .share-btn:hover{ border-color:var(--red); background:var(--red); color:#fff; }
+  .art-content{ min-width:0; }
+
+  @media (max-width:900px){
+    .art-layout{ grid-template-columns:1fr; }
+    .art-toc{ display:none; }
+  }
+
+  /* Next in Field Notes */
+  .art-next{ margin-top:52px; border-top:2px solid var(--ink); padding-top:22px; }
+  .art-next-label{ font:800 11px "Archivo",sans-serif; letter-spacing:.1em; text-transform:uppercase; color:#8b93a0; margin-bottom:16px; }
+  .art-next-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .art-next-card{ border:1px solid #E5E7EB; padding:18px; text-decoration:none; display:block; }
+  .art-next-card:hover{ border-color:var(--red); }
+  .art-next-cat{ font:800 10px "Archivo",sans-serif; letter-spacing:.1em; text-transform:uppercase; color:var(--red); }
+  .art-next-title{ font-family:"Archivo Black",sans-serif; font-size:17px; line-height:1.1; text-transform:uppercase; margin:8px 0 0; color:var(--ink); }
+  @media (max-width:640px){ .art-next-grid{ grid-template-columns:1fr; } }
+
+  /* CTA band */
+  .art-cta-band{ background:var(--red); padding:64px 32px; text-align:center; position:relative; overflow:hidden; }
+  .art-cta-band::before{ content:""; position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px); background-size:44px 44px; pointer-events:none; }
+  .art-cta-inner{ position:relative; max-width:640px; margin:0 auto; }
+  .art-cta-band h3{ font-family:"Archivo Black",sans-serif; font-size:clamp(26px,3.4vw,38px); text-transform:uppercase; margin:0 0 12px; color:#fff; }
+  .art-cta-band p{ margin:0 auto 26px; font:500 16.5px/1.6 "Archivo",sans-serif; color:rgba(255,255,255,.88); }
+  .art-cta-band .btn{ background:var(--ink); }
+  .art-cta-reassurance{ margin-top:14px; font:600 12.5px "Archivo",sans-serif; color:rgba(255,255,255,.75); }
+
   @media (max-width:640px){
     .art-hero{ padding:80px 0 48px; }
     .art-body{ padding:48px 0 72px; }
-    .art-cta{ padding:36px 24px; }
+    .art-cta-band{ padding:44px 24px; }
   }
 </style>
   <link rel="stylesheet" href="css/give-back.css" />
 </head>
 <body>
 
+<div class="reading-progress"><div class="reading-progress-bar"></div></div>
+
 <section class="art-hero" data-screen-label="Article Hero">
+  <img class="hero-cutout" src="assets/chainsaw-guy-optimized.webp" alt="" />
+  <div class="hero-fade"></div>
+  <div class="art-code">TJ-01 &middot; WEBSITE TEARDOWN &middot; N.T.S.</div>
   <div class="article-container">
     <span class="eyebrow">Website Teardown</span>
     <h1 class="display">Five Things Killing Your Home Page Conversion</h1>
+    <p class="art-standfirst">Stop bounce traffic on your trade business website. Five conversion killers on your home page — and exactly how to fix each one.</p>
     <div class="art-meta">
       <span>Toughjobs Field Notes</span>
       <span class="dot"></span>
@@ -141,7 +193,24 @@
 </section>
 
 <article class="art-body" data-screen-label="Article Body">
-  <div class="article-container">
+  <div class="art-layout">
+
+  <aside class="art-toc">
+    <div class="toc-label">On this page</div>
+    <nav class="toc-list" id="tocList" aria-label="Table of contents"></nav>
+    <div class="art-share">
+      <div class="share-label">Share</div>
+      <div class="share-links">
+        <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftoughjobs.org%2Finsight-conversion-killers.html" target="_blank" rel="noopener" title="Share on LinkedIn">in</a>
+        <a class="share-btn" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftoughjobs.org%2Finsight-conversion-killers.html&amp;text=Five%20Things%20Killing%20Your%20Home%20Page%20Conversion" target="_blank" rel="noopener" title="Share on X">X</a>
+        <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftoughjobs.org%2Finsight-conversion-killers.html" target="_blank" rel="noopener" title="Share on Facebook">f</a>
+        <a class="share-btn" href="mailto:?subject=Five%20Things%20Killing%20Your%20Home%20Page%20Conversion&amp;body=https%3A%2F%2Ftoughjobs.org%2Finsight-conversion-killers.html" title="Share by email">@</a>
+        <button type="button" class="share-btn share-copy" data-url="https://toughjobs.org/insight-conversion-killers.html" title="Copy link">&#10697;</button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="art-content">
 
     <p class="lede">Every trade business owner has heard the traffic number brag: "we got 4,000 visitors last month." Traffic isn't the scoreboard. If those 4,000 people land on your home page and leave in under ten seconds, you didn't get leads — you got bounce traffic. Here are the five most common reasons a home page fails to convert, and what to do about each one.</p>
 
@@ -236,14 +305,32 @@
     <h2>Fixing These Five Things Is the Fastest Way to Stop Bounce Traffic</h2>
     <p>None of these fixes require a full rebuild. A clear CTA, a faster load, homeowner-first copy, visible service area, and a mobile-first layout can each be tackled independently — and together they compound. If your <a href="services.html">website</a> is bringing in visitors but not calls, this is the order we'd audit it in, starting with load time and CTA clarity before touching a word of copy.</p>
 
-    <div class="art-cta">
-      <h3>Want a Free Teardown of Your Home Page?</h3>
-      <p>We'll show you exactly which of these five things is costing you leads — no charge, no obligation.</p>
-      <a class="btn" href="contact.html">Request a Free Teardown</a>
+    <div class="art-next">
+      <div class="art-next-label">Next in Field Notes</div>
+      <div class="art-next-grid">
+        <a class="art-next-card" href="insight-map-pack.html">
+          <span class="art-next-cat">SEO Playbook</span>
+          <h4 class="art-next-title">How to own the map pack in your town</h4>
+        </a>
+        <a class="art-next-card" href="insight-home-service-website.html">
+          <span class="art-next-cat">Website Guide</span>
+          <h4 class="art-next-title">What actually goes into a home service website that books jobs</h4>
+        </a>
+      </div>
     </div>
 
   </div>
+  </div>
 </article>
+
+<section class="art-cta-band" data-screen-label="CTA Band">
+  <div class="art-cta-inner">
+    <h3>Want a Free Teardown of Your Home Page?</h3>
+    <p>We'll show you exactly which of these five things is costing you leads.</p>
+    <a class="btn" href="contact.html">Request a Free Teardown</a>
+    <div class="art-cta-reassurance">No charge, no obligation.</div>
+  </div>
+</section>
 
 
     <section data-screen-label="Our Endeavors" class="gb-section tj-gb">
@@ -286,6 +373,7 @@
 <script src="back-to-notes.js"></script>
 <script src="cookie-consent.js"></script>
 <script src="image-finder-tab.js"></script>
+<script src="article-toc.js"></script>
 
 </body>
 </html>

@@ -94,12 +94,6 @@
   .img-blueprint dd{ margin:2px 0 0; line-height:1.55; }
   .img-blueprint code{ background:#EAE5D8; padding:1px 6px; border-radius:2px; font-size:12.5px; }
 
-  .art-cta{
-    background:var(--navy); color:var(--white); padding:48px 40px; margin:56px 0 0;
-    border-radius:8px; text-align:center;
-  }
-  .art-cta h3{ font-family:"Archivo Black",sans-serif; font-size:26px; color:var(--white); margin:0 0 12px; }
-  .art-cta p{ color:rgba(255,255,255,.8); margin:0 0 26px; }
   .btn{
     display:inline-flex; align-items:center; justify-content:center; padding:14px 28px;
     background:var(--red); color:var(--white); text-decoration:none; font-weight:800;
@@ -109,20 +103,84 @@
   footer.city-footer{ background:var(--ink); color:rgba(255,255,255,.6); padding:40px 0; text-align:center; font-size:13px; }
   footer.city-footer a{ color:rgba(255,255,255,.6); }
 
+  /* Real photo figures (replaces the dev-note image blueprint box) */
+  .art-figure{ margin:40px 0; }
+  .art-figure img{ width:100%; height:auto; display:block; border-radius:4px; }
+  .art-figure figcaption{ font-size:13px; color:#777; margin-top:10px; font-style:italic; }
+
+  /* Reading progress */
+  .reading-progress{ position:fixed; left:0; right:0; top:120px; height:3px; background:rgba(10,15,28,.12); z-index:39; }
+  .reading-progress-bar{ height:100%; width:0%; background:var(--red); }
+  @media (max-width:640px){ .reading-progress{ top:84px; } }
+
+  /* Hero upgrades */
+  .art-hero{ position:relative; overflow:hidden; }
+  .art-hero::before{ content:""; position:absolute; inset:0; background-image:linear-gradient(rgba(140,170,220,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(140,170,220,.06) 1px,transparent 1px); background-size:44px 44px; pointer-events:none; }
+  .art-code{ position:absolute; top:26px; right:170px; border:1px solid rgba(140,170,220,.35); padding:8px 12px; font:800 10px ui-monospace,Menlo,monospace; letter-spacing:.09em; color:rgba(140,170,220,.7); z-index:3; }
+  @media (max-width:900px){ .art-code{ display:none; } }
+  .hero-cutout{ position:absolute; right:2%; bottom:0; height:112%; max-height:460px; width:auto; object-fit:contain; z-index:1; filter:drop-shadow(0 20px 40px rgba(0,0,0,.4)); }
+  .hero-fade{ position:absolute; inset:0; background:linear-gradient(90deg,#0A0F1C 42%,rgba(10,15,28,.55) 62%,rgba(10,15,28,0) 100%); z-index:2; }
+  .art-hero .article-container{ position:relative; z-index:3; }
+  .art-standfirst{ margin:0 0 26px; max-width:600px; font:400 18px/1.6 "Archivo",sans-serif; color:rgba(255,255,255,.72); }
+
+  /* Body layout with sticky TOC + share */
+  .art-layout{ max-width:1160px; margin:0 auto; padding:0 32px; display:grid; grid-template-columns:216px minmax(0,760px); gap:56px; justify-content:center; }
+  .art-toc{ align-self:start; position:sticky; top:150px; }
+  .toc-label{ font:800 10.5px "Archivo",sans-serif; letter-spacing:.1em; text-transform:uppercase; color:#8b93a0; margin-bottom:14px; }
+  .toc-list{ display:grid; gap:10px; }
+  .toc-link{ display:block; font:600 12.5px/1.35 "Archivo",sans-serif; color:#8b93a0; border-left:3px solid #E5E7EB; padding-left:11px; text-decoration:none; }
+  .toc-link.active{ color:var(--ink); border-left-color:var(--red); }
+  .art-share{ margin-top:26px; border:1px solid #E5E7EB; padding:16px; }
+  .share-label{ font:800 10.5px "Archivo",sans-serif; letter-spacing:.09em; text-transform:uppercase; color:var(--red); margin-bottom:8px; }
+  .share-links{ display:flex; gap:8px; flex-wrap:wrap; }
+  .share-btn{ width:32px; height:32px; border:1px solid #E5E7EB; background:#fff; display:flex; align-items:center; justify-content:center; text-decoration:none; color:var(--ink); font:800 12px "Archivo",sans-serif; cursor:pointer; padding:0; }
+  .share-btn:hover{ border-color:var(--red); background:var(--red); color:#fff; }
+  .art-content{ min-width:0; }
+
+  @media (max-width:900px){
+    .art-layout{ grid-template-columns:1fr; }
+    .art-toc{ display:none; }
+  }
+
+  /* Next in Field Notes */
+  .art-next{ margin-top:52px; border-top:2px solid var(--ink); padding-top:22px; }
+  .art-next-label{ font:800 11px "Archivo",sans-serif; letter-spacing:.1em; text-transform:uppercase; color:#8b93a0; margin-bottom:16px; }
+  .art-next-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .art-next-card{ border:1px solid #E5E7EB; padding:18px; text-decoration:none; display:block; }
+  .art-next-card:hover{ border-color:var(--red); }
+  .art-next-cat{ font:800 10px "Archivo",sans-serif; letter-spacing:.1em; text-transform:uppercase; color:var(--red); }
+  .art-next-title{ font-family:"Archivo Black",sans-serif; font-size:17px; line-height:1.1; text-transform:uppercase; margin:8px 0 0; color:var(--ink); }
+  @media (max-width:640px){ .art-next-grid{ grid-template-columns:1fr; } }
+
+  /* CTA band */
+  .art-cta-band{ background:var(--red); padding:64px 32px; text-align:center; position:relative; overflow:hidden; }
+  .art-cta-band::before{ content:""; position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px); background-size:44px 44px; pointer-events:none; }
+  .art-cta-inner{ position:relative; max-width:640px; margin:0 auto; }
+  .art-cta-band h3{ font-family:"Archivo Black",sans-serif; font-size:clamp(26px,3.4vw,38px); text-transform:uppercase; margin:0 0 12px; color:#fff; }
+  .art-cta-band p{ margin:0 auto 26px; font:500 16.5px/1.6 "Archivo",sans-serif; color:rgba(255,255,255,.88); }
+  .art-cta-band .btn{ background:var(--ink); }
+  .art-cta-reassurance{ margin-top:14px; font:600 12.5px "Archivo",sans-serif; color:rgba(255,255,255,.75); }
+
   @media (max-width:640px){
     .art-hero{ padding:80px 0 48px; }
     .art-body{ padding:48px 0 72px; }
-    .art-cta{ padding:36px 24px; }
+    .art-cta-band{ padding:44px 24px; }
   }
 </style>
   <link rel="stylesheet" href="css/give-back.css" />
 </head>
 <body>
 
+<div class="reading-progress"><div class="reading-progress-bar"></div></div>
+
 <section class="art-hero" data-screen-label="Article Hero">
+  <img class="hero-cutout" src="assets/chainsaw-guy-optimized.webp" alt="" />
+  <div class="hero-fade"></div>
+  <div class="art-code">TJ-03 &middot; FIELD GUIDE &middot; N.T.S.</div>
   <div class="article-container">
     <span class="eyebrow">Field Guide</span>
     <h1 class="display">Turning One-Time Jobs Into Repeat Customers</h1>
+    <p class="art-standfirst">How home-service businesses turn one-time jobs into repeat clients — treating customers right, professionalism on the job, and handling difficult customers well.</p>
     <div class="art-meta">
       <span>Toughjobs Field Notes</span>
       <span class="dot"></span>
@@ -134,7 +192,24 @@
 </section>
 
 <article class="art-body" data-screen-label="Article Body">
-  <div class="article-container">
+  <div class="art-layout">
+
+  <aside class="art-toc">
+    <div class="toc-label">On this page</div>
+    <nav class="toc-list" id="tocList" aria-label="Table of contents"></nav>
+    <div class="art-share">
+      <div class="share-label">Share</div>
+      <div class="share-links">
+        <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftoughjobs.org%2Finsight-repeat-customers.html" target="_blank" rel="noopener" title="Share on LinkedIn">in</a>
+        <a class="share-btn" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftoughjobs.org%2Finsight-repeat-customers.html&amp;text=Turning%20One-Time%20Jobs%20Into%20Repeat%20Customers" target="_blank" rel="noopener" title="Share on X">X</a>
+        <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftoughjobs.org%2Finsight-repeat-customers.html" target="_blank" rel="noopener" title="Share on Facebook">f</a>
+        <a class="share-btn" href="mailto:?subject=Turning%20One-Time%20Jobs%20Into%20Repeat%20Customers&amp;body=https%3A%2F%2Ftoughjobs.org%2Finsight-repeat-customers.html" title="Share by email">@</a>
+        <button type="button" class="share-btn share-copy" data-url="https://toughjobs.org/insight-repeat-customers.html" title="Copy link">&#10697;</button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="art-content">
 
     <p class="lede">Every home-service business runs on the same math: it costs far more to win a new customer than to keep one you already have. Yet most trade businesses are built entirely around the one-time job — quote it, do it, invoice it, move on. The businesses that grow fastest flip that script. They treat every job as the first chapter of a relationship, not the whole story. Here's how to build repeat clients on purpose instead of by accident.</p>
 
@@ -153,14 +228,10 @@
       <li>Follow up within a week to confirm everything is still working right</li>
     </ul>
 
-    <div class="img-blueprint">
-      <span class="ib-label">Image Placeholder</span>
-      <div class="ib-desc">A technician walking a homeowner through the job before starting work, both looking at the same area together.</div>
-      <dl>
-        <dt>Image</dt>
-        <dd><img src="assets/customer-technician.webp" alt="Technician walking a homeowner through the job to build trust and repeat clients" style="width: 100%; height: auto; border-radius: 4px; display: block;" /></dd>
-      </dl>
-    </div>
+    <figure class="art-figure">
+      <img src="assets/customer-technician.webp" alt="Technician walking a homeowner through the job to build trust and repeat clients" loading="lazy" decoding="async" />
+      <figcaption>A technician walking a homeowner through the job before starting work, both looking at the same area together.</figcaption>
+    </figure>
 
     <h2>Professionalism on the Job Is What Gets You Rebooked</h2>
     <p>Professionalism on the job isn't a uniform and a clean truck, though both help. It's showing up when you said you would, quoting a price and holding it, and treating the customer's property like it's your own. Homeowners can't judge your technical skill — most can't tell a properly torqued fitting from a bad one — but they can absolutely judge whether you were on time, respectful, and honest. That's the scorecard they use when deciding whether to call you again.</p>
@@ -172,14 +243,10 @@
       <li>Never talk down a previous contractor's work, even when it's tempting</li>
     </ul>
 
-    <div class="img-blueprint">
-      <span class="ib-label">Image Placeholder</span>
-      <div class="ib-desc">A simple before/after style graphic contrasting a sloppy job site setup with a properly protected, organized one.</div>
-      <dl>
-        <dt>Image</dt>
-        <dd><img src="assets/messy-tech.webp" alt="Comparison of an unprofessional versus professional job site setup for trade businesses" style="width: 100%; height: auto; border-radius: 4px; display: block;" /></dd>
-      </dl>
-    </div>
+    <figure class="art-figure">
+      <img src="assets/messy-tech.webp" alt="Comparison of an unprofessional versus professional job site setup for trade businesses" loading="lazy" decoding="async" />
+      <figcaption>A simple before/after style comparison contrasting a sloppy job site setup with a properly protected, organized one.</figcaption>
+    </figure>
 
     <h2>Dealing With Difficult Customers Without Losing Them</h2>
     <p>Dealing with difficult customers is where most repeat business is quietly lost. A customer who's upset about a price, a delay, or a misunderstanding isn't usually trying to be hard to work with — they're trying to be heard. The businesses that keep these customers long-term do one thing consistently: they slow down, listen first, and fix the actual problem before defending themselves. Getting defensive first, even when you're right, almost always ends the relationship.</p>
@@ -191,26 +258,40 @@
       <li>Follow up after the fix to confirm they're satisfied — this is the step most businesses skip</li>
     </ul>
 
-    <div class="img-blueprint">
-      <span class="ib-label">Image Placeholder</span>
-      <div class="ib-desc">A calm, empathetic conversation between a technician and a frustrated customer, illustrating de-escalation.</div>
-      <dl>
-        <dt>Image</dt>
-        <dd><img src="assets/customer-technician-conversation.webp" alt="Technician calmly listening while dealing with a difficult customer on a front porch" style="width: 100%; height: auto; border-radius: 4px; display: block;" /></dd>
-      </dl>
-    </div>
+    <figure class="art-figure">
+      <img src="assets/customer-technician-conversation.webp" alt="Technician calmly listening while dealing with a difficult customer on a front porch" loading="lazy" decoding="async" />
+      <figcaption>A calm, empathetic conversation between a technician and a frustrated customer, illustrating de-escalation.</figcaption>
+    </figure>
 
     <h2>Turn the Last Five Minutes Into the Next Job</h2>
     <p>The final five minutes of any job are the highest-leverage moment you have for building repeat clients, and most businesses waste them by simply packing up and leaving. Walk the customer through what you did. Mention anything worth keeping an eye on. Tell them plainly that you'd like to be their go-to for this kind of work going forward, and make it easy — a card, a text with your number saved, a note about seasonal maintenance. Repeat business rarely happens by accident. It happens because someone asked for it, clearly, at the moment trust was highest.</p>
 
-    <div class="art-cta">
-      <h3>Want More Customers Coming Back?</h3>
-      <p>We help home-service businesses build the follow-up systems that turn one-time jobs into a steady base of repeat clients.</p>
-      <a class="btn" href="contact.html">Talk to Us About Client Retention</a>
+    <div class="art-next">
+      <div class="art-next-label">Next in Field Notes</div>
+      <div class="art-next-grid">
+        <a class="art-next-card" href="insight-proper-licensing.html">
+          <span class="art-next-cat">Compliance Playbook</span>
+          <h4 class="art-next-title">Proper licensing in Illinois &amp; Iowa</h4>
+        </a>
+        <a class="art-next-card" href="insight-conversion-killers.html">
+          <span class="art-next-cat">Website Teardown</span>
+          <h4 class="art-next-title">Five things killing your home page conversion</h4>
+        </a>
+      </div>
     </div>
 
   </div>
+  </div>
 </article>
+
+<section class="art-cta-band" data-screen-label="CTA Band">
+  <div class="art-cta-inner">
+    <h3>Want More Customers Coming Back?</h3>
+    <p>We help home-service businesses build the follow-up systems that turn one-time jobs into a steady base of repeat clients.</p>
+    <a class="btn" href="contact.html">Talk to Us About Client Retention</a>
+    <div class="art-cta-reassurance">No pressure, just a better system.</div>
+  </div>
+</section>
 
 
     <section data-screen-label="Our Endeavors" class="gb-section tj-gb">
@@ -253,6 +334,7 @@
 <script src="back-to-notes.js"></script>
 <script src="cookie-consent.js"></script>
 <script src="image-finder-tab.js"></script>
+<script src="article-toc.js"></script>
 
 </body>
 </html>
