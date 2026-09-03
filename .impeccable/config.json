@@ -62,6 +62,30 @@
         ],
         "createdAt": "2026-08-11T19:22:24.361Z",
         "reason": "Verified .price-card and .gb-card have no border-radius; likely detector mis-scoping in degraded regex mode on minified CSS"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#ff6669",
+        "createdAt": "2026-09-03T17:04:22.543Z",
+        "reason": "Deliberate WCAG AA fix: red #C8262A fails 4.5:1 contrast on navy/ink; #ff6669 is the same lightened-red tint already used correctly by .pillar .tag in this file (6.7:1 on ink, 4.94:1 on navy)."
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "css/faq-band.css"
+        ],
+        "createdAt": "2026-09-03T18:44:38.827Z",
+        "reason": "User confirmed: border-left accent is the site's own documented convention (DESIGN.md components: .pillar, .stat, .price-card, nav dropdown border-top), not AI-slop drift. Rules at L9/L40 are actively used by live pages, not dead code."
+      },
+      {
+        "rule": "marquee",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-03T19:08:40.036Z",
+        "reason": "User confirmed: footer trade-name ticker is intentional. Already respects prefers-reduced-motion and pauses on hover; content is decorative/redundant with the Trades mega-menu and trades.html."
       }
     ]
   }
