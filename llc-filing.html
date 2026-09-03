@@ -12,6 +12,7 @@
 <meta name="description" content="Toughjobs helps contractors and small businesses file an LLC in Illinois or Iowa. Simple, flat-rate filing assistance — Illinois from $195, Iowa from $65." />
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="service-page.css?v=20260804b" />
+<link rel="stylesheet" href="css/faq-band.css" />
 <style>
   *,*::before,*::after{box-sizing:border-box}
   html,body{margin:0;padding:0;background:#0A0F1C}
@@ -127,14 +128,6 @@
   .disclaimer strong{color:var(--ink)}
 
   /* ── FAQ ─────────────────────────────────────────────────────── */
-  .faq-list{max-width:940px;margin:0 auto;display:flex;flex-direction:column;gap:0;border-top:1px solid #e3e5ea}
-  .faq-item{border-bottom:1px solid #e3e5ea}
-  .faq-item summary{list-style:none;cursor:pointer;padding:24px 44px 24px 2px;position:relative;font-family:"Archivo",sans-serif;font-weight:800;font-size:17.5px;color:var(--ink);display:block}
-  .faq-item summary::-webkit-details-marker{display:none}
-  .faq-item summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-family:"Archivo Black",sans-serif;font-size:26px;color:var(--accent);line-height:1;transition:transform .2s ease}
-  .faq-item[open] summary::after{content:"\2013"}
-  .faq-item p{margin:0 0 24px;padding-right:44px;font-size:15px;line-height:1.7;color:#3a4254}
-  .faq-item p:first-of-type{padding-top:2px}
 
   .bp-source{font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.14em;color:var(--accent);font-weight:700;text-transform:uppercase}
 </style>
@@ -474,28 +467,32 @@
   </section>
 
   <!-- ═══ 13. FAQ ══════════════════════════════════════════════ -->
-  <section class="bg-light" data-screen-label="FAQ">
-    <div class="tex tex-dots-d"></div>
-    <div class="container">
-      <div class="head reveal llx-7">
-        <span class="eyebrow">Questions, answered</span>
-        <h2 class="display">LLC filing FAQ.</h2>
+  <section class="td-analysis td-faq-section tj-faq-band" data-screen-label="FAQ" data-faq-page="llc-filing">
+    <div class="td-analysis-inner">
+      <span class="tj-eyebrow-red">Questions, answered</span>
+      <h2 class="tj-band-h2">LLC FILING FAQ</h2>
+      <!-- FAQ:START -->
+      <div class="td-faq-categories">
+        <a class="td-faq-cat-link" href="llc-filing/faqs/#pricing-costs">Pricing &amp; Costs &rarr;</a>
+        <a class="td-faq-cat-link" href="llc-filing/faqs/#service-areas">Service Areas &rarr;</a>
+        <a class="td-faq-cat-link" href="llc-filing/faqs/#timeline-completion">Timeline &amp; Completion &rarr;</a>
+        <a class="td-faq-cat-link" href="llc-filing/faqs/#getting-started">Getting Started &rarr;</a>
+        <a class="td-faq-cat-link" href="llc-filing/faqs/#whats-included">What&#x27;s Included &rarr;</a>
+        <a class="td-faq-cat-link" href="llc-filing/faqs/#who-its-for">Who It&#x27;s For &rarr;</a>
+        <a class="td-faq-cat-link" href="llc-filing/faqs/#our-process">Our Process &rarr;</a>
+        <a class="td-faq-cat-link" href="llc-filing/faqs/#requirements-preparation">Requirements &amp; Preparation &rarr;</a>
+        <a class="td-faq-cat-link" href="llc-filing/faqs/#customization-options">Customization &amp; Options &rarr;</a>
+        <a class="td-faq-cat-link" href="llc-filing/faqs/#revisions-changes">Revisions &amp; Changes &rarr;</a>
+        <a class="td-faq-cat-link" href="llc-filing/faqs/#results-expectations">Results &amp; Expectations &rarr;</a>
+        <a class="td-faq-cat-link" href="llc-filing/faqs/#ownership-access">Ownership &amp; Access &rarr;</a>
+        <a class="td-faq-cat-link" href="llc-filing/faqs/#security-data-privacy">Security &amp; Data Privacy &rarr;</a>
+        <a class="td-faq-cat-link" href="llc-filing/faqs/#policies-guarantees">Policies &amp; Guarantees &rarr;</a>
+        <a class="td-faq-cat-link" href="llc-filing/faqs/#contact-next-steps">Contact &amp; Next Steps &rarr;</a>
+        <a class="td-faq-cat-link" href="llc-filing/faqs/#licensing-compliance">Licensing &amp; Compliance &rarr;</a>
+        <a class="td-faq-cat-link" href="llc-filing/faqs/#renewals-filing-status">Renewals &amp; Filing Status &rarr;</a>
       </div>
-      <div class="faq-list reveal d1">
-        <details class="faq-item"><summary>Is Toughjobs a law firm?</summary><p>No. Toughjobs is not a law firm and does not provide legal, tax, or accounting advice. We provide administrative filing assistance — we help you organize your information, prepare your formation paperwork based on what you give us, and submit it to the state.</p></details>
-        <details class="faq-item"><summary>What does the price actually include?</summary><p>Each price is your starting total for the initial LLC formation filing — Illinois is $195, Iowa is $65. Expedited Illinois processing is an optional add-on for an extra $100. We don't mark up the state's own fees.</p></details>
-        <details class="faq-item"><summary>How much does it cost to form an LLC in Illinois?</summary><p>The Illinois state filing fee is $150, and our standard total is $195. Expedited Illinois processing is optional and adds a $100 fee, bringing the total to $325 if you choose it. Expedited handling may require in-person filing and availability can vary.</p></details>
-        <details class="faq-item"><summary>How much does it cost to form an LLC in Iowa?</summary><p>The Iowa state filing fee is $50, and our total is $65. Iowa is one of the most affordable states in the country to form an LLC.</p></details>
-        <details class="faq-item"><summary>Are there ongoing fees after I file?</summary><p>Yes. Illinois requires a $75 annual report fee, and Iowa requires a $30 biennial report fee (filed online every two years) to keep your LLC in good standing. These are separate, recurring state fees — not part of your initial filing total.</p></details>
-        <details class="faq-item"><summary>Why do prices say "starting"?</summary><p>State fees are set by the state and can change at any time. We always confirm the current, final price with you before anything is filed, so there are no surprises.</p></details>
-        <details class="faq-item"><summary>How long does it take?</summary><p>Timelines are set by the state, not by us. Iowa online filings are often approved within a business day or two; Illinois standard processing takes longer, and expedited is faster. We'll give you the current estimate when you start.</p></details>
-        <details class="faq-item"><summary>Do I need an attorney instead?</summary><p>For a simple, straightforward LLC, most people don't. But if you have multiple owners with complex agreements, unusual tax questions, or legal risk, you should consult a licensed attorney or CPA — and we'll be honest with you if that's the better path.</p></details>
-        <details class="faq-item"><summary>Does forming an LLC protect me from lawsuits or save me on taxes?</summary><p>We can't promise that. Forming an LLC does not guarantee liability protection, tax savings, loan approval, or business success. Those depend on how your business is run and your specific situation — questions for a licensed professional.</p></details>
-        <details class="faq-item"><summary>What's a registered agent, and do I need one?</summary><p>A registered agent is a person or company with a physical address in your state who receives official mail for your LLC. Both Illinois and Iowa require one. You can often be your own, or we can help you coordinate a service as an add-on.</p></details>
-        <details class="faq-item"><summary>Can you also do my EIN, website, and branding?</summary><p>Yes — those are optional add-ons priced separately. Once your LLC is filed, we can help with EIN setup, an operating agreement template, a website, logo and branding, a Google Business Profile, business email, and bookkeeping setup.</p></details>
-        <details class="faq-item"><summary>Who's responsible if my information is wrong?</summary><p>You are. We file based on the details you provide, so it's important that your business name, addresses, and member information are accurate. We check your name against state records, but the underlying details are your responsibility.</p></details>
-        <details class="faq-item"><summary>Can you help if I'm not in Illinois or Iowa?</summary><p>Right now our filing assistance covers Illinois and Iowa. If you're forming in another state, reach out and we'll point you in the right direction.</p></details>
-      </div>
+      <p class="tj-faq-hub-link"><a href="llc-filing/faqs/">See all LLC Filing FAQs &rarr;</a></p>
+      <!-- FAQ:END -->
     </div>
   </section>
 

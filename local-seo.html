@@ -107,6 +107,131 @@
 .pc-logo-slot{flex:1 1 auto;display:flex;align-items:flex-start;justify-content:center;align-self:flex-start}
 .pc-title-logo{width:clamp(96px,10vw,152px);height:auto;transform:translateY(-14%);filter:drop-shadow(0 14px 26px rgba(0,0,0,.35))}
 @media(max-width:1200px){.pc-logo-slot{display:none}}</style>
+<style id="faq-index-prototype">
+/* Prototype: local-seo.html only. Round 2 — the ruled-list version read
+   as flat/quiet, so this leans on scale: big ghost index numerals (same
+   decimal-leading-zero vernacular as the Z-01 service-area tiles and the
+   FAQ accordion's own counter(faq)) as the section's one bold move. */
+.td-faq-section .td-faq-categories.td-faq-categories--index{
+  display:grid;grid-template-columns:1fr 1fr;
+  border-top:1px solid rgba(255,255,255,.16);
+  margin-top:44px;
+  counter-reset:faqidx;
+}
+.td-faq-section a.td-faq-cat-link.td-faq-cat-link--index{
+  counter-increment:faqidx;
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;gap:18px;
+  background:none;border:0;border-bottom:1px solid rgba(255,255,255,.16);
+  padding:26px 20px;
+  text-decoration:none;
+  transition:background .22s ease;
+}
+.td-faq-section .td-faq-categories--index a:nth-child(even){border-left:1px solid rgba(255,255,255,.16)}
+.td-faq-section a.td-faq-cat-link--index::before{
+  content:counter(faqidx,decimal-leading-zero);
+  font-family:'Archivo Black',sans-serif;
+  font-size:clamp(40px,4.4vw,56px);
+  line-height:1;
+  color:rgba(255,255,255,.16);
+  transition:color .22s ease;
+  flex:0 0 auto;
+}
+.td-faq-section a.td-faq-cat-link--index span{
+  font-family:'Archivo Black',sans-serif;text-transform:uppercase;letter-spacing:.005em;
+  font-size:clamp(17px,1.6vw,21px);line-height:1.15;color:#FFFFFF;
+  transition:color .22s ease;
+}
+.td-faq-section a.td-faq-cat-link--index:hover{background:rgba(200,38,42,.1)}
+.td-faq-section a.td-faq-cat-link--index:hover::before{color:#C8262A}
+.td-faq-section a.td-faq-cat-link--index:hover span{color:#C8262A}
+@media(max-width:680px){
+  .td-faq-section .td-faq-categories.td-faq-categories--index{grid-template-columns:1fr}
+  .td-faq-section .td-faq-categories--index a:nth-child(even){border-left:0}
+  .td-faq-section a.td-faq-cat-link--index::before{font-size:36px}
+}
+.td-faq-section p.tj-faq-hub-link{
+  margin-top:44px;padding-top:0;border-top:0;
+}
+.td-faq-section p.tj-faq-hub-link a{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:15px;letter-spacing:.02em;
+  color:#FFFFFF;text-decoration:none;
+  border-bottom:2px solid #C8262A;padding-bottom:4px;
+}
+.td-faq-section p.tj-faq-hub-link a:hover{color:#C8262A}
+.ls-faq-gauge{position:absolute;width:min(64vw,820px);height:auto;opacity:.3;pointer-events:none;z-index:0}
+.ls-faq-gauge--tr{top:-4%;right:-8%}
+.ls-faq-gauge--bl{bottom:-4%;left:-10%;opacity:.24}
+@media(max-width:900px){
+  .ls-faq-gauge{width:110vw;opacity:.2}
+  .ls-faq-gauge--tr{top:-2%;right:-45%}
+  .ls-faq-gauge--bl{bottom:-2%;left:-55%;opacity:.16}
+}
+</style>
+<style id="ls-page-redesign-prototype">
+/* Prototype: local-seo.html only. Breaks the repeated eyebrow/headline/
+   paragraph rhythm in the Compare, Proof, and Pricing sections — ask
+   before touching the shared service-page.css / service-longform.css
+   classes these replace. */
+
+/* -- Comparison table: elevate the Toughjobs column instead of a flat table -- */
+.ls-cmp-wrap .ls-cmp{width:100%;border-collapse:separate;border-spacing:0;font-size:15px;background:#fff}
+.ls-cmp-wrap .ls-cmp th,.ls-cmp-wrap .ls-cmp td{padding:20px 22px;text-align:left;border-bottom:1px solid #e7e9ee}
+.ls-cmp-wrap .ls-cmp thead th{font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:12px;color:#fff;background:var(--navy);border-bottom:2px solid #0A0F1C}
+.ls-cmp-wrap .ls-cmp td.rowlbl{font-weight:700;color:var(--ink)}
+.ls-cmp-wrap .ls-cmp .x{color:#b9bfca}
+.ls-cmp-wrap .ls-cmp thead th.ls-tj,.ls-cmp-wrap .ls-cmp td.ls-tj{
+  background:#0A0F1C;color:#fff;position:relative;
+  border-bottom:1px solid rgba(255,255,255,.14);
+}
+.ls-cmp-wrap .ls-cmp thead th.ls-tj{border-top:4px solid var(--accent);padding-top:16px;border-bottom:2px solid var(--accent)}
+.ls-cmp-wrap .ls-cmp tbody tr:last-child td.ls-tj{border-bottom:4px solid var(--accent)}
+.ls-cmp-wrap .ls-cmp td.ls-tj{font-weight:700}
+.ls-cmp-wrap .ls-cmp td.ls-tj .yes{color:var(--accent)}
+.ls-cmp-wrap .ls-cmp .tjhead{display:flex;align-items:center;gap:8px;color:#fff}
+.ls-cmp-wrap{overflow-x:auto;box-shadow:0 24px 60px rgba(10,15,28,.12)}
+@media(max-width:640px){
+  .ls-cmp-wrap .ls-cmp{min-width:600px}
+  .ls-cmp-wrap .ls-cmp th,.ls-cmp-wrap .ls-cmp td{padding:14px 16px;font-size:14px}
+}
+
+/* -- Operational proof: an actual 3-step sequence, not a 2-col card grid -- */
+.ls-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.ls-step{position:relative;padding:8px 32px 0 0}
+.ls-step:not(:last-child)::after{
+  content:"";position:absolute;top:27px;left:calc(100% - 16px);width:calc(100% - 20px);
+  height:1px;background:rgba(255,255,255,.22);
+}
+.ls-step-num{
+  font-family:"Archivo Black",sans-serif;font-size:15px;color:var(--accent);
+  border:1px solid rgba(255,255,255,.35);width:40px;height:40px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;margin-bottom:22px;
+  background:#002768;position:relative;z-index:1;
+}
+.ls-step h3{color:#fff;font-family:"Archivo Black",sans-serif;text-transform:uppercase;margin:0 0 10px;font-size:19px}
+.ls-step p{font-size:16px;line-height:1.6;color:rgba(255,255,255,.82);margin:0}
+@media(max-width:860px){
+  .ls-steps{grid-template-columns:1fr;gap:32px}
+  .ls-step{padding-right:0}
+  .ls-step:not(:last-child)::after{display:none}
+}
+
+/* -- Pricing: a rate schedule, not a plain data table -- */
+.ls-pricing{border-top:1px solid rgba(255,255,255,.18);margin:20px 0 24px}
+.ls-price-row{
+  display:grid;grid-template-columns:1fr auto;column-gap:28px;align-items:baseline;
+  padding:26px 0 8px;border-bottom:1px solid rgba(255,255,255,.14);
+}
+.ls-price-row:last-child{border-bottom:1px solid rgba(255,255,255,.18)}
+.ls-price-name{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:18px;color:#fff;letter-spacing:.01em}
+.ls-price-amount{font-family:"Archivo Black",sans-serif;font-size:22px;color:var(--accent);white-space:nowrap;text-align:right}
+.ls-price-desc{grid-column:1/-1;font-size:15px;line-height:1.6;color:rgba(255,255,255,.75);margin:10px 0 18px;max-width:70ch}
+@media(max-width:600px){
+  .ls-price-row{grid-template-columns:1fr}
+  .ls-price-amount{text-align:left}
+}
+</style>
 </head>
 <body class="sp">
 <main>
@@ -134,10 +259,10 @@
         <h2 class="display">DIY vs. agency vs. Toughjobs.</h2>
         <p class="lede">Local is won in the details.</p>
       </div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
-      <div class="cmp-wrap reveal d1">
-        <table class="cmp">
-          <thead><tr><th></th><th>DIY</th><th>Typical Agency</th><th class="tj"><span class="tjhead">Toughjobs</span></th></tr></thead>
-          <tbody><tr><td class="rowlbl">Starting price</td><td class="x">Your time</td><td>$1,500–4,000/mo</td><td class="tj">From $495</td></tr><tr><td class="rowlbl">Google listing</td><td class="x">Guesswork</td><td>Generic</td><td class="tj"><span class="yes">Specialty focus</span></td></tr><tr><td class="rowlbl">Getting reviews</td><td class="x">Ad hoc</td><td>Add-on</td><td class="tj"><span class="yes">Systematic</span></td></tr><tr><td class="rowlbl">Pages for each town</td><td class="x">No</td><td>Templated</td><td class="tj"><span class="yes">Per-town, custom-built</span></td></tr><tr><td class="rowlbl">Reports</td><td class="x">None</td><td>Vanity</td><td class="tj"><span class="yes">Rankings + calls</span></td></tr></tbody>
+      <div class="ls-cmp-wrap reveal d1">
+        <table class="ls-cmp">
+          <thead><tr><th></th><th>DIY</th><th>Typical Agency</th><th class="ls-tj"><span class="tjhead">Toughjobs</span></th></tr></thead>
+          <tbody><tr><td class="rowlbl">Starting price</td><td class="x">Your time</td><td>$1,500–4,000/mo</td><td class="ls-tj">From $495</td></tr><tr><td class="rowlbl">Google listing</td><td class="x">Guesswork</td><td>Generic</td><td class="ls-tj"><span class="yes">Specialty focus</span></td></tr><tr><td class="rowlbl">Getting reviews</td><td class="x">Ad hoc</td><td>Add-on</td><td class="ls-tj"><span class="yes">Systematic</span></td></tr><tr><td class="rowlbl">Pages for each town</td><td class="x">No</td><td>Templated</td><td class="ls-tj"><span class="yes">Per-town, custom-built</span></td></tr><tr><td class="rowlbl">Reports</td><td class="x">None</td><td>Vanity</td><td class="ls-tj"><span class="yes">Rankings + calls</span></td></tr></tbody>
         </table>
       </div>
       <p class="cmp-note">The top 3 spots on the Google map get most of the clicks on "near me" searches — that's the spot we're fighting for.</p>
@@ -152,10 +277,10 @@
         <span class="eyebrow">Real proof, not promises</span>
         <h2 class="display">How we prove the work is paying off.</h2>
       </div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
-      <div class="tess">
-        <div class="t reveal"><h3 class="lsx-3">Where you start</h3><p class="q lsx-4">Before we touch anything, we write down exactly where you stand today — your website, your Google listing, your budget, and your market.</p></div>
-        <div class="t reveal"><h3 class="lsx-3">What we do</h3><p class="q lsx-4">We keep a log of every change we make, when we made it, and who approved it — so nothing happens behind your back.</p></div>
-        <div class="t reveal"><h3 class="lsx-3">What you get</h3><p class="q lsx-4">We track real calls and form fills back to real jobs booked, whenever you can share that info with us. No fake numbers, no stock photos as "proof."</p></div>
+      <div class="ls-steps">
+        <div class="ls-step reveal"><span class="ls-step-num">01</span><h3>Where you start</h3><p>Before we touch anything, we write down exactly where you stand today — your website, your Google listing, your budget, and your market.</p></div>
+        <div class="ls-step reveal"><span class="ls-step-num">02</span><h3>What we do</h3><p>We keep a log of every change we make, when we made it, and who approved it — so nothing happens behind your back.</p></div>
+        <div class="ls-step reveal"><span class="ls-step-num">03</span><h3>What you get</h3><p>We track real calls and form fills back to real jobs booked, whenever you can share that info with us. No fake numbers, no stock photos as "proof."</p></div>
       </div>
     </div>
   <div class="container seo-longform lsx-5">
@@ -227,16 +352,33 @@
   <div class="td-analysis-inner">
     <span class="tj-eyebrow-red">The investment</span>
     <h2>WHAT DOES LOCAL SEO COST?</h2>
-    <table class="td-cost-table">
-      <thead><tr><th>Tier</th><th>Typical Investment</th><th>What You Get</th></tr></thead>
-      <tbody>
-        <tr><td>GBP Foundation</td><td>$495, one time</td><td>We fix up your Google Business listing, clean up your top 25 directory listings, and set up a system to get reviews. One-time project — no ongoing work.</td></tr>
-        <tr><td>Single-City Local</td><td>$495 every month</td><td>We keep posting to your Google listing, keep your directory listings clean, help you get reviews, and improve one page on your site for your city.</td></tr>
-        <tr><td>Multi-City Local</td><td>$995 every month</td><td>3&ndash;8 pages for the towns you serve, weekly Google posts, a system that automatically asks for and responds to reviews, and a monthly report on your rankings and calls.</td></tr>
-        <tr><td>Regional Growth</td><td>$1,795 every month</td><td>10+ pages for towns you serve, detailed ranking tracking across your whole area, a plan to out-rank competitors, and new content added regularly.</td></tr>
-        <tr><td>Multi-Location Business</td><td>$395/mo base, plus $295/mo per location</td><td>We manage the Google listing for each of your locations, with one report covering them all.</td></tr>
-      </tbody>
-    </table>
+    <div class="ls-pricing">
+      <div class="ls-price-row">
+        <span class="ls-price-name">GBP Foundation</span>
+        <span class="ls-price-amount">$495 one-time</span>
+        <p class="ls-price-desc">We fix up your Google Business listing, clean up your top 25 directory listings, and set up a system to get reviews. One-time project — no ongoing work.</p>
+      </div>
+      <div class="ls-price-row">
+        <span class="ls-price-name">Single-City Local</span>
+        <span class="ls-price-amount">$495/mo</span>
+        <p class="ls-price-desc">We keep posting to your Google listing, keep your directory listings clean, help you get reviews, and improve one page on your site for your city.</p>
+      </div>
+      <div class="ls-price-row">
+        <span class="ls-price-name">Multi-City Local</span>
+        <span class="ls-price-amount">$995/mo</span>
+        <p class="ls-price-desc">3&ndash;8 pages for the towns you serve, weekly Google posts, a system that automatically asks for and responds to reviews, and a monthly report on your rankings and calls.</p>
+      </div>
+      <div class="ls-price-row">
+        <span class="ls-price-name">Regional Growth</span>
+        <span class="ls-price-amount">$1,795/mo</span>
+        <p class="ls-price-desc">10+ pages for towns you serve, detailed ranking tracking across your whole area, a plan to out-rank competitors, and new content added regularly.</p>
+      </div>
+      <div class="ls-price-row">
+        <span class="ls-price-name">Multi-Location Business</span>
+        <span class="ls-price-amount">From $395/mo</span>
+        <p class="ls-price-desc">Plus $295/mo per additional location. We manage the Google listing for each of your locations, with one report covering them all.</p>
+      </div>
+    </div>
     <div class="td-soft-cta">
       <p><strong>Non-profit organizations get 50% off every tier above.</strong></p>
     </div>
@@ -264,27 +406,50 @@
 </section>
 
 <section class="td-analysis td-faq-section tj-faq-band" data-screen-label="FAQ" data-faq-page="local-seo">
+  <svg class="ls-faq-gauge ls-faq-gauge--tr" viewBox="0 0 800 800" aria-hidden="true" focusable="false">
+    <circle cx="620" cy="180" r="360" fill="none" stroke="#C8262A" stroke-width="2"/>
+    <circle cx="620" cy="180" r="270" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+    <circle cx="620" cy="180" r="180" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+    <circle cx="620" cy="180" r="4" fill="#C8262A"/>
+    <g stroke="#FFFFFF" stroke-width="2">
+      <line x1="620" y1="-180" x2="620" y2="-120"/>
+      <line x1="620" y1="480" x2="620" y2="540"/>
+      <line x1="200" y1="180" x2="260" y2="180"/>
+      <line x1="980" y1="180" x2="1040" y2="180"/>
+    </g>
+  </svg>
+  <svg class="ls-faq-gauge ls-faq-gauge--bl" viewBox="0 0 800 800" aria-hidden="true" focusable="false">
+    <circle cx="180" cy="620" r="320" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+    <circle cx="180" cy="620" r="230" fill="none" stroke="#C8262A" stroke-width="2"/>
+    <circle cx="180" cy="620" r="4" fill="#FFFFFF"/>
+    <g stroke="#FFFFFF" stroke-width="1.5">
+      <line x1="180" y1="260" x2="180" y2="320"/>
+      <line x1="180" y1="920" x2="180" y2="980"/>
+      <line x1="-180" y1="620" x2="-120" y2="620"/>
+      <line x1="540" y1="620" x2="600" y2="620"/>
+    </g>
+  </svg>
   <div class="td-analysis-inner">
-    <span class="tj-eyebrow-red">Straight answers</span>
-    <h2 class="tj-band-h2">EXPLORE LOCAL SEO FAQS</h2>
+    <span class="tj-eyebrow-red reveal">Straight answers</span>
+    <h2 class="tj-band-h2 reveal d1">EXPLORE LOCAL SEO FAQS</h2>
     <!-- FAQ:START -->
-      <div class="td-faq-categories">
-        <a class="td-faq-cat-link" href="local-seo/faqs/#pricing-costs">Pricing &amp; Costs &rarr;</a>
-        <a class="td-faq-cat-link" href="local-seo/faqs/#service-areas">Service Areas &rarr;</a>
-        <a class="td-faq-cat-link" href="local-seo/faqs/#timeline-completion">Timeline &amp; Completion &rarr;</a>
-        <a class="td-faq-cat-link" href="local-seo/faqs/#getting-started">Getting Started &rarr;</a>
-        <a class="td-faq-cat-link" href="local-seo/faqs/#whats-included">What&#x27;s Included &rarr;</a>
-        <a class="td-faq-cat-link" href="local-seo/faqs/#who-its-for">Who It&#x27;s For &rarr;</a>
-        <a class="td-faq-cat-link" href="local-seo/faqs/#our-process">Our Process &rarr;</a>
-        <a class="td-faq-cat-link" href="local-seo/faqs/#requirements-preparation">Requirements &amp; Preparation &rarr;</a>
-        <a class="td-faq-cat-link" href="local-seo/faqs/#customization-options">Customization &amp; Options &rarr;</a>
-        <a class="td-faq-cat-link" href="local-seo/faqs/#results-expectations">Results &amp; Expectations &rarr;</a>
-        <a class="td-faq-cat-link" href="local-seo/faqs/#ownership-access">Ownership &amp; Access &rarr;</a>
-        <a class="td-faq-cat-link" href="local-seo/faqs/#policies-guarantees">Policies &amp; Guarantees &rarr;</a>
-        <a class="td-faq-cat-link" href="local-seo/faqs/#contact-next-steps">Contact &amp; Next Steps &rarr;</a>
-        <a class="td-faq-cat-link" href="local-seo/faqs/#performance-reporting">Performance &amp; Reporting &rarr;</a>
+      <div class="td-faq-categories td-faq-categories--index">
+        <a class="td-faq-cat-link td-faq-cat-link--index reveal d1" href="local-seo/faqs/#pricing-costs"><span>Pricing &amp; Costs</span></a>
+        <a class="td-faq-cat-link td-faq-cat-link--index reveal d1" href="local-seo/faqs/#service-areas"><span>Service Areas</span></a>
+        <a class="td-faq-cat-link td-faq-cat-link--index reveal d2" href="local-seo/faqs/#timeline-completion"><span>Timeline &amp; Completion</span></a>
+        <a class="td-faq-cat-link td-faq-cat-link--index reveal d2" href="local-seo/faqs/#getting-started"><span>Getting Started</span></a>
+        <a class="td-faq-cat-link td-faq-cat-link--index reveal d3" href="local-seo/faqs/#whats-included"><span>What&#x27;s Included</span></a>
+        <a class="td-faq-cat-link td-faq-cat-link--index reveal d3" href="local-seo/faqs/#who-its-for"><span>Who It&#x27;s For</span></a>
+        <a class="td-faq-cat-link td-faq-cat-link--index reveal d4" href="local-seo/faqs/#our-process"><span>Our Process</span></a>
+        <a class="td-faq-cat-link td-faq-cat-link--index reveal d4" href="local-seo/faqs/#requirements-preparation"><span>Requirements &amp; Preparation</span></a>
+        <a class="td-faq-cat-link td-faq-cat-link--index reveal d1" href="local-seo/faqs/#customization-options"><span>Customization &amp; Options</span></a>
+        <a class="td-faq-cat-link td-faq-cat-link--index reveal d1" href="local-seo/faqs/#results-expectations"><span>Results &amp; Expectations</span></a>
+        <a class="td-faq-cat-link td-faq-cat-link--index reveal d2" href="local-seo/faqs/#ownership-access"><span>Ownership &amp; Access</span></a>
+        <a class="td-faq-cat-link td-faq-cat-link--index reveal d2" href="local-seo/faqs/#policies-guarantees"><span>Policies &amp; Guarantees</span></a>
+        <a class="td-faq-cat-link td-faq-cat-link--index reveal d3" href="local-seo/faqs/#contact-next-steps"><span>Contact &amp; Next Steps</span></a>
+        <a class="td-faq-cat-link td-faq-cat-link--index reveal d3" href="local-seo/faqs/#performance-reporting"><span>Performance &amp; Reporting</span></a>
       </div>
-      <p class="tj-faq-hub-link"><a href="local-seo/faqs/">See all Local SEO FAQs &rarr;</a></p>
+      <p class="tj-faq-hub-link reveal d4"><a href="local-seo/faqs/">See all Local SEO FAQs &rarr;</a></p>
     <!-- FAQ:END -->
   </div>
 </section>

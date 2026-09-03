@@ -940,5 +940,113 @@
   "desc": "Explore Toughjobs marketing pages and practical guides for 28 contractor and home-service trades, from HVAC and plumbing to roofing and landscaping.",
   "created": "2026-07-27",
   "updated": "2026-07-29"
+ },
+ "faq/index.html": {
+  "title": "FAQ Index | Toughjobs",
+  "desc": "Every Toughjobs service, with a direct link to its full FAQ page.",
+  "created": "2026-09-02",
+  "updated": "2026-09-02"
+ },
+ "websites/faqs/index.html": {
+  "title": "Websites FAQs | Toughjobs",
+  "desc": "Every question we get about Websites at Toughjobs, organized by category.",
+  "created": "2026-09-02",
+  "updated": "2026-09-02"
+ },
+ "local-seo/faqs/index.html": {
+  "title": "Local SEO FAQs | Toughjobs",
+  "desc": "Every question we get about Local SEO at Toughjobs, organized by category.",
+  "created": "2026-09-02",
+  "updated": "2026-09-02"
+ },
+ "paid-ads/faqs/index.html": {
+  "title": "Google Ads FAQs | Toughjobs",
+  "desc": "Every question we get about Google Ads at Toughjobs, organized by category.",
+  "created": "2026-09-02",
+  "updated": "2026-09-02"
+ },
+ "seo/faqs/index.html": {
+  "title": "SEO FAQs | Toughjobs",
+  "desc": "Every question we get about SEO at Toughjobs, organized by category.",
+  "created": "2026-09-02",
+  "updated": "2026-09-02"
+ },
+ "social-media/faqs/index.html": {
+  "title": "Social Media FAQs | Toughjobs",
+  "desc": "Every question we get about Social Media at Toughjobs, organized by category.",
+  "created": "2026-09-02",
+  "updated": "2026-09-02"
+ },
+ "reviews/faqs/index.html": {
+  "title": "Review Management FAQs | Toughjobs",
+  "desc": "Every question we get about Review Management at Toughjobs, organized by category.",
+  "created": "2026-09-02",
+  "updated": "2026-09-02"
+ },
+ "branding/faqs/index.html": {
+  "title": "Branding FAQs | Toughjobs",
+  "desc": "Every question we get about Branding at Toughjobs, organized by category.",
+  "created": "2026-09-02",
+  "updated": "2026-09-02"
+ },
+ "print-collateral/faqs/index.html": {
+  "title": "Print Collateral FAQs | Toughjobs",
+  "desc": "Every question we get about Print Collateral at Toughjobs, organized by category.",
+  "created": "2026-09-02",
+  "updated": "2026-09-02"
+ },
+ "video-creation-editing/faqs/index.html": {
+  "title": "Video Creation & Editing FAQs | Toughjobs",
+  "desc": "Every question we get about Video Creation & Editing at Toughjobs, organized by category.",
+  "created": "2026-09-02",
+  "updated": "2026-09-02"
+ },
+ "software/faqs/index.html": {
+  "title": "Software FAQs | Toughjobs",
+  "desc": "Every question we get about Software at Toughjobs, organized by category.",
+  "created": "2026-09-02",
+  "updated": "2026-09-02"
+ },
+ "ai-automations/faqs/index.html": {
+  "title": "AI & Automations FAQs | Toughjobs",
+  "desc": "Every question we get about AI & Automations at Toughjobs, organized by category.",
+  "created": "2026-09-02",
+  "updated": "2026-09-02"
+ },
+ "database-reactivation/faqs/index.html": {
+  "title": "Database Reactivation FAQs | Toughjobs",
+  "desc": "Every question we get about Database Reactivation at Toughjobs, organized by category.",
+  "created": "2026-09-02",
+  "updated": "2026-09-02"
+ },
+ "coaching/faqs/index.html": {
+  "title": "Coaching FAQs | Toughjobs",
+  "desc": "Every question we get about Coaching at Toughjobs, organized by category.",
+  "created": "2026-09-02",
+  "updated": "2026-09-02"
+ },
+ "llc-filing/faqs/index.html": {
+  "title": "LLC Filing FAQs | Toughjobs",
+  "desc": "Every question we get about LLC Filing at Toughjobs, organized by category.",
+  "created": "2026-09-02",
+  "updated": "2026-09-02"
+ },
+ "clothing-apparel/faqs/index.html": {
+  "title": "Clothing & Apparel FAQs | Toughjobs",
+  "desc": "Every question we get about Clothing & Apparel at Toughjobs, organized by category.",
+  "created": "2026-09-02",
+  "updated": "2026-09-02"
+ },
+ "email-marketing.html": {
+  "title": "Email Marketing for Contractors | Toughjobs",
+  "desc": "Email marketing for trade contractors — staying in front of past customers and leads between jobs.",
+  "created": "2026-09-02",
+  "updated": "2026-09-02"
+ },
+ "conversion-rate-optimization.html": {
+  "title": "Conversion Rate Optimization for Contractors | Toughjobs",
+  "desc": "Conversion rate optimization for trade contractor websites — turning more of your existing traffic into calls and booked jobs.",
+  "created": "2026-09-02",
+  "updated": "2026-09-02"
  }
 }

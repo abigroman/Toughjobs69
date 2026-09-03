@@ -1,10 +1,50 @@
 /* ── Universal Header Injection Script ──────────────────────────────── */
-/* 
+/*
   Load this script in every plain HTML page as:
   <script src="inject-header.js"></script>
-  
-  Place it BEFORE any other scripts that need the header to exist.
+  (or "../../inject-header.js" etc. from a nested page — the correct relative
+  depth for THIS script tag). Place it BEFORE any other scripts that need
+  the header to exist.
 */
+
+/*
+  Every asset this file fetches or points a href/src at (shared-header.html,
+  the logo, service-hero-uniform.css, and every link *inside* the fetched
+  header markup) is written as a site-root-relative path like "websites.html"
+  or "assets/logo.webp" — correct for every page that used to live flat at
+  site root. Pages nested in a subfolder (e.g. websites/faqs/index.html)
+  break those paths, because a fetch('shared-header.html') or an <a
+  href="websites.html"> resolves against the CURRENT PAGE's folder, not the
+  site root. This script's own <script src="..."> tag is always written with
+  the correct relative depth for wherever it's loaded from, so we derive the
+  site root from *this script's* resolved URL and rewrite every root-relative
+  reference against that — instead of hardcoding an assumption that the page
+  is always at the site root.
+*/
+var TJ_SITE_ROOT = (function () {
+  var scriptEl = document.currentScript;
+  if (!scriptEl) return './';
+  return new URL('.', scriptEl.src).href;
+})();
+
+function tjResolveSiteUrl(relativePath) {
+  var resolved = new URL(relativePath, TJ_SITE_ROOT);
+  return resolved.pathname + resolved.search + resolved.hash;
+}
+
+function tjRewriteRelativeUrls(container) {
+  var attrsByTag = { A: 'href', IMG: 'src' };
+  Object.keys(attrsByTag).forEach(function (tag) {
+    var attr = attrsByTag[tag];
+    container.querySelectorAll(tag.toLowerCase() + '[' + attr + ']').forEach(function (el) {
+      var value = el.getAttribute(attr);
+      if (!value) return;
+      if (/^(https?:)?\/\//i.test(value)) return; // absolute / protocol-relative
+      if (/^(#|mailto:|tel:|javascript:)/i.test(value)) return; // same-page or non-navigational
+      el.setAttribute(attr, tjResolveSiteUrl(value));
+    });
+  });
+}
 
 (function loadSharedHeroStyles() {
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
@@ -20,7 +60,7 @@
 
   const stylesheet = document.createElement('link');
   stylesheet.rel = 'stylesheet';
-  stylesheet.href = 'service-hero-uniform.css?v=20260730b';
+  stylesheet.href = tjResolveSiteUrl('service-hero-uniform.css?v=20260730b');
   stylesheet.dataset.sharedHeroLayout = 'true';
   document.head.appendChild(stylesheet);
 })();
@@ -81,13 +121,23 @@
 })();
 
 (function injectHeader() {
-  // Fetch the shared header HTML
-  fetch('shared-header.html')
+  // Fetch the shared header HTML, resolved against the site root (not the current page's folder)
+  fetch(tjResolveSiteUrl('shared-header.html'))
     .then(response => response.text())
     .then(headerHTML => {
       // Insert header at the very top of body
       document.body.insertAdjacentHTML('afterbegin', headerHTML);
-      
+
+      // The fetched markup's own links/images are written as site-root-relative
+      // paths — rewrite them so they still work from a nested page. Scoped to
+      // just the freshly-inserted header + mobile drawer (siblings, not nested
+      // inside <header>) — never the whole <body>, which would also catch
+      // this page's own already-correct relative links and double-resolve them.
+      var headerEl = document.body.querySelector('header');
+      var mobileDrawerEl = document.getElementById('mobileDrawer');
+      if (headerEl) tjRewriteRelativeUrls(headerEl);
+      if (mobileDrawerEl) tjRewriteRelativeUrls(mobileDrawerEl);
+
       // Initialize header functionality
       initHeaderInteractions();
       initMobileDrawer();

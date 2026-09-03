@@ -12,6 +12,7 @@
 <meta name="description" content="Free contractor licensing guide from Toughjobs: what plumbing, roofing, HVAC, landscaping, electrical, and pest-control businesses need beyond an LLC before." />
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="service-page.css?v=20260729" />
+<link rel="stylesheet" href="css/faq-band.css" />
 <style>
   *,*::before,*::after{box-sizing:border-box}
   html,body{margin:0;padding:0;background:#0A0F1C}
@@ -108,14 +109,6 @@
   .disclaimer strong{color:var(--ink)}
 
   /* FAQ */
-  .faq-list{max-width:940px;margin:0 auto;display:flex;flex-direction:column;gap:0;border-top:1px solid #e3e5ea}
-  .faq-item{border-bottom:1px solid #e3e5ea}
-  .faq-item summary{list-style:none;cursor:pointer;padding:24px 44px 24px 2px;position:relative;font-family:"Archivo",sans-serif;font-weight:800;font-size:17.5px;color:var(--ink);display:block}
-  .faq-item summary::-webkit-details-marker{display:none}
-  .faq-item summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-family:"Archivo Black",sans-serif;font-size:26px;color:var(--accent);line-height:1;transition:transform .2s ease}
-  .faq-item[open] summary::after{content:"\2013"}
-  .faq-item p{margin:0 0 24px;padding-right:44px;font-size:15px;line-height:1.7;color:#3a4254}
-  .faq-item p:first-of-type{padding-top:2px}
 
   /* source list */
   .source-list{max-width:900px;font-size:13px;line-height:1.8;color:rgba(255,255,255,.65);list-style:none;margin:0;padding:0}
@@ -131,26 +124,112 @@
   background-attachment:fixed !important;
 }
 </style>
+<!-- SEO-FAQ-SCHEMA:START -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "Do I need more than an LLC to run a contractor business in Illinois?", "acceptedAnswer": {"@type": "Answer", "text": "Usually yes. An LLC registers your business entity with the state, but most trades also need state or local licensing, city registration, permits, and insurance before performing or advertising work."}},
-    {"@type": "Question", "name": "Do Iowa contractors need to register with the state?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Iowa requires individuals and businesses earning $2,000 or more per year from construction work to register as a Construction Contractor with the Iowa Department of Inspections, Appeals, and Licensing (DIAL)."}},
-    {"@type": "Question", "name": "Do plumbers need a license in Illinois and Iowa?", "acceptedAnswer": {"@type": "Answer", "text": "Yes in both states. Illinois licenses plumbers statewide through the Illinois Department of Public Health. Iowa licenses plumbing and mechanical contractors through the Iowa Plumbing and Mechanical Systems Board."}},
-    {"@type": "Question", "name": "Does Illinois have a general contractor license?", "acceptedAnswer": {"@type": "Answer", "text": "No. Illinois does not issue a statewide general contractor license. General contracting, electrical, and HVAC work are regulated at the city or county level, such as Chicago's Department of Buildings."}},
-    {"@type": "Question", "name": "Do landscapers need a license to apply pesticides?", "acceptedAnswer": {"@type": "Answer", "text": "Typically yes. Applying pesticides or herbicides for hire generally requires a commercial pesticide applicator license through the state department of agriculture in both Illinois and Iowa."}},
-    {"@type": "Question", "name": "Do roofers need a license in Illinois?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Illinois requires a statewide roofing contractor license through the Illinois Department of Financial and Professional Regulation under the Roofing Industry Licensing Act."}},
-    {"@type": "Question", "name": "Do electricians need a state license in Iowa?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Iowa licenses electrical contractors and electricians through the Iowa Electrical Examining Board."}},
-    {"@type": "Question", "name": "Can I advertise contractor services before getting licensed?", "acceptedAnswer": {"@type": "Answer", "text": "You should hold any required license or registration before advertising services that legally require one. Advertising services you are not licensed to perform can create legal and reputational risk."}},
-    {"@type": "Question", "name": "Should I put my license number on my website?", "acceptedAnswer": {"@type": "Answer", "text": "If you hold a license, displaying an accurate license number can build trust. Never display a license number you do not currently hold, or one that does not cover the work being advertised."}},
-    {"@type": "Question", "name": "Do city permits matter if I already have an LLC?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. An LLC is a business entity registration and does not replace city or county permits, inspections, or local contractor registration required for specific projects."}},
-    {"@type": "Question", "name": "What insurance should a home service contractor carry?", "acceptedAnswer": {"@type": "Answer", "text": "Most home service contractors carry general liability insurance, workers' compensation if they have employees, commercial auto coverage, and sometimes a license or contractor bond depending on the trade and jurisdiction."}},
-    {"@type": "Question", "name": "Can Toughjobs help me build a compliant contractor website?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Toughjobs helps contractors build websites, SEO pages, and marketing materials that present their licensing, service area, and guarantees accurately. Toughjobs is not a law firm and does not determine licensing requirements for you."}}
+    {
+      "@type": "Question",
+      "name": "Can Toughjobs help me build a compliant contractor website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Toughjobs helps contractors build websites, SEO pages, and marketing materials that present licensing, service area, and guarantees accurately. Toughjobs is not a law firm and does not determine licensing requirements for you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need more than an LLC to run a contractor business in Illinois?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually yes. An LLC registers your business entity with the state, but most trades also need state or local licensing, city registration, permits, and insurance before performing or advertising work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do Iowa contractors need to register with the state?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Iowa requires individuals and businesses earning $2,000 or more per year from construction work to register as a Construction Contractor with the Iowa Department of Inspections, Appeals, and Licensing (DIAL)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do plumbers need a license in Illinois and Iowa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes in both states. Illinois licenses plumbers statewide through the Illinois Department of Public Health. Iowa licenses plumbing and mechanical contractors through the Iowa Plumbing and Mechanical Systems Board."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Illinois have a general contractor license?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Illinois does not issue a statewide general contractor license. General contracting, electrical, and HVAC work are regulated at the city or county level, such as Chicago's Department of Buildings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do landscapers need a license to apply pesticides?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typically yes. Applying pesticides or herbicides for hire generally requires a commercial pesticide applicator license through the state department of agriculture in both Illinois and Iowa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do roofers need a license in Illinois?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Illinois requires a statewide roofing contractor license through the Illinois Department of Financial and Professional Regulation under the Roofing Industry Licensing Act."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do electricians need a state license in Iowa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Iowa licenses electrical contractors and electricians through the Iowa Electrical Examining Board, separate from general construction contractor registration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do city permits matter if I already have an LLC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. An LLC is a business entity registration and does not replace city or county permits, inspections, or local contractor registration required for specific projects."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What insurance should a home service contractor carry?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most contractors carry general liability insurance, workers' compensation if they have employees, commercial auto coverage, and sometimes a license or contractor bond depending on the trade and jurisdiction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I advertise contractor services before getting licensed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You should hold any required license or registration before advertising services that legally require one. Advertising services you're not licensed to perform can create legal and reputational risk."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I put my license number on my website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you hold a license, an accurate license number can build trust. Never display a license number you don't currently hold, or one that doesn't cover the specific work being advertised."
+      }
+    }
   ]
 }
 </script>
+<!-- SEO-FAQ-SCHEMA:END -->
 </head>
 <body class="sp">
 <main>
@@ -444,27 +523,26 @@
   </section>
 
   <!-- ═══ 13. FAQ ══════════════════════════════════════════════ -->
-  <section class="bg-light" data-screen-label="FAQ">
-    <div class="tex tex-dots-d"></div>
-    <div class="container">
-      <div class="head reveal" style="margin:0 auto clamp(36px,5vw,52px);text-align:center">
-        <span class="eyebrow">Questions, answered</span>
-        <h2 class="display">Contractor licensing FAQ.</h2>
+  <section class="td-analysis td-faq-section tj-faq-band" data-screen-label="FAQ" data-faq-page="business-licensing-illinois-iowa">
+    <div class="td-analysis-inner">
+      <span class="tj-eyebrow-red">Questions, answered</span>
+      <h2 class="tj-band-h2">CONTRACTOR LICENSING FAQ</h2>
+      <!-- FAQ:START -->
+      <div class="td-faq-list">
+        <details class="td-faq-item"><summary>Can Toughjobs help me build a compliant contractor website?</summary><p>Yes. Toughjobs helps contractors build websites, SEO pages, and marketing materials that present licensing, service area, and guarantees accurately. Toughjobs is not a law firm and does not determine licensing requirements for you.</p></details>
+        <details class="td-faq-item"><summary>Do I need more than an LLC to run a contractor business in Illinois?</summary><p>Usually yes. An LLC registers your business entity with the state, but most trades also need state or local licensing, city registration, permits, and insurance before performing or advertising work.</p></details>
+        <details class="td-faq-item"><summary>Do Iowa contractors need to register with the state?</summary><p>Yes. Iowa requires individuals and businesses earning $2,000 or more per year from construction work to register as a Construction Contractor with the Iowa Department of Inspections, Appeals, and Licensing (DIAL).</p></details>
+        <details class="td-faq-item"><summary>Do plumbers need a license in Illinois and Iowa?</summary><p>Yes in both states. Illinois licenses plumbers statewide through the Illinois Department of Public Health. Iowa licenses plumbing and mechanical contractors through the Iowa Plumbing and Mechanical Systems Board.</p></details>
+        <details class="td-faq-item"><summary>Does Illinois have a general contractor license?</summary><p>No. Illinois does not issue a statewide general contractor license. General contracting, electrical, and HVAC work are regulated at the city or county level, such as Chicago's Department of Buildings.</p></details>
+        <details class="td-faq-item"><summary>Do landscapers need a license to apply pesticides?</summary><p>Typically yes. Applying pesticides or herbicides for hire generally requires a commercial pesticide applicator license through the state department of agriculture in both Illinois and Iowa.</p></details>
+        <details class="td-faq-item"><summary>Do roofers need a license in Illinois?</summary><p>Yes. Illinois requires a statewide roofing contractor license through the Illinois Department of Financial and Professional Regulation under the Roofing Industry Licensing Act.</p></details>
+        <details class="td-faq-item"><summary>Do electricians need a state license in Iowa?</summary><p>Yes. Iowa licenses electrical contractors and electricians through the Iowa Electrical Examining Board, separate from general construction contractor registration.</p></details>
+        <details class="td-faq-item"><summary>Do city permits matter if I already have an LLC?</summary><p>Yes. An LLC is a business entity registration and does not replace city or county permits, inspections, or local contractor registration required for specific projects.</p></details>
+        <details class="td-faq-item"><summary>What insurance should a home service contractor carry?</summary><p>Most contractors carry general liability insurance, workers' compensation if they have employees, commercial auto coverage, and sometimes a license or contractor bond depending on the trade and jurisdiction.</p></details>
+        <details class="td-faq-item"><summary>Can I advertise contractor services before getting licensed?</summary><p>You should hold any required license or registration before advertising services that legally require one. Advertising services you're not licensed to perform can create legal and reputational risk.</p></details>
+        <details class="td-faq-item"><summary>Should I put my license number on my website?</summary><p>If you hold a license, an accurate license number can build trust. Never display a license number you don't currently hold, or one that doesn't cover the specific work being advertised.</p></details>
       </div>
-      <div class="faq-list reveal d1">
-        <details class="faq-item"><summary>Do I need more than an LLC to run a contractor business in Illinois?</summary><p>Usually yes. An LLC registers your business entity with the state, but most trades also need state or local licensing, city registration, permits, and insurance before performing or advertising work.</p></details>
-        <details class="faq-item"><summary>Do Iowa contractors need to register with the state?</summary><p>Yes. Iowa requires individuals and businesses earning $2,000 or more per year from construction work to register as a Construction Contractor with the Iowa Department of Inspections, Appeals, and Licensing (DIAL).</p></details>
-        <details class="faq-item"><summary>Do plumbers need a license in Illinois and Iowa?</summary><p>Yes in both states. Illinois licenses plumbers statewide through the Illinois Department of Public Health. Iowa licenses plumbing and mechanical contractors through the Iowa Plumbing and Mechanical Systems Board.</p></details>
-        <details class="faq-item"><summary>Does Illinois have a general contractor license?</summary><p>No. Illinois does not issue a statewide general contractor license. General contracting, electrical, and HVAC work are regulated at the city or county level, such as Chicago's Department of Buildings.</p></details>
-        <details class="faq-item"><summary>Do landscapers need a license to apply pesticides?</summary><p>Typically yes. Applying pesticides or herbicides for hire generally requires a commercial pesticide applicator license through the state department of agriculture in both Illinois and Iowa.</p></details>
-        <details class="faq-item"><summary>Do roofers need a license in Illinois?</summary><p>Yes. Illinois requires a statewide roofing contractor license through the Illinois Department of Financial and Professional Regulation under the Roofing Industry Licensing Act.</p></details>
-        <details class="faq-item"><summary>Do electricians need a state license in Iowa?</summary><p>Yes. Iowa licenses electrical contractors and electricians through the Iowa Electrical Examining Board, separate from general construction contractor registration.</p></details>
-        <details class="faq-item"><summary>Can I advertise contractor services before getting licensed?</summary><p>You should hold any required license or registration before advertising services that legally require one. Advertising services you're not licensed to perform can create legal and reputational risk.</p></details>
-        <details class="faq-item"><summary>Should I put my license number on my website?</summary><p>If you hold a license, an accurate license number can build trust. Never display a license number you don't currently hold, or one that doesn't cover the specific work being advertised.</p></details>
-        <details class="faq-item"><summary>Do city permits matter if I already have an LLC?</summary><p>Yes. An LLC is a business entity registration and does not replace city or county permits, inspections, or local contractor registration required for specific projects.</p></details>
-        <details class="faq-item"><summary>What insurance should a home service contractor carry?</summary><p>Most contractors carry general liability insurance, workers' compensation if they have employees, commercial auto coverage, and sometimes a license or contractor bond depending on the trade and jurisdiction.</p></details>
-        <details class="faq-item"><summary>Can Toughjobs help me build a compliant contractor website?</summary><p>Yes. Toughjobs helps contractors build websites, SEO pages, and marketing materials that present licensing, service area, and guarantees accurately. Toughjobs is not a law firm and does not determine licensing requirements for you.</p></details>
-      </div>
+      <!-- FAQ:END -->
     </div>
   </section>
 

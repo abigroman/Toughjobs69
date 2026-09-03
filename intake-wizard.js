@@ -255,7 +255,7 @@
       '<p style="font-size:18px;line-height:1.6;color:rgba(255,255,255,.92);margin:0 auto 40px;max-width:600px">Your answers are in. Book a 30-minute strategy call and we\'ll walk you through where the fastest wins are — no pitch deck, no pressure.</p>' +
       '<div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">' +
       '<a class="btn btn-dark" href="contact.html">Book my strategy call →</a>' +
-      '<a class="btn" href="tel:+13093061140" style="background:rgba(0,0,0,.25);border:2px solid rgba(255,255,255,.5)">⚡ (309) 306-1140</a>' +
+      '<a class="btn" href="tel:+13099289080" style="background:rgba(0,0,0,.25);border:2px solid rgba(255,255,255,.5)">⚡ (309) 928-9080</a>' +
       '</div>' +
       '<p style="font-size:13px;color:rgba(255,255,255,.7);margin-top:28px">We\'ll review everything before the call. Your responses stay saved on this device.</p>' +
       '</div></section>';

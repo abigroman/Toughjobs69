@@ -1,7 +1,7 @@
 /* Canonical FAQ band — matches the Concrete & Asphalt trade page exactly.
    Single source of truth for every FAQ section on the site. Loaded LAST so it
    outranks each page's local .td-analysis / .td-faq-item defaults. */
-.td-faq-section{position:relative;overflow:hidden;background:#002768;background-image:none;padding:80px 22px;width:100%;max-width:none;margin-inline:0;color:#fff}
+.td-faq-section{position:relative;overflow:hidden;background:#002768;background-image:url('../assets/blueprint-background.webp');background-attachment:fixed;background-size:cover;background-position:center;padding:80px 22px;width:100%;max-width:none;margin-inline:0;color:#fff}
 .td-faq-section > .td-analysis-inner{max-width:none;width:100%;margin:0;padding-inline:clamp(24px,5vw,80px);position:relative;z-index:1}
 .td-faq-section .tj-eyebrow-red{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:#C8262A}
 .td-faq-section .tj-band-h2,.td-faq-section > .td-analysis-inner > h2{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(22px,3vw,36px);line-height:1.08;color:#FFFFFF;margin:12px 0 0}
@@ -18,3 +18,25 @@
 .td-faq-section a{color:#C8262A}
 .td-faq-section a:hover{color:#FFFFFF}
 @media(max-width:720px){.td-faq-section{padding:56px 0}.td-faq-section .td-faq-item{padding:24px 22px}}
+
+/* Native <details>/<summary> accordion variant — additive, does not touch the
+   legacy <div><h3> shape above (still used by trade-*.html pages). Scoped to
+   the `details` tag specifically, at higher specificity than css/trade-sections.css's
+   `.td-faq-section .td-faq-item` rule, so it wins regardless of per-page <link> order. */
+.td-faq-section details.td-faq-item{padding:0;cursor:default}
+.td-faq-section details.td-faq-item:hover:not([open]){background:rgba(255,255,255,.09);transform:translateX(4px)}
+.td-faq-section details.td-faq-item[open]{background:rgba(255,255,255,.08)}
+.td-faq-section details.td-faq-item summary{list-style:none;cursor:pointer;display:block;padding:26px 52px 26px 30px;position:relative;font-family:'Archivo Black',sans-serif;text-transform:uppercase;color:#FFFFFF;font-size:19px;line-height:1.2;letter-spacing:-.01em}
+.td-faq-section details.td-faq-item summary::-webkit-details-marker{display:none}
+.td-faq-section details.td-faq-item summary::before{content:counter(faq,decimal-leading-zero);font-family:ui-monospace,Menlo,monospace;font-size:13px;font-weight:700;letter-spacing:.1em;color:#C8262A;margin-right:12px}
+.td-faq-section details.td-faq-item summary::after{content:"+";position:absolute;right:26px;top:24px;font-family:'Archivo Black',sans-serif;font-size:24px;color:#C8262A;line-height:1}
+.td-faq-section details.td-faq-item[open] summary::after{content:"\2013"}
+.td-faq-section details.td-faq-item p{margin:0;padding:0 30px 26px}
+@media(max-width:720px){.td-faq-section details.td-faq-item summary{padding:22px 44px 22px 22px}.td-faq-section details.td-faq-item p{padding:0 22px 22px}}
+
+/* "Explore <Service> FAQs" category-link chips — used on each service page in
+   place of full Q&A, linking out to that service's own /<slug>/faqs/ page. */
+.td-faq-categories{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:32px}
+.td-faq-cat-link{display:flex;align-items:center;justify-content:space-between;gap:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.16);border-left:3px solid #C8262A;padding:18px 22px;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:15px;color:#FFFFFF;text-decoration:none;transition:background .2s ease,transform .2s ease}
+.td-faq-cat-link:hover{background:rgba(255,255,255,.09);transform:translateX(4px);color:#FFFFFF}
+@media(max-width:680px){.td-faq-categories{grid-template-columns:1fr}}

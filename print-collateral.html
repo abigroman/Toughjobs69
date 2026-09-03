@@ -701,17 +701,28 @@ body.pl-locked{overflow:hidden}
   </div>
 </section>
 
-<section class="td-analysis td-faq-section tj-faq-band" data-screen-label="FAQ">
+<section class="td-analysis td-faq-section tj-faq-band" data-screen-label="FAQ" data-faq-page="print-collateral">
   <div class="td-analysis-inner">
     <span class="tj-eyebrow-red">Straight answers</span>
     <h2 class="tj-band-h2">Frequently Asked Questions About Print Collateral</h2>
-    <div class="td-faq-list">
-      <div class="td-faq-item"><h3>Does direct mail still work in 2026?</h3><p>Yes, and better than it did five years ago because so few businesses use it anymore. Response rates on well-targeted trade postcards typically run 0.5&ndash;2%, which crushes most digital channels on a per-lead-cost basis. The key is targeting &mdash; blanket mailing entire zip codes is wasteful. Saturating carrier routes around completed jobs is not.</p></div>
-      <div class="td-faq-item"><h3>How do I make print not look cheap?</h3><p>Three things. Heavy stock (16pt minimum for cards, 14pt for hangers), full-bleed professional design instead of a Word document, and consistent branding across every piece. Cheap print screams cheap contractor, and that impression sticks.</p></div>
-      <div class="td-faq-item"><h3>What's the best neighborhood strategy after a big job?</h3><p>We call it the "circle strategy." Yard sign in the customer's yard for two weeks. Door hangers on 20 neighbors the day the job wraps. EDDM postcard hits the surrounding two carrier routes 10 days later. Every touchpoint references the completed work. That's how one job becomes five.</p></div>
-      <div class="td-faq-item"><h3>How do I track if print is actually working?</h3><p>Use a dedicated tracking phone number on each print campaign (not your main line). QR codes with UTM parameters if you're driving to a landing page. Ask every incoming caller "how'd you hear about us?" and log it in the CRM. Within 90 days you'll know exactly what's producing.</p></div>
-      <div class="td-faq-item"><h3>What's the biggest print mistake contractors make?</h3><p>Cluttered design. Trying to list every service, every certification, every discount on one card. The best-performing pieces have one message, one call to action, one phone number, and a lot of white space. Say less, sell more.</p></div>
-    </div>
+    <!-- FAQ:START -->
+      <div class="td-faq-categories">
+        <a class="td-faq-cat-link" href="print-collateral/faqs/#pricing-costs">Pricing &amp; Costs &rarr;</a>
+        <a class="td-faq-cat-link" href="print-collateral/faqs/#service-areas">Service Areas &rarr;</a>
+        <a class="td-faq-cat-link" href="print-collateral/faqs/#timeline-completion">Timeline &amp; Completion &rarr;</a>
+        <a class="td-faq-cat-link" href="print-collateral/faqs/#getting-started">Getting Started &rarr;</a>
+        <a class="td-faq-cat-link" href="print-collateral/faqs/#whats-included">What&#x27;s Included &rarr;</a>
+        <a class="td-faq-cat-link" href="print-collateral/faqs/#who-its-for">Who It&#x27;s For &rarr;</a>
+        <a class="td-faq-cat-link" href="print-collateral/faqs/#our-process">Our Process &rarr;</a>
+        <a class="td-faq-cat-link" href="print-collateral/faqs/#requirements-preparation">Requirements &amp; Preparation &rarr;</a>
+        <a class="td-faq-cat-link" href="print-collateral/faqs/#customization-options">Customization &amp; Options &rarr;</a>
+        <a class="td-faq-cat-link" href="print-collateral/faqs/#results-expectations">Results &amp; Expectations &rarr;</a>
+        <a class="td-faq-cat-link" href="print-collateral/faqs/#policies-guarantees">Policies &amp; Guarantees &rarr;</a>
+        <a class="td-faq-cat-link" href="print-collateral/faqs/#contact-next-steps">Contact &amp; Next Steps &rarr;</a>
+        <a class="td-faq-cat-link" href="print-collateral/faqs/#materials-sizes-production">Materials, Sizes &amp; Production &rarr;</a>
+      </div>
+      <p class="tj-faq-hub-link"><a href="print-collateral/faqs/">See all Print Collateral FAQs &rarr;</a></p>
+    <!-- FAQ:END -->
   </div>
 </section>
 
@@ -881,7 +892,7 @@ var sec=document.getElementById('plum-dots');if(!sec)return;
 var canvas=sec.querySelector('.plum-dots-canvas');var ctx=canvas.getContext('2d');
 var dots=[],mouse={x:-9999,y:-9999},raf=null,dpr=Math.min(window.devicePixelRatio||1,2);
 function size(){var r=sec.getBoundingClientRect();canvas.width=r.width*dpr;canvas.height=r.height*dpr;canvas.style.width=r.width+'px';canvas.style.height=r.height+'px';ctx.setTransform(dpr,0,0,dpr,0,0);
-var cols=Math.round(r.width/34),rows=Math.round(r.height/34);dots=[];
+var cols=Math.round(r.width/24),rows=Math.round(r.height/24);dots=[];
 for(var i=0;i<cols;i++)for(var j=0;j<rows;j++){var x=(i+.5)*(r.width/cols),y=(j+.5)*(r.height/rows);dots.push({ox:x,oy:y,x:x,y:y});}
 }
 function frame(){var r=sec.getBoundingClientRect();ctx.clearRect(0,0,r.width,r.height);

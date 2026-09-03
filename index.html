@@ -348,6 +348,15 @@
         background-attachment: fixed;
         color: var(--ink);
       }
+      .bg-blueprint-navy {
+        background-color: var(--navy);
+        color: var(--white);
+      }
+      .bg-blueprint-navy h1,
+      .bg-blueprint-navy h2,
+      .bg-blueprint-navy h3 {
+        color: var(--white);
+      }
 
       /* Card lift hover */
       .lift {
@@ -797,6 +806,7 @@
       <section class="tj-clipped-edge" data-screen-label="Services" style="position:relative;padding:112px 0;overflow:hidden;background:url(&quot;assets/blueprint-background.webp&quot;) center/cover;background-attachment:fixed;color:var(--white);">
         <style>
 .tj-svc-edge-accent{position:absolute;inset:0 0 auto;height:6px;background:repeating-linear-gradient(45deg,var(--accent) 0 8px,var(--navy) 8px 16px);z-index:4;pointer-events:none}
+@media(min-width:881px){.tj-svc-edge-accent{height:26px}}
 .tj-svc-panel{position:relative;background:#1769E0;padding:48px 40px;overflow:hidden;border:8px solid transparent;border-image:repeating-linear-gradient(45deg,var(--red) 0 8px,var(--navy) 8px 16px) 8}
 .tj-svc-panel-bg{position:absolute;inset:0;background:url("assets/engineering-schematics.webp") center/cover;background-attachment:fixed;opacity:.28;pointer-events:none;mix-blend-mode:screen}
 .tj-svc-cat{position:relative;z-index:1;display:flex;align-items:center;gap:16px;margin:40px 0 18px}
@@ -829,7 +839,7 @@
             <div class="tj-svc-copy" style="text-align:right">
               <span class="eyebrow" style="color:var(--red)">What we do</span>
               <h2 class="display" style="font-size:clamp(38px,5vw,72px);margin:16px 0 0;line-height:1.02;color:var(--white);">
-                Fifteen tools<br />
+                Seventeen tools<br />
                 <span style="color:var(--white)">One job:</span><br />
                 <span style="color:var(--red)">keep your phone</span><span style="color:var(--red);white-space:nowrap"> RINGING</span>
               </h2>
@@ -837,35 +847,37 @@
           </div>
           <div class="tj-svc-panel">
             <div aria-hidden="true" class="tj-svc-panel-bg"></div>
-            <div class="tj-svc-cat"><span class="tj-svc-cat-name">Get Found</span><span class="tj-svc-cat-rule"></span><span class="tj-svc-cat-count">05</span></div>
+            <div class="tj-svc-cat"><span class="tj-svc-cat-name">Get Found</span><span class="tj-svc-cat-rule"></span><span class="tj-svc-cat-count">07</span></div>
             <div class="tj-svc-grid">
               <a class="tj-svc-card" href="websites.html"><span class="tj-svc-num">01</span><h3>Websites</h3><p>A site built to make the phone ring. Fast, easy on a phone screen, no fluff.</p></a>
               <a class="tj-svc-card" href="seo.html"><span class="tj-svc-num">02</span><h3>SEO</h3><p>Show up when folks search for the work you do. Free clicks, every day.</p></a>
               <a class="tj-svc-card" href="local-seo.html"><span class="tj-svc-num">03</span><h3>Local SEO</h3><p>Own the map. Land in the top three when someone nearby needs you now.</p></a>
               <a class="tj-svc-card" href="paid-ads.html"><span class="tj-svc-num">04</span><h3>Paid Ads</h3><p>Buy the top spot on Google. Turn it on today, book jobs this week.</p></a>
               <a class="tj-svc-card" href="video-creation-editing.html"><span class="tj-svc-num">05</span><h3>Video Creation &amp; Editing</h3><p>Raw job footage cut into ads and training clips. Ready to post, not stuck on a drive.</p></a>
+              <a class="tj-svc-card" href="email-marketing.html"><span class="tj-svc-num">06</span><h3>Email Marketing</h3><p>Stay top of mind between jobs so old customers and quoted leads call you, not a competitor.</p></a>
+              <a class="tj-svc-card" href="conversion-rate-optimization.html"><span class="tj-svc-num">07</span><h3>Conversion Rate Optimization</h3><p>More jobs from the traffic you already have. We fix the reasons visitors leave without calling.</p></a>
             </div>
             <div class="tj-svc-cat"><span class="tj-svc-cat-name">Look The Part</span><span class="tj-svc-cat-rule"></span><span class="tj-svc-cat-count">05</span></div>
             <div class="tj-svc-grid">
-              <a class="tj-svc-card" href="branding.html"><span class="tj-svc-num">06</span><h3>Branding</h3><p>A logo and look that says you do good work before you say a word.</p></a>
-              <a class="tj-svc-card" href="social-media.html"><span class="tj-svc-num">07</span><h3>Social Media</h3><p>Job photos and short clips that keep your name in front of the town.</p></a>
-              <a class="tj-svc-card" href="reviews.html"><span class="tj-svc-num">08</span><h3>Reviews</h3><p>More five-star reviews, handled for you. Good reviews close the deal.</p></a>
-              <a class="tj-svc-card" href="print-collateral.html"><span class="tj-svc-num">09</span><h3>Print</h3><p>Cards, flyers, door hangers, yard signs. Stuff you hand out and leave behind.</p></a>
-              <a class="tj-svc-card" href="clothing-apparel.html"><span class="tj-svc-num">10</span><h3>Apparel</h3><p>Shirts, hoodies, and hats with your name on them. Your crew is a billboard.</p></a>
+              <a class="tj-svc-card" href="branding.html"><span class="tj-svc-num">08</span><h3>Branding</h3><p>A logo and look that says you do good work before you say a word.</p></a>
+              <a class="tj-svc-card" href="social-media.html"><span class="tj-svc-num">09</span><h3>Social Media</h3><p>Job photos and short clips that keep your name in front of the town.</p></a>
+              <a class="tj-svc-card" href="reviews.html"><span class="tj-svc-num">10</span><h3>Reviews</h3><p>More five-star reviews, handled for you. Good reviews close the deal.</p></a>
+              <a class="tj-svc-card" href="print-collateral.html"><span class="tj-svc-num">11</span><h3>Print</h3><p>Cards, flyers, door hangers, yard signs. Stuff you hand out and leave behind.</p></a>
+              <a class="tj-svc-card" href="clothing-apparel.html"><span class="tj-svc-num">12</span><h3>Apparel</h3><p>Shirts, hoodies, and hats with your name on them. Your crew is a billboard.</p></a>
             </div>
             <div class="tj-svc-cat"><span class="tj-svc-cat-name">Run It Smarter</span><span class="tj-svc-cat-rule"></span><span class="tj-svc-cat-count">04</span></div>
             <div class="tj-svc-grid">
-              <a class="tj-svc-card" href="software.html"><span class="tj-svc-num">11</span><h3>Software</h3><p>One place for leads, quotes, and jobs. Stop running the shop off sticky notes.</p></a>
-              <a class="tj-svc-card" href="ai-automations.html"><span class="tj-svc-num">12</span><h3>AI Automations</h3><p>Every call and text answered fast, even when both hands are full.</p></a>
-              <a class="tj-svc-card" href="database-reactivation.html"><span class="tj-svc-num">13</span><h3>Re-Marketing</h3><p>Wake up your old customer list. Cheapest work you will ever book.</p></a>
-              <a class="tj-svc-card" href="coaching.html"><span class="tj-svc-num">14</span><h3>Coaching</h3><p>Straight talk on pricing, hiring, and growth from folks who know trades.</p></a>
+              <a class="tj-svc-card" href="software.html"><span class="tj-svc-num">13</span><h3>Software</h3><p>One place for leads, quotes, and jobs. Stop running the shop off sticky notes.</p></a>
+              <a class="tj-svc-card" href="ai-automations.html"><span class="tj-svc-num">14</span><h3>AI Automations</h3><p>Every call and text answered fast, even when both hands are full.</p></a>
+              <a class="tj-svc-card" href="database-reactivation.html"><span class="tj-svc-num">15</span><h3>Re-Marketing</h3><p>Wake up your old customer list. Cheapest work you will ever book.</p></a>
+              <a class="tj-svc-card" href="coaching.html"><span class="tj-svc-num">16</span><h3>Coaching</h3><p>Straight talk on pricing, hiring, and growth from folks who know trades.</p></a>
             </div>
             <div class="tj-svc-cat"><span class="tj-svc-cat-name">Make It Legal</span><span class="tj-svc-cat-rule"></span><span class="tj-svc-cat-count">01</span></div>
             <div class="tj-svc-grid">
-              <a class="tj-svc-card" href="llc-filing.html"><span class="tj-svc-num">15</span><h3>LLC &amp; Licenses</h3><p>Get your LLC filed and your licenses squared away. Paperwork off your plate.</p></a>
+              <a class="tj-svc-card" href="llc-filing.html"><span class="tj-svc-num">17</span><h3>LLC &amp; Licenses</h3><p>Get your LLC filed and your licenses squared away. Paperwork off your plate.</p></a>
             </div>
             <div class="tj-svc-foot">
-              <p>Take one. Take all fourteen. Most shops start with two or three and add more once the calendar fills up.</p>
+              <p>Take one. Take all sixteen. Most shops start with two or three and add more once the calendar fills up.</p>
               <a href="javascript:void(0)">Back to home</a>
             </div>
           </div>
@@ -1052,7 +1064,7 @@
 
       <!-- STATEMENT -->
       <section
-        class="bg-blueprint-red tj-clipped-edge"
+        class="bg-blueprint-dark tj-clipped-edge"
         data-screen-label="Statement"
         style="padding: 120px 0; text-align: center"
       >
@@ -1067,14 +1079,14 @@
             "
           >
             If your site doesn't rank,<br />
-            <span style="color: var(--ink)">it's an expense.</span>
+            <span style="color: var(--red)">it's an expense.</span>
           </h2>
         </div>
       </section>
 
       <!-- SERVICE AREA -->
       <section
-        class="bg-blueprint-light tj-clipped-edge"
+        class="bg-blueprint-navy tj-clipped-edge"
         data-screen-label="Service Area"
         style="padding: 112px 0"
       >
@@ -1096,7 +1108,7 @@
                 style="
                   font-size: clamp(38px, 4.6vw, 66px);
                   margin: 18px 0 24px;
-                  color: var(--ink);
+                  color: var(--white);
                   line-height: 1.02;
                 "
               >
@@ -1107,7 +1119,7 @@
                 style="
                   font-size: 16px;
                   line-height: 1.6;
-                  color: var(--ink);
+                  color: var(--white);
                   max-width: 380px;
                 "
               >
@@ -1700,184 +1712,6 @@
             carousel.addEventListener("mouseleave", start);
           })();
         </script>
-      </section>
-
-      <section
-        class="cta-section bg-blueprint-red tj-clipped-edge"
-        data-screen-label="CTA-1"
-        style="position: relative; overflow: hidden; padding: 90px 0 24px"
-      >
-        <style>
-          @media (max-width: 1023px) {
-            .cta-section .cta-grid {
-              grid-template-columns: 1fr !important;
-            }
-            .cta-section .cta-logo-orbit {
-              display: none !important;
-            }
-            .cta-section .cta-primary-action {
-              display: flex !important;
-              width: fit-content;
-              margin-inline: auto;
-            }
-          }
-        </style>
-        <video
-          style="
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.25;
-            z-index: 0;
-            pointer-events: none;
-          "
-          muted
-          loop
-          playsinline
-          aria-hidden="true"
-          preload="none"
-          data-play-when-near
-        >
-          <source src="assets/audio-visualizer.mp4" type="video/mp4" />
-        </video>
-        <div
-          style="
-            position: absolute;
-            inset: 0;
-            background-attachment: fixed;
-            background: url(&quot;assets/white-engineering-background.webp&quot;);
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-            z-index: 0;
-          "
-        ></div>
-
-        <div
-          class="container cta-grid"
-          style="
-            display: grid;
-            grid-template-columns: 3fr 1fr;
-            gap: 40px;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-          "
-        >
-          <div style="margin: 0; padding: 0">
-            <h2
-              class="display"
-              style="
-                font-size: clamp(42px, 5.5vw, 78px);
-                color: var(--red);
-                margin: 0 0 24px;
-              "
-            >
-              Ready to get started?
-            </h2>
-            <p
-              style="
-                color: var(--white);
-                font-size: 16px;
-                margin: 0 0 40px;
-                opacity: 0.9;
-              "
-            >
-              Let's talk about how Toughjobs can help your trades business grow
-              and win more jobs.
-            </p>
-            <a
-              href="partnerships.html"
-              class="btn cta-primary-action"
-              style="
-                background: var(--navy);
-                color: var(--white);
-                font-weight: 900;
-                padding: 16px 48px;
-              "
-            >
-              Start Your Partnership
-            </a>
-          </div>
-
-          <div
-            class="cta-logo-orbit"
-            style="
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              position: relative;
-              padding: 20px 0 60px;
-            "
-          >
-            <svg
-              viewBox="0 0 200 200"
-              style="
-                position: absolute;
-                width: clamp(220px, 24vw, 360px);
-                height: clamp(220px, 24vw, 360px);
-                animation: cta-logo-spin 18s linear infinite;
-              "
-              aria-hidden="true"
-            >
-              <defs>
-                <path
-                  id="cta-logo-circle"
-                  d="M 100,100 m -78,0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0"
-                />
-              </defs>
-              <text
-                font-family="'Archivo Black', sans-serif"
-                font-size="13.5"
-                letter-spacing="3"
-                fill="var(--red)"
-                opacity="0.85"
-              >
-                <textPath href="#cta-logo-circle" startOffset="0%">
-                  TOUGHJOBS DIGITAL MARKETING • TOUGHJOBS DIGITAL MARKETING •
-                </textPath>
-              </text>
-            </svg>
-            <img
-              src="assets/services-logoLight.webp"
-              alt="Toughjobs"
-              loading="lazy"
-              decoding="async"
-              style="
-                position: relative;
-                z-index: 1;
-                width: clamp(150px, 16vw, 250px);
-                height: auto;
-                max-height: clamp(90px, 10vw, 150px);
-                object-fit: contain;
-                -webkit-mask-image: linear-gradient(
-                  90deg,
-                  #000 0 31%,
-                  transparent 31% 35%,
-                  #000 35% 100%
-                );
-                mask-image: linear-gradient(
-                  90deg,
-                  #000 0 31%,
-                  transparent 31% 35%,
-                  #000 35% 100%
-                );
-              "
-            />
-          </div>
-          <style>
-            @keyframes cta-logo-spin {
-              from {
-                transform: rotate(0deg);
-              }
-              to {
-                transform: rotate(360deg);
-              }
-            }
-          </style>
-        </div>
       </section>
 
       <section data-screen-label="Our Endeavors" class="gb-section tj-gb">

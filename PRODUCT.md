@@ -40,6 +40,7 @@ ToughJobs builds for trade-specific physical applications first (truck vinyl, em
 - White containers on white/light backgrounds require `box-shadow: 0 0 2px 0 rgba(10,15,28,.35)`.
 - Navy (`#002768`) text is banned on dark (ink/navy) backgrounds — use white or red only.
 - `!important` is forbidden without explicit user approval.
+- No bright-red (`bg-red`/`#C8262A`-family) full-section or full-band backgrounds anywhere on the site — red is accent-only (buttons, underlines, eyebrow text). `bg-dark` is the standard closing-CTA-band background.
 - All editable files are plain HTML/CSS/JS; no transpile step required.
 - Locked backup copies of critical files live in `_LOCKED/2026-06-30/` — do not edit.
 
@@ -58,7 +59,7 @@ ToughJobs builds for trade-specific physical applications first (truck vinyl, em
   - Body/UI: `"Archivo"`, sans-serif — weights 400–800.
   - Monospace: system monospace for technical details.
 - **Voice:** Direct, trade-specific, evidence-first. No marketing fluff. Speaks to owners who are skeptical of agencies and value practicality over presentation.
-- **Phone:** (309) 233-9004
+- **Phone:** (309) 928-9080
 
 ## Evidence on Hand
 

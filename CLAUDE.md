@@ -73,7 +73,7 @@ This is the single source of truth. Every page must match this exactly.
    - Free Tools → `intake-landing.html`
    - Contact → `contact.html`
 3. **Right side** (in order):
-   - Phone: `(309) 233-9004` as plain text link to `tel:3092339004`
+   - Phone: `(309) 928-9080` as plain text link to `tel:3099289080`
    - CTA button: "Request a Quote" → `contact.html` (red accent, white text)
 
 ### Behavior
@@ -126,7 +126,7 @@ Use this exact HTML block in every plain HTML page. Change only the `active` cla
       <a href="contact.html" class="nav-link">Contact</a>
     </nav>
     <div class="nav-right">
-      <a href="tel:3092339004" class="nav-phone">(309) 233-9004</a>
+      <a href="tel:3099289080" class="nav-phone">(309) 928-9080</a>
       <a href="contact.html" class="btn">Request a Quote</a>
     </div>
   </div>
