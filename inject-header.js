@@ -241,18 +241,41 @@ function initHeaderInteractions() {
   dropdowns.forEach(dropdown => {
     const toggle = dropdown.querySelector('.nav-dropdown-toggle');
     const menu = dropdown.querySelector('.nav-dropdown-menu');
-    
+
     if (!toggle || !menu) return;
+
+    // The menu is `position:fixed` (so it can center on the viewport instead
+    // of clipping to the header), which leaves a real gap between the toggle
+    // link and the menu's rendered box. Plain CSS :hover loses state the
+    // instant the cursor crosses that gap, so a fast-but-normal mouse move
+    // from the link toward the menu can close it before it's reached. A
+    // short close grace period (cancelled the moment the cursor lands back
+    // in the dropdown or menu) makes the menu forgiving of that gap without
+    // hardcoding pixel-perfect, easily-broken positioning.
+    let closeTimer = null;
 
     const setExpanded = expanded => {
       toggle.setAttribute('aria-expanded', String(expanded));
     };
+    const open = () => {
+      if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+      dropdown.classList.add('is-open');
+      setExpanded(true);
+    };
+    const scheduleClose = () => {
+      if (closeTimer) clearTimeout(closeTimer);
+      closeTimer = setTimeout(() => {
+        dropdown.classList.remove('is-open');
+        setExpanded(false);
+        closeTimer = null;
+      }, 300);
+    };
 
-    dropdown.addEventListener('mouseenter', () => setExpanded(true));
-    dropdown.addEventListener('mouseleave', () => setExpanded(false));
-    dropdown.addEventListener('focusin', () => setExpanded(true));
+    dropdown.addEventListener('mouseenter', open);
+    dropdown.addEventListener('mouseleave', scheduleClose);
+    dropdown.addEventListener('focusin', open);
     dropdown.addEventListener('focusout', event => {
-      if (!dropdown.contains(event.relatedTarget)) setExpanded(false);
+      if (!dropdown.contains(event.relatedTarget)) scheduleClose();
     });
   });
 }
