@@ -107,68 +107,6 @@
 .pc-logo-slot{flex:1 1 auto;display:flex;align-items:flex-start;justify-content:center;align-self:flex-start}
 .pc-title-logo{width:clamp(96px,10vw,152px);height:auto;transform:translateY(-14%);filter:drop-shadow(0 14px 26px rgba(0,0,0,.35))}
 @media(max-width:1200px){.pc-logo-slot{display:none}}</style>
-<style id="faq-index-prototype">
-/* Prototype: local-seo.html only. Round 2 — the ruled-list version read
-   as flat/quiet, so this leans on scale: big ghost index numerals (same
-   decimal-leading-zero vernacular as the Z-01 service-area tiles and the
-   FAQ accordion's own counter(faq)) as the section's one bold move. */
-.td-faq-section .td-faq-categories.td-faq-categories--index{
-  display:grid;grid-template-columns:1fr 1fr;
-  border-top:1px solid rgba(255,255,255,.16);
-  margin-top:44px;
-  counter-reset:faqidx;
-}
-.td-faq-section a.td-faq-cat-link.td-faq-cat-link--index{
-  counter-increment:faqidx;
-  position:relative;overflow:hidden;
-  display:flex;align-items:center;gap:18px;
-  background:none;border:0;border-bottom:1px solid rgba(255,255,255,.16);
-  padding:26px 20px;
-  text-decoration:none;
-  transition:background .22s ease;
-}
-.td-faq-section .td-faq-categories--index a:nth-child(even){border-left:1px solid rgba(255,255,255,.16)}
-.td-faq-section a.td-faq-cat-link--index::before{
-  content:counter(faqidx,decimal-leading-zero);
-  font-family:'Archivo Black',sans-serif;
-  font-size:clamp(40px,4.4vw,56px);
-  line-height:1;
-  color:rgba(255,255,255,.16);
-  transition:color .22s ease;
-  flex:0 0 auto;
-}
-.td-faq-section a.td-faq-cat-link--index span{
-  font-family:'Archivo Black',sans-serif;text-transform:uppercase;letter-spacing:.005em;
-  font-size:clamp(17px,1.6vw,21px);line-height:1.15;color:#FFFFFF;
-  transition:color .22s ease;
-}
-.td-faq-section a.td-faq-cat-link--index:hover{background:rgba(200,38,42,.1)}
-.td-faq-section a.td-faq-cat-link--index:hover::before{color:#C8262A}
-.td-faq-section a.td-faq-cat-link--index:hover span{color:#C8262A}
-@media(max-width:680px){
-  .td-faq-section .td-faq-categories.td-faq-categories--index{grid-template-columns:1fr}
-  .td-faq-section .td-faq-categories--index a:nth-child(even){border-left:0}
-  .td-faq-section a.td-faq-cat-link--index::before{font-size:36px}
-}
-.td-faq-section p.tj-faq-hub-link{
-  margin-top:44px;padding-top:0;border-top:0;
-}
-.td-faq-section p.tj-faq-hub-link a{
-  display:inline-flex;align-items:center;gap:10px;
-  font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:15px;letter-spacing:.02em;
-  color:#FFFFFF;text-decoration:none;
-  border-bottom:2px solid #C8262A;padding-bottom:4px;
-}
-.td-faq-section p.tj-faq-hub-link a:hover{color:#C8262A}
-.ls-faq-gauge{position:absolute;width:min(64vw,820px);height:auto;opacity:.3;pointer-events:none;z-index:0}
-.ls-faq-gauge--tr{top:-4%;right:-8%}
-.ls-faq-gauge--bl{bottom:-4%;left:-10%;opacity:.24}
-@media(max-width:900px){
-  .ls-faq-gauge{width:110vw;opacity:.2}
-  .ls-faq-gauge--tr{top:-2%;right:-45%}
-  .ls-faq-gauge--bl{bottom:-2%;left:-55%;opacity:.16}
-}
-</style>
 <style id="ls-page-redesign-prototype">
 /* Prototype: local-seo.html only. Breaks the repeated eyebrow/headline/
    paragraph rhythm in the Compare, Proof, and Pricing sections — ask
@@ -406,7 +344,7 @@
 </section>
 
 <section class="td-analysis td-faq-section tj-faq-band" data-screen-label="FAQ" data-faq-page="local-seo">
-  <svg class="ls-faq-gauge ls-faq-gauge--tr" viewBox="0 0 800 800" aria-hidden="true" focusable="false">
+  <svg class="tj-faq-gauge tj-faq-gauge--tr" viewBox="0 0 800 800" aria-hidden="true" focusable="false">
     <circle cx="620" cy="180" r="360" fill="none" stroke="#C8262A" stroke-width="2"/>
     <circle cx="620" cy="180" r="270" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
     <circle cx="620" cy="180" r="180" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
@@ -418,7 +356,7 @@
       <line x1="980" y1="180" x2="1040" y2="180"/>
     </g>
   </svg>
-  <svg class="ls-faq-gauge ls-faq-gauge--bl" viewBox="0 0 800 800" aria-hidden="true" focusable="false">
+  <svg class="tj-faq-gauge tj-faq-gauge--bl" viewBox="0 0 800 800" aria-hidden="true" focusable="false">
     <circle cx="180" cy="620" r="320" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
     <circle cx="180" cy="620" r="230" fill="none" stroke="#C8262A" stroke-width="2"/>
     <circle cx="180" cy="620" r="4" fill="#FFFFFF"/>
@@ -432,6 +370,7 @@
   <div class="td-analysis-inner">
     <span class="tj-eyebrow-red reveal">Straight answers</span>
     <h2 class="tj-band-h2 reveal d1">EXPLORE LOCAL SEO FAQS</h2>
+    <p class="tj-faq-band-intro reveal d1">Each category below jumps straight to the matching answers, so you're not scrolling past questions that don't apply to you. Want the complete list instead? Open the full FAQ hub underneath.</p>
     <!-- FAQ:START -->
       <div class="td-faq-categories td-faq-categories--index">
         <a class="td-faq-cat-link td-faq-cat-link--index reveal d1" href="local-seo/faqs/#pricing-costs"><span>Pricing &amp; Costs</span></a>
