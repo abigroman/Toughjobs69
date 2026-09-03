@@ -157,7 +157,7 @@
     </div>
   </section>
 
-  <section class="bg-red ctaband" id="apparel-dots">
+  <section class="bg-dark ctaband" id="apparel-dots">
     <canvas class="plum-dots-canvas" aria-hidden="true"></canvas>
     <div class="container">
       <h2 class="display reveal">Ready for clothing &amp; apparel that look as good as your work?</h2>
@@ -251,18 +251,27 @@
   </div>
 </section>
 
-<section class="td-analysis td-faq-section tj-faq-band" data-screen-label="FAQ">
+<section class="td-analysis td-faq-section tj-faq-band" data-screen-label="FAQ" data-faq-page="clothing-apparel">
   <div class="td-analysis-inner">
     <span class="tj-eyebrow-red">Straight answers</span>
-    <h2 class="tj-band-h2">FREQUENTLY ASKED QUESTIONS — BRANDED APPAREL</h2>
-    <div class="td-faq-list">
-      <div class="td-faq-item"><h3>How many uniforms per tech do I need?</h3><p>Rule of thumb: one shirt per workday of the week, plus one spare. So 6 polos per tech for a 5-day operation. Two hoodies and one jacket for cold months. Anything less and techs end up washing uniforms nightly, which kills the garments and kills morale.</p></div>
-      <div class="td-faq-item"><h3>Embroidery, screen print, or DTF &mdash; which is best?</h3><p>Embroidery for polos, hats, jackets, and anything a customer will see up close. Screen print for t-shirts and hoodies in higher volume. DTF transfers for smaller runs, complex color logos, and anywhere embroidery would compromise fit or safety (like hi-vis vests). Never let a vendor use the same method for every garment &mdash; that's a sign they only own one machine.</p></div>
-      <div class="td-faq-item"><h3>What's the minimum order to start a program?</h3><p>We can start a functional apparel program at 12 pieces &mdash; enough for a small crew's initial polos. Larger runs (50+) unlock better per-piece pricing, especially on screen print. There's no reason to over-order upfront; we stock your artwork and re-run as needed.</p></div>
-      <div class="td-faq-item"><h3>How fast can we get uniforms?</h3><p>Standard turnaround is 2&ndash;3 weeks from artwork approval. Rush orders (7&ndash;10 days) are usually possible with a surcharge. For ongoing programs we recommend keeping a small reserve of common sizes on hand so new hires can be outfitted same-day.</p></div>
-      <div class="td-faq-item"><h3>Should apparel match our trucks and signs?</h3><p>Absolutely &mdash; that's the whole point. A homeowner should see your truck pull up, your tech step out, and your yard sign go in &mdash; and recognize all three as the same company instantly. Brand consistency is what turns individual impressions into a memorable local brand. If your apparel, trucks, and print pieces don't share the same colors, logo, and typography, you're spending money to look like three different companies.</p></div>
-    </div>
-  </div>
+    <h2 class="tj-band-h2">EXPLORE CLOTHING &amp; APPAREL FAQS</h2>
+    <!-- FAQ:START -->
+      <div class="td-faq-categories">
+        <a class="td-faq-cat-link" href="clothing-apparel/faqs/#pricing-costs">Pricing &amp; Costs &rarr;</a>
+        <a class="td-faq-cat-link" href="clothing-apparel/faqs/#service-areas">Service Areas &rarr;</a>
+        <a class="td-faq-cat-link" href="clothing-apparel/faqs/#timeline-completion">Timeline &amp; Completion &rarr;</a>
+        <a class="td-faq-cat-link" href="clothing-apparel/faqs/#getting-started">Getting Started &rarr;</a>
+        <a class="td-faq-cat-link" href="clothing-apparel/faqs/#whats-included">What&#x27;s Included &rarr;</a>
+        <a class="td-faq-cat-link" href="clothing-apparel/faqs/#who-its-for">Who It&#x27;s For &rarr;</a>
+        <a class="td-faq-cat-link" href="clothing-apparel/faqs/#our-process">Our Process &rarr;</a>
+        <a class="td-faq-cat-link" href="clothing-apparel/faqs/#customization-options">Customization &amp; Options &rarr;</a>
+        <a class="td-faq-cat-link" href="clothing-apparel/faqs/#revisions-changes">Revisions &amp; Changes &rarr;</a>
+        <a class="td-faq-cat-link" href="clothing-apparel/faqs/#contact-next-steps">Contact &amp; Next Steps &rarr;</a>
+        <a class="td-faq-cat-link" href="clothing-apparel/faqs/#materials-sizes-production">Materials, Sizes &amp; Production &rarr;</a>
+        <a class="td-faq-cat-link" href="clothing-apparel/faqs/#file-formats-usage-rights">File Formats &amp; Usage Rights &rarr;</a>
+      </div>
+      <p class="tj-faq-hub-link"><a href="clothing-apparel/faqs/">See all Clothing &amp; Apparel FAQs &rarr;</a></p>
+    <!-- FAQ:END -->
   </div>
 </section>
 <!-- SEO-TRADE-CONTENT:END -->
@@ -336,7 +345,7 @@ var sec=document.getElementById('apparel-dots');if(!sec)return;
 var canvas=sec.querySelector('.plum-dots-canvas');var ctx=canvas.getContext('2d');
 var dots=[],mouse={x:-9999,y:-9999},raf=null,dpr=Math.min(window.devicePixelRatio||1,2);
 function size(){var r=sec.getBoundingClientRect();canvas.width=r.width*dpr;canvas.height=r.height*dpr;canvas.style.width=r.width+'px';canvas.style.height=r.height+'px';ctx.setTransform(dpr,0,0,dpr,0,0);
-var cols=Math.round(r.width/34),rows=Math.round(r.height/34);dots=[];
+var cols=Math.round(r.width/24),rows=Math.round(r.height/24);dots=[];
 for(var i=0;i<cols;i++)for(var j=0;j<rows;j++){var x=(i+.5)*(r.width/cols),y=(j+.5)*(r.height/rows);dots.push({ox:x,oy:y,x:x,y:y});}
 }
 function frame(){var r=sec.getBoundingClientRect();ctx.clearRect(0,0,r.width,r.height);

@@ -52,49 +52,6 @@
   background-attachment:fixed !important;
 }
 </style>
-<!-- SEO-FAQ-SCHEMA:START -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntityOfPage": "https://toughjobs.org/software.html",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Does Toughjobs sell its own field service software?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "This page describes setup and workflow support for contractor software. Unless a proposal explicitly identifies a Toughjobs-owned product, the selected platform is provided by a third party under its own pricing, terms, support, and data policies. Toughjobs documents those dependencies before implementation."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do we choose the right platform?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Start with users, job types, scheduling, dispatch, estimates, recurring work, customer communication, payments, reporting, integrations, and budget. A solo operator and a multi-crew shop may need different tools. A short test using real workflows is more useful than comparing feature lists alone."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you migrate our customer data?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Migration depends on the quality and export options of the current system and the import rules of the new one. Duplicates, missing fields, consent records, attachments, and custom statuses need review. The proposal defines what can be moved, what requires cleanup, and what should be archived."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Will you train the office and technicians?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Training can be included for the roles and workflows in scope. The handoff should show each user what they own, how status changes, where exceptions go, and who maintains the system. Adoption also requires the business to enforce the agreed process after the initial setup."
-      }
-    }
-  ]
-}
-</script>
-<!-- SEO-FAQ-SCHEMA:END -->
 <style id="extracted-inline-styles">
 .software-hero{isolation:isolate}
 .software-hero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:url('assets/engineering-schematics.webp') center bottom/cover no-repeat;opacity:.18}
@@ -216,7 +173,7 @@
   </section>
 
   <!-- CTA -->
-  <section class="bg-red ctaband" id="magnetic-cta">
+  <section class="bg-dark ctaband" id="magnetic-cta">
     <canvas id="magnetic-dots-canvas" style="position:absolute;top:0;left:0;width:100%;height:100%;"></canvas>
     <div class="tex tex-grid"></div>
     <div class="container" style="position:relative;z-index:1;">
@@ -391,17 +348,30 @@
   </div>
 </section>
 
-<section class="td-analysis td-faq-section tj-faq-band" data-screen-label="FAQ">
+<section class="td-analysis td-faq-section tj-faq-band" data-screen-label="FAQ" data-faq-page="software">
   <div class="td-analysis-inner">
     <span class="tj-eyebrow-red">Straight answers</span>
-    <h2 class="tj-band-h2">FREQUENTLY ASKED QUESTIONS — FIELD SERVICE SOFTWARE</h2>
-    <div class="td-faq-list">
-      <div class="td-faq-item"><h3>Which platform is best for my trade?</h3><p>Depends on size and complexity. Jobber and Housecall Pro are strong under 5 trucks. ServiceTitan dominates HVAC and plumbing above 5 trucks but is overkill for a solo operator. FieldEdge is a solid middle ground. We match the platform to your team size, revenue, and how much reporting you actually need &mdash; not to whoever's paying the biggest referral fee.</p></div>
-      <div class="td-faq-item"><h3>How long does implementation take?</h3><p>A clean setup for a small shop takes 3&ndash;4 weeks. Mid-market platforms with full price book, memberships, and integrations run 6&ndash;10 weeks. Enterprise builds can be 3&ndash;6 months. Rushing this is how you end up abandoning the software six months later.</p></div>
-      <div class="td-faq-item"><h3>Can we switch platforms without losing customer data?</h3><p>Yes, in almost every case. We handle data mapping and migration of customers, equipment history, open jobs, and accounting records. There's always some cleanup, but you don't lose your book of business.</p></div>
-      <div class="td-faq-item"><h3>Do we really need to integrate software with marketing?</h3><p>If you want to know which ads, keywords, and campaigns actually produce revenue &mdash; yes. Otherwise you're spending marketing dollars blind. Call tracking, form tracking, and lead-source tagging inside the CRM turn marketing from a cost center into a measurable investment.</p></div>
-      <div class="td-faq-item"><h3>What's the biggest mistake contractors make?</h3><p>Buying the biggest platform they can afford and assuming it'll fix operational problems on its own. Software amplifies whatever process you already have. If your process is a mess, expensive software just makes an expensive mess. Fix the workflow first, then automate it.</p></div>
-    </div>
+    <h2 class="tj-band-h2">EXPLORE SOFTWARE FAQS</h2>
+    <!-- FAQ:START -->
+      <div class="td-faq-categories">
+        <a class="td-faq-cat-link" href="software/faqs/#pricing-costs">Pricing &amp; Costs &rarr;</a>
+        <a class="td-faq-cat-link" href="software/faqs/#service-areas">Service Areas &rarr;</a>
+        <a class="td-faq-cat-link" href="software/faqs/#timeline-completion">Timeline &amp; Completion &rarr;</a>
+        <a class="td-faq-cat-link" href="software/faqs/#getting-started">Getting Started &rarr;</a>
+        <a class="td-faq-cat-link" href="software/faqs/#whats-included">What&#x27;s Included &rarr;</a>
+        <a class="td-faq-cat-link" href="software/faqs/#who-its-for">Who It&#x27;s For &rarr;</a>
+        <a class="td-faq-cat-link" href="software/faqs/#our-process">Our Process &rarr;</a>
+        <a class="td-faq-cat-link" href="software/faqs/#requirements-preparation">Requirements &amp; Preparation &rarr;</a>
+        <a class="td-faq-cat-link" href="software/faqs/#customization-options">Customization &amp; Options &rarr;</a>
+        <a class="td-faq-cat-link" href="software/faqs/#results-expectations">Results &amp; Expectations &rarr;</a>
+        <a class="td-faq-cat-link" href="software/faqs/#ownership-access">Ownership &amp; Access &rarr;</a>
+        <a class="td-faq-cat-link" href="software/faqs/#platforms-integrations">Platforms &amp; Integrations &rarr;</a>
+        <a class="td-faq-cat-link" href="software/faqs/#support-maintenance">Support &amp; Maintenance &rarr;</a>
+        <a class="td-faq-cat-link" href="software/faqs/#policies-guarantees">Policies &amp; Guarantees &rarr;</a>
+        <a class="td-faq-cat-link" href="software/faqs/#contact-next-steps">Contact &amp; Next Steps &rarr;</a>
+      </div>
+      <p class="tj-faq-hub-link"><a href="software/faqs/">See all Software FAQs &rarr;</a></p>
+    <!-- FAQ:END -->
   </div>
 </section>
 <!-- SEO-TRADE-CONTENT:END -->

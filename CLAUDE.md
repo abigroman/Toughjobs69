@@ -40,6 +40,8 @@ Do NOT edit anything inside `_LOCKED/` — it is the backup of last resort.
 - Body/UI: "Archivo", sans-serif (weights 400-800)
 - Monospace: system monospace for technical details
 
+**Never use a bright red (`bg-red` / `#C8262A`-family) full-section or full-band background — anywhere on the site.** The user strongly dislikes large red fields (e.g. a red CTA band). Eliminated site-wide 2026-09-02 (all `bg-red ctaband` sections converted to `bg-dark`). Red stays an accent only: buttons, underlines, small UI details, eyebrow text. **The standard closing-CTA-band background is `bg-dark`** (`#0B1326`, near-black with the navy blueprint texture — reads as a dark blue/purple) — use this class for CTA bands going forward, never `bg-red`.
+
 ## Layout Rules (apply to every page)
 
 **Never let two same-background sections touch.** Adjacent sections must contrast each other — alternate light (white) ⇄ dark (ink/navy). A white section must never sit directly above or below another white section; the same goes for two dark sections. If two same-color sections would end up adjacent, merge them into one or change one's background. Going down a page the backgrounds should visibly alternate.
@@ -54,20 +56,9 @@ Do NOT edit anything inside `_LOCKED/` — it is the backup of last resort.
 **White containers on white/light backgrounds must have a drop shadow.** Any white (or near-white) card, box, or container sitting on a white or light-textured background needs `box-shadow:0 0 2px 0 rgba(10,15,28,.35)` (a subtle 2px-blur shadow) so its edges separate from the background. Never place a white container on a white background with no shadow — it visually disappears.
 
 ## Project Structure
-```
-v1-quad-cities/
-├── index.html              Main homepage
-├── services.html           Services page
-├── app.jsx                 React app with Tweaks integration
-├── components.jsx          All homepage components (Hero, Services, Wraps, Statement, etc.)
-├── tweaks-panel.jsx        Tweak controls panel
-└── assets/
-    ├── toughjobs-monogram-logo.png    ← THE ONLY LOGO
-    ├── electrician-hero.png
-    ├── girl-saw.png
-    ├── wrap-*.png
-    └── engineering-schematics.png
-```
+
+See `CLAUDE.archive.md` for the last-known directory tree (re-check the filesystem — it goes stale).
+
 ## Navigation — Canonical Spec (apply to EVERY page)
 
 This is the single source of truth. Every page must match this exactly.
@@ -212,16 +203,7 @@ Tweak defaults stored in `window.__TWEAK_DEFAULTS__` in `index.html`.
 
 ## Assets Currently in Use
 
-**Images**:
-- `toughjobs-monogram-logo.png` — nav + footer logo
-- `electrician-hero.png` — hero background
-- `girl-saw.png` — transparent PNG, Services section
-- `wrap-truck-erik.png` — Erik Electrical truck wrap
-- `wrap-trailer-guacnroll.png` — Guac N Roll trailer
-- `wrap-sedan-herbert.png` — Herbert sedan
-- `engineering-schematics.png` — Services card grid background
-- `insight-*.png` — blog card covers (3)
-- `test-pilot-2.webp` - background
+See `CLAUDE.archive.md` for the last-known asset list (re-check `assets/` — it goes stale).
 
 ## Contact Information
 
