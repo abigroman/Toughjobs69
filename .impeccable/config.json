@@ -86,6 +86,12 @@
         ],
         "createdAt": "2026-09-03T19:08:40.036Z",
         "reason": "User confirmed: footer trade-name ticker is intentional. Already respects prefers-reduced-motion and pauses on hover; content is decorative/redundant with the Trades mega-menu and trades.html."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#eceff4",
+        "createdAt": "2026-09-04T02:21:53.931Z",
+        "reason": "matches existing gb-section light-background value used identically on websites.html and paid-ads.html; seo.html was the outlier"
       }
     ]
   }
