@@ -82,7 +82,7 @@
 .tj-resource-lead{font-size:18px;line-height:1.6;color:rgba(255,255,255,.9);margin:0 0 32px;max-width:560px}
 .tj-primer-list{list-style:none;margin:0 0 40px;padding:0;display:flex;flex-direction:column;gap:12px}
 .tj-lic{background:rgba(10,15,28,1);padding:60px 32px;position:relative;color:var(--white);border-top:4px solid #C8262A;border-bottom:4px solid #C8262A}
-.tj-lic-inner{max-width:1240px;margin:0 auto;display:flex;flex-wrap:wrap;gap:32px;align-items:center;justify-content:space-between}
+.tj-lic-inner{max-width:1240px;margin:0 auto;padding:0 22px;display:flex;flex-wrap:wrap;gap:32px;align-items:center;justify-content:space-between}
 .tj-lic-copy{max-width:640px}
 .tj-lic-eyebrow{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:#C8262A}
 .tj-lic-h3{font-family:'Archivo Black',sans-serif;font-size:clamp(22px,2.6vw,30px);color:#FFFFFF;margin:10px 0 8px;text-transform:uppercase}
@@ -152,6 +152,9 @@
 
 /* FAQ band headings sit on #002768 — outrank .td-analysis h2 (0,1,1) with a scoped selector */
 .td-faq-section .tj-band-h2,.td-faq-section .tj-panel-h2,.td-faq-section > .td-analysis-inner > h2{color:#FFFFFF}
+
+/* FAQ band eyebrow sits on #002768 — #C8262A only hits 2.5:1 there; #ff6669 is the site's established lightened-red fix for red-on-navy (6.7:1 on ink, 4.94:1 on navy) */
+.tj-faq-band .tj-eyebrow-red{color:#ff6669}
 
 /* FAQ band item contrast — items sit on #002768, must outrank .td-analysis defaults */
 .td-faq-section .td-faq-item{border-top:1px solid rgba(255,255,255,.22);padding:22px 0}

@@ -92,6 +92,24 @@
         "value": "#eceff4",
         "createdAt": "2026-09-04T02:21:53.931Z",
         "reason": "matches existing gb-section light-background value used identically on websites.html and paid-ads.html; seo.html was the outlier"
+      },
+      {
+        "rule": "hero-eyebrow-chip",
+        "value": "*",
+        "files": [
+          "websites.html"
+        ],
+        "createdAt": "2026-09-10T01:16:36.159Z",
+        "reason": "Sanctioned - DESIGN.md Eyebrow Rule, used site-wide, user confirmed 2026-09-09"
+      },
+      {
+        "rule": "kicker-above-heading",
+        "value": "*",
+        "files": [
+          "websites.html"
+        ],
+        "createdAt": "2026-09-10T01:36:28.556Z",
+        "reason": "Same sanctioned Eyebrow Rule pattern as hero-eyebrow-chip (user confirmed 2026-09-09); v4.3.1 detector renamed/broadened the rule to cover every section, not just the hero"
       }
     ]
   }
