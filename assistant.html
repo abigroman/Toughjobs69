@@ -95,7 +95,7 @@
     <b>Toughjobs Assistant</b>
     <span>Online · typically replies instantly</span>
   </div>
-  <a href="tel:3099289080" class="call"><b>(309) 928-9080</b><small>Call the shop</small></a>
+  <a href="tel:3099299080" class="call"><b>(309) 929-9080</b><small>Call the shop</small></a>
 </header>
 
 <div class="stream" id="stream">
@@ -116,7 +116,7 @@
       <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
     </button>
   </div>
-  <div class="disc">AI assistant for Toughjobs. For a custom quote, <a href="contact.html">contact us</a> or call (309) 928-9080. Serving the Quad Cities &amp; Central Illinois.</div>
+  <div class="disc">AI assistant for Toughjobs. For a custom quote, <a href="contact.html">contact us</a> or call (309) 929-9080. Serving the Quad Cities &amp; Central Illinois.</div>
 </div>
 
 <script>
@@ -160,12 +160,12 @@ No long-term contracts required on monthly services — month-to-month for local
 - Paid Ads: live in about 1 week, optimized over the first 30 days.
 
 ## CONTACT
-- Phone: (309) 928-9080
+- Phone: (309) 929-9080
 - Contact page: [Contact](contact.html)
 - Free marketing tools & assessment: [Free Tools](intake-landing.html)
 
 ## GUARDRAILS
-- NEVER invent pricing, packages, timelines, or guarantees not listed above. If asked something outside this knowledge base, say you're not certain and point them to [Contact](contact.html) or calling (309) 928-9080.
+- NEVER invent pricing, packages, timelines, or guarantees not listed above. If asked something outside this knowledge base, say you're not certain and point them to [Contact](contact.html) or calling (309) 929-9080.
 - Don't promise specific ranking positions or lead numbers — talk in ranges and "typically."
 - Stay on topic: Toughjobs services, home-service marketing, and helping the visitor. Politely decline unrelated requests.
 - Use markdown links (page.html) so they're clickable. Keep it under ~3 sentences.`;
@@ -245,12 +245,12 @@ async function send(){
       max_tokens: 500
     });
     hideTyping();
-    const clean = (reply||'').trim() || "Sorry — I didn't catch that. Could you rephrase, or reach us at (309) 928-9080?";
+    const clean = (reply||'').trim() || "Sorry — I didn't catch that. Could you rephrase, or reach us at (309) 929-9080?";
     addMsg('bot', clean);
     history.push({role:'assistant', content:clean});
   }catch(e){
     hideTyping();
-    addMsg('bot', "I'm having trouble responding right now. Please call us at (309) 928-9080 or use our [Contact](contact.html) page and we'll get right back to you.");
+    addMsg('bot', "I'm having trouble responding right now. Please call us at (309) 929-9080 or use our [Contact](contact.html) page and we'll get right back to you.");
   }finally{
     busy=false; sendBtn.disabled=false; input.focus();
   }

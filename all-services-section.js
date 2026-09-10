@@ -11,15 +11,19 @@
     { n: "02", k: "Get found",    tone: "blue", t: "SEO",                  href: "seo.html",                   d: "Rank for the high-intent searches that fill your calendar, not vanity keywords." },
     { n: "03", k: "Win nearby",   tone: "blue", t: "Local SEO",            href: "local-seo.html",             d: "Own the map pack in your zip code and beat the franchises in your backyard." },
     { n: "04", k: "Buy demand",   tone: "red",  t: "Paid Ads",             href: "paid-ads.html",              d: "Google, Bing & Meta campaigns tuned weekly to respect your cost per lead." },
-    { n: "05", k: "Stay visible", tone: "blue", t: "Social Media",         href: "social-media.html",          d: "Consistent, authentic content that builds community and keeps you top of mind." },
-    { n: "06", k: "Look ready",   tone: "red",  t: "Branding",             href: "branding.html",              d: "Logo, palette, wraps, print — one look across every touchpoint you own." },
-    { n: "07", k: "Never miss",   tone: "blue", t: "AI Automations",       href: "ai-automations.html",        d: "Let automations answer, book, and follow up while you're on the tools." },
-    { n: "08", k: "Run tighter",  tone: "ink",  t: "Software",             href: "software.html",              d: "Get set up on the field-service platform that fits how your shop runs." },
-    { n: "09", k: "Reactivate",   tone: "red",  t: "Re-Marketing",         href: "database-reactivation.html", d: "Turn your old customer list into booked jobs with email & SMS campaigns." },
-    { n: "10", k: "Build trust",  tone: "red",  t: "Reviews & Reputation", href: "reviews.html",               d: "Automated Google review requests that keep 5-star reviews coming in." },
-    { n: "11", k: "Stay in hand", tone: "red",  t: "Print & Collateral",   href: "print-collateral.html",      d: "Brochures, mailers, door hangers & signs — branded print that gets kept." },
-    { n: "12", k: "Lead better",  tone: "blue", t: "Coaching",             href: "coaching.html",              d: "Hands-on guidance to run marketing like an owner, not a guessing game." },
-    { n: "13", k: "Get official", tone: "ink",  t: "LLC Filing",           href: "llc-filing.html",            d: "Business formation help — we file your LLC in Illinois or Iowa. Not a law firm." }
+    { n: "05", k: "Show it off",  tone: "blue", t: "Video Creation & Editing", href: "video-creation-editing.html", d: "Monthly video retainers — ad creative, onboarding libraries, and walkthroughs, not one hero video a year." },
+    { n: "06", k: "Stay in touch",tone: "blue", t: "Email Marketing",      href: "email-marketing.html",       d: "Stay in front of past customers and quoted-but-not-booked leads, so they call you next time." },
+    { n: "07", k: "Fix the leak", tone: "blue", t: "Conversion Rate Optimization", href: "conversion-rate-optimization.html", d: "Find and fix the reasons visitors leave your site without calling, booking, or filling out a form." },
+    { n: "08", k: "Stay visible", tone: "blue", t: "Social Media",         href: "social-media.html",          d: "Consistent, authentic content that builds community and keeps you top of mind." },
+    { n: "09", k: "Look ready",   tone: "red",  t: "Branding",             href: "branding.html",              d: "Logo, palette, wraps, print — one look across every touchpoint you own." },
+    { n: "10", k: "Look the part",tone: "red",  t: "Clothing & Apparel",   href: "clothing-apparel.html",      d: "Embroidered polos, hoodies, hats & hi-vis workwear — your crew becomes walking ads." },
+    { n: "11", k: "Never miss",   tone: "blue", t: "AI Automations",       href: "ai-automations.html",        d: "Let automations answer, book, and follow up while you're on the tools." },
+    { n: "12", k: "Run tighter",  tone: "ink",  t: "Software",             href: "software.html",              d: "Get set up on the field-service platform that fits how your shop runs." },
+    { n: "13", k: "Reactivate",   tone: "red",  t: "Re-Marketing",         href: "database-reactivation.html", d: "Turn your old customer list into booked jobs with email & SMS campaigns." },
+    { n: "14", k: "Build trust",  tone: "red",  t: "Reviews & Reputation", href: "reviews.html",               d: "Automated Google review requests that keep 5-star reviews coming in." },
+    { n: "15", k: "Stay in hand", tone: "red",  t: "Print & Collateral",   href: "print-collateral.html",      d: "Brochures, mailers, door hangers & signs — branded print that gets kept." },
+    { n: "16", k: "Lead better",  tone: "blue", t: "Coaching",             href: "coaching.html",              d: "Hands-on guidance to run marketing like an owner, not a guessing game." },
+    { n: "17", k: "Get official", tone: "ink",  t: "LLC Filing",           href: "llc-filing.html",            d: "Business formation help — we file your LLC in Illinois or Iowa. Not a law firm." }
   ];
 
   // current page filename, e.g. "seo.html"

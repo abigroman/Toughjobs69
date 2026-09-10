@@ -120,7 +120,7 @@
   .vp-price-note strong{color:#fff}
   /* WORKFLOW */
   .vp-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:vp}
-  .vp-step{padding:34px 30px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-left:4px solid var(--red)}
+  .vp-step{padding:34px 30px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14)}
   .vp-step b{display:block;font-family:"Archivo Black",sans-serif;font-size:44px;line-height:1;color:rgba(255,255,255,.22)}
   .vp-step h4{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:20px;color:#fff;margin:12px 0 12px}
   .vp-step p{font-size:15.5px;line-height:1.65;color:rgba(255,255,255,.82);margin:0}
@@ -166,8 +166,8 @@
     <div class="container">
       <div class="vp-hero-copy hero-text">
           <span class="eyebrow accent reveal">Video creation &amp; editing</span>
-          <h1 class="display reveal d1">Turn raw footage into high-retention <span class="accent">onboarding &amp; ad campaigns.</span></h1>
-          <p class="lede reveal d2">Most businesses are sitting on hours of unused footage and paying a freelancer per project to touch none of it. We run video as a monthly retainer — onboarding libraries, ad creative your media buyer can actually test, and product walkthroughs that shorten the sales cycle. Built for Central Illinois SMBs and regional B2B teams that need volume, not one hero video a year.</p>
+          <h1 class="display reveal d1">Turn raw footage into videos people <span class="accent">actually watch and act on.</span></h1>
+          <p class="lede reveal d2">Most businesses are sitting on hours of unused footage and paying a freelancer per project who never touches it. We handle video every month &mdash; training videos for new hires, ads your team can test and swap out, and walkthroughs that help close the sale. Built for Central Illinois businesses that need a steady stream of video, not one big video a year.</p>
           <div class="vp-cta-row reveal d3">
             <a href="contact.html" class="vp-btn">Book a 15-Min Creative Audit</a>
             <a href="#work-samples" class="vp-btn vp-btn-ghost">View Work Samples</a>
@@ -372,28 +372,44 @@
 </section>
 
 <section class="td-analysis td-faq-section tj-faq-band" data-screen-label="FAQ" data-faq-page="video-creation-editing">
+<style>
+  section[data-faq-page="video-creation-editing"] .tj-faq-gauge{opacity:1}
+  .tj-faq-gauge .ping{fill:none;stroke:#C8262A;opacity:1}
+  .tj-faq-gauge--tr .ping{animation:tj-faq-gauge-ping-tr 3.2s cubic-bezier(0,0,.2,1) infinite}
+  .tj-faq-gauge--bl .ping{animation:tj-faq-gauge-ping-bl 3.2s cubic-bezier(0,0,.2,1) infinite;animation-delay:1.6s}
+  @keyframes tj-faq-gauge-ping-tr{0%{r:4;stroke-width:12;opacity:1}100%{r:360;stroke-width:.5;opacity:0}}
+  @keyframes tj-faq-gauge-ping-bl{0%{r:4;stroke-width:12;opacity:1}100%{r:320;stroke-width:.5;opacity:0}}
+  @media(prefers-reduced-motion: reduce){.tj-faq-gauge .ping{animation:none;opacity:0}}
+  section[data-faq-page="video-creation-editing"] a.td-faq-cat-link.td-faq-cat-link--index{padding:12px 20px}
+</style>
   <svg class="tj-faq-gauge tj-faq-gauge--tr" viewBox="0 0 800 800" aria-hidden="true" focusable="false">
-    <circle cx="620" cy="180" r="360" fill="none" stroke="#C8262A" stroke-width="2"/>
-    <circle cx="620" cy="180" r="270" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
-    <circle cx="620" cy="180" r="180" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
-    <circle cx="620" cy="180" r="4" fill="#C8262A"/>
-    <g stroke="#FFFFFF" stroke-width="2">
-      <line x1="620" y1="-180" x2="620" y2="-120"/>
-      <line x1="620" y1="480" x2="620" y2="540"/>
-      <line x1="200" y1="180" x2="260" y2="180"/>
-      <line x1="980" y1="180" x2="1040" y2="180"/>
+    <g opacity=".3">
+      <circle cx="620" cy="180" r="360" fill="none" stroke="#C8262A" stroke-width="2"/>
+      <circle cx="620" cy="180" r="270" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+      <circle cx="620" cy="180" r="180" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+      <circle cx="620" cy="180" r="4" fill="#C8262A"/>
+      <g stroke="#FFFFFF" stroke-width="2">
+        <line x1="620" y1="-180" x2="620" y2="-120"/>
+        <line x1="620" y1="480" x2="620" y2="540"/>
+        <line x1="200" y1="180" x2="260" y2="180"/>
+        <line x1="980" y1="180" x2="1040" y2="180"/>
+      </g>
     </g>
+    <circle class="ping" cx="620" cy="180" r="4"/>
   </svg>
   <svg class="tj-faq-gauge tj-faq-gauge--bl" viewBox="0 0 800 800" aria-hidden="true" focusable="false">
-    <circle cx="180" cy="620" r="320" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
-    <circle cx="180" cy="620" r="230" fill="none" stroke="#C8262A" stroke-width="2"/>
-    <circle cx="180" cy="620" r="4" fill="#FFFFFF"/>
-    <g stroke="#FFFFFF" stroke-width="1.5">
-      <line x1="180" y1="260" x2="180" y2="320"/>
-      <line x1="180" y1="920" x2="180" y2="980"/>
-      <line x1="-180" y1="620" x2="-120" y2="620"/>
-      <line x1="540" y1="620" x2="600" y2="620"/>
+    <g opacity=".24">
+      <circle cx="180" cy="620" r="320" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+      <circle cx="180" cy="620" r="230" fill="none" stroke="#C8262A" stroke-width="2"/>
+      <circle cx="180" cy="620" r="4" fill="#FFFFFF"/>
+      <g stroke="#FFFFFF" stroke-width="1.5">
+        <line x1="180" y1="260" x2="180" y2="320"/>
+        <line x1="180" y1="920" x2="180" y2="980"/>
+        <line x1="-180" y1="620" x2="-120" y2="620"/>
+        <line x1="540" y1="620" x2="600" y2="620"/>
+      </g>
     </g>
+    <circle class="ping" cx="180" cy="620" r="4"/>
   </svg>
   <div class="td-analysis-inner">
     <span class="tj-eyebrow-red reveal">Straight answers</span>
@@ -479,8 +495,8 @@
   <div class="tj-lic-inner">
     <div class="tj-lic-copy">
       <span class="tj-lic-eyebrow">Before You Market</span>
-      <h3 class="tj-lic-h3">Licensed &amp; Filed Right</h3>
-      <p class="tj-lic-p">An LLC isn&rsquo;t a license. We help you sort both &mdash; proper trade licensing in Illinois &amp; Iowa, plus flat-rate LLC filing.</p>
+      <h3 class="tj-lic-h3">We&rsquo;ll File Your LLC for FREE</h3>
+      <p class="tj-lic-p">An LLC isn&rsquo;t a license &mdash; we help you sort both. You only pay the state&rsquo;s filing fee; we handle all the paperwork and file it for you at no charge, ever.</p>
     </div>
     <div class="tj-lic-actions">
       <a href="business-licensing-illinois-iowa.html" class="btn tj-btn-white tj-btn--sm">Licensing Guide</a>
