@@ -48,6 +48,7 @@
         --ink: #0a0f1c;
         --navy: #002768;
         --red: #c8262a;
+        --red-on-dark: #e8484c;
         --white: #ffffff;
         --accent: #c8262a;
         --accent-ink: #ffffff;
@@ -152,7 +153,7 @@
 
       .nav-link:hover,
       .nav-link.active {
-        color: var(--red);
+        color: var(--red-on-dark);
         border-bottom-color: var(--red);
       }
 
@@ -188,7 +189,7 @@
         font-size: 10px;
         letter-spacing: 0.08em;
         text-transform: uppercase;
-        color: var(--red);
+        color: var(--red-on-dark);
         margin-bottom: 12px;
         padding-bottom: 8px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
@@ -212,7 +213,7 @@
       }
 
       .nav-dropdown-item:hover {
-        color: var(--red);
+        color: var(--red-on-dark);
       }
 
       .nav-right {
@@ -548,7 +549,7 @@
       }
       .mobile-drawer > a:hover,
       .md-sub-toggle:hover {
-        color: var(--red);
+        color: var(--red-on-dark);
       }
       .md-close {
         align-self: flex-end;
@@ -593,7 +594,7 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.06);
       }
       .md-sub-list a:hover {
-        color: var(--red);
+        color: var(--red-on-dark);
       }
       .md-phone {
         color: var(--accent) !important;
@@ -645,7 +646,7 @@
     <link rel="stylesheet" href="css/give-back.css" />
 </head>
   <body>
-    <main>
+    <main id="top">
       <section
         class="tj-clipped-edge"
         data-screen-label="01 Hero"
@@ -815,11 +816,12 @@
 @media(min-width:881px){.tj-svc-edge-accent{height:26px}}
 .tj-svc-panel{position:relative;background:#1769E0;padding:48px 40px;overflow:hidden;border:8px solid transparent;border-image:repeating-linear-gradient(45deg,var(--red) 0 8px,var(--navy) 8px 16px) 8}
 .tj-svc-panel-bg{position:absolute;inset:0;background:url("assets/engineering-schematics.webp") center/cover;background-attachment:fixed;opacity:.28;pointer-events:none;mix-blend-mode:screen}
-.tj-svc-cat{position:relative;z-index:1;display:flex;align-items:center;gap:16px;margin:40px 0 18px}
+.tj-svc-cat{position:relative;z-index:1;display:flex;align-items:center;gap:16px;margin:40px 0 18px;width:100%;background:transparent;border:0;padding:0;font:inherit;color:inherit;text-align:left;cursor:default}
 .tj-svc-cat:first-of-type{margin-top:0}
 .tj-svc-cat-name{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:15px;letter-spacing:.06em;color:#fff;white-space:nowrap}
 .tj-svc-cat-rule{flex:1;height:2px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.28) 0 8px,transparent 8px 16px)}
 .tj-svc-cat-count{font-family:ui-monospace,Menlo,monospace;font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--red)}
+.tj-svc-cat-chevron{display:none;flex-shrink:0;font-size:12px;color:var(--red);transition:transform .2s ease}
 .tj-svc-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .tj-svc-card{position:relative;background:#10192b;border:1px solid rgba(255,255,255,.14);border-top:3px solid rgba(200,38,42,.55);padding:24px 22px 26px;text-decoration:none;color:inherit;display:block;overflow:hidden;transition:border-color .18s ease,transform .18s ease,background .18s ease,box-shadow .18s ease}
 .tj-svc-card::after{content:"";position:absolute;right:-40px;bottom:-40px;width:110px;height:110px;background:repeating-linear-gradient(45deg,rgba(255,255,255,.09) 0 3px,transparent 3px 10px);transform:rotate(12deg);pointer-events:none;transition:opacity .18s ease}
@@ -833,7 +835,16 @@
 .tj-svc-foot p{margin:0;font-size:15px;line-height:1.6;color:rgba(255,255,255,.8);max-width:60ch}
 .tj-svc-foot a{font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:13px;color:#fff;background:var(--red);padding:14px 24px;text-decoration:none;white-space:nowrap;transition:background .18s ease}
 .tj-svc-foot a:hover{background:#A90100;color:#fff}
-@media(max-width:1024px){.tj-svc-grid{grid-template-columns:1fr 1fr}.tj-svc-top{grid-template-columns:1fr !important}.tj-svc-copy{text-align:left !important}.tj-svc-girl{display:none !important}}
+@media(max-width:1024px){
+.tj-svc-grid{grid-template-columns:1fr 1fr}
+.tj-svc-top{grid-template-columns:1fr !important;margin-bottom:32px}
+.tj-svc-copy{text-align:left !important}
+.tj-svc-girl{display:none !important}
+.tj-svc-cat{cursor:pointer}
+.tj-svc-cat-chevron{display:inline-block}
+.tj-svc-cat[aria-expanded="true"] .tj-svc-cat-chevron{transform:rotate(180deg)}
+.tj-svc-grid.is-collapsed{display:none}
+}
 @media(max-width:560px){.tj-svc-grid{grid-template-columns:1fr}.tj-svc-panel{padding:32px 20px}}
         </style>
         <div class="tj-svc-edge-accent" aria-hidden="true"></div>
@@ -853,8 +864,8 @@
           </div>
           <div class="tj-svc-panel">
             <div aria-hidden="true" class="tj-svc-panel-bg"></div>
-            <div class="tj-svc-cat"><span class="tj-svc-cat-name">Get Found</span><span class="tj-svc-cat-rule"></span><span class="tj-svc-cat-count">07</span></div>
-            <div class="tj-svc-grid">
+            <button type="button" class="tj-svc-cat" aria-expanded="true" aria-controls="tj-svc-grid-1"><span class="tj-svc-cat-name">Get Found</span><span class="tj-svc-cat-rule"></span><span class="tj-svc-cat-count">07</span><span class="tj-svc-cat-chevron" aria-hidden="true">&#9662;</span></button>
+            <div class="tj-svc-grid" id="tj-svc-grid-1">
               <a class="tj-svc-card" href="websites.html"><span class="tj-svc-num">01</span><h3>Websites</h3><p>A site built to make the phone ring. Fast, easy on a phone screen, no fluff.</p></a>
               <a class="tj-svc-card" href="seo.html"><span class="tj-svc-num">02</span><h3>SEO</h3><p>Show up when folks search for the work you do. Free clicks, every day.</p></a>
               <a class="tj-svc-card" href="local-seo.html"><span class="tj-svc-num">03</span><h3>Local SEO</h3><p>Own the map. Land in the top three when someone nearby needs you now.</p></a>
@@ -863,31 +874,57 @@
               <a class="tj-svc-card" href="email-marketing.html"><span class="tj-svc-num">06</span><h3>Email Marketing</h3><p>Stay top of mind between jobs so old customers and quoted leads call you, not a competitor.</p></a>
               <a class="tj-svc-card" href="conversion-rate-optimization.html"><span class="tj-svc-num">07</span><h3>Conversion Rate Optimization</h3><p>More jobs from the traffic you already have. We fix the reasons visitors leave without calling.</p></a>
             </div>
-            <div class="tj-svc-cat"><span class="tj-svc-cat-name">Look The Part</span><span class="tj-svc-cat-rule"></span><span class="tj-svc-cat-count">05</span></div>
-            <div class="tj-svc-grid">
+            <button type="button" class="tj-svc-cat" aria-expanded="true" aria-controls="tj-svc-grid-2"><span class="tj-svc-cat-name">Look The Part</span><span class="tj-svc-cat-rule"></span><span class="tj-svc-cat-count">05</span><span class="tj-svc-cat-chevron" aria-hidden="true">&#9662;</span></button>
+            <div class="tj-svc-grid" id="tj-svc-grid-2">
               <a class="tj-svc-card" href="branding.html"><span class="tj-svc-num">08</span><h3>Branding</h3><p>A logo and look that says you do good work before you say a word.</p></a>
               <a class="tj-svc-card" href="social-media.html"><span class="tj-svc-num">09</span><h3>Social Media</h3><p>Job photos and short clips that keep your name in front of the town.</p></a>
               <a class="tj-svc-card" href="reviews.html"><span class="tj-svc-num">10</span><h3>Reviews</h3><p>More five-star reviews, handled for you. Good reviews close the deal.</p></a>
               <a class="tj-svc-card" href="print-collateral.html"><span class="tj-svc-num">11</span><h3>Print</h3><p>Cards, flyers, door hangers, yard signs. Stuff you hand out and leave behind.</p></a>
               <a class="tj-svc-card" href="clothing-apparel.html"><span class="tj-svc-num">12</span><h3>Apparel</h3><p>Shirts, hoodies, and hats with your name on them. Your crew is a billboard.</p></a>
             </div>
-            <div class="tj-svc-cat"><span class="tj-svc-cat-name">Run It Smarter</span><span class="tj-svc-cat-rule"></span><span class="tj-svc-cat-count">04</span></div>
-            <div class="tj-svc-grid">
+            <button type="button" class="tj-svc-cat" aria-expanded="true" aria-controls="tj-svc-grid-3"><span class="tj-svc-cat-name">Run It Smarter</span><span class="tj-svc-cat-rule"></span><span class="tj-svc-cat-count">04</span><span class="tj-svc-cat-chevron" aria-hidden="true">&#9662;</span></button>
+            <div class="tj-svc-grid" id="tj-svc-grid-3">
               <a class="tj-svc-card" href="software.html"><span class="tj-svc-num">13</span><h3>Software</h3><p>One place for leads, quotes, and jobs. Stop running the shop off sticky notes.</p></a>
               <a class="tj-svc-card" href="ai-automations.html"><span class="tj-svc-num">14</span><h3>AI Automations</h3><p>Every call and text answered fast, even when both hands are full.</p></a>
               <a class="tj-svc-card" href="database-reactivation.html"><span class="tj-svc-num">15</span><h3>Re-Marketing</h3><p>Wake up your old customer list. Cheapest work you will ever book.</p></a>
               <a class="tj-svc-card" href="coaching.html"><span class="tj-svc-num">16</span><h3>Coaching</h3><p>Straight talk on pricing, hiring, and growth from folks who know trades.</p></a>
             </div>
-            <div class="tj-svc-cat"><span class="tj-svc-cat-name">Make It Legal</span><span class="tj-svc-cat-rule"></span><span class="tj-svc-cat-count">01</span></div>
-            <div class="tj-svc-grid">
+            <button type="button" class="tj-svc-cat" aria-expanded="true" aria-controls="tj-svc-grid-4"><span class="tj-svc-cat-name">Make It Legal</span><span class="tj-svc-cat-rule"></span><span class="tj-svc-cat-count">01</span><span class="tj-svc-cat-chevron" aria-hidden="true">&#9662;</span></button>
+            <div class="tj-svc-grid" id="tj-svc-grid-4">
               <a class="tj-svc-card" href="llc-filing.html"><span class="tj-svc-num">17</span><h3>LLC &amp; Licenses</h3><p>Get your LLC filed and your licenses squared away. Paperwork off your plate.</p></a>
             </div>
             <div class="tj-svc-foot">
               <p>Take one. Take all sixteen. Most shops start with two or three and add more once the calendar fills up.</p>
-              <a href="javascript:void(0)">Back to home</a>
+              <a href="#top">Back to home</a>
             </div>
           </div>
         </div>
+        <script>
+          (function () {
+            var toggles = document.querySelectorAll('.tj-svc-cat[aria-controls]');
+            toggles.forEach(function (btn) {
+              btn.addEventListener('click', function () {
+                var grid = document.getElementById(btn.getAttribute('aria-controls'));
+                if (!grid) return;
+                var expanded = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', String(!expanded));
+                grid.classList.toggle('is-collapsed', expanded);
+              });
+            });
+            // Progressive enhancement only: collapse every category but the
+            // first on load at mobile/tablet widths, so the 17-item wall
+            // doesn't dump on a small screen. No JS / wide viewport keeps
+            // everything expanded, matching the desktop layout exactly.
+            if (window.matchMedia('(max-width: 1024px)').matches) {
+              Array.prototype.slice.call(toggles, 1).forEach(function (btn) {
+                var grid = document.getElementById(btn.getAttribute('aria-controls'));
+                if (!grid) return;
+                btn.setAttribute('aria-expanded', 'false');
+                grid.classList.add('is-collapsed');
+              });
+            }
+          })();
+        </script>
       </section>
 
       <section
@@ -1346,7 +1383,7 @@
             "
           >
             <div>
-              <span class="eyebrow" style="color: var(--accent)"
+              <span class="eyebrow" style="color: var(--red-on-dark)"
                 >Field Notes</span
               >
               <h2
@@ -1856,7 +1893,7 @@
           text-transform: uppercase;
           font-size: 14px;
           letter-spacing: 0.02em;
-          color: var(--accent);
+          color: var(--red-on-dark);
           font-weight: 900;
           flex-shrink: 0;
         }
@@ -1897,7 +1934,7 @@
           text-transform: uppercase;
           letter-spacing: 0.12em;
           font-weight: 800;
-          color: var(--accent);
+          color: var(--red-on-dark);
           margin: 0 0 16px;
           padding-bottom: 8px;
           border-bottom: 1px solid rgba(255, 255, 255, 0.15);

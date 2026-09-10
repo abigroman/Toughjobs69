@@ -13,6 +13,7 @@
 .tj-gb-card--navy{background:#002768}
 .tj-gb-card--ink{background:#0A0F1C}
 .tj-gb-card .tj-gb-num{font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:#C8262A;font-weight:700}
+.tj-gb-card--ink .tj-gb-num{color:#E8484C}
 .tj-gb-card .tj-gb-title{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:22px;color:#FFFFFF;margin:16px 0 12px;line-height:1.05}
 .tj-gb-card .tj-gb-p{font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 28px}
 .tj-gb-card .tj-gb-btn{display:inline-block;background:#C8262A;color:#FFFFFF;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.06em;padding:14px 30px;border-radius:6px;text-decoration:none}

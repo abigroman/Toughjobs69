@@ -110,6 +110,12 @@
         ],
         "createdAt": "2026-09-10T01:36:28.556Z",
         "reason": "Same sanctioned Eyebrow Rule pattern as hero-eyebrow-chip (user confirmed 2026-09-09); v4.3.1 detector renamed/broadened the rule to cover every section, not just the hero"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "&quot",
+        "createdAt": "2026-09-10T02:50:55.797Z",
+        "reason": "detector mis-parses inline style's HTML-entity-encoded quotes (font-family: &quot;Archivo Black&quot;) as a bogus font name; the actual font is Archivo Black, which is in DESIGN.md"
       }
     ]
   }

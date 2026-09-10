@@ -4,6 +4,7 @@
   --ink: #0A0F1C;
   --navy: #002768;
   --red: #C8262A;
+  --red-on-dark: #E8484C;
   --white: #FFFFFF;
   --accent: #C8262A;
   --accent-ink: #FFFFFF;
@@ -96,7 +97,7 @@ header {
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--red);
+  color: var(--red-on-dark);
   border-bottom-color: var(--red);
 }
 
@@ -165,7 +166,7 @@ header {
   font-size: 10px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--red);
+  color: var(--red-on-dark);
   margin-bottom: 12px;
   padding-bottom: 8px;
   border-bottom: 1px solid rgba(255,255,255,.15);
@@ -271,7 +272,7 @@ header .btn:active { transform: translateY(1px); }
   background: transparent;
   text-align: left;
 }
-.mobile-drawer > a:hover, .md-sub-toggle:hover { color: var(--red); }
+.mobile-drawer > a:hover, .md-sub-toggle:hover { color: var(--red-on-dark); }
 .md-close { align-self: flex-end; width: 44px; height: 44px; background: transparent; border: 0; color: var(--white); font-size: 30px; line-height: 1; cursor: pointer; padding: 0; margin-bottom: 4px; }
 .md-sub-toggle { display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
 .md-sub-toggle .chev { transition: transform .25s ease; }
@@ -279,7 +280,7 @@ header .btn:active { transform: translateY(1px); }
 .md-sub-list { display: none; flex-direction: column; padding-left: 12px; }
 .md-sub.open .md-sub-list { display: flex; }
 .md-sub-list a { color: rgba(255,255,255,.8); text-decoration: none; font-family: "Archivo", sans-serif; font-weight: 600; font-size: 12.5px; letter-spacing: .04em; text-transform: uppercase; padding: 11px 4px; border-bottom: 1px solid rgba(255,255,255,.06); }
-.md-sub-list a:hover { color: var(--red); }
+.md-sub-list a:hover { color: var(--red-on-dark); }
 .md-phone { color: var(--accent) !important; font-size: 18px !important; }
 .md-cta { background: var(--accent); color: var(--white) !important; text-align: center; margin-top: 16px; border: 0 !important; padding: 16px !important; }
 .md-cta:hover { filter: brightness(.92); color: var(--white) !important; }

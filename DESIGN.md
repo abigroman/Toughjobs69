@@ -4,6 +4,7 @@ description: Full-stack trade marketing — brand, wraps, print, web, SEO, and A
 colors:
   red: "#C8262A"
   red-dark: "#981B1F"
+  red-on-dark: "#E8484C"
   navy: "#081B33"
   ink: "#0A0F1C"
   blueprint-dark: "#001a4a"
@@ -105,6 +106,7 @@ Ink and Red carry the system; Navy is a secondary authority color; all warm whit
 ### Primary
 - **Signal Red** (`#C8262A`): The action color. Used on primary CTA buttons, headline emphasis spans, active nav states, hover inversions, and accent eyebrows. One voice; its rarity gives it authority.
 - **Dark Red / Logo Red** (`#981B1F`): The identity red used in the logo mark. Applied when a deeper, more grounded red is needed — logo contexts only, not general UI.
+- **Red on Dark** (`#E8484C`): An accessible lift of Signal Red, used ONLY for small/body-sized red text set directly on Ink (`#0A0F1C`) — nav labels, hover/active states, footer headers, ticker text. Signal Red itself is 3.4:1 on Ink (fails the 4.5:1 body-text floor); this variant clears WCAG AA. Large display/headline text (≥18.66px bold or ≥24px regular) stays on Signal Red, since large text only needs 3:1.
 
 ### Secondary
 - **Brand Navy** (`#081B33`): Authority color for alternate palette lead. Used as section background when a third surface color is needed between ink and light, and in focus ring shadow.

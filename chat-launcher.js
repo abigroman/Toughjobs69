@@ -3,12 +3,12 @@
 
   var css = document.createElement('style');
   css.textContent = [
-    '#tj-chat-launcher{position:fixed;right:10px;bottom:10px;z-index:9998;',
+    '#tj-chat-launcher{position:fixed;right:10px;bottom:calc(10px + var(--tj-cookie-banner-h, 0px));z-index:9998;',
+      'transition:transform .18s ease, box-shadow .18s ease, bottom .3s ease;',
       'display:flex;align-items:center;gap:12px;background:#12182a;',
       'border:1px solid rgba(255,255,255,.14);border-radius:14px;',
       'padding:10px 18px 10px 10px;box-shadow:0 12px 30px rgba(0,0,0,.45);',
-      'text-decoration:none;font-family:"Archivo",sans-serif;cursor:pointer;white-space:nowrap;',
-      'transition:transform .18s ease, box-shadow .18s ease;}',
+      'text-decoration:none;font-family:"Archivo",sans-serif;cursor:pointer;white-space:nowrap;}',
     '#tj-chat-launcher:hover{transform:translateY(-3px);box-shadow:0 18px 38px rgba(0,0,0,.55);}',
     '#tj-chat-launcher .tj-cl-ic{width:38px;height:38px;border-radius:50%;background:#C8262A;',
       'display:flex;align-items:center;justify-content:center;flex-shrink:0;}',

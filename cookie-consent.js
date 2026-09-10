@@ -34,13 +34,35 @@
 
     document.body.appendChild(wrap);
 
+    // The banner is position:fixed, so it doesn't reserve document space on
+    // its own — without this it renders on top of whatever is at the bottom
+    // of the page (footer phone number/CTA, the chat launcher), hiding it
+    // for as long as the banner is up. Push the page content up by the
+    // banner's own height instead of letting it sit over that content.
+    function syncBodyOffset() {
+      if (!wrap.classList.contains('tj-cookie-visible')) return;
+      var h = wrap.offsetHeight + 'px';
+      document.body.style.paddingBottom = h;
+      // Lets other fixed-position widgets (e.g. the chat launcher) read this
+      // and lift themselves above the banner instead of being covered by it.
+      document.documentElement.style.setProperty('--tj-cookie-banner-h', h);
+    }
+
     requestAnimationFrame(function () {
-      requestAnimationFrame(function () { wrap.classList.add('tj-cookie-visible'); });
+      requestAnimationFrame(function () {
+        wrap.classList.add('tj-cookie-visible');
+        syncBodyOffset();
+      });
     });
+
+    window.addEventListener('resize', syncBodyOffset);
 
     function dismiss(choice) {
       setChoice(choice);
       wrap.classList.remove('tj-cookie-visible');
+      document.body.style.paddingBottom = '';
+      document.documentElement.style.removeProperty('--tj-cookie-banner-h');
+      window.removeEventListener('resize', syncBodyOffset);
       wrap.addEventListener('transitionend', function handler() {
         wrap.removeEventListener('transitionend', handler);
         wrap.remove();
