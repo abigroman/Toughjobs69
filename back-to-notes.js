@@ -102,7 +102,7 @@
     </svg>
   `;
   btn.addEventListener('click', function () {
-    window.location.href = 'index.html#field-notes';
+    window.location.href = 'blog.html';
   });
   container.appendChild(btn);
 

@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog — Field Notes | Toughjobs</title>
+  <meta name="description" content="Field Notes from Toughjobs: straight-talk guides on websites, SEO, licensing, and customer retention for trade and home-service businesses." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Toughjobs" />
+  <meta name="publisher" content="ToughJobs Digital Marketing" />
+  <link rel="canonical" href="https://toughjobs.org/blog.html" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shared-header.css" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { font-family: "Archivo", sans-serif; color: var(--ink); background: var(--white); }
+
+    .container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+    @media (max-width: 640px) { .container { padding: 0 16px; } }
+
+    main section { padding-block: 112px; }
+    @media (max-width: 760px) { main section { padding-block: 64px; } }
+
+    .display {
+      font-family: "Archivo Black", sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 0.95;
+      letter-spacing: -0.01em;
+    }
+
+    /* Hero */
+    .blog-hero {
+      background: var(--ink) url("assets/blueprint-background.webp") center/cover;
+      background-attachment: fixed;
+      color: var(--white);
+    }
+    .blog-hero h1 { font-size: clamp(40px, 5vw, 72px); margin: 0 0 20px; }
+    .blog-hero p { max-width: 620px; font-size: 17px; line-height: 1.6; color: rgba(255,255,255,.82); }
+
+    /* Grid */
+    .blog-grid-section { background: var(--white); }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 48px;
+    }
+    @media (max-width: 980px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px) { .blog-grid { grid-template-columns: 1fr; } }
+
+    .post-card {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      background: var(--white);
+      box-shadow: 0 0 2px 0 rgba(10,15,28,.35);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .post-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(10,15,28,.18); }
+
+    .post-card-img {
+      height: 200px;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .post-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+
+    .post-card-cat {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--red);
+      margin-bottom: 10px;
+    }
+
+    .post-card-title {
+      font-family: "Archivo Black", sans-serif;
+      font-size: 19px;
+      color: var(--navy);
+      margin: 0 0 12px;
+      line-height: 1.2;
+    }
+
+    .post-card-excerpt {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #5B6471;
+      margin: 0 0 16px;
+      flex: 1;
+    }
+
+    .post-card-meta {
+      font-size: 12px;
+      font-weight: 700;
+      color: #5B6471;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* CTA */
+    .blog-cta { background: var(--ink); color: var(--white); text-align: center; }
+    .blog-cta h2 { font-size: clamp(48px, 7vw, 96px); margin: 0 0 20px; }
+    .blog-cta p { font-size: 17px; color: rgba(255,255,255,.78); margin: 0 0 32px; }
+    .blog-cta .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 34px;
+      background: var(--red);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <section class="blog-hero" data-screen-label="Blog Hero">
+      <div class="container">
+        <h1 class="display">Field notes from the job site.</h1>
+        <p>Straight-talk guides on websites, SEO, licensing, and keeping customers coming back — written for people running a trade business, not marketing agencies.</p>
+      </div>
+    </section>
+
+    <section class="blog-grid-section" data-screen-label="Blog Grid">
+      <div class="container">
+        <div class="blog-grid">
+
+          <a class="post-card" href="insight-conversion-killers.html">
+            <div class="post-card-img" style="background-image:url('assets/speed-gauge.webp')"></div>
+            <div class="post-card-body">
+              <div class="post-card-cat">Website Teardown</div>
+              <h2 class="post-card-title">Five things killing your home page conversion.</h2>
+              <p class="post-card-excerpt">Stop bounce traffic on your trade business website. Five conversion killers on your home page — and exactly how to fix each one.</p>
+              <div class="post-card-meta">8 min read</div>
+            </div>
+          </a>
+
+          <a class="post-card" href="insight-map-pack.html">
+            <div class="post-card-img" style="background-image:url('assets/google-search-plummers.webp')"></div>
+            <div class="post-card-body">
+              <div class="post-card-cat">SEO Playbook</div>
+              <h2 class="post-card-title">How to own the map pack in your town.</h2>
+              <p class="post-card-excerpt">Rank higher locally and own the Google map pack in your town. Category setup, service listings, and niche backlinks that get home-service businesses found.</p>
+              <div class="post-card-meta">9 min read</div>
+            </div>
+          </a>
+
+          <a class="post-card" href="insight-repeat-customers.html">
+            <div class="post-card-img" style="background-image:url('assets/messy-tech.webp')"></div>
+            <div class="post-card-body">
+              <div class="post-card-cat">Field Guide</div>
+              <h2 class="post-card-title">Turning one-time jobs into repeat customers.</h2>
+              <p class="post-card-excerpt">How home-service businesses turn one-time jobs into repeat clients — treating customers right, professionalism on the job, and handling difficult customers.</p>
+              <div class="post-card-meta">8 min read</div>
+            </div>
+          </a>
+
+          <a class="post-card" href="insight-proper-licensing.html">
+            <div class="post-card-img" style="background-image:url('assets/electrician-hero.webp')"></div>
+            <div class="post-card-body">
+              <div class="post-card-cat">Compliance Playbook</div>
+              <h2 class="post-card-title">Proper licensing in Illinois &amp; Iowa.</h2>
+              <p class="post-card-excerpt">Proper licensing for contractors in Illinois &amp; Iowa — information from Toughjobs, a Midwest partner for independent trade and home-service businesses.</p>
+              <div class="post-card-meta">8 min read</div>
+            </div>
+          </a>
+
+          <a class="post-card" href="insight-home-service-website.html">
+            <div class="post-card-img" style="background-image:url('assets/websites-laptop-review.webp')"></div>
+            <div class="post-card-body">
+              <div class="post-card-cat">Field Guide &middot; Websites</div>
+              <h2 class="post-card-title">What actually goes into a home service website that books jobs.</h2>
+              <p class="post-card-excerpt">AI made websites faster to build, not automatically good. Here's what really goes into a contractor site that ranks, converts, and books work.</p>
+              <div class="post-card-meta">14 min read</div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="blog-cta" data-screen-label="Blog CTA">
+      <div class="container">
+        <h2 class="display">Ready to put this to work?</h2>
+        <p>Get a free, practical marketing review for your trade business.</p>
+        <a class="btn" href="contact.html">Request a Quote</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="inject-footer.js"></script>
+  <script src="sticky-cta.js"></script>
+  <script src="cookie-consent.js"></script>
+  <script src="chat-launcher.js?v=20260729"></script>
+  <script src="inject-header.js?v=20260802b"></script>
+  <script src="accessibility.js?v=20260729"></script>
+
+</body>
+</html>

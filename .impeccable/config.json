@@ -116,6 +116,15 @@
         "value": "&quot",
         "createdAt": "2026-09-10T02:50:55.797Z",
         "reason": "detector mis-parses inline style's HTML-entity-encoded quotes (font-family: &quot;Archivo Black&quot;) as a bogus font name; the actual font is Archivo Black, which is in DESIGN.md"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "blog.html"
+        ],
+        "createdAt": "2026-09-13T03:43:12.214Z",
+        "reason": "Claude verified via rendered screenshot: main section{padding-block:112px} (site-wide convention, same as about.html) gives real top/bottom padding; detector doesn't resolve the descendant-combinator rule against the classed section"
       }
     ]
   }
