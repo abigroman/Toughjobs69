@@ -25,7 +25,7 @@ Do NOT edit anything inside `_LOCKED/` — it is the backup of last resort.
 
 ## Brand Identity
 
-**Logo**: `assets/toughjobs-monogram-logo.png` — This is the ONLY logo file. Do not create, use, or reference any other logo files (no `toughjobs-logo-static.png`, no `toughjobs-monogram.png`). This logo is used in the nav and footer and must remain consistent across all pages.
+**Logo**: `assets/toughjobs-monogram-logo.webp` — this is the file the live nav and footer actually reference (via `shared-header.html`); `assets/toughjobs-monogram-logo.png` also exists as a fallback/export but is not what's wired into markup. Do not create, use, or reference any other logo files (no `toughjobs-logo-static.png`, no `toughjobs-monogram.png`). This logo must remain consistent across all pages.
 
 **Colors**:
 - Primary Red: `#C8262A`
@@ -63,18 +63,45 @@ See `CLAUDE.archive.md` for the last-known directory tree (re-check the filesyst
 
 This is the single source of truth. Every page must match this exactly.
 
+**The nav is a shared, injected header — never hand-copy nav HTML into a page.**
+Every page links `shared-header.css` and loads `inject-header.js`, which fetches and
+injects the markup from `shared-header.html` at runtime (plus the mobile drawer markup
+at the bottom of that same file). To change the nav anywhere on the site, edit
+`shared-header.html` once — every page picks it up automatically. There is no
+`components.jsx` and no per-page nav HTML to keep in sync.
+
 ### Structure (left → right)
-1. **Logo** — `assets/toughjobs-monogram-logo.png`, 150px wide, 100px tall, links to `index.html`
+1. **Logo** — `assets/toughjobs-monogram-logo.webp`, links to `index.html`
 2. **Nav Links** (main menu, left-to-right order):
-   - Trades → dropdown menu listing trade types (electrician, HVAC, plumbing, roofing, contractor, etc.)
-   - About → `about.html`
-   - Services → `services.html`
-   - Partnerships → `partnerships.html`
-   - Free Tools → `intake-landing.html`
-   - Contact → `contact.html`
+   - `TRADES ▾` → mega-menu dropdown (fallback link `trades.html`), grouped into 5
+     categories (Building & Construction, Mechanical & Essential, Finishing &
+     Maintenance, General Services & Maintenance, Outdoor & Landscaping), each linking
+     to an individual `trade-*.html` page
+   - `ABOUT` → `about.html`
+   - `SERVICES ▾` → mega-menu dropdown, grouped into 4 categories (Grow & Get Found,
+     Brand & Reputation, Systems & Growth, State Licensures), each linking to an
+     individual service page (`websites.html`, `seo.html`, `local-seo.html`,
+     `paid-ads.html`, `video-creation-editing.html`, `email-marketing.html`,
+     `conversion-rate-optimization.html`, `branding.html`, `social-media.html`,
+     `reviews.html`, `print-collateral.html`, `clothing-apparel.html`, `software.html`,
+     `ai-automations.html`, `database-reactivation.html`, `coaching.html`,
+     `llc-filing.html`)
+   - `AREAS` → `service-areas.html`
+   - `FREE TOOLS` → `free-tools.html`
+   - `CONTACT` → `contact.html`
+   - `TRADE QUIZ` → `quiz-hub.html`
 3. **Right side** (in order):
    - Phone: `(309) 929-9080` as plain text link to `tel:3099299080`
    - CTA button: "Request a Quote" → `contact.html` (red accent, white text)
+   - Mobile only: hamburger toggle opening `#mobileDrawer` (Trades and Services
+     collapse into expandable sub-lists there)
+
+**There is no standalone `services.html` page**, and Partnerships is no longer a
+top-level nav link — it lives in the footer only (`partnerships.html`). If prose on a
+page needs to link generically to "the services," point it at `index.html#services`
+(the services grid section on the homepage) rather than inventing a services.html link;
+if one specific service clearly applies, link that page directly instead (e.g. a
+mention of website teardown → `websites.html`).
 
 ### Behavior
 - Height: 160px, shrinks 50% on scroll
@@ -94,46 +121,6 @@ These appear only on specific pages — do NOT show on all pages.
 |---|---|---|
 | **Start Assessment** | Homepage, main marketing pages, service detail pages | Red circular spinning badge, top-right (`sticky-cta.js`) |
 | **← Go Back** | Service detail pages (websites.html, local-seo.html, paid-ads.html, etc.) | Red circular spinning badge, top-left (`back-cta.js`) |
-
-### React nav (components.jsx)
-Update `navLinks` array to match the canonical order above. The React nav is used by index.html and React-powered pages.
-
-### Plain HTML nav (all other .html pages)
-Use this exact HTML block in every plain HTML page. Change only the `active` class to match the current page:
-
-```html
-<header>
-  <div class="nav-container">
-    <a href="index.html" class="logo-link">
-      <img src="assets/toughjobs-monogram-logo.png" alt="Toughjobs" width="150" height="100" />
-    </a>
-    <nav class="nav-links">
-      <div class="nav-dropdown">
-        <a href="#" class="nav-link nav-dropdown-toggle">Trades ▾</a>
-        <div class="nav-dropdown-menu">
-          <a href="#" class="nav-dropdown-item">Electrician</a>
-          <a href="#" class="nav-dropdown-item">HVAC</a>
-          <a href="#" class="nav-dropdown-item">Plumbing</a>
-          <a href="#" class="nav-dropdown-item">Roofing</a>
-          <a href="#" class="nav-dropdown-item">Contractor</a>
-        </div>
-      </div>
-      <a href="services.html" class="nav-link">Services</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="services.html" class="nav-link">Services</a>
-      <a href="partnerships.html" class="nav-link">Partnerships</a>
-      <a href="intake-landing.html" class="nav-link">Free Tools</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-    </nav>
-    <div class="nav-right">
-      <a href="tel:3099299080" class="nav-phone">(309) 929-9080</a>
-      <a href="contact.html" class="btn">Request a Quote</a>
-    </div>
-  </div>
-</header>
-```
-
-> When building a new page, copy the above block verbatim and add `class="nav-link active"` to the current page's link.
 
 
 ## Key Design Elements
@@ -196,7 +183,7 @@ Tweak defaults stored in `window.__TWEAK_DEFAULTS__` in `index.html`.
 
 1. **ALWAYS read the ENTIRE file** before editing — never use partial reads or assume you know the current state
 2. **When the user mentions manual edits**, re-read the full file first to see what they changed
-4. **The nav is in `components.jsx`** — do not create separate nav files
+4. **The nav is in `shared-header.html`**, injected site-wide by `inject-header.js` — do not create separate nav files or hand-copy nav HTML into a page
 5. **Preserve comment anchors** (`data-comment-anchor` attributes) when editing
 6. **Use canonical HTML** — close all non-void elements explicitly, double-quote all attributes
 
