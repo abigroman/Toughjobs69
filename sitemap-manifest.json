@@ -41,12 +41,6 @@
   "created": "2026-07-07",
   "updated": "2026-07-29"
  },
- "coaching.html": {
-  "title": "Toughjobs — Coaching | 1-on-1 Business Coaching for Trades Owners",
-  "desc": "Business coaching for contractors and trades owners. Group and 1-on-1 coaching on pricing, hiring, systems, marketing and cash flow — one-time packages from.",
-  "created": "2026-07-07",
-  "updated": "2026-07-29"
- },
  "concrete-paving.html": {
   "title": "Concrete and Paving Website Example | Toughjobs",
   "desc": "Review a concrete and paving website example with annotated decisions for service structure, mobile calls, local search, customer proof, and request a site.",
@@ -1016,12 +1010,6 @@
  "database-reactivation/faqs/index.html": {
   "title": "Database Reactivation FAQs | Toughjobs",
   "desc": "Every question we get about Database Reactivation at Toughjobs, organized by category.",
-  "created": "2026-09-02",
-  "updated": "2026-09-02"
- },
- "coaching/faqs/index.html": {
-  "title": "Coaching FAQs | Toughjobs",
-  "desc": "Every question we get about Coaching at Toughjobs, organized by category.",
   "created": "2026-09-02",
   "updated": "2026-09-02"
  },

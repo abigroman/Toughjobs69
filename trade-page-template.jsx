@@ -102,7 +102,7 @@ const SERVICES = [
   { name: "Paid Ads", href: "paid-ads.html" },
   { name: "Branding", href: "branding.html" },
   { name: "AI Automations", href: "ai-automations.html" },
-  { name: "Coaching", href: "coaching.html" },
+
   { name: "Database Reactivation", href: "database-reactivation.html" },
   { name: "Software", href: "software.html" }
 ];
