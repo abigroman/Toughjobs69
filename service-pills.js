@@ -1,6 +1,6 @@
 /* service-pills.js — injects the trade-style service pill row below the hero. */
 (function(){
-  var S=[["websites.html","Websites"],["seo.html","SEO"],["local-seo.html","Local SEO"],["paid-ads.html","Paid Ads"],["branding.html","Branding"],["social-media.html","Social"],["reviews.html","Reviews"],["print-collateral.html","Print"],["clothing-apparel.html","Apparel"],["software.html","Software"],["ai-automations.html","AI Automations"],["database-reactivation.html","Re-Marketing"],["coaching.html","Coaching"],["llc-filing.html","LLC Filing"]];
+  var S=[["websites.html","Websites"],["seo.html","SEO"],["local-seo.html","Local SEO"],["paid-ads.html","Paid Ads"],["branding.html","Branding"],["social-media.html","Social"],["reviews.html","Reviews"],["print-collateral.html","Print"],["clothing-apparel.html","Apparel"],["software.html","Software"],["ai-automations.html","AI Automations"],["database-reactivation.html","Re-Marketing"],["llc-filing.html","LLC Filing"]];
   function init(){
     var hero=document.querySelector("body.sp .hero");
     if(!hero||document.querySelector(".service-pill-row"))return;

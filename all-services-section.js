@@ -20,9 +20,8 @@
     { n: "11", k: "Never miss",   tone: "blue", t: "AI Automations",       href: "ai-automations.html",        d: "Let automations answer, book, and follow up while you're on the tools." },
     { n: "12", k: "Run tighter",  tone: "ink",  t: "Software",             href: "software.html",              d: "Get set up on the field-service platform that fits how your shop runs." },
     { n: "13", k: "Reactivate",   tone: "red",  t: "Re-Marketing",         href: "database-reactivation.html", d: "Turn your old customer list into booked jobs with email & SMS campaigns." },
-    { n: "14", k: "Build trust",  tone: "red",  t: "Reviews & Reputation", href: "reviews.html",               d: "Automated Google review requests that keep 5-star reviews coming in." },
+    { n: "14", k: "Build trust",  tone: "red",  t: "Reviews & Reputation", href: "reviews.html",               d: "Neutral Google review requests and response support." },
     { n: "15", k: "Stay in hand", tone: "red",  t: "Print & Collateral",   href: "print-collateral.html",      d: "Brochures, mailers, door hangers & signs — branded print that gets kept." },
-    { n: "16", k: "Lead better",  tone: "blue", t: "Coaching",             href: "coaching.html",              d: "Hands-on guidance to run marketing like an owner, not a guessing game." },
     { n: "17", k: "Get official", tone: "ink",  t: "LLC Filing",           href: "llc-filing.html",            d: "Business formation help — we file your LLC in Illinois or Iowa. Not a law firm." }
   ];
 
