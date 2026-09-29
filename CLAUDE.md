@@ -84,7 +84,7 @@ at the bottom of that same file). To change the nav anywhere on the site, edit
      `paid-ads.html`, `video-creation-editing.html`, `email-marketing.html`,
      `conversion-rate-optimization.html`, `branding.html`, `social-media.html`,
      `reviews.html`, `print-collateral.html`, `clothing-apparel.html`, `software.html`,
-     `ai-automations.html`, `database-reactivation.html`, `coaching.html`,
+     `ai-automations.html`, `database-reactivation.html`,
      `llc-filing.html`)
    - `AREAS` → `service-areas.html`
    - `FREE TOOLS` → `free-tools.html`
@@ -202,3 +202,6 @@ See `CLAUDE.archive.md` for the last-known asset list (re-check `assets/` — it
 - Client has manually edited files via Mark Up / Edit tools — always check current file state before changing
 - Halftone textures use radial-gradient patterns for visual depth
 - All sections use CSS custom properties for colors (set in `app.jsx` based on Tweaks)
+
+## Current service availability
+Coaching is paused at the owner's request. Do not show it as an active service until restored.
