@@ -1,5 +1,5 @@
 import cv2, numpy as np, os, sys
-FPS=30; N=180; HOLD_IN=15; HOLD_OUT=36; POP=7
+FPS=30; N=360; HOLD_IN=30; HOLD_OUT=72; POP=14
 A=cv2.imread('Aw.png').astype(np.float32); B=cv2.imread('B.webp').astype(np.float32)
 m=cv2.imread('mask_stoneonly.png',0)>0; lab=np.load('stones.npy')
 H,W=m.shape

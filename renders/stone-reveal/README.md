@@ -1,11 +1,11 @@
-# Stone reveal — house wrap → finished stone (6 s, 16:9, locked camera)
+# Stone reveal — house wrap → finished stone (12 s, 16:9, locked camera)
 
 Deterministic 2D composite. No diffusion is involved, so the final frame is the client's actual stone.
 
 | File | What |
 |---|---|
-| `stone-reveal.mp4` | H.264, 1920×1080, 30 fps, 180 frames, ~1.1 MB |
-| `stone-reveal.webm` | VP9, same timing, ~1.2 MB |
+| `stone-reveal.mp4` | H.264, 1920×1080, 30 fps, 360 frames, ~2.0 MB |
+| `stone-reveal.webm` | VP9, same timing, ~1.8 MB |
 | `stone-reveal-poster.jpg` | Final frame (= Plate A), for the `poster` attribute / reduced-motion |
 | `plates/before-hybrid.webp` | B′: Plate B inside the stone zone, Plate A everywhere else |
 | `plates/after-aligned.webp` | Plate A warped onto Plate B's camera |
@@ -13,13 +13,13 @@ Deterministic 2D composite. No diffusion is involved, so the final frame is the 
 | `pipeline/` | Scripts that regenerate everything (`run.sh`) |
 
 ## Timing
-- 0.0–0.5 s: hold on B′
-- 0.5–4.8 s: reveal (eased in and out). Whole stones are set bottom course up, per facade section, with noise in the order and a few early stones. Each stone takes 7 frames: it drops about 3 px, scales from 110% to 100% and fades in, casting a contact shadow that fades as it settles.
-- 4.8–6.0 s: hold on exact Plate A
+- 0.0–1.0 s: hold on B′
+- 1.0–9.6 s: reveal (eased in and out). Whole stones are set bottom course up, per facade section, with noise in the order and a few early stones. Each stone takes 14 frames: it drops about 3 px, scales from 110% to 100% and fades in, casting a contact shadow that fades as it settles.
+- 9.6–12.0 s: hold on exact Plate A
 
 ## Verified
 - Alignment: 2,104 RANSAC inliers, reprojection median 1.49 px, p95 2.77 px.
-- Pixels outside the stone zone (78.9% of the frame) are identical to Plate A in all 180 PNG frames (max diff 0).
+- Pixels outside the stone zone (78.9% of the frame) are identical to Plate A in all 360 PNG frames (max diff 0).
 - Last frame is Plate A exactly (max diff 0 before encoding).
 - 1,042 stones, segmented along the mortar joints.
 
