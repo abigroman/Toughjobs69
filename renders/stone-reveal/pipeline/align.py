@@ -1,0 +1,18 @@
+import cv2, numpy as np
+B=cv2.imread('B.webp'); A=cv2.imread('A.webp')
+g=lambda x: cv2.cvtColor(x,cv2.COLOR_BGR2GRAY)
+orb=cv2.ORB_create(20000)
+kb,db=orb.detectAndCompute(g(B),None); ka,da=orb.detectAndCompute(g(A),None)
+m=cv2.BFMatcher(cv2.NORM_HAMMING).knnMatch(da,db,k=2)
+good=[a for a,b in m if a.distance<0.8*b.distance]
+pa=np.float32([ka[x.queryIdx].pt for x in good]); pb=np.float32([kb[x.trainIdx].pt for x in good])
+H,inl=cv2.findHomography(pa,pb,cv2.RANSAC,3.0)
+inl=inl.ravel().astype(bool)
+err=np.linalg.norm(cv2.perspectiveTransform(pa[inl][None],H)[0]-pb[inl],axis=1)
+print('matches',len(good),'inliers',inl.sum(),'median',np.median(err),'p95',np.percentile(err,95))
+print(H)
+Aw=cv2.warpPerspective(A,H,(B.shape[1],B.shape[0]),flags=cv2.INTER_LANCZOS4,borderMode=cv2.BORDER_REPLICATE)
+valid=cv2.warpPerspective(np.full(A.shape[:2],255,np.uint8),H,(B.shape[1],B.shape[0]))
+cv2.imwrite('Aw.png',Aw); cv2.imwrite('Avalid.png',valid)
+cv2.imwrite('blend.png',(B*.5+Aw*.5).astype(np.uint8))
+np.save('H.npy',H)
