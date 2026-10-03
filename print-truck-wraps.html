@@ -8,7 +8,7 @@
 <meta name="author" content="Toughjobs" />
 <meta name="publisher" content="ToughJobs Digital Marketing" />
 
-<meta name="description" content="Truck and Cargo Van Wraps planned for trade businesses. Toughjobs handles the message, design, production details, proofing, and handoff around the job the." />
+<meta name="description" content="Explore truck and cargo van wrap concepts for trade businesses, compare wrap options and typical costs, and get a quote from Toughjobs." />
 <meta name="keywords" content="vehicle wraps for contractors, truck & cargo van wraps, trade print marketing, vehicle wraps Quad Cities, vehicle wraps Peoria, Midwest trades marketing" />
 <link rel="canonical" href="https://toughjobs.org/print-truck-wraps.html" />
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -37,11 +37,48 @@
   .opts li{position:relative;padding-left:30px;font-size:16px;line-height:1.45;color:#1c2536}
   .opts li::before{content:"";position:absolute;left:0;top:3px;width:18px;height:18px;background:var(--red);clip-path:polygon(41% 68%,80% 22%,90% 32%,41% 90%,12% 56%,22% 46%)}
   @media(max-width:640px){.opts{grid-template-columns:1fr}}
-  .st3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
-  .st3 .s{background:var(--ink);color:#fff;padding:28px 24px;border-top:4px solid var(--red);text-align:center}
-  .st3 .s .b{font-family:"Archivo Black",sans-serif;font-size:34px;color:var(--red);line-height:.9}
-  .st3 .s .t{font-size:13px;color:rgba(255,255,255,.82);margin-top:8px;font-weight:600}
-  @media(max-width:640px){.st3{grid-template-columns:1fr}}
+  .sp .wrap-portfolio-hero{padding:clamp(36px,4vw,56px) 0 clamp(32px,3.5vw,48px)}
+  .sp .wrap-portfolio-hero::after{display:none}
+  .sp .wrap-portfolio-hero .container{display:flex;align-items:center;min-height:clamp(340px,32vw,440px)}
+  .sp .wrap-portfolio-hero .hero-text{max-width:50%}
+  .sp .wrap-portfolio-hero .lede{max-width:760px;margin-bottom:26px}
+  .sp .wrap-portfolio-hero .hero-img-slot{left:49%;right:-3%;top:0;bottom:0;padding:0;overflow:visible;justify-content:center}
+  .sp .wrap-portfolio-hero .hero-img-slot img{width:100%;max-width:100%;max-height:100%;height:auto;object-fit:contain}
+  .van-visual{position:relative;width:100%;max-width:1033px;aspect-ratio:1033/550}
+  .sp .wrap-portfolio-hero .van-visual img{display:block;width:100%;height:100%;max-height:none}
+  .van-lightning{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+  .van-strike{opacity:0;filter:drop-shadow(0 0 9px rgba(255,255,255,.95)) drop-shadow(0 0 20px rgba(190,230,255,.7))}
+  .van-bolt-halo,.van-bolt-core{fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .van-bolt-halo{stroke:#dcefff;stroke-width:16;opacity:.7}
+  .van-bolt-core{stroke:#fff;stroke-width:5}
+  .wrap-portfolio-intro{max-width:760px;font-size:16px;line-height:1.65;color:rgba(255,255,255,.82);margin:0 0 26px}
+  .sp .truck-concept-gallery{background:#fff;background-image:none;padding:clamp(64px,7vw,96px) 0}
+  .truck-concept-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,28px);align-items:start;max-width:var(--container);margin:0 auto;padding:0 22px}
+  .truck-concept-card{margin:0;min-width:0}
+  .truck-concept-card a{display:block;overflow:hidden;background:#fff}
+  .truck-concept-card img{display:block;width:100%;height:auto;transition:transform .25s ease}
+  .truck-concept-card a:hover img,.truck-concept-card a:focus-visible img{transform:scale(1.04)}
+  .truck-concept-card a:focus-visible{outline:3px solid var(--red);outline-offset:4px}
+  .sp .wrap-options.bg-light{background:#F4F5F7!important}
+  .wrap-costs{display:grid;grid-template-columns:minmax(0,1fr) clamp(230px,24vw,330px);align-items:end;gap:clamp(24px,3vw,48px);margin-top:clamp(48px,6vw,72px)}
+  .wrap-costs-copy{min-width:0}
+  .wrap-costs h3{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:clamp(22px,3vw,36px);line-height:1.08;margin:0 0 14px}
+  .wrap-costs p{font-size:16px;line-height:1.65;max-width:760px;margin:0 0 20px}
+  .wrap-cost-table{overflow-x:auto}
+  .wrap-cost-table .td-cost-table{min-width:620px}
+  .wrap-costs-visual{margin:0;align-self:end}
+  .wrap-costs-visual img{display:block;width:100%;height:auto;object-fit:contain;object-position:bottom}
+  .sp .wrap-cta-black{background-color:var(--ink);background-image:linear-gradient(rgba(10,15,28,.86),rgba(10,15,28,.94)),url('assets/blueprint-bg-darker.webp')}
+  @media(max-width:900px){.truck-concept-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:600px){.truck-concept-grid{grid-template-columns:1fr}}
+  @media(max-width:980px){.wrap-costs{grid-template-columns:1fr}.wrap-costs-visual{width:min(70vw,320px);margin-inline:auto}}
+  @media(max-width:1024px){
+    .sp .wrap-portfolio-hero .container{display:block;min-height:0}
+    .sp .wrap-portfolio-hero .hero-text{max-width:100%}
+    .sp .wrap-portfolio-hero .hero-img-slot{position:relative;left:auto;right:auto;top:auto;bottom:auto;display:flex!important;margin-top:20px}
+    .van-visual{max-width:620px}
+  }
+  @media(prefers-reduced-motion:reduce){.truck-concept-card img{transition:none}.van-strike{display:none}}
 </style>
 <link rel="stylesheet" href="shared-header.css" />
 <style id="white-texture-sweep">
@@ -50,152 +87,136 @@
   background-size:cover !important;background-position:center !important;background-attachment:fixed !important;
 }
 </style>
-<!-- SEO-FAQ-SCHEMA:START -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntityOfPage": "https://toughjobs.org/print-truck-wraps.html",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What should we provide for a truck and cargo van wraps quote?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Provide the intended use, approximate quantity, deadline, delivery location, available artwork, and any known production specifications. Important planning details include vehicle template, road-speed readability, brand hierarchy, service list, phone number, and installer coordination."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does Toughjobs handle both design and production for truck and cargo van wraps?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The scope can include message planning, copy, design, proof preparation, and production coordination. The quote should state which services, materials, shipping, mailing, installation, or vendor costs are included."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What should be checked before the piece goes to production?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Review spelling, phone numbers, URLs, QR destinations, offer terms, and brand details. The production check should also confirm vehicle year and model, measurements, photos, coverage level, production files, and installer requirements."
-      }
-    }
-  ]
-}
-</script>
-<!-- SEO-FAQ-SCHEMA:END -->
 </head>
 <body class="sp">
 <main>
-  <section class="bg-dark hero">
-    <div class="tex tex-grid"></div>
+  <section class="bg-dark hero wrap-portfolio-hero">
     <div class="container">
       <div class="hero-text">
-      <a class="backlink" href="print-collateral.html">&larr; All print &amp; collateral</a>
-      <span class="eyebrow accent reveal">Print &amp; collateral &middot; 10</span>
-      <h1 class="display reveal d1">Truck & Cargo Van Wraps</h1>
-      <p class="lede reveal d2">40K+ daily impressions. Your truck is a rolling billboard.</p>
-      <div style="margin:18px 0 30px">
-      <p class="reveal d2" style="font-size:15.5px;line-height:1.72;color:rgba(255,255,255,.72);max-width:56ch;margin:0 0 16px">Truck and cargo van wraps turn every mile your crew drives into an advertising impression that a Facebook ad could never buy at any price. A well-designed wrap keeps your name, trade, and phone number readable at a glance from a passing lane, on a highway, or parked outside a job site all day.</p>
-      <p class="reveal d2" style="font-size:15.5px;line-height:1.72;color:rgba(255,255,255,.72);max-width:56ch;margin:0 0 16px">Toughjobs designs wraps for legibility at speed first, then for looking sharp parked, using laminate-finished vinyl rated for multi-year outdoor durability across sun, rain, and repeated washing. For a fleet with more than one vehicle, we match every truck and van to the same layout and color system so the business reads as one established company instead of a mismatched collection of trucks.</p>
-      <p class="reveal d2" style="font-size:15.5px;line-height:1.72;color:rgba(255,255,255,.72);max-width:56ch;margin:0 0 16px">We coordinate installation scheduling so a vehicle isn't sitting idle during a busy week, and we plan ahead for details &mdash; a phone number, a service list &mdash; that may need to update without a full re-wrap.</p>
+        <a class="backlink" href="print-collateral.html">&larr; All print &amp; collateral</a>
+        <span class="eyebrow accent reveal">Truck wrap portfolio</span>
+        <h1 class="display reveal d1">Truck &amp; Cargo Van Wraps</h1>
+        <p class="lede reveal d2">Your truck is a rolling billboard. Make every mile count.</p>
+        <p class="wrap-portfolio-intro reveal d2">Explore wrap concepts built to make a trade business stand out on the road and at the jobsite. Each board shows the brand, side view, and rear view together.</p>
+        <div class="reveal d3"><a class="btn" href="contact.html">Get a quote &rarr;</a></div>
       </div>
-      <div class="reveal d3"><a class="btn" href="contact.html">Get a quote &rarr;</a></div>
+      <div class="hero-img-slot">
+        <div class="van-visual">
+          <img src="assets/erik-electrical-toughjobs.webp" alt="Erik Electrical branded cargo van with its electrician mascot" width="1033" height="550" decoding="async" fetchpriority="high" />
+          <svg class="van-lightning" viewBox="0 0 1033 550" aria-hidden="true" focusable="false">
+            <defs><radialGradient id="van-impact-glow"><stop offset="0" stop-color="#fff" stop-opacity=".98" /><stop offset=".4" stop-color="#f4faff" stop-opacity=".8" /><stop offset="1" stop-color="#dcefff" stop-opacity="0" /></radialGradient></defs>
+          </svg>
+        </div>
       </div>
-      <div class="hero-img-slot" style="padding:0;border:none"><img src="assets/toughjobs-truck-cargo-van-wraps.webp" alt="Toughjobs Truck & Cargo Van Wraps collateral" style="width:100%;height:100%;object-fit:contain;border-radius:14px" /></div>
     </div>
   </section>
 
-  <section class="bg-light">
-    <div class="tex tex-dots-d"></div>
-    <div class="container">
-      <div class="pc-headrow"><div class="head reveal"><span class="eyebrow">What it is</span><h2 class="display">Truck & Cargo Van Wraps that get you noticed.</h2></div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
-      <div class="seo-longform reveal d1" style="max-width:900px;font-size:16.5px;line-height:1.72;color:#1c2536"><p style="margin:0">A wrapped truck is the cheapest, hardest-working advertising a trades business owns. It logs tens of thousands of impressions a day on the road and in every driveway you park in — at roughly a fraction of a cent per view, it's the lowest cost-per-impression medium in marketing. And it works while you work.</p></div>
-    </div>
+  <section class="truck-concept-gallery" aria-label="Truck wrap concept gallery">
+      <div class="truck-concept-grid">
+        <figure class="truck-concept-card"><a href="assets/truck-concept-super-chill-board.png" target="_blank" rel="noopener" aria-label="Open Super Chill wrap concept full size"><img src="assets/truck-concept-super-chill-board.png" alt="Super Chill heating and cooling wrap concept showing the logo and two views of a blue cargo van" loading="lazy" decoding="async" width="1448" height="1086" /></a></figure>
+        <figure class="truck-concept-card"><a href="assets/truck-concept-naked-painting.png" target="_blank" rel="noopener" aria-label="Open Naked Painting wrap concept full size"><img src="assets/truck-concept-naked-painting.png" alt="Naked Painting wrap concept showing the logo and two views of a teal and white cargo van" loading="lazy" decoding="async" width="1448" height="1086" /></a></figure>
+        <figure class="truck-concept-card"><a href="assets/truck-concept-plum-plumbing.png" target="_blank" rel="noopener" aria-label="Open Plum Plumbing wrap concept full size"><img src="assets/truck-concept-plum-plumbing.png" alt="Plum Plumbing wrap concept showing the logo and two views of a purple cargo van" loading="lazy" decoding="async" width="1448" height="1086" /></a></figure>
+      </div>
   </section>
 
-  <section class="bg-navy">
+  <section class="bg-navy wrap-benefits">
     <div class="tex tex-dots"></div>
     <div class="container">
       <div class="pc-headrow"><div class="head reveal"><span class="eyebrow">Why it works</span><h2 class="display">Why trades owners invest in truck & cargo van wraps.</h2></div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
       <div class="earn"><div class="card reveal d1"><div class="ic">01</div><h4>Always working</h4><p>Every drive to the job, every jobsite park, every gas station stop puts your brand in front of homeowners — 24/7, no click budget.</p></div><div class="card reveal d2"><div class="ic">02</div><h4>Instant credibility</h4><p>A clean, professional wrap makes a one-truck operation look established and trustworthy before you knock on the door.</p></div><div class="card reveal d3"><div class="ic">03</div><h4>The name they search later</h4><p>People see the wrap around town, then Google you when they need the work. Wraps feed your whole funnel.</p></div></div>
-      <div class="st3" style="margin-top:34px"><div class="s"><div class="b" style="font-size:23px">Brief</div><div class="t">One audience, message, and response path</div></div><div class="s"><div class="b" style="font-size:23px">Proof</div><div class="t">Copy, dimensions, and production details approved</div></div><div class="s"><div class="b" style="font-size:23px">Handoff</div><div class="t">Files and specifications prepared for production</div></div></div>
     </div>
   </section>
 
-  <section class="bg-light">
+  <section class="bg-light wrap-options">
     <div class="tex tex-dots-d"></div>
     <div class="container">
       <div class="pc-headrow"><div class="head reveal"><span class="eyebrow">Options</span><h2 class="display">Formats &amp; finishes we offer.</h2></div><div class="pc-logo-slot reveal"><img src="uploads/toughjobs-fist-logo-small.webp" alt="Toughjobs" class="pc-title-logo" /></div></div>
-      <ul class="opts reveal d1"><li>Full wraps, partial wraps, and spot graphics</li><li>Cargo vans, box trucks, pickups, trailers and fleet</li><li>Cast vinyl rated for Midwest winters</li><li>Reflective and contour-cut lettering</li><li>Design matched to your logo, website and print</li></ul>
+      <ul class="opts reveal d1"><li>Full wraps, partial wraps, and spot graphics</li><li>Cargo vans, box trucks, pickups, trailers and fleets</li><li>Cast vinyl rated for Midwest winters</li><li>Reflective and contour-cut lettering</li><li>Design matched to your logo, website, and print, with a consistent layout across fleet vehicles</li></ul>
+      <div class="wrap-costs reveal d2">
+        <div class="wrap-costs-copy">
+          <h3>Typical wrap investments</h3>
+          <p>Costs vary with vehicle size, coverage, materials, design, and installation. These ranges are a starting point; your quote will spell out the exact scope.</p>
+          <div class="wrap-cost-table">
+            <table class="td-cost-table">
+              <thead><tr><th>Piece / Package</th><th>Typical Investment</th><th>What You Get</th></tr></thead>
+              <tbody>
+                <tr><td>Partial wrap (doors, hood, rear)</td><td>$1,800 &ndash; $3,200</td><td>Vinyl graphics on primary panels, name and number visible from all sides</td></tr>
+                <tr><td>Full vehicle wrap</td><td>$3,800 &ndash; $6,500</td><td>Complete coverage, laminate finish, multi-year durability</td></tr>
+                <tr><td>Cargo van rear + side panel package</td><td>$1,400 &ndash; $2,600</td><td>Focused coverage for a work van fleet</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <figure class="wrap-costs-visual"><img src="assets/viking-holding-money.webp" alt="Viking electrician holding a fan of cash" width="451" height="600" loading="lazy" decoding="async" /></figure>
+      </div>
     </div>
   </section>
 
   <!-- SEO-PRINT-DETAIL:START -->
-<section class="td-analysis td-lf-dark" data-screen-label="Overview">
+<section class="td-analysis td-faq-section tj-faq-band" data-screen-label="FAQ" data-faq-page="print-truck-wraps">
+  <style>
+    section[data-faq-page="print-truck-wraps"] .tj-faq-gauge{opacity:1}
+    section[data-faq-page="print-truck-wraps"] .tj-faq-gauge .ping{fill:none;stroke:#C8262A;opacity:1}
+    section[data-faq-page="print-truck-wraps"] .tj-faq-gauge--tr .ping{animation:tj-faq-gauge-ping-tr 3.2s cubic-bezier(0,0,.2,1) infinite}
+    section[data-faq-page="print-truck-wraps"] .tj-faq-gauge--bl .ping{animation:tj-faq-gauge-ping-bl 3.2s cubic-bezier(0,0,.2,1) infinite;animation-delay:1.6s}
+    @keyframes tj-faq-gauge-ping-tr{0%{r:4;stroke-width:12;opacity:1}100%{r:360;stroke-width:.5;opacity:0}}
+    @keyframes tj-faq-gauge-ping-bl{0%{r:4;stroke-width:12;opacity:1}100%{r:320;stroke-width:.5;opacity:0}}
+    @media(prefers-reduced-motion: reduce){section[data-faq-page="print-truck-wraps"] .tj-faq-gauge .ping{animation:none;opacity:0}}
+    section[data-faq-page="print-truck-wraps"] a.td-faq-cat-link.td-faq-cat-link--index{padding:12px 20px}
+  </style>
+  <svg class="tj-faq-gauge tj-faq-gauge--tr" viewBox="0 0 800 800" aria-hidden="true" focusable="false">
+    <g opacity=".3">
+      <circle cx="620" cy="180" r="360" fill="none" stroke="#C8262A" stroke-width="2"/>
+      <circle cx="620" cy="180" r="270" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+      <circle cx="620" cy="180" r="180" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+      <circle cx="620" cy="180" r="4" fill="#C8262A"/>
+      <g stroke="#FFFFFF" stroke-width="2">
+        <line x1="620" y1="-180" x2="620" y2="-120"/>
+        <line x1="620" y1="480" x2="620" y2="540"/>
+        <line x1="200" y1="180" x2="260" y2="180"/>
+        <line x1="980" y1="180" x2="1040" y2="180"/>
+      </g>
+    </g>
+    <circle class="ping" cx="620" cy="180" r="4"/>
+  </svg>
+  <svg class="tj-faq-gauge tj-faq-gauge--bl" viewBox="0 0 800 800" aria-hidden="true" focusable="false">
+    <g opacity=".24">
+      <circle cx="180" cy="620" r="320" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+      <circle cx="180" cy="620" r="230" fill="none" stroke="#C8262A" stroke-width="2"/>
+      <circle cx="180" cy="620" r="4" fill="#FFFFFF"/>
+      <g stroke="#FFFFFF" stroke-width="1.5">
+        <line x1="180" y1="260" x2="180" y2="320"/>
+        <line x1="180" y1="920" x2="180" y2="980"/>
+        <line x1="-180" y1="620" x2="-120" y2="620"/>
+        <line x1="540" y1="620" x2="600" y2="620"/>
+      </g>
+    </g>
+    <circle class="ping" cx="180" cy="620" r="4"/>
+  </svg>
   <div class="td-analysis-inner">
-    <span class="tj-eyebrow-red">The rundown</span>
-    <h2>Truck and Cargo Van Wraps built around a specific job.</h2>
-    <p class="td-answer"><strong>truck wraps for contractors</strong> should not begin with a generic layout. Truck and Cargo Van Wraps should be scoped from the moment of use backward. If the piece is for a new vehicle, fleet refresh, rebrand, or replacement panel, the message, physical format, proof, and response path all need to support that one job. Copy written without that context usually becomes crowded or too vague to act on.</p>
-    <p>Before design, Toughjobs documents vehicle template, road-speed readability, brand hierarchy, service list, phone number, and installer coordination. The first proof is checked as a working communication tool: Can the intended reader understand it in the available time? Is the main action obvious? Does every claim match what the business can actually deliver?</p>
-  </div>
-</section>
-
-<section class="td-analysis" data-screen-label="What & Cost">
-  <div class="td-analysis-inner">
-    <span class="tj-eyebrow-red">What it takes</span>
-    <h2>WHAT TRUCK & CARGO VAN WRAPS ACTUALLY COST</h2>
-    <p>Production begins only after the authorized contact approves the message and specifications. That approval covers vehicle year and model, measurements, photos, coverage level, production files, and installer requirements. If a vendor or installer changes a requirement, the file is revised and approved again so the finished piece does not depend on an assumption hidden in an email thread.</p>
-    <table class="td-cost-table">
-      <thead><tr><th>Piece / Package</th><th>Typical Investment</th><th>What You Get</th></tr></thead>
-      <tbody>
-        <tr><td>Partial wrap (doors, hood, rear)</td><td>$1,800 &ndash; $3,200</td><td>Vinyl graphics on primary panels, name and number visible from all sides</td></tr>
-        <tr><td>Full vehicle wrap</td><td>$3,800 &ndash; $6,500</td><td>Complete coverage, laminate finish, multi-year durability</td></tr>
-        <tr><td>Cargo van rear + side panel package</td><td>$1,400 &ndash; $2,600</td><td>Focused coverage for a work van fleet</td></tr>
-        <tr><td>Fleet-matching refresh (per vehicle)</td><td>$500 &ndash; $900</td><td>Update an existing wrap to current branding</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<section class="td-analysis td-lf-dark" data-screen-label="Choosing a partner">
-  <div class="td-analysis-inner">
-    <span class="tj-eyebrow-red">Pick right</span>
-    <h2>WHAT TO LOOK FOR IN A TRUCK & CARGO VAN WRAPS PARTNER</h2>
-    <ul class="td-note-list">
-      <li>Designs text and logos to stay readable at speed, not just look good parked</li>
-      <li>Uses laminate-finished vinyl rated for multi-year outdoor durability</li>
-      <li>Matches every vehicle in the fleet to the same layout and color system</li>
-      <li>Coordinates installation scheduling so a truck isn&rsquo;t down during a busy week</li>
-      <li>Plans ahead for lettering that will need to change &mdash; phone number, service list &mdash; without a full re-wrap</li>
-    </ul>
-    <div class="td-soft-cta">
-      <p>Toughjobs designs and produces truck and cargo van wraps for trade contractors across the Midwest. <a href="contact.html">Talk to us about your job</a> &mdash; no pitch, just a straight read on what would actually move the needle.</p>
+    <span class="tj-eyebrow-red reveal">Straight answers</span>
+    <h2 class="tj-band-h2 reveal d1">EXPLORE TRUCK &amp; CARGO VAN WRAP FAQS</h2>
+    <p class="tj-faq-band-intro reveal d1">Find the answers you need about pricing, getting started, production, and final approvals.</p>
+    <!-- FAQ:START -->
+    <div class="td-faq-categories td-faq-categories--index">
+      <a class="td-faq-cat-link td-faq-cat-link--index reveal d1" href="print-truck-wraps/faqs/#pricing-coverage"><span>Pricing &amp; Coverage</span></a>
+      <a class="td-faq-cat-link td-faq-cat-link--index reveal d1" href="print-truck-wraps/faqs/#getting-started"><span>Getting Started</span></a>
+      <a class="td-faq-cat-link td-faq-cat-link--index reveal d2" href="print-truck-wraps/faqs/#design-production"><span>Design &amp; Production</span></a>
+      <a class="td-faq-cat-link td-faq-cat-link--index reveal d2" href="print-truck-wraps/faqs/#proofing-installation"><span>Proofing &amp; Installation</span></a>
     </div>
-  </div>
-</section>
-
-<section class="td-analysis td-faq-section tj-faq-band" data-screen-label="FAQ">
-  <div class="td-analysis-inner">
-    <span class="tj-eyebrow-red">Straight answers</span>
-    <h2 class="tj-band-h2">Truck & Cargo Van Wraps FAQ</h2>
-    <div class="td-faq-list">
-      <div class="td-faq-item"><h3>What should we provide for a truck and cargo van wraps quote?</h3><p>Provide the intended use, approximate quantity, deadline, delivery location, available artwork, and any known production specifications. Important planning details include vehicle template, road-speed readability, brand hierarchy, service list, phone number, and installer coordination.</p></div>
-      <div class="td-faq-item"><h3>Does Toughjobs handle both design and production for truck and cargo van wraps?</h3><p>The scope can include message planning, copy, design, proof preparation, and production coordination. The quote should state which services, materials, shipping, mailing, installation, or vendor costs are included.</p></div>
-      <div class="td-faq-item"><h3>What should be checked before the piece goes to production?</h3><p>Review spelling, phone numbers, URLs, QR destinations, offer terms, and brand details. The production check should also confirm vehicle year and model, measurements, photos, coverage level, production files, and installer requirements.</p></div>
-    </div>
+    <p class="tj-faq-hub-link"><a href="print-truck-wraps/faqs/">See all Truck &amp; Cargo Van Wrap FAQs &rarr;</a></p>
+    <!-- FAQ:END -->
   </div>
 </section>
 <!-- SEO-PRINT-DETAIL:END -->
-<section class="bg-dark ctaband">
-    <div class="tex tex-grid"></div>
-    <div class="container">
-      <h2 class="display reveal">Ready for truck & cargo van wraps that look as good as your work?</h2>
-      <p class="reveal d1">We design it, print it, and get it in the right hands. Start with a free quote.</p>
-      <div class="reveal d2"><a class="btn" href="contact.html">Get a quote &rarr;</a> <a class="btn" href="print-collateral.html" style="background:var(--ink)">See all print &rarr;</a></div>
-    </div>
-  </section>
+<section class="bg-dark ctaband wrap-cta-black">
+  <div class="tex tex-grid"></div>
+  <div class="container">
+    <h2 class="display reveal">Ready for truck &amp; cargo van wraps that look as good as your work?</h2>
+    <p class="reveal d1">Tell us about your vehicle and the coverage you have in mind. We&rsquo;ll put together a clear quote.</p>
+    <div class="reveal d2"><a class="btn" href="contact.html">Get a quote &rarr;</a> <a class="btn ghost" href="print-collateral.html">See all print &rarr;</a></div>
+  </div>
+</section>
 </main>
 
 <footer style="background:var(--ink);color:#fff;padding:48px 0;text-align:center">
@@ -214,6 +235,83 @@
 <script src="accessibility.js?v=20260729"></script>
 <script src="image-finder-tab.js"></script>
 <script src="image-slot.js"></script>
+<script>
+  (() => {
+    const visual = document.querySelector('.van-visual');
+    const svg = visual?.querySelector('.van-lightning');
+    if (!svg || !svg.animate) return;
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const spots = [[505, 135], [590, 55], [735, 53], [895, 75], [940, 205], [745, 245]];
+    const svgNS = 'http://www.w3.org/2000/svg';
+    let lastSpot = -1;
+    let inView = false;
+    let timer;
+
+    function add(parent, tag, attributes) {
+      const element = document.createElementNS(svgNS, tag);
+      for (const [name, value] of Object.entries(attributes)) element.setAttribute(name, value);
+      parent.appendChild(element);
+      return element;
+    }
+
+    function strike(index) {
+      const [x, y] = spots[index];
+      const startX = Math.round(Math.max(80, Math.min(1000, x + (Math.random() - .5) * 260)));
+      const points = [`M ${startX} -70`];
+      for (let step = 1; step < 5; step++) {
+        const progress = step / 5;
+        const px = Math.round(startX + (x - startX) * progress + (Math.random() - .5) * 62);
+        const py = Math.round(-70 + (y + 70) * progress);
+        points.push(`L ${px} ${py}`);
+      }
+      points.push(`L ${x} ${y}`);
+      const bolt = points.join(' ');
+      const group = add(svg, 'g', { class: 'van-strike' });
+      add(group, 'path', { class: 'van-bolt-halo', d: bolt });
+      add(group, 'path', { class: 'van-bolt-core', d: bolt });
+      add(group, 'circle', { cx: x, cy: y, r: 40, fill: 'url(#van-impact-glow)' });
+      add(group, 'path', { class: 'van-bolt-core', d: `M ${x} ${y} l -22 14 M ${x} ${y} l 23 16 M ${x} ${y} l 4 25` });
+      group.animate([
+        { opacity: 0, offset: 0 }, { opacity: 1, offset: .12 },
+        { opacity: 0, offset: .33 }, { opacity: 1, offset: .48 },
+        { opacity: 0, offset: .72 }, { opacity: 0, offset: 1 }
+      ], { duration: 380, easing: 'linear' }).addEventListener('finish', () => group.remove(), { once: true });
+    }
+
+    function canRun() { return inView && !document.hidden && !reducedMotion.matches; }
+    function queue(delay = 1400 + Math.random() * 2700) {
+      clearTimeout(timer);
+      if (canRun()) timer = setTimeout(fire, delay);
+    }
+    function fire() {
+      if (!canRun()) return;
+      const count = Math.random() < .3 ? 2 : 1;
+      for (let i = 0; i < count; i++) {
+        let index;
+        do { index = Math.floor(Math.random() * spots.length); } while (index === lastSpot);
+        lastSpot = index;
+        strike(index);
+      }
+      queue();
+    }
+
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(([entry]) => {
+        inView = entry.isIntersecting;
+        queue(500 + Math.random() * 900);
+      }, { threshold: .15 }).observe(visual);
+    } else {
+      inView = true;
+      queue(500 + Math.random() * 900);
+    }
+    document.addEventListener('visibilitychange', () => queue());
+    reducedMotion.addEventListener('change', () => {
+      if (reducedMotion.matches) svg.querySelectorAll('.van-strike').forEach(group => group.remove());
+      queue();
+    });
+  })();
+</script>
 
 </body>
 </html>
